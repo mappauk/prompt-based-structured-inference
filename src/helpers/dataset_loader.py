@@ -12,7 +12,7 @@ def load_dataset_foundation_identification(datasetdir):
     ids = []
     tweets = []
     labels = []
-    for key, filename in filename_map:
+    for key, filename in filename_map.items():
         filepath = os.path.join(datasetdir, filename)
         with open(filepath) as f:
             data = json.load(f)

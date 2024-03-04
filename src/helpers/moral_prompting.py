@@ -1,6 +1,6 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-import helpers.prompt_constants as constants
+import src.helpers.prompt_constants as constants
 
 def load_mistral_model():
     model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", device_map="auto")
