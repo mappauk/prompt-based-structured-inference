@@ -2,9 +2,16 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import src.helpers.prompt_constants as constants
 
-def load_mistral_model():
-    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", device_map="auto")
+def load_mistral_model(device_type: str):
+    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", device_map=device_type, return_dict_in_generate=True)
     tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
+    tokenizer.padding_side = 'left'
+    tokenizer.pad_token = tokenizer.eos_token
+    return model, tokenizer
+
+def load_test_model():
+    model = AutoModelForCausalLM.from_pretrained("facebook/opt-125m", device_map="cuda", return_dict_in_generate=True)
+    tokenizer = AutoTokenizer.from_pretrained("facebook/opt-125m")
     tokenizer.padding_side = 'left'
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
