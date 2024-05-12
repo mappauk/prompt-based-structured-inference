@@ -17,6 +17,21 @@ MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS = ('Moral Foundation Definitions: CARE/
     '### Tweet: {0} Moral foundation '
     'expressed in the tweet: ')
 
+MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF = ('Moral Foundation Definitions: CARE/HARM: Care for others, generosity, compassion, ability to feel pain of others, sensitivity '
+    'to suffering of others, prohibiting actions that harm others. FAIRNESS/CHEATING: Demand for Fairness, rights, equality, justice, '
+    'reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. LOYALTY/BETRAYAL: '
+    'Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. '
+    'AUTHORITY/SUBVERSION: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, '
+    'prohibiting rebellion against authority. PURITY/DEGRADATION: Associations with the sacred and holy, disgust, contamination, religious'
+    'notions which guide how to live, prohibiting violating the sacred. {0}'
+    '### Tweet: {Tweet}'
+    'Q. "The moral foundation expressed in the tweet is {label}." - True or False?'
+    'A. ')
+
+MORAL_FOUNDATION_IDENTIFICATION_EXAMPLE_FORMAT = (
+    '### Tweet: {0} Q. "The moral foundation expressed in the tweet is {1}." - True or False? A. {2}'
+)
+
 ## One Vs All
 
 # Definitions
@@ -33,7 +48,6 @@ MORAL_FOUNDATION_DEFINITIONS_MAP = {
     'PURITY/DEGRADATION': PURITY_DEGRADATION_DEFINITION,
     'LOYALTY/BETRAYAL': LOYALTY_BETRAYAL_DEFINITION
 }
-
 # Positive Examples
 CARE_HARM_POSITIVE_EXAMPLES = [
     'Recent actions in Indiana and Arkansas made clear that Congress must act to protect #LGBT Americans from discrimination'        
@@ -130,6 +144,62 @@ MORAL_FOUNDATION_ROLE_TO_MF = {
     'Target of purity/degradation': 'PURITY/DEGRADATION',
     'Entity preserving purity': 'PURITY/DEGRADATION',
     'Entity causing degradation': 'PURITY/DEGRADATION'
+}
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+TARGET_CARE_HARM_POSITIVE_EXAMPLES = [
+
+]
+
+MORAL_FOUNDATION_ROLE_POSITIVE_EXAMPLES = {
+
 }
 
 
