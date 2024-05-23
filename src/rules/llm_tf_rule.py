@@ -14,7 +14,6 @@ class LLMTFRule(RuleTemplate):
                  head_predicate_format: str,
                  rule_variable_format: str,
                  rule_type: str,
-                 prompt_format: str, 
                  batch_size: int, 
                  model: AutoModelForCausalLM, 
                  tokenizer: AutoTokenizer,
@@ -44,7 +43,7 @@ class LLMTFRule(RuleTemplate):
                 dict[feature] = row[feature]
             for label in self.labels:
                 dict['label'] = label
-                formatted_prompt = self.prompt_format.format(**dict)
+                formatted_prompt = data['Prompt'].format(**dict)
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)

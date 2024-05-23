@@ -1,5 +1,86 @@
 ### Moral Foundation Identification
 
+## Moral Frames
+
+CARE_HARM = 'CARE/HARM'
+FAIRNESS_CHEATING = 'FAIRNESS/CHEATING'
+AUTHORITY_SUBVERSION = 'AUTHORITY/SUBVERSION'
+PURITY_DEGREDATION = 'PURITY/DEGRADATION'
+LOYALTY_BETRAYAL = 'LOYALTY/BETRAYAL'
+
+TARGET_CARE_HARM = 'Target of care/harm'
+ENTITY_CAUSING_HARM = 'Entity causing harm'
+ENTITY_PROVIDING_CARE = 'Entity providing care'
+TARGET_FAIRNESS_CHEATING = 'Target of fairness/cheating'
+ENTITY_ENSURING_FAIRNESS = 'Entity ensuring fairness'
+ENTITY_DOING_CHEATING = 'Entity doing cheating'
+TARGET_LOYALTY_BETRAYAL = 'Target of loyalty/betrayal'
+ENTITY_BEING_LOYAL = 'Entity being loyal'
+ENTITY_DOING_BETRAYAL = 'Entity doing betrayal'
+JUSTIFIED_AUTHORITY = 'Justified authority'
+JUSTIFIED_AUTHORITY_OVER = 'Justified authority over'
+FAILING_AUTHORITY = 'Failing authority'
+FAILING_AUTHORITY_OVER = 'Failing authority over'
+TARGET_PURITY_DEGREDATION = 'Target of purity/degradation'
+ENTITY_PRESERVING_PURITY = 'Entity preserving purity'
+ENTITY_CAUSING_DEGRADATION = 'Entity causing degradation'
+
+MORAL_FOUNDATION_TO_QUESTIONS = {
+    CARE_HARM: ['q1', 'q2', 'q3'],
+    FAIRNESS_CHEATING: ['q2', 'q3', 'q4'],
+    AUTHORITY_SUBVERSION: ['q2', 'q3', 'q4', 'q5']
+    PURITY_DEGREDATION = ['q1', 'q2', 'q3']
+    LOYALTY_BETRAYAL = ['q3', 'q4', 'q5']
+}
+
+QUESTION_TO_MORAL_FOUNDATION = {
+    CARE_HARM: {
+        'q1': TARGET_CARE_HARM,
+        'q2': ENTITY_CAUSING_HARM,
+        'q3': ENTITY_PROVIDING_CARE
+    },
+    FAIRNESS_CHEATING: {
+        'q2': TARGET_FAIRNESS_CHEATING,
+        'q3': ENTITY_ENSURING_FAIRNESS,
+        'q4': ENTITY_DOING_CHEATING
+    },
+    AUTHORITY_SUBVERSION: {
+        'q2': JUSTIFIED_AUTHORITY,
+        'q3': JUSTIFIED_AUTHORITY_OVER,
+        'q4': FAILING_AUTHORITY,
+        'q5': FAILING_AUTHORITY_OVER,
+    },
+    PURITY_DEGREDATION: {
+        'q1': TARGET_PURITY_DEGREDATION,
+        'q2': ENTITY_PRESERVING_PURITY,
+        'q3': ENTITY_CAUSING_DEGRADATION
+    },
+    LOYALTY_BETRAYAL: {
+        'q3': TARGET_LOYALTY_BETRAYAL,
+        'q4': ENTITY_BEING_LOYAL,
+        'q5': ENTITY_DOING_BETRAYAL,
+    }
+}
+
+MORAL_FOUNDATION_ROLE_TO_QUESTION = {
+    'q1': TARGET_CARE_HARM,
+    'q2': ENTITY_CAUSING_HARM,
+    'q3': ENTITY_PROVIDING_CARE,
+    'q2': TARGET_FAIRNESS_CHEATING,
+    'q3': ENTITY_ENSURING_FAIRNESS,
+    'q4': ENTITY_DOING_CHEATING,
+    'q3': TARGET_LOYALTY_BETRAYAL,
+    'q4': ENTITY_BEING_LOYAL,
+    'q5': ENTITY_DOING_BETRAYAL,
+    'q2': JUSTIFIED_AUTHORITY,
+    'q3': JUSTIFIED_AUTHORITY_OVER,
+    'q4': FAILING_AUTHORITY,
+    'q5': FAILING_AUTHORITY_OVER,
+    'q1': TARGET_PURITY_DEGREDATION,
+    'q2': ENTITY_PRESERVING_PURITY,
+    'q3': ENTITY_CAUSING_DEGRADATION
+}
+
 ## One Pass
 MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS = ('Moral Foundation Definitions: CARE/HARM: Care for others, generosity, compassion, ability to feel pain of others, sensitivity '
     'to suffering of others, prohibiting actions that harm others. FAIRNESS/CHEATING: Demand for Fairness, rights, equality, justice, '
