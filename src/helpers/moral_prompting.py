@@ -47,7 +47,3 @@ def generate_one_pass_tf_prompt(num_shots):
                 examples.append(constants.MORAL_FOUNDATION_IDENTIFICATION_EXAMPLE_FORMAT.format(positive_examples[i], mf, "True"))
                 examples.append(constants.MORAL_FOUNDATION_IDENTIFICATION_EXAMPLE_FORMAT.format(negative_examples[i], mf, "False"))
     return constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF.format(' '.join(examples))
-
-def generate_one_pass_tf_role_prompt(num_shots):
-    for role in constants.MORAL_FOUNDATION_ROLE:
-        negative_examples = 
