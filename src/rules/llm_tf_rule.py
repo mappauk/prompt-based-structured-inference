@@ -21,17 +21,9 @@ class LLMTFRule(RuleTemplate):
                  topk: int,
                  temperature: int,
                  device_type: str,
-                 prompt_format: str,
-                 definition_map: dict,
-                 positive_examples_map: dict,
-                 negative_examples_map: dict,
-                 num_examples: int):
+                 prompt_map: str):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
-        self.prompt_format = prompt_format
-        self.positive_examples_map = positive_examples_map
-        self.negative_examples_map = negative_examples_map
-        self.definition_map = definition_map
-        self.num_examples = num_examples
+        self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
         self.tokenizer = tokenizer
@@ -40,19 +32,8 @@ class LLMTFRule(RuleTemplate):
         self.device_type = device_type
     
     def get_prompt(self, label, dict):
-        definition = self.definition_map[label]
-        examples = self.generate_examples(label)
-        intermediate_prompt = self.prompt_format.format(definition, examples)
-        return intermediate_prompt.format(**dict)
-
-    def generate_examples(self, label):
-        negative_examples = self.negative_examples_map[label]
-        positive_examples = self.positive_examples_map[label]
-        examples = []
-        for i in range(self.num_examples):
-            examples.append(positive_examples[i])
-            examples.append(negative_examples[i])
-        return ' '.join(examples)
+        prompt = self.prompt_map.format[label]
+        return prompt.format(**dict)
         
     def get_rule_groundings(self, data: pd.DataFrame):
         data_subset = data[self.features].drop_duplicates()

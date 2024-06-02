@@ -1,4 +1,6 @@
 import torch
+import os
+import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import src.helpers.prompt_constants as constants
 
@@ -38,12 +40,42 @@ def extract_moral_foundation_label(output):
             predicted_foundation = foundation
     return predicted_foundation
 
-def generate_one_pass_tf_prompt(num_shots):
-    examples = []
-    for mf in constants.MORAL_FOUNDATION_DEFINITIONS_MAP.keys(): 
-            positive_examples = constants.MORAL_FOUNDATION_POSITIVE_EXAMPLES_MAP[mf][0:num_shots]
-            negative_examples = constants.MORAL_FOUNDATION_NEGATIVE_EXAMPLES_MAP[mf][0:num_shots]
+def generate_one_pass_tf_moral_foundation_prompt_format(prompt_format, example_format, num_shots, example_dir):
+    filepath = os.path.join(example_dir, 'moral_foundation_examples.json')
+    foundation_prompt_map = {}
+    with open(filepath) as f:
+        data = json.load(f)
+        for foundation in data:
+            foundation = data['moral_foundation']
+            positive_examples = data['positive_examples']
+            negative_examples = data['negative_examples']
+            formatted_examples = []
             for i in range(num_shots):
-                examples.append(constants.MORAL_FOUNDATION_IDENTIFICATION_EXAMPLE_FORMAT.format(positive_examples[i], mf, "True"))
-                examples.append(constants.MORAL_FOUNDATION_IDENTIFICATION_EXAMPLE_FORMAT.format(negative_examples[i], mf, "False"))
-    return constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF.format(' '.join(examples))
+                positive_example = example_format.format(**positive_examples[i])
+                negative_example = example_format.format(**negative_examples[i])
+                formatted_examples.append(positive_example)
+                formatted_examples.append(negative_example)
+            definition = constants.MORAL_FOUNDATION_DEFINITIONS_MAP[foundation]
+            formatted_prompt = prompt_format.format(definition, ' '.join(formatted_examples))
+        foundation_prompt_map[foundation] = formatted_prompt
+
+def generate_one_pass_tf_moral_role_prompt_format(prompt_format, example_format, num_shots, example_dir):
+    filepath = os.path.join(example_dir, 'moral_role_examples.json')
+    foundation_prompt_map = {}
+    with open(filepath) as f:
+        data = json.load(f)
+        for foundation in data:
+            foundation = data['moral_role']
+            positive_examples = data['positive_examples']
+            negative_examples = data['negative_examples']
+            formatted_examples = []
+            for i in range(num_shots):
+                positive_example = example_format.format(**positive_examples[i])
+                negative_example = example_format.format(**negative_examples[i])
+                formatted_examples.append(positive_example)
+                formatted_examples.append(negative_example)
+            definition = constants.MORAL_FOUNDATION_DEFINITIONS_MAP[foundation]
+            formatted_prompt = prompt_format.format(definition, ' '.join(formatted_examples))
+        foundation_prompt_map[foundation] = formatted_prompt
+
+
