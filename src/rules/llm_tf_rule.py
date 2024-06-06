@@ -1,5 +1,6 @@
 from collections import OrderedDict
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from src.helpers import prompt_constants
 from src.rules.rule_template import RuleTemplate
 import pandas as pd
 import random
@@ -14,22 +15,26 @@ class LLMTFRule(RuleTemplate):
                  head_predicate_format: str,
                  rule_variable_format: str,
                  rule_type: str,
-                 prompt_format: str, 
                  batch_size: int, 
                  model: AutoModelForCausalLM, 
                  tokenizer: AutoTokenizer,
                  topk: int,
                  temperature: int,
-                 device_type: str):
+                 device_type: str,
+                 prompt_map: str):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
-        self.prompt_format = prompt_format
+        self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
         self.tokenizer = tokenizer
         self.topk = topk
         self.temperature = temperature
         self.device_type = device_type
-
+    
+    def get_prompt(self, label, dict):
+        prompt = self.prompt_map[label]
+        return prompt.format(**dict)
+        
     def get_rule_groundings(self, data: pd.DataFrame):
         data_subset = data[self.features].drop_duplicates()
         prompts = []
@@ -44,7 +49,7 @@ class LLMTFRule(RuleTemplate):
                 dict[feature] = row[feature]
             for label in self.labels:
                 dict['label'] = label
-                formatted_prompt = self.prompt_format.format(**dict)
+                formatted_prompt = self.get_prompt(label, dict)
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)

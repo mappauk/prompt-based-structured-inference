@@ -1,6 +1,7 @@
 import os
 import json
 import pandas as pd
+import src.helpers.prompt_constants as constants
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 
@@ -101,28 +102,24 @@ def load_moral_frame_data_parse_entity_labels(datasetdir):
     tweets = []
     entity_ids = []
     entities = []
+    entity_labels = []
     for key, filename in filename_map.items():
         counter = 0
         filepath = os.path.join(datasetdir, filename)
         with open(filepath) as f:
             data = json.load(f)
             for attribute, value in data.items():
-                counter += 1
-                if counter > 10:
-                    break
+                #counter += 1
+                #if counter > 50:
+                #    break
                 author_ideology.append(author_label_map[value['author-label']])
                 topic.append(topic_label_map[value['issue']])
                 ids.append(attribute)
                 tweets.append(value['text'])
-                tweet_entities = set()
-                for i in range(1): #range(len(value['annotations'])):
-                    for entity in value['annotations'][i]:
-                        entity_name = value['text'][entity['startOffset']:entity['endOffset']]
-                        entity_name = entity_name.strip()
-                        if entity_name not in tweet_entities and len(tweet_entities) <= 2:
-                            tweet_entities.add(entity_name)
-                            entities.append(entity_name)
-                            entity_ids.append(attribute)
+                tweet_entities, tweet_entity_ids, tweet_entity_labels = get_entities(attribute, value['text'], value["annotations"], constants.MORAL_FOUNDATION_TO_QUESTIONS[key], constants.QUESTION_TO_MORAL_FOUNDATION[key])
+                entity_ids.extend(tweet_entity_ids)
+                entities.extend(tweet_entities)
+                entity_labels.extend(tweet_entity_labels)
 
     data = pd.DataFrame(
         {
@@ -136,32 +133,42 @@ def load_moral_frame_data_parse_entity_labels(datasetdir):
         {
             'Id': entity_ids,
             'Entity': entities,
+            'EntityLabels': entity_labels
         }
     )
     return data.merge(entity_data, how='left', on='Id')
 
-
-def load_moral_frame_data_ner(datasetdir):
-    raw_data = load_dataset_ilp(datasetdir)
-    tokenizer = AutoTokenizer.from_pretrained("Babelscape/wikineural-multilingual-ner")
-    model = AutoModelForTokenClassification.from_pretrained("Babelscape/wikineural-multilingual-ner")
-    nlp = pipeline("ner", model=model, tokenizer=tokenizer, grouped_entities=True, device_map='cuda')
-    ids = []
+def get_entities(id, tweet, annotations, questions, question_to_moral_foundation):
+    entity_agreement_map = {}
     entities = []
-    for index, row in raw_data.iterrows():
-        doc = nlp(row['Tweet'])
-        for ent in doc:
-            if ent['score'] > 0.6:
-                print(ent)
-                ids.append(row['Id'])
-                entities.append(ent['word'])
-    entity_data = pd.DataFrame(
-        {
-            'Id': ids,
-            'Entity': entities, 
-        }
-    )
-    return raw_data.merge(entity_data, how='left', on='Id')
+    ids = []
+    labels = []
+    for annotation_list in annotations:
+        for annotation in annotation_list:
+            question_map = {}
+            if annotation['label'] not in questions:
+                continue
+            if annotation['label'] in questions and annotation['label'] in entity_agreement_map:
+                question_map = entity_agreement_map[annotation['label']]
+            added = False
+            entity = tweet[annotation['startOffset']:annotation['endOffset']]
+            for question_entity, count in question_map.items():
+                if question_entity in entity or entity in question_entity:
+                    question_map[question_entity] = count + 1
+                    added = True
+                    break
+            if added == False:
+                question_map[entity] = 1
+            entity_agreement_map[annotation['label']] = question_map
+    for question, question_map in entity_agreement_map.items():
+        sorted_map = sorted(question_map.items(), key=lambda item: item[1], reverse=True)
+        for entity, count in dict(sorted_map).items():
+            if count >= 2:
+                entities.append(entity)
+                ids.append(id)
+                labels.append(question_to_moral_foundation[question])
+            break
+    return entities, ids, labels
 
 def write_json_file(filename, data):
     with open(filename, 'w') as f:
