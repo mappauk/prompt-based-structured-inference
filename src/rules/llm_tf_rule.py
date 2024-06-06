@@ -32,7 +32,7 @@ class LLMTFRule(RuleTemplate):
         self.device_type = device_type
     
     def get_prompt(self, label, dict):
-        prompt = self.prompt_map.format[label]
+        prompt = self.prompt_map[label]
         return prompt.format(**dict)
         
     def get_rule_groundings(self, data: pd.DataFrame):

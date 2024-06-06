@@ -176,30 +176,30 @@ MORAL_FOUNDATION_IDENTIFICATION_ONE_VS_ALL_TF = ('Moral Foundation Definitions: 
 
 ## One Pass
 
-MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF = ('{0} {1}'
-    '### Tweet: {Tweet}'
-    'Q. "The moral foundation expressed in the tweet is {label}." - True or False?'
-    'A. ')
-
-MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = ('{0} {1}'
-    '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic}'
-    'Q. "The moral foundation expressed in the tweet is {label}." - True or False?'
-    'A. ')
-
-MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF = ('{0} {1}'
+MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF = (
     '### Tweet: {Tweet} '
-    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False?'
+    'Q. "The moral foundation expressed in the tweet is {label}." - True or False? '
     'A. ')
 
-MORAL_ROLE_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = ('{0} {1}'
-    '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic}'
-    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False?'
+MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = (
+    '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} '
+    'Q. "The moral foundation expressed in the tweet is {label}." - True or False? '
     'A. ')
 
-MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. {0}'
-MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. {0}'
-MORAL_ROLE_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. {0}'
-MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. {0}'
+MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF = (
+    '### Tweet: {Tweet} '
+    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? '
+    'A. ')
+
+MORAL_ROLE_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = (
+    '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} '
+    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? '
+    'A. ')
+
+MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. {answer}'
+MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. {answer}'
+MORAL_ROLE_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. {answer}'
+MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. {answer}'
 
 # Definitions
 

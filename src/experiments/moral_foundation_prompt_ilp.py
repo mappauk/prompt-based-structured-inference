@@ -52,7 +52,7 @@ def main():
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_test_model()
+    model, tokenizer = moral_prompting.load_mixtral_model()
     # define rules
     rule_one = LLMTFRule(
         'rule_one',
