@@ -2,9 +2,9 @@
 #SBATCH --qos=blanca-curc-gpu
 #SBATCH --nodes=1
 #SBATCH --job-name=moral-prompt
-#SBATCH --ntasks=32
+#SBATCH --ntasks=64
 #SBATCH --gres=gpu:a100:1
-#SBATCH --time=6:00:00
+#SBATCH --time=12:00:00
 
 module purge
 module load python/3.8.0
@@ -13,4 +13,4 @@ module load cuda/11.8
 
 
 conda activate moraldistill
-python -m src.experiments.moral_foundation_prompt_ilp C:\src\MoralDistillation\data C:\src\MoralDistillation\output\ilp_test.json
+python -m src.experiments.moral_foundation_prompt_ilp /rc_scratch/mapa7010/MoralDistillation/data /rc_scratch/mapa7010/ilp_output.json /rc_scratch/mapa7010/MoralDistillation/data/few_shot_examples
