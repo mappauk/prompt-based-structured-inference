@@ -75,8 +75,6 @@ class LLMTFRule(RuleTemplate):
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
         
         result_data = pd.DataFrame(output_df_list)
-        for i in range(len(scores)):
-            scores[i] = random.uniform(0, 1)
         result_data.insert(0, 'Score', scores)
         return result_data
 

@@ -75,6 +75,57 @@ def load_dataset_ilp(datasetdir):
             "Tweet": tweets,
         }
     )
+def load_frame_labels(datasetdir):
+    filename_map = {
+        'CARE/HARM': 'combined_annotations_care_harm.json',
+        'AUTHORITY/SUBVERSION': 'combined_annotations_authority_subversion.json',
+        'FAIRNESS/CHEATING': 'combined_annotations_fairness_cheating.json',
+        'LOYALTY/BETRAYAL': 'combined_annotations_loyalty_betrayal.json',
+        'PURITY/DEGRADATION': 'combined_annotations_sanctity_degradation.json',
+    }
+    ids = []
+    labels = []
+    for key, filename in filename_map.items():
+        filepath = os.path.join(datasetdir, filename)
+        with open(filepath) as f:
+            data = json.load(f)
+            for attribute, value in data.items():
+                ids.append(attribute)
+                labels.append(key)
+    return pd.DataFrame(
+        {
+            'Id': ids,
+            'Label': labels
+        }
+    )
+
+def load_role_labels(datasetdir):
+    filename_map = {
+        'CARE/HARM': 'combined_annotations_care_harm.json',
+        'AUTHORITY/SUBVERSION': 'combined_annotations_authority_subversion.json',
+        'FAIRNESS/CHEATING': 'combined_annotations_fairness_cheating.json',
+        'LOYALTY/BETRAYAL': 'combined_annotations_loyalty_betrayal.json',
+        'PURITY/DEGRADATION': 'combined_annotations_sanctity_degradation.json',
+    }
+    ids = []
+    entities = []
+    entity_labels = []
+    for key, filename in filename_map.items():
+        filepath = os.path.join(datasetdir, filename)
+        with open(filepath) as f:
+            data = json.load(f)
+            for attribute, value in data.items():
+                tweet_entities, tweet_entity_ids, tweet_entity_labels = get_entities(attribute, value['text'], value["annotations"], constants.MORAL_FOUNDATION_TO_QUESTIONS[key], constants.QUESTION_TO_MORAL_FOUNDATION[key])
+                ids.extend(tweet_entity_ids)
+                entities.extend(tweet_entities)
+                entity_labels.extend(tweet_entity_labels)
+    return pd.DataFrame(
+        {
+            'Id': ids,
+            'Entity': entities,
+            'EntityLabel': entity_labels
+        }
+    )
 
 def load_moral_frame_data_parse_entity_labels(datasetdir):
     filename_map = {
@@ -175,16 +226,9 @@ def write_json_file(filename, data):
         json.dump(data, f, indent=4)
 
 
-def load_prediction_results(filename):
-    predictions = []
-    true_labels = []
+def load_results(filename):
     with open(filename) as f:
-        data = json.load(f)
-        for attribute, value in data.items():
-            predictions.append(value["predicted_labels"])
-            true_labels.append(value["true_label"])
-    return predictions, true_labels
-                
+        return json.load(f)                
 
     
 

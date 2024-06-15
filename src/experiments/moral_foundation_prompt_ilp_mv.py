@@ -4,7 +4,7 @@ from gurobipy import GRB
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from src.rules.llm_tf_rule import LLMTFRule
+from src.rules.llm_mv_rule import LLMMVRule
 import src.helpers.moral_prompting as moral_prompting
 import src.helpers.prompt_constants as constants
 import src.helpers.dataset_loader as dataset_loader
@@ -19,6 +19,8 @@ def main():
     num_shots = 2
     topk = 5
     temperature = 0.5
+    num_votes = 10
+    num_return_sequences = 1
     prompt_batch_size = 2
     input_path = sys.argv[1]
     output_path = sys.argv[2]
@@ -52,9 +54,9 @@ def main():
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_mixtral_model()
+    model, tokenizer = moral_prompting.load_test_model(device_type)
     # define rules
-    rule_one = LLMTFRule(
+    rule_one = LLMMVRule(
         'rule_one',
         ['Id', 'Tweet'],
         constants.MORAL_FOUNDATIONS,
@@ -67,9 +69,12 @@ def main():
         topk, 
         temperature, 
         device_type,
-        foundation_prompts
+        foundation_prompts,
+        num_votes,
+        num_return_sequences,
+        constants.FOUNDATION_CLUSTER_LABEL_MAP
     )
-    rule_two = LLMTFRule(
+    rule_two = LLMMVRule(
         'rule_two',
         ['Id', 'Tweet', 'Entity'],
         constants.MORAL_FOUNDATION_ROLE,
@@ -82,9 +87,12 @@ def main():
         topk, 
         temperature, 
         device_type,
-        role_prompts
+        role_prompts,
+        num_votes,
+        num_return_sequences,
+        constants.ROLE_CLUSTER_LABEL_MAP
     )
-    rule_three = LLMTFRule(
+    rule_three = LLMMVRule(
         'rule_three',
         ['Id', 'Tweet', 'Topic', 'Ideology'],
         constants.MORAL_FOUNDATIONS,
@@ -97,9 +105,12 @@ def main():
         topk, 
         temperature, 
         device_type,
-        foundation_prompts_with_features
+        foundation_prompts_with_features,
+        num_votes,
+        num_return_sequences,
+        constants.FOUNDATION_CLUSTER_LABEL_MAP
     )
-    rule_four = LLMTFRule(
+    rule_four = LLMMVRule(
         'rule_four',
         ['Id', 'Tweet', 'Entity', 'Ideology', 'Topic'],
         constants.MORAL_FOUNDATION_ROLE,
@@ -112,7 +123,10 @@ def main():
         topk, 
         temperature, 
         device_type,
-        role_prompts_with_features
+        role_prompts_with_features,
+        num_votes,
+        num_return_sequences,
+        constants.ROLE_CLUSTER_LABEL_MAP
     )
     rules = {
         rule_one.name: rule_one, 
