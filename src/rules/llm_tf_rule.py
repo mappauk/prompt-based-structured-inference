@@ -21,7 +21,8 @@ class LLMTFRule(RuleTemplate):
                  topk: int,
                  temperature: int,
                  device_type: str,
-                 prompt_map: str):
+                 prompt_map: str,
+                 renormalize: bool = False):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
@@ -30,6 +31,7 @@ class LLMTFRule(RuleTemplate):
         self.topk = topk
         self.temperature = temperature
         self.device_type = device_type
+        self.renormalize = renormalize
     
     def get_prompt(self, label, dict):
         prompt = self.prompt_map[label]
@@ -64,7 +66,7 @@ class LLMTFRule(RuleTemplate):
             outputs = self.model.generate(
                 **prompts[i], 
                 max_new_tokens=1, 
-                do_sample=True, 
+                do_sample=True,
                 num_return_sequences=1,
                 return_dict=True,
                 output_logits=True,
@@ -73,6 +75,10 @@ class LLMTFRule(RuleTemplate):
             softmax_over_tokens = torch.nn.functional.softmax(outputs.logits[0], dim=1)
             softmax_over_answers = torch.nn.functional.softmax(softmax_over_tokens[:, [tIndex, fIndex]], dim=1)
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
+        if self.renormalize:
+            scores_by_label = np.reshape(scores, (int(len(scores)/len(self.labels)), len(self.labels)))
+            softmax_over_labels = np.nn.functional.softmax(scores_by_label, dim=1)
+            scores = softmax_over_labels.flatten()
         
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)

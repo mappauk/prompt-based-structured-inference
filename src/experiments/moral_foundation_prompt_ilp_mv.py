@@ -70,9 +70,8 @@ def main():
         temperature, 
         device_type,
         foundation_prompts,
+        True,
         num_votes,
-        num_return_sequences,
-        constants.FOUNDATION_CLUSTER_LABEL_MAP
     )
     rule_two = LLMMVRule(
         'rule_two',
@@ -88,9 +87,8 @@ def main():
         temperature, 
         device_type,
         role_prompts,
+        True,
         num_votes,
-        num_return_sequences,
-        constants.ROLE_CLUSTER_LABEL_MAP
     )
     rule_three = LLMMVRule(
         'rule_three',
@@ -106,9 +104,8 @@ def main():
         temperature, 
         device_type,
         foundation_prompts_with_features,
+        True,
         num_votes,
-        num_return_sequences,
-        constants.FOUNDATION_CLUSTER_LABEL_MAP
     )
     rule_four = LLMMVRule(
         'rule_four',
@@ -124,9 +121,8 @@ def main():
         temperature, 
         device_type,
         role_prompts_with_features,
+        True,
         num_votes,
-        num_return_sequences,
-        constants.ROLE_CLUSTER_LABEL_MAP
     )
     rules = {
         rule_one.name: rule_one, 
