@@ -85,6 +85,7 @@ class LLMTFRule(RuleTemplate):
         
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)
+        result_data.dropna(axis=0, how='any', inplace=True)
         return result_data
 
 

@@ -52,7 +52,7 @@ def main():
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_mistral_model(device_type)
+    model, tokenizer = moral_prompting.load_test_model(device_type)
     # define rules
     rule_one = LLMTFRule(
         'rule_one',

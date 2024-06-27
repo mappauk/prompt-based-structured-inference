@@ -161,8 +161,8 @@ def load_moral_frame_data_parse_entity_labels(datasetdir):
             data = json.load(f)
             for attribute, value in data.items():
                 counter += 1
-                if counter > 2:
-                    break
+                #if counter > 2:
+                #    break
                 author_ideology.append(author_label_map[value['author-label']])
                 topic.append(topic_label_map[value['issue']])
                 ids.append(attribute)
