@@ -19,7 +19,7 @@ def main():
     num_shots = 2
     topk = 5
     temperature = 0.5
-    prompt_batch_size = 2
+    prompt_batch_size = 16
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
@@ -52,7 +52,7 @@ def main():
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_mixtral_model()
+    model, tokenizer = moral_prompting.load_mistral_model(device_type)
     # define rules
     rule_one = LLMTFRule(
         'rule_one',
