@@ -20,7 +20,7 @@ def main():
     topk = 5
     temperature = 0.5
     prompt_batch_size = 2
-    num_votes = 10
+    num_votes = 3
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
@@ -33,14 +33,14 @@ def main():
         num_shots, 
         example_path
     )
-    foundation_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
-        constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF, 
-        constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT, 
-        num_shots,
+    role_prompts = moral_prompting.generate_one_pass_tf_moral_role_prompt_format(
+        constants.MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF,
+        constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT, 
+        num_shots, 
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_mistral_model(device_type)
+    model, tokenizer = moral_prompting.load_test_model(device_type)
     # define rules
     rule_one = LLMMVRule(
         'rule_one',
@@ -56,8 +56,8 @@ def main():
         temperature,
         device_type,
         foundation_prompts,
-        True,
-        num_votes
+        num_votes,
+        True
     )
     rule_two = LLMMVRule(
         'rule_two',
@@ -73,8 +73,8 @@ def main():
         temperature, 
         device_type,
         role_prompts,
-        True,
-        num_votes
+        num_votes,
+        True
     )
 
     # get rule groundings:
@@ -87,7 +87,9 @@ def main():
     foundation_instance_groupings = foundation_predictions.groupby(['Id'])
     for group_name, group in foundation_instance_groupings:
         max_row = group.iloc[group['Score'].argmax()]
-        results[max_row['Id']]['MoralFrame'] = max_row['label']
+        results[max_row['Id']] = {
+            'MoralFrame': max_row['label']
+        }
 
     role_instance_groupings = role_predictions.groupby(['Id', 'Entity'])
     for group_name, group in role_instance_groupings:
@@ -100,7 +102,8 @@ def main():
         if 'EntityRoles' in foundation_id_result:
             foundation_id_result['EntityRoles'].append(entity_result)
         else:
-            foundation_id_result = [entity_result]
+            foundation_id_result['EntityRoles'] = [entity_result]
+        results[max_row['Id']] = foundation_id_result
 
     dataset_loader.write_json_file(output_path, results)
 

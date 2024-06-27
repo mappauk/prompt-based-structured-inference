@@ -2,6 +2,7 @@ from collections import OrderedDict
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.helpers import prompt_constants
 from src.rules.rule_template import RuleTemplate
+import numpy as np
 import pandas as pd
 import random
 import copy
@@ -65,7 +66,7 @@ class LLMTFRule(RuleTemplate):
         for i in range(len(prompts)):
             outputs = self.model.generate(
                 **prompts[i], 
-                max_new_tokens=1, 
+                max_new_tokens=1,
                 do_sample=True,
                 num_return_sequences=1,
                 return_dict=True,
@@ -75,10 +76,12 @@ class LLMTFRule(RuleTemplate):
             softmax_over_tokens = torch.nn.functional.softmax(outputs.logits[0], dim=1)
             softmax_over_answers = torch.nn.functional.softmax(softmax_over_tokens[:, [tIndex, fIndex]], dim=1)
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
+        #for i in range(len(scores)):
+        #    scores[i] = random.uniform(0, 1)
         if self.renormalize:
             scores_by_label = np.reshape(scores, (int(len(scores)/len(self.labels)), len(self.labels)))
-            softmax_over_labels = np.nn.functional.softmax(scores_by_label, dim=1)
-            scores = softmax_over_labels.flatten()
+            softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
+            scores = softmax_over_labels.flatten().tolist()
         
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)

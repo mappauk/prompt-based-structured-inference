@@ -19,7 +19,7 @@ def main():
     num_shots = 2
     topk = 5
     temperature = 0.5
-    num_votes = 10
+    num_votes = 5
     num_return_sequences = 1
     prompt_batch_size = 2
     input_path = sys.argv[1]
@@ -70,8 +70,8 @@ def main():
         temperature, 
         device_type,
         foundation_prompts,
-        True,
         num_votes,
+        True
     )
     rule_two = LLMMVRule(
         'rule_two',
@@ -87,8 +87,8 @@ def main():
         temperature, 
         device_type,
         role_prompts,
-        True,
         num_votes,
+        True
     )
     rule_three = LLMMVRule(
         'rule_three',
@@ -104,8 +104,8 @@ def main():
         temperature, 
         device_type,
         foundation_prompts_with_features,
-        True,
         num_votes,
+        True
     )
     rule_four = LLMMVRule(
         'rule_four',
@@ -121,8 +121,8 @@ def main():
         temperature, 
         device_type,
         role_prompts_with_features,
-        True,
         num_votes,
+        True
     )
     rules = {
         rule_one.name: rule_one, 

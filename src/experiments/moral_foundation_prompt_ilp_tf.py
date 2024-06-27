@@ -67,7 +67,8 @@ def main():
         topk, 
         temperature, 
         device_type,
-        foundation_prompts
+        foundation_prompts,
+        True
     )
     rule_two = LLMTFRule(
         'rule_two',
@@ -82,7 +83,8 @@ def main():
         topk, 
         temperature, 
         device_type,
-        role_prompts
+        role_prompts,
+        True
     )
     rule_three = LLMTFRule(
         'rule_three',
@@ -97,7 +99,8 @@ def main():
         topk, 
         temperature, 
         device_type,
-        foundation_prompts_with_features
+        foundation_prompts_with_features,
+        True
     )
     rule_four = LLMTFRule(
         'rule_four',
@@ -112,7 +115,8 @@ def main():
         topk, 
         temperature, 
         device_type,
-        role_prompts_with_features
+        role_prompts_with_features,
+        True
     )
     rules = {
         rule_one.name: rule_one, 

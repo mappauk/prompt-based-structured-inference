@@ -6,8 +6,9 @@ import pandas as pd
 import random
 import copy
 import torch
+import numpy as np
 
-class LLMTFRule(RuleTemplate):
+class LLMMVRule(RuleTemplate):
     def __init__(self,
                  name: str,
                  features: list, 
@@ -22,9 +23,9 @@ class LLMTFRule(RuleTemplate):
                  temperature: int,
                  device_type: str,
                  prompt_map: str,
-                 renormalize: bool = False,
-                 num_votes: int):
-        super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
+                 num_votes: int,
+                 renormalize: bool = False):
+        super(LLMMVRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
@@ -78,16 +79,15 @@ class LLMTFRule(RuleTemplate):
             softmax_over_tokens = torch.nn.functional.softmax(outputs.logits[0], dim=1)
             softmax_over_answers = torch.nn.functional.softmax(softmax_over_tokens[:, [tIndex, fIndex]], dim=1)
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
-        
-        reshaped_scores = np.reshape(scores, (int(len(scores)/len(self.num_votes)), len(self.num_votes)))
+        #for i in range(len(scores)):
+        #    scores[i] = random.uniform(0, 1)
+        reshaped_scores = np.reshape(scores, (int(len(scores)/self.num_votes), self.num_votes))
         votes = np.where(reshaped_scores > 0.5, 1, 0)
         scores_by_vote = (np.sum(votes, axis=1) / self.num_votes) + 0.001
-
         if self.renormalize:
             scores_by_label = np.reshape(scores_by_vote, (int(len(scores_by_vote)/len(self.labels)), len(self.labels)))
-            softmax_over_labels = np.nn.functional.softmax(scores_by_label, dim=1)
-            scores = softmax_over_labels.flatten()
-        
+            softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
+            scores = softmax_over_labels.flatten().tolist()
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)
         return result_data
