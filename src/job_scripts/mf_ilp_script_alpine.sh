@@ -1,5 +1,6 @@
 #!/bin/bash
-#SBATCH --qos=blanca-curc-gpu
+#SBATCH --qos=normal
+#SBATCH --partition=aa100
 #SBATCH --nodes=1
 #SBATCH --job-name=moral-prompt
 #SBATCH --ntasks=32
