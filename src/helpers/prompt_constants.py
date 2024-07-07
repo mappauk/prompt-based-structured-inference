@@ -285,3 +285,63 @@ ROLE_CLUSTER_LABEL_MAP = {
     PURITY_DEGREDATION_ROLE_CLUSTER: [TARGET_PURITY_DEGREDATION, ENTITY_CAUSING_DEGRADATION, ENTITY_PRESERVING_PURITY]
 }
 
+GEN_Z_MF_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
+GEN_Z_MF_PARAPHRASE_PROMPT_WITH_CONTEXT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet about [TOPIC] whose author is a [POLITICAL_PARTY] expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; TOPIC∈{affordable care act, immigration, abortion, guns, terrorism, lgbtq}, POLITICAL_PARTY∈{democrat, republican}, MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
+GEN_Z_MF_ROLE_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This entity [ENTITY] in this tweet exhibits the moral role [MORAL_ROLE] defined as [MORAL_ROLE_DEFINITION]."'
+GEN_Z_MF_ROLE_PARAPHRASE_PROMPT_WITH_CONTEXT = 'Write 10 paraphrases of this sentence as a Python list. “This entity [ENTITY] in this tweet about [TOPIC] and written by a [POLITICAL_PARTY] exhibits the moral role [MORAL_ROLE] defined as [MORAL_ROLE_DEFINITION]."'
+
+GEN_Z_MF_TWEET_FORMAT = '### Tweet: {0}'
+
+GEN_Z_MF_INTRO_ZERO_SHOT = 'Generate a tweet based on the following description.'
+GEN_Z_MF_FEW_SHOT_EXAMPLES = 'Generate a tweet based on the following description. For Example: '
+GEN_Z_MF_LABEL_SENTENCES = [
+    "This tweet expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet reflects the moral foundation [MORAL_FOUNDATION], which is defined as [MORAL_FOUNDATION_DEFINITION].",
+    "The tweet showcases the moral foundation [MORAL_FOUNDATION], described as [MORAL_FOUNDATION_DEFINITION].",
+    "In this tweet, the moral foundation [MORAL_FOUNDATION] is expressed, defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet highlights the moral foundation [MORAL_FOUNDATION], which means [MORAL_FOUNDATION_DEFINITION].",
+    "The moral foundation [MORAL_FOUNDATION] is conveyed in this tweet, defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet demonstrates the moral foundation [MORAL_FOUNDATION], described as [MORAL_FOUNDATION_DEFINITION].",
+    "In this tweet, the author expresses the moral foundation [MORAL_FOUNDATION], which is defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet communicates the moral foundation [MORAL_FOUNDATION], described as [MORAL_FOUNDATION_DEFINITION]."
+    "This tweet conveys the moral foundation [MORAL_FOUNDATION], defined as [MORAL_FOUNDATION_DEFINITION]."
+]
+
+GEN_Z_MF_LABEL_SENTENCES_WITH_CONTEXT = [
+    "This tweet about [TOPIC] whose author is a [POLITICAL_PARTY] expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet on [TOPIC] by a [POLITICAL_PARTY] reflects the moral foundation [MORAL_FOUNDATION], defined as [MORAL_FOUNDATION_DEFINITION].",
+    "A [POLITICAL_PARTY] wrote this tweet about [TOPIC] expressing the moral foundation [MORAL_FOUNDATION], which means [MORAL_FOUNDATION_DEFINITION].",
+    "The tweet on [TOPIC] authored by a [POLITICAL_PARTY] highlights the moral foundation [MORAL_FOUNDATION], described as [MORAL_FOUNDATION_DEFINITION].",
+    "In this tweet about [TOPIC], the [POLITICAL_PARTY] author conveys the moral foundation [MORAL_FOUNDATION], defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet regarding [TOPIC] by a [POLITICAL_PARTY] showcases the moral foundation [MORAL_FOUNDATION], which is [MORAL_FOUNDATION_DEFINITION].",
+    "The moral foundation [MORAL_FOUNDATION] is highlighted in this tweet about [TOPIC] by a [POLITICAL_PARTY], defined as [MORAL_FOUNDATION_DEFINITION].",
+    "Written by a [POLITICAL_PARTY], this tweet on [TOPIC] expresses the moral foundation [MORAL_FOUNDATION], defined as [MORAL_FOUNDATION_DEFINITION].",
+    "This tweet about [TOPIC] by a [POLITICAL_PARTY] illustrates the moral foundation [MORAL_FOUNDATION], defined as [MORAL_FOUNDATION_DEFINITION].",
+    "In this tweet about [TOPIC], written by a [POLITICAL_PARTY], the moral foundation [MORAL_FOUNDATION] is expressed, defined as [MORAL_FOUNDATION_DEFINITION].",
+]
+
+GEN_Z_MF_ROLE_LABEL_SENTENCES = [
+    "In this tweet, the entity [ENTITY] displays the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "This tweet shows the entity [ENTITY] exhibiting the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION].",
+    "The entity [ENTITY] in this tweet demonstrates the moral role [MORAL_ROLE], described as [MORAL_ROLE_DEFINITION].",
+    "In this tweet, [ENTITY] reflects the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION].",
+    "[ENTITY] in this tweet exemplifies the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "This tweet portrays the entity [ENTITY] as embodying the moral role [MORAL_ROLE], described as [MORAL_ROLE_DEFINITION].",
+    "The entity [ENTITY] in this tweet illustrates the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION].",
+    "[ENTITY] shows the moral role [MORAL_ROLE] in this tweet, defined as [MORAL_ROLE_DEFINITION].",
+    "In this tweet, [ENTITY] reveals the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "This tweet features [ENTITY] expressing the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION]."
+]
+
+GEN_Z_MF_ROLE_LABEL_SENTENCES_WITH_CONTEXT = [
+    "In this tweet about [TOPIC], written by a [POLITICAL_PARTY], the entity [ENTITY] exhibits the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "This tweet about [TOPIC] by a [POLITICAL_PARTY] shows the entity [ENTITY] demonstrating the moral role [MORAL_ROLE], described as [MORAL_ROLE_DEFINITION].",
+    "The entity [ENTITY] in this tweet about [TOPIC] from a [POLITICAL_PARTY] displays the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION].",
+    "In this tweet about [TOPIC] by a [POLITICAL_PARTY], [ENTITY] reflects the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "[ENTITY] in this tweet about [TOPIC], authored by a [POLITICAL_PARTY], exemplifies the moral role [MORAL_ROLE], which is described as [MORAL_ROLE_DEFINITION].",
+    "This tweet on [TOPIC] from a [POLITICAL_PARTY] portrays [ENTITY] as embodying the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "The entity [ENTITY] in this tweet about [TOPIC], written by a [POLITICAL_PARTY], illustrates the moral role [MORAL_ROLE], which is defined as [MORAL_ROLE_DEFINITION].",
+    "In this tweet on [TOPIC] by a [POLITICAL_PARTY], [ENTITY] shows the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "This tweet, discussing [TOPIC] and authored by a [POLITICAL_PARTY], reveals [ENTITY] displaying the moral role [MORAL_ROLE], defined as [MORAL_ROLE_DEFINITION].",
+    "The tweet about [TOPIC], written by a [POLITICAL_PARTY], features [ENTITY] expressing the moral role [MORAL_ROLE], described as [MORAL_ROLE_DEFINITION]."
+]
