@@ -126,6 +126,7 @@ def main():
     # get rule groundings:
     rule_groundings = {}
     for rule_name, rule in rules.items():
+        print(rule_name)
         rule_groundings[rule_name] = rule.get_rule_groundings(data)
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:

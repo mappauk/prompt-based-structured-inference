@@ -51,20 +51,20 @@ class LLMGZRule(RuleTemplate):
                 for sentence in label_sentences:
                     formatted_prompt = sentence.format(**dict)
                     char_batch_posiitions.append(len(formatted_prompt) + 1)
-                    formatted_prompt += self.generation_format()
+                    formatted_prompt += self.generation_format.format(**dict)
                     prompt_batch.append(formatted_prompt)
                     if len(prompt_batch) == self.batch_size:
                         tokenized_prompt_batch = self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type)
                         prompts.append(tokenized_prompt_batch)
-                        for i in range(len(tokenized_prompt_batch)):
-                            start_token_positions.append(tokenized_prompt_batch.char_to_token(i, char_batch_posiitions))
+                        for i in range(self.batch_size):
+                            start_token_positions.append(tokenized_prompt_batch.char_to_token(i, char_batch_posiitions[i]))
                         prompt_batch = []
                         char_batch_posiitions = []
         if len(prompt_batch) != 0:
             tokenized_prompt_batch = self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type)
             prompts.append(tokenized_prompt_batch)
-            for i in range(len(tokenized_prompt_batch)):
-                start_token_positions.append(tokenized_prompt_batch.char_to_token(i, char_batch_posiitions))
+            for i in range(len(prompt_batch)):
+                start_token_positions.append(tokenized_prompt_batch.char_to_token(i, char_batch_posiitions[i]))
         for i in range(len(prompts)):
             outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
             vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
@@ -72,7 +72,7 @@ class LLMGZRule(RuleTemplate):
             token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
             batch_token_count = token_ids.shape[1]
             vocab_size = vocab_probs.shape[len(vocab_probs.shape) - 1]
-            batch_size = len(prompts[i])
+            batch_size = token_ids.shape[0]
             vocab_start_by_token_index = np.arange(batch_token_count*batch_size)*vocab_size
             flattened_vocab_probs = vocab_probs.flatten()
             flattened_vocab_indicies = vocab_start_by_token_index + token_ids.flatten()
@@ -84,7 +84,7 @@ class LLMGZRule(RuleTemplate):
                 scores.append(score)
         scores_by_variation = np.reshape(scores, (int(len(scores)/self.num_variations), self.num_variations))
         scores_across_variations = np.sum(scores_by_variation, axis=1)
-        scores_by_label = np.reshape(scores_across_variations, int(len(scores_across_variations)/len(self.labels)), len(self.labels))
+        scores_by_label = np.reshape(scores_across_variations, (int(scores_across_variations.shape[0]/len(self.labels)), len(self.labels)))
         softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
         final_scores = softmax_over_labels.flatten().tolist()
         

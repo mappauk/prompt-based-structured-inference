@@ -15,7 +15,7 @@ def main():
     # hyperparamaters
     device_type = 'cuda'
     num_shots = 0
-    prompt_batch_size = 2
+    prompt_batch_size = 16
     num_variations = 6
     input_path = sys.argv[1]
     output_path = sys.argv[2]
@@ -30,6 +30,7 @@ def main():
         num_variations,
         example_path
     )
+    #print(foundation_prompts)
     role_prompts = moral_prompting.generate_one_pass_gz_moral_role_prompt_format(
         constants.GEN_Z_MF_ROLE_LABEL_SENTENCES, 
         constants.GEN_Z_MF_EXAMPLE_FORMAT, 
@@ -70,7 +71,6 @@ def main():
         constants.GEN_Z_MF_TWEET_FORMAT,
         num_variations
     )
-
     # get rule groundings:
     foundation_predictions = rule_one.get_rule_groundings(data)
     role_predictions = rule_two.get_rule_groundings(data)
