@@ -163,3 +163,4 @@ local_testing/
 .ipynb_checkpoints/
 output/
 .tmp.driveupload/
+data/

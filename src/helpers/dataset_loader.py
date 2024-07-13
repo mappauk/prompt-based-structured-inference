@@ -1,7 +1,7 @@
 import os
 import json
 import pandas as pd
-import src.helpers.prompt_constants as constants
+import src.helpers.mf_prompt_constants as constants
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 

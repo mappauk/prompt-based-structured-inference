@@ -4,45 +4,44 @@ from gurobipy import GRB
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from src.rules.llm_mv_rule import LLMMVRule
+from src.rules.llm_gz_rule import LLMGZRule
 import src.helpers.moral_prompting as moral_prompting
-import src.helpers.prompt_constants as constants
+import src.helpers.mf_prompt_constants as constants
 import src.helpers.dataset_loader as dataset_loader
 from src.rules.rule_type import RuleType
-from src.inference.gurobi_inference_model import GurobiInferenceModel
-from typing import Dict
 
 
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
-    topk = 5
-    temperature = 0.5
-    prompt_batch_size = 2
-    num_votes = 3
+    num_shots = 0
+    prompt_batch_size = 16
+    num_variations = 6
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
     # generate moral foundation prompt format strings
-    foundation_prompts = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
-        constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF, 
-        constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT, 
-        num_shots, 
+    foundation_prompts = moral_prompting.generate_one_pass_gz_moral_foundation_prompt_format(
+        constants.GEN_Z_MF_LABEL_SENTENCES, 
+        constants.GEN_Z_MF_EXAMPLE_FORMAT, 
+        num_shots,
+        num_variations,
         example_path
     )
-    role_prompts = moral_prompting.generate_one_pass_tf_moral_role_prompt_format(
-        constants.MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF,
-        constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT, 
-        num_shots, 
+    #print(foundation_prompts)
+    role_prompts = moral_prompting.generate_one_pass_gz_moral_role_prompt_format(
+        constants.GEN_Z_MF_ROLE_LABEL_SENTENCES, 
+        constants.GEN_Z_MF_EXAMPLE_FORMAT, 
+        num_shots,
+        num_variations,
         example_path
     )
     # load model
     model, tokenizer = moral_prompting.load_test_model(device_type)
     # define rules
-    rule_one = LLMMVRule(
+    rule_one = LLMGZRule(
         'rule_one',
         ['Id', 'Tweet'],
         constants.MORAL_FOUNDATIONS,
@@ -52,14 +51,12 @@ def main():
         prompt_batch_size, 
         model, 
         tokenizer, 
-        topk, 
-        temperature,
         device_type,
         foundation_prompts,
-        num_votes,
-        True
+        constants.GEN_Z_MF_TWEET_FORMAT,
+        num_variations
     )
-    rule_two = LLMMVRule(
+    rule_two = LLMGZRule(
         'rule_two',
         ['Id', 'Tweet', 'Entity'],
         constants.MORAL_FOUNDATION_ROLE,
@@ -69,14 +66,11 @@ def main():
         prompt_batch_size, 
         model, 
         tokenizer,
-        topk, 
-        temperature, 
         device_type,
         role_prompts,
-        num_votes,
-        True
+        constants.GEN_Z_MF_TWEET_FORMAT,
+        num_variations
     )
-
     # get rule groundings:
     foundation_predictions = rule_one.get_rule_groundings(data)
     role_predictions = rule_two.get_rule_groundings(data)

@@ -6,7 +6,7 @@ import pandas as pd
 import scipy.sparse as sp
 from src.rules.llm_mv_rule import LLMMVRule
 import src.helpers.moral_prompting as moral_prompting
-import src.helpers.prompt_constants as constants
+import src.helpers.mf_prompt_constants as constants
 import src.helpers.dataset_loader as dataset_loader
 from src.rules.rule_type import RuleType
 from src.inference.gurobi_inference_model import GurobiInferenceModel

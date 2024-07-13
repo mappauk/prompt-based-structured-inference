@@ -1,6 +1,6 @@
 from collections import OrderedDict
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from src.helpers import prompt_constants
+from src.helpers import mf_prompt_constants
 from src.rules.rule_template import RuleTemplate
 import numpy as np
 import pandas as pd
