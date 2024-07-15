@@ -5,100 +5,73 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from src.rules.llm_gz_rule import LLMGZRule
-import src.helpers.moral_prompting as moral_prompting
+import src.helpers.model_loader as model_loader
+import src.helpers.coref_prompting as coref_prompting
 import src.helpers.mf_prompt_constants as constants
-import src.helpers.dataset_loader as dataset_loader
+import src.helpers.genia_dataset_loader as dataset_loader
 from src.rules.rule_type import RuleType
+from src.inference.gurobi_inference_model import GurobiInferenceModel
+from typing import Dict
 
 
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 0
-    prompt_batch_size = 16
+    num_shots = 2
     num_variations = 6
+    prompt_batch_size = 16
     input_path = sys.argv[1]
     output_path = sys.argv[2]
-    example_path = sys.argv[3]
+    example_path = sys.argv[3] 
     # load data
-    data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
+    data = dataset_loader.preprocess_genia_coref(input_path)
+
     # generate moral foundation prompt format strings
-    foundation_prompts = moral_prompting.generate_one_pass_gz_moral_foundation_prompt_format(
-        constants.GEN_Z_MF_LABEL_SENTENCES, 
-        constants.GEN_Z_MF_EXAMPLE_FORMAT, 
+    coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
         num_shots,
-        num_variations,
-        example_path
-    )
-    #print(foundation_prompts)
-    role_prompts = moral_prompting.generate_one_pass_gz_moral_role_prompt_format(
-        constants.GEN_Z_MF_ROLE_LABEL_SENTENCES, 
-        constants.GEN_Z_MF_EXAMPLE_FORMAT, 
-        num_shots,
-        num_variations,
         example_path
     )
     # load model
-    model, tokenizer = moral_prompting.load_test_model(device_type)
+    model, tokenizer = model_loader.load_test_model(device_type)
     # define rules
     rule_one = LLMGZRule(
         'rule_one',
-        ['Id', 'Tweet'],
-        constants.MORAL_FOUNDATIONS,
-        'MF_{Id}_{label}',
-        'RuleOne_{Id}_{label}',
-        RuleType.MULTI_CLASS,
-        prompt_batch_size, 
-        model, 
-        tokenizer, 
-        device_type,
-        foundation_prompts,
-        constants.GEN_Z_MF_TWEET_FORMAT,
-        num_variations
-    )
-    rule_two = LLMGZRule(
-        'rule_two',
-        ['Id', 'Tweet', 'Entity'],
-        constants.MORAL_FOUNDATION_ROLE,
-        'Role_{Id}_{Entity}_{label}',
-        'RuleTwo_{Id}_{Entity}_{label}',
-        RuleType.MULTI_CLASS,
-        prompt_batch_size, 
-        model, 
+        ['doc_id', 'entity1_id', 'entity1', 'entity2_id', 'entity2', 'sent1', 'sent2'],
+        ['coref', 'nocoref'],
+        'CF_{doc_id}_{entity1_id}_{entity2_id}',
+        'RuleOne_{doc_id}_{entity1_id}_{entity2_id}',
+        RuleType.BINARY,
+        prompt_batch_size,
+        model,
         tokenizer,
         device_type,
-        role_prompts,
-        constants.GEN_Z_MF_TWEET_FORMAT,
+        coref_prompts,
+        constants.GEN_Z_COREF_FORMAT,
         num_variations
     )
+    rules = {
+        rule_one.name: rule_one, 
+    }
     # get rule groundings:
-    foundation_predictions = rule_one.get_rule_groundings(data)
-    role_predictions = rule_two.get_rule_groundings(data)
-
+    rule_groundings = {}
+    for rule_name, rule in rules.items():
+        rule_groundings[rule_name] = rule.get_rule_groundings(data)
+  
     # save results
     results = {}
-    # cluster by id
-    foundation_instance_groupings = foundation_predictions.groupby(['Id'])
-    for group_name, group in foundation_instance_groupings:
-        max_row = group.iloc[group['Score'].argmax()]
-        results[max_row['Id']] = {
-            'MoralFrame': max_row['label']
-        }
-
-    role_instance_groupings = role_predictions.groupby(['Id', 'Entity'])
-    for group_name, group in role_instance_groupings:
-        max_row = group.iloc[group['Score'].argmax()]
-        foundation_id_result = results[max_row['Id']]
-        entity_result = {
-            'Entity': max_row['Entity'],
-            'Label': max_row['label']
-        }
-        if 'EntityRoles' in foundation_id_result:
-            foundation_id_result['EntityRoles'].append(entity_result)
-        else:
-            foundation_id_result['EntityRoles'] = [entity_result]
-        results[max_row['Id']] = foundation_id_result
-
+    for index, row in rule_groundings['rule_one'].iterrows():
+        parsedVarName = row['HeadVariable'].split('_')
+        parsedId = parsedVarName[1]
+        id_result = []
+        if parsedId in results:
+            id_result = results[parsedId]
+        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'n':
+            id_result.append({
+                'Entity_1': parsedVarName[2],
+                'Entity_2': parsedVarName[3],
+                'Value': round(row['score'])
+            })
+        results[parsedId] = id_result
     dataset_loader.write_json_file(output_path, results)
 
 if __name__ == "__main__":

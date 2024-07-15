@@ -8,7 +8,9 @@ from src.rules.llm_tf_rule import LLMTFRule
 import src.helpers.model_loader as model_loader
 import src.helpers.coref_prompting as coref_prompting
 import src.helpers.mf_prompt_constants as constants
-import src.helpers.genia_dataset_loader as dataset_loader
+#import src.helpers.genia_dataset_loader as dataset_loader
+import src.helpers.ontonotes_dataset_loader as dataset_loader
+
 from src.rules.rule_type import RuleType
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
@@ -25,10 +27,12 @@ def main():
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
     # load data
-    data = dataset_loader.preprocess_genia_coref(input_path)
+    data = dataset_loader.preprocess_ontonotes_coref(input_path)
+    print(data)
 
+'''
     # generate moral foundation prompt format strings
-    foundation_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
+    coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
         num_shots, 
         example_path
     )
@@ -48,7 +52,7 @@ def main():
         topk, 
         temperature, 
         device_type,
-        foundation_prompts,
+        coref_prompts,
         True
     )
     rules = {
@@ -99,11 +103,12 @@ def main():
             id_result = results[parsedId]
         if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'n':
             id_result.append({
-                'Entity_1': parsedVarName[0],
-                'Entity_2': parsedVarName[1],
+                'Entity_1': parsedVarName[2],
+                'Entity_2': parsedVarName[3],
                 'Value': value
             })
     dataset_loader.write_json_file(output_path, results)
+    '''
 
 if __name__ == "__main__":
     main()

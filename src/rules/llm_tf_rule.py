@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from src.helpers import mf_prompt_constants
 from src.rules.rule_template import RuleTemplate
+from src.rules.rule_type import RuleType
 import numpy as np
 import pandas as pd
 import random
@@ -15,14 +15,14 @@ class LLMTFRule(RuleTemplate):
                  labels: list, 
                  head_predicate_format: str,
                  rule_variable_format: str,
-                 rule_type: str,
-                 batch_size: int, 
+                 rule_type: RuleType,
+                 batch_size: int,
                  model: AutoModelForCausalLM, 
                  tokenizer: AutoTokenizer,
                  topk: int,
                  temperature: int,
                  device_type: str,
-                 prompt_map: str,
+                 prompt_map,
                  renormalize: bool = False):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
@@ -50,17 +50,27 @@ class LLMTFRule(RuleTemplate):
             dict = { }
             for feature in self.features:
                 dict[feature] = row[feature]
-            for label in self.labels:
-                dict['label'] = label
-                formatted_prompt = self.get_prompt(label, dict)
+            if self.rule_type == RuleType.BINARY:
+                formatted_prompt = self.prompt_map.format(**dict)
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
-                output_df_list.append(output_df_row)
                 prompt_batch.append(formatted_prompt)
                 if len(prompt_batch) == self.batch_size:
                     prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
-                    prompt_batch = []
+                    prompt_batch = [] 
+            elif self.rule_type == RuleType.MULTI_CLASS:
+                for label in self.labels:
+                    dict['label'] = label
+                    formatted_prompt = self.get_prompt(label, dict)
+                    output_df_row = copy.deepcopy(dict)
+                    output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
+                    output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
+                    output_df_list.append(output_df_row)
+                    prompt_batch.append(formatted_prompt)
+                    if len(prompt_batch) == self.batch_size:
+                        prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
+                        prompt_batch = []
         if len(prompt_batch) != 0:
             prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
         for i in range(len(prompts)):
@@ -78,7 +88,7 @@ class LLMTFRule(RuleTemplate):
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
         #for i in range(len(scores)):
         #    scores[i] = random.uniform(0, 1)
-        if self.renormalize:
+        if self.renormalize and self.rule_type == RuleType.MULTI_CLASS:
             scores_by_label = np.reshape(scores, (int(len(scores)/len(self.labels)), len(self.labels)))
             softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
             scores = softmax_over_labels.flatten().tolist()
