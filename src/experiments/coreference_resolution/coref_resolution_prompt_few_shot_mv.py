@@ -5,10 +5,13 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from src.rules.llm_mv_rule import LLMMVRule
-import src.helpers.model_loader as model_loader
-import src.helpers.coref_prompting as coref_prompting
-import src.helpers.mf_prompt_constants as constants
-import src.helpers.genia_dataset_loader as dataset_loader
+import src.helpers.loaders.model_loader as model_loader
+import src.helpers.prompting.coref_prompting as coref_prompting
+import src.helpers.prompting.coref_prompt_constants as constants
+import src.helpers.loaders.genia_dataset_loader as genia_dataset_loader
+import src.helpers.loaders.ontonotes_dataset_loader as ontonotes_dataset_loader
+import src.analysis.analysis_helper as analysis_helper
+
 from src.rules.rule_type import RuleType
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
@@ -26,7 +29,8 @@ def main():
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
     # load data
-    data = dataset_loader.preprocess_genia_coref(input_path)
+    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
 
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
@@ -77,7 +81,7 @@ def main():
                 'Value': round(row['score'])
             })
         results[parsedId] = id_result
-    dataset_loader.write_json_file(output_path, results)
+    analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":
     main()

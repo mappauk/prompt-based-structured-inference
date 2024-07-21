@@ -1,7 +1,7 @@
 import os
 import json
 import pandas as pd
-import src.helpers.mf_prompt_constants as constants
+import src.helpers.prompting.mf_prompt_constants as constants
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 
@@ -219,16 +219,7 @@ def get_entities(id, tweet, annotations, questions, question_to_moral_foundation
                 ids.append(id)
                 labels.append(question_to_moral_foundation[question])
             break
-    return entities, ids, labels
-
-def write_json_file(filename, data):
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
-
-
-def load_results(filename):
-    with open(filename) as f:
-        return json.load(f)                
+    return entities, ids, labels              
 
     
 

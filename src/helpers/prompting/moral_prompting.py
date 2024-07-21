@@ -1,6 +1,6 @@
 import os
 import json
-import src.helpers.mf_prompt_constants as constants
+import src.helpers.prompting.mf_prompt_constants as constants
 
 def generate_one_pass_tf_moral_foundation_prompt_format(prompt_format, example_format, num_shots, example_dir):
     filepath = os.path.join(example_dir, 'moral_foundation_examples.json')

@@ -5,9 +5,10 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from src.rules.llm_tf_rule import LLMTFRule
-import src.helpers.moral_prompting as moral_prompting
-import src.helpers.mf_prompt_constants as constants
-import src.helpers.dataset_loader as dataset_loader
+import src.helpers.prompting.moral_prompting as moral_prompting
+import src.helpers.prompting.mf_prompt_constants as constants
+import src.helpers.loaders.mf_dataset_loader as dataset_loader
+import src.analysis.analysis_helper as analysis_helper
 from src.rules.rule_type import RuleType
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
@@ -102,7 +103,7 @@ def main():
             foundation_id_result['EntityRoles'] = [entity_result]
         results[max_row['Id']] = foundation_id_result
 
-    dataset_loader.write_json_file(output_path, results)
+    analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":
     main()

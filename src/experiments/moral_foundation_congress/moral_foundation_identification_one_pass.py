@@ -1,5 +1,5 @@
-import src.helpers.moral_prompting as moral_prompting
-import src.helpers.dataset_loader as dataset_loader
+import src.helpers.prompting.moral_prompting as moral_prompting
+import src.helpers.loaders.mf_dataset_loader as dataset_loader
 import sys
 
 def main():
