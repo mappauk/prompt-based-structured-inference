@@ -30,7 +30,8 @@ def main():
     # load data
     data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
     #data = genia_dataset_loader.preprocess_genia_coref(input_path)
-
+    
+    data = data.head(5)
 
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
@@ -63,8 +64,10 @@ def main():
     rule_groundings = {}
     for rule_name, rule in rules.items():
         rule_groundings[rule_name] = rule.get_rule_groundings(data)
+
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
+        print(rule_groundings['rule_one'])
         coref_groupings = rule_groundings['rule_one'].groupby(['doc_id'])
         for group_name, group in coref_groupings:
             for i, main_row in group.iterrows():
@@ -108,6 +111,7 @@ def main():
                 'Entity_2': parsedVarName[3],
                 'Value': value
             })
+        results[parsedId] = id_result
     analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":

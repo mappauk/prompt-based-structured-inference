@@ -57,10 +57,12 @@ class LLMMVRule(RuleTemplate):
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
-                prompt_batch.append(formatted_prompt)
-                if len(prompt_batch) == self.batch_size:
-                    prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
-                    prompt_batch = [] 
+                output_df_list.append(output_df_row)
+                for i in range(self.num_votes):
+                    prompt_batch.append(formatted_prompt)
+                    if len(prompt_batch) == self.batch_size:
+                        prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
+                        prompt_batch = [] 
             elif self.rule_type == RuleType.MULTI_CLASS:
                 for label in self.labels:
                     dict['label'] = label
@@ -91,11 +93,12 @@ class LLMMVRule(RuleTemplate):
             scores.extend(softmax_over_answers[:, 0].cpu().tolist())
         #for i in range(len(scores)):
         #    scores[i] = random.uniform(0, 1)
+        print(len(output_df_list))
         reshaped_scores = np.reshape(scores, (int(len(scores)/self.num_votes), self.num_votes))
         votes = np.where(reshaped_scores > 0.5, 1, 0)
-        scores_by_vote = (np.sum(votes, axis=1) / self.num_votes) + 0.001
+        scores = (np.sum(votes, axis=1) / self.num_votes) + 0.001
         if self.renormalize and self.rule_type == RuleType.MULTI_CLASS:
-            scores_by_label = np.reshape(scores_by_vote, (int(len(scores_by_vote)/len(self.labels)), len(self.labels)))
+            scores_by_label = np.reshape(scores, (int(len(scores)/len(self.labels)), len(self.labels)))
             softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
             scores = softmax_over_labels.flatten().tolist()
         result_data = pd.DataFrame(output_df_list)

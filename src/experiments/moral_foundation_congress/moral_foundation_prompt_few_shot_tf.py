@@ -9,6 +9,8 @@ import src.helpers.prompting.moral_prompting as moral_prompting
 import src.helpers.prompting.mf_prompt_constants as constants
 import src.helpers.loaders.mf_dataset_loader as dataset_loader
 import src.analysis.analysis_helper as analysis_helper
+import src.helpers.loaders.model_loader as model_loader
+
 from src.rules.rule_type import RuleType
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
@@ -17,7 +19,7 @@ from typing import Dict
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     topk = 5
     temperature = 0.5
     prompt_batch_size = 2
@@ -39,8 +41,9 @@ def main():
         num_shots, 
         example_path
     )
+
     # load model
-    model, tokenizer = moral_prompting.load_test_model(device_type)
+    model, tokenizer = model_loader.load_test_model(device_type)
     # define rules
     rule_one = LLMTFRule(
         'rule_one',

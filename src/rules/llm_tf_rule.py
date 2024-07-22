@@ -52,9 +52,11 @@ class LLMTFRule(RuleTemplate):
                 dict[feature] = row[feature]
             if self.rule_type == RuleType.BINARY:
                 formatted_prompt = self.prompt_map.format(**dict)
+                #print(formatted_prompt)
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
+                output_df_list.append(output_df_row)
                 prompt_batch.append(formatted_prompt)
                 if len(prompt_batch) == self.batch_size:
                     prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
@@ -71,6 +73,7 @@ class LLMTFRule(RuleTemplate):
                     if len(prompt_batch) == self.batch_size:
                         prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
                         prompt_batch = []
+            
         if len(prompt_batch) != 0:
             prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
         for i in range(len(prompts)):

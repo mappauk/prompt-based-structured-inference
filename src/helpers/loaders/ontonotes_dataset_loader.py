@@ -322,4 +322,9 @@ def preprocess_ontonotes_coref(filepath):
     onto_file.close()
 
     data_df = preprocess_document(onto_fname)
-    return data_df
+    data_df['sent1'] = data_df['sent1'].apply(lambda sent_list: ' '.join(sent_list))
+    data_df['sent2'] = data_df['sent2'].apply(lambda sent_list: ' '.join(sent_list))
+    data_df['doc_id'] = data_df['doc_id'].apply(lambda doc_id: doc_id.replace('_', '-'))
+    data_df['entity1_id'] = data_df['sent1_id'].astype(str) + data_df['entity1_id'].astype(str)
+    data_df['entity2_id'] = data_df['sent2_id'].astype(str) + data_df['entity2_id'].astype(str)
+    return data_df[['doc_id', 'entity1', 'entity2', 'entity1_id', 'entity2_id', 'sent1', 'sent2', 'sent1_id', 'sent2_id', 'answer']]

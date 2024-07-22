@@ -30,11 +30,11 @@ def main():
     data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
     #data = genia_dataset_loader.preprocess_genia_coref(input_path)
 
+    data = data.head(5)
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+        print(data)
     # generate moral foundation prompt format strings
-    coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
-        num_shots,
-        example_path
-    )
+    coref_prompts = coref_prompting.generate_one_pass_gz_coref_prompt_format(num_variations)
     # load model
     model, tokenizer = model_loader.load_test_model(device_type)
     # define rules
@@ -95,6 +95,7 @@ def main():
     results = {}
     for varName, value in variable_assignments.items():
         parsedVarName = varName.split('_')
+        print(parsedVarName)
         parsedId = parsedVarName[1]
         id_result = []
         if parsedId in results:
@@ -105,6 +106,7 @@ def main():
                 'Entity_2': parsedVarName[3],
                 'Value': value
             })
+        results[parsedId] = id_result
     analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":

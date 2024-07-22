@@ -28,9 +28,11 @@ def main():
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
 
+    data = data.head(100)
+    print(data)
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
         num_shots, 
@@ -68,6 +70,7 @@ def main():
     results = {}
     for index, row in rule_groundings['rule_one'].iterrows():
         parsedVarName = row['HeadVariable'].split('_')
+        print(parsedVarName)
         parsedId = parsedVarName[1]
         id_result = []
         if parsedId in results:
@@ -76,7 +79,7 @@ def main():
             id_result.append({
                 'Entity_1': parsedVarName[2],
                 'Entity_2': parsedVarName[3],
-                'Value': round(row['score'])
+                'Value': round(row['Score'])
             })
         results[parsedId] = id_result
     analysis_helper.write_json_file(output_path, results)
