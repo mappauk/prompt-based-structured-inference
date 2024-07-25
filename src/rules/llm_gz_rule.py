@@ -76,8 +76,8 @@ class LLMGZRule(RuleTemplate):
         for i in range(len(prompts)):
             outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
             vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
-            #token_ids = prompts[i]['input_ids'].cpu().numpy()
-            token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
+            token_ids = prompts[i]['input_ids'].cpu().numpy()
+            #token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
             batch_token_count = token_ids.shape[1]
             vocab_size = vocab_probs.shape[len(vocab_probs.shape) - 1]
             batch_size = token_ids.shape[0]
@@ -94,14 +94,10 @@ class LLMGZRule(RuleTemplate):
         scores_across_variations = np.sum(scores_by_variation, axis=1)
         scores_by_label = np.reshape(scores_across_variations, (int(scores_across_variations.shape[0]/len(self.labels)), len(self.labels)))
         softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
-        print(softmax_over_labels.shape)
         if self.rule_type == RuleType.BINARY:
             softmax_over_labels = softmax_over_labels[:, 0]
         final_scores = softmax_over_labels.flatten().tolist()
-        print(len(final_scores))
         result_data = pd.DataFrame(output_df_list)
-        with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-            print(result_data)
         result_data.insert(0, 'Score', final_scores)
         result_data.dropna(axis=0, how='any', inplace=True)
         return result_data
