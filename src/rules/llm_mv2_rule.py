@@ -8,7 +8,7 @@ import copy
 import torch
 import numpy as np
 
-class LLMMVRule(RuleTemplate):
+class LLMMV2Rule(RuleTemplate):
     def __init__(self,
                  name: str,
                  features: list, 
@@ -38,8 +38,8 @@ class LLMMVRule(RuleTemplate):
         self.num_votes = num_votes
         self.num_return_sequences = num_return_sequences
     
-    def get_prompt(self, label, dict):
-        prompt = self.prompt_map[label]
+    def get_prompt(self, dict):
+        prompt = self.prompt_map
         return prompt.format(**dict)
     
     def extract_labels(output, labels):
@@ -88,7 +88,7 @@ class LLMMVRule(RuleTemplate):
                     output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                     output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
                     output_df_list.append(output_df_row)
-            formatted_prompt = self.get_prompt(label, dict)
+            formatted_prompt = self.get_prompt(dict)
             for i in range(int(self.num_votes/self.num_return_sequences)):
                 prompt_batch.append(formatted_prompt)
                 if len(prompt_batch) == self.batch_size:
