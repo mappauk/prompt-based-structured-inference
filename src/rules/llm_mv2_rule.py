@@ -26,7 +26,7 @@ class LLMMV2Rule(RuleTemplate):
                  num_votes: int,
                  num_return_sequences: int,
                  renormalize: bool = False):
-        super(LLMMVRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
+        super(LLMMV2Rule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
@@ -42,16 +42,16 @@ class LLMMV2Rule(RuleTemplate):
         prompt = self.prompt_map
         return prompt.format(**dict)
     
-    def extract_labels(output, labels):
+    def extract_labels(self, output):
         lower_output = output.upper()
         min_index = len(output)
-        for label in labels:
+        for label in self.labels:
             index = lower_output.find(label, 0, min_index)
             if index >= 0 and index < min_index:
                 return label
         return None
     
-    def score_labels(output_row, labels):
+    def score_labels(self, output_row):
         label_dict = {}
         for i in range(len(output_row)):
             if output_row[i] not in label_dict:
@@ -59,9 +59,9 @@ class LLMMV2Rule(RuleTemplate):
             else:
                 label_dict[output_row[i]] = label_dict[output_row[i]] + 1
         label_scores = []
-        for label in labels:
+        for label in self.labels:
             if label in label_dict:
-                label_scores.append(label_dict[label] + 0.01)
+                label_scores.append(label_dict[label])
             else:
                 label_scores.append(0.01)
         return label_scores
@@ -96,26 +96,30 @@ class LLMMV2Rule(RuleTemplate):
                     prompt_batch = []
         if len(prompt_batch) != 0:
             prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
+        example_predictions = []
         for i in range(len(prompts)):
             outputs = self.model.generate(
                 **prompts[i], 
                 max_new_tokens=10, 
                 do_sample=True,
                 num_return_sequences=self.num_return_sequences,
-                return_dict=True,
-                output_logits=True,
                 temperature=self.temperature, 
                 pad_token_id=self.tokenizer.eos_token_id)
-            text_outputs = self.tokenizer.batch_decode(outputs[:, prompts[i].input_ids.shape[1] - 1:])
+            text_outputs = self.tokenizer.batch_decode(outputs.sequences[:, prompts[i].input_ids.shape[1] - 1:])
             for k in range(int(len(text_outputs)/self.num_return_sequences)):
-                example_predictions = []
                 for l in range(self.num_return_sequences):
                     next_output = text_outputs[k*self.num_return_sequences + l]
                     example_predictions.append(self.extract_labels(next_output))
         example_predictions = np.array(example_predictions)
-        example_predictions.reshape((int(example_predictions.shape[0]/self.num_votes)), self.num_votes)
+        example_predictions = example_predictions.reshape((int(example_predictions.shape[0]/self.num_votes)), self.num_votes)
         scores = []
+        for i in range(example_predictions.shape[0]):
+            scores.extend(self.score_labels(example_predictions[i, :]))
+        scores = np.array(scores)
+        scores_by_label = scores.reshape((int(len(scores)/len(self.labels)), len(self.labels)))
+        softmax_scores = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
+        final_scores = softmax_scores.flatten().tolist()
         result_data = pd.DataFrame(output_df_list)
-        result_data.insert(0, 'Score', scores)
+        result_data.insert(0, 'Score', final_scores)
         result_data.dropna(axis=0, how='any', inplace=True)
         return result_data

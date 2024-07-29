@@ -19,11 +19,11 @@ from typing import Dict
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     topk = 5
     temperature = 0.5
     prompt_batch_size = 2
-    num_votes = 10
+    num_votes = 4
     num_return_sequences = 2
     input_path = sys.argv[1]
     output_path = sys.argv[2]
@@ -37,7 +37,7 @@ def main():
         num_shots, 
         example_path
     )
-    role_prompts = moral_prompting.generate_all_vs_one_moral_foundation_prompt_format(
+    role_prompts = moral_prompting.generate_all_vs_one_moral_role_prompt_format(
         constants.MORAL_ROLE_IDENTIFICATION_ALLVSONE_PASS,
         constants.MORAL_ROLE_ALLVONE_PROMPT_EXAMPLE_FORMAT, 
         num_shots, 

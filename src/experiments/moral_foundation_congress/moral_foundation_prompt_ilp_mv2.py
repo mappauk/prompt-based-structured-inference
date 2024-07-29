@@ -19,10 +19,10 @@ from typing import Dict
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     topk = 5
     temperature = 0.5
-    num_votes = 10
+    num_votes = 4
     num_return_sequences = 2
     prompt_batch_size = 2
     input_path = sys.argv[1]
@@ -37,14 +37,14 @@ def main():
         num_shots, 
         example_path
     )
-    foundation_prompts_with_features = moral_prompting.generate_all_vs_one_moral_role_prompt_format(
+    foundation_prompts_with_features = moral_prompting.generate_all_vs_one_moral_foundation_prompt_format(
         constants.MORAL_FOUNDATION_IDENTIFICATION_ALLVSONE_WITH_FEATURES, 
         constants.MORAL_FOUNDATION_ALLVONE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT, 
         num_shots, 
         example_path
     )
     # generate moral role prompt format strings
-    role_prompts = moral_prompting.generate_all_vs_one_moral_foundation_prompt_format(
+    role_prompts = moral_prompting.generate_all_vs_one_moral_role_prompt_format(
         constants.MORAL_ROLE_IDENTIFICATION_ALLVSONE_PASS,
         constants.MORAL_ROLE_ALLVONE_PROMPT_EXAMPLE_FORMAT, 
         num_shots, 
@@ -56,6 +56,7 @@ def main():
         num_shots, 
         example_path
     )
+
     # load model
     model, tokenizer = model_loader.load_test_model(device_type)
     # define rules
@@ -209,6 +210,5 @@ def main():
                 id_result['EntityRoles'] = [entity_result]
         results[parsedId] = id_result
     analysis_helper.write_json_file(output_path, results)
-
 if __name__ == "__main__":
     main()
