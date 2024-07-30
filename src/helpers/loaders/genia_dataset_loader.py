@@ -256,6 +256,6 @@ def preprocess_genia_coref(filepath):
     data_df = pd.DataFrame(doc, columns=columns)
     data_df['sent1'] = data_df['sent1'].apply(lambda sent_list: ' '.join(sent_list))
     data_df['sent2'] = data_df['sent2'].apply(lambda sent_list: ' '.join(sent_list))
-    data_df['entity1_id'] = data_df['sent1_id'].astype(str) + data_df['entity1_id'].astype(str)
-    data_df['entity2_id'] = data_df['sent2_id'].astype(str) + data_df['entity2_id'].astype(str)
+    data_df['entity1_id'] = data_df['sent1_id'].astype(str) + data_df['mention_id1'].astype(str)
+    data_df['entity2_id'] = data_df['sent2_id'].astype(str) + data_df['mention_id2'].astype(str)
     return data_df[['doc_id', 'entity1', 'entity2', 'entity1_id', 'entity2_id', 'sent1', 'sent2', 'answer']]

@@ -28,10 +28,10 @@ def main():
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
     
-    data = data.head(5)
+    #data = data.head(500)
 
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
