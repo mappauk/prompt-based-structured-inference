@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1398205">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1398205</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">[<coref min="mechanism" id="C1">Mechanism of action of <coref id="C2">steroid hormones</coref>. I. <coref id="C3">Estrogens</coref></coref>]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" type="IDENT" id="C4">The steroid hormone</coref> are very versatile molecules: although <coref ref="C4" type="PRON" id="C5">they are</coref> related among <coref ref="C4" type="PRON" id="C6">them</coref> by <coref ref="C4" type="PRON" id="C7">their</coref> chemical structure, <coref ref="C4" type="PRON" id="C8">they</coref> have very diverse functions and including antagonic.</sentence>
+<sentence id="S3"><coref ref="C1" min="mechanism" type="OTHER" id="C9"><coref ref="C4" type="PRON" id="C10">Their</coref> action mechanism</coref> is not completely cleared.</sentence>
+<sentence id="S4"><coref ref="C3" type="IDENT" id="C11">The estrogens</coref> participate in the regulation of practically <coref min="events" id="C12">all the reproductive and sexual events of the female</coref>, although <coref min="actions" id="C13">the intracellular actions</coref> by <coref ref="C13" type="RELAT" id="C14">which</coref> <coref ref="C12" type="PRON" id="C15">they</coref> take place are not well known and the proposed models do not adequately satisfy the questions.</sentence>
+<sentence id="S5">Currently it is accepted the existence of a cytoplasmic and/or nuclear receptor, without explaining satisfactorily how <coref ref="C11" type="OTHER" id="C16">the hormones</coref> come to the nucleus.</sentence>
+<sentence id="S6"><coref min="events" id="C17">The endocrine events</coref> <coref ref="C17" type="RELAT" id="C18">that</coref> are rapidly expressed (seconds) are due to a possible interaction with cellular membrane.</sentence>
+<sentence id="S7">The purpose of this review is to analyze and concilliate the reported data on <coref ref="C9" min="mechanism" type="IDENT" id="C19">the mechanism of action of <coref ref="C11" type="IDENT" id="C20">estrogens</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

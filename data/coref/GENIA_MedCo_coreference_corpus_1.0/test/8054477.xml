@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8054477">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8054477</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Positive and negative regulation of <coref min="expression" id="C1">IL-2 gene expression</coref>: role of multiple regulatory sites.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">Interleukin 2 (IL-2)</coref> is an important lymphokine required in the process of T cell activation, proliferation, clonal expansion and differentiation.</sentence>
+<sentence id="S3"><coref ref="C2" min="gene" type="IDENT" id="C3">The IL-2 gene</coref> displays both T cell specific and inducible expression: it is only expressed in CD4+ T cells after <coref min="stimulation" id="C4">antigenic or mitogenic stimulation</coref>.</sentence>
+<sentence id="S4"><coref min="sites" id="C5">Several cis-acting regulatory sites</coref> are required for induction of <coref ref="C3" min="gene" type="IDENT" id="C6">the IL-2 gene</coref> after <coref ref="C4" min="stimulation" type="IDENT" id="C7">stimulation</coref>.</sentence>
+<sentence id="S5">In this study, we have analysed the function of <coref ref="C5" min="sites" type="IDENT" id="C8">these cis-acting regulatory sites</coref> in the context of the native IL-2 enhancer and promoter sequence.</sentence>
+<sentence id="S6">The results of this study suggest that the NFAT (-276 to -261), the distal octamer (-256 to -248) and the proximal octamer (-75 to -66) sites not only act as enhancers of IL-2 gene transcription in the presence of cellular stimulation, but also have a silencing effect on <coref ref="C1" min="expression" type="IDENT" id="C9">IL-2 gene expression</coref> in resting cells.</sentence>
+<sentence id="S7"><coref min="sites" id="C10">Two other sites</coref> display disparate effects on <coref ref="C9" min="expression" type="IDENT" id="C11">IL-2 gene expression</coref> in different T leukemia cell lines: <coref ref="C10" min="sites" type="IDENT" id="C12">the distal purine box (-291 to -277) and the proximal purine box sites (-145 to -128)</coref>.</sentence>
+<sentence id="S8">Finally, the AP-1 (-186 to -176) and the kappa B sites (-206 to -195) respond to different cellular activation in EL4 cells.</sentence>
+<sentence id="S9">The AP-1 site mediated the response to PMA stimulation while the kappa B site responded to IL-1 stimulation.</sentence>
+<sentence id="S10">These data suggest that the regulation of <coref ref="C11" min="expression" type="IDENT" id="C13">IL-2 gene expression</coref> is a complex process and <coref ref="C5" min="sites" type="IDENT" id="C14">multiple cis-acting regulatory sites</coref> interact to exert different effects in T cells representative of alternative stages of differentiation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

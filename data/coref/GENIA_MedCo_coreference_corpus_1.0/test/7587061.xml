@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7587061">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7587061</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">BCL-6</coref> and the molecular pathogenesis of B-cell lymphoma.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The results presented identify the first genetic lesion associated with <coref id="C2">DLCL</coref>, <coref ref="C2" type="APPOS" id="C3">the most clinically relevant form of NHL</coref>.</sentence>
+<sentence id="S3">Although no proof yet exists of a role for these lesions in <coref id="C4">DLCL pathogenesis</coref>, the feature of <coref id="C5">the BCL-6 gene product</coref>, <coref ref="C5" type="PRON" id="C6">its</coref> specific pattern of expression in B cells, and the clustering of lesions disrupting <coref ref="C5" type="IDENT" id="C7">its</coref> regulatory domain strongly suggest that deregulation of BCL-6 expression may contribute to DLCL development.</sentence>
+<sentence id="S4">A more precise definition of the role of <coref ref="C1" type="IDENT" id="C8">BCL-6</coref> in normal and neoplastic B-cell development is the goal of ongoing study of transgenic mice engineered either to express <coref ref="C8" type="IDENT" id="C9">BCL-6</coref> under heterologous promoters or lacking BCL-6 function due to targeted deletions.</sentence>
+<sentence id="S5">In addition to contributing to the understanding of <coref ref="C4" type="IDENT" id="C10">DLCL pathogenesis</coref>, the identification of BCL-6 lesions may have relevant clinical implications.</sentence>
+<sentence id="S6"><coref ref="C2" type="IDENT" id="C11">DLCL</coref> represent <coref min="group" id="C12">a heterogeneous group of neoplasms</coref> <coref ref="C12" type="RELAT" id="C13">which</coref> are treated homogeneously despite <coref id="C14">the fact</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> only 50% of patients experience long-term disease-free survival (Schneider et al. 1990).</sentence>
+<sentence id="S7"><coref id="C16">The fact</coref> <coref ref="C16" type="RELAT" id="C17">that</coref> <coref min="rearrangements" id="C18">BCL-6 rearrangements</coref> identify biologically and clinically distinct subsets of <coref ref="C11" type="IDENT" id="C19">DLCL</coref> suggests that these lesions may be useful as markers in selection of differential therapeutic strategies based on different risk groups.</sentence>
+<sentence id="S8">Furthermore, <coref ref="C18" min="rearrangements" type="IDENT" id="C20">the BCL-6 rearrangements</coref> can be used to identify and monitor the malignant clone with sensitive PCR-based techniques.</sentence>
+<sentence id="S9">Since clinical remission has been observed in a significant fraction of DLCL cases, these markers may serve as critical tools for sensitive monitoring of minimal residual disease and early diagnosis of relapse (Gribben et al. 1993).</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

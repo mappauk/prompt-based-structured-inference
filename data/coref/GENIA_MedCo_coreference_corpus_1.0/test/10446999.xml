@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10446999">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10446999</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Induction of <coref min="receptor" id="C1">a functional vitamin D receptor</coref> in all-trans-retinoic acid-induced monocytic differentiation of <coref min="cells" id="C2">M2-type leukemic blast cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Different types of acute myeloid leukemia blast cells were induced to differentiate in vitro with <coref id="C3"><coref min="acid" id="C4">all-trans-retinoic acid (ATRA)</coref> and <coref id="C5">vitamin D3 (VD)</coref></coref>.</sentence>
+<sentence id="S3">M0/M1 leukemic cells are not sensitive to differentiating agents, whereas M3 leukemic cells are induced to undergo granulocytic differentiation after ATRA treatment but are not sensitive to <coref ref="C5" type="IDENT" id="C6">VD</coref>.</sentence>
+<sentence id="S4"><coref ref="C2" min="cells" type="IDENT" id="C7">M2 leukemic blast cells</coref> behave differently because <coref ref="C7" type="PRON" id="C8">they</coref> undergo monocytic differentiation with <coref ref="C3" min="inducers" type="IDENT" id="C9">both the differentiation inducers</coref>.</sentence>
+<sentence id="S5">To gain some insight into the maturation of M2-type leukemic cells, we studied the molecular mechanisms underlying monocytic differentiation induced by <coref ref="C9" type="IDENT" id="C10"><coref ref="C4" type="IDENT" id="C11">ATRA</coref> and <coref ref="C6" type="IDENT" id="C12">VD</coref></coref> in spontaneous M2 blast cells as well as in <coref min="cells" id="C13">Kasumi-1 cells (an acute myeloid leukemia M2-type cell line)</coref>.</sentence>
+<sentence id="S6">Our results indicate that <coref ref="C10" type="IDENT" id="C14"><coref ref="C11" type="IDENT" id="C15">ATRA</coref> as well as <coref ref="C12" type="IDENT" id="C16">VD</coref></coref> efficiently increases the nuclear abundance of <coref min="receptor" id="C17">VD receptor (VDR)</coref> and promotes <coref min="differentiation" id="C18">monocytic differentiation</coref>.</sentence>
+<sentence id="S7"><coref ref="C17" type="IDENT" id="C19">VDR</coref> is functionally active in ATRA-treated Kasumi-1 cells because <coref ref="C19" type="PRON" id="C20">it</coref> efficiently heterodimerizes with retinoid X receptor, binds to a DR3-type vitamin D-responsive element, and activates the transcription of a vitamin D-responsive element-regulated reporter gene.</sentence>
+<sentence id="S8">Consistent with these findings, VD-responsive genes are induced by ATRA treatment of <coref ref="C13" min="cells" type="IDENT" id="C21">Kasumi-1 cells</coref>, suggesting that the genetic program underlying <coref ref="C18" min="differentiation" type="IDENT" id="C22">monocytic differentiation</coref> is activated.</sentence>
+<sentence id="S9"><coref min="mechanism" id="C23">The molecular mechanism</coref> by <coref ref="C23" type="RELAT" id="C24">which</coref> <coref ref="C15" type="IDENT" id="C25">ATRA</coref> increases the nuclear abundance of <coref ref="C1" min="vdr" type="IDENT" id="C26">a functional VDR</coref> is still unknown, but our data clearly indicate that the M2 leukemic cell context is only permissive of <coref ref="C22" min="differentiation" type="IDENT" id="C27">monocytic differentiation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

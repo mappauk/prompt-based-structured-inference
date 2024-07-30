@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8657101">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8657101</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="factor" id="C1">A novel interferon regulatory factor family transcription factor</coref>, <coref ref="C1" type="APPOS" id="C2">ICSAT/Pip/LSIRF</coref>, <coref ref="C2" type="RELAT" id="C3">that</coref> negatively regulates the activity of <coref min="genes" id="C22">interferon-regulated genes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have isolated a novel cDNA clone encoding <coref id="C11"><coref min="protein" id="C4">interferon (IFN) consensus sequence-</coref>binding protein in adult T-cell leukemia cell line or activated T cells (ICSAT);</coref> <coref ref="C4" type="IDENT" id="C5">this protein</coref> is the human homolog of the recently cloned Pip/LSIRF.</sentence>
+<sentence id="S3"><coref ref="C4" type="IDENT" id="C6">ICSAT</coref> is structurally most closely related to the previously cloned <coref id="C7">ICSBP</coref>, <coref ref="C7" min="member" type="APPOS" id="C8">a member of the IFN regulatory factor (IRF) family of proteins</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> binds to <coref ref="C11" type="IDENT" id="C10">interferon consensus sequences (ICSs)</coref> found in many promoters of <coref ref="C22" min="genes" type="IDENT" id="C23">the IFN-regulated genes</coref>.</sentence>
+<sentence id="S4">Among T-cell lines investigated, <coref ref="C6" type="IDENT" id="C12">ICSAT</coref> was abundantly expressed in human T-cell leukemia virus type 1 (HTLV-1)-infected T cells.</sentence>
+<sentence id="S5">When the HTLV-1 tax gene was expressed or phorbol myristake acetate-A23187 stimulation was used, ICSAT expression was induced in <coref id="C14">Jurkat cells</coref> <coref ref="C14" type="RELAT" id="C15">which</coref> otherwise do not express <coref ref="C12" type="IDENT" id="C16">ICSAT</coref>.</sentence>
+<sentence id="S6">When the binding of <coref ref="C16" type="IDENT" id="C17">ICSAT</coref> to <coref id="C18">four different ICSs</coref> was tested, the relative differences in binding affinities for <coref ref="C18" min="icss" type="IDENT" id="C19">those ICSs</coref> were determined.</sentence>
+<sentence id="S7">To study the functional role of <coref ref="C17" type="IDENT" id="C20">ICSAT</coref>, we performed cotransfection experiments with the human embryonal carcinoma cell line N-Tera2.</sentence>
+<sentence id="S8"><coref ref="C20" type="IDENT" id="C21">ICSAT</coref> was demonstrated to possess repressive function over the gene activation induced by IFN stimulation or by IRF-1 cotransfection.</sentence>
+<sentence id="S9"><coref min="function" id="C25">Such repressive function</coref> is similar to <coref ref="C25" type="PRON" id="C26">that</coref> seen in <coref id="C28">IRF-2</coref> or <coref ref="C7" type="IDENT" id="C24">ICSBP</coref>.</sentence>
+<sentence id="S10">However, we have found that <coref ref="C21" type="IDENT" id="C27">ICSAT</coref> has <coref min="effect" id="C32">a different repressive effect</coref> from <coref ref="C32" type="PRON" id="C31">that</coref> of <coref ref="C28" type="IDENT" id="C29">IRF-2</coref> or <coref ref="C24" type="IDENT" id="C30">ICSBP</coref> in some IFN-responsive reporter constructs.</sentence>
+<sentence id="S11">These results suggest that a novel mechanism of gene regulation by "differential repression" is used by multiple members of repressor proteins with different repressive effects on the IFN-responsive genes.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

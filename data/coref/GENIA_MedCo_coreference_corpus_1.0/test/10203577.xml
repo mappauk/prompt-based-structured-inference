@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10203577">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10203577</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Suppressive effects of <coref min="agents" id="C1">anti-inflammatory agents</coref> on human endothelial cell activation and induction of heat shock proteins.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: Studies from our laboratory have shown that the earliest stages of atherosclerosis may be mediated by an autoimmune reaction against <coref id="C2">heat shock protein 60 (Hsp60)</coref>.</sentence>
+<sentence id="S3">The interactions of Hsp60-specific T cells with arterial endothelial cells (EC) require expression of both Hsp60 and certain adhesion molecules shown to be induced simultaneously in <coref id="C3">EC</coref> by mechanical and other types of stress.</sentence>
+<sentence id="S4">Recently, it was shown that suppression of T cell-mediated immune responses by <coref id="C4">cyclosporin A (CyA)</coref> enhanced atherosclerotic lesion formation in mice.</sentence>
+<sentence id="S5">In contrast, <coref id="C5">aspirin</coref> was found to lower the risk of myocardial infarction in men.</sentence>
+<sentence id="S6">These conflicting observations may be due to different effects of <coref ref="C1" min="agents" type="IDENT" id="C6">anti-inflammatory agents</coref> on adhesion molecule and Hsp expression in <coref ref="C3" type="IDENT" id="C7">EC</coref>, respectively.</sentence>
+<sentence id="S7">MATERIAL AND METHODS: In the present study, we analyzed the effects of <coref id="C8"><coref ref="C4" type="IDENT" id="C9">CyA</coref>, <coref ref="C5" type="IDENT" id="C10">aspirin</coref>, and <coref id="C11">indomethacin</coref></coref> on <coref min="proliferation" id="C12">T cell proliferation</coref> using a proliferation assay.</sentence>
+<sentence id="S8">To explore the expression of <coref min="molecules" id="C13">adhesion molecules</coref>, <coref ref="C13" type="APPOS" id="C14">monocyte chemoattractant protein-1 (MCP-1), and <coref min="hsp60" id="C15">Hsp60 in <coref min="cells" id="C16">human umbilical vein endothelial cells (HUVECs)</coref></coref></coref>, Northern blot analyses were used.</sentence>
+<sentence id="S9">To examine the activation status of the transcription factors nuclear factor kappaB (NF-kappaB) and heat shock factor-1 (HSF-1), electrophoretic mobility shift assays were performed.</sentence>
+<sentence id="S10">RESULTS: With the exception of <coref ref="C11" type="IDENT" id="C17">indomethacin</coref>, the used immunosuppressive and anti-inflammatory agents significantly inhibited <coref ref="C12" min="proliferation" type="IDENT" id="C18">T cell proliferation</coref> in response to influenza virus antigen in a dose-dependent manner.</sentence>
+<sentence id="S11">Interestingly, <coref ref="C9" type="IDENT" id="C19">CyA</coref> and <coref ref="C17" type="IDENT" id="C20">indomethacin</coref> did not suppress tumor necrosis factor-alpha (TNF-alpha)-induced adhesion molecule expression on <coref ref="C16" type="IDENT" id="C21">HUVECs</coref>, whereas <coref ref="C10" type="IDENT" id="C22">aspirin</coref> had an inhibitory effect.</sentence>
+<sentence id="S12">These observations correlated with the modulation of NF-kappaB activity in <coref ref="C7" type="IDENT" id="C23">EC</coref>.</sentence>
+<sentence id="S13"><coref ref="C8" min="agents" type="IDENT" id="C24">All agents tested</coref> induced <coref min="expression" id="C25">expression of <coref ref="C2" type="IDENT" id="C26">Hsp60</coref></coref> 6 hr after application.</sentence>
+<sentence id="S14">In addition, <coref ref="C22" type="IDENT" id="C27">aspirin</coref> and <coref ref="C20" type="IDENT" id="C28">indomethacin</coref>, but not <coref ref="C19" type="IDENT" id="C29">CyA</coref>, induced <coref min="expression" id="C30">Hsp70 expression in <coref ref="C21" type="IDENT" id="C31">HUVECs</coref></coref> <coref ref="C30" type="RELAT" id="C32">that</coref> correlated with induction of HSF-1 activity.</sentence>
+<sentence id="S15">CONCLUSION: Our results show that the tested agents (except indomethacin) are inhibitors of the T cell-mediated immune response, as expected, that <coref ref="C27" type="IDENT" id="C33">aspirin</coref> is an effective suppressor of adhesion molecule expression, and that <coref ref="C24" min="agents" type="IDENT" id="C34">all three agents</coref> can induce <coref ref="C15" min="hsp60" type="IDENT" id="C35">Hsp60 in <coref ref="C31" type="IDENT" id="C36">HUVECs</coref></coref>.</sentence>
+<sentence id="S16">These data provide the molecular basis for <coref id="C37">the notion</coref> <coref ref="C37" type="RELAT" id="C38">that</coref> (1) part of the anti-atherogenic effect of <coref ref="C33" type="IDENT" id="C39">aspirin</coref> may be due to the prevention of the adhesion of sensitized T cells to <coref min="ec" id="C40">stressed EC;</coref> (2) that part of the atherosclerosis-promoting effect of <coref ref="C29" type="IDENT" id="C41">CyA</coref> may be due to <coref ref="C41" type="PRON" id="C42">its</coref> potential as an inducer of <coref ref="C25" min="expression" type="IDENT" id="C43">Hsp60 expression</coref> and <coref ref="C41" type="PRON" id="C44">its</coref> inability to down-regulate adhesion molecule expression on <coref ref="C23" type="IDENT" id="C45">EC;</coref> and (3) that down-regulation of MCP-1 expression by <coref ref="C39" type="IDENT" id="C46">aspirin</coref> may result in decreased recruitment of monocytes into the arterial intima beneath <coref ref="C40" min="ec" type="IDENT" id="C47">stressed EC</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

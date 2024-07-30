@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8663380">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8663380</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C7">The c-Jun delta-domain</coref> inhibits neuroendocrine promoter activity in a DNA sequence- and pituitary-specific manner.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The transcription and transformation activity of <coref id="C1">c-Jun</coref> is governed by <coref min="motif" id="C10">a 27-amino acid regulatory motif</coref>, labeled <coref ref="C10" type="IDENT" id="C9">the delta-domain</coref>, <coref ref="C10" type="RELAT" id="C3">which</coref> is deleted in v-Jun.</sentence>
+<sentence id="S3">We have previously shown that <coref ref="C1" type="IDENT" id="C4">c-Jun</coref> is a potent inhibitor of the rat prolactin (rPRL) promoter activity induced by either oncogenic Ras or phorbol esters.</sentence>
+<sentence id="S4">Here, we have characterized the structural and cell-specific requirements for <coref min="response" id="C5">this c-Jun inhibitory response</coref>, and we show that <coref ref="C5" min="response" type="IDENT" id="C6">this c-Jun inhibitory response</coref> mapped to the rPRL footprint II repressor site, was pituitary-specific and required <coref ref="C7" type="IDENT" id="C8">the c-Jun delta-domain</coref>.</sentence>
+<sentence id="S5">Moreover, alteration of any one of these features (e.g., cis-element, trans-factor, or cell-specific background) switched <coref ref="C4" type="IDENT" id="C11">c-Jun</coref> to a transcriptional activator of <coref id="C13">the rPRL promoter</coref>.</sentence>
+<sentence id="S6">In HeLa nonpituitary cells, <coref ref="C11" type="IDENT" id="C12">c-Jun</coref> alone activated <coref ref="C13" type="IDENT" id="C14">the rPRL promoter</coref> via the most proximal GHF-1/Pit-1 binding site, footprint I, and synergized with GHF-1.</sentence>
+<sentence id="S7">Finally, recombinant GHF-1 interacted directly with <coref ref="C12" type="IDENT" id="C15">c-Jun</coref> but not c-Fos proteins.</sentence>
+<sentence id="S8">These data provide important fundamental insights into <coref min="mechanisms" id="C16">the molecular mechanisms</coref> by <coref ref="C16" type="RELAT" id="C17">which</coref> <coref ref="C8" type="IDENT" id="C18">the c-Jun delta-domain</coref> functions as a modulatory switch and further imply that the functional role of <coref ref="C15" type="IDENT" id="C19">c-Jun</coref> is dictated by cell-specific influences and <coref ref="C10" min="motif" type="IDENT" id="C20">the delta-domain motif</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

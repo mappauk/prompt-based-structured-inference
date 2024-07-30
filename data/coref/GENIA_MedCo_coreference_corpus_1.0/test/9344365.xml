@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9344365">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9344365</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Suppression of <coref id="C1">nuclear factor kappa B</coref> and CD18-mediated leukocyte adhesion to <coref min="endothelium" id="C2">the corneal endothelium</coref> by <coref id="C3">dexamethasone</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">PURPOSE: To demonstrate that <coref min="adhesion" id="C4">leukocyte adhesion to <coref min="cells" id="C5">cultured corneal endothelial cells</coref></coref> is mediated by the CD18 antigen, and to determine whether <coref ref="C3" type="IDENT" id="C6">dexamethasone</coref> directly suppresses <coref ref="C4" type="IDENT" id="C7">adhesion</coref> by inhibiting activation of <coref ref="C1" type="IDENT" id="C8">nuclear factor kappa B (NFkappaB)</coref>.</sentence>
+<sentence id="S3">METHODS: <coref ref="C2" min="endothelium" type="IDENT" id="C9">Cultured bovine corneal endothelium</coref> was stimulated for 6 hours by <coref id="C10">40 micron/ml tumor necrosis factor alpha (TNFalpha)</coref>.</sentence>
+<sentence id="S4"><coref ref="C6" type="IDENT" id="C11">Dexamethasone</coref> was added 1 hour before <coref min="stimulation" id="C12">TNFalpha stimulation</coref> in the dexamethasone group.</sentence>
+<sentence id="S5">After <coref ref="C12" type="IDENT" id="C13">stimulation</coref>, <coref min="neutrophils" id="C14">neutrophils separated from a healthy human volunteer</coref> were added with or without <coref min="antibody" id="C15">anti-CD18 antibody</coref>.</sentence>
+<sentence id="S6">The culture plate was settled for 15 minutes at 37 degrees C, and then <coref ref="C14" type="IDENT" id="C16">neutrophils</coref> were activated by N-formyl-methionyl-leucyl-phenylalanine for 5 minutes.</sentence>
+<sentence id="S7">Nonadherent neutrophils were removed by sealing and inverting the culture well.</sentence>
+<sentence id="S8">The intracellular localization of <coref ref="C8" type="IDENT" id="C17">NFkappaB</coref> after <coref ref="C13" type="IDENT" id="C18">TNFalpha simulation</coref> was determined by confocal immunocytochemistry using an anti-p65 antibody.</sentence>
+<sentence id="S9">RESULTS: Neutrophil adhesion to <coref ref="C5" min="cells" type="IDENT" id="C19">cultured corneal endothelial cells</coref> increased significantly on exposure to <coref ref="C10" type="IDENT" id="C20">TNFalpha</coref> (451.4+/-45.4 cells/mm2, n = 16) compared to control (156.7+/-27.3 cells/mm2, n = 16, P &lt; 0.01).</sentence>
+<sentence id="S10">This increased adhesion was suppressed by the addition of <coref ref="C15" min="antibody" type="IDENT" id="C21">anti-CD18 antibody</coref> (157.6+/-25.1 cells/mm2, n = 8, P &lt; 0.01) and by <coref min="pretreatment" id="C22">pretreatment with <coref ref="C11" min="dexamethasone" type="IDENT" id="C23">10(-7) M dexamethasone</coref></coref> (207.9+/-31.5 cells/mm2, n = 10, P &lt; 0.01).</sentence>
+<sentence id="S11">Immunocytochemistry 60 minutes after <coref ref="C18" type="IDENT" id="C24">stimulation</coref> revealed that <coref ref="C17" type="IDENT" id="C25">NFkappaB</coref> was located in the cytoplasm in unstimulated cells; however, the addition of <coref ref="C20" type="IDENT" id="C26">TNFalpha</coref> caused <coref ref="C25" type="IDENT" id="C27">NFkappaB</coref> to translocate into <coref id="C28">the nucleus</coref>.</sentence>
+<sentence id="S12"><coref ref="C22" min="pretreatment" type="IDENT" id="C29">Pretreatment with <coref ref="C23" type="IDENT" id="C30">dexamethasone</coref></coref> tapered <coref min="translocation" id="C31">NFkappaB translocation into <coref ref="C28" type="IDENT" id="C32">the nucleus</coref></coref>.</sentence>
+<sentence id="S13">CONCLUSIONS: <coref ref="C7" min="adhesion" type="IDENT" id="C33">Leukocyte adhesion to <coref ref="C9" min="endothelium" type="IDENT" id="C34">the corneal endothelium</coref></coref> was shown to be mediated by CD18 expressed on activated leukocytes.</sentence>
+<sentence id="S14"><coref ref="C29" min="pretreatment" type="IDENT" id="C35">Pretreatment of <coref ref="C34" type="IDENT" id="C36">the endothelium</coref> with <coref ref="C30" type="IDENT" id="C37">dexamethasone</coref></coref> inhibited <coref ref="C33" min="adhesion" type="IDENT" id="C38">leukocyte adhesion;</coref> this may be due in part to the suppression of <coref ref="C31" min="entry" type="IDENT" id="C39">NFkappaB entry into <coref ref="C28" type="IDENT" id="C40">the nucleus</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7519845">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7519845</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Inhibition of the differentiation of human myeloid cell lines by <coref min="changes" id="C1">redox changes</coref> induced through glutathione depletion.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have investigated the effect of <coref ref="C1" min="changes" type="IDENT" id="C2">redox changes</coref> in vivo on the differentiation of <coref min="lines" id="C3">two human myeloid cell lines</coref>, <coref ref="C3" type="APPOS" id="C4">HL-60 and KG-1</coref>.</sentence>
+<sentence id="S3">The glutathione-depleting agent diethyl maleate (DEM) prevented the development of differentiated features in response to phorbol esters, including adherence of the cells to plastic surfaces and repression of the myeloperoxidase and CD34 genes.</sentence>
+<sentence id="S4">Moreover, DEM abolished phorbol 12-myristate 13-acetate-induced activation of the transcription factors AP-1 and Egr-1, suggesting that inhibition of differentiation may be due, at least in part, to redox modifications of these proteins.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

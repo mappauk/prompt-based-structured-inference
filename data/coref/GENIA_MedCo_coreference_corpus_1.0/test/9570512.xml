@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9570512">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9570512</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Human immunodeficiency virus type 1 long terminal repeat quasispecies differ in basal transcription and nuclear factor recruitment in human glial cells and lymphocytes.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The generation of genomic diversity during the course of infection has the potential to affect all aspects of HIV-1 replication, including expression of the proviral genome.</sentence>
+<sentence id="S3">To gain a better understanding of the impact of <coref min="diversity" id="C1">long terminal repeat (LTR) sequence diversity</coref> on LTR-directed gene expression in cells of <coref min="system" id="C2">the central nervous system (CNS)</coref> and immune system, we amplified and cloned <coref id="C3">LTRs</coref> from proviral DNA in HIV-1-infected peripheral blood.</sentence>
+<sentence id="S4">Sequence analysis of <coref ref="C3" min="ltrs" type="IDENT" id="C4">nineteen LTRs cloned from 2 adult and 3 pediatric patients</coref> revealed an average of 33 nucleotide changes (with respect to the sequence of the LAI LTR) within <coref min="region" id="C5">the 455-bp U3 region</coref>.</sentence>
+<sentence id="S5">Transient expression analyses in cells of neuroglial and lymphocytic origin demonstrated that <coref ref="C4" min="ltrs" type="IDENT" id="C6">some of these LTRs</coref> had <coref id="C7">activities</coref> <coref ref="C7" type="RELAT" id="C8">which</coref> varied significantly from <coref min="ltr" id="C9">the LAI LTR in <coref min="cells" id="C10">U-373 MG cells</coref></coref> (an astrocytoma cell line) as well as in <coref min="cells" id="C11">Jurkat cells</coref> (a CD4-positive lymphocyte cell line).</sentence>
+<sentence id="S6">While <coref min="ltrs" id="C12"><coref ref="C6" type="IDENT" id="C13">LTRs</coref> <coref ref="C13" type="RELAT" id="C14">which</coref> demonstrated the highest activities</coref> in <coref ref="C10" min="cells" type="IDENT" id="C15">U-373 MG cells</coref> also yielded high activities in Jurkat cells, <coref ref="C12" type="IDENT" id="C16">the LTRs</coref> were generally more active in <coref ref="C11" min="cells" type="IDENT" id="C17">Jurkat cells</coref> when compared to <coref ref="C9" min="ltr" type="IDENT" id="C18">the LAI LTR</coref>.</sentence>
+<sentence id="S7"><coref ref="C1" min="differences" type="IDENT" id="C19">Differences in LTR sequence</coref> also resulted in differences in transcription factor recruitment to cis-acting sites within <coref ref="C5" min="region" type="IDENT" id="C20">the U3 region of <coref ref="C16" type="IDENT" id="C21">the LTR</coref></coref>, as demonstrated by electrophoretic mobility shift assays.</sentence>
+<sentence id="S8">In particular, naturally occurring sequence variation impacted transcription factor binding to <coref min="site" id="C22">an activating transcription factor/cAMP response element binding (ATF/CREB) binding site</coref> (located between the LEF-1 and distal NF-kappaB transcription factor binding sites) <coref ref="C22" type="RELAT" id="C23">that</coref> we identified in previous studies of the HIV-1 LTR.</sentence>
+<sentence id="S9">These findings suggest that <coref ref="C19" min="changes" type="IDENT" id="C24">LTR sequence changes</coref> can significantly affect <coref min="recruitment" id="C25">basal LTR function and transcription factor recruitment</coref>, <coref ref="C25" type="RELAT" id="C26">which</coref> may, in turn, alter the course of viral replication in cells of <coref ref="C2" type="IDENT" id="C27">CNS</coref> and immune system origin.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

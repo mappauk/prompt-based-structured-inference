@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9127005">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9127005</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of Ras and <coref min="pathway" id="C1">mitogen-activated protein kinase pathway</coref> by <coref min="complexes" id="C2">terminal complement complexes</coref> is G protein dependent.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Assembly of terminal complement complexes (TCC) C5b-7, C5b-8, and C5b-9 on target cells during acute and chronic inflammation induces hydrolysis of plasma membrane phospholipids and heterotrimeric G protein activation.</sentence>
+<sentence id="S3"><coref ref="C2" type="IDENT" id="C3">TCC</coref> also stimulate a variety of <coref min="activities" id="C4">cellular activities</coref>, <coref ref="C4" type="RELAT" id="C5">which</coref> include cytokine synthesis, proto-oncogene activation, and mitotic signaling.</sentence>
+<sentence id="S4">Now we report that sublytic TCC induced Ras, Raf-1, and extracellular signal-regulated kinase (ERK) 1 activation in <coref id="C6">JY25 B cell line</coref>.</sentence>
+<sentence id="S5">When cells were exposed to <coref id="C7">C5b-9</coref>, <coref min="ras" id="C8">GTP-bound Ras</coref> in anti-C5b-9 immunoprecipitates was increased 3.2-fold at 2 min, while <coref ref="C8" min="ras" type="IDENT" id="C9">GTP-bound Ras</coref> in anti-Ras immunoprecipitates was increased 2-fold at 10 min.</sentence>
+<sentence id="S6">Both <coref ref="C7" type="IDENT" id="C10">C5b-9</coref> and <coref id="C11">C5b-7</coref>, but not C5b6, increased Raf-1 kinase activity maximum 3.3-fold at 2 min and 2.8-fold at 5 min, respectively.</sentence>
+<sentence id="S7">ERK1 activity was 2-fold increased by <coref ref="C10" type="IDENT" id="C12">C5b-9</coref> at 2 min and by <coref ref="C11" type="IDENT" id="C13">C5b-7</coref> at 10 min, over the C5b6 level.</sentence>
+<sentence id="S8">The role of <coref ref="C1" min="pathway" type="IDENT" id="C14">mitogen-activated protein kinase (MAPK) pathway</coref> on TCC-inducible mitotic signaling was evaluated by assessing DNA synthesis and activator protein 1 (AP-1) DNA-binding activity.</sentence>
+<sentence id="S9">The MAPK/ERK-specific inhibitor PD 098,059 abolished the C5b-9-induced DNA synthesis.</sentence>
+<sentence id="S10">Involvement of G protein in <coref min="activation" id="C15">the activation of <coref ref="C14" min="pathway" type="IDENT" id="C16">MAPK pathway</coref> by <coref ref="C3" type="IDENT" id="C17">TCC</coref></coref> was indicated by inhibition of <coref min="activity" id="C18">Raf-1 and ERK1 kinase activity</coref>, as well as the DNA synthesis by pretreatment of cells with pertussis toxin.</sentence>
+<sentence id="S11">Overexpression of beta-adrenergic receptor kinase 1 carboxyl-terminal peptide in <coref ref="C6" min="cells" type="IDENT" id="C19">JY25 cells</coref> also inhibited <coref ref="C18" min="activity" type="IDENT" id="C20">Raf-1 and ERK1 activity</coref>, indicating a direct involvement of G betagamma subunits in the signal transduction generated through <coref ref="C15" min="activation" type="IDENT" id="C21">activation of <coref ref="C16" min="pathway" type="IDENT" id="C22">MAPK pathway</coref> by TCC assembly</coref> in the plasma membrane.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

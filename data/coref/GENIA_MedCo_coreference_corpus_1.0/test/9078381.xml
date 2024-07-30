@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9078381">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9078381</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Differentiation of <coref min="lymphocytes" id="C1">T-helper lymphocytes</coref>: selective regulation by members of the STAT family of transcription factors.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C7">Interleukin-4 (IL-4) and interleukin-12 (IL-12)</coref> control the differentiation of <coref ref="C1" min="cells" type="IDENT" id="C2">T-helper cells</coref>.</sentence>
+<sentence id="S3">Here we summarize <coref id="C3">studies</coref> <coref ref="C3" type="RELAT" id="C4">which</coref> investigate <coref id="C5">the mechanism</coref> by <coref ref="C5" type="RELAT" id="C6">which</coref> <coref ref="C7" type="IDENT" id="C8">these cytokines</coref> selectively reprogramme gene expression in T-lymphocytes.</sentence>
+<sentence id="S4">Cytokine stimulation leads to the phosphorylation of specific tyrosine residues within the intracellular domain of the corresponding cytokine receptor.</sentence>
+<sentence id="S5">These phosphotyrosines serve as docking sites for latent, cytoplasmic transcription factors known as signal transducers and activators of transcription (Stat) proteins.</sentence>
+<sentence id="S6">Receptor/Stat interaction is mediated by the src homology 2 (SH2) domain of the corresponding Stat protein.</sentence>
+<sentence id="S7">Although Stat binding to the intracellular domain of the cytokine receptor strongly depends on the phosphotyrosine residue, the recruitment of a specific Stat protein is dictated by amino acid residues C-terminal to the phosphotyrosine.</sentence>
+<sentence id="S8">Specific docking sites within individual cytokine receptors have been identified for almost all Stat proteins.</sentence>
+<sentence id="S9">The direct coupling between cytokine receptor and transcription factor helps to explain how different cytokines elicit distinct patterns of gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8605348">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8605348</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="coexpression" id="C1">Coexpression of <coref min="genes" id="C2"><coref id="C3">the interleukin-13</coref> and <coref id="C4">interleukin-4 genes</coref></coref></coref> correlates with <coref ref="C2" type="PRON" id="C5">their</coref> physical linkage in the cytokine gene cluster on human chromosome 5q23-31.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C3" type="IDENT" id="C6">Interleukin-13 (IL-13)</coref> and <coref ref="C4" type="IDENT" id="C7">IL-4</coref> are <coref min="cytokines" id="C8">cytokines produced by <coref id="C9">T cells</coref></coref> <coref ref="C8" type="RELAT" id="C10">that</coref> are encoded by the q23-31 region of human chromosome 5.</sentence>
+<sentence id="S3">To investigate the regulation of IL-13 gene expression by <coref ref="C9" type="IDENT" id="C11">T cells</coref>, we isolated and sequenced <coref ref="C6" type="IDENT" id="C12">the human IL-13 gene</coref>, analyzed <coref ref="C12" type="PRON" id="C13"><coref id="C14">its</coref> 5'-flanking region</coref> for potential transcriptional activation elements, and examined <coref ref="C12" type="IDENT" id="C15">its</coref> expression in nontransformed T-lineage cell populations.</sentence>
+<sentence id="S4"><coref ref="C12" type="IDENT" id="C16">The human IL-13 gene</coref> was located 12.5-kb upstream of <coref ref="C7" type="IDENT" id="C17">the IL-4 gene</coref> and 2-kb downstream of a CpG island.</sentence>
+<sentence id="S5"><coref ref="C14" type="IDENT" id="C18">The IL-13 gene 5' flank region</coref> included a segment with sequence homology to P elements of the IL-4 promoter involved in transcriptional activation in <coref ref="C11" type="IDENT" id="C19">T cells</coref>.</sentence>
+<sentence id="S6">Mutation of the IL-13 P element site significantly reduced IL-13 promoter activity in response to T-cell activation.</sentence>
+<sentence id="S7">Oligonucleotides containing the IL-13 or IL-4 P element sites specifically bound the transcriptional activator protein, nuclear factor-activated T cells, preformed (NF-ATp), when incubated with nuclear protein extracts from activated T cells.</sentence>
+<sentence id="S8">Similar to <coref ref="C17" type="IDENT" id="C20">IL-4</coref>, IL-13 mRNA expression was highest in T-cell populations enriched for <coref id="C21">cells</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> had previously been primed in vivo or in vitro, indicating that priming increases <coref ref="C1" min="expression" type="IDENT" id="C23">the expression of <coref ref="C16" type="IDENT" id="C24">the IL-13</coref> and <coref ref="C4" type="IDENT" id="C25">IL-4 genes</coref> in a coordinate manner</coref>.</sentence>
+<sentence id="S9">Because the primed T cells contain higher levels of nuclear NF-ATp, capable of binding to P elements of the IL-4 and IL-13 promoters, than do freshly-isolated T cells, the NF-AT-binding P elements are attractive candidates to mediate <coref ref="C1" min="expression" type="IDENT" id="C26">the coordinate expression of <coref ref="C2" min="genes" type="IDENT" id="C27">these two cytokine genes</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9363920">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9363920</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activation" id="C1">The activation of the JAK2/STAT5 pathway</coref> is commonly involved in signaling through the human IL-5 receptor.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The JAK (Janus kinase) family of protein tyrosine kinases and the STATs (signal transducers and activators of transcription) have been shown to be activated in response to a number of cytokines and growth factors.</sentence>
+<sentence id="S3">In this study, we evaluated the activation of JAK/STAT pathway upon human interleukin-5 (hIL-5) stimulation of <coref id="C2"><coref min="cell lines" id="C3">two different hIL-5-responsive cell lines</coref>, <coref ref="C3" type="APPOS" id="C4">hIL-5 receptor alpha-subunit (hIL-5R alpha) cDNA-transfected TF-1 (TF-h5R alpha) and butyric-acid-treated YY-1 (YY-Bu)</coref>, and <coref min="eosinophils" id="C5">peripheral eosinophils</coref></coref>.</sentence>
+<sentence id="S4">Immunoprecipitation and electrophoretic mobility shift analysis revealed that tyrosine phosphorylation of JAK2 and activation of STAT5 were induced upon stimulation with hIL-5 in <coref ref="C2" min="types" type="IDENT" id="C6">all three cell types</coref>, while STAT1 activation was only observed in <coref ref="C5" type="IDENT" id="C7">eosinophils</coref>.</sentence>
+<sentence id="S5">These results indicate that <coref ref="C1" min="activation" type="IDENT" id="C8">JAK2/STAT5 activation</coref> is a common JAK/STAT pathway for hIL-5-mediated signal in <coref ref="C2" min="cells" type="IDENT" id="C9">these cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

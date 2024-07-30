@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10359138">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10359138</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Immune functions, clinical parameters and hormone receptor status in <coref min="patients" id="C1">breast cancer patients</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have carried out a detailed analysis of the cellular immune functions of <coref ref="C1" min="patients" type="IDENT" id="C2">breast cancer patients</coref> in comparison with healthy controls.</sentence>
+<sentence id="S3">A possible correlation between immune and clinical parameters was analysed in <coref min="patients" id="C3">50 breast cancer patients</coref>.</sentence>
+<sentence id="S4">Immune parameters, natural killer cell and T lymphocyte functions and the numbers of <coref min="lymphocytes" id="C4">circulating T lymphocytes</coref> were analysed against the clinical parameters comprising the tumour burden, the stage of the disease and the expression of hormone receptors on the tumour.</sentence>
+<sentence id="S5">In order to analyse the immune function data effectively, <coref min="responders" id="C5">low responders</coref> were identified with stringent cut-off values.</sentence>
+<sentence id="S6">Considerably higher proportions of <coref ref="C5" min="responders" type="IDENT" id="C6">low responders</coref> were found among <coref ref="C3" min="population" type="IDENT" id="C7">the patient population</coref>.</sentence>
+<sentence id="S7">Elevated numbers of <coref ref="C4" min="lymphocytes" type="IDENT" id="C8">circulating T lymphocytes</coref> and CD3-directed cytolysis correlated with the expression of oestrogen receptors independently of the clinical/histological parameters.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

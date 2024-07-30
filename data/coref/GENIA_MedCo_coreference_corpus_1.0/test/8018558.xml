@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8018558">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8018558</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of <coref min="transcription" id="C1">early growth response 1 gene transcription</coref> and <coref id="C2">pp90rsk</coref> during induction of monocytic differentiation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The present work has studied mechanisms responsible for <coref min="induction" id="C3">induction of <coref min="expression" id="C4">early growth response 1 (EGR-1) gene expression</coref></coref> during <coref min="differentiation" id="C5">monocytic differentiation of <coref min="cells" id="C6">U-937 myeloid leukemia cells</coref></coref>.</sentence>
+<sentence id="S3"><coref ref="C5" min="differentiation" type="IDENT" id="C7">Differentiation of <coref ref="C6" min="cells" type="IDENT" id="C8">U-937 cells</coref></coref> with <coref id="C9">12-O-tetradecanoylphorbol-13-acetate (TPA)</coref>, <coref ref="C9" min="activator" type="APPOS" id="C10">an activator of the serine/threonine protein kinase C</coref>, was associated with transcriptional activation of EGR-1 promoter-reporter constructs.</sentence>
+<sentence id="S4">The EGR-1 promoter contains six CC(A/T)6GG (CArG) motifs.</sentence>
+<sentence id="S5">The two 5'-most distal CArG sequences conferred TPA inducibility.</sentence>
+<sentence id="S6">In contrast, there was little effect of <coref ref="C9" type="IDENT" id="C11">TPA</coref> on <coref ref="C1" min="transcription" type="IDENT" id="C12">EGR-1 transcription</coref> in <coref min="variant" id="C13">a TPA-resistant U-937 cell variant</coref>, designated <coref ref="C13" type="IDENT" id="C14">TUR</coref>.</sentence>
+<sentence id="S7">Treatment of both U-937 and TUR cells with <coref min="acid" id="C15">okadaic acid</coref>, <coref ref="C15" min="inhibitor" type="APPOS" id="C16">an inhibitor of serine/threonine protein phosphatases 1 and 2A</coref>, was associated with induction of monocytic differentiation and EGR-1 transcription through the 5'-most CArG element.</sentence>
+<sentence id="S8">Since these findings supported the involvement of serine/threonine protein phosphorylation in the regulation of <coref ref="C4" min="expression" type="IDENT" id="C17">EGR-1 expression</coref>, we studied activation of <coref id="C18">the 40S ribosomal protein S6 serine/threonine kinases</coref>, <coref ref="C18" type="APPOS" id="C19">pp70S6K and <coref id="C20">pp90rsk</coref></coref>.</sentence>
+<sentence id="S9">Although <coref ref="C19" min="kinases" type="IDENT" id="C21">both kinases</coref> participate in regulating cell growth, there was no detectable <coref min="activation" id="C22">activation of pp70S6K</coref> during TPA- or okadaic acid-induced monocytic differentiation.</sentence>
+<sentence id="S10">Moreover, <coref id="C23">rapamycin</coref>, <coref ref="C23" min="inhibitor" type="APPOS" id="C24">an inhibitor of <coref ref="C22" min="activation" type="IDENT" id="C25">pp70S6K activation</coref></coref>, had no effect on <coref ref="C3" min="induction" type="IDENT" id="C26">induction of <coref ref="C17" min="expression" type="IDENT" id="C27">EGR-1 expression</coref></coref>.</sentence>
+<sentence id="S11">In contrast, analysis of pp90rsk activity by phosphorylation of a peptide derived from S6 protein demonstrated stimulation of <coref ref="C23" min="kinase" type="IDENT" id="C28">this kinase</coref> in TPA-treated U-937, and not TUR, cells.</sentence>
+<sentence id="S12">Okadaic acid treatment of both cell types was associated with activation of <coref ref="C20" type="IDENT" id="C29">pp90rsk</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

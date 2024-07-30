@@ -1,0 +1,38 @@
+PMID, ArticleTitle, AbstractText {display: block}
+PMID:before, ArticleTitle:before, AbstractText:before {font-style:bold}
+PMID:before			{content: "##PMID"}
+ArticleTitle:before	{content: "##TITLE"}
+AbstractText:before	{content: "##ABSTRACT"}
+
+sentence {
+	display: block;
+	border: thin solid black;
+	margin-top: 0.5em; margin-bottom: 0.5em;
+	padding-top: 0.1em; padding-bottom: 0.1em; padding-left:0.1em; padding-right:0.1em;
+}
+
+sentence:before {
+	content: attr(id) " ";
+	color: blue;
+}
+
+coref	{
+	background-color: #BFBFBF;
+}
+
+coref:after	{
+	content: attr(id) draw(arrowto(attr(ref), after, green));
+	font-size: 8pt; color: white; background-color: black}
+}
+
+coref[type="IDENT"]	{
+	background-color: #63BEFF;
+}
+
+coref[type="PRON"]	{
+	background-color: #FF599C;
+}
+
+coref[type="RELAT"]	{
+	background-color: #C2FF61;
+}

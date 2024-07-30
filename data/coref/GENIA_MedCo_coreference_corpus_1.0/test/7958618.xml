@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7958618">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7958618</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Functions of <coref id="C1">glutathione</coref> and <coref id="C2">glutathione disulfide</coref> in immunology and immunopathology.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Even a moderate increase in the cellular cysteine supply elevates <coref ref="C1" min="glutathione" type="IDENT" id="C3">the intracellular glutathione (GSH)</coref> and glutathione disulfide (GSSG) levels and potentiates immunological functions of lymphocytes in vitro.</sentence>
+<sentence id="S3">At low GSSG levels, T cells cannot optimally activate <coref min="factor" id="C4">the immunologically important transcription factor NF kappa B</coref>, whereas high GSSG levels inhibit the DNA binding activity of <coref ref="C4" type="IDENT" id="C5">NF kappa B</coref>.</sentence>
+<sentence id="S4">The effects of <coref ref="C2" type="IDENT" id="C6">GSSG</coref> are antagonized by reduced thioredoxin (TRX).</sentence>
+<sentence id="S5">As <coref min="activities" id="C7">the protein tyrosine kinase activities p56lck and p59fyn</coref> are activated in intact cells by hydrogen peroxide, <coref ref="C7" type="IDENT" id="C8">they</coref> are likely targets for GSSG action.</sentence>
+<sentence id="S6">These redox-regulated enzymes trigger signal cascades for NF kappa B activation and transduce signals from the T cell antigen receptor, from CD4 and CD8 molecules, and from the IL-2 receptor beta-chain.</sentence>
+<sentence id="S7">The effector phase of cytotoxic T cell responses and IL-2-dependent functions are inhibited even by a partial depletion of the intracellular GSH pool.</sentence>
+<sentence id="S8">As signal transduction is facilitated by prooxidant conditions, we propose that the well-known immunological consequences of GSH depletion ultimately may be results of the accompanying GSSG deficiency.</sentence>
+<sentence id="S9">As HIV-infected patients and SIV-infected rhesus macaques have, on the average, significantly decreased plasma cyst(e)ine and intracellular GSH levels, we also hypothesize that AIDS may be the consequence of a GSSG deficiency as well.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

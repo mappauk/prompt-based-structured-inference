@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8670269">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8670269</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">An alternatively spliced isoform of <coref id="C1">the Spi-B transcription factor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">Spi-B</coref> is an Ets transcription factor related to the oncoprotein Spi-1/PU.1 and highly expressed in B lymphoid cells.</sentence>
+<sentence id="S3">The Ets proteins share <coref min="domain" id="C3">a conserved Ets domain</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> mediates specific DNA binding.</sentence>
+<sentence id="S4"><coref ref="C2" type="IDENT" id="C5">Spi-B</coref> binds DNA sequences containing <coref min="sequences" id="C6">a core 5'-GGAA-3'</coref> and activates transcription through <coref ref="C6" type="IDENT" id="C7">this motif</coref>.</sentence>
+<sentence id="S5">Up to date, <coref min="function" id="C17">the biological function of <coref ref="C5" type="IDENT" id="C8">Spi-B</coref></coref> remains unknown.</sentence>
+<sentence id="S6">Here, we describe the characterization of <coref min="variant" id="C10">an alternatively spliced variant of <coref ref="C8" type="IDENT" id="C9">Spi-B</coref></coref>, named <coref ref="C10" type="IDENT" id="C11">deltaSpi-B</coref>, <coref ref="C11" type="RELAT" id="C12">which</coref> has lost the Ets domain.</sentence>
+<sentence id="S7">In B lymphoid cells, <coref ref="C11" type="IDENT" id="C13">deltaspi-B</coref> and spi-B mRNAs were present simultaneously in a ratio of around 10%.</sentence>
+<sentence id="S8">DeltaSpi-B product was not able to bind DNA and was recovered in cytoplasmic cellular extracts.</sentence>
+<sentence id="S9">We raise <coref id="C14">the hypothesis</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> <coref ref="C13" type="IDENT" id="C16">delta Spi-B</coref> might affect <coref ref="C17" min="function" type="IDENT" id="C18">Spi-B function</coref> by recruiting factors involved in Spi-B activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

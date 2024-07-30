@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7594540">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7594540</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Nuclear factor-IL6</coref> activates <coref min="promoter" id="C2">the human IL-4 promoter</coref> in <coref min="cells" id="C3">T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">Positive regulatory element I (PRE-I)</coref> is a strong enhancer element essential for expression of the human IL-4 gene.</sentence>
+<sentence id="S3">To identify transcription factors binding to <coref ref="C4" type="IDENT" id="C5">PRE-I</coref>, we screened a cDNA expression library from <coref min="cells" id="C6">Jurkat T cells</coref> and isolated <coref ref="C1" type="IDENT" id="C7">a cDNA encoding nuclear factor (NF)-IL6 (also known as C/EBP beta)</coref>.</sentence>
+<sentence id="S4">NF-IL6 mRNA was found in human Jurkat T cells and in the mouse Th2 clone D10, but not in Th1 clone 29.</sentence>
+<sentence id="S5">rNF-IL6 expressed in bacteria was shown to specifically bind to <coref ref="C5" type="IDENT" id="C8">PRE-I</coref>.</sentence>
+<sentence id="S6"><coref ref="C8" type="IDENT" id="C9">PRE-I</coref> forms <coref min="complexes" id="C10">multiple DNA-protein complexes</coref> with nuclear extracts from <coref ref="C6" min="cells" type="IDENT" id="C11">Jurkat cells</coref>.</sentence>
+<sentence id="S7">Some of <coref ref="C10" min="complexes" type="IDENT" id="C12">these complexes</coref> were demonstrated to contain <coref ref="C7" type="IDENT" id="C13">NF-IL6</coref> by using anti-C/EBP beta Abs.</sentence>
+<sentence id="S8">Overexpression of <coref ref="C13" type="IDENT" id="C14">NF-IL6</coref> enhanced expression of the chloramphenicol acetyl transferase reporter gene linked to the PRE-I-thymidine kinase or <coref ref="C2" min="promoter" type="IDENT" id="C15">the human IL-4 promoter</coref> more than 10-fold in <coref ref="C11" min="cells" type="IDENT" id="C16">Jurkat cells</coref>.</sentence>
+<sentence id="S9">Promoter deletion studies revealed two additional NF-IL6 binding sites located at positions -44 to -36 (C/EBP proximal) and -87 to -79 (C/EBP medial), respectively.</sentence>
+<sentence id="S10">Our results demonstrate that <coref ref="C14" type="IDENT" id="C17">NF-IL6</coref> is involved in transcriptional activation of <coref ref="C15" min="promoter" type="IDENT" id="C18">the human IL-4 promoter</coref> in <coref ref="C3" min="cells" type="IDENT" id="C19">T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

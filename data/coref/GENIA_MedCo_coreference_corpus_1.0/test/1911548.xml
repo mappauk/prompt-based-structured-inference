@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1911548">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1911548</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="nuclear factor" id="C1">A nuclear factor NF-GM2</coref> <coref ref="C1" type="RELAT" id="C2">that</coref> interacts with a regulatory region of <coref min="gene" id="C3">the GM-CSF gene</coref> essential for <coref ref="C1" type="PRON" id="C4">its</coref> induction in responses to <coref min="activation" id="C5"><coref id="C6">T-cell</coref> activation</coref>: purification from human T-cell leukemia line <coref ref="C6" type="IDENT" id="C7">Jurkat cells</coref> and similarity to <coref id="C8">NF-kappa B</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C5" min="activation" type="IDENT" id="C9">Activation of <coref ref="C7" type="IDENT" id="C10">T cells</coref></coref> by antigen, lectin, or a combination of <coref id="C11">phorbol-12-myristate acetate (PMA) and calcium ionophore (A23187)</coref> leads to the induction of genes for a set of lymphokines, including <coref ref="C3" type="IDENT" id="C12">granulocyte-macrophage colony-stimulating factor (GM-CSF)</coref>.</sentence>
+<sentence id="S3">We demonstrated in earlier studies that <coref min="region" id="C13">the upstream region of <coref min="promoter" id="C14">the mouse <coref ref="C12" type="IDENT" id="C15">GM-CSF</coref> promoter</coref> at positions between -95 and -73</coref> is essential for transcriptional activation in response to <coref ref="C11" type="IDENT" id="C16">PMA/A23187</coref>.</sentence>
+<sentence id="S4"><coref ref="C13" type="IDENT" id="C17">This region</coref> contains <coref ref="C19" min="binding motifs" type="APPOS" id="C18">two DNA-binding motifs</coref>, <coref id="C19"><coref id="C20">GM2</coref> and <coref id="C21">GC-box</coref></coref>.</sentence>
+<sentence id="S5"><coref min="sequence" id="C22">The <coref ref="C20" type="IDENT" id="C23">GM2</coref> sequence (GGTAGTTCCC)</coref> is recognized by <coref ref="C1" min="factor" type="IDENT" id="C24">an inducible factor NF-GM2</coref>; <coref id="C25">the <coref ref="C21" type="IDENT" id="C26">other</coref> (CCGCCC)</coref> by constitutive factors A1, A2, and B.</sentence>
+<sentence id="S6">To elucidate <coref min="mechanism" id="C27">the mechanism of <coref ref="C15" min="gene" type="IDENT" id="C28">GM-CSF gene</coref> activation</coref>, we have purified <coref ref="C24" min="factor" type="IDENT" id="C29">the inducible factor NF-GM2</coref> from the nuclear extract of stimulated <coref ref="C10" type="IDENT" id="C30">Jurkat cells</coref> on the basis of specific DNA-binding activity.</sentence>
+<sentence id="S7"><coref ref="C29" type="OTHER" id="C31">The purified NF-GM2</coref> consists of 50 <coref id="C32">(p50)</coref> and 65 kDa <coref id="C33">(p65)</coref> polypeptides and has a binding activity specific for both <coref ref="C28" type="IDENT" id="C34">the GM-CSF</coref> and immunoglobulin kappa (GGAAAGTCCC) enhancers.</sentence>
+<sentence id="S8"><coref ref="C32" type="OTHER" id="C35">Electrophoretically purified p50</coref> alone can form <coref min="complex" id="C36">a protein-DNA complex</coref>, but in the mixture, <coref ref="C32" type="IDENT" id="C37">p50</coref> associates preferentially with <coref ref="C33" type="IDENT" id="C38">p65</coref> to form <coref min="complex" id="C39">the <coref ref="C29" type="IDENT" id="C40">NF-GM2</coref> complex</coref>.</sentence>
+<sentence id="S9">In addition, <coref ref="C38" type="IDENT" id="C41">p65</coref> gave per se, with low affinity, <coref ref="C36" min="complex" type="IDENT" id="C42">a protein-DNA complex</coref> <coref ref="C42" type="RELAT" id="C43">that</coref> migrated more slowly than <coref ref="C39" min="complex" type="IDENT" id="C44">native <coref ref="C40" type="IDENT" id="C45">NF-GM2</coref> complex</coref>.</sentence>
+<sentence id="S10">Furthermore, an antiserum against KBF1 (identical to 50 kDa NF-kappa B protein) reacted with <coref ref="C37" type="IDENT" id="C46">the p50</coref> of <coref ref="C45" type="IDENT" id="C47">NF-GM2</coref>, indicating that the NF-GM2 polypeptide cannot be immunologically differentiated from the 50 kDa subunit of <coref ref="C8" type="IDENT" id="C48">NF-kappa B</coref>.</sentence>
+<sentence id="S11"><coref ref="C31" type="IDENT" id="C49">The purified NF-GM2</coref> activated in vitro transcription from <coref min="enhancer" id="C50">the kappa B enhancer</coref>, while <coref ref="C49" type="PRON" id="C51">it</coref> failed to stimulate transcription from <coref ref="C14" min="promoter" type="IDENT" id="C52">the <coref ref="C34" type="IDENT" id="C53">GM-CSF</coref> promoter</coref> harboring <coref ref="C22" min="sequence" type="IDENT" id="C54">the <coref ref="C23" type="IDENT" id="C55">GM2</coref> sequence</coref>.</sentence>
+<sentence id="S12">This suggests that <coref ref="C27" min="activation mechanism" type="IDENT" id="C56"><coref id="C57">the activation mechanism</coref> of <coref ref="C53" min="gene" type="IDENT" id="C58">the GM-CSF gene</coref></coref> through the <coref ref="C55" type="IDENT" id="C59">GM2</coref>/<coref ref="C25" min="sequence" type="IDENT" id="C60"><coref ref="C26" type="IDENT" id="C61">GC-box</coref> sequence</coref> is different from <coref ref="C57" type="PRON" id="C62">that</coref> of genes carrying <coref ref="C50" min="enhancer" type="IDENT" id="C63">the kappa B enhancer</coref> alone.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

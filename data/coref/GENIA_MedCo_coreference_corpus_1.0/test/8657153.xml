@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8657153">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8657153</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Transcriptional activation of RNA polymerase III-dependent genes by <coref min="protein" id="C1">the human T-cell leukemia virus type 1 tax protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="protein" type="IDENT" id="C2">The human T-cell leukemia virus-encoded tax protein</coref> is a potent activator of many viral and cellular genes transcribed by RNA polymerase II.</sentence>
+<sentence id="S3">We find that both chromatin and cell extracts derived from human T-cell leukemia virus type 1-infected human T lymphocytes support higher levels of 5S rRNA and tRNA gene transcription than chromatin or extracts from uninfected T lymphocytes.</sentence>
+<sentence id="S4"><coref id="C3">The viral protein Tax</coref> was likely responsible for this higher level of class II gene transcription, as purified Tax was found to stimulate both genes when added to the uninfected cell extract or in reconstituted systems.</sentence>
+<sentence id="S5">Both limiting-component transcription assays and DNA binding assays identified <coref min="factor" id="C4">the class III gene transcription factor TFIIIB</coref> as <coref ref="C4" min="target" type="IDENT" id="C5">the principle target of Tax activity</coref>.</sentence>
+<sentence id="S6">Surprisingly, we find that <coref ref="C3" type="IDENT" id="C6">Tax</coref> increases the effective concentration of active TFIIIB molecules.</sentence>
+<sentence id="S7">These data suggest that <coref ref="C6" type="IDENT" id="C7">Tax</coref> stimulates RNA polymerase III-dependent gene expression by accelerating the rate and/or extent of transcription initiation complex assembly.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8780747">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8780747</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C7">Translocation (3;14)(q27;q11)</coref>: <coref ref="C7" min="translocation" type="APPOS" id="C8">a new variant translocation in <coref min="patient" id="C1">a patient with non-Hodgkin's lymphoma of B-cell type with <coref min="rearrangement" id="C4">BCL6 rearrangement</coref></coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We report <coref ref="C1" min="woman" type="IDENT" id="C2">a 65-year-old woman with non-Hodgkin's lymphoma (NHL) carrying <coref ref="C7" type="IDENT" id="C10">a t(3;14)(q27;q11)</coref> and <coref ref="C4" min="rearrangement" type="IDENT" id="C5">BCL6 rearrangement in the affected cells</coref></coref>.</sentence>
+<sentence id="S3"><coref ref="C2" type="PRON" id="C3">She</coref> had generalized lymphadenopathy and the bone marrow was infiltrated by lymphoma cells at presentation.</sentence>
+<sentence id="S4">Histological diagnosis was "malignant lymphoma, diffuse, large cell" type according to an International Working Formulation.</sentence>
+<sentence id="S5">Chromosome analysis revealed <coref ref="C10" id="C6">a t(3;14)(q27;q11)</coref>, <coref ref="C6" type="RELAT" id="C9">which</coref> is <coref min="translocation" id="C13">a new variant translocation of t(3;14) (q27;q32)</coref>.</sentence>
+<sentence id="S6">Southern blot analysis showed <coref ref="C5" min="rearrangement" type="IDENT" id="C12">rearrangement of BCL6</coref>, JH, and TCR beta but not of TCR delta.</sentence>
+<sentence id="S7">Cosmid probe of BCL6 hybridized to 14q11 and 3q27 by fluorescence in situ hybridization (FISH).</sentence>
+<sentence id="S8">Although the band 14q11 is a locus of T-cell receptor alpha- and delta-chains (TCR alpha/delta), lymphoma cells expressed B-cell, IgGk phenotype.</sentence>
+<sentence id="S9">The findings suggest that a novel proto-oncogene in the vicinity of TCR alpha/delta is involved in <coref ref="C13" type="IDENT" id="C14">this translocation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8392437">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8392437</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="costimulation" id="C1">Costimulation of <coref min="pathways" id="C2"><coref id="C3">cAMP</coref> and <coref min="pathways" id="C4">protein kinase C pathways</coref></coref></coref> inhibits the CD3-dependent T cell activation and leads to a persistent expression of the AP-1 transcription factor.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The effects mediated by <coref ref="C1" min="stimulation" type="IDENT" id="C5">a combined stimulation of <coref ref="C3" type="IDENT" id="C6"><coref ref="C2" type="IDENT" id="C7">cAMP-</coref> and <coref ref="C4" type="IDENT" id="C8">protein kinase C (PKC)-dependent pathways</coref></coref></coref> have been investigated in different cellular systems, and it has been shown that <coref ref="C7" type="PRON" id="C9">they</coref> may complement each other in activating cell proliferation and differentiation.</sentence>
+<sentence id="S3">In this report, we show that upon the stimulation of <coref ref="C7" type="IDENT" id="C10">both pathways</coref> T lymphocytes became refractory to activation via <coref id="C11">the CD3/T cell receptor (TcR) complex</coref>.</sentence>
+<sentence id="S4">T cells preincubated with <coref id="C12">phorbol 12-myristate 13-acetate (PMA)</coref> and <coref id="C13">dibutyryl cAMP (Bt2cAMP)</coref> displayed a deficient proliferative ability in response to anti-CD3 mAb stimulation, whereas lymphocytes treated individually with either <coref ref="C13" type="IDENT" id="C14">Bt2cAMP</coref> or <coref ref="C12" type="IDENT" id="C15">PMA</coref> responded comparably to untreated samples.</sentence>
+<sentence id="S5">We detected an association between the reduced mitogenic response and low expression of both interleukin-2 (IL-2) and the alpha chain (CD25) of the IL-2 receptor (IL-2R).</sentence>
+<sentence id="S6">Analysis of intracellular Ca2+ mobilization suggested that the <coref ref="C11" type="IDENT" id="C16">CD3/TcR-</coref>dependent signal transduction was impaired in PMA/Bt2cAMP-treated cells.</sentence>
+<sentence id="S7">Remarkably, we observed that these samples displayed a persistent expression of the c-fos protooncogene, associated to an increased AP-1 DNA-binding activity, whereas no variations of CREB or NF-kB were detected.</sentence>
+<sentence id="S8">Neither <coref ref="C14" type="IDENT" id="C17">Bt2cAMP</coref> nor <coref ref="C15" type="IDENT" id="C18">PMA</coref> individually mediated <coref min="effects" id="C19">these sustained effects</coref>, <coref ref="C19" type="RELAT" id="C20">which</coref> therefore appear as a consequence of the interplay between both metabolic stimuli.</sentence>
+<sentence id="S9">Altogether, the data provide <coref id="C21">the evidence</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> <coref ref="C10" type="IDENT" id="C23">both pathways</coref> complement each other in regulating gene expression and, conversely, downregulate the TcR transduction mechanisms.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

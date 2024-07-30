@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9632764">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9632764</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Coactivation by <coref id="C1">OCA-B</coref>: definition of critical regions and synergism with general cofactors.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Molecular dissection of <coref ref="C1" type="IDENT" id="C2">the B-cell-specific transcription coactivator OCA-B</coref> has revealed distinct regions important, respectively, for recruitment to immunoglobulin promoters through interaction with octamer-bound Oct-1 and for subsequent coactivator function.</sentence>
+<sentence id="S3">Further analysis of general coactivator requirements showed that selective removal of <coref id="C3">PC4</coref> from the essential USA fraction severely impairs Oct-1 and OCA-B function in <coref min="system" id="C4">a cell-free system reconstituted with partially purified factors</coref>.</sentence>
+<sentence id="S4">Full activity can be restored by the combined action of recombinant PC4 and the PC4-depleted USA fraction, thus suggesting a joint requirement for PC4 and another, USA-derived component(s) for optimal function of Oct-1/OCA-B in <coref ref="C4" min="system" type="IDENT" id="C5">the reconstituted system</coref>.</sentence>
+<sentence id="S5">Indeed, USA-derived PC2 was found to act synergistically with <coref ref="C3" type="IDENT" id="C6">PC4</coref> in reproducing the function of intact USA in the assay system.</sentence>
+<sentence id="S6">Consistent with the requirement for <coref ref="C6" type="IDENT" id="C7">PC4</coref> in <coref ref="C5" min="system" type="IDENT" id="C8">the reconstituted system</coref>, <coref ref="C2" type="IDENT" id="C9">OCA-B</coref> was found to interact directly with <coref ref="C7" type="IDENT" id="C10">PC4</coref>.</sentence>
+<sentence id="S7">Surprisingly, however, removal of <coref ref="C10" type="IDENT" id="C11">PC4</coref> from the unfractionated nuclear extract has no detrimental effect on OCA-B/Oct-1-dependent transcription.</sentence>
+<sentence id="S8">These results lead to a general model for the synergistic function of activation domains in Oct-1 and <coref ref="C9" type="IDENT" id="C12">OCA-B</coref> (mediated by the combined action of the multiple USA components) and, further, suggest a functional redundancy in general coactivators.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

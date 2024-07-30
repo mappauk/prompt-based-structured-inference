@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10096574">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10096574</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="death" id="C1">Glucocorticoid-induced cell death</coref> requires autoinduction of <coref min="expression" id="C2">glucocorticoid receptor expression</coref> in <coref min="cells" id="C3">human leukemic T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">In contrast to the negative autoregulation of <coref ref="C2" min="expression" type="IDENT" id="C4">glucocorticoid receptor (GR) expression</coref> seen in most cells and tissues, <coref ref="C4" min="expression" type="IDENT" id="C5">GR expression</coref> is positively autoregulated in <coref ref="C3" min="cells" type="IDENT" id="C6">human leukemic T cells</coref> and in other cells sensitive to <coref ref="C1" min="death" type="IDENT" id="C7">glucocorticoid-induced cell death</coref>.</sentence>
+<sentence id="S3">To determine whether <coref min="autoregulation" id="C8">positive autoregulation</coref> is a necessary component of <coref ref="C7" min="death" type="IDENT" id="C9">glucocorticoid-induced cell death</coref>, a wild-type GR gene under the control of a tetracycline-regulated promoter was stably transfected into glucocorticoid-resistant cells lacking endogenous functional receptor.</sentence>
+<sentence id="S4">Transfectants grown in the presence of <coref id="C10">tetracycline</coref> contained about <coref id="C11">15,000 receptors/cell</coref>, <coref ref="C11" min="value" type="APPOS" id="C12">a value approximately equal to basal level GR expression in glucocorticoid-sensitive 6TG1.1 cells before steroid treatment</coref>.</sentence>
+<sentence id="S5">Under these conditions, <coref id="C13">dexamethasone</coref> had a minimal effect on <coref min="growth" id="C14">cell growth</coref>, elicited little internucleosomal DNA fragmentation, and induced no cell cycle perturbation.</sentence>
+<sentence id="S6">In the absence of <coref ref="C10" type="IDENT" id="C15">tetracycline</coref>, GR mRNA and protein expression increased 2-3-fold, and cells expressed 48,000 receptors, <coref id="C16">a level</coref> nearly equivalent to <coref ref="C16" type="PRON" id="C17">that</coref> present in 6TG1.1 cells after 18 h of autoinduction.</sentence>
+<sentence id="S7">Under these conditions, <coref ref="C13" type="IDENT" id="C18">dexamethasone</coref> markedly inhibited <coref ref="C14" min="growth" type="IDENT" id="C19">cell growth</coref>, caused G1 arrest, and induced significant internucleosomal DNA fragmentation.</sentence>
+<sentence id="S8">These studies therefore suggest that basal level GR expression is inadequate to mediate glucocorticoid-induced apoptosis in glucocorticoid-sensitive T cells and that <coref ref="C8" min="autoregulation" type="IDENT" id="C20">positive autoregulation</coref> is a necessary component of this process.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

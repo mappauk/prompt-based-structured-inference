@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10064103">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10064103</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Peripheral blood mononuclear cells isolated from <coref min="patients" id="C1">patients with <coref id="C2">diabetic nephropathy</coref></coref> show increased activation of <coref min="transcription factor" id="C3">the oxidative-stress sensitive transcription factor NF-kappaB</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Increased oxidative stress and subsequent activation of <coref ref="C3" min="transcription factor" type="IDENT" id="C4">the transcription factor NF-kappaB</coref> has been linked to the development of late diabetic complications.</sentence>
+<sentence id="S3">To determine whether oxidative stress dependent NF-kappaB activation is evident in <coref ref="C1" min="patients" type="IDENT" id="C5">patients with <coref ref="C2" type="IDENT" id="C6">diabetic nephropathy</coref></coref> we used <coref min="system" id="C7">an Electrophoretic Mobility Shift Assay based semiquantitative detection system</coref> <coref ref="C7" type="RELAT" id="C8">which</coref> enabled us to determine NF-kappaB activation in <coref min="cells" id="C9">ex vivo isolated peripheral blood mononuclear cells</coref>.</sentence>
+<sentence id="S4">We examined 33 patients with <coref id="C10">diabetes mellitus (Type I and Type II)</coref>.</sentence>
+<sentence id="S5"><coref ref="C5" min="patients" type="IDENT" id="C11">Patients with <coref ref="C6" type="IDENT" id="C12">diabetic nephropathy</coref></coref> showed higher NF-kappaB binding activity in Electrophoretic Mobility Shift Assays and stronger immunohistological staining for activated NF-kappaBp65 than patients without renal complications.</sentence>
+<sentence id="S6"><coref min="activity" id="C13">NF-kappaB binding activity</coref> correlated with the degree of albuminuria (r = 0.316) and with thrombomodulin plasma concentrations (r = 0.33), indicative for albuminuria associated endothelial dysfunction.</sentence>
+<sentence id="S7">In <coref min="study" id="C14">a 3 day intervention study</coref> in <coref ref="C14" type="RELAT" id="C15">which</coref> 600 mg of the antioxidant thioctic acid (alpha-lipoic acid) per day were given to nine patients with <coref ref="C12" type="IDENT" id="C16">diabetic nephropathy</coref> oxidative stress in plasma samples was decreased by 48% and NF-kappaB binding activity in <coref ref="C9" min="cells" type="IDENT" id="C17">ex vivo isolated peripheral blood mononuclear cells</coref> by 38%.</sentence>
+<sentence id="S8">In conclusion, activation of <coref ref="C4" min="transcription factor" type="IDENT" id="C18">the transcription factor NF-kappaB</coref> in ex vivo isolated peripheral blood mononuclear cells of patients with <coref ref="C10" type="IDENT" id="C19">diabetes mellitus</coref> correlates with the degree of <coref ref="C16" type="IDENT" id="C20">diabetic nephropathy</coref>.</sentence>
+<sentence id="S9">NF-kappaB activation is at least in part dependent on oxidative stress since thioctic acid (alpha-lipoic acid) reduced <coref ref="C13" min="activity" type="IDENT" id="C21">NF-kappaB binding activity</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

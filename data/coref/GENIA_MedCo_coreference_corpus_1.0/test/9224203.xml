@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9224203">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9224203</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The role of <coref id="C1">nuclear factor-kappa B</coref> in cytokine gene regulation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Transcription factors are <coref min="proteins" id="C2">DNA-binding proteins</coref> <coref ref="C2" type="RELAT" id="C3">that</coref> regulate gene expression.</sentence>
+<sentence id="S3"><coref ref="C1" type="IDENT" id="C4">Nuclear factor-kappa B (NF-kappa B)</coref> is a critical transcription factor for maximal expression of <coref min="cytokines" id="C5">many cytokines</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> are involved in the pathogenesis of inflammatory diseases, such as <coref min="syndrome" id="C7">adult respiratory distress syndrome (ARDS)</coref> and sepsis syndrome.</sentence>
+<sentence id="S4">Activation and regulation of <coref ref="C4" type="IDENT" id="C8">NF-kappa B</coref> are tightly controlled by <coref min="proteins" id="C9"><coref min="proteins" id="C10">a group of inhibitory proteins (I kappa B)</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> sequester <coref ref="C8" type="IDENT" id="C12">NF-kappa B</coref></coref> in the cytoplasm of immune/inflammatory effector cells.</sentence>
+<sentence id="S5"><coref min="activation" id="C13">NF-kappa B activation</coref> involves signaled phosphorylation, ubiquitination, and proteolysis of <coref ref="C9" type="IDENT" id="C14">I kappa B</coref>.</sentence>
+<sentence id="S6"><coref min="nf-kappa b" id="C15">Liberated NF-kappa B</coref> migrates to <coref id="C16">the nucleus</coref>, <coref ref="C16" type="RELAT" id="C17">where</coref> <coref ref="C15" type="PRON" id="C18">it</coref> binds to specific promoter sites and activates gene transcription.</sentence>
+<sentence id="S7"><coref ref="C13" min="activation" type="IDENT" id="C19">The activation of <coref ref="C12" type="IDENT" id="C20">NF-kappa B</coref></coref> initiates <coref min="events" id="C21">both extracellular and intracellular regulatory events</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> result in autoregulation of the inflammatory cascade through modulation of <coref ref="C19" min="activation" type="IDENT" id="C23">NF-kappa B activation</coref>.</sentence>
+<sentence id="S8">Recently, <coref ref="C23" min="activation" type="IDENT" id="C24">activation of <coref ref="C20" type="IDENT" id="C25">NF-kappa B</coref></coref> has been linked to <coref ref="C7" type="IDENT" id="C26">ARDS</coref> and has been shown to be a critical proximal step in the initiation of neutrophilic inflammation in animal models.</sentence>
+<sentence id="S9"><coref ref="C24" min="activation" type="IDENT" id="C27">Activation of <coref ref="C25" type="IDENT" id="C28">NF-kappa B</coref></coref> can be inhibited in vivo by treatment with antioxidants, corticosteroids, and the induction of endotoxin tolerance.</sentence>
+<sentence id="S10">Identification of more specific and efficacious inhibitors of <coref ref="C27" min="activation" type="IDENT" id="C29">NF-kappa B activation</coref> might prove beneficial for the treatment of cytokine-mediated inflammatory diseases.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

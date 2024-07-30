@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8892903">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8892903</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Comparative analysis identifies <coref min="sites" id="C16">conserved tumor necrosis factor receptor-associated factor 3 binding sites</coref> in <coref min="lmp1" id="C7">the human and simian Epstein-Barr virus oncogene LMP1</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Nonhuman primates are naturally infected with a B-lymphotropic herpesvirus closely related to Epstein-Barr virus (EBV).</sentence>
+<sentence id="S3">These simian EBV share considerable genetic, biologic, and epidemiologic features with human EBV, including virus-induced tumorigenesis.</sentence>
+<sentence id="S4">However, latent, transformation-associated viral genes demonstrate marked sequence divergence among species despite the conserved functions.</sentence>
+<sentence id="S5">We have cloned the latent membrane protein 1 (LMP1) homologs from the simian EBV naturally infecting baboons (cercopithicine herpesvirus 12, herpesvirus papio) and rhesus monkeys (cercopithicine herpesvirus 15) for a comparative study with the human EBV oncogene.</sentence>
+<sentence id="S6">The transmembrane domains are well conserved, but there is striking sequence divergence of the carboxy-terminal cytoplasmic domain essential for B-cell immortalization and interaction with the tumor necrosis factor receptor signaling pathway.</sentence>
+<sentence id="S7">Nevertheless, <coref min="lmps" id="C1">the simian EBV LMP1s</coref> retain most functions in common with EBV LMP1, including the ability to induce NF-(kappa)B activity in human cells, to bind <coref min="traf3" id="C5">the tumor necrosis factor-associated factor 3 (TRAF3) in vitro</coref>, and to induce expression of tumor necrosis factor-responsive genes, such as ICAM1, in human B lymphocytes.</sentence>
+<sentence id="S8">Multiple TRAF3 binding sites containing a PXQXT/S core sequence can be identified in <coref ref="C1" min="lmps" type="IDENT" id="C2">the simian EBV LMP1s</coref> by an in vitro binding assay.</sentence>
+<sentence id="S9">A PXQXT/S-containing sequence is also present in the cytoplasmic domain of <coref min="marker" id="C3">the Hodgkin's disease marker</coref>, <coref ref="C3" type="APPOS" id="C4">CD30</coref>, and binds <coref ref="C5" min="traf3" type="IDENT" id="C6">TRAF3 in vitro</coref>.</sentence>
+<sentence id="S10">The last 13 amino acids containing a PXQXT/S sequence are highly conserved in <coref ref="C7" min="lmp1" type="IDENT" id="C8">human and simian EBV LMP1</coref> but do not bind <coref ref="C6" type="IDENT" id="C9">TRAF3</coref>, suggesting a distinct role for this conserved region of <coref id="C10">LMP1</coref>.</sentence>
+<sentence id="S11"><coref ref="C16" min="sites" type="IDENT" id="C17">The conserved TRAF3 binding sites</coref> in <coref ref="C10" type="IDENT" id="C11">LMP1</coref> and <coref ref="C4" min="marker" type="IDENT" id="C12">the CD30 Hodgkin's disease marker</coref> provides <coref min="evidence" id="C13">further evidence</coref> <coref ref="C13" type="RELAT" id="C14">that</coref> a <coref ref="C9" type="IDENT" id="C15">TRAF3-</coref>mediated signal transduction pathway may be important in malignant transformation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8428000">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8428000</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="expression" id="C1"><coref id="C2">Interleukin-3</coref> expression</coref> by <coref min="T cells" id="C3">activated T cells</coref> involves <coref min="factor" id="C4">an inducible, T-cell-specific factor</coref> and <coref min="protein" id="C5">an octamer binding protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" type="IDENT" id="C6">Interleukin-3 (IL-3)</coref> is exclusively expressed by <coref ref="C3" min="cells" type="OTHER" id="C7">activated T and natural killer cells</coref>, <coref id="C8">a function</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> is tightly controlled both in a lineage-specific and in a stimulation-dependent manner.</sentence>
+<sentence id="S3">We have investigated the protein binding characteristics and functional importance of <coref min="region" id="C10">the ACT-1-activating region of the <coref ref="C6" type="IDENT" id="C11">IL-3</coref> promoter</coref>.</sentence>
+<sentence id="S4"><coref ref="C10" min="region" type="IDENT" id="C12">This region</coref> binds <coref ref="C4" min="factor" type="IDENT" id="C13">an inducible, T-cell-specific factor</coref> over <coref min="end" id="C14"><coref ref="C12" type="PRON" id="C15">its</coref> 5' end</coref>, <coref ref="C14" min="site" type="APPOS" id="C16"><coref id="C17">a site</coref> <coref ref="C17" type="RELAT" id="C18">that</coref> is necessary for <coref ref="C1" min="expression" type="OTHER" id="C19">the expression of <coref ref="C11" type="IDENT" id="C20">IL-3</coref></coref> in the absence of other upstream elements</coref>.</sentence>
+<sentence id="S5">Over <coref ref="C12" type="PRON" id="C21">its</coref> 3' end, <coref ref="C12" type="PRON" id="C22">it</coref> binds <coref min="factor" id="C23"><coref id="C24">a factor</coref> <coref ref="C24" type="RELAT" id="C25">that</coref> is ubiquitously and constitutively expressed</coref>.</sentence>
+<sentence id="S6"><coref ref="C23" min="factor" type="IDENT" id="C26">This factor</coref> is <coref ref="C26" type="IDENT" id="C27">Oct-1</coref> or <coref ref="C27" min="protein" type="IDENT" id="C28">an immunologically related octamer-binding protein</coref>, and <coref ref="C26" type="PRON" id="C29">it</coref> plays a role in coordinating the activity of several regulatory elements.</sentence>
+<sentence id="S7">These characteristics make <coref ref="C10" min="site" type="OTHER" id="C30">the ACT-1 site</coref> analogous to the activating ARRE-1 site in the <coref id="C31">IL-2</coref> promoter.</sentence>
+<sentence id="S8">Furthermore, and despite a lack of sequence homology, the promoters of <coref id="C32"><coref ref="C20" type="IDENT" id="C33">IL-3</coref> and <coref ref="C31" type="IDENT" id="C34">IL-2</coref></coref> share <coref min="pattern" id="C35">an organizational pattern of regulatory elements</coref> <coref ref="C35" type="RELAT" id="C36">that</coref> is likely to be important for the T-cell-specific expression of <coref ref="C32" min="genes" type="OTHER" id="C37">these genes</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

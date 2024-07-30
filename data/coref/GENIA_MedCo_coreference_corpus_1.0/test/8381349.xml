@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8381349">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8381349</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">The <coref id="C2">Epstein-Barr virus</coref> nuclear antigen 2</coref> interacts with <coref min="cis-element" id="C3">an <coref ref="C1" type="IDENT" id="C4">EBNA2</coref> responsive cis-element of <coref min="promoter" id="C5">the terminal protein 1 gene promoter</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C4" type="IDENT" id="C6">The <coref ref="C2" type="IDENT" id="C7">Epstein-Barr virus</coref> protein EBNA2</coref> acts as a transcriptional activator of cellular and viral genes and plays a crucial role in the immortalization of human primary B-cells by <coref ref="C7" type="OTHER" id="C8">EBV</coref>.</sentence>
+<sentence id="S3">We have shown previously that <coref ref="C6" type="IDENT" id="C9">EBNA2</coref> transactivates the promoters of the latent membrane antigens LMP, <coref id="C10">TP1</coref> and TP2.</sentence>
+<sentence id="S4"><coref ref="C5" min="promoter" type="IDENT" id="C11">The promoter of the <coref ref="C10" type="IDENT" id="C12">TP1</coref> gene</coref> was chosen as a model system to study the molecular mechanism of <coref ref="C9" type="IDENT" id="C13">EBNA2</coref> mediated transactivation.</sentence>
+<sentence id="S5">To identify <coref ref="C3" min="element" type="OTHER" id="C14">an <coref ref="C13" type="IDENT" id="C15">EBNA2</coref> dependent cis-acting element</coref>, various <coref ref="C12" type="IDENT" id="C16">TP1</coref> promoter-reporter gene constructs were transfected in the absence and presence of an <coref ref="C15" type="IDENT" id="C17">EBNA2</coref> expression vector into the established B-cell line BL41-P3HR1.</sentence>
+<sentence id="S6">We were able to delineate <coref ref="C14" min="region" type="OTHER" id="C18">an 81 bp <coref ref="C17" type="IDENT" id="C19">EBNA2</coref> responsive region between -258 and -177 relative to the <coref ref="C16" type="IDENT" id="C20">TP1</coref> RNA start site</coref>.</sentence>
+<sentence id="S7"><coref ref="C18" type="IDENT" id="C21">The element</coref> worked in either orientation and could mediate <coref ref="C19" type="IDENT" id="C22">EBNA2</coref> dependent transactivation on a heterologous promoter.</sentence>
+<sentence id="S8">Electrophoretic mobility shift assays revealed <coref min="complexes" id="C23">three specific protein-DNA complexes formed with sequences of <coref ref="C21" min="element" type="IDENT" id="C24">the <coref ref="C22" type="IDENT" id="C25">EBNA2</coref> responsive element</coref></coref>.</sentence>
+<sentence id="S9">Two of <coref ref="C23" type="PRON" id="C26">these</coref> were not cell type specific, but <coref ref="C23" type="OTHER" id="C27">the third</coref> was detected only in <coref ref="C25" type="IDENT" id="C28">EBNA2</coref> positive cell extracts.</sentence>
+<sentence id="S10">Gel-shift analysis in the presence of <coref ref="C28" type="IDENT" id="C29">EBNA2</coref> specific monoclonal antibodies revealed that <coref ref="C29" type="IDENT" id="C30">EBNA2</coref> is a component of <coref ref="C27" min="complex" type="IDENT" id="C31">the third complex</coref>.</sentence>
+<sentence id="S11">Thus, these experiments demonstrate that <coref ref="C30" type="IDENT" id="C32">EBNA2</coref> interacts with <coref min="cis-element" id="C33">an <coref ref="C32" type="IDENT" id="C34">EBNA2</coref> responsive cis-element of <coref ref="C11" min="promoter" type="IDENT" id="C35">the <coref ref="C20" type="IDENT" id="C36">TP1</coref> promoter</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9746760">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9746760</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A novel mutation in the coding sequence of the FY*B allele of the Duffy chemokine receptor gene is associated with an altered erythrocyte phenotype.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The Duffy blood group system is of clinical and biological significance.</sentence>
+<sentence id="S3">Antibodies to Duffy antigens are responsible for some cases of transfusion incompatibility and newborn hemolytic disease.</sentence>
+<sentence id="S4"><coref min="protein" id="C1">The Duffy protein</coref> is a receptor for the Plasmodium vivax erythrocyte-binding protein and is also a receptor for various chemokines (thus renamed Duffy Antigen Receptor for Chemokines [DARC]).</sentence>
+<sentence id="S5"><coref min="antigens" id="C2">The two Duffy polymorphic antigens</coref>, <coref ref="C2" type="APPOS" id="C3">Fya and Fyb (coded by the FY*A and FY*B alleles)</coref>, are present on erythrocyte membranes.</sentence>
+<sentence id="S6">The Fy(a-b-) phenotype is the predominant one in populations of black people and also occurs in other populations, including some non-Ashkenazi Jewish groups.</sentence>
+<sentence id="S7">The Fy(a-b-) phenotype has been associated with <coref min="mutation" id="C4">a mutation in the FY*B promoter at the GATA box</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> abolishes the expression of erythrocyte Duffy protein.</sentence>
+<sentence id="S8">We describe here <coref min="mutation" id="C6">a novel mutation</coref>, present in the FY*B coding sequence (271C --&gt; T), <coref ref="C6" type="RELAT" id="C7">that</coref> is associated with some Fy(b-) phenotypes among non-Ashkenazi Jews and among Brazilian blacks.</sentence>
+<sentence id="S9">The mutation is present in <coref min="individuals" id="C8">Fy(b-) individuals</coref>, <coref ref="C8" type="RELAT" id="C9">who</coref> have wild-type FY*B GATA and carry the previously described 304G --&gt; A substitution.</sentence>
+<sentence id="S10">The 271C --&gt; T and 304G --&gt; A can be identified by restriction enzyme-generated restriction fragment length polymorphisms.</sentence>
+<sentence id="S11">The 271C --&gt; T substitution represents <coref min="change" id="C10">a considerable change in chemical nature (Arg91 --&gt; Cys)</coref>, <coref ref="C10" type="PRON" id="C11">one</coref> <coref ref="C10" type="RELAT" id="C12">which</coref> may affect the antigenic determinants of <coref ref="C1" type="IDENT" id="C13">DARC</coref>, and thus be of clinical significance.</sentence>
+<sentence id="S12">The mutation may have implications for some physiological roles of <coref ref="C13" type="IDENT" id="C14">DARC</coref> and be of interest in malaria research and in studies of population genetics.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

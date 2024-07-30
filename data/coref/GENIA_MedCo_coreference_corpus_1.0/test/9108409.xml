@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9108409">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9108409</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Two distinct pathways of interleukin-5 synthesis in allergen-specific human T-cell clones are suppressed by <coref id="C1">glucocorticoids</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">Glucocorticoids (GC)</coref> have long been used as the most effective agents for the treatment of allergic diseases accompanied by eosinophilia such as chronic asthma and atopic dermatitis.</sentence>
+<sentence id="S3">The development of chronic eosinophilic inflammation is dependent on <coref id="C3">interleukin-5 (IL-5)</coref>, <coref ref="C3" min="factor" type="APPOS" id="C4">a selective eosinophil-activating factor</coref>, produced by helper T cells.</sentence>
+<sentence id="S4">To delineate the regulatory mechanisms of human IL-5 synthesis, we established <coref min="clones" id="C5">allergen-specific CD4+ T-cell clones from asthmatic patients</coref>.</sentence>
+<sentence id="S5"><coref ref="C2" type="IDENT" id="C6">GC</coref> efficiently suppressed IL-5 synthesis of <coref ref="C5" min="clones" type="IDENT" id="C7">T-cell clones</coref> activated via either T-cell receptor (TCR) or IL-2 receptor (IL-2R).</sentence>
+<sentence id="S6">Induction of IL-5 mRNA upon <coref min="stimulation" id="C8">TCR and IL-2R stimulation</coref> was totally inhibited by <coref id="C9">dexamethasone</coref>.</sentence>
+<sentence id="S7">Human IL-5 promoter/enhancer-luciferase gene construct transfected to <coref ref="C7" min="clones" type="IDENT" id="C10">T-cell clones</coref> was transcribed on <coref ref="C8" min="stimulation" type="IDENT" id="C11">either TCR or IL-2R stimulation</coref> and was clearly downregulated by <coref ref="C9" type="IDENT" id="C12">dexamethasone</coref>, indicating that the approximately 500-bp human IL-5 gene segment located 5' upstream of the coding region contains activation-inducible enhancer elements responsible for the regulation by <coref ref="C6" type="IDENT" id="C13">GC</coref>.</sentence>
+<sentence id="S8">Electrophoretic mobility shift assay analysis suggested that AP-1 and <coref id="C14">NF-kappaB</coref> are among the possible targets of GC actions on TCR-stimulated T cells.</sentence>
+<sentence id="S9">NF-AT and <coref ref="C14" type="IDENT" id="C15">NF-kappaB</coref> were not significantly induced by IL-2 stimulation.</sentence>
+<sentence id="S10">Our results showing that <coref ref="C13" type="IDENT" id="C16">GC</coref> suppressed IL-5 production by human CD4+ T cells activated by <coref ref="C8" min="stimuli" type="IDENT" id="C17">two distinct stimuli</coref>, <coref ref="C17" type="APPOS" id="C18">TCR and IL-2R stimulation</coref>, underscore the efficacy of <coref ref="C16" type="IDENT" id="C19">GC</coref> in the treatment of allergic diseases via suppression of T-cell IL-5 synthesis.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

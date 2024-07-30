@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9766653">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9766653</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="proteins" id="C1">Tumor suppressor proteins</coref> as regulators of <coref min="differentiation" id="C2">cell differentiation</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="products" type="IDENT" id="C3">The products of the tumor suppressor genes</coref> are considered to function as specific inhibitors of <coref min="growth" id="C4">tumor cell growth</coref>.</sentence>
+<sentence id="S3">In this communication, we present evidence to show that <coref ref="C3" min="proteins" type="IDENT" id="C5">these proteins</coref> inhibit <coref ref="C4" min="proliferation" type="IDENT" id="C6">tumor cell proliferation</coref> by participating in the activation of <coref ref="C2" min="differentiation" type="IDENT" id="C7">tumor cell differentiation</coref>.</sentence>
+<sentence id="S4">The ML-1 human myeloblastic leukemia cells used in this study proliferate when treated with insulin-like growth factor I and transferrin but differentiate to monocytes when exposed to <coref id="C8">tumor necrosis factor alpha or transforming growth factor beta1</coref>, or to macrophage-like cells when treated with <coref ref="C8" min="cytokines" type="IDENT" id="C9">both these cytokines</coref>.</sentence>
+<sentence id="S5">Initiation of <coref ref="C6" type="IDENT" id="C10">proliferation</coref> but not of <coref ref="C7" type="IDENT" id="C11">differentiation</coref> was followed by a 20- to 25-fold increase in the nuclear level of <coref id="C12">the DNA polymerase-associated processivity factor PCNA</coref> and of <coref id="C13">the proliferation-specific transcription factor E2F1</coref>.</sentence>
+<sentence id="S6">In contrast, induction of <coref ref="C11" type="IDENT" id="C14">differentiation</coref> but not of <coref ref="C10" type="IDENT" id="C15">proliferation</coref> was followed by a 25- to 30-fold increase in the nuclear level of <coref ref="C5" type="IDENT" id="C16">the tumor suppressor proteins p53 (wild type), pRb, and p130/Rb2</coref> and of <coref id="C17">the p53-dependent cyclin kinase inhibitor p21/Cip1</coref>.</sentence>
+<sentence id="S7">p53 and <coref ref="C17" type="IDENT" id="C18">p21/Cip1</coref>, respectively, inhibit the expression and activation of <coref ref="C12" type="IDENT" id="C19">PCNA</coref>, whereas p130 and pRb, respectively, inhibit the expression and activation of <coref ref="C13" type="IDENT" id="C20">E2F1</coref>.</sentence>
+<sentence id="S8">As a result, G1-S-associated DNA and mRNA synthesis is inhibited, growth uncoupled from <coref ref="C14" type="IDENT" id="C21">differentiation</coref>, and maturation enabled to proceed.</sentence>
+<sentence id="S9">Where this function of <coref ref="C16" min="proteins" type="IDENT" id="C22">the tumor suppressor proteins</coref> is impaired, the capacity for <coref ref="C21" type="IDENT" id="C23">differentiation</coref> is lost, which leads to <coref min="proliferation" id="C24">the sustained proliferation</coref> <coref ref="C24" type="RELAT" id="C25">that</coref> is characteristic of the cancer cell.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

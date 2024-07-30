@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10194020">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10194020</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Evidence for a polyclonal etiology of <coref id="C1">palmar fibromatosis</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">X chromosome inactivation patterns at the androgen receptor locus were evaluated to determine clonality in microdissected lesional tissue and in leukocytes from <coref min="women" id="C2">2 women with Dupuytren's disease</coref>.</sentence>
+<sentence id="S3">The tissue from <coref ref="C2" min="patients" type="IDENT" id="C3">both patients</coref> generated a polyclonal pattern of X chromosome inactivation of the human androgen receptor gene.</sentence>
+<sentence id="S4">This finding supports a polyclonal reactive process as the underlying etiology for <coref ref="C1" type="IDENT" id="C4">palmar fibromatosis</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

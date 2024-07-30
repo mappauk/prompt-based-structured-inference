@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8577772">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8577772</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="t cells" id="C1">In vivo anergized CD4+ T cells</coref> express perturbed AP-1 and NF-kappa B transcription factors.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">Anergy</coref> is a major mechanism to ensure antigen-specific tolerance in T lymphocytes in the adult.</sentence>
+<sentence id="S3">In vivo, <coref ref="C2" type="IDENT" id="C3">anergy</coref> has mainly been studied at the cellular level.</sentence>
+<sentence id="S4">In this study, we used <coref id="C4">the T-cell-activating superantigen staphylococcal enterotoxin A (SEA)</coref> to investigate molecular mechanisms of <coref ref="C3" type="IDENT" id="C5">T-lymphocyte anergy in vivo</coref>.</sentence>
+<sentence id="S5">Injection of <coref ref="C4" type="IDENT" id="C6">SEA</coref> to adult mice activates CD4+ T cells expressing certain T-cell receptor (TCR) variable region beta-chain families and induces strong and rapid production of <coref id="C7">interleukin 2 (IL-2)</coref>.</sentence>
+<sentence id="S6">In contrast, repeated injections of <coref ref="C6" type="IDENT" id="C8">SEA</coref> cause CD4+ T-cell deletion and <coref ref="C3" type="IDENT" id="C9">anergy</coref> in the remaining CD4+ T cells, characterized by reduced expression of <coref ref="C7" type="IDENT" id="C10">IL-2</coref> at mRNA and protein levels.</sentence>
+<sentence id="S7">We analyzed expression of <coref id="C11"><coref id="C12">AP-1</coref>, <coref id="C13">NF-kappa B</coref>, NF-AT, and octamer binding transcription factors</coref>, <coref ref="C11" type="RELAT" id="C14">which</coref> are known to be involved in the regulation of IL-2 gene promoter activity.</sentence>
+<sentence id="S8">Large amounts of <coref ref="C12" type="IDENT" id="C15">AP-1</coref> and <coref ref="C13" type="IDENT" id="C16">NF-kappa B</coref> and significant quantities of NF-AT were induced in <coref ref="C8" type="IDENT" id="C17">SEA-</coref>activated CD4+ spleen T cells, whereas Oct-1 and Oct-2 DNA binding activity was similar in both resting and activated T cells.</sentence>
+<sentence id="S9">In contrast, <coref ref="C1" min="t cells" type="IDENT" id="C18">anergic CD4+ T cells</coref> contained severely reduced levels of <coref ref="C15" type="IDENT" id="C19">AP-1</coref> and Fos/Jun-containing NF-AT complexes but expressed significant amounts of <coref ref="C16" type="IDENT" id="C20">NF-kappa B</coref> and Oct binding proteins after SEA stimulation.</sentence>
+<sentence id="S10">Resolution of the NF-kappa B complex demonstrated predominant expression of p50-p65 heterodimers in activated CD4+ T cells, while anergic cells mainly expressed the transcriptionally inactive p50 homodimer.</sentence>
+<sentence id="S11">These alterations of transcription factors are likely to be responsible for repression of <coref ref="C7" min="il-2" type="IDENT" id="C21">IL-2 in anergic T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9265727">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9265727</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Transcription factors in immune-mediated disease.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">A large amount of detailed information about the intracellular proteins regulating <coref min="activation" id="C1">NF-kappa B activation</coref> and the cellular response to <coref ref="C1" min="activation" type="IDENT" id="C2">NF-kappa B activation</coref> has emerged recently.</sentence>
+<sentence id="S3">Several small molecules, an antisense oligonucleotide, and <coref min="agents" id="C3">gene therapeutic agents</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> inhibit <coref ref="C2" min="activation" type="IDENT" id="C5">NF-kappa b activation</coref> have been described.</sentence>
+<sentence id="S4">Despite this, there are still significant gaps in our understanding of this process and <coref ref="C5" type="PRON" id="C6">its</coref> consequences.</sentence>
+<sentence id="S5">In contrast, the characterization of transcription factors selectively regulating cytokine production by CD4+ T cell subsets is at a very early stage.</sentence>
+<sentence id="S6">Three interacting proteins have recently been shown to contribute to subset-restricted expression of the IL-4 gene.</sentence>
+<sentence id="S7">There are <coref min="elements" id="C7">other elements regulating IL-4 gene expression</coref>, however, and the relative importance of <coref ref="C7" type="PRON" id="C8">these</coref> recently identified proteins has yet to be determined.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8558011">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8558011</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">HIV glycoprotein 120 enhances <coref id="C1">intercellular adhesion molecule-1 gene expression in <coref id="C2">glial cells</coref></coref>.</sentence>
+<sentence id="S2">Involvement of Janus kinase/signal transducer and activator of transcription and protein kinase C signaling pathways.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">It is well established that <coref min="glial cells" id="C3">the two major glial cells in <coref id="C4">the central nervous system (CNS)</coref></coref>, <coref ref="C3" type="IDENT" id="C5">astrocytes and microglia</coref>, are key participants in mediating the neurologic dysfunction associated with HIV infection of <coref ref="C4" type="IDENT" id="C6">the CNS</coref>.</sentence>
+<sentence id="S4">In this study, we investigated the ability of <coref min="glycoprotein" id="C7">the major envelope glycoprotein of HIV</coref>, <coref ref="C7" type="APPOS" id="C8">glycoprotein 120 (gp120)</coref>, to regulate <coref ref="C1" type="IDENT" id="C9">intercellular adhesion molecule-1 (ICAM-1) expression in <coref ref="C2" type="IDENT" id="C10">glial cells</coref></coref>, because ICAM-1 is important in mediating immune responsiveness in <coref ref="C6" type="IDENT" id="C11">the CNS</coref>, facilitating entry of HIV-infected cells into <coref ref="C11" type="IDENT" id="C12">the CNS</coref>, and promoting syncytia formation.</sentence>
+<sentence id="S5">Our results indicate that <coref ref="C8" type="IDENT" id="C13">gp120</coref> enhances <coref ref="C9" type="IDENT" id="C14">ICAM-1 gene expression</coref> in primary rat astrocytes, primary human astrocytes, a human astroglioma cell line CRT, and primary rat microglia.</sentence>
+<sentence id="S6">The signal transduction events involved in <coref ref="C13" type="IDENT" id="C15">gp120-</coref>mediated enhancement of ICAM-1 appear to involve activation of both <coref id="C16">protein kinase C</coref> and <coref id="C17">tyrosine kinase</coref>, because inhibitors of <coref ref="C16" type="IDENT" id="C18">protein kinase C</coref> and <coref ref="C17" type="IDENT" id="C19">tyrosine kinase</coref> abrogate <coref ref="C15" type="IDENT" id="C20"><coref id="C21">gp120-</coref>mediated ICAM-1 expression</coref> in both astrocytes and microglia.</sentence>
+<sentence id="S7">Moreover, <coref ref="C20" type="IDENT" id="C22">gp120</coref> induces tyrosine phosphorylation of signal transducer and activator of transcription (STAT-1 alpha) as well as the Janus kinase (JAK2) in <coref ref="C10" type="IDENT" id="C23">glial cells</coref>.</sentence>
+<sentence id="S8">We also demonstrate that <coref ref="C22" type="IDENT" id="C24"><coref ref="C21" type="IDENT" id="C25">gp120-</coref>mediated ICAM-1 expression</coref> has functional significance, as <coref ref="C25" type="IDENT" id="C26">it</coref> enhances the ability of monocytic cells to bind to <coref ref="C24" type="IDENT" id="C27">gp120-</coref>stimulated human astrocytes in an ICAM-1/beta 2 integrin-dependent fashion.</sentence>
+<sentence id="S9">These results provide new insights into how <coref ref="C27" type="IDENT" id="C28">gp120</coref> can influence the involvement of <coref ref="C23" type="IDENT" id="C29">glial cells</coref> in the pathogenesis of AIDS dementia complex.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

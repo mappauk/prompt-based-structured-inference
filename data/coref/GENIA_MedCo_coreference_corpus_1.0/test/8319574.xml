@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8319574">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8319574</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Differential autoregulation of <coref id="C1">glucocorticoid receptor expression</coref> in human T- and B-cell lines.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Regulation of <coref ref="C1" type="IDENT" id="C2">glucocorticoid receptor (GR) expression</coref> by <coref ref="C2" type="PRON" id="C3">its</coref> cognate ligand was examined in <coref id="C4">the glucocorticoid-sensitive human leukemic T-cell line 6TG1.1</coref> and in <coref id="C5">the human B-cell line IM-9</coref>.</sentence>
+<sentence id="S3">In contrast to the decrease in <coref id="C6">GR mRNA</coref> seen in IM-9 cells after treatment with 1 microM dexamethasone for 16-18 h, treatment of <coref ref="C4" min="cells" type="IDENT" id="C7">6TG1.1 cells</coref> resulted in an 8-fold increase in <coref ref="C6" type="IDENT" id="C8">GR mRNA</coref>, as determined by Northern blot and RNase protection analysis, with a corresponding 3- to 4-fold increase in GR protein.</sentence>
+<sentence id="S4">Half-maximal induction of <coref ref="C8" type="IDENT" id="C9">GR mRNA</coref> and protein in <coref ref="C7" type="IDENT" id="C10">6TG1.1 cells</coref> was observed between 10-100 nM dexamethasone, and inclusion of 1 microM RU 38486 completely blocked the effects of 100 nM dexamethasone, demonstrating that <coref min="autoregulation" id="C11">positive autoregulation of <coref ref="C2" type="IDENT" id="C12">GR expression</coref> in <coref ref="C10" type="IDENT" id="C13">6TG1.1 cells</coref></coref> is a receptor-mediated response.</sentence>
+<sentence id="S5"><coref ref="C11" min="autoregulation" type="OTHER" id="C14">Positive autoregulation of GR expression</coref> was also observed in <coref min="cells" id="C15">glucocorticoid-resistant CEM-C1 cells</coref>, <coref ref="C15" type="RELAT" id="C16">which</coref> contain functional GR, but whose growth is unaffected by glucocorticoids.</sentence>
+<sentence id="S6">Thus, <coref ref="C14" min="autoregulation" type="OTHER" id="C17">positive autoregulation</coref> is neither a consequence nor the sole cause of growth arrest.</sentence>
+<sentence id="S7">The degree of negative autoregulation in <coref ref="C5" type="IDENT" id="C18">IM-9 cells</coref> and <coref ref="C11" min="autoregulation" type="IDENT" id="C19">positive autoregulation in <coref ref="C13" type="IDENT" id="C20">6TG1.1 cells</coref></coref> was unaffected by inhibition of protein synthesis with cycloheximide.</sentence>
+<sentence id="S8">Measurement of GR mRNA turnover in 6TG1.1 cells treated with actinomycin-D revealed <coref min="half-life" id="C21">a half-life of 2.5 h</coref>, <coref ref="C21" type="RELAT" id="C22">which</coref> was unaffected by dexamethasone treatment.</sentence>
+<sentence id="S9">A similar half-life was determined in <coref ref="C18" type="IDENT" id="C23">IM-9 cells</coref> and was also unaffected by steroid treatment.</sentence>
+<sentence id="S10">These results are consistent with the interpretation that glucocorticoid-mediated autoregulation of <coref ref="C2" type="IDENT" id="C24">GR expression</coref> is a tissue-specific primary transcriptional response.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

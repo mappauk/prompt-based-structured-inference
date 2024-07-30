@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9765424">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9765424</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">CD4 promoter transactivation by <coref id="C1">human herpesvirus 6</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The observation that <coref ref="C1" type="IDENT" id="C2">human herpesvirus 6 (HHV-6)</coref> can induce CD4 gene transcription and expression in CD4(-) cells was reported several years ago (P.Lusso, A.De Maria, M.Malnati, F.Lori, S.E.DeRocco, M. Baseler, and R.C.Gallo, Nature 349:533-535, 1991) and subsequently confirmed (P.Lusso, M.S.Malnati, A.Garzino-Demo, R.W.Crowley, E. O.Long, and R.C.Gallo, Nature 362:458-462, 1993; G.Furlini, M. Vignoli, E.Ramazzotti, M.C.Re, G.Visani, and M.LaPlaca, Blood 87:4737-4745, 1996).</sentence>
+<sentence id="S3">Our objective was to identify the mechanisms underlying such phenomena.</sentence>
+<sentence id="S4">Using reporter gene constructs driven by <coref min="promoter" id="C3">the CD4 promoter</coref>, we report that <coref ref="C2" type="IDENT" id="C4">HHV-6</coref> can efficiently transactivate such genetic elements.</sentence>
+<sentence id="S5">Activation of <coref ref="C3" min="promoter" type="IDENT" id="C5">the CD4 promoter</coref> occurs in the presence of <coref id="C6">the viral DNA polymerase inhibitor phosphonoformic acid</coref>, <coref ref="C6" type="RELAT" id="C7">which</coref> limits expression to the immediate-early and early classes of viral genes.</sentence>
+<sentence id="S6">Using deletion mutants and specific CD4 promoter mutants, we identified <coref min="site" id="C8">an ATF/CRE binding site located at nucleotides -67 to -60 upstream of <coref min="site" id="C9">the CD4 gene transcription start site</coref> <coref ref="C9" type="RELAT" id="C10">that</coref> is important for HHV-6 transactivation</coref>.</sentence>
+<sentence id="S7"><coref ref="C8" min="site" type="IDENT" id="C11">The ATF/CRE site</coref> is also essential for CD4 promoter activation by <coref id="C12">forskolin</coref>, <coref ref="C12" min="activator" type="APPOS" id="C13">an activator of adenylate cyclase</coref>.</sentence>
+<sentence id="S8">Using electrophoretic mobility shift assays and specific antibodies, we showed that CREB-1 binds specifically to the -79 to -52 region of <coref ref="C5" min="promoter" type="IDENT" id="C14">the CD4 promoter</coref>.</sentence>
+<sentence id="S9">Last, we have identified <coref min="frames" id="C15">two open reading frames (ORFs) of <coref ref="C4" type="IDENT" id="C16">HHV-6</coref></coref>, <coref ref="C15" type="APPOS" id="C17">U86 and U89 from the immediate-early locus A</coref>, <coref ref="C15" type="RELAT" id="C18">that</coref> can transactivate <coref ref="C14" min="promoter" type="IDENT" id="C19">the CD4 promoter</coref> in HeLa cells.</sentence>
+<sentence id="S10">However, transactivation of <coref ref="C19" min="promoter" type="IDENT" id="C20">the CD4 promoter</coref> by <coref ref="C15" type="IDENT" id="C21">ORFs U86 and U89</coref> is independent of the CRE element, suggesting that additional HHV-6 ORFs are likely to contribute to CD4 gene activation.</sentence>
+<sentence id="S11">Taken together, our results will help to understand the complex interactions occurring between <coref ref="C16" type="IDENT" id="C22">HHV-6</coref> and <coref ref="C20" min="promoter" type="IDENT" id="C23">the CD4 promoter</coref> and provide additional information regarding the class of transcription factors involved in the control of CD4 gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

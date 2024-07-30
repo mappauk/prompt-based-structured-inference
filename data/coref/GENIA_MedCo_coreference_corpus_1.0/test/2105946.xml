@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2105946">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2105946</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Transcriptional and <coref min="regulation" id="C1">post-transcriptional regulation of <coref id="C2">c-jun expression</coref> during <coref min="differentiation" id="C3">monocytic differentiation</coref> of human myeloid leukemic cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">AP-1, the polypeptide product of c-jun, recognizes and binds to specific DNA sequences and stimulates transcription of genes responsive to certain growth factors and phorbol esters such as <coref id="C4">12-O-tetradecanoylphorbol-13-acetate (TPA)</coref>.</sentence>
+<sentence id="S3">We studied the effects of <coref ref="C4" type="IDENT" id="C5">TPA</coref> on <coref ref="C1" min="regulation" type="IDENT" id="C6">the regulation of c-jun gene expression in <coref id="C7">HL-60 cells</coref> during <coref ref="C3" min="differentiation" type="IDENT" id="C8">monocytic differentiation</coref></coref>.</sentence>
+<sentence id="S4">Low levels of <coref min="transcripts" id="C9">c-jun transcripts</coref> were detectable in <coref ref="C7" type="IDENT" id="C10">untreated HL-60 leukemic cells</coref>, increased significantly by 6 h, and reached near maximal levels by 24 h of exposure to <coref ref="C5" min="tpa" type="IDENT" id="C11">32 nM TPA</coref>.</sentence>
+<sentence id="S5">Similar kinetics of c-jun induction by <coref ref="C11" type="IDENT" id="C12">TPA</coref> were observed in human U-937 and THP-1 monocytic leukemia cells.</sentence>
+<sentence id="S6">Similar findings were obtained with bryostatin 1 (10 nM), another activator of protein kinase C and inducer of <coref ref="C8" min="differentiation" type="IDENT" id="C13">monocytic differentiation</coref>.</sentence>
+<sentence id="S7">Furthermore, 1,25-dihydroxyvitamin D3 (0.5 microM), a structurally distinct agent which also induces <coref ref="C13" min="differentiation" type="IDENT" id="C14"><coref ref="C10" type="IDENT" id="C15">HL-60</coref> monocytic differentiation</coref>, increased <coref ref="C2" min="expression" type="IDENT" id="C16">c-jun expression</coref>.</sentence>
+<sentence id="S8"><coref min="treatment" id="C17">TPA treatment of <coref ref="C21" min="cells" type="IDENT" id="C18">HL-60 cells</coref></coref> in the presence of cycloheximide was associated with superinduction of <coref ref="C9" min="transcripts" type="IDENT" id="C19">c-jun transcripts</coref>.</sentence>
+<sentence id="S9">Run-on analysis demonstrated detectable levels of <coref min="transcription" id="C20">c-jun gene transcription</coref> in <coref ref="C15" min="cells" type="IDENT" id="C21">untreated HL-60 cells</coref>, and that exposure to <coref ref="C12" type="IDENT" id="C22">TPA</coref> increases <coref id="C23">this rate</coref> 3.3-fold.</sentence>
+<sentence id="S10"><coref ref="C17" type="IDENT" id="C24">Treatment of <coref ref="C21" min="cells" type="IDENT" id="C25">HL-60 cells</coref></coref> with both <coref ref="C22" type="IDENT" id="C26">TPA</coref> and cycloheximide had no effect on the <coref ref="C23" type="IDENT" id="C27">rates of <coref ref="C20" min="transcription" type="IDENT" id="C28">c-jun transcription</coref></coref>.</sentence>
+<sentence id="S11">The half-life of c-jun RNA as determined by treating <coref ref="C25" min="cells" type="IDENT" id="C29">HL-60 cells</coref> with <coref ref="C26" type="IDENT" id="C30">TPA</coref> and <coref id="C31">actinomycin D</coref> was 30 min.</sentence>
+<sentence id="S12">In contrast, the half-life of c-jun RNA in TPA-treated HL-60 cells exposed to cycloheximide and <coref ref="C31" type="IDENT" id="C32">actinomycin D</coref> was greater than 2 h.</sentence>
+<sentence id="S13">These findings suggested that the increase in c-jun RNA observed during <coref ref="C14" min="differentiation" type="IDENT" id="C33">TPA-induced monocytic differentiation</coref> is mediated by both transcriptional and post-transcriptional mechanisms.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

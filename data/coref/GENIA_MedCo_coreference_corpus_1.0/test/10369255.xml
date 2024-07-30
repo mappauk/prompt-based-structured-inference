@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10369255">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10369255</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">A polymorphism</coref> <coref ref="C1" type="RELAT" id="C2">that</coref> affects OCT-1 binding to <coref min="region" id="C3">the TNF promoter region</coref> is associated with severe malaria [see comments]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Genetic variation in cytokine promoter regions is postulated to influence susceptibility to infection, but <coref min="mechanisms" id="C4">the molecular mechanisms</coref> by <coref ref="C4" type="RELAT" id="C5">which</coref> such polymorphisms might affect gene regulation are unknown.</sentence>
+<sentence id="S3">Through systematic DNA footprinting of <coref ref="C3" min="region" type="IDENT" id="C6">the TNF (encoding tumour necrosis factor, TNF) promoter region</coref>, we have identified <coref min="polymorphism" id="C7">a single nucleotide polymorphism (SNP)</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> causes the helix-turn-helix transcription factor OCT-1 to bind to a novel region of complex protein-DNA interactions and alters gene expression in human monocytes.</sentence>
+<sentence id="S4">The OCT-1-binding genotype, found in approximately 5% of Africans, is associated with fourfold increased susceptibility to cerebral malaria in large case-control studies of West African and East African populations, after correction for other known TNF polymorphisms and linked HLA alleles.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

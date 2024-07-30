@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8814256">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8814256</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Severe combined immunodeficiency due to defective binding of <coref id="C21">the nuclear factor of activated T cells</coref> in <coref min="t lymphocytes" id="C16">T lymphocytes of <coref min="siblings" id="C15">two male siblings</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Peripheral blood lymphocytes (PBL) and <coref ref="C16" min="cell lines" type="IDENT" id="C3">alloreactive T cell lines of <coref ref="C15" min="infants" type="IDENT" id="C1">two male infants born to <coref min="parents" id="C13">consanguinous parents</coref></coref></coref> and presenting with severe combined immunodeficiency (SCID) showed a pronounced deficiency in T cell activation.</sentence>
+<sentence id="S3">Although phenotypically normal, the proliferative response of <coref ref="C1" type="IDENT" id="C2"><coref ref="C3" min="t cells" type="IDENT" id="C4">the childrens'</coref> T cells</coref> was strongly reduced but could be improved by the addition of <coref id="C5">interleukin-2 (IL-2)</coref>.</sentence>
+<sentence id="S4">Furthermore <coref ref="C2" type="IDENT" id="C6"><coref ref="C4" min="t cells" type="IDENT" id="C7">both childrens'</coref> T cells</coref> were unable to produce the cytokines <coref ref="C5" type="IDENT" id="C8">IL-2</coref>, <coref id="C11">interferon-gamma (IFN-gamma)</coref>, IL-4 and tumor necrosis factor-alpha (TNF-alpha).</sentence>
+<sentence id="S5">This multiple cytokine production deficiency could not be restored by <coref ref="C8" type="IDENT" id="C9">IL-2</coref> or co-stimulatory signals provided by antigen-presenting cells (APC).</sentence>
+<sentence id="S6">Moreover, mRNA for <coref ref="C9" type="IDENT" id="C10">IL-2</coref> and <coref ref="C11" type="IDENT" id="C12">IFN-gamma</coref> could not be detected.</sentence>
+<sentence id="S7">In contrast, expression of the activation-dependent cell surface markers CD25 and CD69 was within normal limits.</sentence>
+<sentence id="S8">To determine whether the functional defect of <coref ref="C13" type="IDENT" id="C14">the patients'</coref> T cells was due to the absence or abnormal binding of transcription factors involved in cytokine gene expression, electrophoretic mobility shift assays were used to examine the DNA binding of <coref id="C17"><coref id="C33">AP-1</coref>, <coref id="C18">Oct</coref>, <coref id="C19">CREB</coref>, <coref id="C28">SP1</coref>, <coref id="C20">NF-kappa B</coref> and <coref ref="C21" type="IDENT" id="C22">the nuclear factor of activated T cells (NF-AT)</coref></coref> to <coref ref="C33" type="PRON" id="C34">their</coref> respective response elements in the promoter of the <coref ref="C10" type="IDENT" id="C23">IL-2 gene</coref>.</sentence>
+<sentence id="S9">Whereas <coref ref="C17" type="IDENT" id="C24">AP-1</coref>, <coref ref="C20" type="IDENT" id="C25">NF-kappa B</coref>, <coref ref="C18" type="IDENT" id="C26">Oct</coref>, <coref ref="C19" type="IDENT" id="C27">CREB</coref> and <coref ref="C28" type="IDENT" id="C29">SP1</coref> displayed normal binding activities in nuclear extracts, the binding of <coref ref="C22" type="IDENT" id="C30">NF-AT</coref> to <coref ref="C30" type="PRON" id="C31">its</coref> IL-2 promoter response element was barely detectable both before and after T cell stimulation.</sentence>
+<sentence id="S10">Our results strongly suggest that this NF-AT/DNA binding defect is responsible for the multiple cytokine deficiency and the SCID phenotype observed in <coref ref="C6" min="brothers" type="IDENT" id="C32">the two infant brothers</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

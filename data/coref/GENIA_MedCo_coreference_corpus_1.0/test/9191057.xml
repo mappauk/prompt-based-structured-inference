@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9191057">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9191057</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Relief of cyclin A gene transcriptional inhibition during activation of <coref min="lymphocytes" id="C1">human primary T lymphocytes</coref> via <coref min="molecules" id="C2">CD2 and CD28 adhesion molecules</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Cyclin A transcription is cell cycle regulated and induced by cell proliferative signals.</sentence>
+<sentence id="S3">To understand the mechanisms underlined in this regulation in normal human cells, we have analysed in vivo protein-DNA interactions at the Cyclin A locus in <coref ref="C1" min="lymphocytes" type="IDENT" id="C3">primary T lymphocytes</coref>.</sentence>
+<sentence id="S4">Stimulation of purified T lymphocytes by a combination of monoclonal antibodies directed at <coref ref="C2" min="molecules" type="IDENT" id="C4">CD2 and CD28 adhesion molecules</coref> gives rise to a long lasting proliferation in the absence of accessory cells.</sentence>
+<sentence id="S5">Cyclin A was observed after 4 days of costimulation with <coref id="C5">anti CD2 + CD28</coref> whereas stimulation by <coref id="C6"><coref type="IDENT" id="C7">anti CD2</coref> or <coref type="IDENT" id="C8">anti CD28</coref> alone</coref> was not effective.</sentence>
+<sentence id="S6">In vivo genomic DMS footprinting revealed upstream of the major transcription initiation sites, the presence of <coref min="sites" id="C9">at least three protein binding sites</coref>, <coref id="C10"><coref ref="C9" min="two" type="IDENT" id="C11"><coref id="C12">two</coref> of <coref ref="C12" type="RELAT" id="C13">which</coref></coref> were constitutively occupied</coref>.</sentence>
+<sentence id="S7"><coref ref="C10" type="PRON" id="C14">They</coref> bind in vitro respectively ATF-1 and NF-Y proteins.</sentence>
+<sentence id="S8"><coref ref="C9" min="site" type="IDENT" id="C15">The third site</coref> was occupied in <coref min="cells" id="C16">quiescent cells</coref> or in cells stimulated by <coref ref="C6" type="IDENT" id="C17"><coref ref="C7" type="IDENT" id="C18">anti CD2</coref> or <coref ref="C8" type="IDENT" id="C19">anti CD28</coref> alone</coref>.</sentence>
+<sentence id="S9"><coref min="combination" id="C20">The mitogenic combination of <coref ref="C5" type="IDENT" id="C21">anti CD2 + anti CD28</coref></coref> released the footprint as cells were committed to proliferation.</sentence>
+<sentence id="S10">Consistent with theses results, nuclear extracts prepared from <coref ref="C16" min="cells" type="IDENT" id="C22">quiescent cells</coref> formed a specific complex with <coref ref="C20" min="element" type="IDENT" id="C23">this element</coref>, whereas extracts prepared from cells treated with <coref ref="C21" type="IDENT" id="C24">anti CD2 + anti CD28</coref> failed to do so after cells entered a proliferative state.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

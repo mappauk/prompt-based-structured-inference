@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8896456">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8896456</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">An IL-2 response element in <coref min="promoter" id="C7">the human IL-2 receptor alpha chain promoter</coref> is <coref min="element" id="C1">a composite element</coref> <coref ref="C1" type="RELAT" id="C2">that</coref> binds <coref id="C27">Stat5</coref>, <coref id="C28">Elf-1</coref>, <coref id="C29">HMG-I(Y)</coref> and a GATA family protein.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Expression of <coref min="gene" id="C3">the human interleukin-2 (IL-2) receptor alpha chain gene</coref> is potently upregulated by <coref min="ligand" id="C4"><coref ref="C3" type="PRON" id="C5">its</coref> own ligand</coref>, <coref ref="C4" type="APPOS" id="C6">IL-2</coref>.</sentence>
+<sentence id="S3">In this study, we characterize <coref min="element" id="C8">an essential upstream IL-2 response element</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> contains both consensus and non-consensus GAS motifs, <coref id="C12">two putative Ets binding sites (EBS)</coref>, <coref ref="C12" type="PART-WHOLE" id="C14">one of <coref ref="C12" type="RELAT" id="C13">which</coref></coref> overlaps <coref min="motif" id="C21">the consensus GAS motif</coref>, and <coref min="motif" id="C10">a GATA motif</coref>, <coref ref="C10" type="RELAT" id="C11">which</coref> overlaps the non-consensus GAS motif.</sentence>
+<sentence id="S4">We demonstrate that although <coref min="components" id="C18">the individual components of <coref ref="C8" type="IDENT" id="C15">this element</coref></coref> do not respond to <coref ref="C6" type="IDENT" id="C16">IL-2</coref>, together <coref ref="C18" type="PRON" id="C17">they</coref> form a composite element capable of conferring IL-2 responsiveness to a heterologous promoter.</sentence>
+<sentence id="S5">Multiple factors including <coref ref="C27" type="IDENT" id="C30">Stat5</coref>, <coref ref="C28" type="IDENT" id="C31">Elf-1</coref>, <coref ref="C29" type="IDENT" id="C32">HMG-I(Y)</coref> and GATA family proteins bind to <coref ref="C8" min="element" type="IDENT" id="C19">the IL-2 response element</coref> and mutation of any one of these binding sites diminishes the activity of <coref ref="C19" type="IDENT" id="C20">this element</coref>.</sentence>
+<sentence id="S6">An unidentified Ets family protein binds to the EBS overlapping <coref ref="C21" min="motif" type="IDENT" id="C22">the consensus GAS motif</coref> and appears to negatively regulate <coref ref="C7" min="promoter" type="IDENT" id="C23">the human IL-2R alpha promoter</coref>.</sentence>
+<sentence id="S7">Thus, <coref ref="C16" type="IDENT" id="C24">IL-2-</coref>induced IL-2R alpha promoter activity requires <coref min="element" id="C25">a complex upstream element</coref>, <coref ref="C25" type="RELAT" id="C26">which</coref> appears to contain binding sites for both positive and negative regulatory factors.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

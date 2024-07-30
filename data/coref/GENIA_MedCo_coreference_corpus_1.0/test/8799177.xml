@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8799177">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8799177</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="latency" id="C12">Epstein-Barr viral latency</coref> is disrupted by <coref ref="C10" min="protein" type="IDENT" id="C6">the immediate-early BRLF1 protein</coref> through a cell-specific mechanism.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">Epstein-Barr virus (EBV)</coref>, <coref ref="C1" type="APPOS" id="C2">the causative agent of infectious mononucleosis</coref>, is a human herpesvirus associated with epithelial cell malignancies (nasopharyngeal carcinoma) as well as B-cell malignancies.</sentence>
+<sentence id="S3">Understanding how <coref min="latency" id="C7">viral latency</coref> is disrupted is a central issue in herpesvirus biology.</sentence>
+<sentence id="S4">Epithelial cells are the major site of lytic EBV replication within the human host, and viral reactivation occurs in <coref ref="C1" type="IDENT" id="C3">EBV-</coref>associated nasopharyngeal carcinomas.</sentence>
+<sentence id="S5">It is known that expression of <coref min="protein" id="C4">a single viral immediate-early protein</coref>, <coref ref="C4" type="APPOS" id="C5">BZLF1</coref>, is sufficient to initiate the switch from latent to lytic infection in B cells.</sentence>
+<sentence id="S6">Cellular regulation of BZLF1 transcription is therefore thought to play a key role in regulating the stringency of <coref ref="C7" min="latency" type="IDENT" id="C8">viral latency</coref>.</sentence>
+<sentence id="S7">Here we show that, unexpectedly, expression of <coref min="protein" id="C9">another viral immediate-early protein</coref>, <coref ref="C9" type="APPOS" id="C10">BRLF1</coref>, can disrupt <coref ref="C8" min="latency" type="IDENT" id="C11">viral latency</coref> in an epithelial cell-specific fashion.</sentence>
+<sentence id="S8">Therefore, the mechanisms leading to disruption of <coref ref="C12" min="latency" type="IDENT" id="C13">EBV latency</coref> appear to be cell-type specific.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

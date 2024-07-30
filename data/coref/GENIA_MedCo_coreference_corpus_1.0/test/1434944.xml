@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1434944">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1434944</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="expression" id="C1">Expression of <coref id="C2">c-fos</coref>, <coref id="C3">c-jun</coref> and <coref id="C4">jun B</coref></coref> in <coref id="C5">peripheral blood lymphocytes</coref> from <coref min="adults" id="C6">young and elderly adults</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="expression" type="IDENT" id="C7">The expression of <coref ref="C2" type="IDENT" id="C8">c-fos</coref>, <coref ref="C3" type="IDENT" id="C9">c-jun</coref> and <coref ref="C4" type="IDENT" id="C10">jun B</coref> proto-oncogenes</coref> was studied in <coref ref="C5" min="peripheral blood lymphocytes" type="OTHER" id="C11">phytohemagglutinin (PHA) activated peripheral blood lymphocytes (PBL)</coref> from <coref ref="C6" min="humans" type="IDENT" id="C12">young and aged humans</coref>.</sentence>
+<sentence id="S3">Specific mRNAs for <coref ref="C8" type="IDENT" id="C13">c-fos</coref> and <coref ref="C9" type="IDENT" id="C14">c-jun</coref> were detectable within 30 min after cell activation and reached maximal levels within 2 h.</sentence>
+<sentence id="S4"><coref min="mRNAs" id="C15">Both <coref ref="C13" type="IDENT" id="C16">c-fos</coref> and <coref ref="C10" type="IDENT" id="C17">jun B</coref> mRNAs</coref> decreased to pre-activation levels within 6 h, while <coref id="C18"><coref ref="C14" type="IDENT" id="C19">c-jun</coref> mRNA</coref> remained elevated.</sentence>
+<sentence id="S5">In <coref ref="C11" min="PBL" type="IDENT" id="C20">PHA-activated PBL</coref>, no age-related differences were observed in <coref ref="C15" min="mRNA expression" type="OTHER" id="C21"><coref ref="C16" type="IDENT" id="C22">c-fos</coref> or <coref ref="C17" type="IDENT" id="C23">jun B</coref> mRNA expression</coref>.</sentence>
+<sentence id="S6">However, <coref ref="C18" type="IDENT" id="C24"><coref ref="C19" type="IDENT" id="C25">c-jun</coref> mRNA</coref> levels decreased significantly (1.73 +/- 0.08 vs. 1.16 +/- 0.09 arbitrary units, P &lt; 0.01, young vs. old) in <coref ref="C20" min="PBL" type="OTHER" id="C26">PBL from <coref min="individuals" id="C27">elderly individuals</coref> activated with PHA</coref>.</sentence>
+<sentence id="S7">Because previous work has demonstrated that T cells from <coref ref="C27" min="individuals" type="IDENT" id="C28">elderly individuals</coref> may display normal proliferative responses when activated via the anti-CD2 pathway, <coref id="C29"><coref ref="C25" type="IDENT" id="C30">c-jun</coref> and <coref ref="C23" type="IDENT" id="C31">jun B</coref></coref> mRNA expression was also studied in <coref min="T cells" id="C32">anti-CD2-activated purified T cells</coref>.</sentence>
+<sentence id="S8">No age-related differences were found in the expression of either of <coref ref="C29" min="proto- oncogenes" type="IDENT" id="C33">these two proto-oncogenes</coref> by <coref ref="C32" min="T cells" type="OTHER" id="C34">anti-CD2 activated T cells</coref>.</sentence>
+<sentence id="S9">These results suggest that the decreased IL-2 production and proliferative response displayed by <coref ref="C26" min="PBL" type="IDENT" id="C35">PHA-activated PBL from <coref ref="C35" min="adults" type="IDENT" id="C36">elderly adults</coref></coref> may be related to age-related changes in <coref ref="C24" type="IDENT" id="C37"><coref ref="C30" type="IDENT" id="C38">c-jun</coref> mRNA</coref> expression and in the ratio of c-fos to <coref ref="C37" type="IDENT" id="C39"><coref ref="C38" type="IDENT" id="C40">c-jun</coref> mRNA</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

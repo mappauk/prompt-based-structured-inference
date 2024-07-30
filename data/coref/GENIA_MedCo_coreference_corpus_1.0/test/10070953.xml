@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10070953">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10070953</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">High frequency of germ-line BRCA2 mutations among Hungarian male breast cancer patients without family history.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">To determine the contribution of BRCA1 and BRCA2 mutations to the pathogenesis of <coref min="cancer" id="C1">male breast cancer in <coref id="C2">Hungary</coref>, <coref ref="C2" min="country" type="APPOS" id="C3">the country with the highest male breast cancer mortality rates in continental Europe</coref></coref>, a series of 18 male breast cancer patients and <coref min="patients" id="C4">three patients with gynecomastia</coref> was analyzed for germ-line mutations in both BRCA1 and BRCA2.</sentence>
+<sentence id="S3">Although no germ-line BRCA1 mutation was observed, <coref min="6" id="C5">6 of the 18 male breast cancer cases (33%)</coref> carried truncating mutations in the BRCA2 gene.</sentence>
+<sentence id="S4">Unexpectedly, none of <coref ref="C5" type="PRON" id="C6">them</coref> reported a family history for breast/ovarian cancer.</sentence>
+<sentence id="S5">Four of six truncating mutations were novel, and two mutations were recurrent.</sentence>
+<sentence id="S6"><coref min="patients" id="C7">Four patients (22%)</coref> had a family history of breast/ovarian cancer in at least one first- or second-degree relative; however, no BRCA2 mutation was identified among <coref ref="C7" type="PRON" id="C8">them</coref>.</sentence>
+<sentence id="S7">No mutation was identified in either of the genes in <coref ref="C4" type="IDENT" id="C9">the gynecomastias</coref>.</sentence>
+<sentence id="S8">These results provide evidence for a strong genetic component of <coref ref="C1" min="cancer" type="IDENT" id="C10">male breast cancer in <coref ref="C2" type="IDENT" id="C11">Hungary</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

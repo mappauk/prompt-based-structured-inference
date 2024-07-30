@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9045682">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9045682</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="expression" id="C1">Jak1 expression</coref> is required for mediating <coref min="phosphorylation" id="C2">interleukin-4-induced tyrosine phosphorylation of insulin receptor substrate and Stat6 signaling molecules</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="kinases" id="C3">The Jak1, Jak2, Jak3, and Fes tyrosine kinases</coref> have been demonstrated to undergo tyrosine phosphorylation in response to interleukin (IL)-4 stimulation in different cell systems.</sentence>
+<sentence id="S3">However, it is not clear which, if any, of <coref ref="C3" min="kinases" type="IDENT" id="C4">these kinases</coref> are responsible for initiating IL-4-induced tyrosine phosphorylation of intracellular substrates in vivo.</sentence>
+<sentence id="S4">In the present study, we have utilized <coref min="line" id="C5">a mutant Jak1-deficient HeLa cell line</coref>, <coref ref="C5" type="APPOS" id="C6">E1C3</coref>, and <coref min="counterpart" id="C7"><coref ref="C5" type="PRON" id="C8">its</coref> parental Jak1-expressing counterpart</coref>, <coref ref="C7" type="APPOS" id="C9">1D4</coref>, to analyze the role of Jak1 in mediating IL-4-induced tyrosine phosphorylation events.</sentence>
+<sentence id="S5">IL-4 treatment rapidly induced tyrosine phosphorylation of insulin receptor substrate (IRS)-1 and IRS-2 in <coref ref="C7" type="IDENT" id="C10">1D4</coref> but not in <coref ref="C5" min="cells" type="IDENT" id="C11">E1C3 cells</coref>.</sentence>
+<sentence id="S6">IL-4-mediated tyrosine phosphorylation of Stat6 was pronounced in <coref ref="C10" min="cells" type="IDENT" id="C12">1D4 cells</coref>, while no IL-4-induced Stat6 phosphorylation was detected in <coref ref="C11" min="cells" type="IDENT" id="C13">E1C3 cells</coref>.</sentence>
+<sentence id="S7"><coref id="C14">IL-4</coref> also induced Stat6 DNA binding activity from lysates of <coref ref="C12" type="IDENT" id="C15">1D4</coref> but not <coref ref="C13" min="cells" type="IDENT" id="C16">E1C3 cells</coref> utilizing a radiolabeled immunoglobulin heavy chain germline epsilon promotor sequence (Iepsilon) in an electrophoretic mobility shift assay.</sentence>
+<sentence id="S8">Reconstitution of <coref ref="C1" min="expression" type="IDENT" id="C17">Jak1 expression</coref> in <coref ref="C16" min="cells" type="IDENT" id="C18">E1C3 cells</coref> restored the ability of <coref ref="C14" type="IDENT" id="C19">IL-4</coref> to induce <coref ref="C2" min="phosphorylation" type="IDENT" id="C20">IRS and Stat6 tyrosine phosphorylation</coref>.</sentence>
+<sentence id="S9">These results provide evidence that <coref ref="C17" min="expression" type="IDENT" id="C21">Jak1 expression</coref> is required for mediating tyrosine phosphorylation and activation of crucial molecules involved in IL-4 signal transduction.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

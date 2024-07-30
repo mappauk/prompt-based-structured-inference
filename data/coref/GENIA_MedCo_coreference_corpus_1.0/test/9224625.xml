@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9224625">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9224625</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="role" id="C1">Role of <coref id="C2">ascorbate</coref></coref> in <coref min="activation" id="C3">the activation of <coref id="C4">NF-kappaB</coref> by <coref min="factor-alpha" id="C5">tumour necrosis factor-alpha</coref></coref> in <coref min="cells" id="C6">T-cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="product" id="C7">The first product of ascorbate oxidation</coref>, <coref ref="C7" min="radical" type="APPOS" id="C8">the ascorbate free radical (AFR)</coref>, acts in biological systems mainly as an oxidant, and through <coref ref="C7" type="PRON" id="C9">its</coref> role in the plasma membrane redox system exerts different effects on <coref ref="C6" type="IDENT" id="C10">the cell</coref>.</sentence>
+<sentence id="S3">We have investigated <coref ref="C1" min="role" type="IDENT" id="C11">the role of <coref ref="C2" type="IDENT" id="C12">ascorbate</coref></coref>, <coref ref="C7" type="IDENT" id="C13">AFR</coref> and <coref id="C14">dehydroascorbate (DHA)</coref> in <coref ref="C3" min="activation" type="IDENT" id="C15">the activation of <coref ref="C4" min="transcription factor" type="IDENT" id="C16">the NF-kappaB transcription factor</coref> in <coref ref="C10" min="cells" type="IDENT" id="C17">Jurkat T-cells</coref> stimulated by <coref ref="C5" min="factor-alpha" type="IDENT" id="C18">tumour necrosis factor-alpha (TNF-alpha)</coref></coref>.</sentence>
+<sentence id="S4">Here we show, by electrophoretic mobility shift assays, that <coref ref="C12" type="IDENT" id="C19">ascorbate</coref> increases <coref min="binding" id="C20">the binding of <coref ref="C16" type="IDENT" id="C21">NF-kappaB</coref> to <coref id="C22">DNA</coref></coref> in <coref min="cells" id="C23">TNF-alpha-stimulated Jurkat cells</coref>.</sentence>
+<sentence id="S5">The ability of <coref ref="C19" type="IDENT" id="C24">ascorbate</coref> to enhance cytoplasmic inhibitory IkBalpha protein degradation correlates completely with <coref ref="C24" type="PRON" id="C25">its</coref> capacity to induce <coref ref="C20" min="binding" type="IDENT" id="C26">NF-kappaB binding to <coref ref="C22" type="IDENT" id="C27">DNA</coref></coref> and to potentiate NF-kappaB-mediated transactivation of the HIV-1 long terminal repeat promoter in <coref ref="C23" min="cells" type="IDENT" id="C28">TNF-alpha-stimulated Jurkat cells</coref> but not in cells stimulated with PMA plus ionomycin.</sentence>
+<sentence id="S6"><coref ref="C13" type="IDENT" id="C29">AFR</coref> behaves like <coref ref="C24" type="IDENT" id="C30">ascorbate</coref>, while <coref ref="C14" type="IDENT" id="C31">DHA</coref> and ascorbate phosphate do not affect <coref ref="C15" min="activation" type="IDENT" id="C32">TNF-alpha-mediated NF-kappaB activation</coref>.</sentence>
+<sentence id="S7">These results provide new evidence for a possible relationship between the activation of the electron-transport system at the plasma membrane by <coref ref="C30" type="IDENT" id="C33">ascorbate</coref> or <coref ref="C33" type="PRON" id="C34">its</coref> free radical and redox-dependent gene transcription in <coref ref="C17" min="cells" type="IDENT" id="C35">T-cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

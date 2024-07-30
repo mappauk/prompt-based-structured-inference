@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8910577">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8910577</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Identification and characterization of a leukocyte-specific component of <coref id="C1">the nuclear body</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">The nuclear body (NB)</coref> is <coref id="C3">a cellular organelle</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> is involved in the pathogenesis of acute promyelocytic leukemia and viral infection.</sentence>
+<sentence id="S3"><coref ref="C2" type="IDENT" id="C5">The NB</coref> is also a target of antibodies in the serum of patients with <coref min="disease" id="C6">the autoimmune disease primary biliary cirrhosis</coref>.</sentence>
+<sentence id="S4">In this study, serum from a patient with <coref ref="C6" type="IDENT" id="C7">primary biliary cirrhosis</coref> was used to identify a cDNA encoding <coref min="component" id="C9">a novel component of <coref ref="C5" type="IDENT" id="C8">the NB</coref></coref>, <coref ref="C9" type="APPOS" id="C10">a 140-kDa protein designated Sp140</coref>.</sentence>
+<sentence id="S5">The predicted amino acid sequence of the amino-terminal portion of <coref id="C13">Sp140</coref> was similar to <coref id="C11">Sp100</coref>, <coref ref="C11" min="protein" type="APPOS" id="C12">a previously identified NB protein</coref>.</sentence>
+<sentence id="S6">The carboxyl portion of <coref ref="C13" type="IDENT" id="C15">Sp140</coref> contained <coref id="C16">a zinc-finger domain and a bromodomain</coref>, <coref id="C17"><coref ref="C16" min="motifs" type="APPOS" id="C19">motifs</coref> <coref ref="C17" type="RELAT" id="C18">that</coref> are present in proteins regulating gene transcription</coref>.</sentence>
+<sentence id="S7">High levels of <coref id="C20">Sp140 mRNA</coref> were detected in human spleen and peripheral blood leukocytes, but not other human tissues.</sentence>
+<sentence id="S8">The level of <coref ref="C20" type="IDENT" id="C21">SP140 mRNA</coref> in myeloid precursor cell lines HL60 and NB4 markedly increased in response to chemically induced cellular differentiation.</sentence>
+<sentence id="S9">Immunohistochemical techniques were used to demonstrate that <coref ref="C15" type="IDENT" id="C22">SP140</coref> localized to <coref ref="C5" type="IDENT" id="C23">the NB</coref> in differentiated HL60 and NB4 cells.</sentence>
+<sentence id="S10">The location of <coref ref="C22" type="IDENT" id="C25">Sp140</coref> in <coref ref="C23" type="IDENT" id="C26">the NB</coref>, and expression of <coref ref="C25" type="IDENT" id="C27">this gene</coref> in cells involved in host defense, suggest that <coref ref="C25" type="IDENT" id="C28">Sp140</coref> may be involved in the pathogenesis of acute promyelocytic leukemia and viral infection.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

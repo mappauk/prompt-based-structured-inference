@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8550797">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8550797</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Inhibition of lipopolysaccharide-induced monocyte interleukin-1 receptor antagonist synthesis by <coref id="C1">cortisol</coref>: involvement of <coref min="receptor" id="C2">the mineralocorticoid receptor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">Glucocorticoids</coref>, as a part of <coref ref="C3" type="PRON" id="C4">their</coref> physiological role in the control of inflammatory and immune processes, suppress the expression of interleukin-1 (IL-1) and other cytokines.</sentence>
+<sentence id="S3"><coref id="C5">Human monocyte IL-1 receptor antagonist (IL-1ra) messenger ribonucleic acid (mRNA) expression</coref> and protein secretion are inhibited by dexamethasone.</sentence>
+<sentence id="S4">We have now further studied the regulation of IL-1ra by <coref ref="C1" min="glucocorticoid" type="IDENT" id="C6">the major physiological human glucocorticoid</coref>, <coref ref="C6" type="APPOS" id="C7">cortisol</coref>.</sentence>
+<sentence id="S5">We found that <coref ref="C7" type="IDENT" id="C8">cortisol</coref> incubation induced a decrease in <coref ref="C5" type="IDENT" id="C9">IL-1ra mRNA expression</coref> and a significant inhibition of IL-1ra protein secretion in cell cultures of human peripheral monocytes stimulated with the bacterial endotoxin lipopolysaccharide (LPS).</sentence>
+<sentence id="S6">Oral administration of 276 mumol cortisol to normal subjects also decreased LPS-induced IL-1ra synthesis in cultured monocytes.</sentence>
+<sentence id="S7">By coincubating the monocytes with either the mineralocorticoid antagonist spironolactone or the glucocorticoid receptor antagonist RU 38486, the in vitro cortisol-induced inhibition of <coref type="IDENT" id="C10">LPS-stimulated IL-1ra secretion</coref> was partially reversed.</sentence>
+<sentence id="S8">The mineralocorticoid aldosterone exerted a significant decrease in <coref ref="C10" min="secretion" type="OTHER" id="C11">LPS-induced monocyte IL-1ra secretion in vitro</coref>, <coref ref="C11" type="RELAT" id="C12">which</coref> was blocked by coincubation with spironolactone.</sentence>
+<sentence id="S9">In addition, the expression of <coref ref="C2" min="receptor" type="IDENT" id="C13">mineralocorticoid receptor mRNA in human monocytes</coref> was observed by PCR of reversed transcribed RNA.</sentence>
+<sentence id="S10">Our results further indicate that corticosteroids physiologically control the IL-1/IL-1ra system during inflammatory or immune processes.</sentence>
+<sentence id="S11">Moreover, we provide <coref id="C14">evidence</coref> <coref ref="C14" type="RELAT" id="C15">that</coref>, in addition to a glucocorticoid receptor-mediated effect, <coref ref="C13" min="receptor" type="IDENT" id="C16">the mineralocorticoid receptor</coref> is involved in the inhibition of monocyte IL-1ra secretion by <coref ref="C7" type="IDENT" id="C17">cortisol</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

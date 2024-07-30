@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9144218">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9144218</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="element" id="C1">An enhancer-blocking element between <coref min="segments" id="C2">alpha and delta gene segments within <coref min="locus" id="C3">the human T cell receptor alpha/delta locus</coref></coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" min="segments" type="IDENT" id="C4">T cell receptor (TCR) alpha and delta gene segments</coref> are organized within <coref ref="C3" min="locus" type="IDENT" id="C5">a single genetic locus</coref> but are differentially regulated during T cell development.</sentence>
+<sentence id="S3"><coref ref="C1" min="element" type="IDENT" id="C6">An enhancer-blocking element (BEAD-1, for blocking element alpha/delta 1)</coref> was localized to a 2.0-kb region 3' of TCR delta gene segments and 5' of <coref min="segments" id="C7">TCR alpha joining gene segments</coref> within <coref ref="C5" min="locus" type="IDENT" id="C8">this locus</coref>.</sentence>
+<sentence id="S4"><coref ref="C6" type="IDENT" id="C9">BEAD-1</coref> blocked the ability of <coref id="C10">the TCR delta enhancer (Edelta)</coref> to activate a promoter when located between the two in a chromatin-integrated construct.</sentence>
+<sentence id="S5">We propose that <coref ref="C9" type="IDENT" id="C11">BEAD-1</coref> functions as <coref min="boundary" id="C12">a boundary</coref> <coref ref="C12" type="RELAT" id="C13">that</coref> separates <coref ref="C8" min="locus" type="IDENT" id="C14">the TCR alpha/delta locus</coref> into distinct regulatory domains controlled by <coref ref="C10" type="IDENT" id="C15">Edelta</coref> and the TCR alpha enhancer, and that <coref ref="C11" type="PRON" id="C16">it</coref> prevents <coref ref="C15" type="IDENT" id="C17">Edelta</coref> from opening the chromatin of <coref ref="C7" min="segments" type="IDENT" id="C18">the TCR alpha joining gene segments</coref> for VDJ recombination at an early stage of T cell development.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9796963">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9796963</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Signal transduction abnormalities in T lymphocytes from patients with <coref id="C1">advanced renal carcinoma</coref>: clinical relevance and effects of <coref min="therapy" id="C2">cytokine therapy</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Studies have demonstrated abnormalities of the CD3/T-cell antigen receptor (TCR) and pathways of signal transduction in T lymphocytes from animals and patients with advanced malignancy.</sentence>
+<sentence id="S3">Diminished expression of <coref id="C3"><coref id="C4">TCRzeta</coref> and <coref id="C5">p56(lck)</coref></coref> <coref ref="C3" type="RELAT" id="C6">that</coref> are associated with the TCR and reduced nuclear localization of RelA containing nuclear factor kappaB (NFkappaB) complexes have been noted.</sentence>
+<sentence id="S4">These defects have been described in T cells from patients with malignant melanoma, renal cell carcinoma (RCC), ovarian cancer, and colorectal cancer.</sentence>
+<sentence id="S5">Preliminary observations also indicate possible correlation with clinical variables such as stage in selected instances.</sentence>
+<sentence id="S6">To further characterize altered expression of <coref ref="C4" type="IDENT" id="C7">TCRzeta</coref>, <coref ref="C5" type="IDENT" id="C8">p56(lck)</coref>, and <coref min="activation" id="C9">impaired activation of <coref id="C10">NFkappaB</coref></coref>, <coref min="lymphocytes" id="C11">T lymphocytes</coref> were obtained from <coref min="patients" id="C12">65 patients with RCC</coref>, the majority of <coref ref="C12" type="PRON" id="C13">whom</coref> were receiving combination cytokine therapy [interleukin (IL)-2, IFN alpha-containing regimens] and 37 control individuals.</sentence>
+<sentence id="S7">In <coref min="29" id="C14">29 of <coref ref="C12" min="patients" type="IDENT" id="C15">these patients</coref></coref>, <coref min="levels" id="C16">levels of <coref ref="C3" type="IDENT" id="C17"><coref ref="C7" type="IDENT" id="C18">TCRzeta</coref> and <coref ref="C8" type="IDENT" id="C19">p56(lck)</coref></coref></coref> were determined by Western blots of T-cell lysates and semiquantitated using <coref id="C20">densitometry</coref>.</sentence>
+<sentence id="S8">Relative levels were then correlated with a series of clinical variables including response to therapy, performance status, survival, disease sites, age, and others.</sentence>
+<sentence id="S9">In <coref min="group" id="C21">another group of 28 patients (three individuals from the first group)</coref>, the frequency of <coref min="activation" id="C22">abnormal NFkappaB activation</coref> was studied using electrophoretic mobility shift assays after activation of <coref ref="C11" min="cells" type="IDENT" id="C23">T cells</coref> with phorbol myristate acetate/ionomycin or anti-CD3 monoclonal antibody.</sentence>
+<sentence id="S10">Changes in these signaling molecules during cytokine treatment were also investigated.</sentence>
+<sentence id="S11"><coref ref="C17" type="IDENT" id="C24"><coref ref="C18" type="IDENT" id="C25">TCRzeta</coref> and <coref ref="C19" type="IDENT" id="C26">p56(lck)</coref></coref> were detected in the peripheral blood T cells in 27 of <coref ref="C14" min="patients" type="IDENT" id="C27">29 patients</coref>, and overall, reduced levels were noted visually in 12 of 29 (41%) and 13 of 29 (45%) individuals, respectively.</sentence>
+<sentence id="S12">When levels were semiquantitated using <coref ref="C20" type="IDENT" id="C28">densitometry</coref>, significant decreases of <coref ref="C25" type="IDENT" id="C29">TCRzeta</coref> (P = 0.029) and <coref ref="C26" type="IDENT" id="C30">p56(lck)</coref> (P = 0.029) but not CD3epsilon (P = 0.131), compared with control levels, were found.</sentence>
+<sentence id="S13">In patients treated with IL-2/IFN alpha-based therapy, relative levels of <coref ref="C29" type="IDENT" id="C31">TCRzeta</coref> increased significantly (P = 0.002) on day 15 of cycle one compared with the baseline.</sentence>
+<sentence id="S14">Correlations of <coref ref="C16" min="levels" type="IDENT" id="C32">TCRzeta or p56(lck) levels</coref> with response or disease variables, except for lower TCRzeta levels (P &lt; 0.001) in the presence of bone metastases, were not found.</sentence>
+<sentence id="S15">Abnormal NFkappaB activation after stimulation with phorbol myristate acetate/ionomycin and/or anti-CD3 monoclonal antibody was found in 59% of <coref ref="C21" type="IDENT" id="C33">patients</coref> (17 of 28) and was not accounted for by the advanced age of the study cohort.</sentence>
+<sentence id="S16">Activation of <coref ref="C10" type="IDENT" id="C34">NFkappaB</coref> in <coref min="cells" id="C35">peripheral blood T cells</coref> was inducible during cytokine therapy in <coref min="four" id="C36">four of six individuals</coref> <coref ref="C36" type="RELAT" id="C37">who</coref> displayed impaired NFkappaB activity prior to <coref ref="C2" type="IDENT" id="C38">therapy</coref>.</sentence>
+<sentence id="S17">Moreover, <coref ref="C9" min="activation" type="IDENT" id="C39">impaired activation of <coref ref="C34" type="IDENT" id="C40">NFkappaB</coref></coref> does not appear linked to a reduction of TCRzeta expression, because in five patients, normal TCRzeta levels were present although kappaB binding was not inducible.</sentence>
+<sentence id="S18">In the majority of patients with <coref ref="C1" min="rcc" type="IDENT" id="C41">advanced RCC</coref>, <coref ref="C35" min="cells" type="IDENT" id="C42">peripheral blood T cells</coref> express <coref ref="C24" type="IDENT" id="C43"><coref ref="C31" type="IDENT" id="C44">TCRzeta</coref> and <coref ref="C30" type="IDENT" id="C45">p56(lck)</coref></coref>, and in a subset, reduced levels of these TCRzeta associated molecules are seen that may increase during <coref ref="C38" min="therapy" type="IDENT" id="C46">cytokine-based therapy</coref>.</sentence>
+<sentence id="S19"><coref ref="C22" min="activation" type="IDENT" id="C47">Abnormal activation of <coref ref="C40" type="IDENT" id="C48">NFkappaB</coref></coref> is also present in &gt;50% of patients and may also revert to normal during IL-2/IFN alpha-based treatment.</sentence>
+<sentence id="S20">This alteration in NFkappaB activation occurred in the presence of normal expression of TCRzeta-associated signaling elements.</sentence>
+<sentence id="S21">The clinical significance of these findings remains unclear.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

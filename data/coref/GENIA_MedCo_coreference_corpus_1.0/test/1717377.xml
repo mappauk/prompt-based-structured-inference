@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1717377">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1717377</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">To be or not to be a responder in <coref id="C1">T-cell responses</coref>: ubiquitous oligopeptides in <coref id="C2">all proteins</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Amino acid sequences of <coref ref="C2" min="proteins" type="IDENT" id="C3">all proteins</coref> are essays written in the same language.</sentence>
+<sentence id="S3">Accordingly, the same set of words and phrases (oligopeptides) appear in totally unrelated proteins.</sentence>
+<sentence id="S4"><coref id="C4">The reason</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> only certain individuals of particular major histocompatibility complex (MHC) haplotypes can mount <coref ref="C1" min="responses" type="IDENT" id="C6">T-cell responses</coref> against a given antigen of pathogens is found in <coref id="C7">the fact</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> T-cell receptors are designed to recognize <coref id="C9">18-20 residue-long peptide fragments</coref> sandwiched between two alpha-helices of class I or class II MHC molecules.</sentence>
+<sentence id="S5">At <coref ref="C9" type="IDENT" id="C10">this range of peptide lengths</coref>, most would appear as self, while nonselfness of the remainders are destined to be quite ambiguous, hence creating responders and nonresponders.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7584520">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7584520</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="domains" id="C1">The DNA and steroid binding domains of <coref min="receptor" id="C2">the glucocorticoid receptor</coref></coref> are not altered in mononuclear cells of <coref min="patients" id="C3">treated CLL patients</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The aim of this study was to investigate whether mutations in <coref ref="C2" min="receptor" type="IDENT" id="C4">the glucocorticoid receptor</coref> could account for the increasing unresponsiveness of <coref min="patients" id="C5">patients with chronic lymphatic leukemia (CLL)</coref> to <coref min="chemotherapy" id="C6">combination chemotherapy</coref>.</sentence>
+<sentence id="S3"><coref ref="C4" min="receptor" type="IDENT" id="C7">The receptor</coref> was tested immunocytochemically, in steroid binding assays, and by a mutation screening (denaturing gradient gel electrophoresis) of the receptor-cDNA.</sentence>
+<sentence id="S4">The receptor concentration, as measured by staining and steroid binding test, varied considerably but showed no clear correlation to clinical response.</sentence>
+<sentence id="S5">Using a highly sensitive mutation screening assay of the DNA- and the steroid-binding region, none of <coref ref="C3" min="patients" type="IDENT" id="C8">the treated patients</coref> revealed any mutation, suggesting that <coref ref="C7" min="receptor" type="IDENT" id="C9">the glucocorticoid receptor</coref> in <coref ref="C5" min="patients" type="IDENT" id="C10">the CLL patients</coref> tested is not altered in <coref ref="C1" min="domains" type="IDENT" id="C11">these domains</coref>.</sentence>
+<sentence id="S6">In <coref min="individual" id="C12">one individual</coref> <coref ref="C12" type="RELAT" id="C13">who</coref> had not been treated before analysis a silent mutation was found in one receptor allele.</sentence>
+<sentence id="S7">The results suggest that mechanisms other than altered ligand or DNA binding of <coref ref="C7" min="receptor" type="IDENT" id="C14">the receptor</coref> may be responsible for the lack of response to <coref ref="C6" type="IDENT" id="C15">chemotherapy</coref>.</sentence>
+<sentence id="S8">This conclusion is discussed in relation to the mechanism of corticoid resistance in mouse and human lymphoma cells in culture.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9276471">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9276471</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of transcription factor NF-kappa B by phagocytic stimuli in <coref min="neutrophils" id="C1">human neutrophils</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Phagocytosis represents an important physiological trigger for the inducible expression of several genes in <coref ref="C1" min="neutrophils" type="IDENT" id="C2">human neutrophils</coref>.</sentence>
+<sentence id="S3">Here, we report that a DNA-binding activity primarily consisting of <coref min="heterodimer" id="C3">the classical NF-kappa B heterodimer</coref>, <coref ref="C3" type="APPOS" id="C4">p50/RelA</coref>, is induced in <coref min="neutrophils" id="C5">phagocytosing neutrophils</coref>.</sentence>
+<sentence id="S4">Under these conditions, <coref min="activation" id="C6">NF-kappa B activation</coref> was found to be a rapid and transient response, reaching a maximum by 10-15 min, and returning to near-basal levels by 30 min.</sentence>
+<sentence id="S5">In neutrophils undergoing the phagocytosis of opsonized yeasts, the onset of <coref ref="C6" min="activation" type="IDENT" id="C7">NF-kappa B activation</coref> was paralleled by a decline in immunoreactive I kappa B-alpha protein levels, and the cellular I kappa B-alpha pool was replenished by 30 min, in agreement with our gel shift data.</sentence>
+<sentence id="S6">We conclude that <coref ref="C7" min="activation" type="IDENT" id="C8">NF-kappa B activation</coref> could constitute one of the mechanisms whereby the expression of kappa B-responsive genes is enhanced in <coref ref="C5" min="neutrophils" type="IDENT" id="C9">phagocytosing neutrophils</coref>.</sentence>
+<sentence id="S7">To our knowledge, this represents <coref min="demonstration" id="C10">the first demonstration</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> phagocytic stimuli can induce <coref ref="C8" min="activation" type="IDENT" id="C12">NF-kappa B activation</coref> in <coref ref="C2" min="neutrophils" type="IDENT" id="C13">human neutrophils</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

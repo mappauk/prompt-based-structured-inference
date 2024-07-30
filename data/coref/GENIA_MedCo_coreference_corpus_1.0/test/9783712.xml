@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9783712">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9783712</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Seminoma in a postmenopausal woman with a Y;15 translocation in peripheral blood lymphocytes and a t(Y;15)/45,X Turner mosaic pattern in skin fibroblasts.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We report an unusual case of <coref min="woman" id="C1">a 55 year old Japanese woman with a seminoma but relatively normal menses</coref>.</sentence>
+<sentence id="S3"><coref ref="C1" type="IDENT" id="C2">The patient</coref> was <coref min="female" id="C3">a phenotypic female with late onset menarche (18 years of age)</coref>, <coref ref="C3" type="RELAT" id="C4">who</coref> was amenorrhoeic for the first year, followed by menses of one to three days' slight flow with dysmenorrhoea, but an otherwise normal menstrual history.</sentence>
+<sentence id="S4">A typical seminoma was removed from the left adnexal region and an immature testis was identified separately as an associated right adnexal mass.</sentence>
+<sentence id="S5">Repeated karyotypic studies on peripheral blood lymphocyte cultures showed only <coref id="C5">46,X,-Y,t(Y;15)(q12;p13)</coref>.</sentence>
+<sentence id="S6">Cytogenetic examination of <coref min="brother" id="C6">the patient's younger brother</coref>, <coref ref="C6" type="RELAT" id="C7">who</coref> had fathered three healthy children, showed <coref ref="C5" min="karyotype" type="IDENT" id="C8">an identical karyotype</coref>.</sentence>
+<sentence id="S7">Mosaicism of 46,X,-Y,t(Y;15)(q12;p13)/45,X cell lines was found in skin samples from the patient's elbow and genital regions, although there were no clinical stigmata of Turner syndrome.</sentence>
+<sentence id="S8">An androgen receptor binding assay of cultured genital skin fibroblasts was negative.</sentence>
+<sentence id="S9">Molecular analysis using Southern blot hybridisation, PCR, and direct DNA sequencing showed that neither <coref ref="C2" type="IDENT" id="C9">the patient</coref> nor <coref ref="C6" min="brother" type="IDENT" id="C10"><coref ref="C9" type="PRON" id="C11">her</coref> brother</coref> had a detectable deletion or other abnormalities of Y chromosome sequences, including the SRY (sex determining region of the Y chromosome) gene sequence.</sentence>
+<sentence id="S10">These findings suggest that Turner mosaicism of the 45,X cell line may have contributed to this atypical presentation in <coref ref="C9" min="female" type="IDENT" id="C12">an XY female</coref>, although we cannot exclude abnormalities of other genes related to sex differentiation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

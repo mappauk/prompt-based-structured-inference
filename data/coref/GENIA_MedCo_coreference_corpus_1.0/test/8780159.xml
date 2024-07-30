@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8780159">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8780159</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="absence" id="C34">Absence of <coref id="C13">T-cell- and B-cell-specific transcription factors <coref id="C24">TCF-1</coref>, <coref id="C16">GATA-3</coref>, and <coref id="C21">BSAP</coref></coref> in <coref id="C4">Hodgkin's Reed-Sternberg cells</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Based on the presence of T cell receptor-beta (TcR-beta) gene rearrangements in L428 and HDLM-1 cells, the expression of <coref id="C27">CD2</coref> in HDLM-1 cells, and the presence of immunoglobulin heavy-chain (IgH) gene rearrangement in KM-H2 cells, some researchers have concluded that <coref min="cell lines" id="C1">these long-term cell lines derived from patients with Hodgkin's disease</coref> are lymphoid in nature.</sentence>
+<sentence id="S3">The information obtained from <coref ref="C1" type="IDENT" id="C2">these cell lines</coref> has also been used in arguments for a lymphoid origin of <coref ref="C4" type="IDENT" id="C5">H-RS cells</coref> in tissue despite the frequent absence of lymphoid markers and Ig/TcR gene rearrangements in <coref ref="C2" type="IDENT" id="C3">these cells</coref>.</sentence>
+<sentence id="S4">We questioned whether one can use the limited expression of <coref min="markers" id="C7">lymphoid markers</coref> or the limited gene rearrangement to conclude that <coref ref="C5" type="IDENT" id="C6">H-RS cells</coref> have a lymphoid origin, because <coref ref="C7" type="IDENT" id="C8">these markers</coref> may be aberrant in tumor cells.</sentence>
+<sentence id="S5">In this study, we examined the expression of <coref ref="C13" type="IDENT" id="C12">two T-cell-specific transcription factors (TCF-1 and GATA-3) and one B-cell-specific transcription factor (BSAP)</coref> in cultured H-RS cells by using <coref min="aasay" id="C9">a gel mobility shift assay</coref>.</sentence>
+<sentence id="S6">The sensitivity and specificity of <coref ref="C9" type="IDENT" id="C10">this assay</coref> for determination of cell lineage have been established in a large number of cultured human and murine cell lines.</sentence>
+<sentence id="S7">All three types of <coref ref="C6" type="IDENT" id="C14">H-RS cell lines</coref> were consistently negative for <coref ref="C12" type="IDENT" id="C15"><coref ref="C21" type="IDENT" id="C22">BSAP</coref>, <coref ref="C24" type="IDENT" id="C23">TCF-1</coref>, and <coref ref="C16" type="IDENT" id="C17">GATA-3</coref></coref>.</sentence>
+<sentence id="S8">The absence of <coref ref="C17" type="IDENT" id="C18">GATA-3</coref> was confirmed in <coref ref="C14" type="IDENT" id="C19">H-RS cells</coref> in tissues by an in situ hybridization technique.</sentence>
+<sentence id="S9">Virtually all B-cell lines, with the exception of some myeloma cell lines, are positive for <coref ref="C22" type="IDENT" id="C20">BSAP</coref>, which is the transcription factor for promoters for several B-cell markers, including VpreB1, lambda 5, CD19, and CD20.</sentence>
+<sentence id="S10">All T-cell lines tested were positive for <coref ref="C23" type="IDENT" id="C25">TCF-1</coref> and <coref ref="C17" type="IDENT" id="C26">GATA-3</coref>, which are the transcription factors for promoters for several T-cell-restricted markers, including <coref ref="C27" type="IDENT" id="C28">CD2</coref>, CD3, TcR, and lck.</sentence>
+<sentence id="S11"><coref ref="C34" min="absence" type="IDENT" id="C35">The absence of <coref ref="C20" type="IDENT" id="C30">BSAP</coref>, <coref ref="C25" type="IDENT" id="C31">TCF-1</coref>, and <coref ref="C26" type="IDENT" id="C32">GATA-3</coref></coref> clearly indicates an underlying difference between <coref ref="C19" type="IDENT" id="C33">H-RS cells</coref> and lymphoid cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,24 @@
+GENIA-MedCo coreference corpus version 1.0
+
+- It contains coreference annotation made to the GENIA corpus.
+
+- The GENIA corpus consists of 1,999 PubMed abstracts which were collected
+  using three MeSH terms: Human, Blood Cells, and Transcription Factors.
+
+- The coreference annotation was produced by Information Extraction and Text
+  Mining Group at Institute for Infocomm Research (I2R) through MedCo
+  Annotation Project.
+
+- The format conversion into GENIA format, and minor bug fixes were made by
+  the GENIA team.
+
+
+History
+
+Sep 29, 2010	Initial version (v.1.0) released.
+
+
+References
+
+GENIA project: http://www-tsujii.is.s.u-tokyo.ac.jp/GENIA/
+MedCo Annotation Project: http://nlp.i2r.a-star.edu.sg/medco.html

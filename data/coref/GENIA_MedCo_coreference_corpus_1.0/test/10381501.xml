@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10381501">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10381501</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">GATA-1</coref> and <coref id="C2">erythropoietin</coref> cooperate to promote <coref min="survival" id="C3">erythroid cell survival</coref> by regulating <coref min="expression" id="C4">bcl-xL expression</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C5">The transcription factor GATA-1</coref> is essential for normal erythropoiesis.</sentence>
+<sentence id="S3">By examining in vitro-differentiated embryonic stem cells, we showed previously that in the absence of <coref ref="C5" type="IDENT" id="C6">GATA-1</coref>, committed erythroid precursors fail to complete maturation and instead undergo apoptosis.</sentence>
+<sentence id="S4"><coref id="C7">The mechanisms</coref> by <coref ref="C7" type="RELAT" id="C8">which</coref> <coref ref="C6" type="IDENT" id="C9">GATA-1</coref> controls cell survival are unknown.</sentence>
+<sentence id="S5">Here we report that in erythroid cells, <coref ref="C9" type="IDENT" id="C10">GATA-1</coref> strongly induces <coref ref="C4" min="expression" type="IDENT" id="C11">the expression of <coref id="C12">the anti-apoptotic protein bcl-xL</coref></coref>, but not the related proteins bcl-2 and mcl-1.</sentence>
+<sentence id="S6">Consistent with a role for <coref ref="C12" type="IDENT" id="C13">bcl-xL</coref> in mediating GATA-1-induced erythroid cell survival, in vitro-differentiated bcl-xL-/- embryonic stem cells fail to generate <coref min="cells" id="C14">viable mature definitive erythroid cells</coref>, <coref ref="C14" type="APPOS" id="C15"><coref id="C16">a phenotype</coref> resembling <coref ref="C16" type="PRON" id="C17">that</coref> of GATA-1 gene disruption</coref>.</sentence>
+<sentence id="S7">In addition, we show that <coref ref="C2" type="IDENT" id="C18">erythropoietin</coref>, <coref ref="C18" type="RELAT" id="C19">which</coref> is also required for <coref ref="C3" min="survival" type="IDENT" id="C20">erythroid cell survival</coref>, cooperates with <coref ref="C10" type="IDENT" id="C21">GATA-1</coref> to stimulate bcl-xL gene expression and to maintain erythroid cell viability during terminal maturation.</sentence>
+<sentence id="S8">Together, our data show that <coref ref="C13" type="IDENT" id="C22">bcl-xL</coref> is essential for normal erythroid development and suggest <coref min="hierarchy" id="C23">a regulatory hierarchy</coref> in <coref ref="C23" type="RELAT" id="C24">which</coref> <coref ref="C22" type="IDENT" id="C25">bcl-xL</coref> is a critical downstream effector of <coref ref="C21" type="IDENT" id="C26">GATA-1</coref> and erythropoietin-mediated signals.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

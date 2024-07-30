@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8872606">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8872606</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Soluble factors secreted by <coref min="t-lymphocytes" id="C1">activated T-lymphocytes</coref> modulate <coref min="transcription" id="C6">the transcription of <coref ref="C4" min="tgf-beta 2" id="C5">the immunosuppressive cytokine TGF-beta 2 in <coref id="C8">glial cells</coref></coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Coordination of the immune response to injury or disease in the brain is postulated to involve bi-directional discourse between the immune system and the central nervous system.</sentence>
+<sentence id="S3">This cross communication involves soluble mediators, including various growth factors, cytokines, and neuropeptides.</sentence>
+<sentence id="S4">In this report, we demonstrate that the supernatant from <coref ref="C1" min="t-lymphocytes" type="IDENT" id="C2">activated T-lymphocytes</coref> is able to induce <coref ref="C6" min="transcription" type="IDENT" id="C7">the transcription of <coref min="cytokine" id="C3">a potent cytokine</coref>, <coref ref="C3" min="tgf-beta 2" type="APPOS" id="C4">TGF-beta 2 in <coref ref="C8" type="IDENT" id="C9">glial cells</coref></coref></coref>.</sentence>
+<sentence id="S5">The activating stimulus invokes signaling mechanisms distinct from known kinase or protease pathways.</sentence>
+<sentence id="S6">Activation of <coref ref="C6" min="transcription" type="IDENT" id="C10">TGF-beta 2 transcription</coref> correlates with the loss of binding activity for <coref min="protein" id="C11">an 80 kDA glial labile repressor protein</coref>, <coref ref="C11" type="APPOS" id="C12">GLRP</coref>, to a responsive region within the TFG-beta 2 promoter.</sentence>
+<sentence id="S7">Although <coref ref="C12" type="IDENT" id="C13">GLRP</coref> shares some characteristics with the inducible transcription factor AP-1, <coref ref="C13" type="PRON" id="C14">it</coref> appears to be distinct from known AP-1 family members.</sentence>
+<sentence id="S8">These data along with previous observations demonstrating the potent immunosuppressive activity of <coref ref="C4" type="IDENT" id="C15">TGF-beta 2</coref>, support a model for a feedback mechanism between <coref ref="C2" min="t-lymphocytes" type="IDENT" id="C16">the activated T-lymphocytes</coref> and astrocytes via <coref ref="C15" type="IDENT" id="C17">TGF-beta 2</coref> to regulate the immune response.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

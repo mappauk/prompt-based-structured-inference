@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1327803">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1327803</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Leukotriene B4</coref> transcriptionally activates <coref id="C2">interleukin-6</coref> expression involving <coref id="C3">NK-chi B</coref> and <coref id="C4">NF-IL6</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C5">Leukotriene B4 (LTB4)</coref> is a notable participant in inflammation and chemotaxis.</sentence>
+<sentence id="S3">It is, however, still unclear whether <coref ref="C5" type="IDENT" id="C6">LTB4</coref> acts in this regard directly or indirectly by stimulating the release of chemotactic and inflammatory cytokines.</sentence>
+<sentence id="S4">Here we report that <coref ref="C6" type="IDENT" id="C7">LTB4</coref> induces synthesis of <coref ref="C2" type="IDENT" id="C8">interleukin (IL)-6</coref> by <coref min="monocytes" id="C9">human blood monocytes</coref> through <coref min="transcriptional activation" id="C10">transcriptional activation of the <coref ref="C8" type="IDENT" id="C11">IL-6</coref> gene</coref>.</sentence>
+<sentence id="S5">We furthermore demonstrate that <coref ref="C10" min="process" type="IDENT" id="C12">this process</coref> involves activation of <coref ref="C3" type="IDENT" id="C13">the transcription factor NF-chi B</coref> and, to a lesser extent, of <coref ref="C4" type="IDENT" id="C14">NF-IL6</coref>, while the activity of <coref id="C15">the transcription factor AP-1</coref>, shown to otherwise confer <coref ref="C11" type="IDENT" id="C16">IL-6</coref> inducibility, appeared to be unaffected by <coref ref="C7" type="IDENT" id="C17">LTB4</coref>.</sentence>
+<sentence id="S6">Involvement of <coref ref="C13" type="IDENT" id="C18">NF-chi B</coref> and <coref ref="C14" type="IDENT" id="C19">NF-IL6</coref> in induction of <coref ref="C16" type="IDENT" id="C20">IL-6</coref> transcription by <coref ref="C9" type="OTHER" id="C21">monocytes</coref> was demonstrated using deleted forms of <coref min="promoter" id="C22">the <coref ref="C20" type="IDENT" id="C23">IL-6</coref> promoter</coref>.</sentence>
+<sentence id="S7">Activation of <coref ref="C22" min="promoter" type="IDENT" id="C24">the IL-6 promoter</coref> by <coref ref="C17" type="IDENT" id="C25">LTB4</coref> was not only associated with accumulation of the respective transcripts but resulted in synthesis of functional <coref ref="C23" type="IDENT" id="C26">IL-6</coref> protein as well.</sentence>
+<sentence id="S8">In addition, <coref ref="C25" type="IDENT" id="C27">LTB4</coref> mediated transactivation of a heterologous promoter construct containing the <coref ref="C18" type="IDENT" id="C28">NF-chi B</coref> or the <coref ref="C19" type="IDENT" id="C29">NF-IL6</coref> enhancer, but not the <coref ref="C15" type="IDENT" id="C30">AP-1</coref> enhancer.</sentence>
+<sentence id="S9">The signaling events mediating this effect appeared to involve the release of <coref id="C31">H2O2</coref>, since <coref ref="C27" type="IDENT" id="C32">LTB4</coref> failed to induce <coref ref="C28" type="IDENT" id="C33">NF-chi B</coref> or <coref ref="C29" type="IDENT" id="C34">NF-IL6</coref> in the presence of <coref min="scavenger" id="C35">the scavenger of <coref ref="C31" type="IDENT" id="C36">H2O2</coref></coref>, <coref ref="C35" type="APPOS" id="C37">N-acetyl-L-cysteine</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

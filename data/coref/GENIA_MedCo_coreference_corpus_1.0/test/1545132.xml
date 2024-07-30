@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1545132">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1545132</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activation" id="C1"><coref id="C2">Human T cell</coref> activation</coref> through <coref id="C3">the activation-inducer molecule/CD69</coref> enhances <coref min="activity" id="C4">the activity of <coref min="transcription factor" id="C5">transcription factor AP-1</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The induction of <coref ref="C5" min="transcription factor" type="IDENT" id="C6">the AP-1 transcription factor</coref> has been ascribed to the early events leading to T cell differentiation and activation.</sentence>
+<sentence id="S3">We have studied the regulation of <coref ref="C4" min="activity" type="IDENT" id="C7"><coref ref="C6" type="IDENT" id="C8">AP-1</coref> activity</coref> in <coref ref="C2" min="T lymphocytes" type="IDENT" id="C9">human peripheral blood T lymphocytes</coref> stimulated through <coref ref="C3" min="activation pathway" type="OTHER" id="C10">the activation inducer molecule (AIM)/CD69 activation pathway</coref>.</sentence>
+<sentence id="S4">Phorbol esters are required to induce AIM/CD69 cell-surface expression as well as for triggering the proliferation of <coref ref="C9" type="IDENT" id="C11">T cells</coref> in conjunction with <coref id="C12">anti-AIM mAb</coref>.</sentence>
+<sentence id="S5">Mobility shift assays showed that addition of <coref ref="C12" type="IDENT" id="C13">anti-AIM mAb</coref> to PMA-treated T lymphocytes markedly enhanced <coref ref="C7" min="binding activity" type="IDENT" id="C14">the binding activity of <coref ref="C8" type="IDENT" id="C15">AP-1</coref></coref> to <coref ref="C15" type="PRON" id="C16">its</coref> cognate sequence, the phorbol ester response element.</sentence>
+<sentence id="S6">In contrast, <coref ref="C13" type="IDENT" id="C17">anti-AIM mAb</coref> did not induce any change in the binding activity of <coref id="C18">NF-kappa B</coref>, <coref ref="C18" type="APPOS" id="C19">a transcription factor</coref> <coref ref="C19" type="RELAT" id="C20">whose</coref> activity is also regulated by protein kinase C.</sentence>
+<sentence id="S7">The increase in <coref ref="C14" min="binding activity" type="IDENT" id="C21"><coref ref="C15" type="IDENT" id="C22">AP-1</coref>-binding activity</coref> was accompanied by the marked stimulation of the transcription of <coref id="C23">c-fos</coref> but not <coref ref="C21" type="PRON" id="C24">that</coref> of c-jun.</sentence>
+<sentence id="S8">Blockade of the DNA-binding complexes with an anti-Fos mAb demonstrated a direct participation of <coref ref="C23" type="IDENT" id="C25">c-Fos</coref> in <coref ref="C22" min="complexes" type="IDENT" id="C26">the AP-1 complexes</coref> induced by <coref ref="C17" type="IDENT" id="C27">anti-AIM mAb</coref>.</sentence>
+<sentence id="S9">Most of <coref ref="C21" min="activity" type="IDENT" id="C28">the <coref ref="C26" type="IDENT" id="C29">AP-1</coref> activity</coref> could be eliminated when <coref ref="C27" type="IDENT" id="C30">the anti-AIM mAb</coref> was added to the culture medium in the presence of cycloheximide, suggesting that de novo protein synthesis is crucial for the induction of <coref ref="C28" min="binding activity" type="IDENT" id="C31"><coref ref="C29" type="IDENT" id="C32">AP-1</coref>-binding activity</coref>.</sentence>
+<sentence id="S10">These data provide the evidence that <coref ref="C1" min="activation" type="IDENT" id="C33">activation of <coref ref="C11" min="T cells" type="IDENT" id="C34">human peripheral blood T cells</coref></coref> through <coref ref="C10" min="activation pathway" type="IDENT" id="C35">the AIM activation pathway</coref> regulate <coref ref="C31" min="activity" type="IDENT" id="C36">the activity of <coref ref="C32" type="IDENT" id="C37">AP-1</coref></coref>.</sentence>
+<sentence id="S11">Therefore, <coref ref="C35" type="IDENT" id="C38">this pathway</coref> appears as a crucial step in the initiation of <coref ref="C33" min="activation" type="OTHER" id="C39">early <coref ref="C34" type="IDENT" id="C40">T cell</coref> activation</coref> events.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

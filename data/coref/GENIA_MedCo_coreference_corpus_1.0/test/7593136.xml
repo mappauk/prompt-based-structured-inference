@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7593136">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7593136</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Correlation of <coref min="activity" id="C1">differentiation-inducing activity of <coref id="C2">retinoids</coref></coref> on <coref id="C3">human leukemia cell lines HL-60 and NB4</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" type="IDENT" id="C4">Retinoids</coref>, including all-trans-retinoic acid, its isomers, and fifty synthetic retinoids (retinobenzoic acids), were tested for <coref ref="C1" min="activity" type="IDENT" id="C5">differentiation-inducing activity</coref> on <coref ref="C3" type="IDENT" id="C6">human leukemia cell lines HL-60 and NB4</coref>.</sentence>
+<sentence id="S3">A good linear correlation, with an r value of 0.91, between the ED50 values for <coref ref="C5" min="activity" type="IDENT" id="C7">the differentiation-inducing activity</coref> towards HL-60 cells and <coref ref="C7" type="PRON" id="C8">that</coref> towards NB4 cells was found.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

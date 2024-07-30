@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2280769">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2280769</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Thyroid hormone receptors form distinct nuclear protein-dependent and independent complexes with <coref min="element" id="C1">a thyroid hormone response element</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have examined the binding of <coref id="C2">nuclear proteins</coref> and <coref min="receptors" id="C3">recombinant thyroid hormone receptors (TRs)</coref> to <coref ref="C1" type="IDENT" id="C4">the palindromic thyroid hormone responsive element AGGTCATGACCT (TREp)</coref> using a gel electrophoretic mobility shift assay.</sentence>
+<sentence id="S3">Four specific protein-DNA complexes were detected after incubation of <coref id="C5">nuclear extracts (NE) from <coref id="C6">T3-responsive pituitary (GH3) cells</coref></coref> with <coref ref="C4" type="IDENT" id="C7">a TREp-</coref>containing DNA fragment.</sentence>
+<sentence id="S4">This was compared with the TREp binding of reticulocyte lysate-synthesized TRs.</sentence>
+<sentence id="S5">TR alpha 1 and TR beta 2 each formed <coref ref="C3" type="IDENT" id="C8">a single major TR</coref>:<coref id="C9">TREp complex</coref> <coref ref="C9" type="RELAT" id="C10">which</coref> comigrated with the least retarded complex formed by <coref ref="C5" type="IDENT" id="C11">GH3 NE</coref>, while <coref id="C12">TR beta 1</coref> formed multiple complexes suggesting that <coref ref="C12" type="PRON" id="C13">it</coref> can bind to <coref ref="C7" type="IDENT" id="C14">TREp</coref> as an oligomer.</sentence>
+<sentence id="S6">Interestingly, coincubation of <coref id="C15">35S-TR alpha 1</coref>, <coref ref="C11" type="IDENT" id="C16">GH3 NE</coref>, and unlabeled TREp resulted in not only <coref ref="C15" type="IDENT" id="C17">the 35S-TR</coref>:<coref ref="C9" min="complex" type="IDENT" id="C18">TREp complex</coref>, but in two additional more greatly retarded complexes containing <coref ref="C15" type="IDENT" id="C19">35S-TR alpha 1</coref> and comigrating with those formed by <coref ref="C6" type="IDENT" id="C20">GH3 extract alone</coref>.</sentence>
+<sentence id="S7">Incubation of each of the TRs with NE from <coref id="C21">COS-7 cells</coref>, <coref ref="C21" type="RELAT" id="C22">which</coref> do not possess <coref id="C23">sufficient endogenous TRs</coref> to mediate T3-responses, resulted in formation of a new, more greatly shifted complex.</sentence>
+<sentence id="S8"><coref id="C24">A similar, heat labile activity</coref> <coref ref="C24" type="RELAT" id="C25">which</coref> altered mobility of <coref ref="C23" type="IDENT" id="C26">the TR</coref>:<coref ref="C18" min="complex" type="IDENT" id="C27">TRE complex</coref> was also present in NE from T3-unresponsive JEG-3 cells.</sentence>
+<sentence id="S9">At high concentration of <coref id="C28">NE</coref>, all of the TR bound to <coref ref="C14" type="IDENT" id="C29">TREp</coref> was more greatly retarded than in the absence of <coref ref="C28" type="IDENT" id="C30">NE</coref>.</sentence>
+<sentence id="S10">Truncation of TR alpha 1 at amino acid 210 prevented additional complex formation in the presence of <coref ref="C30" type="IDENT" id="C31">NE</coref> without affecting DNA binding, suggesting that the carboxyl-terminus of <coref ref="C26" type="IDENT" id="C32">the TRs</coref> is essential for interaction with <coref ref="C2" min="proteins" type="IDENT" id="C33">nuclear proteins</coref>.</sentence>
+<sentence id="S11">(ABSTRACT TRUNCATED AT 250 WORDS)</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

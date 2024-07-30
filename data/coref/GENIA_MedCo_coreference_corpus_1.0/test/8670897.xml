@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8670897">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8670897</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Multiple p21ras effector pathways regulate <coref id="C3">nuclear factor of activated T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C3" type="IDENT" id="C1">The transcription factor</coref>, <coref ref="C1" type="APPOS" id="C2">Nuclear Factor of Activated T cells (NFAT)</coref> is a major target for <coref id="C21">p21ras</coref> and calcium signalling pathways in the IL-2 gene and is induced by p21ras signals acting in synergy with <coref min="signals" id="C10">calcium/calcineurin signals</coref>.</sentence>
+<sentence id="S3"><coref min="pathway" id="C4">One p21ras effector pathway</coref> involves <coref id="C7">the MAP kinase ERK-2</coref>, and we have examined <coref ref="C4" type="PRON" id="C5">its</coref> role in NFAT regulation.</sentence>
+<sentence id="S4">Expression of dominant negative MAPKK-1 prevents NFAT induction.</sentence>
+<sentence id="S5">Constitutively active MAPKK-1 fully activates <coref ref="C7" type="IDENT" id="C8">ERK-2</coref> and the transcription factor Elk-1, but does not substitute for <coref min="p21ras" id="C13">activated p21ras</coref> and synergize with <coref ref="C10" min="signals" type="IDENT" id="C11">calcium/calcineurin signals</coref> to induce <coref ref="C2" type="IDENT" id="C9">NFAT</coref>.</sentence>
+<sentence id="S6">Expression of dominant negative N17Rac also prevents TCR and p21ras activation of <coref ref="C9" type="IDENT" id="C12">NFAT</coref>, but without interfering with the ERK-2 pathway.</sentence>
+<sentence id="S7">The transcriptional activity of the NFAT binding site is mediated by a complex comprising a member of the NFAT group and AP-1 family proteins.</sentence>
+<sentence id="S8">The induction of <coref id="C15">AP-1</coref> by <coref ref="C21" type="IDENT" id="C22">p21ras</coref> also requires Rac-1 function.</sentence>
+<sentence id="S9">Activated Rac-1 could mimic <coref ref="C13" min="p21ras" type="IDENT" id="C14">activated p21ras</coref> to induce <coref ref="C15" type="IDENT" id="C16">AP-1</coref> but not to induce <coref ref="C12" type="IDENT" id="C17">NFAT</coref>.</sentence>
+<sentence id="S10">Moreover, the combination of activated MAPKK-1 and Rac-1 could not substitute for <coref ref="C14" min="p21ras" type="IDENT" id="C18">activated p21ras</coref> and synergize with calcium signals to induce <coref ref="C17" type="IDENT" id="C19">NFAT</coref>.</sentence>
+<sentence id="S11">Thus, p21ras regulation of <coref ref="C19" type="IDENT" id="C20">NFAT</coref> in T cells requires the activity of multiple effector pathways including those regulated by MAPKK-1/ERK-2 and Rac-1.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

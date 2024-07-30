@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8695838">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8695838</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Granulocyte-macrophage colony-stimulating factor</coref> preferentially activates the 94-kD STAT5A and an 80-kD STAT5A isoform in <coref min="monocytes" id="C3">human peripheral blood monocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">Granulocyte-macrophage colony-stimulating factor (GM-CSF)</coref> induces immediate effects in <coref ref="C3" type="IDENT" id="C4">monocytes</coref> by activation of the Janus kinase (JAK2) and STAT transcription factor (STAT5) pathway.</sentence>
+<sentence id="S3">Recent studies have identified <coref min="homologues" id="C26">homologues of <coref id="C5">STAT5</coref></coref>, <coref ref="C26" type="PART-WHOLE" id="C12">STAT5A</coref>, and <coref ref="C26" type="PART-WHOLE" id="C13">STAT5B</coref>, as well as lower molecular weight variants of <coref ref="C5" type="IDENT" id="C6">STAT5</coref>.</sentence>
+<sentence id="S4">To define the activation of <coref ref="C26" min="homologues" type="IDENT" id="C27">the STAT5 homologues</coref> and lower molecular weight variant in human monocytes and monocytes differentiated into macrophages by culture in macrophage-CSF (M-CSF), we measured the <coref ref="C2" type="IDENT" id="C10">GM-CSF</coref> induced tyrosine phosphorylation of <coref ref="C12" type="IDENT" id="C11">STAT5A</coref>, <coref ref="C13" type="IDENT" id="C14">STAT5B</coref>, and any lower molecular weight STAT5 isoforms.</sentence>
+<sentence id="S5">Freshly isolated monocytes expressed <coref id="C15">94-kD STAT5A</coref>, 92-kD STAT5B, and an 80-kD STAT5A molecule.</sentence>
+<sentence id="S6">Whereas <coref ref="C15" type="IDENT" id="C16">94-kD STAT5A</coref> was clearly tyrosine phosphorylated and bound to <coref id="C17">the enhancer element</coref>, <coref ref="C17" type="APPOS" id="C18">the gamma response region (GRR)</coref>, of the Fc gamma RI gene, substantially less tyrosine phosphorylated STAT5B bound to the immobilized GRR element.</sentence>
+<sentence id="S7"><coref id="C21">Macrophages</coref> lost <coref ref="C21" type="PRON" id="C20">their</coref> ability to express the 80-kD STAT5A protein, but retained <coref ref="C21" type="PRON" id="C22">their</coref> ability to activate <coref ref="C11" type="IDENT" id="C23">STAT5A</coref>.</sentence>
+<sentence id="S8">STAT5A-STAT5A homodimers and STAT5A-STAT5B heterodimers formed in response to <coref ref="C10" type="IDENT" id="C24">GM-CSF</coref>.</sentence>
+<sentence id="S9">Therefore, activation of STAT5A predominates compared to <coref ref="C14" type="IDENT" id="C25">STAT5B</coref> when assayed by direct immunoprecipitation and by evaluation of bound STATs to immobilized GRR.</sentence>
+<sentence id="S10">Selective activation of <coref ref="C27" min="homologues" type="IDENT" id="C28">STAT5 homologues</coref> in addition to generation of lower molecular isoforms may provide specificity and control to genes expressed in response to cytokines such as <coref ref="C24" type="IDENT" id="C29">GM-CSF</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

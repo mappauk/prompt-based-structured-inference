@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7760814">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7760814</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A <coref id="C8">Myc-</coref>associated zinc finger protein binding site is one of four important functional regions in <coref min="promoter" id="C1">the CD4 promoter</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="promoter" type="IDENT" id="C2">The CD4 promoter</coref> plays an important role in the developmental control of CD4 transcription.</sentence>
+<sentence id="S3">In this report, we show that <coref ref="C2" min="promoter" type="OTHER" id="C3">the minimal CD4 promoter</coref> has <coref min="sites" id="C4">four factor binding sites</coref>, <coref ref="C4" min="each" type="PART-WHOLE" id="C6">each of <coref ref="C4" type="RELAT" id="C5">which</coref></coref> is required for full function.</sentence>
+<sentence id="S4">Using biochemical and mutagenesis analyses, we determined that multiple nuclear factors bind to <coref ref="C4" min="sites" type="IDENT" id="C7">these independent sites</coref>.</sentence>
+<sentence id="S5">We determined that an initiator-like sequence present at the cap site and an Ets consensus sequence are required for full promoter function.</sentence>
+<sentence id="S6">We also demonstrate that the <coref ref="C8" type="IDENT" id="C9">Myc-</coref>associated zinc finger protein (MAZ) appears to be the predominant factor binding to <coref ref="C7" min="one" type="PART-WHOLE" id="C11">one of <coref ref="C7" min="sites" type="IDENT" id="C10">these sites</coref></coref>.</sentence>
+<sentence id="S7"><coref ref="C11" min="site" type="IDENT" id="C12">This last site</coref> closely resembles the ME1a1 G3AG4AG3 motif previously shown to be a critical element in the P2 promoter of the c-myc gene.</sentence>
+<sentence id="S8">We therefore believe that the MAZ transcription factor is also likely to play an important role in the control of developmental expression of the CD4 gene.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

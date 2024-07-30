@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8454114">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8454114</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="FACTOR" id="C1">Transcription factor jun-B</coref> is target of <coref min="T-CELLS" id="C2">autoreactive T-cells in <coref id="C3">IDDM</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Target antigens defined by autoantibodies in <coref ref="C3" type="IDENT" id="C4">IDDM</coref> include insulin, a putative glycolipid that reacts with islet cell antibodies, and a 64,000-M(r) protein recently identified as <coref id="C5">glutamic acid decarboxylase</coref>.</sentence>
+<sentence id="S3">In addition, <coref min="SERA" id="C6">some <coref ref="C4" type="IDENT" id="C7">IDDM</coref> sera</coref> <coref ref="C6" type="RELAT" id="C8">that</coref> contain antibodies to <coref ref="C5" type="IDENT" id="C9">glutamic acid decarboxylase</coref> also coprecipitate a 38,000-M(r) protein from islets.</sentence>
+<sentence id="S4">This study used a high titer anti-38,000-M(r) serum to screen bacteriophage lambda cDNA expression libraries and identified human islet and placental clones encoding <coref ref="C1" min="JUN-B" type="OTHER" id="C10"><coref id="C11">jun-B</coref>, <coref ref="C11" min="PROTEIN" type="APPOS" id="C12">the nuclear transcription protein</coref></coref>, of predicted 38,000 M(r).</sentence>
+<sentence id="S5"><coref ref="C2" min="T-CELLS" type="OTHER" id="C13">Peripheral blood T-cells</coref> exhibited significant proliferation in response to a recombinant fragment of <coref ref="C10" type="OTHER" id="C14">jun-B (amino acids 1-180)</coref> in 12 of 17 (71%) <coref ref="C23" min="SUBJECTS" type="PART-WHOLE" id="C15">recent-onset <coref ref="C7" type="IDENT" id="C16">IDDM</coref> subjects</coref>, 8 of 16 (50%) <coref ref="C23" min="RELATIVES" type="PART-WHOLE" id="C17">ICA-positive first-degree relatives of <coref min="SUBJECTS" id="C18"><coref ref="C16" type="IDENT" id="C19">IDDM</coref> subjects</coref> <coref ref="C18" type="RELAT" id="C20">who</coref> were at risk</coref>, 3 of 12 (25%) <coref ref="C23" min="SUBJECTS" type="PART-WHOLE" id="C21">other autoimmune disease subjects</coref>, and 0 of 10 <coref ref="C23" min="SUBJECTS" type="PART-WHOLE" id="C22">healthy control subjects</coref>.</sentence>
+<sentence id="S6">Proliferation to tetanus toxoid did not differ significantly between <coref id="C23">the groups</coref>.</sentence>
+<sentence id="S7">Responses to <coref ref="C14" type="OTHER" id="C24">jun-B</coref> were not related to age, sex, or human leukocyte antigen status.</sentence>
+<sentence id="S8">Thus, <coref ref="C2" min="T-CELLS" type="OTHER" id="C25">autoreactive T-cells</coref> identify <coref min="ANTIGEN" id="C26">a novel antigen</coref>, <coref ref="C26" type="APPOS" id="C27">p38 <coref ref="C24" type="IDENT" id="C28">jun-B</coref></coref>, in <coref ref="C19" type="IDENT" id="C29">IDDM</coref> and appear to indicate <coref ref="C23" type="OTHER" id="C30">subjects</coref> at risk for the development of clinical disease.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

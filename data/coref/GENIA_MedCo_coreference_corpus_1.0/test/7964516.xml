@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7964516">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7964516</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Functional Myc-Max heterodimer is required for <coref min="apoptosis" id="C1">activation-induced apoptosis</coref> in <coref min="hybridomas" id="C2">T cell hybridomas</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" min="hybridomas" type="IDENT" id="C3">T cell hybridomas</coref> respond to activation signals by undergoing apoptotic cell death, and this is likely to represent comparable events related to tolerance induction in immature and mature T cells in vivo.</sentence>
+<sentence id="S3">Previous studies using antisense oligonucleotides implicated <coref min="protein" id="C4">the c-Myc protein</coref> in the phenomenon of <coref ref="C1" min="apoptosis" type="IDENT" id="C5">activation-induced apoptosis</coref>.</sentence>
+<sentence id="S4">This role for <coref ref="C4" type="IDENT" id="C6">c-Myc</coref> in apoptosis is now confirmed in studies using a dominant negative form of <coref min="partner" id="C7"><coref ref="C6" type="PRON" id="C8">its</coref> heterodimeric binding partner</coref>, <coref ref="C7" type="APPOS" id="C9">Max</coref>, <coref ref="C7" type="RELAT" id="C10">which</coref> we show here inhibits <coref ref="C5" min="apoptosis" type="IDENT" id="C11">activation-induced apoptosis</coref>.</sentence>
+<sentence id="S5">Further, coexpression of a reciprocally mutant Myc protein capable of forming functional heterodimers with <coref ref="C9" min="mutant" type="IDENT" id="C12">the mutant Max</coref> can compensate for the dominant negative activity and restore <coref ref="C11" min="apoptosis" type="IDENT" id="C13">activation-induced apoptosis</coref>.</sentence>
+<sentence id="S6">These results imply that <coref ref="C6" type="IDENT" id="C14">Myc</coref> promotes <coref ref="C13" min="apoptosis" type="IDENT" id="C15">activation-induced apoptosis</coref> by obligatory heterodimerization with <coref ref="C12" type="IDENT" id="C16">Max</coref>, and therefore, by regulating gene transcription.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

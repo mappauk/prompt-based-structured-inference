@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9215298">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9215298</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">gamma-Interferon-induced resistance to <coref id="C1">1,25-(OH)2 D3</coref> in human monocytes and <coref id="C2">macrophages</coref>: a mechanism for <coref min="hypercalcemia" id="C3">the hypercalcemia of <coref min="granulomatoses" id="C4">various granulomatoses</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C3" min="hypercalcemia" type="IDENT" id="C5">The hypercalcemia of <coref ref="C4" min="granulomatoses" type="IDENT" id="C6">various granulomatoses</coref></coref> is caused by <coref min="overproduction" id="C7">endogenous 1,25-dihydroxyvitamin D [1,25-(OH)2D3] overproduction</coref> by disease-activated macrophages.</sentence>
+<sentence id="S3">The inability of <coref ref="C1" type="IDENT" id="C8">1,25(OH)2D3</coref> to suppress <coref ref="C8" type="PRON" id="C9">its</coref> synthesis in <coref ref="C2" type="IDENT" id="C10">macrophages</coref> contrasts with the tight control of <coref ref="C8" type="PRON" id="C11">its</coref> production in <coref min="precursors" id="C12">macrophage precursors</coref>, <coref ref="C12" min="monocytes" type="APPOS" id="C13">peripheral blood monocytes (PBM)</coref>.</sentence>
+<sentence id="S4">We examined whether 1,25(OH)2D3 resistance develops as <coref ref="C12" type="IDENT" id="C14">PBM</coref> differentiate to <coref ref="C10" type="IDENT" id="C15">macrophages</coref> or with <coref min="activation" id="C16">macrophage activation</coref>.</sentence>
+<sentence id="S5"><coref min="macrophages" id="C17">Normal human pulmonary alveolar macrophages (PAM)</coref> are less sensitive to <coref ref="C8" type="IDENT" id="C18">1,25(OH)2D3</coref> than <coref ref="C14" type="IDENT" id="C19">PBM</coref>, despite similar vitamin D receptor content; however, both <coref ref="C19" type="IDENT" id="C20">PBM</coref> and <coref ref="C17" type="IDENT" id="C21">PAM</coref> respond to <coref min="1,25-(oh)2d3" id="C22">exogenous 1,25-(OH)2D3</coref> by inhibiting <coref min="synthesis" id="C23">1,25(OH)2D3 synthesis</coref> and inducing 1,25(OH)2D3 degradation through enhancement of 24-hydroxylase mRNA levels and activity.</sentence>
+<sentence id="S6">The human monocytic cell line THP-1 mimics <coref ref="C21" type="IDENT" id="C24">PAM</coref> in <coref ref="C23" min="synthesis" type="IDENT" id="C25">1,25(OH)2D3 synthesis</coref> and sensitivity to <coref ref="C22" min="1,25(oh)2d3" type="IDENT" id="C26">exogenous 1,25(OH)2D3</coref>.</sentence>
+<sentence id="S7">We utilized <coref min="cells" type="IDENT" id="C27">THP-1 cells</coref> to examine the response to <coref ref="C18" type="IDENT" id="C28">1,25(OH)2D3</coref> with <coref ref="C16" min="activation" type="IDENT" id="C29">macrophage activation</coref>.</sentence>
+<sentence id="S8">Activation of <coref ref="C27" min="cells" type="IDENT" id="C30">THP-1 cells</coref> with <coref id="C31">gamma-interferon (gamma-IFN)</coref> enhances <coref ref="C25" min="synthesis" type="IDENT" id="C32">1,25(OH)2D3 synthesis</coref> 30-fold, blocks 1,25-(OH)2D3 suppression of <coref ref="C28" type="PRON" id="C33">its</coref> synthesis, and reduces by 42.2% 1,25-(OH)2D3 induction of <coref ref="C28" type="PRON" id="C34">its</coref> degradation.</sentence>
+<sentence id="S9">The antagonistic effects of <coref ref="C31" type="IDENT" id="C35">gamma-IFN</coref> are not merely restricted to enzymatic activities.</sentence>
+<sentence id="S10">In <coref ref="C30" min="cells" type="IDENT" id="C36">THP-1 cells</coref> and in <coref ref="C20" min="pbm" type="IDENT" id="C37">normal PBM</coref>, <coref ref="C35" type="IDENT" id="C38">gamma-IFN</coref> inhibits 1,25-(OH)2D3 induction of 24-hydroxylase mRNA levels without reducing mRNA stability, suggesting gamma-IFN inhibition of 1,25(OH)2D3 transactivating function.</sentence>
+<sentence id="S11">These results explain <coref ref="C7" min="overproduction" type="IDENT" id="C39">1,25(OH)2D3 overproduction</coref> in <coref ref="C6" type="IDENT" id="C40">granulomatoses</coref> and demonstrate potent inhibition by <coref ref="C38" type="IDENT" id="C41">gamma-IFN</coref> of 1,25(OH)2D3 action in immune cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

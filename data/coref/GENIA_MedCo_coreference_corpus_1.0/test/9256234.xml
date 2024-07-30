@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9256234">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9256234</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Nuclear levels of NF-kappaB correlate with <coref min="capacity" id="C1">syncytium-forming capacity of <coref min="cells" id="C2">8e51 cells</coref></coref>, expressing a defective HIV virus.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The double NF-kappaB site identified in the LTR of the human immunodeficiency virus-1 (HIV-1) has been demonstrated to be necessary for efficient viral transcription.</sentence>
+<sentence id="S3">In this report we present the characterisation of NF-kappaB subunits engaged in complexes binding to the HIV-1 NF-kappaB site in <coref ref="C2" min="cells" type="IDENT" id="C3">human 8e51 T-cells</coref>, <coref ref="C3" type="RELAT" id="C4">that</coref> harbour a defective HIV-1.</sentence>
+<sentence id="S4">At least four different specific NF-kappaB complexes are present in the nucleus of <coref ref="C3" min="cells" type="IDENT" id="C5">these cells</coref>.</sentence>
+<sentence id="S5">With the use of specific antibodies we have determined the composition of each complex using electrophoretic mobility shift assays.</sentence>
+<sentence id="S6">The results show the presence of several NF-kappaB family members, with the transactivating RelA being engaged in multiple complexes.</sentence>
+<sentence id="S7">The importance of NF-kappaB complexes in viral functions has been established comparing the level of NF-kappaB DNA-binding complexes with syncytia-forming activity of <coref ref="C5" min="cells" type="IDENT" id="C6">8e51 cells</coref>.</sentence>
+<sentence id="S8">In fact, <coref ref="C6" min="cells" type="IDENT" id="C7">8e51 cells</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> had almost lost <coref ref="C1" min="capacity" type="IDENT" id="C9"><coref ref="C7" type="PRON" id="C10">their</coref> syncytia-forming capacity</coref> were found to contain at least 10 times less active NF-kappaB DNA-binding complex than the actively fusing cells.</sentence>
+<sentence id="S9">The correlation is specific as the level of at least three other transcription factors did not change.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

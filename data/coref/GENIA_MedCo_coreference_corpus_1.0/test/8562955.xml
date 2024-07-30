@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8562955">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8562955</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="ligation" id="C1">Fas ligation</coref> induces <coref id="C2">apoptosis</coref> and <coref min="activation" id="C3">Jun kinase activation</coref> independently of <coref id="C4">CD45</coref> and <coref id="C5">Lck</coref> in human T cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Stimulation through the Fas/APO-1 receptor results in <coref ref="C2" type="IDENT" id="C6">apoptosis</coref> through an incompletely characterized signaling pathway.</sentence>
+<sentence id="S3">More is known regarding <coref min="events" id="C7">signal transduction events</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> occur after <coref min="ligation" id="C9">ligation of the T-cell antigen receptor (TCR)</coref>.</sentence>
+<sentence id="S4">It has been shown that <coref ref="C9" min="stimulation" type="IDENT" id="C10">TCR stimulation</coref> requires both <coref ref="C4" type="IDENT" id="C11">the membrane tyrosine phosphatase</coref>, <coref ref="C11" type="APPOS" id="C12">CD45</coref>, and <coref ref="C5" type="IDENT" id="C13">the Src-family kinase</coref>, <coref ref="C13" type="APPOS" id="C14">Lck</coref>, to result in cellular activation.</sentence>
+<sentence id="S5">Although prior studies suggest a role for protein tyrosine kinases and phosphatases in <coref min="signaling" id="C15">Fas signaling</coref>, we report here that <coref ref="C1" min="ligation" type="IDENT" id="C16">Fas ligation</coref> induces <coref ref="C6" type="IDENT" id="C17">apoptosis</coref> in T cells deficient in either <coref ref="C12" type="IDENT" id="C18">CD45</coref> or <coref ref="C14" type="IDENT" id="C19">Lck</coref>.</sentence>
+<sentence id="S6">Further, in normal and <coref ref="C18" type="IDENT" id="C20">CD45-</coref> or <coref ref="C19" type="IDENT" id="C21">Lck-</coref>deficient cell lines, <coref ref="C16" min="stimulation" type="IDENT" id="C22">Fas stimulation</coref> results in <coref ref="C3" min="activation" type="IDENT" id="C23">activation of <coref id="C24">Jun kinase (JNK)</coref></coref>, <coref ref="C24" min="mediator" type="APPOS" id="C25">a proposed mediator of stress activation pathways</coref>.</sentence>
+<sentence id="S7">Previous studies have also demonstrated a role for endogenous ceramide release in Fas-mediated apoptosis.</sentence>
+<sentence id="S8">We show that stimulation with a synthetic ceramide analog results in <coref ref="C23" min="activation" type="IDENT" id="C26">JNK activation</coref> as well as <coref ref="C17" type="IDENT" id="C27">apoptosis</coref>, suggesting ceramide release occurs proximal to <coref ref="C26" min="activation" type="IDENT" id="C28">JNK activation</coref> in <coref ref="C15" min="signaling" type="IDENT" id="C29">Fas signaling</coref>.</sentence>
+<sentence id="S9">Our data suggest that although <coref ref="C20" type="IDENT" id="C30">CD45</coref> and <coref ref="C21" type="IDENT" id="C31">Lck</coref> are not required for <coref ref="C29" type="IDENT" id="C32">Fas signaling</coref>, <coref ref="C28" min="activation" type="IDENT" id="C33">JNK activation</coref> may play an important role transducing <coref min="signals" id="C34">distal signals</coref> <coref ref="C34" type="RELAT" id="C35">that</coref> lead to <coref ref="C27" type="IDENT" id="C36">apoptosis</coref> after <coref ref="C16" min="ligation" type="IDENT" id="C37">Fas ligation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

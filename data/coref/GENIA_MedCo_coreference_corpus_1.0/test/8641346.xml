@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8641346">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8641346</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Interferon-gamma</coref> modulates the <coref id="C2">lipopolysaccharide-</coref>induced expression of <coref id="C3">AP-1</coref> and <coref id="C4">NF-kappa B</coref> at the mRNA and protein level in <coref min="monocytes" id="C5">human monocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C6">Interferon-gamma (IFN-gamma)</coref> modulates the expression of several cytokines by <coref ref="C5" min="monocytes" type="IDENT" id="C7">human monocytes</coref> at the transcriptional level.</sentence>
+<sentence id="S3">In view of these findings, we analyzed the effects of <coref ref="C6" type="IDENT" id="C8">IFN-gamma</coref> on the expression of different transcription factors in <coref ref="C7" min="monocytes" type="OTHER" id="C9">activated human monocytes</coref>.</sentence>
+<sentence id="S4"><coref min="priming" id="C10">Priming of <coref ref="C7" type="IDENT" id="C11">human monocytes</coref> with <coref ref="C8" type="IDENT" id="C12">IFN-gamma</coref></coref> resulted in the down regulation of c-fos and c-jun mRNA in response to stimulation with <coref ref="C2" id="C13">lipopolysaccharide (LPS)</coref> compared to the effects of <coref ref="C13" type="IDENT" id="C14">LPS</coref> alone.</sentence>
+<sentence id="S5">Not only was this effect observed at the mRNA level, but activator protein-1 (AP-1) DNA binding capacity was affected as well, A strong reduction was observed in the <coref ref="C14" type="IDENT" id="C15">LPS-</coref>induced DNA-binding activity of <coref ref="C3" type="IDENT" id="C16">AP-1</coref> in the presence of <coref ref="C12" type="IDENT" id="C17">IFN-gamma</coref>.</sentence>
+<sentence id="S6"><coref ref="C15" type="IDENT" id="C18">LPS-</coref>stimulated monocytes showed an increased expression of p105 mRNA, the precursor of the p50 subunit of <coref ref="C4" type="IDENT" id="C19">the transcription factor nuclear factor-kappa B (NF-kappa B)</coref>, while no effect was noticed on <coref min="expression" id="C20">the expression of <coref id="C21">p65 mRNA</coref></coref>.</sentence>
+<sentence id="S7">In contrast, <coref ref="C10" min="priming" type="IDENT" id="C22">IFN-gamma priming</coref> did not affect the expression of p105 transcripts but enhanced <coref ref="C20" min="expression" type="IDENT" id="C23">the expression of <coref ref="C21" type="IDENT" id="C24">p65 mRNA</coref> (two-fold)</coref>.</sentence>
+<sentence id="S8"><coref ref="C22" type="IDENT" id="C25">Priming with <coref ref="C12" type="IDENT" id="C26">IFN-gamma</coref></coref> followed by <coref ref="C18" type="IDENT" id="C27">LPS</coref> stimulation resulted in a further increase in the expression of <coref ref="C24" type="IDENT" id="C28">p65 mRNA</coref>.</sentence>
+<sentence id="S9">This was due to an increase in the half-life of <coref ref="C28" type="IDENT" id="C29">p65 mRNA</coref> (75 vs 150 minutes).</sentence>
+<sentence id="S10">Electrophoretic mobility shift assays (EMSAs) demonstrated that unstimulated monocytes predominantly expressed p50 NF-kappa B.</sentence>
+<sentence id="S11">Stimulation with <coref ref="C27" type="IDENT" id="C30">LPS</coref> or <coref ref="C26" type="IDENT" id="C31">IFN-gamma</coref> resulted in the expression of <coref id="C32">p50</coref> and p65 subunits, while <coref min="combination" id="C33">the combination of <coref ref="C31" type="IDENT" id="C34">IFN-gamma</coref> plus <coref ref="C30" type="IDENT" id="C35">LPS</coref></coref> caused a further increase in the expression of <coref ref="C19" type="IDENT" id="C36">NF-kappa B</coref>.</sentence>
+<sentence id="S12">With Western blotting, it was shown that nuclear extracts from monocytes contained <coref type="IDENT" id="C37">p50</coref> and p65 protein in response to <coref ref="C35" type="IDENT" id="C38">LPS</coref> and IFN-gamma stimulation.</sentence>
+<sentence id="S13">However, <coref ref="C33" min="stimulation" type="IDENT" id="C39">the combined stimulation</coref> did not result in enhanced p50 and p65 protein expression.</sentence>
+<sentence id="S14"><coref min="effects" id="C40">The effects of <coref ref="C34" type="IDENT" id="C41">IFN-gamma</coref> on <coref ref="C36" min="transcription factors" id="C42">the transcription factors</coref></coref> were specific, since no change was observed in the expression of NF-IL-6 or <coref id="C43">I kappa B alpha</coref>, <coref ref="C43" min="inhibitor" type="APPOS" id="C44">the inhibitor of <coref ref="C36" type="IDENT" id="C45">NF-kappa B</coref></coref>.</sentence>
+<sentence id="S15">We conclude that <coref ref="C40" min="effects" type="IDENT" id="C46">the effects of <coref ref="C41" type="IDENT" id="C47">IFN-gamma</coref> on the expression of <coref ref="C42" min="transcription factors" type="IDENT" id="C48">the transcription factors <coref ref="C16" type="IDENT" id="C49">AP-1</coref> and <coref ref="C45" type="IDENT" id="C50">NF-kappa B</coref></coref></coref> may be important for the modulatory effects of <coref ref="C47" type="IDENT" id="C51">IFN-gamma</coref> on the cytokine expression in <coref ref="C9" min="monocytes" type="IDENT" id="C52">activated human monocytes</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

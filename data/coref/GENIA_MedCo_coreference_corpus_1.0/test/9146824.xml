@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9146824">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9146824</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Plasma sialyltransferase levels in psychiatric disorders as a possible indicator of <coref min="function" id="C1">HPA axis function</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">A dysfunction in the regulation of the hypothalamic-pituitary-adrenal (HPA) axis, possibly attributed to a change in glucocorticoid receptor (GR) functionality, has been implicated in depression.</sentence>
+<sentence id="S3">We have measured both lymphocyte GR receptor binding parameters and plasma sialyltransferase activity, as a biochemical marker of GR function, in two groups of patients suffering from depression or schizophrenia and in a group of age- and sex-matched controls.</sentence>
+<sentence id="S4">While there was a significant increase in plasma cortisol levels in <coref min="group" id="C2">the depressed group</coref>, there were no changes in the lymphocyte GR binding parameters (K(m) and Bmax).</sentence>
+<sentence id="S5">There was, however, a significant decrease in <coref min="ratio" id="C3">the plasma sialyltransferase: cortisol ratio</coref> in <coref ref="C2" min="group" type="IDENT" id="C4">the depressed group</coref> suggesting an inability of the raised cortisol levels to induce enzyme expression and <coref ref="C3" min="ratio" type="IDENT" id="C5">this ratio</coref> may provide a useful biochemical marker of cortisol receptor function.</sentence>
+<sentence id="S6">Although there was an increase in the plasma activity of the alpha 2,6 sialyltransferase isozyme in the schizophrenic group, no other changes were determined.</sentence>
+<sentence id="S7">Therefore, while <coref ref="C5" min="ratio" type="IDENT" id="C6">the total plasma sialyltransferase:cortisol ratio</coref> reflects <coref ref="C1" min="function" type="IDENT" id="C7">HPA axis function</coref>, alterations in specific isozyme activity may also be associated with other CNS disease states.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8702849"><PubmedArticleSet><PubmedArticle><MedlineCitation>
+<PMID>8702849</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Characterization of <coref min="isoform" id="C9">a new isoform of <coref id="C1">the NFAT (nuclear factor of activated T cells) gene family member NFATc</coref> [published</coref> erratum appears in J Biol Chem 1996 Dec 27;271(52):33705]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The cyclosporin A (CsA)/FK506-sensitive nuclear factor of activated T cells (NFAT) plays a key role in the inducible expression of cytokine genes in <coref id="C2">T cells</coref>.</sentence>
+<sentence id="S3">Although NFAT has been recently shown to be inducible in several non-T immune cells, the NFAT gene family members characterized to date have been isolated only from <coref ref="C2" type="IDENT" id="C3">T cells</coref>.</sentence>
+<sentence id="S4">To further characterize NFAT function in human B cells and to demonstrate cytokine gene specificity of NFAT proteins, we report here the isolation and characterization of <coref min="clone" id="C4">a cDNA clone from the Raji B cell line</coref>.</sentence>
+<sentence id="S5"><coref ref="C4" min="clone" type="IDENT" id="C5">The cDNA clone</coref> encodes <coref ref="C9" min="isoform" type="IDENT" id="C10"><coref id="C11">a new isoform</coref>, <coref ref="C11" type="APPOS" id="C7">NFATc.beta</coref>, of <coref ref="C1" type="IDENT" id="C8">the NFAT gene family member NFATc</coref> (designated here NFATc.alpha)</coref>.</sentence>
+<sentence id="S6"><coref min="sequence" id="C15">The amino acid sequence</coref> of <coref ref="C7" type="IDENT" id="C12">NFATc.beta</coref> differs from <coref ref="C15" type="PRON" id="C13">that</coref> of <coref ref="C8" type="IDENT" id="C14">NFATc.alpha</coref> in the first NH2-terminal 29 residues and contains an additional region of 142 residues at the COOH terminus.</sentence>
+<sentence id="S7">Northern analysis using a probe encompassing a common region of both isoforms showed two mRNA species of 2.7 and 4.5 kilobase pairs, while an <coref ref="C12" type="IDENT" id="C16">NFATc.beta-</coref>specific probe detected only <coref id="C17">the 4.5-kilobase pair mRNA</coref> <coref ref="C17" type="RELAT" id="C18">which</coref> was preferentially expressed in the spleen.</sentence>
+<sentence id="S8">Transient expression of <coref ref="C16" type="IDENT" id="C19">NFATc.beta</coref> was capable of activating an interleukin-2 NFAT-driven reporter gene in stimulated Jurkat cells in a CsA-sensitive manner.</sentence>
+<sentence id="S9">However, <coref ref="C19" type="IDENT" id="C20">NFATc.beta</coref> neither bound to the kappa3 element ( an NFAT-binding site ) in the tumor necrosis factor-alpha promoter nor activated the tumor necrosis factor-alpha promoter in cotransfection assays.</sentence>
+<sentence id="S10">These data suggest that different members or isoforms of NFAT gene family may regulate inducible expression of different cytokine genes.</sentence>
+</AbstractText>
+</Abstract></Article></MedlineCitation></PubmedArticle></PubmedArticleSet></Annotation>

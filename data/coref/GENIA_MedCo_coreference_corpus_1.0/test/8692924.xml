@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8692924">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8692924</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">BCL-6</coref>, <coref ref="C1" min="protein" type="APPOS" id="C2">a POZ/zinc-finger protein</coref>, is <coref min="repressor" id="C14">a sequence-specific transcriptional repressor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Approximately 40% of diffuse large cell lymphoma are associated with <coref min="translocations" id="C3">chromosomal translocations</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> deregulate the expression of <coref id="C5">the BCL6 gene</coref> by juxtaposing heterologous promoters to the BCL-6 coding domain.</sentence>
+<sentence id="S3"><coref ref="C5" type="IDENT" id="C6">The BCL6 gene</coref> encodes a 95-kDa protein containing six C-terminal zinc-finger motifs and an N-terminal POZ domain, suggesting that <coref ref="C6" type="PRON" id="C7">it</coref> may function as a transcription factor.</sentence>
+<sentence id="S4">By using <coref id="C8">a DNA sequence</coref> selected for <coref ref="C8" type="PRON" id="C9">its</coref> ability to bind recombinant BCL-6 in vitro, we show here that <coref ref="C1" type="IDENT" id="C10">BCL-6</coref> is present in DNA-binding complexes in nuclear extracts from various B-cell lines.</sentence>
+<sentence id="S5">In transient transfectin experiments, <coref ref="C10" type="IDENT" id="C11">BCL6</coref> can repress transcription from promoters linked to <coref ref="C11" type="PRON" id="C12">its</coref> DNA target sequence and this activity is dependent upon specific DNA-binding and the presence of an intact N-terminal half of the protein.</sentence>
+<sentence id="S6">We demonstrate that this part of the BCL6 molecule contains an autonomous transrepressor domain and that two noncontiguous regions, including the POZ motif, mediate maximum transrepressive activity.</sentence>
+<sentence id="S7">These results indicate that <coref ref="C11" min="protein" type="IDENT" id="C13">the BCL-6 protein</coref> can function as <coref ref="C14" min="repressor" type="IDENT" id="C15">a sequence-specific transcriptional repressor</coref> and have implications for the role of <coref ref="C13" type="IDENT" id="C16">BCL6</coref> in normal lymphoid development and lymphomagenesis.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

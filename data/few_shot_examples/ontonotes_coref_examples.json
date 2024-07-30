@@ -1,0 +1,86 @@
+{
+    "positive_examples": [
+        {
+            "entity1": "me",
+            "entity2": "I",
+            "sent1": "And then , the friend first sent me an SMS , Uh-huh . saying he would come pick me up to go together .",
+            "sent2": "After that , I received an SMS from 1860 .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "True"
+        },
+        {
+            "entity1": "both of you",
+            "entity2": "the two of you",
+            "sent1": "Welcome both of you to the studio to participate in our program .",
+            "sent2": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "True"
+        },
+        {
+            "entity1": "the day of the accident",
+            "entity2": "yesterday",
+            "sent1": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
+            "sent2": "Ah , , about 11:00 m. yesterday , ah , I happened to find out through an SMS when I was outside .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "True"
+        },
+        {
+            "entity1": "you",
+            "entity2": "Yang Yang",
+            "sent1": "And you , Yang Yang ?",
+            "sent2": "And you , Yang Yang ?",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "True"
+        },
+        {
+            "entity1": "me",
+            "entity2": "You",
+            "sent1": "A friend happened to call me .",
+            "sent2": "You were not at work that day ?",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "True"
+        }
+    ],
+    "negative_examples": [
+        {
+            "entity1": "Focus Today",
+            "entity2": "Today",
+            "sent1": "Welcome to Focus Today .",
+            "sent2": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "False"
+        },
+        {
+            "entity1": "our program",
+            "entity2": "the news",
+            "sent1": "Welcome both of you to the studio to participate in our program .",
+            "sent2": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "False"
+        },
+        {
+            "entity1": "Today",
+            "entity2": "the road caving in",
+            "sent1": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
+            "sent2": "Before dawn on January 3 , a sewage pipe leakage accident occurred at the main and side roads of Jingguang Bridge , East Third Ring Road , Beijing Municipality , resulting in the road caving in .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "False"
+        },
+        {
+            "entity1": "Today",
+            "entity2": "Jingguang Bridge , East Third Ring Road , Beijing Municipality",
+            "sent1": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
+            "sent2": "Before dawn on January 3 , a sewage pipe leakage accident occurred at the main and side roads of Jingguang Bridge , East Third Ring Road , Beijing Municipality , resulting in the road caving in .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "False"
+        },
+        {
+            "entity1": "today",
+            "entity2": "the studio",
+            "sent1": "Well , we have invited two honorable guests to the studio today to follow this topic with us .",
+            "sent2": "Well , we have invited two honorable guests to the studio today to follow this topic with us .",
+            "doc_id": "bc/cctv/00/cctv_0005_1",
+            "answer": "False"
+        }
+    ]
+}

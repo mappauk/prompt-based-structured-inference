@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8441379"><PubmedArticleSet><PubmedArticle><MedlineCitation>
+<PMID>8441379</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="gene" id="C1">The human <coref id="C2">prointerleukin 1 beta</coref> gene</coref> requires DNA sequences both proximal and distal to <coref min="site" id="C3">the transcription start site</coref> for tissue-specific induction.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">In these studies, we have identified DNA sequences and specific protein interactions necessary for transcriptional regulation of <coref min="gene" ref="C1" id="C4" type="IDENT">the human <coref ref="C2" id="C5" type="IDENT">prointerleukin 1 beta (proIL-1 beta)</coref> gene</coref>.</sentence>
+<sentence id="S3"><coref min="enhancer element" id="C6">A cell-type-independent <coref id="C7">lipopolysaccharide (LPS)</coref>-responsive enhancer element located between -3757 and -2729 bp upstream from <coref min="site" ref="C3" id="C8" type="IDENT">the transcription start site (cap site)</coref></coref> consisted of at least <coref min="subregions" id="C9">six discrete subregions</coref> <coref ref="C9" id="C10" type="RELAT">which</coref> were essential to the maximal induction by <coref ref="C7" id="C11" type="IDENT">LPS</coref> in transfected monocytes.</sentence>
+<sentence id="S4"><coref min="enhancer" ref="C6" id="C12" type="IDENT">The enhancer</coref> also appeared to mediate <coref id="C13">phorbol myristate acetate</coref> induction in <coref id="C14">monocytes</coref> and IL-1 responsiveness in fibroblasts.</sentence>
+<sentence id="S5">Deletion and base substitution mutations along with DNA binding studies demonstrated that <coref ref="C12" id="C31" type="IDENT">the enhancer</coref> contained a minimum of <coref min="sequences" id="C15">three functional protein binding sequences</coref>, two of <coref ref="C15" id="C16" type="RELAT">which</coref> appeared to be important for gene induction.</sentence>
+<sentence id="S6">One of <coref min="proteins" id="C17">the essential proteins</coref> <coref ref="C17" id="C18" type="RELAT">which</coref> bound to <coref ref="C31" id="C19" type="IDENT">the enhancer</coref> was similar or identical to <coref min="members" id="C20">members of the C/EBP family of transcription factors required for both IL-1- and LPS-specific induction of the IL-6 gene</coref> (i.e., <coref ref="C20" id="C21" type="IDENT">the NF-IL6 proteins</coref>).</sentence>
+<sentence id="S7">When ligated to the <coref ref="C5" id="C22" type="IDENT">proIL-1 beta</coref> cap site-proximal region (located between -131 to +12), both the <coref ref="C22" id="C23" type="IDENT">proIL-1 beta</coref> and the simian virus 40 enhancer elements functioned more efficiently in <coref ref="C14" id="C24" type="IDENT">monocytes</coref> than in <coref id="C25">HeLa cells</coref>, <coref ref="C25" id="C26" type="RELAT">which</coref> are not normally competent for IL-1 beta expression.</sentence>
+<sentence id="S8">When ligated to the murine c-fos promoter, however, the <coref ref="C23" id="C27" type="IDENT">proIL-1 beta</coref> enhancer was inducible in <coref min="HeLa cells" ref="C25" id="C28" type="OTHER"><coref ref="C13" id="C29" type="IDENT">phorbol myristate acetate</coref>-stimulated HeLa cells</coref>, suggesting the existence of a <coref ref="C27" id="C30" type="IDENT">proIL-1 beta</coref> promoter-proximal requirement for tissue specificity.</sentence>
+</AbstractText>
+</Abstract></Article></MedlineCitation></PubmedArticle></PubmedArticleSet></Annotation>

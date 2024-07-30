@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9860137">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9860137</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="differentiation" id="C1">Enhanced differentiation of <coref min="cells" id="C2">HL-60 leukemia cells</coref></coref> to macrophages induced by <coref id="C3">ciprofibrate</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C3" type="IDENT" id="C4">Ciprofibrate</coref>, <coref ref="C4" min="proliferator" type="APPOS" id="C5">an hypolipidaemic peroxisome proliferator</coref>, induced <coref ref="C1" min="differentiation" type="IDENT" id="C6">differentiation of <coref ref="C2" min="cells" type="IDENT" id="C7">HL-60 cells</coref></coref>.</sentence>
+<sentence id="S3">The effect was greatly potentiated by phorbol 12-myristate 13-acetate at <coref id="C8">a concentration</coref> <coref ref="C8" type="RELAT" id="C9">where</coref> neither phorbol ester nor <coref ref="C4" type="IDENT" id="C10">ciprofibrate</coref> alone had any effect on <coref ref="C7" min="cells" type="IDENT" id="C11">these cells</coref>.</sentence>
+<sentence id="S4">As occurs for <coref ref="C6" min="differentiation" type="IDENT" id="C12">HL-60 cell differentiation</coref> induced by high phorbol ester concentration, <coref ref="C12" min="differentiation" type="IDENT" id="C13">the ciprofibrate-induced phorbol ester-dependent differentiation of <coref ref="C11" min="cells" type="IDENT" id="C14">HL-60 cells</coref></coref> proceeded through the monocytic/macrophage pathway and induced the phosphorylation of proteins with similar molecular weights suggesting that increased protein kinase C activity may be involved in the effect.</sentence>
+<sentence id="S5">The peroxisome proliferator-activated receptor (PPARalpha) transcription factor is expressed in <coref ref="C14" min="cells" type="IDENT" id="C15">HL-60 cells</coref>, but no changes were observed in <coref ref="C15" type="PRON" id="C16">its</coref> expression upon <coref ref="C13" min="differentiation" type="IDENT" id="C17">HL-60 cell differentiation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

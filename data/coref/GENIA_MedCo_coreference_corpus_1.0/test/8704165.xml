@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8704165">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8704165</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Retinoic acid activates <coref min="expression" id="C31">interferon regulatory factor-1 gene expression</coref> in myeloid cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">All-trans-retinoic acid (ATRA)</coref> is the drug of choice in the treatment of <coref id="C2">acute promyelocytic leukemia (APL)</coref>.</sentence>
+<sentence id="S3"><coref ref="C1" type="IDENT" id="C3">ATRA</coref> induces both in vitro and in vivo differentiation of <coref id="C9">APL cells</coref> into mature granulocytes.</sentence>
+<sentence id="S4">However, the molecular mechanisms involved in <coref ref="C3" type="IDENT" id="C4">ATRA-</coref>dependent growth inhibition and cellular differentiation are not presently understood.</sentence>
+<sentence id="S5"><coref min="cell line" id="C5">The NB4 cell line</coref>, <coref ref="C5" type="RELAT" id="C6">which</coref> is derived from the bone marrow of a patient with <coref ref="C2" type="IDENT" id="C7">APL</coref> during relapse, can be used as a model system to study the growth and differentiation of <coref ref="C9" type="IDENT" id="C8">APL cells</coref>.</sentence>
+<sentence id="S6">Because interferon (IFN) regulatory factors (IRF-1 and IRF-2) and other IFN-inducible gene products regulate cell growth, we analyzed the effects of <coref ref="C4" type="IDENT" id="C10">ATRA</coref> on <coref ref="C31" min="expression" type="IDENT" id="C12">the expression of these genes</coref>.</sentence>
+<sentence id="S7">We show that <coref ref="C10" type="IDENT" id="C11">ATRA</coref> directly activates <coref ref="C12" min="expression" type="PART-WHOLE" id="C13">IRF-1 gene expression</coref>, followed by activation of <coref ref="C12" min="expression" type="PART-WHOLE" id="C14">IRF-2 and 2'-5' oligoadenylate synthetase (OAS) gene expression</coref> with slower kinetics.</sentence>
+<sentence id="S8">In addition to <coref ref="C5" type="IDENT" id="C15">NB4 cells</coref>, <coref ref="C11" type="IDENT" id="C16">ATRA</coref> also activated <coref ref="C13" min="expression" type="IDENT" id="C17">IRF-1 gene expression</coref> in <coref min="cells" id="C18">HL-60, U937, and THP-1 cells</coref>, <coref ref="C18" type="RELAT" id="C19">which</coref> all respond to <coref ref="C11" type="IDENT" id="C20">ATRA</coref> by growth inhibition.</sentence>
+<sentence id="S9">A more than additive increase in <coref ref="C17" min="expression" type="IDENT" id="C21">IRF-1 gene expression</coref> was seen with <coref ref="C20" type="IDENT" id="C22">ATRA</coref> and IFN-gamma in <coref ref="C15" type="IDENT" id="C23">NB4 cells</coref>.</sentence>
+<sentence id="S10"><coref ref="C22" type="IDENT" id="C24">ATRA</coref> did not activate nuclear factor kappa B or signal transducer and activator of transcription (STAT) activation pathways, suggesting that an alternate mechanism is involved in IRF-1 gene activation.</sentence>
+<sentence id="S11">The <coref ref="C24" type="IDENT" id="C26">ATRA-</coref>induced expression of <coref id="C27">IRF-1</coref>, <coref ref="C27" min="activator" type="APPOS" id="C28">an activator of transcription and repressor of transformation</coref>, may be one of the molecular mechanisms of <coref ref="C26" type="IDENT" id="C29">ATRA-</coref>induced growth inhibition, and the basis for the synergistic actions of <coref ref="C29" type="IDENT" id="C30">ATRA</coref> and IFNs in myeloid leukemia cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

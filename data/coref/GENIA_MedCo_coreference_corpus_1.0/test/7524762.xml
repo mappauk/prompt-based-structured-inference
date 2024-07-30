@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7524762">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7524762</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Steel factor</coref> affects <coref id="C2">SCL expression</coref> during normal erythroid differentiation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="factor" type="IDENT" id="C3">Steel factor</coref> is <coref id="C4">one of the growth factors</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> controls the proliferation and differentiation of hematopoietic cells and <coref id="C6">SCL</coref>, also known as <coref ref="C6" type="IDENT" id="C7">Tcl-5 or Tal-1</coref>, <coref ref="C7" type="APPOS" id="C8">is a transcription factor involved in erythropoiesis</coref>.</sentence>
+<sentence id="S3">In this report, we studied the role of <coref ref="C6" type="IDENT" id="C9">SCL</coref> in the proliferation of <coref id="C10">human peripheral blood burst-forming unit-erythroid (BFU-E)</coref> and the effects of <coref ref="C3" min="factor" type="IDENT" id="C11">Steel factor</coref> on <coref ref="C2" min="expression" type="IDENT" id="C12">SCL expression</coref> in proliferating erythroid cells.</sentence>
+<sentence id="S4"><coref ref="C10" type="IDENT" id="C13">BFU-E-</coref>derived colonies increase progressively in size, as determined by cell number, from <coref id="C14">day 7 to day 14 of culture</coref>, with the greatest increase in <coref id="C15">colony size</coref> (10-fold expansion) occurring between day 7 and day 10.</sentence>
+<sentence id="S5"><coref id="C16">SCL protein levels</coref> in <coref id="C17">BFU-E-derived cells</coref> were highest in day 7 cells and decreased progressively from <coref ref="C14" type="IDENT" id="C18">day 7 to day 14 of culture</coref>, suggesting an association of <coref ref="C9" type="IDENT" id="C19">SCL</coref> with <coref id="C20">erythroid proliferation</coref>.</sentence>
+<sentence id="S6">In contrast, <coref id="C21">SCL mRNA levels</coref> did not decrease significantly between <coref ref="C18" type="IDENT" id="C22">day 7 and day 14 cells</coref>, suggesting that <coref id="C23">posttranscriptional mechanisms</coref> are largely responsible for the decrease in <coref id="C24">SCL protein</coref> observed.</sentence>
+<sentence id="S7">The role of <coref ref="C19" type="IDENT" id="C25">SCL</coref> in <coref ref="C11" min="factor" type="IDENT" id="C26">Steel factor-</coref>induced <coref ref="C20" min="proliferation" type="IDENT" id="C27">erythroid proliferation</coref> was then examined.</sentence>
+<sentence id="S8">In <coref ref="C17" type="IDENT" id="C28">BFU-E-derived colonies</coref> cultured with <coref ref="C26" min="factor" type="IDENT" id="C29">Steel factor</coref>, <coref ref="C15" min="size" type="IDENT" id="C30">colony size</coref> was significantly increased compared to <coref id="C31">control</coref>.</sentence>
+<sentence id="S9">In day 7 and day 10 erythroid precursors cultured with <coref ref="C29" min="factor" type="IDENT" id="C32">Steel factor</coref>, <coref ref="C24" min="protein" type="IDENT" id="C33">SCL protein</coref> was increased significantly compared to <coref ref="C31" type="IDENT" id="C34">control</coref>.</sentence>
+<sentence id="S10">The increase in <coref ref="C16" min="levels" type="IDENT" id="C35">SCL protein levels</coref> in early erythroid precursors stimulated with <coref ref="C32" min="factor" type="IDENT" id="C36">Steel factor</coref> suggests <coref id="C37">one mechanism</coref> through <coref ref="C37" type="RELAT" id="C38">which</coref> <coref ref="C36" min="factor" type="IDENT" id="C39">Steel factor</coref> may enhance normal erythroid proliferation.</sentence>
+<sentence id="S11"><coref ref="C21" min="levels" type="IDENT" id="C40">SCL mRNA levels</coref> assessed by Northern blot in day 7 cells did not increase significantly in response to Steel factor stimulation, suggesting that <coref ref="C23" min="mechanisms" type="IDENT" id="C41">posttranscriptional mechanisms</coref> may also be important in the increase in <coref ref="C33" min="protein" type="IDENT" id="C42">SCL protein</coref> observed in response to <coref ref="C39" type="IDENT" id="C43">Steel</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

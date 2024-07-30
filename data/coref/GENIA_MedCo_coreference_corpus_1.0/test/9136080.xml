@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9136080">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9136080</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Structure and function analysis of the human myeloid cell nuclear differentiation antigen promoter: evidence for the role of <coref id="C1">Sp1</coref> and not of c-Myb or PU.1 in myelomonocytic lineage-specific expression.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">The human myeloid nuclear differentiation antigen (MNDA)</coref> is expressed specifically in maturing cells of the myelomonocytic lineage and in monocytes and granulocytes.</sentence>
+<sentence id="S3">Epitope enhancement was used to confirm the strict lineage- and stage-specific expression of <coref ref="C2" type="IDENT" id="C3">MNDA</coref> in bone marrow as well as in other paraffin-embedded fixed tissues.</sentence>
+<sentence id="S4"><coref min="region" id="C4"><coref min="region" id="C5">A 1-kb region of <coref ref="C3" type="IDENT" id="C6">the gene</coref></coref> <coref ref="C5" type="RELAT" id="C7">that</coref> includes 5' flanking sequence</coref> was reported earlier to contain functional promoter activity and was specifically demethylated in expressing cells in contrast to null cells.</sentence>
+<sentence id="S5">Further analysis has revealed that <coref ref="C4" min="fragment" type="IDENT" id="C8">this 1-kb fragment</coref> promotes higher reporter gene activity in MNDA-expressing cells than non-expressing cells, indicating cell-specific differences in transactivation.</sentence>
+<sentence id="S6"><coref ref="C8" min="sequence" type="IDENT" id="C9">This sequence</coref> contains consensus elements consistent with myeloid-specific gene expression, including <coref min="site" id="C10">a PU.1 consensus site near <coref min="site" id="C11">the major transcription start site</coref></coref> and <coref min="cluster" id="C12">a cluster of c-Myb sites located several hundred bases upstream of <coref ref="C9" min="region" type="IDENT" id="C13">this region</coref></coref>.</sentence>
+<sentence id="S7">However, analysis of deletion mutants localized nearly all of the promoter activity to <coref min="region" id="C14">a short region (-73 to -16)</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> did not include <coref ref="C12" min="cluster" type="IDENT" id="C16">the cluster of c-Myb sites</coref>.</sentence>
+<sentence id="S8">A 4-bp mutation of <coref min="element" id="C17">the core Sp1 consensus element (GC box)</coref> (-20) reduced overall promoter activity of <coref ref="C8" min="fragment" type="IDENT" id="C18">the 1-kb fragment</coref>.</sentence>
+<sentence id="S9">Mutation of <coref ref="C10" min="site" type="IDENT" id="C19">the PU.1 site</coref> did not significantly affect promoter activity.</sentence>
+<sentence id="S10">Only a small region (-35 to +22) including <coref ref="C17" min="element" type="IDENT" id="C20">the Sp1 element</coref> and <coref ref="C11" min="site" type="IDENT" id="C21">transcription start site</coref>, but not <coref ref="C19" min="site" type="IDENT" id="C22">the PU.1 site</coref> was footprinted.</sentence>
+<sentence id="S11">The 4-bp mutation of <coref ref="C17" min="element" type="IDENT" id="C23">the core Sp1 consensus element</coref> abolished footprinting at <coref min="site" id="C24">the site</coref> and an antibody super-shift reaction showed that <coref ref="C1" type="IDENT" id="C25">Sp1</coref> is one of the factors binding <coref ref="C24" min="site" type="IDENT" id="C26">the consensus site</coref>.</sentence>
+<sentence id="S12"><coref min="site" id="C27">The Sp1 site</coref> also co-localizes with a DNase I hypersensitive site.</sentence>
+<sentence id="S13">The results indicate that DNA methylation, chromatin structure, and transactivation at <coref ref="C27" min="site" type="IDENT" id="C28">an Sp1 site</coref> contribute to the highly restricted expression of <coref ref="C6" min="gene" type="IDENT" id="C29">this myelomonocytic lineage specific gene</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

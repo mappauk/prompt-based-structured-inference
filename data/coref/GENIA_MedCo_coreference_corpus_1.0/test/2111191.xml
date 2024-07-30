@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2111191">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2111191</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Effects of mitogenic agents upon glucocorticoid action in <coref id="C1">human tonsillar T-lymphocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The treatment of <coref ref="C1" min="lymphocytes" type="IDENT" id="C2">human tonsillar T-lymphocytes</coref> with <coref id="C3">4-phorbol 12-myristate 13-acetate (PMA)</coref>, resulted in about <coref id="C4">two fold increase in glucocorticoid receptor (GR) number</coref>, without any significant change in the receptor affinity.</sentence>
+<sentence id="S3"><coref ref="C4" min="increase" type="IDENT" id="C5">This increase</coref> disappeared in the presence of cycloheximide.</sentence>
+<sentence id="S4">Alone, <coref ref="C3" type="IDENT" id="C6">PMA</coref> and calcium ionophore A23187 did not affect, but together stimulated, like <coref id="C7"><coref id="C8">phytohaemagglutinin (PHA)</coref>, <coref id="C9">leucine and, in particular, thymidine incorporation</coref></coref>.</sentence>
+<sentence id="S5"><coref ref="C6" type="IDENT" id="C10">PMA</coref> enhanced slightly the stimulatory effect of <coref ref="C8" type="IDENT" id="C11">PHA</coref>.</sentence>
+<sentence id="S6">Alone, <coref ref="C7" type="IDENT" id="C12">these agents</coref> failed to alter the suppressive effect of <coref id="C13">dexamethasone</coref> on <coref ref="C9" min="incorporation" type="IDENT" id="C14">thymidine and leucine incorporation</coref>; however, PMA-A23187 and PMA-PHA combinations appeared to antagonize the suppression by <coref ref="C13" type="IDENT" id="C15">dexamethasone</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

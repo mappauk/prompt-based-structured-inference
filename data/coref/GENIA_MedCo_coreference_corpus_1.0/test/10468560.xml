@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10468560">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10468560</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="promoter" id="C35">The beta-globin promoter</coref> is important for recruitment of erythroid Kruppel-like factor to the locus control region in erythroid cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">Erythroid Kruppel-like factor (EKLF)</coref>, <coref ref="C1" type="RELAT" id="C34">which</coref> binds to the CACCC box in <coref ref="C35" min="promoter" type="IDENT" id="C36">the beta-globin promoter</coref>, is required for the expression of the beta-globin gene in <coref min="cells" id="C8">adult erythroid cells</coref>.</sentence>
+<sentence id="S3">It was recently demonstrated that <coref ref="C1" type="IDENT" id="C2">EKLF</coref> is also required for the activity of <coref min="5'hse" id="C5">the beta-globin locus control region (LCR) 5'HS3</coref>.</sentence>
+<sentence id="S4">Some evidence suggests that the <coref ref="C5" id="C6">LCR</coref> and <coref ref="C36" min="promotor" id="C20">the beta-globin promoter</coref> interact in <coref ref="C8" min="cells" type="IDENT" id="C9">adult erythroid cells</coref>, and <coref min="network" id="C37">the network of protein-protein interactions</coref> <coref ref="C37" type="RELAT" id="C38">that</coref> exists between <coref ref="C6 C20" type="WHOLE-PART" id="C39">these two elements</coref> may regulate how <coref ref="C2" type="IDENT" id="C10">EKLF</coref> is recruited to <coref ref="C6" type="IDENT" id="C11">the LCR</coref>.</sentence>
+<sentence id="S5">In this report, we use the PIN*POINT assay to study the role of the promoter on <coref min="recruitment" id="C44">the recruitment of <coref ref="C10" type="IDENT" id="C40">EKLF</coref> to <coref id="C41">5'HS2</coref> and <coref ref="C5" type="IDENT" id="C14">5'HS3</coref></coref> of <coref ref="C11" type="IDENT" id="C15">the LCR</coref>.</sentence>
+<sentence id="S6">We find that <coref ref="C44" min="recruitment" type="PART-WHOLE" id="C45">recruitment of <coref ref="C40" type="IDENT" id="C42">EKLF</coref> to <coref ref="C41" type="IDENT" id="C43">5'HS2</coref></coref> requires the TATA box, but <coref ref="C44" min="recruitment" type="IDENT" id="C46">recruitment to <coref ref="C14" type="IDENT" id="C19">5'HS3</coref></coref> depends on the CACCC and TATA boxes of <coref ref="C20" min="promoter" type="IDENT" id="C47">the beta-globin promoter</coref>.</sentence>
+<sentence id="S7">Furthermore, <coref ref="C46" min="recruitment" type="IDENT" id="C22">recruitment of <coref ref="C42" type="IDENT" id="C48">EKLF</coref> to <coref ref="C19" type="IDENT" id="C49">5'HS3</coref></coref> only occurred in <coref min="cells" id="C24">beta-globin-expressing murine erythroid leukemia cells</coref>, whereas <coref ref="C45" min="recruitment" type="IDENT" id="C23">recruitment of <coref ref="C48" type="IDENT" id="C50">EKLF</coref> to <coref ref="C43" type="IDENT" id="C51">5'HS2</coref></coref> occurred in both gamma-globin-expressing K562 cells and <coref ref="C24" min="cells" type="OTHER" id="C25">murine erythroid leukemia cells</coref>.</sentence>
+<sentence id="S8">Unlike <coref ref="C50" type="IDENT" id="C52">EKLF</coref>, <coref id="C53">Sp1</coref>, <coref ref="C53" type="RELAT" id="C54">which</coref> also binds to CACCC boxes, is not recruited to <coref ref="C19" type="IDENT" id="C28">5'HS3</coref>.</sentence>
+<sentence id="S9">We have also examined how one 5'HS affects the recruitment of <coref ref="C52" type="IDENT" id="C55">EKLF</coref> to another 5'HS.</sentence>
+<sentence id="S10">We have found that <coref ref="C22" min="recruitment" type="IDENT" id="C27">the recruitment of <coref ref="C55" type="IDENT" id="C56">EKLF</coref> to <coref ref="C28" type="IDENT" id="C57">5'HS3</coref></coref> depends on the presence of <coref ref="C51" type="IDENT" id="C29">5'HS2</coref> in cis, but <coref ref="C23" min="recruitment" type="IDENT" id="C58">the recruitment to <coref ref="C29" type="IDENT" id="C30">5'HS2</coref></coref> does not depend on <coref ref="C57" type="IDENT" id="C31">5'HS3</coref>.</sentence>
+<sentence id="S11">Based on these results, we present <coref id="C59">a model</coref> <coref ref="C59" type="RELAT" id="C60">that</coref> illustrates how <coref ref="C56" type="IDENT" id="C32">EKLF</coref> may be recruited to the beta-globin locus.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

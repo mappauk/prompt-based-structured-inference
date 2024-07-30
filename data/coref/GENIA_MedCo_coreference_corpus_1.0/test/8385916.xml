@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8385916">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8385916</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="transition" id="C1">The lytic transition of <coref id="C2">Epstein-Barr virus</coref></coref> is imitated by recombinant B-cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="transition" type="IDENT" id="C3">Lytic transition of <coref ref="C2" type="IDENT" id="C4">Epstein-Barr virus (EBV)</coref></coref> is initiated by distinct immediate early regulators of the viral cycle, in synchronization to temporary, permissive conditions during host cell differentiation.</sentence>
+<sentence id="S3">We developed eukaryotic vectors suitable to imitate the processes involved in lytic transition in cell culture systems.</sentence>
+<sentence id="S4"><coref min="cell lines" id="C5">Two stable B cell lines</coref> were established: <coref ref="C5" min="cells" type="PART-WHOLE" id="C6">R59Z activator cells</coref> were used to induce lytic EBV expression in a constitutive manner by the production of the BZLF 1 trans-activator (Zta).</sentence>
+<sentence id="S5"><coref ref="C5" min="reporter cells" type="PART-WHOLE" id="C7">R7-57 reporter cells</coref>, on the other hand, signaled induced activity of the lytic origin of EBV replication (ori Lyt).</sentence>
+<sentence id="S6">Different modes, like chemical induction, lytic superinfection with <coref ref="C4" type="IDENT" id="C8">EBV</coref> and single gene trans-activation converted the recombinant ori Lyt element in <coref ref="C7" min="reporter cells" type="IDENT" id="C9">R7-57 reporter cells</coref>.</sentence>
+<sentence id="S7"><coref id="C10">BZLF 1</coref>, transiently expressed in <coref ref="C9" min="reporter cells" type="IDENT" id="C11">R7-57 reporter cells</coref>, was the only EBV trans-activator found, sufficient in inducing the viral lytic cycle.</sentence>
+<sentence id="S8">Basing on these experiments, trans-cellular activation of <coref ref="C8" type="IDENT" id="C12">EBV</coref> was tested by cocultivation of <coref ref="C10" type="IDENT" id="C13">BZLF 1-</coref>expressing <coref ref="C6" type="IDENT" id="C14">R59Z activator cells</coref> with <coref ref="C11" min="reporter line" type="OTHER" id="C15">the R7-57 reporter line</coref>.</sentence>
+<sentence id="S9">No lytic effect on <coref ref="C11" type="IDENT" id="C16">the reporter cells</coref> could be measured, neither by cocultivation of activator cells nor by coincubation of <coref ref="C13" type="IDENT" id="C17">BZLF 1-</coref>containing cell lysates.</sentence>
+<sentence id="S10">Latency breaking activity, however, was transferred from activator to <coref ref="C16" type="OTHER" id="C18">reporter cells</coref> when active, exogenous virus was added.</sentence>
+<sentence id="S11">The cell system described in these experiments provides a tool for the detection of <coref ref="C12" type="IDENT" id="C19">EBV</coref> reactivation and demonstrates the potential of <coref ref="C10" type="IDENT" id="C20">the lytic regulatory gene BZLF 1</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

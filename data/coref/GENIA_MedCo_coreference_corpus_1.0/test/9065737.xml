@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9065737">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9065737</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activation" id="C1">Activation of <coref id="C2">the transcription factor NF-kappaB</coref></coref> in lipopolysaccharide-stimulated U937 cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">During the course of serious bacterial infections, <coref id="C3">lipopolysaccharide (LPS)</coref> interacts with monocyte/macrophage receptors, resulting in the generation of inflammatory cytokines.</sentence>
+<sentence id="S3"><coref ref="C2" type="IDENT" id="C4">Transcription factor NF-kappaB</coref> is crucial in activating the transcription of genes encoding proinflammatory cytokines.</sentence>
+<sentence id="S4">In this paper, we demonstrate that <coref ref="C1" min="activation" type="IDENT" id="C5">the activation of <coref ref="C4" type="IDENT" id="C6">NF-kappaB</coref></coref> by <coref ref="C3" type="IDENT" id="C7">LPS</coref> in <coref id="C8">a promonocytic cell line (U937)</coref> followed a rather slow kinetics, depending on the rate of IkappaB-alpha inhibitor hydrolysis.</sentence>
+<sentence id="S5">No degradation of p105 and p100 inhibitors was observed under these conditions.</sentence>
+<sentence id="S6"><coref min="pathway" id="C9">The transduction pathway leading to <coref ref="C5" min="activation" type="IDENT" id="C10">NF-kappaB activation</coref> in <coref ref="C8" type="IDENT" id="C11">U937 cells</coref></coref> involved the intracellular generation of reactive oxygen species (ROS), as demonstrated by the concomitant inhibitory effects of antioxidants on <coref ref="C10" min="activation" type="IDENT" id="C12">NF-kappaB activation</coref> and the emission of a fluorescent probe reacting intracellularly with hydrogen peroxide.</sentence>
+<sentence id="S7"><coref ref="C9" min="pathway" type="IDENT" id="C13">This ROS pathway</coref> was also characterized by the use of other inhibitors.</sentence>
+<sentence id="S8">This finding indicates that phospholipase A2 and 5-lipoxygenase are also involved.</sentence>
+<sentence id="S9">However, the NF-kappaB activation pathway involving the acidic sphingomyelinase of the endolysosomial membrane did not seem to participate in the LPS-induced NF-kappaB activation in <coref ref="C11" min="cells" type="IDENT" id="C14">U937 cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

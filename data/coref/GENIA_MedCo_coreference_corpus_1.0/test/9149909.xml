@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9149909">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9149909</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="triggering" id="C1">Triggering of <coref min="antigens" id="C2">HLA-DR antigens</coref></coref> differentially modulates <coref min="release" id="C3">tumor necrosis factor alpha release</coref> by <coref min="cells" id="C4">B cells</coref> at distinct stage of maturation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="triggering" id="C5">Triggering of HLA class II antigens by <coref id="C6">the anti-HLA-DR monoclonal antibody (mAb) L243</coref></coref> significantly (P &lt; 0.05) and differentially enhanced <coref ref="C3" min="release" type="IDENT" id="C7">the release of <coref id="C8">tumor necrosis factor alpha (TNF-alpha)</coref></coref> by <coref id="C9">the non-Hodgkin's lymphoma cells Ri-I, Ci-I, and Sc-I</coref>, <coref ref="C9" type="RELAT" id="C10">which</coref> are at a distinct stage of B-cell differentiation, and by the more mature Burkitt lymphoma cell Raji; in contrast, <coref ref="C5" type="PRON" id="C11">it</coref> did not induce <coref ref="C7" min="release" type="IDENT" id="C12">TNF-alpha release</coref> by the pre-B leukemia cells Nalm-6 and BV173.</sentence>
+<sentence id="S3"><coref ref="C12" min="release" type="IDENT" id="C13">TNF-alpha release</coref> peaked at 24 h and decreased thereafter, and <coref ref="C13" type="PRON" id="C14">it</coref> was dose dependent and preceded by an increase of TNF-alpha mRNA detectable after 3 h of stimulation with <coref ref="C6" type="IDENT" id="C15">mAb L243</coref>.</sentence>
+<sentence id="S4"><coref min="tnf-alpha" id="C16">Secreted TNF-alpha</coref> mediated the enhancement of nuclear factor kappa B (NF-kappa B) and activator protein-1 (AP-1) binding activity; in fact, <coref ref="C1" min="triggering" type="IDENT" id="C17">the triggering of <coref ref="C2" min="antigens" type="IDENT" id="C18">HLA-DR antigens</coref></coref> in the presence of antihuman TNF-alpha-neutralizing antibodies did not upregulate <coref id="C19">NF-kappa B and AP-1</coref>.</sentence>
+<sentence id="S5">In contrast, <coref ref="C16" min="tnf-alpha" type="IDENT" id="C20">released TNF-alpha</coref> was not responsible for the homotypic aggregation of Ri-I, Ci-I, Sc-I, and Raji cells induced by <coref ref="C15" type="IDENT" id="C21">mAb L243</coref>, and <coref ref="C20" type="PRON" id="C22">it</coref> did not affect the proliferation of B cells investigated.</sentence>
+<sentence id="S6">Altogether, our data demonstrate that: (a) the ability of <coref ref="C4" min="cells" type="IDENT" id="C23">B cells</coref> to release <coref ref="C8" type="IDENT" id="C24">TNF-alpha</coref> after triggering of <coref ref="C18" min="antigens" type="IDENT" id="C25">HLA-DR antigens</coref> depends on <coref ref="C23" type="PRON" id="C26">their</coref> stage of differentiation; (b) levels of <coref ref="C20" min="tnf-alpha" type="IDENT" id="C27">released TNF-alpha</coref> seem to correlate with the stage of B-cell maturation but do not correlate with the amounts of cell surface HLA-DR antigens; (c) <coref ref="C27" min="tnf-alpha" type="IDENT" id="C28">secreted TNF-alpha</coref> regulates the levels of expression of <coref ref="C19" type="IDENT" id="C29">NF-kappa B and AP-1</coref> by an autocrine loop; and (d) <coref min="signals" id="C30">intracellular signals</coref> mediating <coref ref="C13" min="release" type="IDENT" id="C31">TNF-alpha release</coref> by <coref ref="C23" min="cells" type="IDENT" id="C32">B cells</coref> are distinct from <coref ref="C30" type="PRON" id="C33">those</coref> regulating homotypic aggregation and proliferation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7522304">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7522304</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Calcium signalling</coref> in <coref id="C2">T cells</coref> stimulated by <coref id="C3">a cyclophilin B-binding protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">The immunosuppressant drug cyclosporin A</coref> blocks <coref id="C5">a calcium-dependent signal from the T-cell receptor (TCR)</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> normally leads to T-cell activation.</sentence>
+<sentence id="S3">When bound to cyclophilin, <coref ref="C4" type="IDENT" id="C7">cyclosporin A</coref> binds and inactivates the key signalling intermediate calcineurin.</sentence>
+<sentence id="S4">To identify <coref id="C8">potential cellular homologues of <coref ref="C7" type="IDENT" id="C9">cyclosporin A</coref></coref> <coref ref="C8" type="RELAT" id="C10">that</coref> might regulate <coref ref="C1" min="signalling" type="IDENT" id="C11">calcium signalling</coref>, we have cloned human genes encoding <coref ref="C3" min="protein" type="IDENT" id="C12">cyclophilin B-binding-proteins</coref> using the yeast two-hybrid system.</sentence>
+<sentence id="S5">One gene product, when overexpressed in <coref ref="C2" min="cells" type="IDENT" id="C13">Jurkat T cells</coref>, specifically induced transcription from the interleukin-2 enhancer, by activating the T-cell-specific transcription factors NF-AT and NF-IL2A.</sentence>
+<sentence id="S6"><coref id="C14">This protein</coref>, termed <coref ref="C14" type="IDENT" id="C15">calcium-signal modulating cyclophilin ligand (CAML)</coref>, acts downstream of the TCR and upstream of calcineurin by causing an influx of calcium.</sentence>
+<sentence id="S7"><coref ref="C15" type="IDENT" id="C16">CAML</coref> appears to be a new participant in the calcium-signal transduction pathway, implicating <coref ref="C12" type="IDENT" id="C17">cyclophilin B</coref> in <coref ref="C11" min="signalling" type="IDENT" id="C18">calcium signalling</coref>, even in the absence of cyclosporin.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

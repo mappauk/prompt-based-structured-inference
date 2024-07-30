@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8626752">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8626752</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Preassociation of <coref id="C1">STAT1</coref> with <coref id="C2">STAT2</coref> and <coref id="C3">STAT3</coref> in separate signalling complexes prior to cytokine stimulation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">A variety of cytokines and growth factors act through an induction of gene expression mediated by <coref min="family" id="C4">a family of latent transcription factors called STAT (signal transducers and activators of transcription) proteins</coref>.</sentence>
+<sentence id="S3">Ligand-induced tyrosine phosphorylation of <coref ref="C4" type="IDENT" id="C5">the STATs</coref> promotes <coref ref="C5" type="PRON" id="C6">their</coref> homodimer and heterodimer formation and subsequent nuclear translocation.</sentence>
+<sentence id="S4">We demonstrate here that STAT protein heterocomplexes exist prior to cytokine treatment.</sentence>
+<sentence id="S5">When unstimulated HeLa cells are ruptured in hypotonic buffer without salt or detergent, immunoadsorption of either <coref ref="C1" type="IDENT" id="C7">STAT1</coref> or <coref ref="C2" type="IDENT" id="C8">STAT2</coref> from the resulting cytosol yields coimmunoadsorption of the other STAT protein.</sentence>
+<sentence id="S6">Similarly, STAT1-STAT3 heterocomplexes are coimmunoadsorbed from hypotonic cytosol.</sentence>
+<sentence id="S7"><coref ref="C7" type="IDENT" id="C9">STAT1</coref> and <coref ref="C8" type="IDENT" id="C10">STAT2</coref> or <coref ref="C9" type="IDENT" id="C11">STAT1</coref> and <coref ref="C3" type="IDENT" id="C12">STAT3</coref> translated in reticulocyte lysate spontaneously form heterocomplexes when the translation lysates are mixed at 0 degrees C.</sentence>
+<sentence id="S8">Our data suggest that interferon-alpha /beta-induced tyrosine phosphorylation increases the stability of a preexisting, latent, STAT1-STAT2 signaling complex.</sentence>
+<sentence id="S9">Newly translated STAT1 binds in equilibrium fashion to <coref ref="C10" type="IDENT" id="C13">STAT2</coref> and <coref ref="C12" type="IDENT" id="C14">STAT3</coref>, but we show that <coref ref="C13" type="IDENT" id="C15">STAT2</coref> and <coref ref="C14" type="IDENT" id="C16">STAT3</coref> exist in separate heterocomplexes with <coref ref="C11" type="IDENT" id="C17">STAT1</coref>, consistent with <coref id="C18">a model</coref> in <coref ref="C18" type="RELAT" id="C19">which</coref> <coref ref="C17" type="IDENT" id="C20">STAT1</coref> contains a common binding site for other STAT proteins.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

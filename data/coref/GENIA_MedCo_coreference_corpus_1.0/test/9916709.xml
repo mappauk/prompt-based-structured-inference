@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9916709">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9916709</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="priming" id="C1">T cell priming</coref> enhances <coref min="expression" id="C2">IL-4 gene expression</coref> by increasing nuclear factor of activated T cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="activation" type="IDENT" id="C3">The repetitive activation of <coref min="cells" id="C4">T cells</coref> (priming)</coref> enhances the expression of many cytokines, such as IL-4, but not others, such as IL-2.</sentence>
+<sentence id="S3">Molecular mechanisms underlying selective expression of cytokines by <coref ref="C4" min="cells" type="IDENT" id="C5">T cells</coref> remain poorly understood.</sentence>
+<sentence id="S4">Here we show that priming of CD4 T cells selectively enhances <coref ref="C2" min="expression" type="IDENT" id="C6">IL-4 expression</coref> relative to IL-2 expression by a transcriptional mechanism involving nuclear factor of activated T cells (NFAT) proteins.</sentence>
+<sentence id="S5">As detected by in vivo footprinting, <coref ref="C3" type="IDENT" id="C7">priming</coref> markedly increases the activation-dependent engagement of the P0 and P1 NFAT-binding elements of the IL-4 promoter.</sentence>
+<sentence id="S6">Moreover, each proximal P element is essential for <coref min="activity" id="C8">optimal IL-4 promoter activity</coref>.</sentence>
+<sentence id="S7"><coref min="cells" id="C9">Activated primed CD4 T cells</coref> contain more <coref id="C10">NFAT1</coref> and support greater NFAT-directed transcription than <coref min="cells" id="C11">unprimed CD4 T cells</coref>, while activator protein 1 binding and activator protein 1-mediated transcription by both cell types is similar.</sentence>
+<sentence id="S8">Increased expression of wild-type NFAT1 substantially increases <coref ref="C8" min="activity" type="IDENT" id="C12">IL-4 promoter activity</coref> in <coref ref="C11" min="cells" type="IDENT" id="C13">unprimed CD4 T cells</coref>, suggesting <coref ref="C10" type="IDENT" id="C14">NFAT1</coref> may be limiting for <coref ref="C6" min="expression" type="IDENT" id="C15">IL-4 gene expression</coref> in <coref ref="C13" min="type" type="IDENT" id="C16">this cell type</coref>.</sentence>
+<sentence id="S9">Furthermore, a truncated form of NFAT1 acts as a dominant-negative, reducing <coref ref="C12" min="activity" type="IDENT" id="C17">IL-4 promoter activity</coref> in <coref ref="C9" min="cells" type="IDENT" id="C18">primed CD4 T cells</coref> and confirming the importance of endogenous NFAT to <coref min="expression" id="C19">increased IL-4 gene expression</coref> by effector T cells.</sentence>
+<sentence id="S10"><coref ref="C14" type="IDENT" id="C20">NFAT1</coref> appears to be the major NFAT family member responsible for <coref ref="C19" min="expression" type="IDENT" id="C21">the initial increased expression of IL-4</coref> by <coref ref="C18" min="cells" type="IDENT" id="C22">primed CD4 T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

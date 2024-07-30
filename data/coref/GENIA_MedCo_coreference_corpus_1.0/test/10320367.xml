@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10320367">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10320367</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Nuclear factor-90 of activated T-cells: A double-stranded RNA-binding protein and substrate for <coref min="kinase" id="C1">the double-stranded RNA-dependent protein kinase</coref>, <coref ref="C1" type="APPOS" id="C2">PKR</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">NFAT transcription factors</coref> play a central role in initiating T-cell activation through the induction of immediate-early T-cell specific genes including interleukin-2 (IL-2).</sentence>
+<sentence id="S3"><coref ref="C3" type="IDENT" id="C4">NFAT transcription factors</coref> bind to a sequence in the IL-2 enhancer known as the antigen receptor response element 2 (ARRE-2).</sentence>
+<sentence id="S4">Multiple proteins exhibiting ARRE-2 binding activity have been isolated, including <coref min="heterodimer" id="C5">a heterodimer from stimulated T-cell nuclear extracts consisting of <coref min="subunits" id="C6">Mr = 90 000 (NF90) and Mr = 45 000 (NF45) subunits</coref></coref>.</sentence>
+<sentence id="S5"><coref ref="C6" min="subunits" type="IDENT" id="C7">The subunits of <coref ref="C5" min="heterodimer" type="IDENT" id="C8">this heterodimer</coref></coref> have been cloned, and <coref id="C9">NF90</coref> was found to encode a protein containing <coref min="domains" id="C10">two domains</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> are predicted to form motifs capable of binding to <coref min="rna" id="C12">double-stranded RNA</coref>.</sentence>
+<sentence id="S6">Using in vitro translated polypeptides, we have demonstrated that <coref ref="C9" type="IDENT" id="C13">NF90</coref> specifically binds to <coref ref="C12" min="rna" type="IDENT" id="C14">double-stranded RNA</coref>.</sentence>
+<sentence id="S7">Furthermore, <coref ref="C13" type="IDENT" id="C15">NF90</coref> was phosphorylated in a double-stranded RNA-dependent manner likely by <coref ref="C1" min="kinase" type="IDENT" id="C16">the interferon-induced, double-stranded RNA-dependent protein kinase</coref>, <coref ref="C16" type="APPOS" id="C17">PKR</coref>.</sentence>
+<sentence id="S8"><coref ref="C15" min="protein" type="IDENT" id="C18">The NF90 protein</coref> was found to be expressed not only in T-cells, but also in <coref min="cells" id="C19">nonimmune HeLa cells</coref>.</sentence>
+<sentence id="S9">In <coref ref="C19" min="cells" type="IDENT" id="C20">HeLa cells</coref>, <coref ref="C18" type="IDENT" id="C21">the protein</coref> was almost exclusively localized to the ribosome salt wash fraction of cell lysates.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

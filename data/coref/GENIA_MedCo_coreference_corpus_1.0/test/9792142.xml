@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9792142">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9792142</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Interleukin 1beta</coref> mediates the modulatory effects of <coref id="C2">monocytes</coref> on <coref min="cells" id="C3">LNCaP human prostate cancer cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Proliferative and secretory responses in <coref min="cells" id="C4">androgen-sensitive prostate cancer LNCaP cells</coref> are regulated by steroid and peptide hormones and by differentiation-promoting substances.</sentence>
+<sentence id="S3">In the present study, we evaluated whether <coref min="monocytes" id="C5">peripheral blood monocytes</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> exhibit anti-tumour activity in haematopoietic and solid tumours influence growth and secretion in <coref ref="C3" min="cell line" type="IDENT" id="C7">the LNCaP cell line</coref>.</sentence>
+<sentence id="S4">For this purpose, <coref ref="C7" min="cells" type="IDENT" id="C8">LNCaP cells</coref> were incubated with <coref min="medium" id="C9">monocyte-conditioned medium (MCM)</coref>, and proliferation as well as expression of <coref id="C10"><coref min="receptor" id="C11">androgen receptor (AR)</coref> and <coref min="secretion" id="C12">secretion of prostate-specific antigen (PSA)</coref></coref> were assessed.</sentence>
+<sentence id="S5">Conditioned medium from <coref ref="C2" type="IDENT" id="C13">monocytes</coref> reduced <coref id="C14">proliferation</coref> in a dose-dependent manner.</sentence>
+<sentence id="S6">Incubation with 40% MCM caused a 50% reduction in <coref ref="C14" min="proliferation" type="IDENT" id="C15">cell proliferation</coref>.</sentence>
+<sentence id="S7"><coref ref="C11" min="protein" type="IDENT" id="C16">AR protein</coref> decreased by 70% and PSA levels in supernatants from <coref ref="C8" min="cells" type="IDENT" id="C17">LNCaP cells</coref> were reduced by approximately 80% following treatment with <coref ref="C9" type="IDENT" id="C18">MCM</coref>.</sentence>
+<sentence id="S8">We focused on the contribution of <coref min="products" id="C19">two major products of activated monocytes</coref>, <coref ref="C19" type="APPOS" id="C20"><coref id="C21">prostaglandin E2</coref> and <coref ref="C1" type="IDENT" id="C22">interleukin 1beta (IL-1beta)</coref></coref>, to the MCM modulatory action.</sentence>
+<sentence id="S9">LNCaP cells treated with <coref ref="C21" type="IDENT" id="C23">prostaglandin E2</coref> showed neither a reduction in proliferation nor a down-regulation of <coref min="levels" id="C24">AR and PSA levels</coref>.</sentence>
+<sentence id="S10">The effects of <coref ref="C18" type="IDENT" id="C25">MCM</coref> on cellular proliferation, <coref ref="C10" type="IDENT" id="C26"><coref ref="C16" min="protein" type="IDENT" id="C27">AR protein</coref> and <coref ref="C12" min="secretion" type="IDENT" id="C28">PSA secretion</coref></coref> were abolished by pretreatment of <coref ref="C25" type="IDENT" id="C29">MCM</coref> with a neutralizing anti-IL-1beta antibody.</sentence>
+<sentence id="S11">In addition, recombinant IL-1beta was able to replace <coref ref="C29" type="IDENT" id="C30">MCM</coref> for the inhibition of proliferation and down-regulation of AR and PSA proteins.</sentence>
+<sentence id="S12"><coref ref="C17" min="cells" type="IDENT" id="C31">LNCaP cells</coref> were shown to express <coref id="C32">the IL-1beta receptor type 1</coref>, <coref ref="C32" type="RELAT" id="C33">which</coref> transduces IL-1beta signal.</sentence>
+<sentence id="S13">Our findings reveal that monocyte-derived IL-1beta inhibits the proliferation of <coref ref="C4" min="cells" type="IDENT" id="C34">androgen-responsive prostate tumour cells</coref> and reduces <coref ref="C24" min="levels" type="IDENT" id="C35">AR and PSA levels</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

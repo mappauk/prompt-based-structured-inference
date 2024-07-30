@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7530239">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7530239</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Induction of <coref id="C1">ICAM-1</coref> and <coref id="C2">LFA-3</coref> by <coref id="C3">Tax1 of human T-cell leukemia virus type 1</coref> and <coref id="C4">mechanism of down-regulation of <coref ref="C1" type="IDENT" id="C5">ICAM-1</coref> or <coref id="C6">LFA-1</coref> in <coref id="C7">adult-T-cell-leukemia cell lines</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The present study was undertaken to determine the role of <coref ref="C3" type="IDENT" id="C8">HTLV-I TaxI</coref> in the up-regulation of <coref ref="C5" type="IDENT" id="C9">ICAM-I</coref> and <coref ref="C2" type="IDENT" id="C10">LFA-3</coref> in <coref id="C11">human T cells</coref> transformed with HTLV-I and the mechanism of down-regulation of <coref ref="C9" type="IDENT" id="C12">ICAM-I</coref> and <coref ref="C6" type="IDENT" id="C13">LFA-I</coref> in <coref ref="C7" min="cell lines" type="IDENT" id="C14">ATL-derived cell lines</coref>.</sentence>
+<sentence id="S3"><coref id="C15">Induction of <coref id="C16">TaxI</coref> in <coref ref="C11" type="IDENT" id="C17">a human T-cell line Jurkat</coref></coref> carrying <coref ref="C16" type="IDENT" id="C18">the TaxI gene</coref> under the metallothionein promoter led to increases in mRNA and surface expression of <coref ref="C12" type="IDENT" id="C19">ICAM-I</coref>.</sentence>
+<sentence id="S4">The response of <coref ref="C10" type="IDENT" id="C20">LFA-3</coref> to <coref ref="C15" min="induction" type="IDENT" id="C21">TaxI induction</coref> was, on the other hand, relatively slow and weak, and might be indirect.</sentence>
+<sentence id="S5">Transactivation of the ICAM-I promoter by <coref ref="C16" type="IDENT" id="C22">TaxI</coref> was further shown by co-transfection of <coref id="C23">a CAT reporter construct with <coref id="C24">the ICAM-I promoter</coref></coref> and a plasmid expressing <coref ref="C22" type="IDENT" id="C25">TaxI</coref>.</sentence>
+<sentence id="S6"><coref ref="C4" min="mechanism" type="IDENT" id="C26">The mechanism of down-regulation of <coref ref="C19" type="IDENT" id="C27">ICAM-I</coref> or <coref ref="C13" type="IDENT" id="C28">LFA-I</coref> in 4 ATL cell lines</coref> was next examined.</sentence>
+<sentence id="S7">ICAM-I mRNA was quite low in <coref id="C29">MT-I</coref>, but no genomic changes were found.</sentence>
+<sentence id="S8"><coref ref="C23" min="reporter" type="IDENT" id="C30">The CAT reporter with <coref ref="C24" min="promoter" type="IDENT" id="C31">the ICAM-I promoter</coref></coref> was inactive in <coref ref="C29" type="IDENT" id="C32">MT-I</coref>.</sentence>
+<sentence id="S9">Finally, combined treatment of <coref ref="C32" type="IDENT" id="C33">MT-I</coref> with 5-azacytidine and IFN-gamma induced re-expression of <coref ref="C27" type="IDENT" id="C34">ICAM-I</coref>.</sentence>
+<sentence id="S10">Collectively, (a) transcriptional factor(s) necessary for expression of <coref ref="C34" type="IDENT" id="C35">ICAM-I gene</coref> may be repressed in <coref ref="C33" type="IDENT" id="C36">MT-I</coref> through DNA methylation.</sentence>
+<sentence id="S11"><coref min="cell lines" id="C37">Three other ATL cell lines (TL-OmI, H582, HuT102)</coref> were found to have little mRNA for the LFA-I beta chain (CD18).</sentence>
+<sentence id="S12">H582 and HuT102 were also negative for the LFA-I alpha chain (CDIIa) mRNA.</sentence>
+<sentence id="S13">No genomic changes were found, and a CAT reporter gene with the CD18 promoter was inactive in <coref ref="C37" type="IDENT" id="C38">the 3 of them</coref>, again suggesting lack of (a) transcriptional factor(s) necessary for CD18 expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

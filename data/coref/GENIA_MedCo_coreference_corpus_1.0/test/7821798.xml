@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7821798">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7821798</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Identification of the promoter region of <coref id="C1">chicken anemia virus (CAV)</coref> containing a novel enhancer-like element.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The single promoter region in the cloned genome [Noteborn et al., J. Virol. 65 (1991) 3131-3139] of <coref ref="C1" min="virus" type="IDENT" id="C2">chicken anemia virus (CAV)</coref> in <coref id="C3">chicken T-cells</coref> was analysed via CAT assays.</sentence>
+<sentence id="S3">A unique region containing four or five near-perfect direct repeats (DR) of 21 bp with <coref id="C4">one 12-bp insert</coref> was proven to be the main transcription-activation element, with enhancer-like characteristics.</sentence>
+<sentence id="S4">PCR studies revealed that CAV isolates from across the world all contained this promoter sequence.</sentence>
+<sentence id="S5">Electrophoretic mobility-shift assays (EMSA) showed that <coref id="C5">individual DR units</coref>, as well as <coref ref="C4" min="insert" type="IDENT" id="C6">the 12-bp insert</coref>, can bind to nuclear factors of <coref ref="C3" min="cells" type="IDENT" id="C7">chicken T-cells</coref>.</sentence>
+<sentence id="S6">Competition assays revealed that <coref ref="C5" min="units" type="IDENT" id="C8">the DR units</coref> bound to factors other than <coref ref="C6" min="insert" type="IDENT" id="C9">the 12-bp insert</coref>.</sentence>
+<sentence id="S7">A synthetic oligodeoxyribonucleotide containing an SP1-box (5'-GGGCGG) could compete with factors binding to <coref ref="C9" min="insert" type="IDENT" id="C10">the 12-bp insert</coref>.</sentence>
+<sentence id="S8">Purified human SP1 was shown to have very strong affinity for <coref ref="C10" min="insert" type="IDENT" id="C11">the 12-bp insert</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

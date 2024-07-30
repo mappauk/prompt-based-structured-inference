@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7579328">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7579328</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="gene" id="C1">The myeloid zinc finger gene</coref>, <coref ref="C1" type="APPOS" id="C2">MZF-1</coref>, regulates <coref min="promoter" id="C3">the CD34 promoter</coref> in vitro.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C4">MZF-1</coref> is a C2H2 zinc finger gene encoding a putative transcriptional regulator of myeloid differentiation.</sentence>
+<sentence id="S3">The MZF-1 protein contains 13 C2H2 zinc fingers arranged in bipartite DNA binding domains containing zinc fingers through 4 and, in the carboxy-terminus, 5 through 13.</sentence>
+<sentence id="S4">We previously identified the DNA consensus binding site recognized by the two DNA binding domains.</sentence>
+<sentence id="S5">To assess the transcription regulatory function of <coref ref="C4" type="IDENT" id="C5">MZF-1</coref>, the full-length MZF-1 coding region was fused to the DNA binding domain of the yeast transactivator GAL4.</sentence>
+<sentence id="S6"><coref min="vector" id="C6">The expression vector</coref> was cotransfected with the chloramphenicol acetyl transferase (CAT) reporter gene regulated by the thymidine kinase promoter containing <coref min="sites" id="C7">GAL4 DNA binding sites</coref> into <coref min="lines" id="C8">NIH 3T3, 293, K562, and Jurkat cell lines</coref>.</sentence>
+<sentence id="S7"><coref ref="C5" type="IDENT" id="C9">MZF-1</coref> represses <coref min="expression" id="C10">CAT reporter gene expression</coref> via <coref ref="C7" min="sites" type="IDENT" id="C11">GAL4 binding sites</coref> in <coref min="lines" id="C12">the nonhematopoietic cell lines NIH 3T3 and 293</coref>.</sentence>
+<sentence id="S8">In contrast, <coref ref="C9" type="IDENT" id="C13">MZF-1</coref> activates <coref ref="C10" min="expression" type="IDENT" id="C14">CAT reporter gene expression</coref> in <coref min="lines" id="C15">the hematopoietic cell lines K562 and Jurkat</coref>.</sentence>
+<sentence id="S9">The MZF-1 binding sites are present in the promoters of several genes expressed during myeloid differentiation, including <coref ref="C3" min="promoter" type="IDENT" id="C16">the CD34 promoter</coref>.</sentence>
+<sentence id="S10">MZF-1 transcriptional regulation of <coref ref="C16" min="promoter" type="IDENT" id="C17">this physiologically relevant promoter</coref> was assessed in <coref ref="C8" min="lines" type="IDENT" id="C18">both hematopoietic and nonhematopoietic cell lines</coref>.</sentence>
+<sentence id="S11">Recombinant MZF-1 protein specifically binds to the consensus binding sites in <coref ref="C17" min="promoter" type="IDENT" id="C19">the CD34 promoter</coref> in mobility shift assays.</sentence>
+<sentence id="S12"><coref ref="C6" min="vectors" type="IDENT" id="C20">MZF-1 expression vectors</coref> were cotransfected with the luciferase reporter plasmids regulated by <coref ref="C19" min="promoter" type="IDENT" id="C21">the CD34 promoter</coref> into <coref ref="C18" min="lines" type="IDENT" id="C22">both nonhematopoietic and hematopoietic cell lines</coref>.</sentence>
+<sentence id="S13">As with the heterologous DNA binding domain, <coref ref="C13" type="IDENT" id="C23">MZF-1</coref> represses <coref min="expression" id="C24">reporter gene expression</coref> in <coref ref="C12" min="lines" type="IDENT" id="C25">nonhematopoietic cell lines</coref> and activates <coref ref="C24" type="IDENT" id="C26">expression</coref> in <coref ref="C15" min="cell lines" type="IDENT" id="C27">hematopoietic cell lines</coref>.</sentence>
+<sentence id="S14">Activation of CD34 expression in <coref ref="C27" min="lines" type="IDENT" id="C28">hematopoietic cell lines</coref> is dependent on the presence of intact MZF-1 binding sites.</sentence>
+<sentence id="S15">The cell type-specific regulation of <coref ref="C19" min="promoter" type="IDENT" id="C29">the CD34 promoter</coref> by <coref ref="C23" type="IDENT" id="C30">MZF-1</coref> suggests the presence of tissue-specific regulators/adapters or differential MZF-1 modifications that determine MZF-1 transcriptional regulatory function.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

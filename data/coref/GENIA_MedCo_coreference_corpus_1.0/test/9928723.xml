@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9928723">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9928723</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Comparison of <coref min="transcription" id="C1">HTLV-I basal transcription</coref> and expression of CREB/ATF-1/CREM family members in <coref id="C2"><coref min="cells" id="C3">peripheral blood mononuclear cells</coref> and <coref min="cells" id="C4">Jurkat T cells</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C5">HTLV-I</coref> is the etiologic agent of adult T-cell leukemia/lymphoma and is associated with tropical spastic paraparesis/HTLV-I-associated myelopathy.</sentence>
+<sentence id="S3">Following integration into the host cell genome, HTLV-I replication is regulated by <coref min="mechanisms" id="C6">both host and viral mechanisms</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> control transcription.</sentence>
+<sentence id="S4">Low levels of <coref min="transcription" id="C8">viral transcription (basal transcription)</coref> occur before expression of the virally encoded Tax protein (Tax-mediated transcription).</sentence>
+<sentence id="S5">Members of the cyclic adenosine monophosphate (cAMP) response element binding (CREB)/activating transcription factor 1 (ATF-1) family of <coref id="C9">transcription factors</coref> bind <coref min="repeats" id="C10">three 21-bp repeats (Tax-responsive element-1, or TRE-1)</coref> within the viral promoter and are important for basal and Tax-mediated transcription.</sentence>
+<sentence id="S6">Using <coref ref="C2" type="IDENT" id="C11">mitogen stimulated and quiescent peripheral blood mononuclear cells (PBMC) and Jurkat cells</coref>, we compared differences in <coref ref="C8" min="transcription" type="IDENT" id="C12">basal transcription</coref> and amounts and binding of <coref ref="C9" type="IDENT" id="C13">transcription factors</coref> with <coref ref="C10" type="IDENT" id="C14">TRE-1</coref>.</sentence>
+<sentence id="S7">We demonstrate that amounts of transcriptionally active phosphorylated CREB protein (P-CREB) differ between <coref ref="C11" type="IDENT" id="C15">activated PBMC and Jurkat cells</coref>.</sentence>
+<sentence id="S8">Following stimulation, <coref min="levels" id="C16">P-CREB levels</coref> remain elevated in <coref ref="C3" type="IDENT" id="C17">PBMC</coref> for up to 24 hours whereas CREB is dephosphorylated in <coref ref="C4" min="cells" type="IDENT" id="C18">Jurkat cells</coref> within 4 hours following stimulation.</sentence>
+<sentence id="S9">The differences in <coref ref="C16" min="levels" type="IDENT" id="C19">P-CREB levels</coref> between <coref ref="C15" type="IDENT" id="C20"><coref ref="C17" type="IDENT" id="C21">PBMC</coref> and <coref ref="C18" min="cells" type="IDENT" id="C22">Jurkat cells</coref></coref> were directly correlated with basal transcription of <coref ref="C5" type="IDENT" id="C23">HTLV-I</coref> in <coref ref="C20" min="types" type="IDENT" id="C24">the two cell types</coref>.</sentence>
+<sentence id="S10">Using electrophoretic mobility shift assays, we determined that the pattern of band migration differed between <coref ref="C24" min="types" type="IDENT" id="C25">the two cell types</coref>.</sentence>
+<sentence id="S11">These data demonstrate that <coref ref="C21" type="IDENT" id="C26">PBMC</coref> differentially regulate <coref ref="C1" min="transcription" type="IDENT" id="C27">basal HTLV-I transcription</coref> compared with <coref ref="C22" min="cells" type="IDENT" id="C28">Jurkat T cells</coref>, and this differential regulation is due, in part to differential phosphorylation and binding of CREB/ATF-1 to <coref ref="C14" type="IDENT" id="C29">TRE-1</coref> in the HTLV-I promoter.</sentence>
+<sentence id="S12">We demonstrate the utility of using primary lymphocyte models to study HTLV-I transcription in the context of cell signaling and suggest that activated PBMC maintain <coref min="levels" id="C30">elevated levels of P-CREB</coref>, <coref ref="C30" type="RELAT" id="C31">which</coref> promote <coref ref="C27" min="transcription" type="IDENT" id="C32">basal HTLV-I transcription</coref> and enhance viral persistence in vivo.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

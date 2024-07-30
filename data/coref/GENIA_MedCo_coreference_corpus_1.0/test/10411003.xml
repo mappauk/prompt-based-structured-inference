@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10411003">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10411003</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Regulatory effects of <coref id="C1">interleukin-11</coref> during acute lung inflammatory injury.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The role of <coref ref="C1" type="IDENT" id="C2">interleukin-11 (IL-11)</coref> was evaluated in the IgG immune complex model of acute lung injury in rats.</sentence>
+<sentence id="S3">IL-11 mRNA and protein were both up-regulated during the course of this inflammatory response.</sentence>
+<sentence id="S4">Exogenously administered IL-11 substantially reduced, in a dose-dependent manner, the intrapulmonary accumulation of neutrophils and the lung vascular leak of albumin.</sentence>
+<sentence id="S5">These in vivo anti-inflammatory effects of <coref ref="C2" type="IDENT" id="C5">IL-11</coref> were associated with reduced NF-kappaB activation in <coref id="C12">lung</coref>, reduced levels of <coref id="C16">tumor necrosis factor alpha (TNF-alpha)</coref> in bronchoalveolar lavage (BAL) fluids, and diminished <coref min="up-regulation" id="C20">up-regulation of <coref min="icam-1" id="C18">lung vascular ICAM-1</coref></coref>.</sentence>
+<sentence id="S6">It is interesting that <coref ref="C5" type="IDENT" id="C6">IL-11</coref> did not affect BAL fluid content of <coref min="chemokines" id="C8">the CXC chemokines</coref>, macrophage inflammatory protein-2 (MIP-2) and cytokine-inducible neutrophil chemoattractant (CINC); the presence of <coref ref="C6" type="IDENT" id="C7">IL-11</coref> did not affect <coref ref="C8" type="IDENT" id="C9">these chemokines</coref>.</sentence>
+<sentence id="S7">However, BAL content of C5a was reduced by <coref ref="C7" type="IDENT" id="C10">IL-11</coref>.</sentence>
+<sentence id="S8">These data indicate that <coref ref="C10" type="IDENT" id="C11">IL-11</coref> is a regulatory cytokine in <coref ref="C12" type="IDENT" id="C13">the lung</coref> and that, like other members of this family, <coref ref="C11" type="PRON" id="C14">its</coref> anti-inflammatory properties appear to be linked to <coref ref="C11" type="PRON" id="C15">its</coref> suppression of NF-kappaB activation, diminished production of <coref ref="C16" type="IDENT" id="C17">TNF-alpha</coref>, and reduced <coref ref="C20" min="up-regulation" type="IDENT" id="C21">up-regulation of <coref ref="C18" type="IDENT" id="C19">lung vascular ICAM-1</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9352360">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9352360</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Suppression of <coref min="expression" id="C1">MHC class II expression</coref> by <coref min="constructs" id="C2">human class II trans-activator constructs lacking the N-terminal domain</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The class II trans-activator (CIITA) is <coref min="protein" id="C3">a bi- or multi-functional domain protein</coref> <coref ref="C3" type="RELAT" id="C4">which</coref> plays a critical role in <coref ref="C1" min="expression" type="IDENT" id="C5">the expression of MHC class II genes</coref>.</sentence>
+<sentence id="S3">We report that removal of the N-terminal 151 amino acids, encompassing all of the acidic domain but leaving intact the proline/serine/threonine-rich domain, results in <coref ref="C2" min="protein" type="IDENT" id="C6">a mutant protein with potent suppressive properties for <coref ref="C5" min="expression" type="IDENT" id="C7">MHC class II expression</coref></coref>.</sentence>
+<sentence id="S4">HeLa cells stably or transiently transfected with <coref ref="C6" min="constructs" type="IDENT" id="C8">mutant CIITA constructs</coref> showed up to 99% suppression of MHC class II antigen induction by IFN-gamma and marked suppression of HLA-DRA mRNA expression.</sentence>
+<sentence id="S5">Transient transfection of a B lymphoma line resulted in up to 89% reduction of constitutive MHC class II expression within 5 days and suppression of HLA-DRA mRNA synthesis.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

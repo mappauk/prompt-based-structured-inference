@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9234727">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9234727</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The product of the murine homolog of <coref min="gene" id="C1">the Drosophila extra sex combs gene</coref> displays transcriptional repressor activity.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The heterogeneous nuclear ribonucleoprotein K protein represents a novel class of <coref id="C2">proteins</coref> <coref ref="C2" type="RELAT" id="C3">that</coref> may act as <coref min="platforms" id="C4">docking platforms</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> orchestrate cross-talk among molecules involved in signal transduction and gene expression.</sentence>
+<sentence id="S3">Using a fragment of <coref id="C6">K protein</coref> as bait in the yeast two-hybrid screen, we isolated <coref min="cdna" id="C7"><coref id="C8">a cDNA</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> encodes <coref id="C10">a protein</coref> <coref ref="C10" type="RELAT" id="C11">whose</coref> primary structure has extensive similarity to <coref ref="C1" min="product" type="IDENT" id="C12">the Drosophila melanogaster extra sex combs (esc) gene product</coref>, <coref ref="C12" type="APPOS" id="C13">Esc</coref>, <coref ref="C13" min="silencer" type="APPOS" id="C14">a putative silencer of homeotic genes</coref></coref>.</sentence>
+<sentence id="S4"><coref ref="C7" type="IDENT" id="C15">The cDNA</coref> <coref ref="C15" type="RELAT" id="C16">that</coref> we isolated is identical to the cDNA of <coref min="gene" id="C17">the recently positionally cloned mouse embryonic ectoderm development gene</coref>, <coref ref="C17" type="APPOS" id="C18">eed</coref>.</sentence>
+<sentence id="S5">Like <coref type="IDENT" id="C19">Esc</coref>, <coref ref="C17" type="IDENT" id="C20">Eed</coref> contains six WD-40 repeats in the C-terminal half of the protein and is thought to repress homeotic gene expression during mouse embryogenesis.</sentence>
+<sentence id="S6"><coref ref="C20" type="IDENT" id="C21">Eed</coref> binds to <coref ref="C6" type="IDENT" id="C22">K protein</coref> through <coref min="domain" id="C23">a domain in <coref ref="C21" type="PRON" id="C24">its</coref> N terminus</coref>, but interestingly, <coref ref="C23" min="domain" type="IDENT" id="C25">this domain</coref> is not found in <coref ref="C19" min="esc" type="IDENT" id="C26">the Drosophila Esc</coref>.</sentence>
+<sentence id="S7">Gal4-Eed fusion protein represses transcription of a reporter gene driven by <coref id="C27">a promoter</coref> <coref ref="C27" type="RELAT" id="C28">that</coref> contains Gal4-binding DNA elements.</sentence>
+<sentence id="S8"><coref ref="C21" type="IDENT" id="C29">Eed</coref> also represses transcription when recruited to a target promoter by Gal4-K protein.</sentence>
+<sentence id="S9"><coref min="mutations" id="C30">Point mutations within <coref ref="C29" min="gene" type="IDENT" id="C31">the eed gene</coref></coref> <coref ref="C30" type="RELAT" id="C32">that</coref> are responsible for severe embryonic development abnormalities abolished the transcriptional repressor activity of <coref ref="C31" type="IDENT" id="C33">Eed</coref>.</sentence>
+<sentence id="S10">Results of this study suggest that Eed-restricted homeotic gene expression during embryogenesis reflects the action of <coref ref="C33" type="IDENT" id="C34">Eed</coref> as a transcriptional repressor.</sentence>
+<sentence id="S11">The Eed-mediated transcriptional effects are likely to reflect the interaction of <coref ref="C34" type="IDENT" id="C35">Eed</coref> with multiple molecular partners, including <coref ref="C22" type="IDENT" id="C36">K protein</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

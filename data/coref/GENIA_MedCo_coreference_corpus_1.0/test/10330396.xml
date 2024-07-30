@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10330396">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10330396</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A role for <coref id="C1">RanBP1</coref> in the release of <coref id="C2">CRM1</coref> from <coref min="complex" id="C3">the nuclear pore complex</coref> in a terminal step of <coref min="export" id="C4">nuclear export</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We recently developed <coref min="assay" id="C5"><coref id="C6">an assay</coref> in <coref ref="C6" type="RELAT" id="C7">which</coref> nuclear export of the shuttling transcription factor NFAT (nuclear factor of activated T cells) can be reconstituted in permeabilized cells with the GTPase Ran and <coref ref="C2" type="IDENT" id="C8">the nuclear export receptor CRM1</coref></coref>.</sentence>
+<sentence id="S3">We have now used <coref ref="C5" min="assay" type="IDENT" id="C9">this assay</coref> to identify another export factor.</sentence>
+<sentence id="S4">After preincubation of permeabilized cells with <coref min="mutant" id="C10"><coref min="mutant" id="C11">a Ran mutant</coref> <coref ref="C11" type="RELAT" id="C12">that</coref> cannot hydrolyze GTP (RanQ69L)</coref>, cytosol supports NFAT export, but CRM1 and Ran alone do not.</sentence>
+<sentence id="S5"><coref min="preincubation" id="C13">The RanQ69L preincubation</coref> leads to accumulation of <coref ref="C8" type="IDENT" id="C14">CRM1</coref> at the cytoplasmic periphery of <coref ref="C3" min="complex" type="IDENT" id="C15">the nuclear pore complex (NPC)</coref> in association with the p62 complex and Can/Nup214.</sentence>
+<sentence id="S6">RanGTP-dependent association of <coref ref="C14" type="IDENT" id="C16">CRM1</coref> with these nucleoporins was reconstituted in vitro.</sentence>
+<sentence id="S7">By biochemical fractionation and reconstitution, we showed that <coref ref="C1" type="IDENT" id="C17">RanBP1</coref> restores <coref ref="C4" min="export" type="IDENT" id="C18">nuclear export</coref> after <coref ref="C13" min="preincubation" type="IDENT" id="C19">the RanQ69L preincubation</coref>.</sentence>
+<sentence id="S8"><coref ref="C17" type="PRON" id="C20">It</coref> also stimulates nuclear export in <coref id="C21">cells</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> have not been preincubated with <coref ref="C10" type="IDENT" id="C23">RanQ69L</coref>.</sentence>
+<sentence id="S9"><coref ref="C17" type="IDENT" id="C24">RanBP1</coref> as well as Ran-binding domains of <coref id="C25">the cytoplasmic nucleoporin RanBP2</coref> promote the release of <coref ref="C16" type="IDENT" id="C26">CRM1</coref> from <coref ref="C15" type="IDENT" id="C27">the NPC</coref>.</sentence>
+<sentence id="S10">Taken together, our results indicate that RanGTP is important for the targeting of export complexes to the cytoplasmic side of <coref ref="C27" type="IDENT" id="C28">the NPC</coref> and that <coref ref="C24" type="IDENT" id="C29">RanBP1</coref> and probably <coref ref="C25" type="IDENT" id="C30">RanBP2</coref> are involved in the dissociation of nuclear export complexes from <coref ref="C28" type="IDENT" id="C31">the NPC</coref> in a terminal step of transport.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1421207"><PubmedArticleSet><PubmedArticle><MedlineCitation>
+<PMID>1421207</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="estimation" id="C1">Single point estimation of <coref id="C2">glucocorticoid receptors</coref></coref> in <coref min="lymphocytes" id="C3">lymphocytes of <coref min="subjects" id="C4">normal subjects</coref> and of <coref min="children" id="C5">children under long term glucocorticoid treatment</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="assay" type="OTHER" id="C6">A single point assay of <coref ref="C2" type="IDENT" id="C7">glucocorticoid receptors (GR)</coref></coref> in <coref ref="C3" min="lymphocytes" type="OTHER" id="C8">human lymphocytes</coref> based on the measurement of specific dexamethasone binding has been developed and compared with <coref min="analysis" id="C9">a common multi-point Scatchard analysis</coref>.</sentence>
+<sentence id="S3">The assay conditions-concentration of the ligand 20 nmol/l, incubation time 2 h and the cell count 2-6 mil. cells/tube in the assay volume 0.25 ml were found to be optimal.</sentence>
+<sentence id="S4">An attempt was also undertaken to use <coref id="C10">a cell harvester</coref> for the separation of cells from unbound ligand.</sentence>
+<sentence id="S5">Though <coref id="C11">specifically bound dexamethasone</coref> measured by whole-cell assay and <coref ref="C11" type="PRON" id="C12">that</coref> using <coref ref="C10" type="IDENT" id="C13">cell harvester</coref> correlated well, almost by one order lower values obtained with <coref ref="C13" min="method" type="OTHER" id="C14">the latter method</coref> render <coref ref="C14" type="PRON" id="C15">it</coref> non-applicable for receptor quantitation.</sentence>
+<sentence id="S6"><coref id="C16">The results</coref> from <coref ref="C4" min="volunteers" type="IDENT" id="C17">9 healthy volunteers</coref> (average <coref ref="C7" type="IDENT" id="C18">GR</coref> concentration 7131 +/- 1256 sites/cell) correlated excellently with <coref ref="C16" type="PRON" id="C19">those</coref> obtained by <coref ref="C9" min="analysis" type="IDENT" id="C20">the Scatchard analysis</coref>.</sentence>
+<sentence id="S7"><coref ref="C6" min="assay" type="IDENT" id="C21">The single point assay</coref> has been also applied for determination of GH in <coref ref="C5" min="children" type="OTHER" id="C22">10 children treated with large doses of prednisone</coref>.</sentence>
+<sentence id="S8"><coref min="values" id="C23">The average values</coref> from <coref ref="C17" min="volunteers" type="IDENT" id="C24">healthy volunteers</coref> did not differ significantly from <coref ref="C23" type="PRON" id="C25">those</coref> found in <coref ref="C22" min="children" type="IDENT" id="C26">these children</coref>, though much broader range was found in patients.</sentence>
+</AbstractText>
+</Abstract></Article></MedlineCitation></PubmedArticle></PubmedArticleSet></Annotation>

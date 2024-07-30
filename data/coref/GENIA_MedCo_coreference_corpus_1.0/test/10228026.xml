@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10228026">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10228026</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Thrombin-induced p65 homodimer binding to downstream NF-kappa B site of the promoter mediates <coref min="expression" id="C1">endothelial ICAM-1 expression</coref> and neutrophil adhesion.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We investigated <coref id="C2">the mechanisms</coref> by <coref ref="C2" type="RELAT" id="C3">which</coref> <coref min="mediator" id="C4">proinflammatory mediator</coref>, <coref ref="C4" type="APPOS" id="C5">thrombin</coref>, released during intravascular coagulation and tissue injury, induces ICAM-1 (CD54) expression in <coref min="cells" id="C6">endothelial cells</coref>.</sentence>
+<sentence id="S3">Stimulation of HUVEC with <coref ref="C4" type="IDENT" id="C7">thrombin</coref> resulted in dose- and time-dependent increases in ICAM-1 mRNA and cell surface expression and in ICAM-1-dependent endothelial adhesivity toward polymorphonuclear leukocytes.</sentence>
+<sentence id="S4">Transient transfection of <coref ref="C6" min="cells" type="IDENT" id="C8">endothelial cells</coref> with ICAM-1 promoter luciferase reporter gene (ICAM-1LUC) constructs indicated that deletion of upstream NF-kappa B site (-533 bases from translation start site) had no effect on thrombin responsiveness, whereas mutation/deletion of <coref min="site" id="C9">downstream NF-kappa B site (-223 bases from the translation start site)</coref> prevented the activation of <coref min="promoter" id="C10">ICAM-1 promoter</coref>, indicating that <coref ref="C9" min="site" type="IDENT" id="C11">the downstream NF-kappa B site</coref> is critical for thrombin inducibility.</sentence>
+<sentence id="S5">NF-kappa B-directed luciferase activity increased approximately 3-fold when cells transfected with the plasmid pNF-kappa BLUC containing five copies of consensus NF-kappa B site linked to a minimal adenovirus E1B promoter-luciferase gene were exposed to <coref ref="C7" type="IDENT" id="C12">thrombin</coref>, indicating that activation of NF-kappa B was essential for thrombin response.</sentence>
+<sentence id="S6">Gel supershift assays demonstrated that <coref ref="C12" type="IDENT" id="C13">thrombin</coref> induced binding of NF-kappa Bp65 (Rel A) to <coref min="site" id="C14">downstream NF-kappa B site of <coref ref="C10" min="promoter" type="IDENT" id="C15">the ICAM-1 promoter</coref></coref>.</sentence>
+<sentence id="S7"><coref min="peptide" id="C16">Thrombin receptor activation peptide</coref>, <coref ref="C16" min="peptide" type="APPOS" id="C17">a 14-amino-acid peptide representing the new NH2 terminus of proteolytically activated receptor-1</coref>, mimicked thrombin's action in inducing ICAM-1 expression.</sentence>
+<sentence id="S8">These data indicate that <coref ref="C13" type="IDENT" id="C18">thrombin</coref> activates <coref ref="C1" min="expression" type="IDENT" id="C19">endothelial ICAM-1 expression</coref> and polymorphonuclear leukocyte adhesion by NF-kappa Bp65 binding to <coref ref="C14" min="site" type="IDENT" id="C20">the downstream NF-kappa B site of <coref ref="C15" min="promoter" type="IDENT" id="C21">ICAM-1 promoter</coref></coref> after proteolytically activated receptor-1 activation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

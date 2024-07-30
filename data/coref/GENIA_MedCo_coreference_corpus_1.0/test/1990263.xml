@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1990263">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1990263</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Nuclear factor kappa B</coref> activates proenkephalin transcription in <coref id="C2">T lymphocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Upon activation, <coref ref="C2" type="IDENT" id="C3">T lymphocytes</coref> accumulate <coref min="levels" id="C4">high levels of the neuropeptide enkephalin</coref> <coref ref="C4" type="RELAT" id="C5">which</coref> correlate with high levels of proenkephalin mRNA in <coref ref="C3" type="OTHER" id="C6">the cells</coref>.</sentence>
+<sentence id="S3">Here we investigated the transcriptional basis for these changes.</sentence>
+<sentence id="S4"><coref min="promoter" id="C7">The proenkephalin promoter</coref> contains <coref min="sequence" id="C8">a sequence GGGGACGTCCCC</coref>, named <coref ref="C8" type="IDENT" id="C9">B2</coref>, <coref ref="C9" type="RELAT" id="C10">which</coref> is similar to <coref id="C11">the kappa B sequence GGGGACTTTCC</coref>, <coref ref="C11" type="OTHER" id="C12">the binding site of the transcription factor <coref ref="C1" type="IDENT" id="C13">nuclear factor (NF)-kappa B</coref></coref>.</sentence>
+<sentence id="S5"><coref min="activation" id="C14">Activation of <coref ref="C3" type="IDENT" id="C15">T lymphocytes</coref></coref> induces an NF-kappa B-like binding activity to <coref id="C16">the B2 site</coref>, concomitant with activation of <coref ref="C7" min="promoter" type="IDENT" id="C17">the proenkephalin promoter</coref>.</sentence>
+<sentence id="S6">Mutations at <coref ref="C16" type="IDENT" id="C18">the B2 site</coref> abolish <coref ref="C14" min="activation" type="OTHER" id="C19">this transcriptional activation</coref>.</sentence>
+<sentence id="S7">The purified homodimer (two p50s) of the DNA-binding subunit of <coref ref="C13" type="IDENT" id="C20">NF-kappa B</coref> binds <coref ref="C16" type="IDENT" id="C21">the B2 site</coref> of proenkephalin relatively better than does the heterotetramer (two p65s plus two p50s) form of <coref ref="C20" type="IDENT" id="C22">the factor</coref>.</sentence>
+<sentence id="S8">Thus, it appears that the T-cell-specific activation of <coref ref="C17" min="promoter" type="IDENT" id="C23">the proenkephalin promoter</coref> is mediated by <coref ref="C20" type="IDENT" id="C24">NF-kappa B</coref>.</sentence>
+<sentence id="S9">However, as <coref ref="C24" type="IDENT" id="C25">NF-kappa B</coref> is ubiquitous and the transcriptional activation through <coref ref="C21" type="IDENT" id="C26">the B2 site</coref> is T cell specific, yet another T-cell-specific factor which synergizes with <coref ref="C25" type="IDENT" id="C27">NF-kappa B</coref> should be considered.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9159166">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9159166</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="homodimerization" id="C1">Homodimerization of <coref min="chain" id="C2">the human interleukin 4 receptor alpha chain</coref></coref> induces <coref min="transcripts" id="C3">Cepsilon germline transcripts</coref> in <coref min="cells" id="C4">B cells</coref> in the absence of <coref min="chain" id="C5">the interleukin 2 receptor gamma chain</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The cytokines interleukin (IL)-4 and IL-13 play a critical role in inducing <coref ref="C3" min="transcripts" type="IDENT" id="C6">Cepsilon germline transcripts</coref> and <coref min="switching" id="C7">IgE isotype switching</coref> in human B cells.</sentence>
+<sentence id="S3">The IL-4 receptor (IL-4R) in <coref ref="C4" min="cells" type="IDENT" id="C8">B cells</coref> is composed of two chains, <coref ref="C2" min="chain" type="IDENT" id="C9">the IL-4-binding IL-4Ralpha chain</coref>, <coref ref="C9" type="RELAT" id="C10">which</coref> is shared with the <coref id="C11">IL-13R</coref>, and <coref ref="C5" min="chain" type="IDENT" id="C12">the IL-2Rgamma (gammac) chain</coref>, <coref ref="C12" type="RELAT" id="C13">which</coref> is shared with IL-7R, IL-9R, and IL-15R.</sentence>
+<sentence id="S4"><coref id="C14">IL-4</coref> induces <coref ref="C6" min="transcripts" type="IDENT" id="C15">Cepsilon germline transcripts</coref> and <coref ref="C7" min="switching" type="IDENT" id="C16">IgE isotype switching</coref> in <coref min="cells" id="C17">B cells from patients with gammac chain deficiency</coref>.</sentence>
+<sentence id="S5">Induction of <coref ref="C15" min="transcripts" type="IDENT" id="C18">Cepsilon germline transcripts</coref> by <coref ref="C14" type="IDENT" id="C19">IL-4</coref> in <coref ref="C17" min="cells" type="IDENT" id="C20"><coref min="cells" id="C21">B cells</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> lack <coref ref="C12" min="chain" type="IDENT" id="C23">the gammac chain</coref></coref> may involve signaling via the <coref ref="C11" type="IDENT" id="C24">IL-13R</coref>.</sentence>
+<sentence id="S6">Alternatively, <coref ref="C9" min="chain" type="IDENT" id="C25">the IL-4Ralpha chain</coref> may transduce <coref min="signals" id="C26">intracellular signals</coref> <coref ref="C26" type="RELAT" id="C27">that</coref> lead to Cepsilon gene transcription independently of <coref ref="C25" type="PRON" id="C28">its</coref> association with other chains.</sentence>
+<sentence id="S7">We show that ligand-induced homodimerization of chimeric surface receptors consisting of the extracellular and transmembrane domains of the erythropoietin receptor and of the intracellular domain of <coref ref="C25" type="IDENT" id="C29">IL-4Ralpha</coref> induces Janus kinase 1 (Jak1) activation, STAT6 activation, and Cepsilon germline transcripts in human B cell line BJAB.</sentence>
+<sentence id="S8">Disruption of the Jak1-binding proline-rich Box1 region of <coref ref="C29" type="IDENT" id="C30">IL-4Ralpha</coref> abolished signaling by this chimeric receptor.</sentence>
+<sentence id="S9">Furthermore, B cells transfected with <coref min="receptor" id="C31">a chimeric CD8alpha/IL-4Ralpha receptor</coref>, <coref ref="C31" type="RELAT" id="C32">which</coref> is expressed on the cell surface as a homodimer, constitutively expressed <coref ref="C18" min="transcripts" type="IDENT" id="C33">Cepsilon germline transcripts</coref>.</sentence>
+<sentence id="S10">These results suggest that <coref ref="C1" min="homodimerization" type="IDENT" id="C34">homodimerization of <coref ref="C30" min="chain" type="IDENT" id="C35">the IL-4Ralpha chain</coref></coref> is sufficient to transduce <coref min="signals" id="C36">Jak1-dependent intracellular signals</coref> <coref ref="C36" type="RELAT" id="C37">that</coref> lead to <coref ref="C16" min="switching" type="IDENT" id="C38">IgE isotype switching</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

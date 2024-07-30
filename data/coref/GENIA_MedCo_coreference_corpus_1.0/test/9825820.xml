@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9825820">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9825820</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Membrane-associated lymphotoxin on <coref min="cells" id="C1">natural killer cells</coref> activates <coref min="cells" id="C2">endothelial cells</coref> via an NF-kappaB-dependent pathway.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: Inhibition of complement in small animal models of xenotransplantation has demonstrated graft infiltration with natural killer (NK) cells and monocytes associated with <coref min="activation" id="C3">endothelial cell (EC) activation</coref>.</sentence>
+<sentence id="S3">We have previously demonstrated that human NK cells activate <coref min="ec" id="C4">porcine EC in vitro</coref>, <coref ref="C4" type="RELAT" id="C5">which</coref> results in adhesion molecule expression and cytokine secretion.</sentence>
+<sentence id="S4">In this study, we used the NK cell line NK92 to define the molecular and cellular basis of NK cell-mediated EC activation.</sentence>
+<sentence id="S5">METHODS: <coref ref="C2" type="IDENT" id="C6">EC</coref> were transfected with either reporter constructs containing the luciferase gene driven either by E-selectin or interleukin (IL)-8 promoters or a synthetic NF-kappaB-dependent promoter.</sentence>
+<sentence id="S6">In addition, a dominant-negative mutant tumor necrosis factor receptor I (TNFRI) expression vector was co-transfected in inhibition studies.</sentence>
+<sentence id="S7">Forty-eight hours after transfection, <coref ref="C6" type="IDENT" id="C7">EC</coref> were stimulated with <coref ref="C1" min="cells" type="IDENT" id="C8">NK cells</coref> or <coref min="extracts" id="C9">NK cell membrane extracts</coref> for 7 hr and activation was measured by a luciferase assay.</sentence>
+<sentence id="S8">RESULTS: Co-culture of <coref ref="C8" min="cells" type="IDENT" id="C10">NK cells</coref> with transfected EC enhanced E-selectin, IL-8, and NF-kappaB-dependent promoter activity.</sentence>
+<sentence id="S9"><coref ref="C9" min="extracts" type="IDENT" id="C11">NK cell membrane extracts</coref> retained the capacity to activate <coref ref="C7" type="IDENT" id="C12">EC</coref> and induced <coref min="translocation" id="C13">nuclear translocation of NF-kappaB (p50 and p65)</coref>.</sentence>
+<sentence id="S10">Western blotting of NK cell and membrane extracts detected the presence of <coref id="C14">Lymphotoxin-alpha (LTalpha)</coref> but not tumor necrosis factor-alpha.</sentence>
+<sentence id="S11">Furthermore, <coref ref="C14" type="IDENT" id="C15">LTalpha</coref> was secreted in NK:EC co-cultures.</sentence>
+<sentence id="S12">Co-transfection with <coref min="tnfri" id="C16">dominant-negative mutant TNFRI</coref> inhibited <coref ref="C3" min="activation" type="IDENT" id="C17">EC activation</coref> by <coref ref="C11" min="extracts" type="IDENT" id="C18">NK cell membrane extracts</coref> and by <coref ref="C10" min="cells" type="IDENT" id="C19">NK cells</coref> by 80% and 47%, respectively.</sentence>
+<sentence id="S13">The same pattern of inhibition was observed using anti-human LT sera.</sentence>
+<sentence id="S14">CONCLUSIONS: Human NK cell membrane-bound LT signals across species via TNFRI, leading to <coref ref="C13" min="translocation" type="IDENT" id="C20">NF-kappaB nuclear translocation</coref> and transcription of E-selectin and IL-8, which results in <coref ref="C17" min="activation" type="IDENT" id="C21">EC activation</coref>.</sentence>
+<sentence id="S15">The discrepancy in the degree of inhibition by <coref ref="C18" min="extracts" type="IDENT" id="C22">membrane extracts</coref> and <coref ref="C19" min="cells" type="IDENT" id="C23">NK cells</coref> with <coref ref="C16" min="tnfri" type="IDENT" id="C24">mutant TNFRI</coref> suggests that additional pathways are utilized by <coref ref="C23" min="cells" type="IDENT" id="C25">NK cells</coref> to activate <coref ref="C12" type="IDENT" id="C26">EC</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

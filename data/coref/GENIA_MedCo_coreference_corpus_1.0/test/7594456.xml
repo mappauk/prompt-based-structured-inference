@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7594456">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7594456</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of the signal transducer and transcription (STAT) signaling pathway in <coref min="t cell response" id="C1">a primary T cell response</coref>.</sentence>
+<sentence id="S2">Critical role for <coref id="C2">IL-6</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">The T cell activation is initiated by interaction of specific Ags with TCR, followed by activation of intracellular biochemical events leading to activation of several genes.</sentence>
+<sentence id="S4">The activation of signal transducer and activator of transcription (STAT) proteins in a primary TCR-mediated activation of T cells have been explored.</sentence>
+<sentence id="S5">In purified human peripheral blood T cells, <coref min="proteins" id="C3">nuclear STAT proteins</coref> were activated approximately 3 h after activation by cross-linked anti-CD3 Abs.</sentence>
+<sentence id="S6"><coref ref="C3" min="proteins" type="IDENT" id="C4">These STAT proteins</coref> were detected by using the IFN-gamma-activated sequence (GAS) and related oligonucleotides as probes in electrophoretic mobility shift assay.</sentence>
+<sentence id="S7">Analysis of <coref min="extracts" id="C5">the nuclear extracts</coref> with anti-STAT Abs indicated that <coref ref="C5" type="PRON" id="C6">they</coref> contained STAT-3 and additional proteins crossreactive with the STAT family.</sentence>
+<sentence id="S8"><coref min="induction" id="C7">The induction of STAT activity</coref> was inhibited completely by pretreatment with either cycloheximide or cyclosporin A, thus indicating that <coref ref="C7" type="IDENT" id="C8">the induction</coref> was due to a secondary factor produced by the activated T cells.</sentence>
+<sentence id="S9">As neutralizing anti-IL-6 Abs effectively down-regulated the early induction of <coref ref="C4" type="IDENT" id="C9">STAT proteins</coref> and as exogenously added IL-6 rapidly activated DNA binding similar to TCR-mediated bindings, it can be concluded that <coref ref="C2" type="IDENT" id="C10">IL-6</coref> is the factor responsible for the activation of <coref ref="C9" min="proteins" type="IDENT" id="C11">STAT proteins</coref> in <coref ref="C1" min="t cell response" type="IDENT" id="C12">a primary T cell response</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

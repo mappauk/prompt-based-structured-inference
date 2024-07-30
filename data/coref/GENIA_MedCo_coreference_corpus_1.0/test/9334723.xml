@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9334723">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9334723</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="vpr" id="C1">HIV-1 Vpr</coref> suppresses immune activation and <coref id="C2">apoptosis</coref> through regulation of <coref id="C3">nuclear factor kappa B</coref> [see comments]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C4">The HIV-1 accessory gene product Vpr</coref> can influence <coref min="pathogenesis" id="C5">viral pathogenesis</coref> by affecting viral replication as well as host cell transcription and proliferation.</sentence>
+<sentence id="S3">We have investigated the effects of <coref ref="C4" type="IDENT" id="C6">Vpr</coref> on host cell activation and confirm that <coref ref="C6" type="PRON" id="C7">it</coref> influences cellular proliferation.</sentence>
+<sentence id="S4">However, we have also found that <coref ref="C6" type="IDENT" id="C8">Vpr</coref> modulates T-cell receptor (TCR)-triggered apoptosis in <coref id="C9">a manner</coref> similar to <coref ref="C9" type="PRON" id="C10">that</coref> of glucocorticoids.</sentence>
+<sentence id="S5">In the absence of <coref min="activation" id="C11">TCR-mediated activation</coref>, <coref ref="C8" type="IDENT" id="C12">Vpr</coref> induces <coref ref="C2" type="IDENT" id="C13">apoptosis</coref> whereas in <coref ref="C11" type="IDENT" id="C14">its</coref> presence, <coref ref="C12" type="IDENT" id="C15">Vpr</coref> interrupts the expected induction of <coref ref="C13" type="IDENT" id="C16">apoptosis</coref>.</sentence>
+<sentence id="S6">This regulation of <coref ref="C16" type="IDENT" id="C17">apoptosis</coref> is linked to Vpr suppression of NF-kappa B activity via the induction of <coref id="C18">I kappa B</coref>, <coref ref="C18" min="inhibitor" type="APPOS" id="C19">an inhibitor of <coref ref="C3" type="IDENT" id="C20">NF-kappa B</coref></coref>.</sentence>
+<sentence id="S7">Further, <coref ref="C15" type="IDENT" id="C21">Vpr</coref> suppresses expression of <coref id="C22">IL-2, IL-10, IL-12, TNF alpha and IL-4</coref>, <coref ref="C22" type="IDENT" id="C23">all of <coref ref="C22" type="RELAT" id="C24">which</coref></coref> are NF-kappa B-dependent.</sentence>
+<sentence id="S8">The effects of <coref ref="C21" type="IDENT" id="C25">Vpr</coref> could be reversed by RU486.</sentence>
+<sentence id="S9"><coref min="finding" id="C26">Our finding</coref> <coref ref="C26" type="IDENT" id="C27">that</coref> <coref ref="C25" type="IDENT" id="C28">Vpr</coref> can regulate <coref ref="C20" type="IDENT" id="C29">NF-kappa B</coref> supports <coref id="C30">the hypothesis</coref> <coref ref="C30" type="IDENT" id="C31">that</coref> some aspects of <coref ref="C5" min="pathogenesis" type="IDENT" id="C32">viral pathogenesis</coref> are the consequence of cell dysregulation by <coref ref="C28" type="IDENT" id="C33">Vpr</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

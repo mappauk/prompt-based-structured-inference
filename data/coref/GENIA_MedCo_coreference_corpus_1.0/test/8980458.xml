@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8980458">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8980458</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of signaling pathways and prevention of <coref id="C1">apoptosis</coref> by cytokines in <coref id="C2">eosinophils</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Inhibition of <coref ref="C1" min="apoptosis" type="IDENT" id="C3">apoptosis in eosinophils</coref> by <coref id="C4">cytokines such as IL-5 and GM-CSF</coref> may play an important role in the pathogenesis of allergic and parasitic disorders.</sentence>
+<sentence id="S3">Recently, there has been some progress in the understanding of the signal transduction pathways activated by <coref ref="C4" min="cytokines" type="IDENT" id="C5">these cytokines</coref> in <coref ref="C2" type="IDENT" id="C6">eosinophils</coref>.</sentence>
+<sentence id="S4">The IL-3, IL-5 and GM-CSF receptors share <coref min="transducer" id="C7">a common signal transducer</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> possesses no intrinsic kinase domain.</sentence>
+<sentence id="S5">It has been shown that eosinophil stimulation by <coref ref="C5" min="cytokines" type="IDENT" id="C9">these cytokines</coref> is associated with increases in tyrosine phosphorylation of several cellular substrates.</sentence>
+<sentence id="S6">In the past few years, there has been some progress in defining <coref min="kinases" id="C10">the tyrosine kinases</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> are activated by the IL-3/IL-5/GM-CSF receptor beta-subunit in <coref ref="C6" type="IDENT" id="C12">eosinophils</coref>.</sentence>
+<sentence id="S7">This review will concentrate on this topic and on its role for the regulation of <coref ref="C3" min="apoptosis" type="IDENT" id="C13">eosinophil apoptosis</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

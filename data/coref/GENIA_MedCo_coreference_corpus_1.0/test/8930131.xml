@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8930131">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8930131</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="transcription factor" id="C1">The Oct-2 transcription factor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="transcription factor" type="IDENT" id="C2">The Oct-2 transcription factor</coref> is a member of the POU (Pit-Oct-Unc) family of transcription factors and is expressed only in <coref id="C5">B lymphocytes</coref> and in <coref id="C13">neuronal cells</coref> but not in other cell types.</sentence>
+<sentence id="S3">The primary RNA transcript of the gene is subject to alternative splicing to yield <coref min="variants" id="C3">different variants</coref> <coref ref="C3" type="RELAT" id="C4">which</coref> can either activate or repress gene expression.</sentence>
+<sentence id="S4"><coref id="C7">The forms</coref> produced in <coref ref="C5" type="IDENT" id="C6">B lymphocytes</coref> have a predominantly activating effect on gene expression whereas <coref ref="C7" type="PRON" id="C8">those</coref> produced in <coref ref="C13" type="IDENT" id="C11">neuronal cells</coref> have a predominantly inhibitory effect and can repress the expression of both the herpes simplex virus immediate-early genes and the cellular tyrosine hydroxylase gene.</sentence>
+<sentence id="S5">Thus <coref ref="C2" type="IDENT" id="C9">Oct-2</coref> plays an important role in the regulation of cellular gene expression in both <coref ref="C6" type="IDENT" id="C10">B cells</coref> and <coref ref="C11" type="IDENT" id="C12">neuronal cells</coref> as well as in the control of viral latency.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

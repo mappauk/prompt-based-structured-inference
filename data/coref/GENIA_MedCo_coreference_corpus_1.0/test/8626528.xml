@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8626528">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8626528</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Nuclear appearance of <coref id="C1">a factor</coref> <coref ref="C1" type="RELAT" id="C2">that</coref> binds <coref id="C3">the CD28 response element</coref> within <coref id="C4">the interleukin-2 enhancer</coref> correlates with <coref id="C5">interleukin-2 production</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Activation of T lymphocytes requires the combined signaling of the T cell receptor and costimulatory molecules such as CD28.</sentence>
+<sentence id="S3">The ability of T cells to produce interleukin-2 (IL-2) is a critical control point in T lymphocyte activation.</sentence>
+<sentence id="S4"><coref ref="C4" type="IDENT" id="C6">The IL-2 enhancer</coref> contains <coref ref="C3" type="IDENT" id="C7">a functional motif named CD28 response element (CD28RE)</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> serves a role as a target for mitogenic T cell activation signals.</sentence>
+<sentence id="S5">The CD28RE sequence reveals similarity to the consensus kappaB binding motif.</sentence>
+<sentence id="S6">Here we demonstrate that CD28RE binds an inducible protein with <coref min="mass" id="C9">a molecular mass of approximately 35 kDa called nuclear factor of mitogenic-activated T cells (NF-MATp35)</coref> <coref ref="C9" type="RELAT" id="C10">that</coref> is clearly different from the known NF- kappaB/Rel family members.</sentence>
+<sentence id="S7">Induction of <coref ref="C9" type="IDENT" id="C11">NF-MATp35</coref> was shown to depend on de novo protein synthesis and was restricted to <coref id="C12">T cells</coref> <coref ref="C12" type="RELAT" id="C13">that</coref> received a mitogenic combination of T cell stimuli, not necessarily including CD28 signaling.</sentence>
+<sentence id="S8">Nonmitogenic T cell stimulation did not result in appearance of <coref ref="C11" type="IDENT" id="C14">NF-MATp35</coref>.</sentence>
+<sentence id="S9">These results indicate that mitogenic combinations of T cell activation signals are integrated at the level of <coref min="induction" id="C15">NF-MATp35 induction</coref>.</sentence>
+<sentence id="S10">Similar to <coref ref="C18" type="PRON" id="C16">its</coref> effect on <coref ref="C5" type="IDENT" id="C17">IL-2 production</coref>, <coref id="C18">cyclosporin A</coref> inhibited <coref ref="C15" min="induction" type="IDENT" id="C19">the induction of <coref ref="C14" type="IDENT" id="C20">NF-MATp35</coref></coref>.</sentence>
+<sentence id="S11">Taken together, these data demonstrate that the nuclear appearance of <coref ref="C20" type="IDENT" id="C21">NF-MATp35</coref> shows <coref min="correlation" id="C22">excellent correlation with <coref ref="C17" type="IDENT" id="C23">IL-2 production</coref></coref>, <coref ref="C22" type="RELAT" id="C24">which</coref> is a unique characteristic among nuclear factors implicated in the control of IL-2 gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

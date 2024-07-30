@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9383828">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9383828</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Pathogenesis.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">There are many hypotheses concerning <coref min="pathogenesis" id="C1">the pathogenesis of <coref id="C2">endometriosis</coref></coref>, though no single theory can explain all cases.</sentence>
+<sentence id="S3">It is likely that several mechanisms are involved.</sentence>
+<sentence id="S4">Early studies concentrated on the histogenesis of the endometriotic lesion.</sentence>
+<sentence id="S5">Recent evidence has implicated components of the immune system in <coref ref="C1" min="pathogenesis" type="IDENT" id="C3">the pathogenesis of <coref ref="C2" type="IDENT" id="C4">endometriosis</coref></coref>.</sentence>
+<sentence id="S6">This review considers the evidence for different theories of the histogenesis of <coref ref="C4" type="IDENT" id="C5">endometriosis</coref> and discusses <coref min="factors" id="C6">possible immune factors</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> may be involved in the pathophysiology of <coref ref="C5" type="IDENT" id="C8">the disease</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

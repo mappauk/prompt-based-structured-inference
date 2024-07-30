@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7543515">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7543515</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="costimulation" id="C1">Costimulation of <coref min="cells" id="C2">human CD4+ T cells</coref> with <coref id="C3">LFA-3</coref> and <coref id="C4">B7</coref></coref> induce <coref min="effects" id="C5">distinct effects on <coref min="transcription factors" id="C6">AP-1 and NF-kappa B transcription factors</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have earlier shown that stimulation of <coref ref="C2" min="cells" type="IDENT" id="C7">human CD4+ T cells</coref> with SEA presented on <coref min="transfectants" id="C8">Chinese hamster ovary (CHO)-DR transfectants</coref> coexpressing either <coref ref="C4" type="IDENT" id="C9">B7</coref> or <coref ref="C3" type="IDENT" id="C10">LFA-3</coref> resulted in distinct cytokine profiles.</sentence>
+<sentence id="S3">We now demonstrate that <coref ref="C9" type="IDENT" id="C11">B7</coref>, but not <coref ref="C10" type="IDENT" id="C12">LFA-3</coref>, strongly costimulated <coref min="transcription" id="C13">IL-2 transcription</coref> and mRNA expression in <coref ref="C7" min="cells" type="IDENT" id="C14">CD4+ T cells</coref>.</sentence>
+<sentence id="S4">Maximal increase in <coref ref="C13" min="transcription" type="IDENT" id="C15">IL-2 transcription</coref> was recorded with <coref id="C16">CHO-DR/B7/LFA-3</coref>, suggesting a cooperative effect of <coref ref="C11" type="IDENT" id="C17">B7</coref> and <coref ref="C12" type="IDENT" id="C18">LFA-3</coref> at the transcriptional level.</sentence>
+<sentence id="S5">Gel-shift analysis demonstrated that stimulation of <coref ref="C14" min="cells" type="IDENT" id="C19">CD4+ T cells</coref> with <coref ref="C8" type="IDENT" id="C20">CHO-DR</coref> and staphylococcal enterotoxin A was sufficient to induce significant amounts of NF-kappa B binding proteins, whereas induction of <coref min="proteins" id="C21">AP-1 binding proteins</coref> required costimulation.</sentence>
+<sentence id="S6"><coref ref="C18" type="IDENT" id="C22">LFA-3</coref> induced moderate levels of AP-1, but did not influence the levels of NF-kappa B, while B7 costimulation strongly induced both AP-1 and substantially enhanced NF-kappa B binding proteins.</sentence>
+<sentence id="S7"><coref ref="C16" min="transfectant" type="IDENT" id="C23">The CHO-DR/B7/LFA-3 triple transfectant</coref> induced a further increase in AP-1 and NF-kappa B binding proteins compared with the double transfectants.</sentence>
+<sentence id="S8">The level of Oct-1 binding proteins remained similar in all samples.</sentence>
+<sentence id="S9">Super-shift analysis revealed that the NF-kappa B complex of costimulated CD4+ T cells contained large amounts of p50, substantial amounts of p65, and marginal levels of c-Rel proteins.</sentence>
+<sentence id="S10"><coref ref="C21" min="proteins" type="IDENT" id="C24">The AP-1 binding proteins</coref> contained c-Jun, Jun-D, and Fra-1, but marginal amounts of Jun-B and c-Fos.</sentence>
+<sentence id="S11">Our results indicate <coref ref="C5" min="effects" type="IDENT" id="C25">distinct effects of <coref ref="C1" min="costimulation" type="IDENT" id="C26">B7 and LFA-3 costimulation</coref> on the activity of <coref ref="C6" type="IDENT" id="C27">AP-1 and NF-kappa B</coref></coref>.</sentence>
+<sentence id="S12"><coref ref="C25" type="PRON" id="C28">These</coref> may partly account for the differential effects of <coref ref="C26" min="costimulation" type="IDENT" id="C29">B7 and LFA-3 costimulation</coref> on IL-2 expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

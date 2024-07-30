@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9572990">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9572990</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of <coref id="C1">Stat-3</coref> is involved in <coref min="induction" id="C2">the induction of apoptosis after <coref min="ligation" id="C3">ligation of <coref min="molecules" id="C4">major histocompatibility complex class I molecules</coref></coref></coref> on <coref min="cells" id="C5">human Jurkat T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Activation of Janus tyrosine kinases (Jak) and Signal transducers and activators of transcription (Stat) after <coref ref="C3" min="ligation" type="IDENT" id="C6">ligation of <coref ref="C4" type="IDENT" id="C7">major histocompatibility complex class I (MHC-I)</coref></coref> was explored in <coref ref="C5" min="cells" type="IDENT" id="C8">Jurkat T cells</coref>.</sentence>
+<sentence id="S3">Cross-linking of MHC-I mediated tyrosine phosphorylation of Tyk2, but not Jak1, Jak2, and Jak3.</sentence>
+<sentence id="S4">In addition, <coref ref="C1" type="IDENT" id="C9">the transcription factor Stat-3</coref> was tyrosine phosphorylated in the cytoplasm and subsequently translocated to the cell nucleus.</sentence>
+<sentence id="S5">Data obtained by electrophoretic mobility shift assay suggested that <coref min="protein" type="IDENT" id="C10">the activated Stat-3 protein</coref> associates with the human serum-inducible element (hSIE) DNA-probe derived from the interferon-gamma activated site (GAS) in the c-fos promoter, a common DNA sequence for Stat protein binding.</sentence>
+<sentence id="S6">An association between hSIE and <coref ref="C9" type="IDENT" id="C11">Stat-3</coref> after <coref ref="C6" min="ligation" type="IDENT" id="C12">MHC-I ligation</coref> was directly demonstrated by precipitating <coref ref="C11" type="IDENT" id="C13">Stat-3 from nuclear extracts</coref> with biotinylated hSIE probe and avidin-coupled agarose.</sentence>
+<sentence id="S7">To investigate the function of <coref ref="C10" min="stat-3" type="IDENT" id="C14">the activated Stat-3</coref>, <coref ref="C8" min="cells" type="IDENT" id="C15">Jurkat T cells</coref> were transiently transfected with <coref min="isoform" id="C16">a Stat-3 isoform lacking the transactivating domain</coref>.</sentence>
+<sentence id="S8"><coref ref="C16" min="isoform" type="IDENT" id="C17">This dominant-negative acting Stat-3 isoform</coref> significantly inhibited <coref ref="C2" min="apoptosis" type="IDENT" id="C18">apoptosis induced by <coref ref="C12" type="IDENT" id="C19">ligation of <coref ref="C7" type="IDENT" id="C20">MHC-I</coref></coref></coref>.</sentence>
+<sentence id="S9">In conclusion, our data suggest the involvement of the Jak/Stat signal pathway in MHC-I-induced signal transduction in <coref ref="C15" min="cells" type="IDENT" id="C21">T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>
