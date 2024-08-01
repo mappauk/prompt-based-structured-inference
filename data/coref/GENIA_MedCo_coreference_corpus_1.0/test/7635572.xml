@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7635572">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7635572</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">RB</coref> and <coref min="protein" id="C2">a novel E2F-1 binding protein</coref> in MHC class II deficient B-cell lines and normal IFN-gamma induction of <coref id="C3">the class IL transactivator CIITA</coref> in <coref min="tumor lines" id="C4">class II non-inducible RB-defective tumor lines</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The major histocompatibility (MHC) class II genes encode <coref min="proteins" id="C5"><coref min="proteins" id="C6">cell surface proteins</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> bind antigenic peptide for presentation to T-cells</coref>.</sentence>
+<sentence id="S3"><coref ref="C5" min="proteins" type="IDENT" id="C8">The class II proteins</coref> are expressed constitutively on B-cells and EBV-transformed B-cells, and are inducible by <coref id="C9">IFN-gamma</coref> on a wide variety of cell types.</sentence>
+<sentence id="S4"><coref ref="C1" type="IDENT" id="C10">Retinoblastoma protein (RB)</coref> is a tumor suppressor and functions as a transcriptional repressor by binding and inactivating the transactivator E2F-I.</sentence>
+<sentence id="S5"><coref ref="C4" min="tumor lines" type="IDENT" id="C11">RB-defective tumor lines</coref> are non-inducible for <coref id="C12">MHC class II</coref> by <coref ref="C9" type="IDENT" id="C13">IFN-gamma</coref>, or very weakly inducible, but transfection of 2 different lines with RB expression vectors re-establishes or substantially enhances class II inducibility.</sentence>
+<sentence id="S6">Therefore, we examined the RB status of <coref min="mutants" id="C14">a series of B-cell mutants</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> are defective in class II expression, generated either in vitro or derived from Bare Lymphocyte Syndrome (BLS) patients.</sentence>
+<sentence id="S7">Nuclear matrix-bound RB was detectable in all cases, indicating that loss of <coref ref="C10" type="IDENT" id="C16">RB</coref> is not responsible for decreased class II expression in these lines.</sentence>
+<sentence id="S8"><coref ref="C2" min="protein" type="IDENT" id="C17">A second E2F-I binding protein</coref>, most likely <coref ref="C17" type="IDENT" id="C18">DP-I</coref>, was also apparently normal in both class II-positive and -negative B-cell lines.</sentence>
+<sentence id="S9">We also examined the IFN-gamma induction of <coref ref="C3" type="IDENT" id="C19">CIITA</coref> in RB-defective lines.</sentence>
+<sentence id="S10"><coref ref="C19" type="IDENT" id="C20">CIITA</coref> is a class II gene transactivator known to be defective in one form of BLS and to be required for the induction of <coref ref="C12" type="IDENT" id="C21">MHC class II</coref> by <coref ref="C13" type="IDENT" id="C22">IFN-gamma</coref>.</sentence>
+<sentence id="S11">CIITA mRNA is normally inducible by <coref ref="C22" type="IDENT" id="C23">IFN-gamma</coref> in class II non-inducible, RB-defective lines, and in one line, re-expression of <coref ref="C16" type="IDENT" id="C24">RB</coref> has no effect on CIITA mRNA induction levels.</sentence>
+<sentence id="S12">Thus, the block in MHC class II inducibility in RB-defective cells is not due to a block in CIITA inducibility.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

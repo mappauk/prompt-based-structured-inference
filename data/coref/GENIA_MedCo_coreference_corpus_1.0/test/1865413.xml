@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1865413">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1865413</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="receptors" id="C1"><coref id="C2">Glucocorticoid</coref> receptors</coref> in <coref id="C3">systemic lupus erythematosus</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" type="IDENT" id="C4">Glucocorticosteroids</coref> remain the major treatment modality for <coref ref="C3" type="IDENT" id="C5">systemic lupus erythematosus (SLE)</coref>, but <coref ref="C4" type="PRON" id="C6">their</coref> mechanism of action is unclear.</sentence>
+<sentence id="S3">Over the past decade it has become clear that <coref ref="C1" min="receptors" type="IDENT" id="C7"><coref ref="C4" type="IDENT" id="C8">glucocorticosteroid</coref> receptors</coref> play a significant role in the mechanism of glucocorticosteroid action.</sentence>
+<sentence id="S4">We studied glucocorticosteroid receptor density and affinity on peripheral blood mononuclear cells by the glucocorticosteroid binding assay in <coref min="patients" id="C9">33 patients with <coref ref="C5" type="IDENT" id="C10">SLE</coref></coref> <coref ref="C9" type="RELAT" id="C11">who</coref> had taken no <coref ref="C8" type="IDENT" id="C12">glucocorticosteroid</coref> for the previous 6 months and in <coref min="controls" id="C13">32 healthy controls</coref>.</sentence>
+<sentence id="S5"><coref id="C14">Patients' disease activity</coref> was measured by the SLE Disease Activity Index (SLEDAI).</sentence>
+<sentence id="S6"><coref ref="C7" min="receptors" type="IDENT" id="C15"><coref ref="C12" type="IDENT" id="C16">Glucocorticosteroid</coref> receptors</coref> on leukocytes of <coref ref="C9" min="patients" type="IDENT" id="C17">patients with <coref ref="C10" type="IDENT" id="C18">SLE</coref></coref> were significantly higher than in <coref ref="C13" min="controls" type="IDENT" id="C19">healthy controls</coref> (4419 +/- 306 vs 3369 +/- 196, p less than 0.005).</sentence>
+<sentence id="S7">The binding affinity was not different between <coref ref="C17" type="IDENT" id="C20">patients</coref> and <coref ref="C19" type="IDENT" id="C21">controls</coref>.</sentence>
+<sentence id="S8">There was no correlation between glucocorticosteroid receptor number and <coref ref="C14" type="IDENT" id="C22">SLE disease activity</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

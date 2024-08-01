@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1374612">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1374612</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The mechanism of action of <coref id="C1">cyclosporin A and FK506</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">CsA and FK506</coref> are powerful suppressors of the immune system, most notably of T cells.</sentence>
+<sentence id="S3"><coref ref="C2" type="PRON" id="C3">They</coref> act at <coref min="point" id="C4">a point in activation</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> lies between receptor ligation and the transcription of early genes.</sentence>
+<sentence id="S4">Here, Stuart Schreiber and Gerald Crabtree review <coref min="findings" id="C6">recent findings</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> indicate <coref ref="C2" type="IDENT" id="C8">CsA and FK506</coref> operate as prodrugs: <coref ref="C8" type="PRON" id="C9">they</coref> bind <coref min="receptors" id="C10">endogenous intracellular receptors</coref>, <coref ref="C10" type="APPOS" id="C11">the immunophilins</coref>, and the resulting complex targets <coref id="C12">the protein phosphatase</coref>, <coref ref="C12" type="APPOS" id="C13">calcineurin</coref>, to exert the immunosuppressive effect.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

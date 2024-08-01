@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8460169">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8460169</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Mutual regulation of <coref min="activator" id="C1">the transcriptional activator <coref id="C2">NF-kappa B</coref></coref> and <coref id="C3"><coref ref="C1" type="PRON" id="C4">its</coref> inhibitor</coref>, <coref ref="C3" type="APPOS" id="C5">I kappa B-alpha</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="complex" type="OTHER" id="C6">The <coref ref="C2" type="IDENT" id="C7">NK-kappa B</coref> transcription factor complex</coref> is sequestered in the cytoplasm by <coref ref="C5" min="protein" type="IDENT" id="C8">the inhibitory protein I kappa B-alpha (MAD-3)</coref>.</sentence>
+<sentence id="S3">Various cellular stimuli relieve this inhibition by mechanisms largely unknown, leading to <coref id="C9"><coref ref="C7" type="IDENT" id="C10">NF-kappa B</coref> nuclear</coref> localization and transactivation of <coref ref="C9" type="PRON" id="C11">its</coref> target genes.</sentence>
+<sentence id="S4">It is demonstrated here with human T lymphocytes and monocytes that different stimuli, including tumor necrosis factor alpha and phorbol 12-myristate 13-acetate, cause rapid degradation of <coref ref="C8" type="IDENT" id="C12">I kappa B-alpha</coref>, with concomitant activation of <coref ref="C10" type="IDENT" id="C13">NF-kappa B</coref>, followed by a dramatic increase in <coref ref="C12" type="IDENT" id="C14"><coref id="C15">I kappa B-alpha</coref> mRNA</coref> and protein synthesis.</sentence>
+<sentence id="S5">Transfection studies reveal that <coref ref="C15" type="IDENT" id="C16">the I kappa B-alpha mRNA</coref> and the encoded protein are potently induced by <coref ref="C13" type="IDENT" id="C17">NF-kappa B</coref> and by homodimers of p65 and of c-Rel.</sentence>
+<sentence id="S6">We propose <coref id="C18">a model</coref> in <coref ref="C18" type="RELAT" id="C19">which</coref> <coref ref="C17" type="IDENT" id="C20">NF-kappa B</coref> and <coref ref="C12" type="IDENT" id="C21">I kappa B-alpha</coref> mutually regulate each other in a cycle: saturating amounts of <coref ref="C8" min="protein" type="IDENT" id="C22">the inhibitory <coref ref="C21" type="IDENT" id="C23">I kappa B-alpha</coref> protein</coref> are destroyed upon stimulation, allowing rapid activation of <coref ref="C17" type="IDENT" id="C24">NF-kappa B</coref>.</sentence>
+<sentence id="S7">Subsequently, <coref ref="C16" type="IDENT" id="C25"><coref ref="C15" type="IDENT" id="C26">I kappa B-alpha</coref> mRNA</coref> and <coref id="C27">protein</coref> levels are quickly induced by <coref ref="C24" type="OTHER" id="C28">the activated NF-kappa B</coref>.</sentence>
+<sentence id="S8">This resurgence of <coref ref="C27" min="protein" type="OTHER" id="C29"><coref ref="C26" type="IDENT" id="C30">I kappa B-alpha</coref> protein</coref> acts to restore <coref id="C31">an equilibrium</coref> in <coref ref="C31" type="RELAT" id="C32">which</coref> <coref ref="C24" type="IDENT" id="C33">NF-kappa B</coref> is again inhibited.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

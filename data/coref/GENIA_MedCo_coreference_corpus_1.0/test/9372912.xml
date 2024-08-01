@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9372912">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9372912</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Regulation of Id3 cell cycle function by <coref min="phosphorylation" id="C1">Cdk-2-dependent phosphorylation</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The functions of basic helix-loop-helix (bHLH) transcription factors in activating differentiation-linked gene expression and in inducing G1 cell cycle arrest are negatively regulated by <coref min="members" id="C2">members of the Id family of HLH proteins</coref>.</sentence>
+<sentence id="S3"><coref ref="C2" min="antagonists" type="IDENT" id="C3">These bHLH antagonists</coref> are induced during a mitogenic signalling response, and <coref ref="C2" type="PRON" id="C4">they</coref> function by sequestering <coref ref="C2" type="PRON" id="C5">their</coref> bHLH targets in <coref min="heterodimers" id="C6">inactive heterodimers</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> are unable to bind to specific gene regulatory (E box) sequences.</sentence>
+<sentence id="S4">Recently, <coref min="phosphorylation" id="C8">cyclin E-Cdk2- and cyclin A-Cdk2-dependent phosphorylation of a single conserved serine residue (Ser5) in <coref id="C9">Id2</coref></coref> has been shown to occur during late G1-to-S phase transition of the cell cycle, and <coref ref="C8" type="PRON" id="C10">this</coref> neutralizes the function of <coref ref="C9" type="IDENT" id="C11">Id2</coref> in abrogating <coref min="formation" id="C12">E-box-dependent bHLH homo- or heterodimer complex formation in vitro</coref> (E.Hara, M.Hall, and G.Peters, EMBO J.16:332-342, 1997).</sentence>
+<sentence id="S5">We now show that an analogous cell-cycle-regulated phosphorylation of <coref id="C13">Id3</coref> alters the specificity of <coref ref="C13" type="IDENT" id="C14">Id3</coref> for abrogating both <coref ref="C12" min="formation" type="IDENT" id="C15">E-box-dependent bHLH homo- or heterodimer complex formation in vitro</coref> and E-box-dependent reporter gene function in vivo.</sentence>
+<sentence id="S6">Furthermore, compared with <coref id="C16">wild-type Id3</coref>, an Id3 Asp5 mutant (mimicking phosphorylation) is unable to promote <coref min="entry" id="C17">cell cycle S phase entry</coref> in transfected fibroblasts, whereas an Id3 Ala5 mutant (ablating phosphorylation) displays <coref id="C18">an activity</coref> significantly greater than <coref ref="C18" type="PRON" id="C19">that</coref> of <coref ref="C16" min="protein" type="IDENT" id="C20">wild-type Id3 protein</coref>.</sentence>
+<sentence id="S7"><coref ref="C1" min="phosphorylation" type="IDENT" id="C21">Cdk2-dependent phosphorylation</coref> therefore provides a switch during <coref min="phase" id="C22">late G1-to-S phase</coref> <coref ref="C22" type="RELAT" id="C23">that</coref> both nullifies an early G1 cell cycle regulatory function of <coref ref="C14" type="IDENT" id="C24">Id3</coref> and modulates <coref ref="C22" type="PRON" id="C25">its</coref> target bHLH specificity.</sentence>
+<sentence id="S8">These data also demonstrate that the ability of <coref ref="C24" type="IDENT" id="C26">Id3</coref> to promote <coref ref="C17" min="entry" type="IDENT" id="C27">cell cycle S phase entry</coref> is not simply a function of <coref ref="C26" type="PRON" id="C28">its</coref> ability to modulate bHLH heterodimer-dependent gene expression and establish <coref min="mechanism" id="C29">a biologically important mechanism</coref> through <coref ref="C29" type="RELAT" id="C30">which</coref> Cdk2 and Id-bHLH functions are integrated in the coordination of cell proliferation and differentiation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7543512">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7543512</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">IL-10</coref> induces the tyrosine phosphorylation of tyk2 and Jak1 and the differential assembly of STAT1 alpha and STAT3 complexes in <coref id="C2">human T cells</coref> and <coref id="C3">monocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C4">IL-10</coref> affects <coref ref="C3" type="IDENT" id="C5">monocytes</coref> and <coref ref="C2" min="cells" type="IDENT" id="C6">T cells</coref> by driving the progression of immune responsiveness such that Th2 lymphocyte-mediated effects predominate.</sentence>
+<sentence id="S3">In this report, we show that in <coref ref="C5" type="IDENT" id="C7">monocytes</coref> and <coref ref="C6" min="cells" type="IDENT" id="C8">T cells</coref> <coref ref="C4" type="IDENT" id="C9">IL-10</coref> stimulates tyrosine phosphorylation of <coref id="C10">the signal transducers and activators of transcription</coref>, <coref ref="C10" type="APPOS" id="C11">STAT1 alpha and STAT3</coref>, in a differential manner such that the relative formation of homo- and heterodimers varies between the two cell types.</sentence>
+<sentence id="S4">Moreover, <coref ref="C7" type="IDENT" id="C12">monocytes</coref> express a novel IL-10-stimulated STAT protein with <coref id="C13">an M(r) of 70 kDa</coref> <coref ref="C13" type="RELAT" id="C14">that</coref> is recognized by the anti-STAT3 Ab but is not observed in <coref ref="C8" type="IDENT" id="C15">T cells</coref>.</sentence>
+<sentence id="S5">IL-10 treatment of both <coref ref="C15" type="IDENT" id="C16">T cells</coref> and <coref ref="C12" type="IDENT" id="C17">monocytes</coref> results in the ligand-induced tyrosine phosphorylation of tyk2 and Jak1, but not Jak2 or Jak3.</sentence>
+<sentence id="S6">Selective modulation of immune responsiveness by <coref ref="C4" type="IDENT" id="C18">IL-10</coref> in cells such as <coref ref="C17" type="IDENT" id="C19">monocytes</coref> and <coref ref="C16" type="IDENT" id="C20">T cells</coref> may result in part from the differential activation of STAT protein pairs.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

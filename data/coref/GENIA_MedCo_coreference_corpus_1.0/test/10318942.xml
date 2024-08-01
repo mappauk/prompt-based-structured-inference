@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10318942">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10318942</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Defining therapeutic targets by using adenovirus: blocking NF-kappaB inhibits both inflammatory and destructive mechanisms in rheumatoid synovium but spares anti-inflammatory mediators.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The role of <coref id="C1">the transcription factor NF-kappaB</coref> in the pathogenesis of rheumatoid arthritis has long been a subject of controversy.</sentence>
+<sentence id="S3">We used <coref min="technique" id="C2">an adenoviral technique of blocking <coref ref="C1" type="IDENT" id="C3">NF-kappaB</coref> through <coref min="overexpression" id="C4">overexpression of <coref id="C5">the inhibitory subunit IkappaBalpha</coref></coref></coref>, <coref ref="C5" type="RELAT" id="C6">which</coref> has <coref id="C7">the advantage</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> <coref ref="C5" type="PRON" id="C9">it</coref> can be used in <coref id="C10">the diseased tissue itself</coref>, with &gt;90% of the synovial macrophages, fibroblasts, and T cells infected.</sentence>
+<sentence id="S4">We found that the spontaneous production of tumor necrosis factor alpha and other pro-inflammatory cytokines is NF-kappaB-dependent in rheumatoid synovial tissue, in contrast to the main anti-inflammatory mediators, like IL-10 and -11, and the IL-1 receptor antagonist.</sentence>
+<sentence id="S5">Of even more interest, <coref ref="C4" min="overexpression" type="IDENT" id="C11">IkappaBalpha overexpression</coref> inhibited the production of <coref id="C12">matrix metalloproteinases 1 and 3</coref> while not affecting <coref ref="C12" type="PRON" id="C13">their</coref> tissue inhibitor.</sentence>
+<sentence id="S6">Blocking NF-kappaB in the rheumatoid joint thus has a very beneficial profile, reducing both the inflammatory response and the tissue destruction.</sentence>
+<sentence id="S7"><coref ref="C2" min="technique" type="IDENT" id="C14">The adenoviral technique described here</coref> has widespread applicability, allowing rapid testing of the effects of blocking a potential therapeutic target in either cultures of normal cells or in <coref ref="C10" type="IDENT" id="C15">the diseased tissue itself</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8622883">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8622883</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The role of <coref id="C1">p16</coref> in the <coref id="C2">E2F-</coref>dependent thymidine kinase regulation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The role of alterations of <coref id="C3">the MTS1 tumor suppressor gene</coref> on <coref id="C4">chromosome 9p21</coref>, <coref ref="C4" type="RELAT" id="C5">which</coref> encodes <coref ref="C1" type="IDENT" id="C6">p16</coref>, <coref ref="C6" min="inhibitor" type="APPOS" id="C7">the inhibitor of cyclin-dependent-kinase-4 and 6</coref>, in tumorigenesis is not yet clear.</sentence>
+<sentence id="S3">Phosphorylation of <coref id="C8">the retinoblastoma protein</coref> by cyclin-dependent kinases 4 and 6 prevents <coref ref="C8" type="PRON" id="C9">its</coref> interaction with <coref ref="C2" type="IDENT" id="C10">the transcription factor E2F</coref>, <coref ref="C10" type="RELAT" id="C11">which</coref> subsequently promotes the expression of S phase regulated genes, such as <coref id="C12">thymidine kinase</coref>.</sentence>
+<sentence id="S4">Although a role of <coref ref="C6" type="IDENT" id="C13">p16</coref> in this regulation has been presumed, there is no <coref id="C14">proof</coref> so far <coref ref="C14" type="RELAT" id="C15">that</coref> <coref min="loss" id="C16">loss of <coref ref="C3" type="IDENT" id="C17">this tumor suppressor gene</coref></coref> really affects <coref ref="C10" type="IDENT" id="C18">E2F-</coref>mediated regulations.</sentence>
+<sentence id="S5">We investigated the regulation of <coref ref="C12" type="IDENT" id="C19">thymidine kinase</coref> in phytohemagglutinin-stimulated normal human lymphocytes and in <coref min="cell lines" id="C20">the <coref ref="C13" type="IDENT" id="C21">p16-</coref>negative human acute lymphoblastic leukemia cell lines</coref>, <coref ref="C20" type="APPOS" id="C22">MOLT-4 and CEM</coref>.</sentence>
+<sentence id="S6">Compared to <coref id="C23">normal lymphocytes</coref>, <coref ref="C22" type="IDENT" id="C24">MOLT-4 and CEM cells</coref> exhibited an altered cell cycle regulation of <coref ref="C19" type="IDENT" id="C25">thymidine kinase</coref>, a much higher intracellular activity of <coref ref="C25" type="IDENT" id="C26">this enzyme</coref>, and higher thymidine kinase mRNA expression.</sentence>
+<sentence id="S7">Transient expression of <coref ref="C21" type="IDENT" id="C27">p16</coref> in <coref ref="C23" type="IDENT" id="C28">normal human lymphocytes</coref> caused arrest in G1, but was without effect on the cell growth of <coref min="cells" id="C29">MOLT-4 and CEM cells</coref>, although <coref ref="C29" type="IDENT" id="C30">all of <coref ref="C29" type="PRON" id="C31">them</coref></coref> express functional retinoblastoma protein.</sentence>
+<sentence id="S8">Nevertheless, in the two leukemia cell lines transient overexpression of <coref ref="C27" type="IDENT" id="C32">p16</coref> reestablished the normal regulation of <coref ref="C25" type="IDENT" id="C33">thymidine kinase</coref>, paralleled by an increase of the underphosphorylated form of <coref id="C34">retinoblastoma protein</coref> and decrease of free E2F bound to <coref ref="C34" type="PRON" id="C35">its</coref> motif in the thymidine kinase promoter.</sentence>
+<sentence id="S9">We demonstrate that <coref ref="C16" min="loss" type="IDENT" id="C36">loss of <coref ref="C32" type="IDENT" id="C37">p16</coref></coref> causes upregulation of <coref ref="C26" min="enzyme" type="IDENT" id="C38">this DNA precursor pathway enzyme</coref> via activation of <coref ref="C18" type="IDENT" id="C39">E2F</coref> by a mechanism involving <coref ref="C34" type="IDENT" id="C40">retinoblastoma protein</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

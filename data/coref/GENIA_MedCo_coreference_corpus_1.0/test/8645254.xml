@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8645254">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8645254</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Abundant expression of <coref min="factor" id="C1">erythroid transcription factor P45 NF-E2 mRNA in <coref min="granurocytes" id="C2">human peripheral granurocytes</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">Transcription factor NF-E2</coref> is crucial for regulation of erythroid-specific gene expression.</sentence>
+<sentence id="S3">p45 subunit of <coref ref="C3" type="IDENT" id="C4">NF-E2</coref> contains a basic-leucine zipper domain and dimerizes with the small Maf family protein to form <coref min="complex" id="C5">functional NF-E2 complex</coref>.</sentence>
+<sentence id="S4">While p45 expression was shown to be restricted to erythroid cells, megakaryocytes and mast cells in hematopoietic lineage, we found in this study that <coref ref="C1" type="IDENT" id="C6">p45 mRNA</coref> is abundantly transcribed in <coref min="fraction" id="C7">the granulocyte fraction of human peripheral blood cells</coref>.</sentence>
+<sentence id="S5">As <coref id="C8">neutrophils</coref> occupy approximately 92% of <coref ref="C2" min="cells" type="IDENT" id="C9">the cells in <coref min="fraction" id="C10">granulocyte fraction of human peripheral blood cells</coref></coref>.</sentence>
+<sentence id="S6">As <coref ref="C8" type="IDENT" id="C11">neutrophils</coref> occupy approximately 92% of <coref ref="C9" type="IDENT" id="C12">the cells in <coref ref="C10" type="IDENT" id="C13">this fraction</coref></coref>, the cells expressing p45 is most likely to be <coref ref="C11" type="IDENT" id="C14">neutrophils</coref>.</sentence>
+<sentence id="S7"><coref ref="C6" type="IDENT" id="C15">p45 mRNA</coref> is also expressed in <coref id="C16">HL-60 promyelocytes</coref>, albeit <coref min="level" id="C17">the expression level</coref> is much lower than <coref ref="C17" type="PRON" id="C18">that</coref> of <coref ref="C10" type="IDENT" id="C19">the granulocyte fraction</coref>.</sentence>
+<sentence id="S8"><coref ref="C16" type="IDENT" id="C20">HL-60 cells</coref> were found to express mafK mRNA, indicating the presence of <coref ref="C5" min="complex" type="IDENT" id="C21">genuine NF-E2 complex in <coref ref="C20" type="IDENT" id="C22">the cells</coref></coref>.</sentence>
+<sentence id="S9">Although <coref ref="C15" type="IDENT" id="C23">p45 mRNA</coref> is transcribed from <coref min="promoters" id="C24">two different promoters</coref>, <coref ref="C24" type="PART-WHOLE" id="C25">aNF-E2 promoter</coref> and <coref ref="C24" type="PART-WHOLE" id="C26">fNF-E2 promoter</coref>, in erythroid and megakaryocytic lineage cells, <coref ref="C23" type="IDENT" id="C27">p45 mRNA</coref> is transcribed only from <coref ref="C25" type="IDENT" id="C28">aNF-E2 promoter</coref>.</sentence>
+<sentence id="S10"><coref ref="C27" min="expression" type="IDENT" id="C29">The expression of p45 megakaryocytic lineage cells</coref>, <coref ref="C29" type="APPOS" id="C30">p45 mRNA</coref> is transcribed only from <coref ref="C28" type="IDENT" id="C31">aNF-E2 promoter</coref>.</sentence>
+<sentence id="S11">The expression of <coref ref="C30" type="IDENT" id="C32">p45 mRNA</coref> in <coref ref="C14" type="IDENT" id="C33">the neutrophils</coref> declined rapidly after transfer of <coref ref="C33" type="IDENT" id="C34">the cells</coref> to in vitro culture and G-CSF could not sustain the expression from the down-regulation, suggesting the E2 may also participate in the regulation of neutrophil-specific gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

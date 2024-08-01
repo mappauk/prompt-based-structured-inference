@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1765275">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1765275</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Transcription factor requirements for <coref min="activation" id="C1"><coref min="gene" id="C2">U2 snRNA-encoding gene</coref> activation</coref> in <coref min="cells" id="C3">B lymphoid cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Transcription of <coref ref="C2" min="gene" type="IDENT" id="C4">a human U2 small nuclear RNA(snRNA)-encoding gene</coref> in <coref min="cells" id="C5">HeLa cells</coref> requires <coref min="enhancer element" id="C6">a distal enhancer element</coref>, <coref ref="C6" type="RELAT" id="C7">which</coref> is composed of <coref id="C8">one octamer motif (Oct)</coref> and <coref min="binding sites" id="C9">three Sp 1-binding sites</coref>.</sentence>
+<sentence id="S3">To study the transcription factor requirement in <coref ref="C3" type="IDENT" id="C10">B-cells</coref>, different U2 enhancer constructions were transfected into <coref ref="C12" min="cell line" type="APPOS" id="C11">the lymphoid cell line</coref>, <coref id="C12">BJA-B</coref>.</sentence>
+<sentence id="S4">The results showed that <coref ref="C1" min="activation" type="IDENT" id="C13">the activation of <coref min="transcription" id="C14"><coref ref="C4" type="IDENT" id="C15">U2 snRNA</coref> transcription</coref></coref> in <coref ref="C10" type="IDENT" id="C16">B-cells</coref> also requires <coref id="C17">an enhancer</coref> comprising both <coref ref="C8" type="IDENT" id="C18">the Oct</coref> and at least <coref ref="C9" min="binding site" type="OTHER" id="C19">one Sp 1-binding site</coref>.</sentence>
+<sentence id="S5">Deletion of <coref ref="C9" min="binding sites" type="IDENT" id="C20">all the Sp 1-binding sites</coref> from <coref ref="C17" type="IDENT" id="C21">the enhancer</coref> reduces transcription by 80-90% in <coref id="C22"><coref ref="C5" type="IDENT" id="C23">HeLa</coref>, as well as in <coref ref="C12" min="cells" type="IDENT" id="C24">BJA-B cells</coref></coref>, whereas the removal of <coref min="binding site" id="C25">the octamer-binding site</coref> reduces transcription to levels below detection in <coref ref="C22" min="cell types" type="IDENT" id="C26">both cell types</coref>.</sentence>
+<sentence id="S6">Enhancers containing <coref ref="C18" type="IDENT" id="C27">a single Oct</coref> have, nevertheless, the capacity to partially activate <coref ref="C14" min="transcription" type="IDENT" id="C28"><coref ref="C15" type="IDENT" id="C29">U2 snRNA</coref> transcription</coref> in both <coref ref="C23" min="cells" type="IDENT" id="C30">HeLa cells</coref>, <coref ref="C30" type="RELAT" id="C31">in which</coref> only <coref id="C32">OTF-1</coref> is expressed, and in <coref ref="C24" min="cells" type="IDENT" id="C33">BJA-B cells</coref> <coref ref="C33" type="RELAT" id="C34">in which</coref> <coref id="C35">OTF-2</coref> is the predominantly expressed octamer-binding factor.</sentence>
+<sentence id="S7">The most likely interpretation of our results is that both <coref ref="C37" min="transcription factor" type="APPOS" id="C36">the ubiquitous transcription factor</coref>, <coref ref="C32" type="IDENT" id="C37">OTF-1</coref>, and <coref ref="C39" min="transcription factor" type="APPOS" id="C38">the B-cell-specific transcription factor</coref>, <coref ref="C35" type="IDENT" id="C39">OTF-2</coref>, can activate <coref ref="C28" min="transcription" type="IDENT" id="C40"><coref ref="C29" type="IDENT" id="C41">U2 snRNA</coref> transcription</coref>.</sentence>
+<sentence id="S8">The results also revealed a similar functional cooperation between <coref id="C42">the transcription factors</coref> <coref ref="C42" type="RELAT" id="C43">which</coref> bind to <coref ref="C27" type="IDENT" id="C44">the Oct</coref> and <coref ref="C20" min="binding site" type="OTHER" id="C45">the adjacent Sp 1-binding site</coref> in <coref ref="C33" min="cells" type="IDENT" id="C46">BJA-B cells</coref>, as has been observed in <coref ref="C30" min="cells" type="IDENT" id="C47">HeLa cells</coref>, since <coref id="C48">a template</coref> <coref ref="C48" type="RELAT" id="C49">which</coref> contains a weak binding site for OTFs expresses wild-type levels of <coref ref="C41" type="IDENT" id="C50">U2 snRNA</coref> in <coref ref="C26" min="cell types" type="IDENT" id="C51">both cell types</coref> when <coref ref="C25" min="binding site" type="OTHER" id="C52">the weak octamer-binding site</coref> is combined with <coref ref="C45" min="binding site" type="OTHER" id="C53">a Sp 1-binding site</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

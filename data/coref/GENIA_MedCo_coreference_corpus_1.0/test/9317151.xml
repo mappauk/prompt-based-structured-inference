@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9317151">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9317151</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Dual effects of LPS antibodies on cellular uptake of <coref id="C1">LPS</coref> and LPS-induced proinflammatory functions.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Human phagocytes recognize <coref ref="C1" min="lps" type="IDENT" id="C2">bacterial LPS (endotoxin)</coref> through <coref id="C3">membrane CD14 (mCD14)</coref>, <coref ref="C3" min="receptor" type="APPOS" id="C4">a proinflammatory LPS receptor</coref>.</sentence>
+<sentence id="S3">This study tested <coref id="C5">the hypothesis</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> anti-LPS Abs neutralize <coref ref="C2" type="IDENT" id="C7">endotoxin</coref> by blocking <coref min="uptake" id="C8">cellular uptake through <coref ref="C3" type="IDENT" id="C9">mCD14</coref></coref>.</sentence>
+<sentence id="S4">Ab-associated changes in the uptake and cellular distribution of FITC-LPS were assessed by flow cytometry and laser scanning confocal microscopy in <coref id="C10"><coref min="fibroblasts" id="C11">human CD14-transfected Chinese hamster ovary fibroblasts (CHO-CD14 cells)</coref> and <coref min="monocytes" id="C12">human peripheral blood monocytes</coref></coref>.</sentence>
+<sentence id="S5">LPS core- and O-side chain-specific mAbs inhibited mCD14-mediated LPS uptake by <coref ref="C10" min="types" type="IDENT" id="C13">both cell types</coref> in the presence of serum.</sentence>
+<sentence id="S6">O-side chain-specific mAb concurrently enhanced <coref id="C14">complement-dependent LPS uptake by <coref ref="C12" type="IDENT" id="C15">monocytes</coref> through <coref id="C16">complement receptor-1 (CR1)</coref> and uptake by <coref ref="C11" min="cells" type="IDENT" id="C17">CHO-CD14 cells</coref> involving another heat-labile serum factor(s) and cell-associated recognition molecule(s)</coref>.</sentence>
+<sentence id="S7">Core-specific mAb inhibited <coref ref="C8" min="uptake" type="IDENT" id="C18">mCD14-mediated uptake of <coref ref="C7" min="lps" type="IDENT" id="C19">homologous and heterologous LPS</coref></coref>, while producing less concurrent enhancement of <coref ref="C14" min="uptake" type="IDENT" id="C20">non-mCD14-mediated LPS uptake</coref>.</sentence>
+<sentence id="S8">The modulation by anti-LPS mAbs of <coref ref="C18" min="uptake" type="IDENT" id="C21">mCD14-mediated LPS uptake</coref> was associated with <coref id="C22">inhibition of LPS-induced nuclear factor-kappaB (NF-kappaB) translocation and TNF-alpha secretion in <coref ref="C17" min="cells" type="IDENT" id="C23">CHO-CD14 cells</coref> and <coref ref="C15" type="IDENT" id="C24">monocytes</coref>, respectively</coref>, while mAb enhancement of <coref ref="C20" min="uptake" type="IDENT" id="C25">non-mCD14-mediated LPS uptake</coref> stimulated <coref ref="C22" min="activities" type="IDENT" id="C26">these activities</coref>.</sentence>
+<sentence id="S9">LPS-specific Abs thus mediate anti-inflammatory and proinflammatory functions, respectively, by preventing <coref ref="C21" min="uptake" type="IDENT" id="C27">target cell uptake of <coref ref="C19" type="IDENT" id="C28">LPS</coref> through <coref ref="C9" type="IDENT" id="C29">mCD14</coref></coref> and augmenting uptake through <coref ref="C16" type="IDENT" id="C30">CR1</coref> or other cell receptors.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

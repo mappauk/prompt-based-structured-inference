@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8977228">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8977228</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The state of maturation of monocytes into macrophages determines <coref min="effects" id="C1">the effects of <coref id="C2">IL-4</coref> and <coref id="C3">IL-13</coref> on <coref min="replication" id="C4">HIV replication</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The molecular mechanisms of <coref ref="C1" min="effects" type="IDENT" id="C5">the effects of <coref ref="C2" type="IDENT" id="C6">IL-4</coref> and <coref ref="C3" type="IDENT" id="C7">IL-13</coref> on <coref min="infection" id="C8">HIV infection</coref></coref> in <coref min="monocytes" id="C9">human monocytes</coref> as <coref ref="C9" type="PRON" id="C10">they</coref> matured into <coref min="macrophages" id="C11">monocyte-derived macrophages</coref> over 7 days were investigated using HIV-1(BaL), and low passage clinical strains.</sentence>
+<sentence id="S3"><coref ref="C6" type="IDENT" id="C12">IL-4</coref> and <coref ref="C7" type="IDENT" id="C13">IL-13</coref> up-regulated the expression of both genomic and spliced HIV mRNA in monocytes cultured on Teflon, as determined by Northern analysis and p24 Ag assay.</sentence>
+<sentence id="S4">Using a nuclear run-on assay, IL-4 stimulation was shown to enhance transcription by two- to threefold.</sentence>
+<sentence id="S5"><coref ref="C12" type="IDENT" id="C14">IL-4</coref> stimulated <coref min="translocation" id="C15">nuclear factor-kappaB nuclear translocation</coref> and binding before enhancement of HIV RNA expression.</sentence>
+<sentence id="S6">Conversely, <coref ref="C14" type="IDENT" id="C16">IL-4</coref> and <coref ref="C13" type="IDENT" id="C17">IL-13</coref> markedly and significantly inhibited <coref ref="C4" min="replication" type="IDENT" id="C18">HIV replication</coref> at the transcriptional level in <coref ref="C11" min="macrophages" type="IDENT" id="C19">monocyte-derived macrophages</coref>, and this occurred whether <coref min="cytokines" id="C20">these cytokines</coref> were added before or after <coref ref="C8" min="infection" type="IDENT" id="C21">HIV infection</coref>.</sentence>
+<sentence id="S7">The reversal from stimulation to inhibition occurred after 3 to 5 days of adherence to plastic.</sentence>
+<sentence id="S8"><coref ref="C16" type="IDENT" id="C22">IL-4</coref> had no significant effect on HIV reverse transcription.</sentence>
+<sentence id="S9">The effect of <coref ref="C20" min="cytokines" type="IDENT" id="C23">both cytokines</coref> on the monocyte maturation/differentiation (CD11b, CD13, and CD26) and other macrophage markers (CD14 and CD68) was examined.</sentence>
+<sentence id="S10"><coref ref="C22" type="IDENT" id="C24">IL-4</coref> enhanced <coref id="C25">CD11b</coref>, but inhibited CD26 expression and delayed CD13 loss.</sentence>
+<sentence id="S11"><coref ref="C17" type="IDENT" id="C26">IL-13</coref> had similar effects on <coref ref="C25" type="IDENT" id="C27">CD11b</coref> and CD13, but no effect on CD26.</sentence>
+<sentence id="S12">Hence, <coref ref="C23" min="cytokines" type="IDENT" id="C28">these cytokines</coref> do not simply enhance monocyte differentiation, but have <coref min="effects" id="C29">complex and slightly divergent effects</coref> <coref ref="C29" type="RELAT" id="C30">that</coref> impact on <coref ref="C18" min="replication" type="IDENT" id="C31">HIV replication</coref> probably through cell signaling pathways and <coref ref="C15" min="translocation" type="IDENT" id="C32">nuclear factor-kappaB translocation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

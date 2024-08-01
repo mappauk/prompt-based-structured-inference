@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9233802">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9233802</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">c-Myb and Ets proteins synergize to overcome transcriptional repression by <coref id="C1">ZEB</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="family" id="C2">The Zfh family of zinc finger/homeodomain proteins</coref> was first identified in <coref id="C3">Drosophila</coref> <coref ref="C3" type="RELAT" id="C4">where</coref> <coref ref="C2" type="PRON" id="C5">it</coref> is required for differentiation of tissues such as the central nervous system and muscle.</sentence>
+<sentence id="S3"><coref ref="C1" type="IDENT" id="C6">ZEB</coref>, <coref ref="C6" min="homolog" type="APPOS" id="C7">a vertebrate homolog of Zfh-1</coref>, binds a subset of E boxes and blocks myogenesis through transcriptional repression of muscle genes.</sentence>
+<sentence id="S4">We present <coref id="C8">evidence</coref> here <coref ref="C8" type="RELAT" id="C9">that</coref> <coref ref="C6" type="IDENT" id="C10">ZEB</coref> also has an important role in controlling hematopoietic gene transcription.</sentence>
+<sentence id="S5">Two families of <coref min="transcription factors" id="C11">transcription factors</coref> <coref ref="C11" type="RELAT" id="C12">that</coref> are required for normal hematopoiesis are <coref id="C13">c-Myb and Ets</coref>.</sentence>
+<sentence id="S6"><coref ref="C13" min="factors" type="IDENT" id="C14">These factors</coref> act synergistically to activate transcription, and this synergy is required for transcription of at least several important hematopoietic genes.</sentence>
+<sentence id="S7"><coref ref="C10" type="IDENT" id="C15">ZEB</coref> blocks the activity of <coref ref="C13" type="IDENT" id="C16">c-Myb and Ets</coref> individually, but together <coref ref="C16" type="IDENT" id="C17">the factors</coref> synergize to resist <coref min="repression" id="C18">this repression</coref>.</sentence>
+<sentence id="S8"><coref ref="C18" min="repression" type="IDENT" id="C19">Such repression</coref> imposes a requirement for <coref ref="C16" type="IDENT" id="C20">both c-Myb and Ets</coref> for transcriptional activity, providing one explanation for why synergy between <coref ref="C20" min="factors" type="IDENT" id="C21">these factors</coref> is important.</sentence>
+<sentence id="S9">The balance between repression by <coref ref="C15" type="IDENT" id="C22">ZEB</coref> and transcriptional activation by c-Myb/Ets provides a flexible regulatory mechanism for controlling gene expression in hematopoietic cells.</sentence>
+<sentence id="S10">We demonstrate that one target of this positive/negative regulation in vivo is <coref min="integrin" id="C23">the alpha4 integrin</coref>, <coref ref="C23" type="RELAT" id="C24">which</coref> play a key role in normal hematopoiesis and function of mature leukocytes.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

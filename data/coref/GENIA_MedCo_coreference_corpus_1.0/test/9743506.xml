@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9743506">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9743506</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="platelets" id="C1">Activated platelets</coref> induce <coref id="C2">monocyte chemotactic protein-1 secretion and surface expression of intercellular adhesion molecule-1</coref> on <coref min="cells" id="C3">endothelial cells</coref> [see comments]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: Platelet/endothelium interaction plays an important role in the pathophysiology of inflammation and atherosclerosis.</sentence>
+<sentence id="S3">The role of platelets for <coref ref="C2" type="IDENT" id="C4">monocyte chemotactic protein-1 (MCP-1) secretion and surface expression of intercellular adhesion molecule-1 (ICAM-1)</coref> on <coref ref="C3" min="cells" type="IDENT" id="C5">endothelial cells</coref> has been assessed.</sentence>
+<sentence id="S4">METHODS AND RESULTS: Monolayers of human umbilical vein endothelial cells were incubated with nonstimulated or ADP-activated platelets for 6 hours, and <coref ref="C4" type="IDENT" id="C6">secretion of MCP-1 and surface expression of ICAM-1</coref> were determined by ELISA and flow cytometry, respectively.</sentence>
+<sentence id="S5">In <coref min="presence" id="C7">the presence of <coref ref="C1" min="platelets" type="IDENT" id="C8">ADP-activated platelets</coref></coref>, <coref ref="C6" type="IDENT" id="C9">both MCP-1 secretion and ICAM-1 surface expression</coref> were significantly increased compared with nonstimulated platelets (P&lt;0.02).</sentence>
+<sentence id="S6">Activation of the transcription factor nuclear factor-kappaB (NF-kappaB) determined by electrophoretic mobility shift assay and kappaB-dependent transcriptional activity was enhanced in <coref ref="C7" min="presence" type="IDENT" id="C10">the presence of <coref ref="C8" min="platelets" type="IDENT" id="C11">activated platelets</coref></coref>.</sentence>
+<sentence id="S7">In addition, <coref ref="C11" min="platelets" type="IDENT" id="C12">ADP-activated platelets</coref> induced MCP-1 and ICAM-1 promoter-dependent transcription.</sentence>
+<sentence id="S8">Liposomal transfection of a double-stranded kappaB phosphorothioate oligonucleotide, but not of the mutated form, inhibited <coref ref="C9" type="IDENT" id="C13">MCP-1 secretion and surface expression of ICAM-1</coref> on activated endothelium (P&lt;0.05).</sentence>
+<sentence id="S9">CONCLUSIONS: The present study indicates that <coref ref="C12" min="platelets" type="IDENT" id="C14">activated platelets</coref> modulate chemotactic (MCP-1) and adhesive (ICAM-1) properties of <coref ref="C5" min="cells" type="IDENT" id="C15">endothelial cells</coref> via an NF-kappaB-dependent mechanism.</sentence>
+<sentence id="S10">Platelet-induced activation of the NF-kappaB system might contribute to early inflammatory events in atherogenesis.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

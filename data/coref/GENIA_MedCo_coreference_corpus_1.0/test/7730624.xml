@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7730624">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7730624</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of transcription by binding of <coref id="C1">NF-E1 (YY1)</coref> to <coref min="element" id="C2">a newly identified element in <coref min="exon" id="C3">the first exon of <coref min="gene" id="C4">the human DR alpha gene</coref></coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" min="element" type="IDENT" id="C5">A previously unrecognized element</coref>, located downstream of the start site of transcription in <coref ref="C3" min="exon" type="IDENT" id="C6">the first exon of <coref ref="C4" min="gene" type="IDENT" id="C7">the DR alpha gene</coref></coref>, has been defined that enhances promoter activity up to eightfold in a position-dependent manner.</sentence>
+<sentence id="S3">Mutations in <coref ref="C5" min="site" type="IDENT" id="C8">this DNA-binding site</coref> abolished binding of <coref ref="C1" min="nuclear factor" type="IDENT" id="C9">a nuclear factor</coref> in human B cell nuclear extract and decreased the activity of the DR alpha promoter to a basal level.</sentence>
+<sentence id="S4">Significant sequence homology of <coref ref="C5" min="element" type="IDENT" id="C10">this element</coref> was found in the DNA of the DR beta, DP alpha and -beta, and DQ alpha genes, always located downstream of the transcriptional start site.</sentence>
+<sentence id="S5"><coref ref="C9" type="IDENT" id="C11">The nuclear factor</coref> binds to the DR alpha and DP alpha element but not to the element in the DQ alpha gene.</sentence>
+<sentence id="S6"><coref ref="C11" type="PRON" id="C12">It</coref> was identified as <coref ref="C11" type="IDENT" id="C13">NF-E1 (YY1)</coref>.</sentence>
+<sentence id="S7"><coref ref="C13" type="IDENT" id="C14">This protein</coref>, previously identified by <coref ref="C14" type="PRON" id="C15">its</coref> binding to the Ig kappa 3' enhancer and the Ig heavy chain mu E1 site, thus also appears to be quite important in the regulation of MHC class II gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

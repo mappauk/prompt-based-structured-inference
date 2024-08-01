@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8709636">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8709636</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Effects of <coref id="C1">IL-10</coref> and <coref id="C2">IL-4</coref> on <coref id="C23"><coref min="factors" id="C3">LPS-</coref>induced transcription factors (AP-1, NF-IL6 and NF-kappa B)</coref> <coref ref="C3" type="RELAT" id="C4">which</coref> are involved in IL-6 regulation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C5">Interleukin-10 (IL-10)</coref>, like <coref ref="C2" type="IDENT" id="C6">IL-4</coref>, is known to inhibit cytokine expression in activated human monocytes.</sentence>
+<sentence id="S3">We showed that both <coref ref="C5" type="IDENT" id="C7">IL-10</coref> and <coref ref="C6" type="IDENT" id="C8">IL-4</coref> inhibit LPS-induced IL-6 mRNA and protein expression by inhibiting the transcription rate of the IL-6 gene.</sentence>
+<sentence id="S4">The strong inhibition of <coref min="rate" id="C16">the IL-6 transcription rate</coref> prompted us to study the effect of <coref ref="C7" type="IDENT" id="C9">IL-10</coref> and <coref ref="C8" type="IDENT" id="C10">IL-4</coref> on <coref min="expression" id="C13">the expression of transcription factors</coref>.</sentence>
+<sentence id="S5">We questioned whether or not <coref ref="C9" type="IDENT" id="C11">IL-10</coref> and <coref ref="C10" type="IDENT" id="C12">IL-4</coref> affected <coref ref="C13" min="expression" type="IDENT" id="C14">the expression of transcription factors</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> are known to be involved in the control of <coref ref="C16" min="rate" type="IDENT" id="C17">the IL-6 transcription rate</coref>, namely <coref ref="C3" type="IDENT" id="C18">activator protein-1 (AP-1), <coref type="IDENT" id="C31">nuclear factor IL-6 (NF-IL6)</coref>, and nuclear factor kappa B (NF-kappaB)</coref>.</sentence>
+<sentence id="S6">In electrophoretic mobility shift assays (EMSAs) we showed that <coref ref="C11" type="IDENT" id="C20">IL-10</coref> and <coref ref="C12" type="IDENT" id="C21">IL-4</coref> inhibited <coref ref="C23" type="IDENT" id="C22">LPS-</coref>induced AP-1 binding activity.</sentence>
+<sentence id="S7"><coref min="effect" id="C26">The inhibiting effect</coref> of <coref ref="C21" type="IDENT" id="C24">IL-4</coref> was slightly more pronounced than <coref ref="C26" type="PRON" id="C27">that</coref> of <coref ref="C20" type="IDENT" id="C25">IL-10</coref>.</sentence>
+<sentence id="S8">Downregulation of <coref ref="C22" type="IDENT" id="C28">LPS-</coref>induced AP-1 was accompanied, and thus possibly explained, by a reduced expression at mRNA level of <coref min="components" id="C29">the two major components of the AP-1 complex</coref>, namely <coref ref="C29" type="IDENT" id="C30">c-fos and c-jun as determined by <coref min="experiments" id="C41">Northern experiments</coref></coref>.</sentence>
+<sentence id="S9">Binding activity of <coref ref="C31" type="IDENT" id="C32">NF-IL6</coref> was also strongly inhibited by <coref ref="C24" type="IDENT" id="C19">IL-4</coref> whereas <coref ref="C25" type="IDENT" id="C33">IL-10</coref> showed no effect.</sentence>
+<sentence id="S10">NF-IL6 mRNA levels were not affected by <coref ref="C33" type="IDENT" id="C34">IL-10</coref> or <coref ref="C19" type="IDENT" id="C35">IL-4</coref>, suggesting that <coref ref="C35" type="IDENT" id="C36">IL-4</coref> affects binding activity of preexisting <coref ref="C32" type="IDENT" id="C37">NF-IL6</coref>.</sentence>
+<sentence id="S11">Neither <coref ref="C34" type="IDENT" id="C38">IL-10</coref> nor <coref ref="C35" type="IDENT" id="C39">IL-4</coref> inhibited <coref ref="C28" type="IDENT" id="C40">LPS-</coref>induced NF-kappa B binding activity.</sentence>
+<sentence id="S12">In agreement with this finding, <coref ref="C41" min="experiments" type="IDENT" id="C42">Northern experiments</coref> <coref ref="C42" type="RELAT" id="C43">where</coref> p65 and p105 mRNA levels were determined, demonstrated that expression of these components of the NF-kappa B transcription factor were not affected by <coref ref="C38" type="IDENT" id="C44">IL-10</coref> or <coref ref="C39" type="IDENT" id="C45">IL-4</coref>.</sentence>
+<sentence id="S13">Furthermore, neither <coref ref="C44" type="IDENT" id="C47">IL-10</coref> nor <coref ref="C45" type="IDENT" id="C48">IL-4</coref> showed any effect on I-kappa B mRNA expression as determined by <coref ref="C42" min="experiments" type="IDENT" id="C49">Northern experiments</coref>.</sentence>
+<sentence id="S14">Thus, <coref ref="C47" type="IDENT" id="C50">IL-10</coref> and <coref ref="C48" type="IDENT" id="C51">IL-4</coref> similarly affect IL-6 expression.</sentence>
+<sentence id="S15">However, for <coref ref="C51" type="IDENT" id="C52">IL-4</coref> this was accompanied with a reduction of AP-1 and NF-IL6 binding activity whereas <coref ref="C50" type="IDENT" id="C53">IL-10</coref> only inhibited AP-1 binding activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

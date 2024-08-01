@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7565675">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7565675</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The DNA-binding properties of <coref min="factors" id="C1">two heat shock factors</coref>, <coref ref="C1" type="APPOS" id="C2">HSF1 and HSF3</coref>, are induced in <coref id="C3">the avian erythroblast cell line HD6</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="cells" id="C4">Avian cells</coref> express three heat shock transcription factor (HSF) genes corresponding to <coref min="factor" id="C5">a novel factor</coref>, <coref ref="C5" type="APPOS" id="C6">HSF3</coref>, and <coref id="C7">homologs of mouse and human HSF1 and HSF2</coref>.</sentence>
+<sentence id="S3">Analysis of the biochemical and cell biological properties of <coref id="C8">these HSFs</coref> reveals that <coref ref="C5" type="IDENT" id="C9">HSF3</coref> has properties in common with <coref ref="C7" type="IDENT" id="C10">both HSF1 and HSF2</coref> and yet has <coref id="C11">features</coref> <coref ref="C11" type="RELAT" id="C12">which</coref> are distinct from <coref ref="C10" type="PRON" id="C13">both</coref>.</sentence>
+<sentence id="S4"><coref ref="C9" type="IDENT" id="C14">HSF3</coref> is constitutively expressed in <coref ref="C3" type="IDENT" id="C15">the erythroblast cell line HD6</coref>, the lymphoblast cell line MSB, and embryo fibroblasts, and yet <coref min="activity" id="C16"><coref ref="C14" type="PRON" id="C17">its</coref> DNA-binding activity</coref> is induced only upon exposure of <coref ref="C15" min="cells" type="IDENT" id="C18">HD6 cells</coref> to <coref id="C19">heat shock</coref>.</sentence>
+<sentence id="S5">Acquisition of <coref ref="C16" min="activity" type="IDENT" id="C20">HSF3 DNA-binding activity</coref> in <coref ref="C18" min="cells" type="IDENT" id="C21">HD6 cells</coref> is accompanied by oligomerization from a non-DNA-binding dimer to a DNA-binding trimer, whereas the effect of <coref ref="C19" type="IDENT" id="C22">heat shock</coref> on <coref id="C23">HSF1</coref> is oligomerization of an inert monomer to a DNA-binding trimer.</sentence>
+<sentence id="S6"><coref id="C24">Induction</coref> of <coref ref="C20" min="activity" type="IDENT" id="C25">HSF3 DNA-binding activity</coref> is delayed compared with <coref ref="C24" type="PRON" id="C26">that</coref> of <coref ref="C23" type="IDENT" id="C27">HSF1</coref>.</sentence>
+<sentence id="S7">As occurs for <coref ref="C27" type="IDENT" id="C28">HSF1</coref>, <coref ref="C22" type="IDENT" id="C29">heat shock</coref> leads to the translocation of <coref ref="C14" type="IDENT" id="C30">HSF3</coref> to the nucleus.</sentence>
+<sentence id="S8"><coref ref="C8" type="IDENT" id="C31">HSF</coref> exhibits the properties of a transcriptional activator, as judged from the stimulatory activity of transiently overexpressed HSF3 measured by using a heat shock element-containing reporter construct and as independently assayed by the activity of a chimeric GAL4-HSF3 protein on a GAL4 reporter construct.</sentence>
+<sentence id="S9">These results reveal that <coref ref="C30" type="IDENT" id="C32">HSF3</coref> is negatively regulated in <coref ref="C4" min="cells" type="IDENT" id="C33">avian cells</coref> and acquires <coref ref="C25" min="activity" type="IDENT" id="C34">DNA-binding activity</coref> in certain cells upon <coref ref="C29" type="IDENT" id="C35">heat shock</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

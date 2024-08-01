@@ -1,0 +1,86 @@
+{
+    "positive_examples": [
+        {
+            "entity1": "human osteoclasts",
+            "entity2": "osteoclasts",
+            "sent1": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
+            "sent2": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts .",
+            "doc_id": "10025668",
+            "answer": "True"
+        },
+        {
+            "entity1": "Resorption lacunae",
+            "entity2": "these pits",
+            "sent1": "Resorption lacunae can be observed by day 22.",
+            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "doc_id": "10025668",
+            "answer": "True"
+        },
+        {
+            "entity1": "these pits",
+            "entity2": "they",
+            "sent1": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "doc_id": "10025668",
+            "answer": "True"
+        },
+        {
+            "entity1": "the activity of a subset of osteoclast-like cells",
+            "entity2": "that",
+            "sent1": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "doc_id": "10025668",
+            "answer": "True"
+        },
+        {
+            "entity1": "an adherent population of cells, with preosteoclast/osteoclast phenotypic propertie",
+            "entity2": "these cells",
+            "sent1": "Thus, an adherent population of cells, with preosteoclast/osteoclast phenotypic properties , arises selectively under simple culture conditions from normal PBMC.",
+            "sent2": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts",
+            "doc_id": "10025668",
+            "answer": "True"
+        }
+    ],
+    "negative_examples": [
+        {
+            "entity1": "Osteoclast markers",
+            "entity2": "human osteoclasts",
+            "sent1": "Osteoclast markers accumulate on cells developing from human peripheral blood mononuclear precursors.",
+            "sent2": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
+            "doc_id": "10025668",
+            "answer": "False"
+        },
+        {
+            "entity1": "human osteoclasts",
+            "entity2": "cells expressing osteoclast markers",
+            "sent1": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
+            "sent2": "Here, we report that cells expressing osteoclast markers differentiate from precursors present in nonmobilized peripheral blood mononuclear cells (PBMC), without the addition of stromal cells, growth factors, cytokines or steroids; and characterize their phenotype.",
+            "doc_id": "10025668",
+            "answer": "False"
+        },
+        {
+            "entity1": "Osteoclast markers",
+            "entity2": "osteoprotegerin ligand (OPGL)",
+            "sent1": "Osteoclast markers accumulate on cells developing from human peripheral blood mononuclear precursors.",
+            "sent2": "Transcripts for osteoprotegerin ligand (OPGL) , an osteoclast differentiation factor (also known as RANKL and TRANCE) are expressed, likely by adherent cells .",
+            "doc_id": "10025668",
+            "answer": "False"
+        },
+        {
+            "entity1": "osteoclasts",
+            "entity2": "adherent cells",
+            "sent1": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts .",
+            "sent2": "Transcripts for osteoprotegerin ligand (OPGL) , an osteoclast differentiation factor (also known as RANKL and TRANCE) are expressed, likely by adherent cells .",
+            "doc_id": "10025668",
+            "answer": "False"
+        },
+        {
+            "entity1": "These adherent cells",
+            "entity2": "they",
+            "sent1": "These adherent cells have an eccentrically placed, round nucleus, and express low levels of TRAP and sodium fluoride-resistant- alpha-naphthyl-acetate-esterase (NaF-R-NSE).",
+            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
+            "doc_id": "10025668",
+            "answer": "False"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9151898">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9151898</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Immediate early and early lytic cycle proteins are frequent targets of <coref min="response" id="C1">the Epstein-Barr virus-induced cytotoxic T cell response</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">Epstein-Barr virus (EBV)</coref>, <coref ref="C2" type="APPOS" id="C3">a human gamma-herpesvirus</coref>, can establish both nonproductive (latent) and productive (lytic) infections.</sentence>
+<sentence id="S3">Although the CD8+ cytotoxic T lymphocyte (CTL) response to latently infected cells is well characterized, very little is known about T cell controls over <coref min="infection" id="C4">lytic infection</coref>; this imbalance in our understanding belies the importance of virus-replicative lesions in several aspects of EBV disease pathogenesis.</sentence>
+<sentence id="S4">The present work shows that <coref ref="C1" min="response" type="IDENT" id="C5">the primary CD8+ CTL response to EBV</coref> in infectious mononucleosis patients contains multiple lytic antigen-specific reactivities at <coref id="C6">levels</coref> at least as high as <coref ref="C6" type="PRON" id="C7">those</coref> seen against latent antigens; similar reactivities are also detectable in CTL memory.</sentence>
+<sentence id="S5">Clonal analysis revealed individual responses to the two immediate early proteins BZLF1 and BRLF1, and to three (BMLF1, BMRF1, and BALF2) of the six early proteins tested.</sentence>
+<sentence id="S6">In several cases, the peptide epitope and HLA-restricting determinant recognized by these CTLs has been defined, one unusual feature being the number of responses restricted through HLA-C alleles.</sentence>
+<sentence id="S7">The work strongly suggests that EBV-replicative lesions are subject to direct CTL control in vivo and that immediate early and early proteins are frequently the immunodominant targets.</sentence>
+<sentence id="S8">This contrasts with findings in alpha- and beta- herpesvirus systems (herpes simplex, cytomegalovirus) where viral interference with the antigen-processing pathway during <coref ref="C4" min="infection" type="IDENT" id="C8">lytic infection</coref> renders immediate early and early proteins much less immunogenic.</sentence>
+<sentence id="S9">The unique capacity of <coref id="C9">gamma-herpesvirus</coref> to amplify the viral load in vivo through a latent growth-transforming infection may have rendered <coref ref="C9" min="agents" type="IDENT" id="C10">these agents</coref> less dependent upon viral replication as a means of successfully colonizing <coref ref="C10" type="PRON" id="C11">their</coref> hosts.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

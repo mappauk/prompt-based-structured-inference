@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10210645">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10210645</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">LPS-Induced NF-kappaB activation and TNF-alpha release in <coref min="monocytes" id="C2">human monocytes</coref></coref> are protein tyrosine kinase dependent and protein kinase C independent.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: Tumor necrosis factor alpha (TNF-alpha) is an important mediator of septic shock.</sentence>
+<sentence id="S3">Endotoxin (LPS) signal transduction in <coref ref="C2" min="monocytes" type="IDENT" id="C3">human monocytes</coref> leads to <coref id="C4">activation of nuclear factor-kappa B (NF-kappaB) and <coref min="release" id="C5">TNF-alpha release</coref></coref>.</sentence>
+<sentence id="S4">Previous studies have implicated activation of both protein kinase C (PKC) and protein tyrosine kinases (PTK) in LPS-induced NF-kappaB activation and TNF-alpha production.</sentence>
+<sentence id="S5">We hypothesized that inhibition of either <coref id="C6">PKC</coref> or <coref id="C7">PTK</coref> would decrease LPS-induced NF-kappaB DNA binding and TNF-alpha release in <coref ref="C3" min="monocytes" type="IDENT" id="C8">human monocytes</coref>.</sentence>
+<sentence id="S6">MATERIALS AND METHODS: <coref ref="C8" min="monocytes" type="IDENT" id="C9">Human monocytes</coref> were stimulated with <coref min="pma" id="C10">PMA (50 ng/ml) alone</coref> or LPS (100 ng/ml) with and without a nonspecific serine/threonine protein kinase inhibitor staurosporine (Stauro), <coref id="C11">a specific pan-PKC inhibitor bisindolylmaleimide (Bis)</coref>, or <coref id="C12">an inhibitor of PTK genistein (Gen)</coref>.</sentence>
+<sentence id="S7">TNF-alpha release in culture supernatants was measured by an ELISA.</sentence>
+<sentence id="S8">NF-kappaB DNA binding was evaluated by electrophoretic mobility shift assay.</sentence>
+<sentence id="S9">RESULTS: LPS increased NF-kappaB DNA binding and TNF-alpha release in <coref ref="C9" min="monocytes" type="IDENT" id="C13">human monocytes</coref>.</sentence>
+<sentence id="S10">Nonspecific protein kinase inhibition inhibited <coref ref="C4" type="IDENT" id="C14">NF-kappaB activation and <coref ref="C5" min="release" type="IDENT" id="C15">TNF-alpha release</coref></coref>, while specific PKC inhibition with <coref ref="C11" type="IDENT" id="C16">Bis</coref> had no effect on LPS-induced NF-kappaB DNA binding or <coref ref="C15" min="release" type="IDENT" id="C17">TNF-alpha release</coref>.</sentence>
+<sentence id="S11">PTK inhibition with <coref ref="C12" type="IDENT" id="C18">Gen</coref> attenuated both LPS-induced NF-kappaB DNA binding and TNF-alpha production in <coref ref="C13" min="monocytes" type="IDENT" id="C19">human monocytes</coref>.</sentence>
+<sentence id="S12">Direct activation of <coref ref="C6" type="IDENT" id="C20">PKC</coref> with <coref ref="C10" type="IDENT" id="C21">PMA</coref> induced both NF-kappaB activation and TNF-alpha production by <coref ref="C19" min="monocytes" type="IDENT" id="C22">human monocytes</coref>.</sentence>
+<sentence id="S13">CONCLUSIONS: <coref min="results" id="C23">These results</coref> suggest that <coref ref="C1" type="IDENT" id="C24">LPS-induced NF-kappaB activation and TNF-alpha release in <coref ref="C22" min="monocytes" type="IDENT" id="C25">human monocytes</coref></coref> are independent of PKC activity.</sentence>
+<sentence id="S14">Furthermore, <coref ref="C23" min="results" type="IDENT" id="C26">our results</coref> provide <coref id="C27">evidence</coref> <coref ref="C27" type="RELAT" id="C28">that</coref> <coref ref="C7" type="IDENT" id="C29">PTK</coref> plays a role in <coref ref="C24" type="IDENT" id="C30">LPS-induced NF-kappaB activation and TNF-alpha release in <coref ref="C25" min="monocytes" type="IDENT" id="C31">human monocytes</coref></coref> and thus could be a potential therapeutic target in inflammatory states.</sentence>
+<sentence id="S15">Copyright 1999 Academic Press.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

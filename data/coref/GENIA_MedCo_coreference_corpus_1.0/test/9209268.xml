@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9209268">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9209268</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activation" id="C1">Activation of <coref id="C2">nuclear factor-kappa B</coref></coref> by <coref min="peptides" id="C3">beta-amyloid peptides</coref> and <coref min="gamma" id="C4">interferon-gamma</coref> in <coref min="microglia" id="C5">murine microglia</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">An increasing body of evidence suggests that <coref ref="C3" min="peptides" type="IDENT" id="C6">amyloid-beta (A beta) peptides</coref> and <coref ref="C5" type="IDENT" id="C7">microglia</coref> are crucially involved in the pathogenesis of Alzheimer's disease.</sentence>
+<sentence id="S3">In an effort to further elucidate the biological effects of A beta towards <coref ref="C7" type="IDENT" id="C8">microglia</coref>, we investigated the ability of <coref min="peptides" type="IDENT" id="C9">A beta peptides</coref> to activate <coref ref="C2" type="IDENT" id="C10">nuclear factor (NF)-kappa B</coref> in <coref min="cell line" id="C11">the N9 murine microglial cell line</coref>.</sentence>
+<sentence id="S4">Co-stimulation of <coref ref="C8" type="IDENT" id="C12">microglia</coref> with suboptimal concentrations of <coref id="C13">A beta(25-35)</coref> and <coref ref="C4" min="gamma" type="IDENT" id="C14">100 U/ml IFN gamma</coref> resulted in the detection of <coref min="activity" id="C15">a specific NF-kappa B DNA-binding activity</coref> in nuclear extracts, as determined in gel mobility shift assays.</sentence>
+<sentence id="S5">This response required at least 120 min to be evident and supershift experiments revealed that the NF-kappa B complex contains both <coref id="C16">RelA and p50</coref>.</sentence>
+<sentence id="S6">Accordingly, immunoblot experiments showed that amongst NF-kappa B/Rel proteins, <coref ref="C16" type="IDENT" id="C17">RelA and p50</coref> are mobilized to the nucleus following microglial cell stimulation with <coref ref="C13" type="IDENT" id="C18">A beta(25-35)</coref> plus <coref ref="C14" min="gamma" type="IDENT" id="C19">IFN gamma</coref>.</sentence>
+<sentence id="S7">Higher concentrations of <coref ref="C18" type="IDENT" id="C20">A beta(25-35)</coref> were effective by <coref ref="C20" type="PRON" id="C21">themselves</coref> in inducing <coref ref="C1" min="activation" type="IDENT" id="C22">NF-kappa B activation</coref>, both in <coref ref="C11" min="cell line" type="IDENT" id="C23">the N9 microglial cell line</coref> and in rat primary microglia, as well as in human monocytes.</sentence>
+<sentence id="S8">For purposes of comparison, <coref ref="C12" type="IDENT" id="C24">microglia</coref> were also stimulated with <coref min="lps" id="C25">bacterial LPS</coref>, <coref ref="C25" min="inducer" type="APPOS" id="C26">a known NF-kappa B inducer</coref>.</sentence>
+<sentence id="S9">As expected, <coref ref="C25" type="IDENT" id="C27">LPS</coref> strongly induced the formation of <coref ref="C15" min="activities" type="IDENT" id="C28">two NF-kappa B DNA-binding activities</coref>, <coref ref="C28" min="one" type="APPOS" id="C29">one of which</coref> was identified as RelA/p50.</sentence>
+<sentence id="S10"><coref min="response" id="C30">The LPS response</coref> was also more rapid, as <coref ref="C30" type="PRON" id="C31">it</coref> was already evident by 40 min and remained sustained for up to 3 h.</sentence>
+<sentence id="S11">Collectively, these findings indicate that <coref ref="C22" min="activation" type="IDENT" id="C32">NF-kappa B activation</coref> might constitute one of the mechanisms underlying the inducible expression of kappa B-dependent genes in <coref ref="C24" type="IDENT" id="C33">microglia</coref> stimulated by <coref ref="C9" min="peptides" type="IDENT" id="C34">A beta peptides</coref> and <coref ref="C19" min="gamma" type="IDENT" id="C35">IFN gamma</coref>, or by <coref ref="C27" type="IDENT" id="C36">LPS</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

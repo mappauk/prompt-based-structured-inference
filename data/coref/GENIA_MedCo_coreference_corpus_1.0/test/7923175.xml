@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7923175">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7923175</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">T cells from renal cell carcinoma patients</coref> exhibit an abnormal pattern of <coref id="C2">kappa B-specific DNA-binding activity</coref>: a preliminary report.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Recent data suggest that the poor induction of a T-cell response to human renal cell carcinoma (RCC) may be related to alterations in signal transduction pathways.</sentence>
+<sentence id="S3">We report that <coref ref="C1" min="cells" type="IDENT" id="C3">T cells from RCC patients</coref> have two alterations in <coref ref="C2" min="activity" type="IDENT" id="C4">kappa B motif-specific DNA-binding activity</coref>.</sentence>
+<sentence id="S4">The first alteration involves <coref id="C5">the constitutive expression of substantial kappa B-binding activity in nuclear extracts</coref>, <coref ref="C5" type="RELAT" id="C6">which</coref> was observed in the electrophoretic mobility shift assay.</sentence>
+<sentence id="S5"><coref id="C7">The magnitude of <coref min="activity" id="C8">kappa B activity</coref> in unstimulated patient T cells</coref> was similar to <coref ref="C7" type="PRON" id="C9">that</coref> observed in <coref id="C10">T cells from normal individuals</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> had been activated in vitro.</sentence>
+<sentence id="S6">On the basis of Western blotting experiments using antibodies to kappa B/Rel family proteins, <coref ref="C8" min="activity" type="IDENT" id="C12">the kappa B-binding activity</coref> constitutively expressed in <coref ref="C3" min="cells" type="IDENT" id="C13">T cells from RCC patients</coref> is composed mostly of the NF-kappa B1 (p50) subunit.</sentence>
+<sentence id="S7">The second abnormality in <coref ref="C12" min="activity" type="IDENT" id="C14">kappa B-binding activity</coref> in <coref ref="C13" min="cells" type="IDENT" id="C15">T cells from these patients</coref> is that <coref id="C16">RelA</coref>, <coref ref="C16" type="APPOS" id="C17"><coref id="C18">a member of the Rel homology family</coref> <coref ref="C18" type="RELAT" id="C19">which</coref> is part of the normal NF-kappa B complex</coref>, was not induced in the nucleus following activation.</sentence>
+<sentence id="S8">Western blotting analysis did not detect any <coref ref="C16" type="IDENT" id="C20">RelA</coref> in nuclear extracts either before or after stimulation of T cells.</sentence>
+<sentence id="S9">The altered kappa B-binding activity in <coref ref="C15" min="cells" type="IDENT" id="C21">T cells from RCC patients</coref> may impair <coref ref="C21" type="PRON" id="C22">their</coref> capacity to respond normally to various stimuli.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

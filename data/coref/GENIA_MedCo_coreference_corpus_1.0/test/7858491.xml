@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7858491">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7858491</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Expression and genomic configuration of <coref id="C1">GM-CSF, IL-3, <coref min="receptor" id="C2">M-CSF receptor (C-FMS)</coref>, <coref id="C3">early growth response gene-1 (EGR-1)</coref> and <coref min="genes" id="C4">M-CSF genes</coref></coref> in <coref min="syndromes" id="C5">primary myelodysplastic syndromes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Peripheral blood mononuclear cells from <coref min="patients" id="C6">seventeen patients with <coref ref="C5" min="syndromes" type="IDENT" id="C7">primary myelodysplastic syndromes (MDS)</coref> in advanced stage</coref> were enriched for blasts and tested for <coref id="C8"><coref id="C9">(1) karyotype</coref>, (2) genomic configuration and (3) expression of <coref ref="C1" type="IDENT" id="C10">IL-3, GM-CSF, FMS and <coref ref="C3" min="genes" type="IDENT" id="C11">EGR-1 genes</coref></coref></coref> <coref ref="C8" type="RELAT" id="C12">which</coref> are all located on the long arm of chromosome 5.</sentence>
+<sentence id="S3"><coref min="expression" id="C13">The expression of <coref ref="C4" min="gene" type="IDENT" id="C14">the M-CSF gene</coref></coref>, <coref ref="C13" type="RELAT" id="C15">that</coref> has been recently reassigned to the short arm of chromosome 1 (lp), was also investigated.</sentence>
+<sentence id="S4">Aims of the study were to (1) assess the potential role of the expression of <coref ref="C10" min="genes" type="IDENT" id="C16">these genes</coref> in the maintenance and expansion of the neoplastic clones and (2) search for constitutional losses or rearrangements of one allele followed by a deletion of the second allele of <coref ref="C16" min="genes" type="IDENT" id="C17">the same genes</coref> in the leukemic cells.</sentence>
+<sentence id="S5">The latter issue was investigated by comparing, in 8 cases, constitutive DNA from skin fibroblasts with leukemic DNA.</sentence>
+<sentence id="S6">Eleven of <coref ref="C6" min="patients" type="IDENT" id="C18">the 17 patients</coref> had abnormal <coref ref="C9" type="IDENT" id="C19">karyotypes</coref>.</sentence>
+<sentence id="S7"><coref ref="C14" min="gene" type="IDENT" id="C20">The M-CSF gene</coref> was expressed in 6 cases and <coref ref="C2" type="IDENT" id="C21">the FMS</coref> and <coref ref="C11" min="genes" type="IDENT" id="C22">the EGR-1 genes</coref> were expressed in <coref id="C23">2 of the latter cases</coref>.</sentence>
+<sentence id="S8">An autocrine mechanism of growth could be hypothesized only for <coref ref="C23" min="patients" type="IDENT" id="C24">the 2 patients</coref> <coref ref="C24" type="RELAT" id="C25">whose</coref> cells expressed both the M-CSF and FMS genes.</sentence>
+<sentence id="S9">No germline changes or rearrangements were observed in any of <coref ref="C10" min="genes" type="IDENT" id="C26">the genes</coref> studied.</sentence>
+<sentence id="S10">Thus, deregulation of genes encoding for certain hemopoietic growth factors or receptors does not seem to represent a major mechanism of MDS progression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

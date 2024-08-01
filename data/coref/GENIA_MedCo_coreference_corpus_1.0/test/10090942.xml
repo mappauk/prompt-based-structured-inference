@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10090942">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10090942</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="disease" id="C1">Human immunodeficiency virus-associated Hodgkin's disease</coref> derives from <coref min="cells" id="C2">post-germinal center B cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="disease" type="IDENT" id="C3">Human immunodeficiency virus-associated Hodgkin's disease (HIV-HD)</coref> displays <coref min="peculiarities" id="C4">several peculiarities</coref> when compared with <coref min="hd" id="C5">HD of the general population</coref>.</sentence>
+<sentence id="S3"><coref ref="C4" type="PRON" id="C6">These</coref> include overrepresentation of clinically aggressive histologic types and frequent infection of Reed-Sternberg (RS) cells by Epstein-Barr virus (EBV).</sentence>
+<sentence id="S4">Recently, we have reported that the histogenesis of <coref ref="C5" min="hd" type="IDENT" id="C7">HD of the general population</coref> may be assessed by monitoring the expression pattern of <coref id="C8">BCL-6</coref>, <coref ref="C8" min="transcription factor" type="APPOS" id="C9">a transcription factor expressed in germinal center (GC) B cells</coref>, and of <coref id="C10">CD138/syndecan-1 (syn-1)</coref>, <coref ref="C10" min="proteoglycan" type="APPOS" id="C11">a proteoglycan associated with post-GC, terminal B-cell differentiation</coref>.</sentence>
+<sentence id="S5">In this study, we have applied <coref min="markers" id="C12">these two markers</coref> to the study of HIV-HD histogenesis and correlated <coref ref="C12" type="PRON" id="C13">their</coref> expression status to the virologic features of <coref ref="C3" min="disease" type="IDENT" id="C14">this disease</coref>.</sentence>
+<sentence id="S6">We have found that RS cells of all histologic categories of <coref ref="C14" type="IDENT" id="C15">HIV-HD</coref> consistently display the BCL-6(-)/syn-1(+) phenotype and thus reflect <coref ref="C2" min="cells" type="IDENT" id="C16">post-GC B cells</coref>.</sentence>
+<sentence id="S7">Although <coref min="cells" id="C17">BCL-6(-)/syn-1(+)RS cells of <coref ref="C15" type="IDENT" id="C18">HIV-HD</coref></coref> express <coref id="C19">CD40</coref>, <coref ref="C17" type="PRON" id="C20">they</coref> are not surrounded by <coref min="lymphocytes" id="C21">CD40 ligand-positive (CD40L+) reactive T lymphocytes</coref>, <coref ref="C21" type="RELAT" id="C22">which</coref>, in <coref ref="C7" min="hd" type="IDENT" id="C23">HD of the general population</coref>, are thought to regulate <coref min="phenotype" type="IDENT" id="C24">the disease phenotype</coref> through CD40/CD40L interactions.</sentence>
+<sentence id="S8">Conversely, RS cells of virtually all HIV-HD express <coref id="C25">the EBV-encoded latent membrane protein 1 (LMP1)</coref>, <coref ref="C25" type="RELAT" id="C26">which</coref>, being functionally homologous to <coref ref="C19" type="IDENT" id="C27">CD40</coref>, may contribute, at least in part, to the modulation of <coref ref="C24" min="phenotype" type="IDENT" id="C28">the HIV-HD phenotype</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

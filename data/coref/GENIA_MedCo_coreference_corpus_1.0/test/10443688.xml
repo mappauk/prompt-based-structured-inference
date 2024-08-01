@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10443688">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10443688</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C2">Tumor necrosis factor alpha</coref> decreases, and <coref id="C63">interleukin-10</coref> increases, <coref min="sensitivity" id="C60">the sensitivity of <coref min="monocytes" id="C59">human monocytes</coref> to <coref id="C8">dexamethasone</coref></coref>: potential regulation of the glucocorticoid receptor.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Resistance to <coref min="therapy" id="C57">glucocorticoid therapy</coref> has been observed in patients with autoimmune/inflammatory diseases and may be related to <coref min="process" id="C64">the inflammatory process</coref> <coref ref="C64" type="PRON" id="C65">itself</coref>.</sentence>
+<sentence id="S3">The aim of this study was to examine the ability of <coref ref="C2" type="IDENT" id="C1">tumor necrosis factor alpha (TNFalpha, a proinflammatory cytokine)</coref> and <coref ref="C63" min="il-10" type="IDENT" id="C4">interleukin (IL)-10 (an anti-inflammatory cytokine)</coref> to differentially regulate <coref ref="C60" min="sensitivity" type="OTHER" id="C62">the sensitivity of human monocytes/macrophages to <coref id="C77">glucocorticoids</coref></coref>.</sentence>
+<sentence id="S4">To accomplish this, we first analyzed the pattern of <coref ref="C1" min="tnfalpha" type="IDENT" id="C3">TNFalpha</coref> and IL-10 inhibition by <coref ref="C8" type="IDENT" id="C9">dexamethasone</coref> in <coref id="C37"><coref min="cell cultures" id="C67">LPS-</coref>stimulated whole-blood cell cultures</coref>.</sentence>
+<sentence id="S5">Second, we studied the modulation of <coref ref="C60" min="sensitivity" type="OTHER" id="C68">the sensitivity of <coref ref="C67" type="IDENT" id="C66">these cells</coref> to <coref ref="C9" type="IDENT" id="C10">dexamethasone</coref></coref> by preincubation with <coref ref="C3" type="IDENT" id="C6">TNFalpha</coref> or <coref ref="C4" type="IDENT" id="C7">IL-10</coref> and measurement of <coref ref="C37" type="IDENT" id="C38">LPS-</coref>stimulated IL-6 secretion.</sentence>
+<sentence id="S6">In addition, we evaluated the effect of <coref ref="C10" type="IDENT" id="C11">dexamethasone</coref> on phorbolmyristate-acetate-stimulated IL-1 receptor antagonist secretion by the human monocytic cell line U937.</sentence>
+<sentence id="S7">Finally, we investigated whether the modulation of corticosensitivity in <coref ref="C3" type="IDENT" id="C39">TNFalpha-</coref> and <coref ref="C7" type="IDENT" id="C40">IL-10-</coref>pretreated U937 cells was related to a change of the glucocorticoid receptor concentration and affinity.</sentence>
+<sentence id="S8"><coref ref="C11" type="IDENT" id="C17">Dexamethasone</coref> had different effects on <coref ref="C38" type="IDENT" id="C69">LPS-</coref>induced <coref ref="C39" min="tnfalpha" type="IDENT" id="C42">TNFalpha</coref> and <coref min="secretion" id="C20">IL-10 secretion;</coref> whereas <coref ref="C17" type="PRON" id="C71">it</coref> suppressed <coref ref="C42" min="tnfalpha" type="IDENT" id="C43">TNFalpha</coref> in a dose-dependent fashion, <coref ref="C17" type="PRON" id="C72">its</coref> effect on <coref ref="C20" min="secretion" type="IDENT" id="C30">IL-10 secretion</coref> was biphasic, producing stimulation at lower, and inhibition at higher doses.</sentence>
+<sentence id="S9">The concentration of <coref ref="C69" type="IDENT" id="C70">LPS</coref> employed influenced the effect of <coref ref="C17" type="IDENT" id="C19">dexamethasone</coref> on <coref ref="C30" min="secretion" type="IDENT" id="C31">IL-10 secretion</coref> (P &lt; 0.001).</sentence>
+<sentence id="S10">Pretreatment with <coref ref="C43" type="IDENT" id="C22">TNFalpha</coref> diminished, and with <coref ref="C7" type="IDENT" id="C23">IL-10</coref> improved, the ability of <coref ref="C19" type="IDENT" id="C24">dexamethasone</coref> to suppress IL-6 secretion in <coref ref="C67" min="cell cultures" type="OTHER" id="C75">whole-blood cell cultures</coref> (P &lt; 0.01 for both) and to enhance IL-1 receptor antagonist secretion by U937 cells (P &lt; 0.05 for both).</sentence>
+<sentence id="S11"><coref ref="C22" min="tnfalpha" type="IDENT" id="C25">TNFalpha</coref> decreased (P &lt; 0.001), while <coref ref="C23" min="il-10" type="IDENT" id="C26">IL-10</coref> increased (P &lt; 0.001), the concentration of <coref ref="C24" type="IDENT" id="C27">dexamethasone</coref> binding sites in <coref ref="C75" type="IDENT" id="C74">these cells</coref>, with no discernible effect on <coref ref="C74" type="PRON" id="C76">their</coref> binding affinity.</sentence>
+<sentence id="S12">We conclude that <coref ref="C77" type="IDENT" id="C52">glucocorticoids</coref> differentially modulate <coref ref="C25" type="IDENT" id="C45">TNFalpha</coref> and <coref ref="C31" type="IDENT" id="C44">IL-10 secretion</coref> by <coref ref="C59" min="monocytes" type="IDENT" id="C79">human monocytes</coref> in a LPS dose-dependent fashion and that the sensitivity of <coref ref="C79" type="IDENT" id="C78">these cells</coref> to <coref ref="C52" type="IDENT" id="C51">glucocorticoids</coref> is altered by <coref ref="C45" type="IDENT" id="C47">TNFalpha</coref> or IL-10 pretreatment; <coref ref="C47" min="tnfalpha" type="IDENT" id="C48">TNFalpha</coref> blocks <coref ref="C78" type="PRON" id="C80">their</coref> effects, whereas <coref ref="C26" type="IDENT" id="C49">IL-10</coref> acts synergistically with <coref ref="C51" type="IDENT" id="C50">glucocorticoids</coref>.</sentence>
+<sentence id="S13">This is accompanied by opposite glucocorticoid receptor changes, respectively opposing and favoring glucocorticoid actions.</sentence>
+<sentence id="S14">This study suggests that the pattern of pro-/antiinflammatory cytokine secretion may alter the response of patients to <coref ref="C57" min="therapy" type="IDENT" id="C58">glucocorticoid therapy</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2137831">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2137831</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Pseudohypoaldosteronism</coref> in <coref min="families" id="C2">eight families</coref>: different forms of inheritance are evidence for <coref min="defects" id="C3">various genetic defects</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C4">Pseudohypoaldosteronism</coref> is a rare hereditary disorder presenting in early infancy with renal salt loss leading to hyponatremia and hyperkalemia despite high levels of plasma aldosterone.</sentence>
+<sentence id="S3">The patients are insensitive to <coref id="C5">mineralocorticoids</coref>; however, sodium supplementation is able to correct electrolyte abnormalities.</sentence>
+<sentence id="S4">Absent or greatly diminished type I aldosterone receptors in <coref id="C6">peripheral mononuclear leucocytes</coref> have been recently demonstrated and explain the lack of response to <coref ref="C5" type="IDENT" id="C7">mineralocorticoids</coref>.</sentence>
+<sentence id="S5">We have studied the mode of inheritance in <coref ref="C2" min="families" type="IDENT" id="C8">eight families</coref> with a total of nine patients.</sentence>
+<sentence id="S6">There was evidence for <coref min="form" id="C9">an autosomal recessive form of inheritance</coref> in four families, while <coref min="families" id="C10">the other four families</coref> appeared to have <coref min="mode" id="C11">an autosomal dominant mode of transmission</coref>.</sentence>
+<sentence id="S7">In three families <coref ref="C9" min="form" type="IDENT" id="C12">the autosomal recessive form</coref> was characterized by normal receptor as well as hormone data in both parents, while in one family receptor levels in both parents were greatly reduced, but hormone levels were normal.</sentence>
+<sentence id="S8">In <coref ref="C10" min="families" type="IDENT" id="C13">the four families with <coref ref="C11" min="mode" type="IDENT" id="C14">an autosomal dominant mode of transmission</coref></coref> there was always one parent with reduced receptor binding in <coref ref="C6" type="IDENT" id="C15">peripheral mononuclear leucocytes</coref> and elevated serum hormone levels.</sentence>
+<sentence id="S9">These parents were entirely asymptomatic.</sentence>
+<sentence id="S10">In an extended family we were able to study <coref id="C16"><coref id="C17">an aunt</coref> and <coref ref="C17" type="PRON" id="C18">her</coref> newborn daughter</coref>, <coref ref="C16" type="RELAT" id="C19">who</coref> were <coref ref="C16" type="PRON" id="C20">both</coref> also biochemically affected but clinically asymptomatic.</sentence>
+<sentence id="S11">It, therefore, appears that this dual pattern of genetic transmission may indicate <coref ref="C3" min="defects" type="IDENT" id="C21"><coref min="defects" id="C22">differing genetic defects</coref> <coref ref="C22" type="RELAT" id="C23">which</coref> cause the same clinical picture of <coref ref="C4" type="IDENT" id="C24">pseudohypoaldosteronism</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

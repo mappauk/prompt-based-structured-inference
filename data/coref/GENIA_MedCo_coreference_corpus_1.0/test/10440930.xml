@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10440930">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10440930</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Suppression of TNFalpha-mediated NFkappaB activity by <coref id="C14">myricetin</coref> and other flavonoids through downregulating <coref min="activity" id="C9">the activity of IKK</coref> in <coref id="C7">ECV304 cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">Flavonoids</coref> are a group of naturally-occurring phenolic compounds in the plant kingdom, and many flavonoids are found with vascular protective properties.</sentence>
+<sentence id="S3">Nevertheless how the protective response is exerted by <coref ref="C1" type="IDENT" id="C3">flavonoids</coref> is not well characterized.</sentence>
+<sentence id="S4">In view of <coref id="C4">the nuclear factor-kappaB (NFkappaB)</coref> may play a central role in the initiation of atherosclerosis, prevention of the activation of <coref ref="C4" type="IDENT" id="C5">NFkappaB</coref> represents an important role in protecting vascular injury.</sentence>
+<sentence id="S5">In this study, the effects of <coref ref="C3" type="IDENT" id="C6">flavonoids</coref> on <coref min="system" id="C20">NFkappaB/inhibitor-kappaB (IkappaB) system</coref> in <coref ref="C7" type="IDENT" id="C8">ECV304 cells</coref> activated with tumor necrosis factor-alpha (TNFalpha) were examined.</sentence>
+<sentence id="S6">We investigated the inhibitory action of <coref id="C12">six flavonoids</coref> on <coref ref="C9" min="activity" type="IDENT" id="C10">IkappaB kinase (IKK) activity</coref>, <coref ref="C10" min="enzyme" type="APPOS" id="C11">an enzyme recently found to phosphorylate critical serine residues of IkappaB for degradation</coref>.</sentence>
+<sentence id="S7">Of <coref ref="C12" type="IDENT" id="C13">six flavonoids tested</coref>, <coref ref="C14" type="IDENT" id="C15">myricetin</coref> was found to strongly inhibit <coref ref="C10" min="activity" type="IDENT" id="C16">IKK kinase activity</coref>, and prevent the degradation of IkappaBalpha and IkappaBbeta in activated endothelial cells.</sentence>
+<sentence id="S8">Furthermore, <coref ref="C15" type="IDENT" id="C17">myricetin</coref> was also found to inhibit NFkappaB activity correlated with suppression of monocyte adhesion to <coref ref="C8" type="IDENT" id="C18">ECV304 cells</coref>.</sentence>
+<sentence id="S9">Therefore we conclude that <coref ref="C6" type="IDENT" id="C19">flavonoids</coref> may be of therapeutic value for vascular disease through down regulation of <coref ref="C20" min="system" type="IDENT" id="C21">NFkappaB/IkappaB system</coref>.</sentence>
+<sentence id="S10">Copyright 1999 Wiley-Liss, Inc.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

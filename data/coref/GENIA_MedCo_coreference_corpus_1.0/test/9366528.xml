@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9366528">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9366528</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Aberrant splicing of <coref id="C1">the TSG101 and FHIT genes</coref> occurs frequently in multiple malignancies and in normal tissues and mimics alterations previously described in tumours.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Intragenic deletions of <coref id="C2">TSG101</coref>, <coref ref="C2" min="homolog" type="APPOS" id="C3">the human homolog of <coref min="gene" id="C4">a mouse gene (tsg101)</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> acts to suppress malignant cell growth</coref>, were reported in human breast tumours.</sentence>
+<sentence id="S3">We screened <coref ref="C2" type="IDENT" id="C6">TSG101</coref> for somatic mutations in <coref min="samples" id="C7">DNA and RNA samples isolated from a variety of common human malignancies, EBV-immortalised B-cells, and normal lung parenchyma</coref>.</sentence>
+<sentence id="S4">Intragenic TSG101 deletions in RNA transcripts were frequently found in all types of samples.</sentence>
+<sentence id="S5">Analysis of DNA failed to show genomic rearrangements corresponding to transcripts containing deletions in <coref ref="C7" min="samples" type="IDENT" id="C8">the same samples</coref>.</sentence>
+<sentence id="S6"><coref min="breakpoints" id="C9">The breakpoints of most transcript deletions</coref> coincide with genuine or cryptic splice site sequences, suggesting that <coref ref="C9" type="PRON" id="C10">they</coref> result from alternative or aberrant splicing.</sentence>
+<sentence id="S7">A similar spectrum of transcript deletions has previously been described in <coref min="gene" id="C11">the putative tumour suppressor gene FHIT</coref>.</sentence>
+<sentence id="S8">We analysed FHIT in the same series of RNA samples and detected truncated FHIT transcripts frequently in both tumour and normal tissues.</sentence>
+<sentence id="S9">In addition, transcripts from <coref ref="C6" type="IDENT" id="C12">TSG101</coref>, <coref ref="C11" type="IDENT" id="C13">FHIT</coref> and <coref min="genes" id="C14">seven other genes</coref> were analysed in RNA isolated from normal peripheral blood lymphocytes.</sentence>
+<sentence id="S10">Large TSG101 and FHIT intragenic transcript deletions were detected and these appeared to be the predominant transcript in 'aged' lymphocytes.</sentence>
+<sentence id="S11">Similar alterations were not detected in transcripts of <coref ref="C14" min="genes" type="IDENT" id="C15">the other genes</coref> <coref ref="C15" type="RELAT" id="C16">which</coref> were analysed.</sentence>
+<sentence id="S12">Our findings demonstrate that <coref min="transcripts" id="C17">truncated TSG101 and FHIT transcripts</coref> are commonly detected in both normal and malignant tissues and that a significant fraction of <coref ref="C17" type="PRON" id="C18">these</coref> are likely to be the result of aberrant splicing.</sentence>
+<sentence id="S13">While we cannot exclude that alterations in <coref ref="C1" type="IDENT" id="C19"><coref ref="C12" type="IDENT" id="C20">TSG101</coref> and <coref ref="C13" type="IDENT" id="C21">FHIT</coref></coref> occur during cancer development, our data indicate that in this context the commonly observed transcript abnormalities are misleading.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

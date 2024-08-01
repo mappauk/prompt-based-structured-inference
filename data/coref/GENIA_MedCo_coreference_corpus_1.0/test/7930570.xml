@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7930570">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7930570</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Simultaneous activation of <coref id="C1">Ig</coref> and Oct-2 synthesis and reduction of <coref id="C2">surface MHC class II expression</coref> by IL-6.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">Terminal differentiation of B cells</coref> to <coref id="C4">plasma cells</coref> in vivo is characterized by <coref id="C5">secretion of <coref ref="C1" type="IDENT" id="C6">Ig</coref></coref> and extinction of <coref ref="C2" min="expression" type="IDENT" id="C7">MHC class II expression</coref> on the cell surface.</sentence>
+<sentence id="S3">We show that IL-6 signaling leads to marked increases in the synthesis and <coref ref="C5" min="secretion" type="IDENT" id="C8">secretion of <coref ref="C6" type="IDENT" id="C9">Ig</coref></coref> in clonal human B cell lines and newly isolated polyclonal B lymphocytes in vitro.</sentence>
+<sentence id="S4">The IL-6-induced cells resemble <coref ref="C4" min="cells" type="IDENT" id="C10">plasma cells</coref> in ultrastructure and in reduced expression of surface MHC class II.</sentence>
+<sentence id="S5">Enhanced Ig synthesis is a result of coordinated transcriptional activation of <coref ref="C9" type="IDENT" id="C11">Ig genes</coref> without promoter or isotype specificity, and differential accumulation of the mRNA encoding the secreted form of Ig heavy chain.</sentence>
+<sentence id="S6">It is saturable and subject to negative control when IL-6 stimulation is prolonged.</sentence>
+<sentence id="S7">Coordinate with temporal changes in Ig synthesis, the DNA-binding activity and the synthesis of <coref id="C12">the B cell-enriched transcription factor Oct-2</coref> are regulated.</sentence>
+<sentence id="S8">Thus, differentiation of B cells with IL-6 in vitro recapitulates the hallmarks of <coref ref="C3" min="differentiation" type="IDENT" id="C13">terminal B differentiation</coref> in vivo; <coref ref="C12" type="IDENT" id="C14">Oct-2</coref> may have a role in <coref ref="C13" type="IDENT" id="C15">this process</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

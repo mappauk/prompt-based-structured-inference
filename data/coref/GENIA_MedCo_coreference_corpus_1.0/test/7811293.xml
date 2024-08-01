@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7811293">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7811293</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">The C-terminus of <coref id="C2">the B cell activator Oct-2</coref></coref> functions as an activation domain in <coref id="C3">yeast</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">Oct-1</coref> and <coref ref="C2" type="IDENT" id="C5">Oct-2</coref> are <coref id="C6">human transcriptional activators</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> bind to the same DNA element but activate distinct sets of genes.</sentence>
+<sentence id="S3">We expressed these factors in S. cerevisiae and observed greater than 5-fold stimulation of a lacZ reporter gene only with <coref ref="C5" type="IDENT" id="C8">Oct-2</coref>.</sentence>
+<sentence id="S4">Transfer of the Oct-2 C-terminal domain onto either <coref ref="C4" type="IDENT" id="C9">Oct-1 (Oct1.2)</coref> or a nonactivating DNA-binding domain from GAL4 created activators capable of greater than 15 and 10-fold stimulation of activity, respectively.</sentence>
+<sentence id="S5">Thus, <coref ref="C1" min="terminus" type="IDENT" id="C10">the C-terminus of <coref ref="C8" type="IDENT" id="C11">Oct-2</coref></coref> is sufficient to confer activation potential to nonactive DNA-binding fragments in <coref ref="C3" type="IDENT" id="C12">yeast</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

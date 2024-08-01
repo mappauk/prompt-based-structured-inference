@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8570215">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8570215</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Expression of either <coref id="C1">the TCL1 oncogene</coref>, or transcripts from <coref ref="C1" type="PRON" id="C2">its</coref> homologue MTCP1/c6.1B, in leukaemic and non-leukaemic T cells from ataxia telangiectasia patients.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="patients" id="C3">Patients with the recessively inherited disorder ataxia telangiectasia (A-T) have</coref> <coref min="level" type="IDENT" id="C4">a high level of specific chromosome translocations</coref> <coref ref="C4" type="RELAT" id="C5">which</coref> can be easily observed in peripheral T cells and show a greatly increased predisposition to leukaemia/lymphoma, mainly of T cell origin.</sentence>
+<sentence id="S3">Some translocation cells proliferate into <coref min="clone" id="C6">a large clone</coref> and may develop into <coref id="C7">T cell prolymphocytic leukaemia (T-PLL)</coref>.</sentence>
+<sentence id="S4">By the time of diagnosis of <coref ref="C7" type="IDENT" id="C8">T-PLL</coref>, <coref ref="C6" type="IDENT" id="C9">the clone</coref> contains many more genetic changes in the form of additional translocations.</sentence>
+<sentence id="S5"><coref ref="C8" type="IDENT" id="C10">T-PLL</coref> is also seen in <coref min="individuals" id="C11">non-A-T individuals</coref> <coref ref="C11" type="RELAT" id="C12">where</coref> expression of either <coref id="C13">TCL1</coref> (at 14q32) or the c6.1B/MTCP1 A1 transcript (at-Xq28) has been demonstrated in just a few instances.</sentence>
+<sentence id="S6">We show here, that <coref min="expression" id="C14">expression of <coref ref="C13" type="IDENT" id="C15">TCL1</coref></coref> occurs in leukaemic T cells from <coref ref="C3" min="patients" type="IDENT" id="C16">A-T patients</coref> with chromosome 14 rearrangements.</sentence>
+<sentence id="S7"><coref ref="C14" min="expression" type="IDENT" id="C17">Expression of <coref ref="C15" type="IDENT" id="C18">TCL1</coref></coref> also occurs in the preleukaemic clone cells of <coref ref="C16" min="patients" type="OTHER" id="C19">A-T patients containing the primary translocation alone</coref>.</sentence>
+<sentence id="S8">Some expression of <coref ref="C18" type="IDENT" id="C20">TCL1</coref> could also be detected in randomly selected A-T patients without large cytogenetic clones and without any evidence of leukaemic change.</sentence>
+<sentence id="S9">We also show that expression of the B1 transcript from <coref min="gene" id="C21">a second gene</coref>, <coref ref="C21" type="APPOS" id="C22">MTCP1</coref>, occurred at a relatively high level only in two T-PLL tumours from <coref ref="C19" min="patients" type="OTHER" id="C23">A-T patients with t(X;14) translocations</coref> whereas the MTCP1/A1 transcript is much more widely expressed in both tumour and non tumour cells of A-T and non-A-T individuals.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

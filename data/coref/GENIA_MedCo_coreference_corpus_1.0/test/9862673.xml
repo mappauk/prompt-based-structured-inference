@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9862673">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9862673</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="interaction" id="C1">CD27/CD70 interaction</coref> augments IgE secretion by promoting the differentiation of memory B cells into <coref min="cells" id="C2">plasma cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The induction of IgE switching in <coref min="cells" id="C3">B cells</coref> requires several signals given by cytokines and cell contact-delivered signals.</sentence>
+<sentence id="S3">Here, we investigated the role of <coref ref="C1" min="interaction" type="IDENT" id="C4">CD27/CD70 interaction</coref> in <coref min="synthesis" id="C5">B cell IgE synthesis</coref>.</sentence>
+<sentence id="S4">The addition of <coref min="transfectants" id="C6">CD27 ligand (CD70) transfectants</coref> to <coref min="cultures" id="C7">B cell cultures</coref> increased <coref ref="C5" min="synthesis" type="IDENT" id="C8">the IgE synthesis</coref> synergistically in the presence of <coref min="mab" id="C9">IL-4 plus anti-CD40 mAb (anti-CD40)</coref>.</sentence>
+<sentence id="S5">The effect of <coref ref="C6" min="transfectants" type="IDENT" id="C10">CD70 transfectants</coref> was dose dependent and was completely blocked by <coref ref="C9" min="mab" type="IDENT" id="C11">anti-CD70 mAb</coref>.</sentence>
+<sentence id="S6"><coref min="cells" id="C12">CD27+ B cells</coref> had the ability to produce <coref id="C13">IgE</coref>, <coref ref="C13" type="RELAT" id="C14">which</coref> was increased by contact with <coref ref="C10" min="transfectants" type="IDENT" id="C15">CD70 transfectants</coref>, whereas <coref min="cells" id="C16">CD27- B cells</coref> did not produce <coref ref="C13" type="IDENT" id="C17">IgE</coref>.</sentence>
+<sentence id="S7"><coref ref="C4" min="interaction" type="IDENT" id="C18">CD27/CD70 interaction</coref> enhanced <coref min="proliferation" id="C19">B cell proliferation</coref> in the presence of IL-4 or IL-4 plus anti-CD40.</sentence>
+<sentence id="S8">The augmentation of <coref ref="C19" min="proliferation" type="IDENT" id="C20">B cell proliferation</coref> by <coref ref="C15" min="transfectants" type="IDENT" id="C21">CD70 transfectants</coref> was apparent in <coref ref="C12" min="cells" type="IDENT" id="C22">CD27+ B cells</coref>, but was mild in <coref ref="C16" min="cells" type="IDENT" id="C23">CD27- B cells</coref>.</sentence>
+<sentence id="S9">The helper activity for <coref ref="C8" min="synthesis" type="IDENT" id="C24">IgE synthesis</coref> by <coref ref="C18" min="interaction" type="IDENT" id="C25">the CD27/CD70 interaction</coref> did not contribute to the enhancement of germline epsilon transcripts.</sentence>
+<sentence id="S10">Flow cytometric and morphological analyses demonstrated that the addition of <coref ref="C21" min="transfectants" type="IDENT" id="C26">CD70 transfectants</coref> to <coref ref="C7" min="cultures" type="IDENT" id="C27">B cell cultures</coref> remarkably promoted differentiation into <coref ref="C2" min="cells" type="IDENT" id="C28">plasma cells</coref> in the presence of <coref min="signaling" id="C29">IL-4 and CD40 signaling</coref>.</sentence>
+<sentence id="S11">Finally, CD27 cross-linking resulted in the up-regulation of <coref id="C30">positive regulatory domain I-binding factor-1</coref>.</sentence>
+<sentence id="S12">Taken together, our findings indicate that signaling via CD27 on <coref ref="C3" min="cells" type="IDENT" id="C31">B cells</coref> induces <coref ref="C24" min="synthesis" type="IDENT" id="C32">IgE synthesis</coref>, in cooperation with <coref ref="C29" min="signaling" type="IDENT" id="C33">IL-4 and CD40 signaling</coref>, by promoting the generation of <coref ref="C28" min="cells" type="IDENT" id="C34">plasma cells</coref> through up-regulation of <coref ref="C30" type="IDENT" id="C35">positive regulatory domain I-binding factor-1</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

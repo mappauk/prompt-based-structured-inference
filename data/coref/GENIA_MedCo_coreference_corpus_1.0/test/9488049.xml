@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9488049">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9488049</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Cytokine rescue from <coref min="apoptosis" id="C1">glucocorticoid induced apoptosis</coref> in <coref min="cells" id="C2">T cells</coref> is mediated through inhibition of <coref id="C3">IkappaBalpha</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We previously reported that <coref id="C4">dexamethasone (DEX)</coref>, <coref ref="C4" min="glucocorticoid" type="APPOS" id="C5">a synthetic glucocorticoid</coref>, causes <coref ref="C1" type="IDENT" id="C6">apoptosis</coref> in mature Th cell lines, and that <coref ref="C6" min="induction" type="IDENT" id="C7">this induction of <coref min="death" id="C8">cell death</coref></coref> is prevented by <coref min="cytokines" id="C9">specific cytokines</coref>, namely, by <coref id="C10">IL-2</coref> in <coref min="cells" id="C11">Th1 cells</coref> and by <coref id="C12">IL-4</coref> in <coref min="cells" id="C13">Th2 cells</coref>.</sentence>
+<sentence id="S3">We now show that this differential rescue by <coref ref="C9" min="cytokines" type="IDENT" id="C14">specific cytokines</coref> in Th cells correlates with <coref min="level" id="C15">the level of <coref ref="C3" type="IDENT" id="C16">IkappaBalpha</coref></coref> <coref ref="C15" type="RELAT" id="C17">that</coref> is regulated by <coref ref="C4" type="IDENT" id="C18">DEX</coref> and <coref id="C19">cytokines</coref>.</sentence>
+<sentence id="S4">In <coref min="types" id="C20">both cell types</coref> the cellular levels of IkappaBalpha mRNA and protein were evaluated by DEX treatment.</sentence>
+<sentence id="S5">Interestingly, <coref min="induction" id="C21">the DEX-mediated IkappaBalpha induction</coref> was completely inhibited by <coref ref="C10" type="IDENT" id="C22">IL-2</coref>, but not <coref ref="C12" type="IDENT" id="C23">IL-4</coref>, in <coref ref="C11" min="cells" type="IDENT" id="C24">Th1 cells</coref>, while the reverse profile was seen in <coref ref="C13" min="cells" type="IDENT" id="C25">Th2 cells</coref>.</sentence>
+<sentence id="S6">In <coref ref="C20" min="types" type="IDENT" id="C26">both cell types</coref>, <coref id="C27"><coref id="C28">the cytokine</coref> <coref ref="C28" type="RELAT" id="C29">that</coref> inhibits <coref ref="C21" min="induction" type="IDENT" id="C30">the induction of <coref ref="C16" type="IDENT" id="C31">IkappaBalpha</coref> by <coref ref="C18" type="IDENT" id="C32">DEX</coref></coref></coref>, also rescues <coref ref="C26" min="cells" type="IDENT" id="C33">these cells</coref> from DEX-induced apoptosis, although <coref ref="C27" min="cytokine" type="IDENT" id="C34">the rescue cytokine</coref> is different in Th1 and Th2 cells.</sentence>
+<sentence id="S7">Our results imply that <coref ref="C2" min="cells" type="IDENT" id="C35">T cells</coref> need to maintain a certain level of NF-kappaB transcriptional activity in order to survive; up- or down-regulation of nuclear NF kappaB through modulation of IkappaBalpha expression by <coref ref="C19" type="IDENT" id="C36">cytokines</coref> or <coref ref="C32" type="IDENT" id="C37">DEX</coref> may lead to cell survival or <coref ref="C8" min="death" type="IDENT" id="C38">cell death</coref>, respectively.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

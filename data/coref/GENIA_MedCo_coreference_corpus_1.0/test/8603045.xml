@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8603045">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8603045</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The involvement of <coref id="C1">p23</coref>, <coref id="C2">hsp90</coref>, and immunophilins in <coref min="assembly" id="C3">the assembly of <coref min="complexes" id="C4">progesterone receptor complexes</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">To better understand the assembly mechanism for <coref id="C5">the progesterone receptor (PR)</coref>, we have developed cell-free systems for studying interactions of <coref ref="C5" type="IDENT" id="C6">PR</coref>, <coref ref="C2" type="IDENT" id="C7">hsp90</coref>, and other associated proteins.</sentence>
+<sentence id="S3">When <coref ref="C6" type="IDENT" id="C8">PR</coref> is incubated in rabbit reticulocyte lysate, <coref ref="C8" type="PRON" id="C9">its</coref> association with <coref ref="C7" type="IDENT" id="C10">hsp90</coref>, <coref id="C11">hsp70</coref>, <coref min="immunophilins" id="C12">the three immunophilins FKBP54, FKBP52 and CyP-40</coref>, and with <coref ref="C1" type="IDENT" id="C13">p23</coref> is observed.</sentence>
+<sentence id="S4">These interactions require ATP/Mg2+ and when ATP is limiting the PR complex is altered to one containing the proteins <coref id="C14">p60</coref> and p48, but lacking immunophilins and <coref ref="C13" type="IDENT" id="C15">p23</coref>.</sentence>
+<sentence id="S5">We have studied <coref min="complexes" id="C16">two pre-formed hsp90 complexes</coref> <coref ref="C16" type="RELAT" id="C17">that</coref> may participate in <coref ref="C3" min="assembly" type="IDENT" id="C18">the assembly of <coref ref="C4" min="complexes" type="IDENT" id="C19">PR complexes</coref></coref>.</sentence>
+<sentence id="S6"><coref id="C20">One</coref> contains <coref ref="C10" type="IDENT" id="C21">hsp90</coref> bound to <coref ref="C11" type="IDENT" id="C22">hsp70</coref> and <coref ref="C14" type="IDENT" id="C23">p60</coref> and <coref ref="C20" type="IDENT" id="C24">this complex</coref> forms spontaneously in the absence of <coref id="C25">ATP</coref>.</sentence>
+<sentence id="S7"><coref min="complex" id="C26">A second complex</coref> contains <coref ref="C21" type="IDENT" id="C27">hsp90</coref> bound to <coref ref="C15" type="IDENT" id="C28">p23</coref> plus <coref ref="C12" min="immunophilins" type="IDENT" id="C29">the three immunophilins</coref> and some hsp70.</sentence>
+<sentence id="S8">The formation of <coref ref="C26" type="IDENT" id="C30">this complex</coref> requires <coref ref="C25" type="IDENT" id="C31">ATP</coref>.</sentence>
+<sentence id="S9">In further studies we have shown that purified hsp90 can bind to purified p23 and this interaction requires both <coref ref="C31" type="IDENT" id="C32">ATP</coref> and <coref id="C33">molybdate</coref>.</sentence>
+<sentence id="S10">This explains, in part, the known effects of <coref ref="C32" type="IDENT" id="C34">ATP</coref> and <coref ref="C33" type="IDENT" id="C35">molybdate</coref> on <coref ref="C18" min="assembly" type="IDENT" id="C36">assembly of <coref ref="C19" min="complexes" type="IDENT" id="C37">PR complexes</coref></coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

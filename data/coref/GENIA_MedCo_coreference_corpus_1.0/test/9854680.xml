@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9854680">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9854680</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The modulation of glucocorticoid receptor content by 3-O-methyl-D-glucose transport in human mononuclear leukocyte in obesity.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Glucocorticoid receptors (GR) and <coref min="transport" id="C1">3-O-methyl-D glucose (3-O-MG) transport</coref> were determined in mononuclear leukocytes (MNL) from <coref id="C2"><coref min="subjects" id="C3">11 abdominal obese subjects</coref>, <coref min="controls" id="C4">10 pituitary-dependent Cushing's syndrome (Cushing's disease) and 10 healthy controls</coref></coref>.</sentence>
+<sentence id="S3">Using a whole-cell competitive binding assay and 3H-dexamethasone as tracer, MNL of <coref ref="C3" min="subjects" type="IDENT" id="C5">abdominal obese subjects</coref> were found to have <coref id="C6">4855 +/- 1389 sites/cell</coref> <coref ref="C6" type="RELAT" id="C7">which</coref> was significantly lower (p &lt; 0.05) than <coref ref="C4" type="IDENT" id="C8">controls</coref> (6234 +/- 1568 sites/cell), although no significant difference was found in the mean serum cortisol level.</sentence>
+<sentence id="S4"><coref ref="C5" type="PRON" id="C9">Their</coref> mean Kd (affinity) was also significantly lower than that found in <coref min="controls" id="C10">the healthy controls</coref> (obese Kd:2.92 +/- 0.84 nmol/l, control Kd: 4.55 +/- 0.67 nM, p &lt; 0.05).</sentence>
+<sentence id="S5">On the other hand, the receptor characteristics in Cushing's disease patients were within <coref min="range" id="C11">the normal range</coref>.</sentence>
+<sentence id="S6">At the same time, <coref ref="C1" min="transport" type="IDENT" id="C12">3-O-MG transport</coref> was determined in <coref ref="C2" min="subjects" type="IDENT" id="C13">the same subjects</coref>.</sentence>
+<sentence id="S7">In <coref min="disease" id="C14">Cushing's disease</coref>, <coref ref="C12" min="transport" type="IDENT" id="C15">3-O-MG transport</coref> was within <coref ref="C11" min="range" type="IDENT" id="C16">the normal range</coref>, whereas in abdominal obesity <coref ref="C15" min="value" type="IDENT" id="C17">this value</coref> was significantly lower than <coref ref="C10" min="controls" type="IDENT" id="C18">the healthy controls</coref> (abdominal obese: 31.90 +/- 8.20; control: 46.26 +/- 12.91 fmol/10(6) cell, min, p &lt; 0.05).</sentence>
+<sentence id="S8">We also found a positive correlation between <coref ref="C17" min="transport" type="IDENT" id="C19">3-O-MG transport</coref> and GR binding capacity in <coref ref="C5" min="subjects" type="IDENT" id="C20">abdominal subjects</coref> (r = 0.89, p &lt; 0.001), however we did not find such a correlation in <coref ref="C14" min="disease" type="IDENT" id="C21">Cushing's disease</coref> (r = 0.60, p &gt; 0.05).</sentence>
+<sentence id="S9">These results indicated that, in abdominal obesity, the GR binding capacity in MNL is influenced by the changes in glucose transport.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

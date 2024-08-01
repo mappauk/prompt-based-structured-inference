@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7759956">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7759956</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">GM-CSF</coref> and <coref id="C2">IL-2</coref> share common control mechanisms in response to <coref min="signals" id="C3">costimulatory signals</coref> in <coref min="cells" id="C4">T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Antigen complexed with major histocompatibility complex class I or II molecules on the surface of antigen presenting cells interacts with the T cell receptor (TCR) on the surface of <coref ref="C4" min="cells" type="IDENT" id="C5">T cells</coref> and initiates an activation cascade.</sentence>
+<sentence id="S3">So called <coref ref="C3" min="signals" type="IDENT" id="C6">costimulatory signals</coref>, mediated by other cell surface interactions or soluble cytokines produced by antigen presenting cells, are also required for complete T cell activation.</sentence>
+<sentence id="S4">High levels of cytokine gene expression in <coref ref="C5" min="cells" type="IDENT" id="C7">T cells</coref> also required both TCR and costimulatory signals.</sentence>
+<sentence id="S5">The granulocyte-macrophage colony-stimulating factor requires <coref min="sequences" id="C8">sequences in the promoter as well as a powerful enhancer located 3kb upstream</coref> to respond to TCR-like signals.</sentence>
+<sentence id="S6"><coref ref="C8" min="regions" type="IDENT" id="C9">These promoter and enhancer regions</coref> are mainly activated by <coref id="C10">the transcription factor nuclear factor of activated T cells (NFAT)</coref>.</sentence>
+<sentence id="S7">The activation of <coref ref="C10" type="IDENT" id="C11">NFAT</coref> by <coref min="signals" id="C12">TCR signals</coref> has been well described for interleukin-2 (IL-2) and IL-4 gene transcription in <coref ref="C7" type="IDENT" id="C13">T cells</coref>.</sentence>
+<sentence id="S8"><coref ref="C6" min="signals" type="IDENT" id="C14">Costimulatory signals</coref>, such as activation of the CD28 cell surface molecule on <coref ref="C13" min="cells" type="IDENT" id="C15">T cells</coref>, lead to activation through <coref min="region" id="C16">a distinct region of <coref min="promoter" id="C17">the granulocyte-macrophage colony-stimulating factor (GM-CSF) promoter</coref></coref>.</sentence>
+<sentence id="S9"><coref ref="C16" min="region" type="IDENT" id="C18">This region</coref> is termed <coref ref="C18" type="IDENT" id="C19">the CK-1</coref> or <coref ref="C18" type="IDENT" id="C20">CD28RE</coref> and appears to bind specific members of the NF-kappa B family of transcription factors.</sentence>
+<sentence id="S10">Human T leukemia virus type 1 (HTLV-1) infects <coref ref="C15" min="cells" type="IDENT" id="C21">T cells</coref> and can lead to increase GM-CSF expression.</sentence>
+<sentence id="S11">We have found that <coref min="protein" id="C22">the HTLV-1 transactivator protein</coref>, <coref ref="C22" type="APPOS" id="C23">tax</coref>, acts as a costimulatory signal for GM-CSF and IL-2 gene transcription, in that <coref ref="C22" type="PRON" id="C24">it</coref> can cooperate with <coref ref="C12" min="signals" type="IDENT" id="C25">TCR signals</coref> to mediate high level gene expression.</sentence>
+<sentence id="S12"><coref ref="C23" type="IDENT" id="C26">Tax</coref> activates <coref ref="C17" min="promoter" type="IDENT" id="C27">the GM-CSF promoter</coref> through <coref ref="C18" min="region" type="IDENT" id="C28">the CK-1/CD28RE region</coref> and also activates nuclear factor-kappa B binding to <coref ref="C28" min="region" type="IDENT" id="C29">this region</coref>.</sentence>
+<sentence id="S13">However, <coref id="C30">other transcription factors or coactivators of NF-kappa B</coref> are required for tax activation but <coref ref="C30" type="PRON" id="C31">these</coref> remain to be identified.</sentence>
+<sentence id="S14">The CK-1/CD28RE of <coref ref="C1" type="IDENT" id="C32">GM-CSF</coref> shows a high degree of similarity to the IL-2 CD28RE and the IL-3 gene also contains a related region.</sentence>
+<sentence id="S15">This observation, together with <coref id="C33">the fact</coref> <coref ref="C33" type="RELAT" id="C34">that</coref> both <coref ref="C32" type="IDENT" id="C35">GM-CSF</coref> and <coref ref="C2" type="IDENT" id="C36">IL-2</coref> respond to <coref ref="C25" min="signals" type="IDENT" id="C37">TCR signals</coref> via <coref ref="C11" type="IDENT" id="C38">NFAT</coref>, implies a high degree of conservation in the regulation of cytokine gene expression in <coref ref="C21" min="cells" type="IDENT" id="C39">T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

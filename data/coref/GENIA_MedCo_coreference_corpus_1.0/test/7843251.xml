@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7843251">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7843251</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Protein kinase C</coref> is not a downstream effector of <coref id="C2">p21ras</coref> in activated T cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The aim of this present study was to investigate the role of <coref ref="C1" type="IDENT" id="C3">protein kinase C (PKC)</coref>, downstream of <coref ref="C2" type="IDENT" id="C4">p21ras</coref>, in activating interleukin-2 (IL-2) gene expression.</sentence>
+<sentence id="S3">It has been reported that <coref ref="C3" type="IDENT" id="C5">PKC</coref> is an effector of <coref ref="C4" type="IDENT" id="C6">p21ras</coref> in T cells.</sentence>
+<sentence id="S4">Data is presented, using the potent and selective PKC inhibitor Ro 31-8425 and <coref id="C7">transient expression of a constitutively active ras mutant</coref>, <coref ref="C7" type="RELAT" id="C8">which</coref> clearly shows that <coref ref="C5" type="IDENT" id="C9">PKC</coref> is not downstream of <coref ref="C6" type="IDENT" id="C10">p21ras</coref> in the induction of NF-AT and AP-1 transcriptional activity and in the expression of <coref id="C11">IL-2</coref> in human Jurkat T cells.</sentence>
+<sentence id="S5">Reporter gene experiments demonstrated that NF-kappa B transcriptional activity is not affected by expression of activated p21ras.</sentence>
+<sentence id="S6">The signaling pathways involving PKC activation, calcium mobilization and ras activation combine to provide the necessary components for production of <coref ref="C11" type="IDENT" id="C12">IL-2</coref> during T cell activation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

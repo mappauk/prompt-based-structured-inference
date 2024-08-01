@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1653950">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1653950</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref ref="C2" min="transcription factor" type="APPOS" id="C1">USF-related transcription factor</coref>, <coref id="C2">HIV-TF1</coref>, stimulates transcription of <coref id="C3">human immunodeficiency virus-1</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="transcription factor" id="C4">The transcription factor <coref ref="C2" type="IDENT" id="C5">HIV-TF1</coref></coref>, <coref ref="C4" type="RELAT" id="C6">which</coref> binds to a region about 60 bp upstream from the enhancer of <coref ref="C3" type="IDENT" id="C7">the human immunodeficiency virus-1 (HIV-1)</coref>, was purified from human B cells.</sentence>
+<sentence id="S3"><coref ref="C5" type="IDENT" id="C8">HIV-TF1</coref> had a molecular weight of 39,000.</sentence>
+<sentence id="S4">Binding of <coref ref="C8" type="IDENT" id="C9">HIV-TF1</coref> to <coref id="C10">the HIV long terminal repeat (LTR)</coref> activated transcription from <coref min="promoter" id="C11">the HIV promoter</coref> in vitro.</sentence>
+<sentence id="S5"><coref min="binding site" id="C12">The HIV-TF1-binding site</coref> in <coref ref="C10" type="IDENT" id="C13">HIV LTR</coref> was similar to the site recognized by <coref id="C14">upstream stimulatory factor (USF)</coref> in the adenovirus major late promoter.</sentence>
+<sentence id="S6">DNA-binding properties of <coref ref="C9" type="IDENT" id="C15">HIV-TF1</coref> suggested that <coref ref="C15" type="IDENT" id="C16">HIV-TF1</coref> might be identical or related to <coref ref="C14" type="IDENT" id="C17">USF</coref>.</sentence>
+<sentence id="S7">Interestingly, treatment of <coref ref="C16" type="OTHER" id="C18">purified HIV-TF1</coref> by phosphatase greatly reduced its DNA-binding activity, suggesting that phosphorylation of <coref ref="C16" type="IDENT" id="C19">HIV-TF1</coref> was essential for DNA binding.</sentence>
+<sentence id="S8">The disruption of <coref ref="C12" min="binding site" type="IDENT" id="C20">HIV-TF1-binding site</coref> induced a 60% decrease in the level of transcription from <coref ref="C11" min="promoter" type="IDENT" id="C21">the HIV promoter in vivo</coref>.</sentence>
+<sentence id="S9">These results suggest that <coref ref="C19" type="IDENT" id="C22">HIV-TF1</coref> is involved in transcriptional regulation of <coref ref="C7" type="IDENT" id="C23">HIV-1</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9328452">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9328452</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Analysis of myeloid-associated genes in human hematopoietic progenitor cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The distribution of myeloid lineage-associated cytokine receptors and lysosomal proteins was analyzed in <coref min="subsets" id="C1">human CD34+ cord blood cell (CB) subsets</coref> at different stages of myeloid commitment by reverse-transcriptase polymerase chain reaction (RT-PCR).</sentence>
+<sentence id="S3">The highly specific granulomonocyte-associated lysosomal proteins myeloperoxidase (MPO) and lysozyme (LZ), as well as the transcription factor PU.1, were already detectable in <coref min="subset" id="C2">the most immature CD34+Thy-1+ subset</coref>.</sentence>
+<sentence id="S4">Messenger RNA (mRNA) levels for the granulocyte-colony stimulating factor (G-CSF) receptor, granulocyte-macrophage (GM)-CSF receptor alpha subunit and tumor necrosis factor (TNF) receptors I (p55) and II (p75) were also detected in <coref ref="C2" min="subset" type="IDENT" id="C3">this subset</coref> in addition to <coref id="C4">c-kit and flt-3</coref>, <coref ref="C4" min="receptors" type="APPOS" id="C5">receptors known to be expressed on progenitor cells</coref>.</sentence>
+<sentence id="S5">By contrast, <coref min="receptor" id="C6">the monocyte-macrophage colony stimulating factor (M-CSF) receptor</coref> was largely absent at this stage and in the CD34+Thy-1-CD45RA- subsets.</sentence>
+<sentence id="S6"><coref ref="C6" min="receptor" type="IDENT" id="C7">The M-CSF receptor</coref> was first detectable in the myeloid-committed CD34+Thy-l-CD45RA+ subset.</sentence>
+<sentence id="S7">All other molecules studied were found to be expressed at this stage of <coref id="C8">differentiation</coref>.</sentence>
+<sentence id="S8">Different cocktails of the identified ligands were added to sorted CD34+Thy-1+ single cells.</sentence>
+<sentence id="S9">Low proliferative capacity was observed after 1 week in culture in the presence of <coref id="C9">stem cell factor (SCF) + Flt-3 ligand (FL) + G-CSF</coref>.</sentence>
+<sentence id="S10">Addition of GM-CSF to <coref ref="C9" min="cocktail" type="IDENT" id="C10">this basic cocktail</coref> consistently increased the clonogenic capacity of single CD34+Thy-1+ cells, and this effect was further enhanced (up to 72.3 +/- 4.3% on day 7) by the inclusion of <coref id="C11">TNF-alpha</coref>.</sentence>
+<sentence id="S11">In conclusion, the presence of myeloid-associated growth factor receptor transcripts in <coref ref="C1" min="subsets" type="IDENT" id="C12">CD34+ CB subsets</coref> does not discriminate the various stages of <coref ref="C8" type="IDENT" id="C13">differentiation</coref>, with the exception of <coref ref="C7" min="receptor" type="IDENT" id="C14">the M-CSF receptor</coref>.</sentence>
+<sentence id="S12">In addition, we show that <coref ref="C11" type="IDENT" id="C15">TNF-alpha</coref> is a potent costimulatory factor of the very immature CD34+Thy-1+ CB subset.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

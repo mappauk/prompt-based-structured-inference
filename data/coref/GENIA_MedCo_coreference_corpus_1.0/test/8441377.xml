@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8441377">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8441377</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Dimerization of <coref id="C1">NF-KB2</coref> with <coref id="C2">RelA(p65)</coref> regulates DNA binding, transcriptional activation, and inhibition by <coref id="C3">an I kappa B-alpha (MAD-3)</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Inducible expression of <coref id="C4">human immunodeficiency virus (HIV)</coref> is regulated by <coref min="transcription factor" id="C5">a cellular transcription factor</coref>, <coref ref="C5" type="APPOS" id="C6">nuclear factor kappa B (NF-kappa B)</coref>.</sentence>
+<sentence id="S3"><coref ref="C6" type="IDENT" id="C7">NF-kappa B</coref> is composed of distinct subunits; <coref min="genes" id="C8">five independent genes</coref>, <coref ref="C8" type="APPOS" id="C9">NFKB1(p105), <coref ref="C1" type="OTHER" id="C10">NFKB2(p100)</coref>, <coref ref="C2" type="IDENT" id="C11">RelA(p65)</coref>, c-rel and relB</coref>, <coref ref="C8" type="RELAT" id="C12">that</coref> encode <coref min="proteins" id="C13">related proteins</coref> <coref ref="C13" type="RELAT" id="C14">that</coref> bind to kappa B DNA elements have been isolated.</sentence>
+<sentence id="S4">We have previously found that <coref ref="C1" type="OTHER" id="C15">NFKB2(p49/p52)</coref> acts in concert with <coref ref="C11" type="IDENT" id="C16">RelA(p65)</coref> to stimulate <coref min="enhancer" id="C17">the <coref ref="C4" type="IDENT" id="C18">HIV</coref> enhancer</coref> in <coref min="cells" id="C19">Jurkat T-leukemia cells</coref>.</sentence>
+<sentence id="S5">Here we examine the biochemical basis for the transcriptional regulation of <coref ref="C18" type="IDENT" id="C20">HIV</coref> by <coref ref="C1" type="IDENT" id="C21">NFKB2</coref>.</sentence>
+<sentence id="S6">Using Scatchard analysis, we have determined the dissociation constants of <coref id="C22">homodimeric p49</coref> and <coref id="C23">heterodimeric p49/p65</coref> for binding to <coref min="site" id="C24">the <coref ref="C20" type="IDENT" id="C25">HIV</coref> kappa B site</coref>.</sentence>
+<sentence id="S7"><coref ref="C22" type="IDENT" id="C26">p49</coref> has a approximately 18-fold-lower affinity for <coref ref="C24" min="site" type="IDENT" id="C27">the <coref ref="C25" type="IDENT" id="C28">HIV</coref> kappa B site</coref> (KD = 69.1 pM) than does the approximately 50-kDa protein NFKB1(p50) derived from p105 (KD = 3.9 pM).</sentence>
+<sentence id="S8">In contrast, the affinity of <coref ref="C23" type="OTHER" id="C29">heterodimeric NFKB2(p49)/RelA(p65)</coref> for <coref ref="C27" min="site" type="IDENT" id="C30">this site</coref> is approximately 6-fold higher (KD = 11.8 pM) than that of <coref ref="C26" type="IDENT" id="C31">p49</coref> alone.</sentence>
+<sentence id="S9">Consistent with these findings, in vitro transcription was stimulated 18-fold by the addition of preformed, <coref ref="C29" type="IDENT" id="C32">heterodimeric NFKB2(p49)/RelA(p65)</coref> protein.</sentence>
+<sentence id="S10">Transcriptional activation of <coref ref="C17" min="enhancer" type="IDENT" id="C33">the <coref ref="C28" type="IDENT" id="C34">HIV</coref> enhancer</coref> was also subject to regulation by <coref ref="C3" min="I kappa B-alpha(MAD-3)" type="IDENT" id="C35">recently cloned I kappa B-alpha(MAD-3)</coref>.</sentence>
+<sentence id="S11"><coref ref="C35" type="IDENT" id="C36">Recombinant I kappa B-alpha(MAD-3)</coref> inhibited the DNA binding activity of <coref ref="C16" type="OTHER" id="C37">p65</coref>, <coref ref="C32" type="OTHER" id="C38">p49/p65</coref>, and p50/p65 but stimulated the binding of <coref ref="C31" type="OTHER" id="C39">NFKB2(p49)</coref> or NFKB1(p50).</sentence>
+<sentence id="S12">Functional activation of an <coref ref="C34" type="IDENT" id="C40">HIV</coref> reporter plasmid by <coref ref="C38" type="IDENT" id="C41">p49/p65</coref> in <coref ref="C19" min="cells" type="OTHER" id="C42">transiently transfected Jurkat T-leukemia cells</coref> was also inhibited by coexpression of <coref ref="C36" type="IDENT" id="C43">MAD-3</coref>.</sentence>
+<sentence id="S13">(ABSTRACT TRUNCATED AT 250 WORDS)</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

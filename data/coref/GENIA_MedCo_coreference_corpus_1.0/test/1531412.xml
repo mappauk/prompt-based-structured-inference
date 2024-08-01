@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1531412">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1531412</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="regulation" id="C1">Transcriptional regulation</coref> during T-cell development: <coref min="gene" id="C2">the alpha TCR gene</coref> as a molecular model.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The regulation of gene expression during lymphocyte differentiation is a complex process involving interactions between multiple positive and negative transcriptional regulatory elements.</sentence>
+<sentence id="S3">In this article, <coref ref="C1" min="regulation" type="IDENT" id="C3">transcriptional regulation</coref> of <coref ref="C5" min="gene" type="APPOS" id="C4">the archetypal T-cell-specific gene</coref>, <coref ref="C2" type="IDENT" id="C5">alpha TCR</coref>, is discussed.</sentence>
+<sentence id="S4">Major recent developments, including the identification of <coref min="transcription factors" id="C6">novel families of transcription factors</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> regulate multiple T-cell genes during thymocyte ontogeny and T-cell activation, are described.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

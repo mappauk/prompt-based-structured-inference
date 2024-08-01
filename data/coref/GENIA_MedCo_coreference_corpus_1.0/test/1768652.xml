@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1768652">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1768652</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Kappa B-specific DNA binding proteins are differentially inhibited by enhancer mutations and biological oxidation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Kappa B (kappa B) enhancer binding proteins isolated from the nuclei of <coref min="human T cells" id="C1">activated human T cells</coref> produce <coref min="nucleoprotein complexes" id="C2">two distinct nucleoprotein complexes</coref> when incubated with the kappa B element from the interleukin-2 receptor-alpha (IL-2R alpha) gene.</sentence>
+<sentence id="S3"><coref ref="C2" min="complexes" type="IDENT" id="C3">These two DNA-protein complexes</coref> are composed of at least <coref min="proteins" id="C4">four host proteins (<coref id="C5">p50</coref>, <coref id="C6">p55</coref>, <coref id="C7">p75</coref>, <coref id="C8">p85</coref>)</coref>, each of which shares structural similarity with the v-rel oncogene product.</sentence>
+<sentence id="S4">Nuclear expression of <coref ref="C4" type="IDENT" id="C9">these proteins</coref> is induced with distinctly biphasic kinetics following phorbol ester <coref ref="C1" min="activation" type="IDENT" id="C10">activation of T cells</coref> (<coref ref="C6" type="IDENT" id="C11">p55</coref>/<coref ref="C7" type="IDENT" id="C12">p75</coref> early and <coref ref="C5" type="IDENT" id="C13">p50</coref>/<coref ref="C8" type="IDENT" id="C14">p85</coref> late).</sentence>
+<sentence id="S5">DNA-protein crosslinking studies have revealed that the more rapidly migrating <coref min="complex" id="C15">B2 complex</coref> contains both <coref ref="C13" type="IDENT" id="C16">p50</coref> and <coref ref="C11" type="IDENT" id="C17">p55</coref> while the more slowly migrating <coref min="complex" id="C18">B1 complex</coref> is composed of <coref ref="C9" type="IDENT" id="C19"><coref ref="C16" type="IDENT" id="C20">p50</coref>, <coref ref="C17" type="IDENT" id="C21">p55</coref>, <coref ref="C12" type="IDENT" id="C22">p75</coref>, and <coref ref="C14" type="IDENT" id="C23">p85</coref></coref>.</sentence>
+<sentence id="S6">Site-directed mutagenesis of <coref min="enhancer" id="C24">the wild-type IL-2R alpha kappa B enhancer (GGGGAATCTCCC)</coref> has revealed that the binding of <coref ref="C20" type="IDENT" id="C25">p50</coref> and <coref ref="C21" type="IDENT" id="C26">p55</coref> (<coref ref="C15" min="complex" type="IDENT" id="C27">B2 complex</coref>) is particularly sensitive to alteration of the 5' triplet of deoxyguanosine residues.</sentence>
+<sentence id="S7">In contrast, formation of <coref ref="C18" min="complex" type="IDENT" id="C28">the B1 complex</coref>, reflecting the binding of <coref ref="C22" type="IDENT" id="C29">p75</coref> and <coref ref="C23" type="IDENT" id="C30">p85</coref>, critically depends upon the more 3' sequences of <coref ref="C24" type="IDENT" id="C31">this enhancer element</coref>.</sentence>
+<sentence id="S8">DNA binding by <coref ref="C19" min="Rel-related factors" type="IDENT" id="C32">all four of these Rel-related factors</coref> is blocked by selective chemical modification of <coref min="residues" id="C33">lysine and arginine residues</coref>, suggesting that <coref ref="C33" min="amino acids" type="IDENT" id="C34">both of these basic amino acids</coref> are required for binding to <coref ref="C31" min="element" type="IDENT" id="C35">the kappa B element</coref>.</sentence>
+<sentence id="S9">Similarly, covalent modification of free sulfhydryl groups with diamide (reversible) or N-ethylmaleimide (irreversible) results in a complete loss of <coref min="binding activity" id="C36">DNA binding activity</coref>.</sentence>
+<sentence id="S10">In contrast, mild oxidation with glucose oxidase selectively inhibits <coref ref="C29" type="IDENT" id="C37">p75</coref> and <coref ref="C30" type="IDENT" id="C38">p85</coref> binding while not blocking <coref ref="C25" type="IDENT" id="C39">p50</coref> and <coref ref="C26" type="IDENT" id="C40">p55</coref> interactions.</sentence>
+<sentence id="S11">These findings suggest that reduced cysteine thiols play an important role in <coref ref="C36" min="binding activity" type="IDENT" id="C41">the DNA binding activity</coref> of <coref ref="C32" min="family" type="IDENT" id="C42">this family of Rel-related transcription factors</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

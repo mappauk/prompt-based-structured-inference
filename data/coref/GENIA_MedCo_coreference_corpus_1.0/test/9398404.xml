@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9398404">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9398404</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">IL-2 and IL-7</coref> induce heterodimerization of STAT5 isoforms in <coref min="lymphoblasts" id="C2">human peripheral blood T lymphoblasts</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Despite differences in T cell responses induced by <coref ref="C1" type="IDENT" id="C3">interleukin (IL)-2 and IL-7</coref>, <coref ref="C3" min="cytokines" type="IDENT" id="C4">both cytokines</coref> modulate T cell functions by activation of signal transducers and activators of transcription (STAT) proteins.</sentence>
+<sentence id="S3">We examined the contribution of <coref min="isoforms" id="C5">the two isoforms of STAT5</coref>, <coref ref="C5" type="APPOS" id="C6">STAT5A and STAT5B</coref>, to IL-2- and IL-7-induced activation of <coref ref="C2" min="lymphoblasts" type="IDENT" id="C7">human peripheral blood T lymphoblasts</coref>.</sentence>
+<sentence id="S4"><coref ref="C3" min="cytokines" type="IDENT" id="C8">Both cytokines</coref> induced assembly of <coref ref="C5" type="IDENT" id="C9">STAT5A and STAT5B</coref> containing <coref min="complexes" id="C10">complexes capable of binding to the interferon-gamma activation sequence (GAS)</coref>, and <coref ref="C10" min="complexes" type="IDENT" id="C11">these complexes</coref> rapidly translocated (within 1 min) into the nucleus of IL-2- or IL-7-treated cells.</sentence>
+<sentence id="S5">The kinetics of this translocation were delayed in IL-7-treated as compared to IL-2-treated cells.</sentence>
+<sentence id="S6"><coref ref="C3" type="IDENT" id="C12">IL-2 and IL-7</coref> were equivalent in <coref ref="C12" type="PRON" id="C13">their</coref> ability to induce tyrosine phosphorylation of <coref ref="C9" type="IDENT" id="C14">STAT5A and STAT5B</coref> and to facilitate binding of <coref ref="C14" min="stats" type="IDENT" id="C15">these STATs</coref> to an immobilized GAS element.</sentence>
+<sentence id="S7"><coref ref="C12" type="IDENT" id="C16">Both IL-2 and IL-7</coref> induced substantial amounts of STAT5A/STAT5B heterodimerization.</sentence>
+<sentence id="S8">Moreover, we observed constitutive association of STAT3 with each STAT5 isomer.</sentence>
+<sentence id="S9">These data suggest that <coref ref="C16" type="IDENT" id="C17">IL-2 and IL-7</coref> induce assembly of STAT heterodimers in a similar manner and that subsequent cellular responses may be driven by induction of similar sets of genes.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

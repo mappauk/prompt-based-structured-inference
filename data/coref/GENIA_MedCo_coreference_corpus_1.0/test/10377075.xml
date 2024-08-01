@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10377075">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10377075</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activators" id="C1">PPARalpha activators</coref> inhibit cytokine-induced vascular cell adhesion molecule-1 expression in <coref min="cells" id="C2">human endothelial cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: Adhesion molecule expression on the endothelial cell (EC) surface is critical for leukocyte recruitment to atherosclerotic lesions.</sentence>
+<sentence id="S3">Better understanding of transcriptional regulation of adhesion molecules in <coref ref="C2" type="IDENT" id="C3">ECs</coref> may provide important insight into plaque formation.</sentence>
+<sentence id="S4"><coref id="C4">Peroxisome proliferator-activated receptor-alpha (PPARalpha)</coref>, <coref ref="C4" min="member" type="APPOS" id="C5">a member of the nuclear receptor family</coref>, regulates gene expression in response to certain fatty acids and fibric acid derivatives.</sentence>
+<sentence id="S5">The present study investigated PPARalpha expression in <coref ref="C3" min="ecs" type="IDENT" id="C6">human ECs</coref> and <coref ref="C4" type="PRON" id="C7">their</coref> regulation of vascular cell adhesion molecule-1 (VCAM-1).</sentence>
+<sentence id="S6">METHODS AND RESULTS: Immunohistochemistry revealed that human carotid artery ECs express <coref ref="C4" type="IDENT" id="C8">PPARalpha</coref>.</sentence>
+<sentence id="S7">Pretreatment of <coref min="ecs" id="C9">cultured human ECs</coref> with <coref ref="C1" type="IDENT" id="C10">the PPARalpha activators fenofibrate or WY14643</coref> inhibited TNF-alpha-induced VCAM-1 in a time- and concentration-dependent manner, an effect not seen with PPARgamma activators.</sentence>
+<sentence id="S8"><coref ref="C10" min="activators" type="IDENT" id="C11">Both PPARalpha activators</coref> decreased cytokine-induced VCAM-1 mRNA expression without altering its mRNA half-life.</sentence>
+<sentence id="S9">Transient transfection of deletional VCAM-1 promoter constructs and electrophoretic mobility shift assays suggest that fenofibrate inhibits VCAM-1 transcription in part by inhibiting NF-kappaB.</sentence>
+<sentence id="S10">Finally, <coref ref="C11" min="activators" type="IDENT" id="C12">PPARalpha activators</coref> significantly reduced adhesion of U937 cells to <coref ref="C9" min="ecs" type="IDENT" id="C13">cultured human ECs</coref>.</sentence>
+<sentence id="S11">CONCLUSIONS: <coref ref="C6" min="ecs" type="IDENT" id="C14">Human ECs</coref> express <coref ref="C8" type="IDENT" id="C15">PPARalpha</coref>, <coref ref="C15" min="regulator" type="APPOS" id="C16">a potentially important regulator of atherogenesis</coref> through <coref ref="C15" type="PRON" id="C17">its</coref> transcriptional control of VCAM-1 gene expression.</sentence>
+<sentence id="S12">Such findings also have implications regarding the clinical use of <coref min="agents" id="C18">lipid-lowering agents, like fibric acids</coref>, <coref ref="C18" type="RELAT" id="C19">which</coref> can activate <coref ref="C15" type="IDENT" id="C20">PPARalpha</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

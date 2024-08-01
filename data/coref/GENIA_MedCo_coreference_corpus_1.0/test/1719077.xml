@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1719077">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1719077</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Charybdotoxin-sensitive, <coref min="changes" id="C1">Ca(2+)-dependent <coref id="C2">membrane potential</coref> changes</coref> are not involved in <coref min="activation" id="C3"><coref id="C4">human T or B cell</coref> activation</coref> and proliferation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The involvement of ion channels in <coref ref="C3" min="activation" type="IDENT" id="C5"><coref ref="C4" type="IDENT" id="C6">B and T lymphocyte</coref> activation</coref> is supported by many reports of changes in ion fluxes and <coref ref="C2" type="IDENT" id="C7">membrane potential</coref> after mitogen binding.</sentence>
+<sentence id="S3"><coref ref="C6" type="IDENT" id="C8">Human T and B lymphocytes</coref> demonstrate an early and <coref min="hyperpolarization" id="C9">transient hyperpolarization</coref> after ligand binding.</sentence>
+<sentence id="S4">Inasmuch as <coref ref="C1" min="change" type="OTHER" id="C10">the change in <coref ref="C7" type="IDENT" id="C11">membrane potential</coref></coref> is dependent on elevation of free cytosolic calcium, <coref ref="C9" type="IDENT" id="C12">the hyperpolarization</coref> is presumably through opening of <coref min="channels" id="C13">Ca(2+)-stimulated K+ channels</coref>.</sentence>
+<sentence id="S5">We have used <coref id="C14">charybdotoxin</coref>, a known inhibitor of <coref ref="C13" min="channels" type="IDENT" id="C15">Ca(2+)-dependent K+ channels</coref>, to study the role of <coref ref="C15" type="IDENT" id="C16">these channels</coref> in lymphocyte activation and <coref id="C17">mitogenesis</coref>.</sentence>
+<sentence id="S6">We demonstrate that <coref ref="C14" type="IDENT" id="C18">charybdotoxin</coref> inhibits <coref ref="C12" min="hyperpolarization" type="OTHER" id="C19">the ligand-induced transient membrane hyperpolarization</coref> in <coref ref="C8" type="IDENT" id="C20">B and T cells</coref> in a dose-dependent fashion, without affecting changes in cytosolic Ca2+.</sentence>
+<sentence id="S7">However, blockade of <coref ref="C15" min="channel" type="IDENT" id="C21">the Ca(2+)-activated K+ channel</coref> is not associated with changes in cell-cycle gene activation, IL-2 production, IL-2R expression or B and T cell mitogenesis.</sentence>
+<sentence id="S8">These results imply that <coref ref="C10" min="changes" type="IDENT" id="C22"><coref ref="C11" type="IDENT" id="C23">membrane potential</coref> changes</coref> secondary to the ligand-dependent opening of <coref ref="C21" min="channels" type="IDENT" id="C24">Ca(2+)-activated K+ channels</coref> are not involved in <coref ref="C5" min="activation" type="IDENT" id="C25"><coref ref="C20" type="IDENT" id="C26">B and T lymphocyte</coref> activation</coref> and <coref ref="C17" type="IDENT" id="C27">mitogenesis</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

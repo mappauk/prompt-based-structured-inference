@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10098606">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10098606</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Characterization of expression of the gene for <coref id="C1">human pterin carbinolamine dehydratase/dimerization cofactor of <coref id="C2">HNF1</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref type="IDENT" id="C3">Pterin carbinolamine dehydratase/dimerization cofactor of <coref ref="C2" type="IDENT" id="C4">HNF1</coref> (PCD/DCoH)</coref> is a dual-function protein.</sentence>
+<sentence id="S3">In the cytoplasm <coref ref="C3" type="PRON" id="C5">it</coref> acts as a dehydratase in the regeneration of <coref id="C6">tetrahydrobiopterin</coref>, <coref ref="C6" min="cofactor" type="APPOS" id="C7">the cofactor for aromatic amino acid hydroxylases</coref>.</sentence>
+<sentence id="S4">In the nucleus, <coref ref="C3" type="PRON" id="C8">it</coref> functions as a dimerization cofactor of <coref ref="C4" type="IDENT" id="C9">HNF1</coref> and increases the transcriptional activity of <coref ref="C9" type="IDENT" id="C10">HNF1</coref>.</sentence>
+<sentence id="S5">To deepen our understanding of <coref ref="C3" min="protein" type="IDENT" id="C11">this protein</coref>, we characterized <coref ref="C11" type="PRON" id="C12">its</coref> expression in human tissues and cells.</sentence>
+<sentence id="S6"><coref ref="C1" min="pcd/dcoh" type="IDENT" id="C13">Human PCD/DCoH</coref> was present predominantly in <coref id="C14">liver</coref> and kidney, with significant amounts in testis and ovary, trace amounts in lung, and undetectable levels in whole brain, heart, and spleen.</sentence>
+<sentence id="S7"><coref ref="C13" type="PRON" id="C15">It</coref> was expressed in <coref min="all" id="C16">all of the cells</coref> <coref ref="C16" type="RELAT" id="C17">that</coref> were examined.</sentence>
+<sentence id="S8">Importantly, <coref ref="C13" type="PRON" id="C18">it</coref> was also present in the nucleus of <coref min="cells" id="C19">HeLa cells</coref>, <coref ref="C19" type="RELAT" id="C20">which</coref> lack <coref ref="C10" type="IDENT" id="C21">HNF1</coref>, and in the cytoplasm of <coref id="C22">fibroblasts</coref> <coref ref="C22" type="RELAT" id="C23">that</coref> have little or no tetrahydrobiopterin.</sentence>
+<sentence id="S9">The expression of <coref ref="C13" min="pcd/dcoh" type="IDENT" id="C24">human PCD/DCoH</coref> in <coref ref="C14" type="IDENT" id="C25">the liver</coref> and nonhepatic cells was compared at both the mRNA and protein levels.</sentence>
+<sentence id="S10">Although <coref min="level" id="C26">the mRNA level</coref> in <coref ref="C25" type="IDENT" id="C27">liver</coref> was only fourfold higher than <coref ref="C26" type="PRON" id="C28">that</coref> in keratinocytes and fibroblasts, the hepatic PCD/DCoH protein level was 20-fold higher than that in normal human epidermal keratinocytes and dermal fibroblasts.</sentence>
+<sentence id="S11">Cloning of the 5' and 3' untranslated region (UTR) of <coref min="pcd/dcoh" id="C29">human keratinocyte PCD/DCoH</coref> revealed that <coref ref="C29" type="PRON" id="C30">it</coref> has 53 bp more of GC-rich 5' untranslated sequence than the published liver PCD/DCoH.</sentence>
+<sentence id="S12">In vitro transcription and translation analysis showed that the longer 5' UTR resulted in about a 35% decrease in translation efficiency.</sentence>
+<sentence id="S13">These data show that <coref ref="C24" min="pcd/dcoh" type="IDENT" id="C31">human PCD/DCoH</coref> is not only present in <coref id="C32">cells</coref> <coref ref="C32" type="RELAT" id="C33">where</coref> <coref ref="C6" type="IDENT" id="C34">tetrahydrobiopterin</coref> is synthesized or <coref ref="C21" type="IDENT" id="C35">HNF1</coref> is present but is a widely distributed protein.</sentence>
+<sentence id="S14"><coref ref="C31" type="PRON" id="C36">Its</coref> differential expression in different tissues and cells is regulated not only at the transcriptional level but also at the translational level.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

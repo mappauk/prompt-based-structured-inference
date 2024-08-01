@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7758820">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7758820</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Isolation of differentially expressed sequence tags from steroid-responsive cells using mRNA differential display.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Transcriptional control of steroid-regulated gene networks by nuclear receptor proteins results in the coordinate expression of a limited number of target genes.</sentence>
+<sentence id="S3">Although much is known about the structure and function of steroid receptors, relatively few cell-specific steroid-regulated genes have been isolated and characterized.</sentence>
+<sentence id="S4">In this paper we describe results using <coref id="C1">mRNA differential display reverse transcriptase PCR (DDPCR)</coref> to identify and isolate short cDNA sequence tags from thymocyte and prostate cells under various hormone conditions.</sentence>
+<sentence id="S5">Using this technique we have isolated <coref min="sequence tags" id="C2">several differentially expressed sequence tags (DESTs)</coref> from the mouse thymocyte cell line WEHI 7.2.</sentence>
+<sentence id="S6"><coref min="two" id="C3">Two of <coref ref="C2" min="dests" type="IDENT" id="C4">these DESTs</coref></coref>, <coref ref="C3" type="APPOS" id="C5">GIG10 and GIG18</coref>, are rapidly induced by dexamethasone within 2 h of treatment.</sentence>
+<sentence id="S7">GIG10 is a novel sequence and GIG18 is the mouse homologue of a human expressed sequence tag isolated from activated B lymphocytes.</sentence>
+<sentence id="S8">We also used <coref ref="C1" type="IDENT" id="C6">DDPCR</coref> to isolate <coref id="C7">DESTs</coref> from androgen-modulated rat ventral prostate tissue, one of <coref ref="C7" type="RELAT" id="C8">which</coref> we characterized and found to correspond to <coref min="end" id="C9">the 3' end of prostatic spermine binding protein mRNA</coref>, <coref ref="C9" min="gene" type="APPOS" id="C10">a known androgen-regulated gene</coref>.</sentence>
+<sentence id="S9"><coref min="modifications" id="C11">Modifications of the original DDPCR protocol</coref>, <coref ref="C11" type="RELAT" id="C12">which</coref> we found can potentially decrease the frequency of isolating false-positive DESTs, are described and the merits of <coref ref="C6" type="IDENT" id="C13">DDPCR</coref>, relative to other differential cDNA cloning strategies, are discussed.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

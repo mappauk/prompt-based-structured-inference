@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9811525">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9811525</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Interleukin 2 and 15</coref> activate <coref id="C2">Stat3alpha</coref> in <coref min="t lymphocytes" id="C3">human T lymphocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">Signal transducer and activator of transcription 3 (Stat3)</coref> has recently been shown to exist in <coref min="isoforms" id="C5">two alternatively spliced isoforms</coref>, <coref ref="C5" type="APPOS" id="C6"><coref min="form" id="C7">a short form</coref>, <coref ref="C7" type="APPOS" id="C8">Stat3beta</coref>, and <coref ref="C2" min="form" type="IDENT" id="C9">a longer form</coref>, <coref ref="C9" type="APPOS" id="C10">Stat3alpha</coref></coref>, displaying differences in transcriptional activity.</sentence>
+<sentence id="S3">It is unknown which Stat3 isoform(s) is activated in response to <coref ref="C1" type="IDENT" id="C11">interleukin (IL)-2 and IL-15</coref>.</sentence>
+<sentence id="S4">Here, cytokine-induced activation of <coref ref="C4" type="IDENT" id="C12">Stat3</coref> in previously activated CD4(+) human T cells was examined using Stat3 antibodies directed against different regions of <coref ref="C12" type="IDENT" id="C13">Stat3</coref>.</sentence>
+<sentence id="S5">As determined by tyrosine phosphorylation, nuclear translocation and binding to an hSIE-oligonucleotide probe, <coref ref="C11" type="IDENT" id="C14">IL-2 and IL-15</coref> activated <coref ref="C9" min="isoform" type="IDENT" id="C15">the slowly migrating isoform</coref>, <coref ref="C15" type="APPOS" id="C16">Stat3alpha</coref>.</sentence>
+<sentence id="S6">In contrast, minimal or no activation of <coref ref="C7" type="IDENT" id="C17">Stat3beta</coref> was observed, suggesting that <coref ref="C14" type="IDENT" id="C18">IL-2 and IL-15</coref> predominantly activate <coref ref="C15" type="IDENT" id="C19">Stat3alpha</coref> in <coref ref="C3" min="t cells" type="IDENT" id="C20">human CD4(+) T cells</coref>.</sentence>
+<sentence id="S7">In this way, diversity in the expression and activation of <coref ref="C13" min="proteins" type="IDENT" id="C21">Stat3 proteins</coref> may provide additional means of regulating cytokine-induced T cell responses.</sentence>
+<sentence id="S8">Copyright 1998 Academic Press.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

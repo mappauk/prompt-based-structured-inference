@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9111316">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9111316</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Expression of <coref min="proteins" id="C1">NFAT-family proteins</coref> in <coref min="cells" id="C2">normal human T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="proteins" type="IDENT" id="C3">NFAT proteins</coref> constitute a family of transcription factors involved in mediating signal transduction.</sentence>
+<sentence id="S3">Using a panel of specific antisera in immunoprecipitation assays, we found that NFATp (135 kDa) is constitutively expressed in <coref ref="C2" min="cells" type="IDENT" id="C4">normal human T cells</coref>, while synthesis of NFATc (predominant form of 86 kDa) is induced by ionomycin treatment.</sentence>
+<sentence id="S4"><coref id="C5">NFAT4/x</coref> was very weakly expressed in <coref ref="C4" min="cells" type="IDENT" id="C6">unstimulated cells</coref>, and <coref ref="C5" type="PRON" id="C7">its</coref> level did not increase upon treatment with activating agents.</sentence>
+<sentence id="S5">NFAT3 protein was not observed under any conditions.</sentence>
+<sentence id="S6">Higher-molecular-weight species of NFATc (of 110 and 140 kDa) were also detected.</sentence>
+<sentence id="S7">In addition, translation of NFATc mRNA apparently initiates at two different AUG codons, giving rise to <coref id="C8">proteins</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> differ in size by 36 amino acids.</sentence>
+<sentence id="S8">Additional size heterogeneity of both <coref id="C10">NFATc</coref> and <coref id="C11">NFATp</coref> results from phosphorylation.</sentence>
+<sentence id="S9">In contrast to ionomycin treatment, exposure of cells to <coref id="C12">phorbol myristate acetate (PMA)</coref> plus <coref id="C13">anti-CD28</coref> did not induce <coref ref="C10" type="IDENT" id="C14">NFATc</coref>, indicating that under these conditions, interleukin-2 synthesis by <coref ref="C4" min="cells" type="IDENT" id="C15">these cells</coref> is apparently independent of <coref ref="C14" type="IDENT" id="C16">NFATc</coref>.</sentence>
+<sentence id="S10">In DNA binding assays, both <coref ref="C12" type="IDENT" id="C17">PMA</coref> plus <coref ref="C13" type="IDENT" id="C18">anti-CD28</coref> and <coref ref="C17" type="IDENT" id="C19">PMA</coref> plus ionomycin resulted in nuclear NFAT.</sentence>
+<sentence id="S11">Surprisingly, <coref min="synthesis" id="C20">the PMA-ionomycin-induced synthesis of <coref ref="C16" type="IDENT" id="C21">NFATc</coref></coref> <coref ref="C20" type="RELAT" id="C22">that</coref> was detected by immunoprecipitation was not mirrored in the DNA binding assays: nearly all of the activity was due to <coref ref="C11" type="IDENT" id="C23">NFATp</coref>.</sentence>
+<sentence id="S12">This is the first study of expression of <coref ref="C3" min="members" type="IDENT" id="C24">all family members</coref> at the protein level in <coref ref="C4" min="cells" type="IDENT" id="C25">normal human T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

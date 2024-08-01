@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1648430">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1648430</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Severe <coref min="toxicity" id="C1"><coref id="C2">5-fluorouracil</coref> toxicity</coref> secondary to <coref id="C3">dihydropyrimidine dehydrogenase</coref> deficiency.</sentence>
+<sentence id="S2">A potentially more common pharmacogenetic syndrome.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">This study describes the inheritance of a defect in <coref id="C4">pyrimidine catabolism</coref> and <coref ref="C4" type="PRON" id="C5">its</coref> association with drug-induced toxicity in a patient receiving <coref ref="C2" type="IDENT" id="C6">5-fluorouracil (FUra)</coref> as adjuvant chemotherapy for breast carcinoma.</sentence>
+<sentence id="S4">The study population included <coref id="C7"><coref id="C8"><coref min="patient" id="C9">the affected patient (proband)</coref>, nine of her blood relatives</coref>, and seven healthy volunteers</coref>.</sentence>
+<sentence id="S5"><coref id="C10">The activity of <coref ref="C3" type="IDENT" id="C11">dihydropyrimidine dehydrogenase (DPD)</coref></coref>, <coref ref="C11" min="enzyme" type="APPOS" id="C12">the initial enzyme of <coref ref="C4" type="IDENT" id="C13">pyrimidine (and <coref ref="C6" type="IDENT" id="C14">FUra</coref>) catabolism</coref>, in peripheral blood mononuclear cells</coref> was measured in <coref ref="C7" type="IDENT" id="C15">each subject</coref> by a specific radiometric assay using <coref ref="C14" type="IDENT" id="C16">FUra</coref> as the substrate.</sentence>
+<sentence id="S6"><coref ref="C9" type="IDENT" id="C17">The proband</coref> had no detectable <coref ref="C10" min="activity" type="IDENT" id="C18"><coref ref="C11" type="IDENT" id="C19">DPD</coref> activity</coref>.</sentence>
+<sentence id="S7">When <coref min="levels" id="C20">enzyme levels</coref> in <coref ref="C8" type="IDENT" id="C21">the proband and relatives</coref> were compared with <coref ref="C20" type="PRON" id="C22">that</coref> in controls, an autosomal recessive pattern of inheritance was demonstrated.</sentence>
+<sentence id="S8">This is the third patient with severe <coref ref="C1" min="toxicity" type="IDENT" id="C23"><coref ref="C16" type="IDENT" id="C24">FUra</coref> toxicity</coref> secondary to an alteration in <coref ref="C13" type="IDENT" id="C25">pyrimidine catabolism</coref> and the second from our clinic population suggesting that the frequency of this genetic defect may be greater than previously thought.</sentence>
+<sentence id="S9">Monitoring <coref ref="C18" min="activity" type="IDENT" id="C26"><coref ref="C19" type="IDENT" id="C27">DPD</coref> activity</coref> may be important in the management of patients experiencing severe toxicity secondary to <coref ref="C24" type="IDENT" id="C28">FUra</coref> chemotherapy.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

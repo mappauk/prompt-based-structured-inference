@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8207643">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8207643</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Stimulation of <coref min="replication" id="C1">HIV replication in <coref id="C2">mononuclear phagocytes</coref></coref> by <coref id="C3">leukemia inhibitory factor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">This study examined <coref min="effects" id="C4">the effects of <coref ref="C3" type="IDENT" id="C5">leukemia inhibitory factor (LIF)</coref> on <coref ref="C1" min="replication" type="IDENT" id="C6">human immunodeficiency virus (HIV) replication in <coref ref="C2" type="IDENT" id="C7">mononuclear phagocytes (MNP)</coref></coref></coref>.</sentence>
+<sentence id="S3"><coref ref="C5" type="IDENT" id="C8">LIF</coref> induced a dose-dependent increase in p24 antigen production in <coref min="cell line" id="C9">the chronically infected promonocytic cell line U1</coref>.</sentence>
+<sentence id="S4">The magnitude and time kinetics of <coref ref="C4" min="effects" type="IDENT" id="C10">the LIF effects</coref> were similar to <coref id="C11">interleukin 1 (IL-1)</coref>, <coref id="C12">IL-6</coref>, and <coref id="C13">tumor necrosis factor (TNF)</coref>, other cytokines known to induce HIV replication in <coref ref="C9" type="IDENT" id="C14">this cell line</coref>.</sentence>
+<sentence id="S5">To characterize mechanisms responsible for <coref ref="C10" min="effects" type="IDENT" id="C15">these LIF effects</coref>, levels of HIV mRNA, activation of <coref id="C16">the DNA binding protein nuclear factor (NF)-kB</coref>, signal transduction pathways, and potential interactions with other cytokines were analyzed.</sentence>
+<sentence id="S6"><coref ref="C8" type="IDENT" id="C17">LIF</coref> increased steady-state levels of HIV mRNA at 2.0, 4.3, and 9.2 kB.</sentence>
+<sentence id="S7">This was detectable by 24 h and persisted until 72 h.</sentence>
+<sentence id="S8"><coref ref="C16" type="IDENT" id="C18">The DNA binding protein NF-kB</coref> is a central mediator in cytokine activation of HIV transcription.</sentence>
+<sentence id="S9">NF-kB levels were higher in <coref id="C19">unstimulated U1 cells</coref> as compared to <coref id="C20">the parent cell line U937</coref>.</sentence>
+<sentence id="S10">In <coref ref="C18 C19" type="WHOLE-PART" id="C21">both cell lines</coref> <coref ref="C17" type="IDENT" id="C22">LIF</coref> increased NF-kB activity.</sentence>
+<sentence id="S11">Induction of <coref ref="C18" type="IDENT" id="C23">NF-kB</coref> and <coref ref="C6" min="replication" type="IDENT" id="C24">HIV replication</coref> by cytokines are at least in part dependent on reactive oxygen intermediates.</sentence>
+<sentence id="S12">The oxygen radical scavenger N-acetyl-L-cysteine, but not an inhibitor of nitric oxide synthase, inhibited <coref ref="C22" type="IDENT" id="C25">LIF-</coref>induced HIV replication.</sentence>
+<sentence id="S13"><coref ref="C25" type="IDENT" id="C26">LIF</coref> induces the production of other cytokines in monocytes but <coref ref="C4" min="effects" type="IDENT" id="C27"><coref ref="C26" type="PRON" id="C28">its</coref> effects on <coref ref="C24" min="replication" type="IDENT" id="C29">HIV replication</coref></coref> were not inhibited by antibodies to <coref ref="C11" type="IDENT" id="C30">IL-1</coref>, <coref ref="C13" type="IDENT" id="C31">TNF</coref>, or <coref ref="C12" type="IDENT" id="C32">IL-6</coref>.</sentence>
+<sentence id="S14">These results identify <coref ref="C26" type="IDENT" id="C33">LIF</coref> as a stimulus of <coref ref="C29" min="replication" type="IDENT" id="C34">HIV replication</coref>.</sentence>
+<sentence id="S15">(ABSTRACT TRUNCATED AT 250 WORDS)</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

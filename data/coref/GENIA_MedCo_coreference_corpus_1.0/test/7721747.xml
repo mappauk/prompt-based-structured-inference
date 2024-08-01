@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7721747">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7721747</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Functional roles of in vivo footprinted DNA motifs within <coref min="enhancer" id="C1">an alpha-globin enhancer</coref>.</sentence>
+<sentence id="S2">Erythroid lineage and developmental stage specificities.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">Transcriptional regulation of <coref min="genes" id="C2">the human alpha-like globin genes</coref>, <coref ref="C2" type="APPOS" id="C3">embryonic zeta 2 and adult alpha</coref>, during erythroid development is mediated by <coref ref="C1" min="enhancer" type="IDENT" id="C4">a distal enhancer</coref>, <coref ref="C4" type="APPOS" id="C5">HS-40</coref>.</sentence>
+<sentence id="S4">Previous protein-DNA binding studies have shown that <coref ref="C5" type="IDENT" id="C6">HS-40</coref> consists of <coref min="motifs" id="C7"><coref min="motifs" id="C8">multiple nuclear factor binding motifs</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> are occupied in vivo in an erythroid lineage- and developmental stage-specific manner</coref>.</sentence>
+<sentence id="S5">We have systematically analyzed the functional roles of <coref ref="C7" min="motifs" type="IDENT" id="C10">these factor binding motifs of <coref ref="C6" type="IDENT" id="C11">HS-40</coref></coref> by site-directed mutagenesis and transient expression assay in erythroid cell cultures.</sentence>
+<sentence id="S6"><coref min="motifs" id="C12">Three of <coref ref="C10" min="motifs" type="IDENT" id="C13">these HS-40 enhancer motifs</coref></coref>, <coref ref="C12" type="APPOS" id="C14">5'NF-E2/AP1, GT II, and GATA-1(c)</coref>, positively regulate <coref min="activity" id="C15">the zeta 2-globin promoter activity</coref> in <coref min="cells" id="C16">embryonic/fetal erythroid K562 cells</coref> and the adult alpha-globin promoter activity in adult erythroid MEL cells.</sentence>
+<sentence id="S7">On the other hand, the 3'NF-E2/AP1 motif is able to exert both positive and negative regulatory effects on <coref ref="C15" min="activity" type="IDENT" id="C17">the zeta 2-globin promoter activity</coref> in <coref ref="C16" min="cells" type="IDENT" id="C18">K562 cells</coref>, and this dual function appears to be modulated through differential binding of the ubiquitous AP1 factors and the erythroid-enriched NF-E2 factor.</sentence>
+<sentence id="S8"><coref min="mutation" id="C19">Mutation in the GATA-1(d) motif</coref>, <coref ref="C19" type="RELAT" id="C20">which</coref> exhibits an adult erythroid-specific genomic footprint, decreases the HS-40 enhancer function in dimethyl sulfoxide-induced MEL cells but not in <coref ref="C18" min="cells" type="IDENT" id="C21">K562 cells</coref>.</sentence>
+<sentence id="S9">These studies have defined the regulatory roles of <coref ref="C10" min="motifs" type="IDENT" id="C22">the different HS-40 motifs</coref>.</sentence>
+<sentence id="S10">The remarkable correlation between genomic footprinting data and the mutagenesis results also suggests that the erythroid lineage- and developmental stage-specific regulation of human alpha-like globin promoters is indeed modulated by stable binding of specific nuclear factors in vivo.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

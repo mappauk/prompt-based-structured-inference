@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9142136">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9142136</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="actions" id="C1">Molecular actions of <coref id="C2">prolactin</coref> in <coref min="system" id="C3">the immune system</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The immunoregulatory properties of <coref ref="C2" type="IDENT" id="C4">prolactin</coref>, <coref ref="C4" min="hormone" type="APPOS" id="C5">a pituitary peptide hormone</coref>, have received renewed attention.</sentence>
+<sentence id="S3"><coref min="receptor" id="C6">The prolactin receptor</coref>, <coref ref="C6" min="member" type="APPOS" id="C7">a member of the hematopoietin/cytokine receptor superfamily</coref>, is ubiquitously expressed by cells in <coref ref="C3" min="system" type="IDENT" id="C8">the immune system</coref>.</sentence>
+<sentence id="S4">Certain subpopulations of lymphocytes synthesize and secrete biologically active prolactin, which suggests that <coref ref="C4" type="IDENT" id="C9">prolactin</coref> can act as an autocrine and/or paracrine factor to modulate the activities of cells of <coref ref="C8" min="system" type="IDENT" id="C10">the immune system</coref>.</sentence>
+<sentence id="S5">This review focuses on <coref ref="C1" min="actions" type="IDENT" id="C11">the molecular actions of <coref ref="C9" type="IDENT" id="C12">prolactin</coref> in <coref ref="C10" min="system" type="IDENT" id="C13">the immune system</coref></coref>.</sentence>
+<sentence id="S6">Emphasis is given to recent information about the molecular mechanisms of prolactin receptor signal transduction, and the signaling molecules and <coref min="genes" id="C14">prolactin-inducible target genes</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> participate in these responses.</sentence>
+<sentence id="S7">In particular, <coref id="C16">the prolactin-inducible interferon regulatory factor-1 gene</coref> and <coref ref="C16" type="PRON" id="C17">its</coref> roles in mediating diverse immune responses.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

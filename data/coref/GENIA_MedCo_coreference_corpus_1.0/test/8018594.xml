@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8018594">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8018594</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="effects" id="C1">Effects of <coref id="C2">prostaglandin E2</coref></coref> on Th0-type human T cell clones: modulation of functions of nuclear proteins involved in <coref min="production" id="C3">cytokine production</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="effects" type="IDENT" id="C4">The effects of <coref ref="C2" type="IDENT" id="C5">prostaglandin E2 (PGE2)</coref></coref> on <coref ref="C3" min="production" type="IDENT" id="C6">cytokine production</coref> and proliferation of the CD4+ human helper T cell clone SP-B21 were investigated.</sentence>
+<sentence id="S3">In <coref min="cells" id="C7">cells stimulated with <coref id="C8">anti-CD3 mAb</coref></coref>, <coref ref="C5" type="IDENT" id="C9">PGE2</coref> inhibited cell proliferation and the production of all the cytokines examined.</sentence>
+<sentence id="S4">Addition of rIL-2 fully restored the proliferative response and partially restored <coref min="production" id="C10">the production of <coref id="C11">IL-4 and IL-5</coref></coref>, but not <coref id="C12"><coref ref="C10" type="PRON" id="C13">that</coref> of <coref id="C14">other cytokines</coref></coref>.</sentence>
+<sentence id="S5">In contrast, in cells stimulated with <coref id="C15">phorbol myristate acetate (PMA)/A23187</coref>, <coref ref="C9" type="IDENT" id="C16">PGE2</coref> enhanced <coref ref="C10" min="production" type="IDENT" id="C17">the production of <coref ref="C11" type="IDENT" id="C18">IL-4 and IL-5</coref></coref>, and only partially inhibited <coref ref="C12" min="production" type="IDENT" id="C19">the production of <coref ref="C14" min="cytokines" type="IDENT" id="C20">other cytokines</coref></coref>.</sentence>
+<sentence id="S6">Therefore, <coref ref="C4" min="effects" type="IDENT" id="C21">the effects of <coref ref="C16" type="IDENT" id="C22">PGE2</coref></coref> vary depending on the mode of T cell activation, and <coref ref="C18" type="IDENT" id="C23">the IL-4 and IL-5</coref> are regulated differently from <coref ref="C20" min="cytokines" type="IDENT" id="C24">other cytokines</coref>.</sentence>
+<sentence id="S7">In a mobility shift assay, only the NF-kappa B (p50/p50) homodimer was observed in a complex formed with <coref min="sequence" id="C25">the kappa B sequence</coref> in unstimulated SP-B21 cells.</sentence>
+<sentence id="S8">When cells were stimulated with <coref ref="C8" type="IDENT" id="C26">anti-CD3 mAb</coref> or <coref ref="C15" type="IDENT" id="C27">PMA/A23187</coref>, a complex formation of <coref min="heterodimer" id="C28">NF-kappa B (p50/p65) heterodimer</coref> with <coref ref="C25" min="sequence" type="IDENT" id="C29">the kappa B sequence</coref> was induced.</sentence>
+<sentence id="S9">Interestingly, <coref ref="C22" type="IDENT" id="C30">PGE2</coref> or di-butyryl (Bt2)cAMP abolished the binding of <coref ref="C28" min="heterodimer" type="IDENT" id="C31">NF-kappa B (p50/p65) heterodimer</coref> to <coref ref="C29" min="sequence" type="IDENT" id="C32">the kappa B sequence</coref> in <coref ref="C7" min="cells" type="IDENT" id="C33">cells stimulated with <coref ref="C26" type="IDENT" id="C34">anti-CD3 mAb</coref></coref> but not with <coref ref="C27" type="IDENT" id="C35">PMA/A23187</coref>.</sentence>
+<sentence id="S10">Our results suggest that the target of PGE2 action is a component in the signal transduction pathway leading to the activation of protein kinase C.</sentence>
+<sentence id="S11">However, the inhibition of the T cell activation signals by <coref ref="C30" type="IDENT" id="C36">PGE2</coref> is selective.</sentence>
+<sentence id="S12"><coref ref="C36" type="IDENT" id="C37">PGE2</coref> enhanced the complex formation with <coref min="sequences" id="C38">NF-AT, AP-1 and CLE0 sequences</coref> when <coref ref="C38" type="IDENT" id="C39">the cells</coref> were activated by either anti-CD3 mAb or PMA/A23187 stimulation.</sentence>
+<sentence id="S13">It seems therefore that <coref ref="C37" type="IDENT" id="C40">PGE2</coref>, by elevating cAMP levels, interferes with the activation pathway for NF-kappa B but not for <coref ref="C38" type="IDENT" id="C41">NF-AT, AP-1 or CLE0 binding protein</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

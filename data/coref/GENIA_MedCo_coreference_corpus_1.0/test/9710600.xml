@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9710600">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9710600</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Human T-cell leukemia virus type 1 Tax induction of <coref id="C1">NF-kappaB</coref> involves <coref min="activation" id="C2">activation of <coref min="kinases" id="C3">the IkappaB kinase alpha (IKKalpha) and IKKbeta cellular kinases</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">Tax</coref> corresponds to a 40-kDa transforming protein from <coref id="C5">the pathogenic retrovirus human T-cell leukemia virus type 1 (HTLV-1)</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> activates nuclear expression of the NF-kappaB/Rel family of transcription factors by an unknown mechanism.</sentence>
+<sentence id="S3">Tax expression promotes N-terminal phosphorylation and degradation of <coref min="alpha" id="C7">IkappaB alpha</coref>, <coref ref="C7" min="inhibitor" type="APPOS" id="C8">a principal cytoplasmic inhibitor of <coref ref="C1" type="IDENT" id="C9">NF-kappaB</coref></coref>.</sentence>
+<sentence id="S4"><coref min="studies" id="C10">Our studies</coref> now demonstrate that <coref id="C11">HTLV-1 Tax</coref> activates <coref ref="C3" min="kinases" type="IDENT" id="C12">the recently identified cellular kinases IkappaB kinase alpha (IKKalpha) and IKKbeta</coref>, <coref ref="C12" type="RELAT" id="C13">which</coref> normally phosphorylate <coref ref="C7" min="alpha" type="IDENT" id="C14">IkappaB alpha</coref> on both of <coref ref="C14" type="PRON" id="C15">its</coref> N-terminal regulatory serines in response to tumor necrosis factor alpha (TNF-alpha) and interleukin-1 (IL-1) stimulation.</sentence>
+<sentence id="S5">In contrast, <coref min="mutant" id="C16">a mutant of <coref ref="C4" type="IDENT" id="C17">Tax</coref> termed M22</coref>, <coref ref="C16" type="RELAT" id="C18">which</coref> does not induce <coref ref="C9" type="IDENT" id="C19">NF-kappaB</coref>, fails to activate either <coref id="C20">IKKalpha</coref> or <coref id="C21">IKKbeta</coref>.</sentence>
+<sentence id="S6">Furthermore, endogenous IKK enzymatic activity was significantly elevated in HTLV-1-infected and Tax-expressing T-cell lines.</sentence>
+<sentence id="S7">Transfection of kinase-deficient mutants of <coref ref="C13" type="IDENT" id="C22"><coref ref="C20" type="IDENT" id="C23">IKKalpha</coref> and <coref ref="C21" type="IDENT" id="C24">IKKbeta</coref></coref> into either human Jurkat T or 293 cells also inhibits NF-kappaB-dependent reporter gene expression induced by <coref ref="C17" type="IDENT" id="C25">Tax</coref>.</sentence>
+<sentence id="S8">Similarly, <coref min="mutant" id="C26">a kinase-deficient mutant of NIK (NF-kappaB-inducing kinase)</coref>, <coref ref="C26" type="RELAT" id="C27">which</coref> represents an upstream kinase in <coref min="pathways" id="C28">the TNF-alpha and IL-1 signaling pathways leading to <coref ref="C2" min="activation" type="IDENT" id="C29">IKKalpha and IKKbeta activation</coref></coref>, blocks <coref min="induction" id="C30">Tax induction of <coref ref="C19" type="IDENT" id="C31">NF-kappaB</coref></coref>.</sentence>
+<sentence id="S9">However, plasma membrane-proximal elements in <coref ref="C28" min="pathways" type="IDENT" id="C32">these proinflammatory cytokine pathways</coref> are apparently not involved since <coref min="mutants" id="C33">dominant negative mutants of the TRAF2 and TRAF6 adaptors</coref>, <coref ref="C33" type="RELAT" id="C34">which</coref> effectively block signaling through the cytoplasmic tails of the TNF-alpha and IL-1 receptors, respectively, do not inhibit <coref ref="C30" min="induction" type="IDENT" id="C35">Tax induction of <coref ref="C31" type="IDENT" id="C36">NF-kappaB</coref></coref>.</sentence>
+<sentence id="S10">Together, <coref ref="C10" min="studies" type="IDENT" id="C37">these studies</coref> demonstrate that <coref ref="C11" type="IDENT" id="C38">HTLV-1 Tax</coref> exploits a distal part of the proinflammatory cytokine signaling cascade leading to induction of <coref ref="C36" type="IDENT" id="C39">NF-kappaB</coref>.</sentence>
+<sentence id="S11">The pathological alteration of this cytokine pathway leading to NF-kappaB activation by <coref ref="C25" type="IDENT" id="C40">Tax</coref> may play a central role in HTLV-1-mediated transformation of human T cells, clinically manifested as the adult T-cell leukemia.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

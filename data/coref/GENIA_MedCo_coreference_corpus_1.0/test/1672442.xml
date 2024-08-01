@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1672442">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1672442</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="functional domains" id="C1">The functional domains of <coref min="promoter" id="C2">the murine Thy-1 gene promoter</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C2" min="promotor" type="OTHER" id="C3">The Thy-1 gene promoter</coref> resembles a "housekeeping" promoter in that <coref ref="C3" type="PRON" id="C4">it</coref> is located within a methylation-free island, lacks a canonical TATA box, and displays heterogeneity in the 5'-end termini of the mRNA.</sentence>
+<sentence id="S3">Using transgenic mice, we show that <coref ref="C3" min="promotor" type="IDENT" id="C5">this promoter</coref> does not confer any tissue specificity and is active only in a position-dependent manner.</sentence>
+<sentence id="S4"><coref ref="C3" type="PRON" id="C6">It</coref> can only be activated in a tissue-specific manner by <coref id="C7">elements</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> lie downstream of the initiation site.</sentence>
+<sentence id="S5">We have analyzed <coref ref="C1" min="functional domains" type="OTHER" id="C9">the functional domains of <coref ref="C3" min="promotor" type="OTHER" id="C10">the minimal Thy-1 promoter</coref></coref> and show that <coref min="promoter elements" id="C11">the dominant promoter elements</coref> consist of multiple binding sites for <coref id="C12">the transcription factor Sp1</coref>, an inverted CCAAT box, and sequences proximal to the transcription start site.</sentence>
+<sentence id="S6">DNase I and gel mobility shift assays show the binding of a number of nuclear factors to <coref ref="C11" min="elements" type="IDENT" id="C13">these elements</coref>, including <coref id="C14"><coref ref="C12" type="IDENT" id="C15">Sp1</coref> and CP1</coref>.</sentence>
+<sentence id="S7">Our results show that the structure of <coref ref="C10" min="promotor" type="IDENT" id="C16">this promoter</coref> only permits productive interactions of <coref ref="C14" min="transcription factors" type="IDENT" id="C17">the two transcription factors <coref ref="C15" type="IDENT" id="C18">Sp1</coref> and CP1</coref> with the basal transcription machinery in the presence of enhancer sequences.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -15,6 +15,27 @@
                 "Topic": "affordable care act",
                 "Entity": "bill",
                 "Id": "349963499578990593"
+            },
+            {
+                "Tweet": "Particularly in rural areas where physicians are scarce  these clinicians play an important role in the delivery of primary health care",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "physicians",
+                "Id": "349963637298958336"
+            },
+            {
+                "Tweet": "#Obamacare dropping full-timers at schools  local governments. Click here to learn the latest:  #FairnessForAll",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "#Obamacare",
+                "Id": "362959744534724608"
+            },
+            {
+                "Tweet": "The need to protect our nation from terrorist attacks does not have to come at the expense of violating the Constitution #NSA",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "Constitution",
+                "Id": "370629716966789121"
             }
         ],
         "positive_examples": [
@@ -31,6 +52,27 @@
                 "Topic": "affordable care act",
                 "Entity": "health care providers and patients in need of home health services",
                 "Id": "349963499578990593"
+            },
+            {
+                "Tweet": "Particularly in rural areas where physicians are scarce  these clinicians play an important role in the delivery of primary health care",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "rural areas",
+                "Id": "349963637298958336"
+            },
+            {
+                "Tweet": "#Obamacare dropping full-timers at schools  local governments. Click here to learn the latest:  #FairnessForAll",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "full-timers",
+                "Id": "362959744534724608"
+            },
+            {
+                "Tweet": "The need to protect our nation from terrorist attacks does not have to come at the expense of violating the Constitution #NSA",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "our nation",
+                "Id": "370629716966789121"
             }
         ]
     },
@@ -50,6 +92,27 @@
                 "Topic": "affordable care act",
                 "Entity": "bill",
                 "Id": "349963499578990593"
+            },
+            {
+                "Tweet": "#Obamacare dropping full-timers at schools  local governments. Click here to learn the latest:  #FairnessForAll",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "local governments",
+                "Id": "362959744534724608"
+            },
+            {
+                "Tweet": "The need to protect our nation from terrorist attacks does not have to come at the expense of violating the Constitution #NSA",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "Constitution",
+                "Id": "370629716966789121"
+            },
+            {
+                "Tweet": "In 1966  Dr. King said  \u2018Of all the forms of inequality  injustice in health care is the most shocking and inhumane.\u2019",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "health care",
+                "Id": "450643204816535553"
             }
         ],
         "positive_examples": [
@@ -66,6 +129,27 @@
                 "Topic": "affordable care act",
                 "Entity": "unecessary and duplicative burdens",
                 "Id": "349963499578990593"
+            },
+            {
+                "Tweet": "#Obamacare dropping full-timers at schools  local governments. Click here to learn the latest:  #FairnessForAll",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "#Obamacare",
+                "Id": "362959744534724608"
+            },
+            {
+                "Tweet": "The need to protect our nation from terrorist attacks does not have to come at the expense of violating the Constitution #NSA",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "terrorist attacks",
+                "Id": "370629716966789121"
+            },
+            {
+                "Tweet": "In 1966  Dr. King said  \u2018Of all the forms of inequality  injustice in health care is the most shocking and inhumane.\u2019",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "inequality",
+                "Id": "450643204816535553"
             }
         ]
     },
@@ -85,6 +169,27 @@
                 "Topic": "affordable care act",
                 "Entity": "@RepTomReed",
                 "Id": "745687515038769154"
+            },
+            {
+                "Tweet": "Particularly in rural areas where physicians are scarce  these clinicians play an important role in the delivery of primary health care",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "health care",
+                "Id": "349963637298958336"
+            },
+            {
+                "Tweet": "In 1966  Dr. King said  \u2018Of all the forms of inequality  injustice in health care is the most shocking and inhumane.\u2019",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "health care",
+                "Id": "450643204816535553"
+            },
+            {
+                "Tweet": "The Senate has passed legislation I support to deny US entry to any UN representative involved in terrorism or other acts against the USA.",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "UN representative",
+                "Id": "453318153406545920"
             }
         ],
         "positive_examples": [
@@ -101,6 +206,27 @@
                 "Topic": "affordable care act",
                 "Entity": "patient-centered health care plan",
                 "Id": "745687515038769154"
+            },
+            {
+                "Tweet": "Particularly in rural areas where physicians are scarce  these clinicians play an important role in the delivery of primary health care",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "clinicians",
+                "Id": "349963637298958336"
+            },
+            {
+                "Tweet": "In 1966  Dr. King said  \u2018Of all the forms of inequality  injustice in health care is the most shocking and inhumane.\u2019",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "Dr. King",
+                "Id": "450643204816535553"
+            },
+            {
+                "Tweet": "The Senate has passed legislation I support to deny US entry to any UN representative involved in terrorism or other acts against the USA.",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "Senate",
+                "Id": "453318153406545920"
             }
         ]
     },
@@ -120,6 +246,27 @@
                 "Topic": "lgbtq",
                 "Entity": "We",
                 "Id": "743472279628189700"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "Boko Haram",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "employers",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "I",
+                "Id": "487360833673244672"
             }
 
         ],
@@ -137,6 +284,27 @@
                 "Topic": "lgbtq",
                 "Entity": "#LGBT Americans",
                 "Id": "743472279628189700"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "woman and girls",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "a woman",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "women",
+                "Id": "487360833673244672"
             }
         ]
     },
@@ -156,6 +324,27 @@
                 "Topic": "lgbtq",
                 "Entity": "#LGBT Americans",
                 "Id": "743472279628189700"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "Boko Haram",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "woman",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "employers",
+                "Id": "487360833673244672"
             }
         ],
         "positive_examples": [
@@ -172,6 +361,27 @@
                 "Topic": "lgbtq",
                 "Entity": "We",
                 "Id": "743472279628189700"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "Senate",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "#NotMyBossBusiness bill",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "I",
+                "Id": "487360833673244672"
             }
         ]
     },
@@ -191,6 +401,27 @@
                 "Topic": "affordable care act",
                 "Entity": "@RepDLamborn",
                 "Id": "746807657873313792"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "Senate",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "doctor",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "I",
+                "Id": "487360833673244672"
             }
         ],
         "positive_examples": [
@@ -207,6 +438,48 @@
                 "Topic": "affordable care act",
                 "Entity": "#Obamacare",
                 "Id": "746807657873313792"
+            },
+            {
+                "Tweet": "On Senate floor will keep up drumbeat against Boko Haram terrorists and  call for access to education for women and  girls",
+                "Ideology": "Democrat",
+                "Topic": "terrorism",
+                "Entity": "Boko Haram terrorists",
+                "Id": "482213416397185024"
+            },
+            {
+                "Tweet": "I strongly support #NotMyBossBusiness bill. Healthcare decisions should be left between a woman and her doctor  not their employers.",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "employers",
+                "Id": "486988440182202369"
+            },
+            {
+                "Tweet": "Allowing employers to deny women access to needed care once again allows for gender discrimination in health care \u2013something I fought to end",
+                "Ideology": "Democrat",
+                "Topic": "affordable care act",
+                "Entity": "employers",
+                "Id": "487360833673244672"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "Republicans",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "I",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "@SenJackReed",
+                "Id": "652539760074969089"
             }
         ]
     },
@@ -242,6 +515,27 @@
                 "Topic": "immigration",
                 "Entity": "President Obama",
                 "Id": "536928881199312896"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "women",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "@SenateDems",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "gun control legislation",
+                "Id": "652539760074969089"
             }
         ]
     },
@@ -261,6 +555,27 @@
                 "Topic": "immigration",
                 "Entity": "President Obama",
                 "Id": "536928881199312896"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "Republicans",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "GOP",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "Congress",
+                "Id": "652539760074969089"
             }
         ],
         "positive_examples": [
@@ -277,6 +592,27 @@
                 "Topic": "immigration",
                 "Entity": "Delta",
                 "Id": "536928881199312896"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "@SenateDems",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "I",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "@SenJackReed",
+                "Id": "652539760074969089"
             }
         ]
     },
@@ -296,6 +632,27 @@
                 "Topic": "terrorism",
                 "Entity": "Israel",
                 "Id": "619164384657473536"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "women",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "@SenateDems",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "@SenJackReed",
+                "Id": "652539760074969089"
             }
         ],
         "positive_examples": [
@@ -312,6 +669,27 @@
                 "Topic": "terrorism",
                 "Entity": "ISIL Fighters",
                 "Id": "619164384657473536"
+            },
+            {
+                "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Entity": "Republicans",
+                "Id": "646420711641321472"
+            },
+            {
+                "Tweet": "Today I joined @SenateDems to say enough is enough  it is time to #StopGunViolence. I hope the GOP was listening.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity":  "GOP",
+                "Id": "652215162309603328"
+            },
+            {
+                "Tweet": "RT @karenleez: @SenJackReed at news conference on gun violence: 'We have to stand together' to pass gun control legislation in Congress",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "gun violence",
+                "Id": "652539760074969089"
             }
         ]
     },
@@ -331,6 +709,27 @@
                 "Topic": "guns",
                 "Entity": "gun owners",
                 "Id": "686686787138228224"
+            },
+            {
+                "Tweet": "Simply put  the President's health care law is the WRONG prescription for America!  #SCOTUS",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "America",
+                "Id": "215515769583308802"
+            },
+            {
+                "Tweet": "RT @MRMasferrer: @VernBuchanan demands @BarackObama explain legality of 'assassinating' American terrorists overseas w/o due process htt ...",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "@VernBuchanan",
+                "Id": "299243997254262784"
+            },
+            {
+                "Tweet": "At 10AM I will speak on the House Floor about Senate\u2019s failure yesterday to pass common sense gun safety legislation.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "gun safety legislation",
+                "Id": "324882503284428800"
             }
         ],
         "positive_examples": [
@@ -347,6 +746,27 @@
                 "Topic": "guns",
                 "Entity": "Pesident Obama",
                 "Id": "686686787138228224"
+            },
+            {
+                "Tweet": "Simply put  the President's health care law is the WRONG prescription for America!  #SCOTUS",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "President's",
+                "Id": "215515769583308802"
+            },
+            {
+                "Tweet": "RT @MRMasferrer: @VernBuchanan demands @BarackObama explain legality of 'assassinating' American terrorists overseas w/o due process htt ...",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "@BarackObama",
+                "Id": "299243997254262784"
+            },
+            {
+                "Tweet": "At 10AM I will speak on the House Floor about Senate\u2019s failure yesterday to pass common sense gun safety legislation.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "Senate",
+                "Id": "324882503284428800"
             }
         ]
     },
@@ -366,6 +786,27 @@
                 "Topic": "guns",
                 "Entity": "President Obama",
                 "Id": "686686787138228224"
+            },
+            {
+                "Tweet": "Simply put  the President's health care law is the WRONG prescription for America!  #SCOTUS",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "President's",
+                "Id": "215515769583308802"
+            },
+            {
+                "Tweet": "RT @MRMasferrer: @VernBuchanan demands @BarackObama explain legality of 'assassinating' American terrorists overseas w/o due process htt ...",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "@BarackObama",
+                "Id": "299243997254262784"
+            },
+            {
+                "Tweet": "At 10AM I will speak on the House Floor about Senate\u2019s failure yesterday to pass common sense gun safety legislation.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "Senate",
+                "Id": "324882503284428800"
             }
         ],
         "positive_examples": [
@@ -382,6 +823,27 @@
                 "Topic": "guns",
                 "Entity": "lawful gun owners",
                 "Id": "686686787138228224"
+            },
+            {
+                "Tweet": "Simply put  the President's health care law is the WRONG prescription for America!  #SCOTUS",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "America",
+                "Id": "215515769583308802"
+            },
+            {
+                "Tweet": "RT @MRMasferrer: @VernBuchanan demands @BarackObama explain legality of 'assassinating' American terrorists overseas w/o due process htt ...",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "VernBuchanan",
+                "Id": "299243997254262784"
+            },
+            {
+                "Tweet": "At 10AM I will speak on the House Floor about Senate\u2019s failure yesterday to pass common sense gun safety legislation.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Entity": "I",
+                "Id": "324882503284428800"
             }
         ]
     },
@@ -401,6 +863,27 @@
                 "Topic": "terrorism",
                 "Entity": "us",
                 "Id": "687025771504910336"
+            },
+            {
+                "Tweet": "RT @EdWorkforce: BREAKING: @RepLukeMesser introduces #SCHOOLAct to relieve local schools and colleges from costly #ObamaCare regs",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "@EdWorkforce",
+                "Id": "472430720515072000"
+            },
+            {
+                "Tweet": "RT @HouseAppropsGOP: .@RepHalRogers: The President must take the lead -  mitigating border crisis  turning back tide of illegal immigrants \u2026",
+                "Ideology": "Republican",
+                "Topic": "immigration",
+                "Entity": "illegal immigrants",
+                "Id": "494876368682115072"
+            },
+            {
+                "Tweet": "Both @Martin_Dempsey and Sec. Hagel agree that our ISIS Ambition map is an #understatement",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "ISIS",
+                "Id": "511892892785606656"
             }
         ],
         "positive_examples": [
@@ -417,6 +900,27 @@
                 "Topic": "terrorism",
                 "Entity": "POTUS",
                 "Id": "687025771504910336"
+            },
+            {
+                "Tweet": "RT @EdWorkforce: BREAKING: @RepLukeMesser introduces #SCHOOLAct to relieve local schools and colleges from costly #ObamaCare regs",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "@RepLukeMesser",
+                "Id": "472430720515072000"
+            },
+            {
+                "Tweet": "RT @HouseAppropsGOP: .@RepHalRogers: The President must take the lead -  mitigating border crisis  turning back tide of illegal immigrants \u2026",
+                "Ideology": "Republican",
+                "Topic": "immigration",
+                "Entity": "President",
+                "Id": "494876368682115072"
+            },
+            {
+                "Tweet": "Both @Martin_Dempsey and Sec. Hagel agree that our ISIS Ambition map is an #understatement",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "Sec. Hagel",
+                "Id": "511892892785606656"
             }
         ]
     },
@@ -436,6 +940,27 @@
                 "Topic": "terrorism",
                 "Entity": "POTUS",
                 "Id": "687025771504910336"
+            },
+            {
+                "Tweet": "RT @EdWorkforce: BREAKING: @RepLukeMesser introduces #SCHOOLAct to relieve local schools and colleges from costly #ObamaCare regs",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "@ReplLukeMesser",
+                "Id": "472430720515072000"
+            },
+            {
+                "Tweet": "RT @HouseAppropsGOP: .@RepHalRogers: The President must take the lead -  mitigating border crisis  turning back tide of illegal immigrants \u2026",
+                "Ideology": "Republican",
+                "Topic": "immigration",
+                "Entity": "The President",
+                "Id": "494876368682115072"
+            },
+            {
+                "Tweet": "Both @Martin_Dempsey and Sec. Hagel agree that our ISIS Ambition map is an #understatement",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "ISIS",
+                "Id": "511892892785606656"
             }
         ],
         "positive_examples": [
@@ -452,6 +977,27 @@
                 "Topic": "terrorism",
                 "Entity": "us",
                 "Id": "687025771504910336"
+            },
+            {
+                "Tweet": "RT @EdWorkforce: BREAKING: @RepLukeMesser introduces #SCHOOLAct to relieve local schools and colleges from costly #ObamaCare regs",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "@EdWorkforce",
+                "Id": "472430720515072000"
+            },
+            {
+                "Tweet": "RT @HouseAppropsGOP: .@RepHalRogers: The President must take the lead -  mitigating border crisis  turning back tide of illegal immigrants \u2026",
+                "Ideology": "Republican",
+                "Topic": "immigration",
+                "Entity": "@RepHalRogers",
+                "Id": "494876368682115072"
+            },
+            {
+                "Tweet": "Both @Martin_Dempsey and Sec. Hagel agree that our ISIS Ambition map is an #understatement",
+                "Ideology": "Republican",
+                "Topic": "terrorism",
+                "Entity": "our",
+                "Id": "511892892785606656"
             }
         ]
     },
@@ -471,6 +1017,27 @@
                 "Topic": "abortion",
                 "Entity": "Planned Parenthood",
                 "Id": "621076656875282432"
+            },
+            {
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "#RoevWade",
+                "Id": "293809181629235200"
+            },
+            {
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "SCOTUS",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "#immigration system",
+                "Id": "349731080049401856"
             }
         ],
         "positive_examples": [
@@ -487,41 +1054,27 @@
                 "Topic": "abortion",
                 "Entity": "fetal body parts",
                 "Id": "621076656875282432"
-            }
-        ]
-    },
-    {
-        "moral_role": "Entity causing degradation",
-        "negative_examples": [
-            {
-                "Tweet": "Allegations @PPact is possibly selling the body parts of the babies it has aborted is sickening. Congress should investigate and  defund them.",
-                "Ideology": "Republican",
-                "Topic": "abortion",
-                "Entity": "Congress",
-                "Id": "621061478695759872"
             },
             {
-                "Tweet": "Absolutely disgusting: Planned Parenthood caught on tape trying to sell fetal body parts. #prolife http://t.co/zI6fhqaH4T",
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
                 "Ideology": "Republican",
                 "Topic": "abortion",
-                "Entity": "fetal body parts",
-                "Id": "621076656875282432"
-            }
-        ],
-        "positive_examples": [
-            {
-                "Tweet": "Allegations @PPact is possibly selling the body parts of the babies it has aborted is sickening. Congress should investigate and  defund them.",
-                "Ideology": "Republican",
-                "Topic": "abortion",
-                "Entity": "@PPact",
-                "Id": "621061478695759872"
+                "Entity": "gift of life",
+                "Id": "293809181629235200"
             },
             {
-                "Tweet": "Absolutely disgusting: Planned Parenthood caught on tape trying to sell fetal body parts. #prolife http://t.co/zI6fhqaH4T",
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
                 "Ideology": "Republican",
-                "Topic": "abortion",
-                "Entity": "Planned Parenthood",
-                "Id": "621076656875282432"
+                "Topic": "affordable care act",
+                "Entity": "each life",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "women",
+                "Id": "349731080049401856"
             }
         ]
     },
@@ -541,6 +1094,27 @@
                 "Topic": "immigration",
                 "Entity": "Donald Trump",
                 "Id": "644159017317740544"
+            },
+            {
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "gift of life",
+                "Id": "293809181629235200"
+            },
+            {
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "SCOTUS",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "@jbrezlow",
+                "Id": "349731080049401856"
             }
         ],
         "positive_examples": [
@@ -557,6 +1131,104 @@
                 "Topic": "immigration",
                 "Entity": "Joe Biden",
                 "Id": "644159017317740544"
+            },
+            {
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "#MarchforLife",
+                "Id": "293809181629235200"
+            },
+            {
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "all who beleive",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "LuisGutierrez",
+                "Id": "349731080049401856"
+            }
+        ]
+    },
+    {
+        "moral_role": "Entity causing degradation",
+        "negative_examples": [
+            {
+                "Tweet": "Allegations @PPact is possibly selling the body parts of the babies it has aborted is sickening. Congress should investigate and  defund them.",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "Congress",
+                "Id": "621061478695759872"
+            },
+            {
+                "Tweet": "Absolutely disgusting: Planned Parenthood caught on tape trying to sell fetal body parts. #prolife http://t.co/zI6fhqaH4T",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "fetal body parts",
+                "Id": "621076656875282432"
+            },
+            {
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "#MarchforLife",
+                "Id": "293809181629235200"
+            },
+            {
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "Medicaid",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "@LuisGutierrez",
+                "Id": "349731080049401856"
+            }
+        ],
+        "positive_examples": [
+            {
+                "Tweet": "Allegations @PPact is possibly selling the body parts of the babies it has aborted is sickening. Congress should investigate and  defund them.",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "@PPact",
+                "Id": "621061478695759872"
+            },
+            {
+                "Tweet": "Absolutely disgusting: Planned Parenthood caught on tape trying to sell fetal body parts. #prolife http://t.co/zI6fhqaH4T",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "Planned Parenthood",
+                "Id": "621076656875282432"
+            },
+            {
+                "Tweet": "The gift of life is a precious  sacred blessing: http://t.co/BisyAfQl #RoevWade #MarchforLife",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Entity": "#RoevWade",
+                "Id": "293809181629235200"
+            },
+            {
+                "Tweet": "SCOTUS' refusal of case on Medicaid $ for abortion providers is disappointing for all who believe each life is sacred http://t.co/THeYrxZSHV",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Entity": "SCOTUS",
+                "Id": "339516688104042496"
+            },
+            {
+                "Tweet": "RT @jbrezlow: Sexual exploitation of women is the  ugly sin  of a broken #immigration system  says @LuisGutierrez  http://t.co/DKl17EH837",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "immigration system",
+                "Id": "349731080049401856"
             }
         ]
     }

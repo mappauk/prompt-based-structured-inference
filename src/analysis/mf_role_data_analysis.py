@@ -1,5 +1,5 @@
-import src.helpers.moral_prompting as moral_prompting
-import src.helpers.prompt_constants as constants
+import src.helpers.prompting.moral_prompting as moral_prompting
+import src.helpers.prompting.mf_prompt_constants as constants
 import src.helpers.dataset_loader as dataset_loader
 import sys
 import sklearn.metrics as sk

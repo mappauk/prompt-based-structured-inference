@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9164841">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9164841</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Involvement of <coref min="region" id="C1">the N-terminal region of the human mineralocorticoid receptor hormone-binding domain</coref> in agonist and antagonist binding as revealed by <coref min="antibody" id="C2">a new monoclonal antibody</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">To gain a better understanding of the mechanism of binding to <coref id="C3">the human mineralocorticoid receptor (hMR)</coref>, we developed <coref ref="C2" min="antibody" type="IDENT" id="C4">a new monoclonal antibody (mAb) raised against <coref id="C5">the hormone-binding domain (HBD)</coref></coref>.</sentence>
+<sentence id="S3">For this purpose, mice were immunized with a fusion protein including the sequence Thr729-Lys984 of <coref ref="C3" type="IDENT" id="C6">hMR</coref>.</sentence>
+<sentence id="S4">After ELISA screening, <coref ref="C4" type="IDENT" id="C7">mAb 18C7</coref> was selected for <coref ref="C7" type="PRON" id="C8">its</coref> specificity towards <coref ref="C5" type="IDENT" id="C9">the HBD</coref>.</sentence>
+<sentence id="S5"><coref ref="C7" min="antibody" type="IDENT" id="C10">This antibody</coref> recognized both the denatured and native MR forms, as well as the hetero-oligomeric MR form and the transformed MR state.</sentence>
+<sentence id="S6">By using several HBD subfragments, the mAb 18C7 epitope was located in <coref ref="C1" min="region" type="IDENT" id="C11">the N-terminal region of <coref ref="C9" type="IDENT" id="C12">the HBD</coref> from Thr729 to Leu765</coref>.</sentence>
+<sentence id="S7">We then studied the effect of <coref ref="C10" type="IDENT" id="C13">the antibody</coref> on aldosterone and progesterone binding to <coref ref="C6" type="IDENT" id="C14">the hMR</coref>.</sentence>
+<sentence id="S8">When <coref ref="C13" type="IDENT" id="C15">18C7</coref> was incubated with liganded MR, <coref ref="C15" type="PRON" id="C16">it</coref> was able to partly displace (20%) <coref id="C17">the hormone</coref> from <coref ref="C17" type="PRON" id="C18">its</coref> binding site.</sentence>
+<sentence id="S9">When <coref ref="C15" type="IDENT" id="C19">18C7</coref> was incubated with MR before aldosterone or progesterone, <coref ref="C19" type="IDENT" id="C20">the antibody</coref> inhibited 75-80% of the binding.</sentence>
+<sentence id="S10">The effect of <coref ref="C19" type="IDENT" id="C21">18C7</coref> on the binding was similar with <coref min="hormones" id="C22">both hormones</coref>.</sentence>
+<sentence id="S11">A sucrose gradient analysis indicated the simultaneous presence of <coref min="kinds" id="C23">two kinds of receptor complexes</coref>: <coref ref="C23" type="APPOS" id="C24">the steroid-MR complex and the antibody-MR complex</coref>.</sentence>
+<sentence id="S12">After <coref ref="C21" type="PRON" id="C25">its</coref> associated proteins, especially the heat-shock protein hsp90, had been cross-linked with <coref ref="C14" type="IDENT" id="C26">the hMR</coref> by dimethylpimelimidate, <coref ref="C21" type="IDENT" id="C27">18C7</coref> was still able to react with the receptor.</sentence>
+<sentence id="S13">Our results indicated that the epitope recognized by <coref ref="C27" type="IDENT" id="C28">18C7</coref> was directly implicated in hormone binding.</sentence>
+<sentence id="S14">The lack of steroid binding of HBD mutants with the Thr729-Leu765 sequence deleted [Jalaguier, Mesnier, Leger and Auzou (1996) J.Steroid Biochem.Mol.Biol.57, 43-50] supports this hypothesis.</sentence>
+<sentence id="S15">Because of the similar behaviours of <coref ref="C22" type="IDENT" id="C29">aldosterone and progesterone</coref>, we conclude that <coref ref="C11" min="region" type="IDENT" id="C30">the N-terminal Thr729-Leu765 region of <coref ref="C12" type="IDENT" id="C31">the HBD</coref></coref> is similarly involved in the binding of <coref ref="C29" min="hormones" type="IDENT" id="C32">both hormones</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

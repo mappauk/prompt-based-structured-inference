@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7663520">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7663520</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Disruption of <coref min="motif" id="C1">a GATA motif</coref> in the Duffy gene promoter abolishes erythroid gene expression in <coref min="individuals" id="C2">Duffy-negative individuals</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="mrna" id="C3">The mRNA for the Duffy blood group antigen</coref>, <coref ref="C3" min="erythrocyte" type="APPOS" id="C4">the erythrocyte receptor for the Plasmodium vivax malaria parasite</coref>, has recently been cloned and shown to encode a widely expressed chemokine receptor.</sentence>
+<sentence id="S3">Here, we show that <coref id="C5">the Duffy antigen/chemokine receptor gene (DARC)</coref> is composed of a single exon and that most Duffy-negative blacks carry a silent FY*B allele with a single T to C substitution at nucleotide -46.</sentence>
+<sentence id="S4">This mutation impairs the promoter activity in erythroid cells by disrupting <coref ref="C1" min="site" type="IDENT" id="C6">a binding site for the GATA1 erythroid transcription factor</coref>.</sentence>
+<sentence id="S5">With the recent characterization of the FY*A and FY*B alleles, these findings provide the molecular basis of the Duffy blood group system and an explanation for the erythroid-specific repression of <coref ref="C5" type="IDENT" id="C7">the DARC gene</coref> in <coref ref="C2" min="individuals" type="IDENT" id="C8">Duffy-negative individuals</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

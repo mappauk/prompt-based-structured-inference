@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9384661">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9384661</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Expression of <coref id="C1">c-fos</coref> correlates with IFN-alpha responsiveness in Philadelphia chromosome positive chronic myelogenous leukemia.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">This study evaluates (i) <coref min="levels" id="C2">constitutive levels of oncogene and p53 transcripts in chronic phase CML patients</coref> and (ii) <coref ref="C2" type="IDENT" id="C3">their</coref> modulations subsequent to in vivo therapy with rIFN-alpha 2c.</sentence>
+<sentence id="S3">Peripheral blood mononuclear cells (pbmc) and bone marrow cells of 26 patients were examined for <coref ref="C1" type="IDENT" id="C4">c-fos</coref>, c-myc, p53 and the hybrid bcr/abl mRNA levels.</sentence>
+<sentence id="S4">Results indicated that (i) constitutive c-fos transcript levels are significantly higher in <coref min="patients" id="C5">patients subsequently responding to IFN-alpha therapy</coref> (p &lt; 0.01) and positively correlated with the proportion of lymphocytes (r = 0.6895, p &lt; 0.01) and negatively with the proportion of immature cells (r = -0.568, p &lt; 0.01) contained in the pbmc preparations tested, (ii) constitutive mRNA levels of the hybrid bcr/abl, c-myc and p53 are positively correlated with each other, but failed to relate to disease parameters, and (iii) acute and chronic in vivo exposure to IFN-alpha is accompanied by upregulation of <coref ref="C1" type="IDENT" id="C6">c-fos</coref> and downregulation of c-myc mRNA levels in <coref ref="C5" min="patients" type="IDENT" id="C7">responder patients</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

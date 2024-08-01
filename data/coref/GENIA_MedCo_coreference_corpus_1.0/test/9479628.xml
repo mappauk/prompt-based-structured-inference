@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9479628">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9479628</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Oxidants</coref>, transcription factors, and <coref min="inflammation" id="C2">intestinal inflammation</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">It is now well appreciated that <coref ref="C2" min="inflammation" type="IDENT" id="C3">chronic gut inflammation</coref> is characterized by enhanced production of <coref ref="C1" min="metabolites" type="IDENT" id="C4">reactive metabolites of oxygen and nitrogen</coref>.</sentence>
+<sentence id="S3"><coref ref="C4" min="oxidants" type="IDENT" id="C5">Some of these oxidants</coref> are known to modulate <coref min="expression" id="C6">the expression of <coref min="genes" id="C7">a variety of genes</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> are involved in the immune and <coref min="responses" id="C9">inflammatory responses</coref></coref>.</sentence>
+<sentence id="S4">For example, certain oxidants are known to activate <coref min="transcription factor" type="IDENT" id="C10">the nuclear transcription factor kappa B</coref>, <coref ref="C10" type="RELAT" id="C11">which</coref> regulates the expression of a variety of different adhesion molecules, cytokines, and enzymes.</sentence>
+<sentence id="S5"><coref ref="C4" type="IDENT" id="C12">Oxidants</coref> are also known to activate <coref min="transcription factor" id="C13">another transcription factor</coref>, <coref ref="C13" type="APPOS" id="C14">activator protein-1</coref>.</sentence>
+<sentence id="S6"><coref ref="C13" min="transcription factor" type="IDENT" id="C15">This transcription factor</coref> is composed of products from the fos and jun proto-oncogene family and is believed to be important in regulating cell growth and proliferation.</sentence>
+<sentence id="S7">Finally, <coref ref="C12" type="IDENT" id="C16">oxidants</coref> are believed to promote <coref min="apoptosis" id="C17">intestinal epithelial cell apoptosis</coref>, and the B-cell lymphoma/leukemia-2 gene product is believed to inhibit <coref ref="C17" min="phenomenon" type="IDENT" id="C18">this phenomenon</coref> in an antioxidant-dependent manner.</sentence>
+<sentence id="S8">Taken together, these observations suggest that nontoxic concentrations of <coref ref="C16" min="metabolites" type="IDENT" id="C19">reactive metabolites of oxygen and nitrogen</coref> play an important role in regulating <coref ref="C6" type="IDENT" id="C20">the expression of genes involved in <coref ref="C9" min="response" type="IDENT" id="C21">the inflammatory response</coref></coref> and in modulating apoptosis.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

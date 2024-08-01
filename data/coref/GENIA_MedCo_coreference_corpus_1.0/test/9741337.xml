@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9741337">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9741337</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Low CD3+CD28-induced interleukin-2 production correlates with decreased reactive oxygen intermediate formation in <coref min="cells" id="C1">neonatal T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The capacity of <coref ref="C1" min="cells" type="IDENT" id="C2">neonatal T cells</coref> to secrete <coref id="C3">interleukin-2 (IL-2)</coref> has been reported to be variable.</sentence>
+<sentence id="S3">We analysed <coref min="production" id="C4">IL-2 production in <coref min="cells" id="C5">purified neonatal and adult T cells</coref></coref> using <coref id="C6">polyclonal activator phorbol ester + calcium ionophore (PDBu + iono)</coref> or receptor-mediated anti-CD3/anti-CD3+ anti-CD28 stimulation.</sentence>
+<sentence id="S4"><coref ref="C6" type="IDENT" id="C7">PDBu + iono</coref> induced equally high IL-2 levels in <coref ref="C5" min="groups" type="IDENT" id="C8">both groups</coref> and, when stimulated with plate-bound anti-CD3 monoclonal antibody (mAb), the IL-2 secretion by <coref ref="C2" min="cells" type="IDENT" id="C9">neonatal cells</coref> was undetectable and <coref min="cells" id="C10">adult cells</coref> produced low amounts of <coref ref="C3" type="IDENT" id="C11">IL-2</coref> (mean 331 +/- 86 pg/ml).</sentence>
+<sentence id="S5">The addition of <coref id="C12">anti-CD28 mAb</coref> to anti-CD3-stimulated cells markedly increased <coref ref="C4" min="production" type="IDENT" id="C13">IL-2 production in <coref ref="C8" min="types" type="IDENT" id="C14">both cell types</coref></coref>, but levels of IL-2 in <coref ref="C9" min="cells" type="IDENT" id="C15">neonatal T cells</coref> remained clearly lower than those of <coref ref="C10" min="cells" type="IDENT" id="C16">adult T cells</coref> (respective mean values: 385 +/- 109 pg/ml and 4494 +/- 1199 pg/ml).</sentence>
+<sentence id="S6">As <coref id="C17">NF-kappa B</coref> is a critical transcription factor in the control of IL-2 expression, we next analysed <coref ref="C17" type="PRON" id="C18">its</coref> nuclear translocation in <coref ref="C14" min="cells" type="IDENT" id="C19">neonatal and adult T cells</coref> using the electrophoretic mobility shift assay and, because induction of reactive oxygen intermediates (ROI) is required for the activation of <coref ref="C17" type="IDENT" id="C20">NF-kappa B</coref>, we also analysed levels of intracellular ROI in <coref ref="C19" min="cells" type="IDENT" id="C21">these cells</coref> using the ROI-reactive fluorochrome DCFH-DA and flow cytometry.</sentence>
+<sentence id="S7">In <coref ref="C15" min="cells" type="IDENT" id="C22">neonatal T cells</coref> <coref id="C23">NF-kappa B activation and ROI formation after anti-CD3 stimulation</coref> were low compared with <coref ref="C16" min="cells" type="IDENT" id="C24">adult T cells</coref> and, although addition of <coref ref="C12" type="IDENT" id="C25">anti-CD28 mAb</coref> increased induction of <coref ref="C23" type="IDENT" id="C26"><coref ref="C20" type="IDENT" id="C27">NF-kappa B</coref> and ROI formation</coref>, levels similar to those of adults were not achieved.</sentence>
+<sentence id="S8">After PDBu + iono stimulation, the cells showed similar ROI formation and IL-2 secretion.</sentence>
+<sentence id="S9">Our results suggest that reduced IL-2 production by <coref ref="C22" min="cells" type="IDENT" id="C28">neonatal T cells</coref> is specific for anti-CD3 and anti-CD3+ anti-CD28-mediated stimulation and that these activators cannot effectively activate the ROI-NF-kappa B signalling pathway in <coref ref="C28" min="cells" type="IDENT" id="C29">neonatal T cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

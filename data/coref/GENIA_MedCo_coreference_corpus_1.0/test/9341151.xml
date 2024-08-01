@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9341151">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9341151</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Purification and characterization of <coref min="protein" id="C1">the human SR 31747A-binding protein</coref>.</sentence>
+<sentence id="S2">A nuclear membrane protein related to <coref min="isomerase" id="C2">yeast sterol isomerase</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3"><coref id="C3">SR 31747A</coref>, defined as a sigma ligand, is <coref min="agent" id="C4">a novel immunosuppressive agent</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> blocks <coref min="proliferation" id="C6">proliferation of human and mouse lymphocytes</coref>.</sentence>
+<sentence id="S4">Using a radiolabeled chemical probe, we here purified <coref ref="C1" min="target" type="IDENT" id="C7">a target of <coref ref="C3" type="IDENT" id="C8">SR 31747A</coref></coref> and called <coref ref="C7" type="PRON" id="C9">it</coref> <coref min="protein" type="IDENT" id="C10">SR 31747A-binding protein (SR-BP)</coref>.</sentence>
+<sentence id="S5"><coref min="sr-bp" id="C11">Purified SR-BP</coref> retained <coref ref="C11" type="PRON" id="C12">its</coref> binding properties and migrated on SDS-polyacrylamide gel as a Mr 28,000 protein.</sentence>
+<sentence id="S6">Cloning of the cDNA encoding <coref ref="C10" min="sr-bp" type="IDENT" id="C13">human SR-BP</coref> shows an open reading frame for <coref min="protein" id="C14">a 223-amino acid protein</coref>, <coref ref="C14" type="RELAT" id="C15">which</coref> is homologous to the recently cloned sigma 1 receptor.</sentence>
+<sentence id="S7">Interestingly, <coref ref="C14" min="sequence" type="IDENT" id="C16">the deduced amino acid sequence</coref> was found to be related to <coref ref="C2" min="isomerase" type="IDENT" id="C17">fungal C8-C7 sterol isomerase</coref>, encoded by the ERG2 gene.</sentence>
+<sentence id="S8"><coref ref="C17" min="product" type="IDENT" id="C18">The ERG2 gene product</coref> has been identified recently as <coref min="target" id="C19">the molecular target of <coref ref="C8" type="IDENT" id="C20">SR 31747A</coref></coref> <coref ref="C19" type="RELAT" id="C21">that</coref> mediates antiproliferative effects of <coref ref="C18" type="IDENT" id="C22">the drug</coref> in yeast.</sentence>
+<sentence id="S9">Northern blot analysis of SR-BP gene expression revealed <coref min="transcript" id="C23">a single transcript of 2 kilobases</coref> <coref ref="C23" type="RELAT" id="C24">which</coref> was widely expressed among organs, with the highest abundance in liver and the lowest abundance in brain.</sentence>
+<sentence id="S10">Subcellular localization analysis in various cells, using a specific monoclonal antibody raised against <coref ref="C13" type="IDENT" id="C25">SR-BP</coref>, demonstrated that <coref ref="C25" min="protein" type="IDENT" id="C26">this protein</coref> was associated with the nuclear envelope.</sentence>
+<sentence id="S11">When studying the binding of <coref ref="C20" type="IDENT" id="C27">SR 31747A</coref> on membranes from yeast expressing <coref ref="C26" type="IDENT" id="C28">SR-BP</coref>, we found a pharmacological profile of sigma 1 receptors; binding was displaced by <coref id="C29">(+)-pentazocine</coref>, haloperidol, and (+)-SKF 10,047, with (+)-SKF 10, 047 being a more potent competitor than (-)-SKF 10,047.</sentence>
+<sentence id="S12">Scatchard plot analysis revealed Kd values of 7.1 nM and 0.15 nM for <coref ref="C29" type="IDENT" id="C30">(+)-pentazocine</coref> and <coref ref="C27" type="IDENT" id="C31">SR 31747A</coref>, respectively, indicating an affinity of <coref ref="C28" type="IDENT" id="C32">SR-BP</coref> 50-fold higher for <coref ref="C31" type="IDENT" id="C33">SR 31747A</coref> than for <coref ref="C30" type="IDENT" id="C34">pentazocine</coref>.</sentence>
+<sentence id="S13">Additionally, we showed that <coref ref="C34" type="IDENT" id="C35">pentazocine</coref>, <coref ref="C35" min="inhibitor" type="APPOS" id="C36">a competitive inhibitor of SR 31747A binding</coref>, also prevents the immunosuppressive effect of <coref ref="C33" type="IDENT" id="C37">SR 31747A</coref>.</sentence>
+<sentence id="S14">Taken together, these findings strongly suggest that <coref ref="C32" type="IDENT" id="C38">SR-BP</coref> represents the molecular target for <coref ref="C37" type="IDENT" id="C39">SR 31747A</coref> in mammalian tissues, which could be critical for <coref ref="C6" min="proliferation" type="IDENT" id="C40">T cell proliferation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

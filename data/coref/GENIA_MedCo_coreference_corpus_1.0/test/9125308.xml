@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9125308"><PubmedArticleSet><PubmedArticle><MedlineCitation>
+<PMID>9125308</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Induction of vascular cell adhesion molecule-1 by <coref id="C1">low-density lipoprotein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C2">Low-density lipoprotein (LDL)</coref> is a well-established risk factor for atherosclerosis.</sentence>
+<sentence id="S3">When <coref min="cells" id="C4">endothelial cells</coref> are incubated with <coref ref="C2" type="IDENT" id="C3">this lipoprotein</coref> in pathophysiologic amounts, <coref ref="C4" type="IDENT" id="C5">the cells</coref> are activated.</sentence>
+<sentence id="S4">Among the documented cellular responses to <coref ref="C2" type="IDENT" id="C6">LDL</coref> is increased recruitment of <coref id="C7">monocytes</coref>, <coref ref="C7" type="RELAT" id="C8">which</coref> are believed to play a major role in promoting intimal plaque formation.</sentence>
+<sentence id="S5">The findings presented here link <coref min="lipoprotein" id="C9">an atheogenic lipoprotein</coref>, <coref ref="C9" type="APPOS" id="C10">LDL</coref>, with the induction of an adhesion molecule important in atherogenesis</sentence>
+<sentence id="S6"><coref ref="C10" type="IDENT" id="C23">Human LDL</coref> induces the vascular cell adhesion molecule-1 (VCAM-1) transcriptionally with an increase in mRNA levels through activation of the VCAM promoter.</sentence>
+<sentence id="S7">This effect is blocked by anti-VCAM antibodies.</sentence>
+<sentence id="S8">After a 2-day incubation in <coref ref="C23" type="IDENT" id="C11">LDL</coref>, <coref min="binding" id="C12">the binding of NF-kappa B</coref>, <coref ref="C12" type="RELAT" id="C13">which</coref> is believed to be a key oxidative-stress sensor for VCAM regulation, remains at basal level.</sentence>
+<sentence id="S9">In contrast, the binding activities of <coref id="C14">AP-1</coref> and <coref id="C20">GATA</coref>, on the other hand, are increased by <coref ref="C11" type="IDENT" id="C15">LDL</coref>.</sentence>
+<sentence id="S10">Thus, a component of <coref ref="C15" type="IDENT" id="C16">LDL-</coref>enhanced endothelial recruitment of monocytes is attributed to <coref min="expression" id="C17">VCAM-1 expression</coref>, <coref ref="C17" type="RELAT" id="C18">which</coref> appears to be mediated through <coref ref="C14" type="IDENT" id="C19">AP-1</coref> and <coref ref="C20" type="IDENT" id="C21">GATA</coref>.</sentence>
+<sentence id="S11">These data identify <coref ref="C16" type="IDENT" id="C22">LDL</coref> as a VCAM-inducer possibly distinct from cytokines and endotoxin.</sentence>
+</AbstractText>
+</Abstract></Article></MedlineCitation></PubmedArticle></PubmedArticleSet></Annotation>

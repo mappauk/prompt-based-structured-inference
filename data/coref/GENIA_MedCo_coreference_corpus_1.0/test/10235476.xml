@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10235476">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10235476</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The oestrogen receptor codon 10 polymorphism detected in <coref min="cancer" id="C1">breast cancer</coref> is also present in non-malignant cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The effect of oestrogens on oestrogen-receptive organs and cells is mediated via intracellular receptors (ERalpha and ERbeta).</sentence>
+<sentence id="S3">Oestrogen receptor gene polymorphisms in the region encoding the N-terminal portion of the protein are reportedly associated with pathological conditions including <coref ref="C1" min="cancer" type="IDENT" id="C2">breast cancer</coref>, hypertension, spontaneous abortion and coronary heart disease.</sentence>
+<sentence id="S4">A silent mutation in codon 10 of exon 1, detected in ER-negative and ER-positive human breast cancer cell lines, in breast tumors and blood DNA from breast cancer patients, has been recognized as a polymorphic site.</sentence>
+<sentence id="S5">In this study we examined, by denaturing gradient-gel electrophoresis and DNA sequence analysis, the possible presence of a codon 10 polymorphic site in normal oestrogen target organs and cells such as the uterus (myometrium and endometrium), in the placenta and peripheral blood mononuclear cells and in a benign uterus tumour (leiomyoma).</sentence>
+<sentence id="S6">We have detected <coref min="polymorphism" type="IDENT" id="C3">ER codon 10 polymorphism</coref> in these samples and have compared them to <coref ref="C3" type="PRON" id="C4">those</coref> observed in breast cancer samples.</sentence>
+<sentence id="S7">All tissues and cells studied were homozygous for the wild-type gene, and were heterozygous as well as homozygous for <coref min="type" id="C5">the codon-10-variant type</coref>.</sentence>
+<sentence id="S8"><coref min="results" id="C6">These results</coref> indicate that the presence of <coref ref="C5" min="type" type="IDENT" id="C7">the codon-10-variant type</coref> is not a characteristic of <coref ref="C2" min="cancer" type="IDENT" id="C8">breast cancer</coref>.</sentence>
+<sentence id="S9"><coref ref="C6" min="findings" type="IDENT" id="C9">Out current findings</coref> suggest that further investigations are warranted to elucidate the possible linkage of <coref ref="C3" min="polymorphism" type="IDENT" id="C10">ER codon 10 polymorphism</coref> to physiological and pathological conditions.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

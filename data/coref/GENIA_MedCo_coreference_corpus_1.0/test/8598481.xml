@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8598481">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8598481</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="modulation" id="C1">Dehydroepiandrosterone modulation of <coref id="C2">lipopolysaccharide-stimulated monocyte cytotoxicity</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">Dehydroepiandrosterone (DHEA)</coref>, <coref ref="C3" min="androgen" type="APPOS" id="C4">the predominant androgen secreted by the adrenal cortex</coref>, can be converted to both potent androgens and estrogens.</sentence>
+<sentence id="S3">In addition to <coref ref="C6" type="PRON" id="C5">its</coref> role as a precursor for other steroid hormones, <coref ref="C3" type="IDENT" id="C6">DHEA</coref> has been proposed to play an important role in immunity.</sentence>
+<sentence id="S4">This study has investigated <coref ref="C1" min="modulation" type="IDENT" id="C7">DHEA modulation of <coref ref="C2" type="IDENT" id="C8">LPS-induced monocyte cytotoxicity</coref></coref>.</sentence>
+<sentence id="S5"><coref min="markers" id="C9">Cytotoxicity markers assessed</coref> include <coref ref="C9" type="PART-WHOLE" id="C10">tumor cell killing, <coref id="C11">IL-1 secretion</coref>, <coref id="C12">reactive oxygen intermediate release</coref>, nitric oxide synthetase activity as measured by the release of reactive nitrogen intermediates, <coref id="C13">complement receptor-1 cell surface protein</coref>, and TNF-alpha protein presence</coref>.</sentence>
+<sentence id="S6">Monocytes stimulated with LPS concentrations of 1.0 micrograms/ml displayed <coref ref="C10" min="markers" type="IDENT" id="C14">the above cytotoxic markers</coref>, whereas monocytes stimulated with <coref ref="C6" type="IDENT" id="C15">DHEA</coref> alone or with LPS at a lower concentration of 0.2 ng/ml did not.</sentence>
+<sentence id="S7">However, when used simultaneously, <coref ref="C15" type="IDENT" id="C16">DHEA</coref> and LPS 0.2 ng/ml displayed a synergistic effect on monocyte cytotoxicity against cancerous cell lines, <coref ref="C11" type="IDENT" id="C17">IL-1 secretion</coref>, <coref ref="C12" type="IDENT" id="C18">reactive nitrogen intermediate release</coref>, <coref ref="C13" type="IDENT" id="C19">complement receptor-1 cell-surface protein</coref>, and TNF-alpha protein to levels comparable with levels obtained using LPS 1.0 microgram/ml.</sentence>
+<sentence id="S8">Finally, Scatchard plot analysis demonstrated the presence of a DHEA receptor in monocytes, suggesting that DHEA effects on LPS-stimulated monocytes are mediated through a receptor-dependent process.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

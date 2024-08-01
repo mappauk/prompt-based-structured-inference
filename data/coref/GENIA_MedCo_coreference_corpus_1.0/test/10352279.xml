@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10352279">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10352279</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="costimulation" id="C1">CD28 costimulation</coref> augments IL-2 secretion of activated lamina propria T cells by increasing mRNA stability without enhancing IL-2 gene transactivation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The pathways leading to activation in <coref min="cells" id="C2">lamina propria (LP) T cells</coref> are different from <coref min="cells" id="C3">peripheral T cells</coref>.</sentence>
+<sentence id="S3"><coref ref="C2" min="cells" type="IDENT" id="C4">LP T cells</coref> exhibit enhanced IL-2 secretion when activated through the CD2 pathway.</sentence>
+<sentence id="S4"><coref min="coligation" id="C5">Coligation of CD28</coref> leads to synergistic enhancement of <coref min="secretion" id="C6">IL-2 secretion</coref>.</sentence>
+<sentence id="S5">Previous studies have characterized the CD28 augmentation of TCR-mediated signaling in <coref ref="C3" min="cells" type="IDENT" id="C7">peripheral blood T cells</coref> through transcriptional activation of <coref min="element" id="C8">an IL-2 promoter CD28 response element (CD28RE)</coref>, along with enhanced mRNA stability.</sentence>
+<sentence id="S6">This study characterized molecular events involved in CD28 costimulation of IL-2 production in <coref min="cells" id="C9">LP mononuclear cells (LPMC)</coref>.</sentence>
+<sentence id="S7"><coref ref="C9" type="IDENT" id="C10">LPMC</coref> exhibited increased IL-2 production in response to <coref ref="C1" min="costimulation" type="IDENT" id="C11">CD28 costimulation</coref>, compared with cells activated through CD2 alone.</sentence>
+<sentence id="S8"><coref ref="C6" min="secretion" type="IDENT" id="C12">IL-2 secretion</coref> was paralleled by increased expression of IL-2 mRNA, resulting from enhanced IL-2 mRNA stability.</sentence>
+<sentence id="S9">In contrast to transcriptional activation in PBMC, EMSA revealed that CD28 coligation of <coref min="lpmc" id="C13">CD2-activated LPMC</coref> does not result in increased binding of trans-factors to <coref ref="C8" type="IDENT" id="C14">the CD28RE</coref>, nor did Western blots detect changes in I-kappaBalpha or I-kappaBbeta levels following <coref ref="C5" min="coligation" type="IDENT" id="C15">CD28 coligation</coref>.</sentence>
+<sentence id="S10">Furthermore, <coref ref="C15" min="coligation" type="IDENT" id="C16">CD28 coligation</coref> fails to enhance IL-2 promoter-reporter or RE/AP construct expression in <coref ref="C13" min="lpmc" type="IDENT" id="C17">CD2-activated LPMC</coref>.</sentence>
+<sentence id="S11">The results reported herein indicate that <coref min="mechanisms" id="C18">the molecular mechanisms</coref> involved in CD28 cosignaling and regulation of <coref ref="C12" min="secretion" type="IDENT" id="C19">IL-2 secretion</coref> in <coref ref="C4" min="cells" type="IDENT" id="C20">LP T cells</coref> are unique to that compartment and differ from <coref ref="C18" type="PRON" id="C21">those</coref> seen in <coref ref="C7" min="cells" type="IDENT" id="C22">peripheral blood T cells</coref>.</sentence>
+<sentence id="S12">These observations suggest a biological significance for different mechanisms of IL-2 activation in initiation and maintenance of the cytokine repertoire found in the mucosa.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8389940">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8389940</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Differential contribution of <coref min="gene" id="C1">herpes simplex virus type 1 gene</coref> products and cellular factors to <coref min="activation" id="C2">the activation of <coref min="provirus" id="C3">human immunodeficiency virus type 1 provirus</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We have previously reported that infection with <coref ref="C1" type="IDENT" id="C4">herpes simplex virus type 1 (HSV-1)</coref> activates expression of <coref ref="C3" min="provirus" type="IDENT" id="C5">the human immunodeficiency virus type 1 (HIV-1) provirus in T cells</coref>.</sentence>
+<sentence id="S3"><coref ref="C2" min="activation" type="IDENT" id="C6">Activation of <coref ref="C5" min="provirus" type="IDENT" id="C7">the HIV-1 provirus</coref></coref> correlated with the activation of binding of 55- and 85-kDa proteins to the kappa B enhancer and binding of the 50-kDa HLP-1 protein to the LBP-1 sequences of the HIV-1 long terminal repeat.</sentence>
+<sentence id="S4">Further examination of this system has shown that the inhibition of HSV-1 replication by the antiviral drug acyclovir does not inhibit <coref ref="C4" type="IDENT" id="C8">HSV-1-</coref>mediated induction of <coref ref="C7" min="provirus" type="IDENT" id="C9">HIV-1 provirus</coref>.</sentence>
+<sentence id="S5">Surprisingly, the <coref id="C10">NF-kappa B</coref> and HLP-1 binding activities were substantially inhibited in acyclovir-treated cells.</sentence>
+<sentence id="S6">In the transient-transfection assay, <coref id="C11">ICP0</coref>, but not ICP4, activated the HIV-1 long terminal repeat promoter region and the effect of <coref ref="C11" type="IDENT" id="C12">ICP0</coref> was greatly enhanced in the presence of the NF-kappa B binding proteins, suggesting that induction of <coref ref="C9" min="provirus" type="IDENT" id="C13">the HIV-1 provirus</coref> involves cooperation between <coref min="factor" id="C14">the <coref ref="C8" type="IDENT" id="C15">HSV-1-</coref>activated cellular factor</coref>, <coref ref="C14" type="APPOS" id="C16">NF-kappa B</coref>, and <coref min="transactivator" id="C17">the virus-encoded transactivator</coref>, <coref ref="C17" type="APPOS" id="C18">ICP0</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9419430">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9419430</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Agonistic activity of a CD40-specific single-chain Fv constructed from the variable regions of mAb G28-5.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">A single-chain Fv (sFv) was expressed from the variable regions of the CD40-specific mAb G28-5.</sentence>
+<sentence id="S3">The molecule bound <coref id="C1">CD40</coref> with a high affinity (2.2 nM) and was a monomer in <coref id="C2">solution</coref>.</sentence>
+<sentence id="S4">Surprisingly, <coref id="C3">G28-5 sFv</coref> was <coref min="agonist" id="C4">a potent CD40 agonist</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> rapidly crosslinked <coref ref="C1" type="IDENT" id="C6">CD40</coref> on <coref min="surface" id="C7">the cell surface</coref> but did not crosslink CD40-Ig in <coref ref="C2" type="IDENT" id="C8">solution</coref>.</sentence>
+<sentence id="S5"><coref ref="C3" type="IDENT" id="C9">G28-5 sFv</coref> was a more potent agonist than <coref id="C10">G28-5 IgG</coref> and was able to stimulate <coref min="responses" id="C11">CD40 responses</coref> by B cells and monocytes.</sentence>
+<sentence id="S6"><coref ref="C10" type="IDENT" id="C12">G28-5 IgG</coref> partially blocked, whereas <coref ref="C9" type="IDENT" id="C13">G28-5 sFv</coref> augmented <coref ref="C11" min="responses" type="IDENT" id="C14">CD40 responses</coref> during stimulation with natural ligand (gp39-CD8 fusion protein).</sentence>
+<sentence id="S7">These results indicate that the functional activity of ligands built from the binding site of G28-5 is highly dependent upon the size and physical properties of the molecule both in <coref ref="C8" type="IDENT" id="C15">solution</coref> and on <coref ref="C7" min="surfaces" type="IDENT" id="C16">the cell surfaces</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

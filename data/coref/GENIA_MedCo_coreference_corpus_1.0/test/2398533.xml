@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2398533">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2398533</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The internal methionine codons of human T-cell leukemia virus type II rex gene are not required for p24rex production or virus replication and transformation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">Human T-cell leukemia virus types I (HTLV-I) and II (HTLV-II)</coref> have <coref id="C2">two nonstructural trans-acting regulatory genes</coref>, <coref ref="C2" type="APPOS" id="C3">tax and rex</coref>, located in the 3' region of the viral genome.</sentence>
+<sentence id="S3">The tax gene product (HTLV-I p40tax and HTLV-II p37tax) is the transcriptional activator of the viral long terminal repeat.</sentence>
+<sentence id="S4"><coref id="C4">The rex gene</coref> encodes <coref id="C5">two protein products</coref>, <coref ref="C5" type="APPOS" id="C6">p27rex/p21rex and p26rex/p24rex in <coref ref="C1" type="IDENT" id="C7">HTLV-I and HTLV-II</coref></coref>, respectively.</sentence>
+<sentence id="S5"><coref ref="C4" type="IDENT" id="C8">Rex</coref> acts posttranscriptionally to facilitate accumulation of full-length gag/pol and singly spliced env mRNA in the cytoplasm of HTLV-infected cells.</sentence>
+<sentence id="S6">Previous studies showed that the first ATG of <coref ref="C8" type="IDENT" id="C9">the rex gene</coref> is critical for <coref id="C10">Rex production and function</coref>.</sentence>
+<sentence id="S7">The importance of <coref id="C11">the internal ATGs</coref> to Rex function is not known.</sentence>
+<sentence id="S8">However, in vitro mutagenesis of the HTLV-I rex gene has provided <coref id="C12">indirect evidence</coref> <coref ref="C12" type="RELAT" id="C13">which</coref> suggests that p21rex, and by analogy <coref ref="C6" type="IDENT" id="C14">HTLV-II p24rex</coref>, results from initiation at <coref id="C15">an internal AUG of the tax/rex mRNA</coref>.</sentence>
+<sentence id="S9">By using an infectious molecular clone of HTLV-II, we investigated the importance of <coref ref="C11" type="IDENT" id="C16">the internal ATGs</coref> of <coref ref="C8" type="IDENT" id="C17">the rex gene</coref> on <coref ref="C10" type="IDENT" id="C18">Rex protein production and function</coref>.</sentence>
+<sentence id="S10">Our results indicate that <coref ref="C14" type="IDENT" id="C19">p24rex of HTLV-II</coref> is not initiated at <coref ref="C15" type="IDENT" id="C20">an internal AUG</coref> and that the internal methionine codons are not crucial to the function of <coref ref="C17" min="gene" type="IDENT" id="C21">the rex gene</coref> and, ultimately, the transforming properties of the virus.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

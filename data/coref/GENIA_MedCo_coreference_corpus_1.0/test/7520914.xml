@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7520914">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7520914</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">CD14-mediated translocation of nuclear factor-kappa B induced by <coref id="C1">lipopolysaccharide</coref> does not require <coref id="C2">tyrosine kinase activity</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">During the course of serious bacterial infections, <coref ref="C1" type="IDENT" id="C3">lipopolysaccharide (LPS)</coref> is believed to interact with macrophage receptors, resulting in the generation of inflammatory mediators and systemic symptoms including hemodynamic instability and shock.</sentence>
+<sentence id="S3"><coref id="C4">CD14</coref>, <coref ref="C4" type="APPOS" id="C5">a glycosylphosphatidylinositol-linked antigen</coref>, functions as an LPS signaling receptor.</sentence>
+<sentence id="S4">A critical issue concerns <coref id="C6">the mechanism</coref> by <coref ref="C6" type="RELAT" id="C7">which</coref> <coref id="C8">CD14</coref>, <coref ref="C8" type="RELAT" id="C9">which</coref> has no transmembrane domain, transduces <coref ref="C8" type="PRON" id="C10">its</coref> signal following LPS binding.</sentence>
+<sentence id="S5">Recently, investigators have hypothesized that CD14-mediated signaling is effected through a receptor-associated tyrosine kinase (TK), suggesting a multicomponent receptor model of LPS signaling.</sentence>
+<sentence id="S6">Wild-type Chinese hamster ovary (CHO)-K1 cells can be activated by endotoxin to release arachidonate following transfection with <coref id="C11">human CD14 (CHO/CD14)</coref>.</sentence>
+<sentence id="S7">Nuclear translocation of cytosolic NF-kappa B is correlated with a number of LPS-inducible responses.</sentence>
+<sentence id="S8">We sought to determine if this pathway were present in <coref ref="C11" type="IDENT" id="C12">CHO/CD14 cells</coref> and to elucidate the relationship of NF-kappa B activation to the CD14 receptor system.</sentence>
+<sentence id="S9">LPS-stimulated translocation of NF-kappa B in <coref ref="C12" min="cells" type="IDENT" id="C13">CHO/CD14 cells</coref> resembled the same response in <coref id="C14">the murine macrophage-like cell line RAW 264.7</coref>.</sentence>
+<sentence id="S10"><coref id="C15">Protein synthesis inhibitors and corticosteroids</coref>, <coref ref="C15" type="RELAT" id="C16">which</coref> suppress arachidonate release and the synthesis of proinflammatory cytokines, had no effect on <coref min="translocation" id="C17">translocation of NF-kappa B in <coref ref="C13" type="IDENT" id="C18">CHO/CD14</coref> or <coref ref="C14" type="IDENT" id="C19">RAW 264.7 cells</coref></coref>, demonstrating that NF-kappa B translocation is an early event.</sentence>
+<sentence id="S11">Although <coref ref="C2" min="activity" type="IDENT" id="C20">TK activity</coref> was consistently observed by immunoblotting extracts from activated RAW 264.7 cells, LPS-induced phosphotyrosine residues were not observed from similarly treated CHO/CD14 cells.</sentence>
+<sentence id="S12">Furthermore, the TK inhibitors herbimycin A and genistein failed to inhibit <coref ref="C17" min="translocation" type="IDENT" id="C21">translocation of NF-kappa B in <coref ref="C18" type="IDENT" id="C22">CHO/CD14</coref> or <coref ref="C19" type="IDENT" id="C23">RAW 264.7 cells</coref></coref>, although <coref ref="C22 C23" type="IDENT" id="C24">both of these agents</coref> inhibited LPS-induced TK activity in <coref ref="C23" min="cells" type="IDENT" id="C25">RAW 264.7 cells</coref>.</sentence>
+<sentence id="S13">These results imply that <coref ref="C20" min="activity" type="IDENT" id="C26">TK activity</coref> is not obligatory for CD14-mediated signal transduction to occur in response to <coref ref="C3" type="IDENT" id="C27">LPS</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

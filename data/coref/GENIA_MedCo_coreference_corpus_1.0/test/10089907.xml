@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10089907">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10089907</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Estrone</coref> potentiates myeloid cell differentiation: a role for <coref min="dehydrogenase" id="C2">17 beta-hydroxysteroid dehydrogenase</coref> in modulating hemopoiesis.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="hormones" id="C3">Hormones such as <coref id="C4">1 alpha, 25-dihydroxy vitamin D3 (D3)</coref>, <coref min="acid" id="C5">all-trans retinoic acid</coref>, and 9-cis retinoic acid</coref> stimulate differentiation of myeloid progenitor cells via <coref ref="C3" type="PRON" id="C6">their</coref> interaction with <coref min="receptors" id="C7">specific hormone receptors</coref>.</sentence>
+<sentence id="S3">However, the sensitivity of cells to <coref ref="C3" min="agents" type="IDENT" id="C8">these agents</coref> is not merely governed by the expression of <coref ref="C7" min="receptors" type="IDENT" id="C9">their receptors</coref> and the availability of ligand to bind them.</sentence>
+<sentence id="S4">Recent studies from our group suggested that the actions of <coref ref="C8" type="IDENT" id="C10"><coref ref="C4" type="IDENT" id="C11">D3</coref> and retinoids</coref> on <coref id="C12">myelopoiesis</coref> also are influenced by endogenous mechanisms involving other steroid hormones.</sentence>
+<sentence id="S5">In this study we examined the influence of local estrogen metabolism on the differentiation of <coref min="cells" id="C13">HL60 cells</coref> and normal primitive myeloid progenitor cells.</sentence>
+<sentence id="S6">Quantitative thin-layer chromatography (TLC) analyses showed that HL60 and normal cells are able to generate <coref ref="C1" type="IDENT" id="C14">estrone (E1)</coref> from <coref id="C15">estradiol (E2)</coref>.</sentence>
+<sentence id="S7">Neither cell population generated significant amounts of <coref ref="C15" type="IDENT" id="C16">E2</coref> from <coref ref="C14" type="IDENT" id="C17">E1</coref>.</sentence>
+<sentence id="S8">Reverse transcriptase polymerase chain reaction and Northern analyses confirmed that normal and leukemic myeloid progenitor cells expressed mRNA for the type I and IV isoforms of <coref ref="C2" min="dehydrogenase" type="IDENT" id="C18">17 beta-hydroxysteroid dehydrogenase</coref>.</sentence>
+<sentence id="S9">Conversion of <coref ref="C16" type="IDENT" id="C19">E2</coref> to <coref ref="C17" type="IDENT" id="C20">E1</coref> was upregulated within 24 hours when <coref ref="C13" min="cells" type="IDENT" id="C21">HL60 cells</coref> were treated with either <coref ref="C5" min="acid" type="IDENT" id="C22">all-trans retinoic acid</coref> or <coref ref="C11" type="IDENT" id="C23">D3</coref> at <coref id="C24">doses</coref> <coref ref="C24" type="RELAT" id="C25">that</coref> induce <coref ref="C21" type="PRON" id="C26">their</coref> differentiation toward neutrophils or monocytes, respectively.</sentence>
+<sentence id="S10">Similarly, D3-induced monocyte differentiation of <coref min="cells" id="C27">normal myeloid progenitor cells</coref> was associated with increased capacity to generate <coref ref="C20" type="IDENT" id="C28">E1</coref> from <coref ref="C19" type="IDENT" id="C29">E2</coref>.</sentence>
+<sentence id="S11">When <coref id="C30"><coref ref="C21" min="cells" type="IDENT" id="C31">HL60 cells</coref> or <coref ref="C27" min="cells" type="IDENT" id="C32">normal myeloid progenitor cells</coref></coref> were exposed to exogenous E1 <coref ref="C30" type="PRON" id="C33">they</coref> became more sensitive to the differentiation-inducing effects of <coref ref="C23" type="IDENT" id="C34">D3</coref>.</sentence>
+<sentence id="S12">Data presented provide further evidence for the local modulation of <coref ref="C12" type="IDENT" id="C35">myelopoiesis</coref> by intracrine mechanisms.</sentence>
+<sentence id="S13">In particular, our findings suggest that local metabolism of <coref id="C36">steroids</coref> by normal as well as leukemic myeloid cells influences <coref ref="C36" type="PRON" id="C37">their</coref> responsiveness to <coref ref="C10" type="IDENT" id="C38"><coref ref="C34" type="IDENT" id="C39">D3</coref> and retinoids</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

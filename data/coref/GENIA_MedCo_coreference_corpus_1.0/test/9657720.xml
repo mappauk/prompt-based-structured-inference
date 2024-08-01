@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9657720">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9657720</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A small, nonpeptidyl mimic of <coref min="factor" id="C1">granulocyte-colony-stimulating factor</coref> [see commetns]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">A nonpeptidyl small molecule SB 247464</coref>, capable of activating granulocyte-colony-stimulating factor (G-CSF) signal transduction pathways, was identified in a high-throughput assay in cultured cells.</sentence>
+<sentence id="S3">Like <coref ref="C1" type="IDENT" id="C3">G-CSF</coref>, <coref ref="C2" type="IDENT" id="C4">SB 247464</coref> induced tyrosine phosphorylation of multiple signaling proteins and stimulated primary murine bone marrow cells to form granulocytic colonies in vitro.</sentence>
+<sentence id="S4"><coref ref="C4" type="PRON" id="C5">It</coref> also elevated peripheral blood neutrophil counts in mice.</sentence>
+<sentence id="S5"><coref min="domain" id="C6">The extracellular domain of the murine G-CSF receptor</coref> was required for the activity of <coref ref="C4" type="IDENT" id="C7">SB 247464</coref>, suggesting that <coref ref="C6" type="IDENT" id="C8">the compound</coref> acts by oligomerizing receptor chains.</sentence>
+<sentence id="S6">The results indicate that a small molecule can activate <coref id="C9">a receptor</coref> <coref ref="C9" type="RELAT" id="C10">that</coref> normally binds a relatively large protein ligand.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

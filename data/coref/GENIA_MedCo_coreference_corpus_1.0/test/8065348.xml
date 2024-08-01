@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8065348">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8065348</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Displacement of an E-box-binding repressor by basic helix-loop-helix proteins: implications for B-cell specificity of <coref min="enhancer" id="C1">the immunoglobulin heavy-chain enhancer</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The activity of <coref ref="C1" min="enhancer" type="IDENT" id="C2">the immunoglobulin heavy-chain (IgH) enhancer</coref> is restricted to B cells, although <coref ref="C2" type="PRON" id="C3">it</coref> binds both B-cell-restricted and ubiquitous transcription factors.</sentence>
+<sentence id="S3">Activation of <coref ref="C2" min="enhancer" type="IDENT" id="C4">the enhancer</coref> in non-B cells upon overexpression of <coref min="proteins" id="C5">the basic helix-loop-helix (bHLH) protein E2A</coref> appears to be mediated not only by the binding of <coref ref="C5" type="IDENT" id="C6">E2A</coref> to <coref ref="C6" type="PRON" id="C7">its</coref> cognate <coref id="C8">E box</coref> but also by the resulting displacement of <coref min="repressor" id="C9">a repressor from that same site</coref>.</sentence>
+<sentence id="S4">We have identified <coref min="protein" id="C10">a "two-handed" zinc finger protein</coref>, denoted <coref ref="C10" type="IDENT" id="C11">ZEB</coref>, <coref min="specificity" id="C12">the DNA-binding specificity</coref> of <coref ref="C12" type="RELAT" id="C13">which</coref> mimics <coref ref="C12" type="PRON" id="C14">that</coref> of <coref ref="C9" min="repressor" type="IDENT" id="C15">the cellular repressor</coref>.</sentence>
+<sentence id="S5">By employing <coref ref="C8" min="box" type="IDENT" id="C16">a derivative E box</coref> <coref ref="C16" type="RELAT" id="C17">that</coref> binds <coref ref="C11" type="IDENT" id="C18">ZEB</coref> but not <coref ref="C6" type="IDENT" id="C19">E2A</coref>, we have shown that <coref ref="C15" min="repressor" type="IDENT" id="C20">the repressor</coref> is active in B cells and <coref ref="C4" min="enhancer" type="IDENT" id="C21">the IgH enhancer</coref> is silenced in the absence of binding competition by <coref min="proteins" id="C22">bHLH proteins</coref>.</sentence>
+<sentence id="S6">Hence, we propose that a necessary prerequisite of enhancer activity is the B-cell-specific displacement of a ZEB-like repressor by <coref ref="C22" min="proteins" type="IDENT" id="C23">bHLH proteins</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

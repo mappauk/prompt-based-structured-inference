@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10068671">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10068671</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Interferon-alpha</coref> activates multiple STAT proteins and upregulates proliferation-associated IL-2Ralpha, c-myc, and pim-1 genes in <coref min="cells" id="C2">human T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C3">Interferon-alpha (IFN-alpha)</coref> is <coref min="cytokine" id="C4">a pleiotropic cytokine</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> has antiviral, antiproliferative, and immunoregulatory functions.</sentence>
+<sentence id="S3">There is <coref min="evidence" id="C6">increasing evidence</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> <coref ref="C3" type="IDENT" id="C8">IFN-alpha</coref> has an important role in T-cell biology.</sentence>
+<sentence id="S4">We have analyzed the expression of <coref min="genes" id="C9">IL-2Ralpha, c-myc, and pim-1 genes</coref> in <coref ref="C2" min="lymphocytes" type="IDENT" id="C10">anti-CD3-activated human T lymphocytes</coref>.</sentence>
+<sentence id="S5">The induction of <coref ref="C9" min="genes" type="IDENT" id="C11">these genes</coref> is associated with interleukin-2 (IL-2)-induced T-cell proliferation.</sentence>
+<sentence id="S6">Treatment of <coref ref="C10" min="lymphocytes" type="IDENT" id="C12">T lymphocytes</coref> with <coref id="C13"><coref ref="C8" type="IDENT" id="C14">IFN-alpha</coref>, <coref id="C15">IL-2</coref>, <coref id="C16">IL-12</coref>, and <coref id="C17">IL-15</coref></coref> upregulated IL-2Ralpha, c-myc, and pim-1 gene expression.</sentence>
+<sentence id="S7"><coref ref="C14" type="IDENT" id="C18">IFN-alpha</coref> also sensitized <coref ref="C12" min="cells" type="IDENT" id="C19">T cells</coref> to IL-2-induced proliferation, further suggesting that <coref ref="C18" type="IDENT" id="C20">IFN-alpha</coref> may be involved in the regulation of T-cell mitogenesis.</sentence>
+<sentence id="S8">When we analyzed the nature of STAT proteins capable of binding to <coref min="elements" id="C21">IL-2Ralpha, pim-1, and IRF-1 GAS elements</coref> after cytokine stimulation, we observed IFN-alpha-induced binding of <coref id="C22">STAT1</coref>, <coref id="C23">STAT3</coref>, and <coref id="C24">STAT4</coref>, but not <coref id="C25">STAT5</coref> to <coref ref="C21" min="all" type="IDENT" id="C26">all of these elements</coref>.</sentence>
+<sentence id="S9">Yet, <coref ref="C20" type="IDENT" id="C27">IFN-alpha</coref> was able to activate binding of <coref ref="C25" type="IDENT" id="C28">STAT5</coref> to the high-affinity IFP53 GAS site.</sentence>
+<sentence id="S10"><coref ref="C27" type="IDENT" id="C29">IFN-alpha</coref> enhanced tyrosine phosphorylation of <coref ref="C22" type="IDENT" id="C30">STAT1</coref>, <coref ref="C23" type="IDENT" id="C31">STAT3</coref>, <coref ref="C24" type="IDENT" id="C32">STAT4</coref>, STAT5a, and STAT5b.</sentence>
+<sentence id="S11"><coref ref="C16" type="IDENT" id="C33">IL-12</coref> induced <coref ref="C32" type="IDENT" id="C34">STAT4</coref> and <coref ref="C15" type="IDENT" id="C35">IL-2</coref> and <coref ref="C17" type="IDENT" id="C36">IL-15</coref> induced STAT5 binding to <coref ref="C26" min="elements" type="IDENT" id="C37">the GAS elements</coref>.</sentence>
+<sentence id="S12">Taken together, <coref min="results" id="C38">our results</coref> suggest that <coref ref="C13" type="IDENT" id="C39"><coref ref="C29" type="IDENT" id="C40">IFN-alpha</coref>, <coref ref="C35" type="IDENT" id="C41">IL-2</coref>, <coref ref="C33" type="IDENT" id="C42">IL-12</coref>, and <coref ref="C36" type="IDENT" id="C43">IL-15</coref></coref> have overlapping activities on <coref ref="C19" min="cells" type="IDENT" id="C44">human T cells</coref>.</sentence>
+<sentence id="S13"><coref ref="C38" min="findings" type="IDENT" id="C45">These findings</coref> thus emphasize the importance of <coref ref="C40" type="IDENT" id="C46">IFN-alpha</coref> as a T-cell regulatory cytokine.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

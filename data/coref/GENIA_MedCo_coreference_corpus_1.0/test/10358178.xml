@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10358178">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10358178</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Multiple NF-ATc isoforms with individual transcriptional properties are synthesized in <coref min="lymphocytes" id="C1">T lymphocytes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">The transcription factor NF-ATc</coref> <coref ref="C2" type="RELAT" id="C3">that</coref> controls gene expression in <coref ref="C1" min="lymphocytes" type="IDENT" id="C4">T lymphocytes</coref> and embryonic cardiac cells is expressed in <coref min="isoforms" id="C5">three prominent isoforms</coref>.</sentence>
+<sentence id="S3">This is due to <coref min="events" id="C6">alternative splice/polyadenylation events</coref> <coref ref="C6" type="RELAT" id="C7">that</coref> lead to the predominant synthesis of two long isoforms in <coref min="cells" id="C8">naive T cells</coref> and a shorter NF-ATc isoform in effector T cells.</sentence>
+<sentence id="S4">Whereas the previously described isoform NF-ATc/A contains a relatively short C terminus, <coref min="isoforms" id="C9">the longer isoforms</coref>, <coref ref="C9" type="APPOS" id="C10">B and C</coref>, span extra C-terminal peptides of 128 and 246 aa, respectively.</sentence>
+<sentence id="S5">We show here that in addition to <coref min="domain" id="C11">the strong N-terminal trans-activation domain</coref>, <coref ref="C11" type="APPOS" id="C12">TAD-A</coref>, <coref ref="C11" type="RELAT" id="C13">which</coref> is common to <coref ref="C5" min="isoforms" type="IDENT" id="C14">all three NF-ATc isoforms</coref>, <coref id="C15">NF-ATc/C</coref> contains <coref min="domain" id="C16">a second trans-activation domain</coref>, <coref ref="C16" type="APPOS" id="C17">TAD-B</coref>, in <coref ref="C15" type="PRON" id="C18">its</coref> C-terminal peptide.</sentence>
+<sentence id="S6"><coref min="stimuli" id="C19">Various stimuli of <coref ref="C4" min="cells" type="IDENT" id="C20">T cells</coref></coref> <coref ref="C19" type="RELAT" id="C21">that</coref> induce the activity of <coref ref="C11" type="IDENT" id="C22">TAD-A</coref> also enhance the activity of <coref ref="C16" type="IDENT" id="C23">TAD-B</coref>, but, unlike <coref ref="C22" type="IDENT" id="C24">TAD-A</coref>, <coref ref="C23" type="IDENT" id="C25">TAD-B</coref> remains unphosphorylated by protein from 12-O-tetradecanoyl 12-phorbol 13-acetate-stimulated T cells.</sentence>
+<sentence id="S7">The shorter C-terminal peptide of isoform NF-ATc/B exerts a suppressive transcriptional effect.</sentence>
+<sentence id="S8">These properties of <coref id="C26">NF-ATc/B and- C</coref> might be of importance for <coref min="regulation" id="C27">gene regulation in <coref ref="C8" min="lymphocytes" type="IDENT" id="C28">naive T lymphocytes</coref></coref> in <coref ref="C27" type="RELAT" id="C29">which</coref> <coref ref="C26" type="IDENT" id="C30">NF-ATc/B and -C</coref> are predominantly synthesized.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

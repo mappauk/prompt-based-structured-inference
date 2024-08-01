@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7989520">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7989520</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">No evidence for <coref id="C1">the expression of <coref id="C2">the progesterone receptor</coref> on <coref id="C3">peripheral blood lymphocytes</coref></coref> during pregnancy [see comments]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="expression" type="IDENT" id="C4">The expression of <coref ref="C2" min="receptor" type="IDENT" id="C5">the progesterone receptor</coref> in <coref ref="C3" min="lymphocytes" type="IDENT" id="C6">human peripheral blood lymphocytes</coref></coref> was analysed, using an enzyme linked immunosorbent assay (Abbott PgR-EIA monoclonal), in order to evaluate <coref ref="C4" type="PRON" id="C7">its</coref> prognostic character in the context of spontaneous abortion.</sentence>
+<sentence id="S3">Cytosols were prepared from lymphocytes of <coref id="C8">24 healthy pregnant women (11 first, 10 second and three third trimester)</coref>, <coref id="C9">seven healthy non-pregnant women</coref>, nine women with recurrent spontaneous abortion, and six healthy men.</sentence>
+<sentence id="S4">In addition, <coref id="C10">a human breast carcinoma cell line (ZR-75-1)</coref>, <coref ref="C10" type="RELAT" id="C11">which</coref> expresses <coref ref="C5" min="receptor" type="IDENT" id="C12">the progesterone receptor</coref>, was analysed throughout.</sentence>
+<sentence id="S5">The ZR-75-1 cell line showed an expression of 642 fmol/mg whereas lymphocytes of <coref ref="C8" min="women" type="IDENT" id="C13">pregnant women</coref> showed an expression &lt; or = 4 fmol/mg.</sentence>
+<sentence id="S6">Lymphocytes of <coref ref="C9" min="women" type="IDENT" id="C14">non-pregnant women</coref>, women with threatened pre-term delivery, and men showed equivalent levels: 3 +/- 1, 3 +/- 2 and 5 +/- 4 fmol/mg respectively.</sentence>
+<sentence id="S7">These results show that there is no evidence of specific expression of <coref ref="C12" min="receptor" type="IDENT" id="C15">the progesterone receptor</coref> in pregnancy and exclude any prognostic character in spontaneous abortion.</sentence>
+<sentence id="S8">A role for <coref ref="C15" min="receptor" type="IDENT" id="C16">the progesterone receptor</coref> in the mechanism of the known effect of progesterone on <coref ref="C6" min="lymphocytes" type="IDENT" id="C17">peripheral blood lymphocytes</coref> is also excluded.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

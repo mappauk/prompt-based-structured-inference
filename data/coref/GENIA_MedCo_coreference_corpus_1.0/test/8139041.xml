@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8139041">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8139041</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A transcriptional regulatory element is associated with <coref id="C1">a nuclease-hypersensitive site in the pol gene of <coref id="C2">human immunodeficiency virus type 1</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Analysis of the chromatin organization of <coref ref="C2" type="IDENT" id="C3">the integrated human immunodeficiency virus type 1 (HIV-1) genome</coref> has previously revealed <coref id="C4">a major constitutive DNase I-hypersensitive site</coref> associated with the pol gene (E. Verdin, J. Virol. 65:6790-6799, 1991).</sentence>
+<sentence id="S3">In the present report, high-resolution mapping of <coref ref="C4" min="site" type="IDENT" id="C5">this site</coref> with DNase I and micrococcal nuclease identified a nucleosome-free region centered around nucleotides (nt) 4490 to 4766.</sentence>
+<sentence id="S4"><coref id="C6">A 500-bp fragment</coref> encompassing <coref ref="C5" min="site" type="IDENT" id="C7">this hypersensitive site (nt 4481 to 4982)</coref> exhibited transcription-enhancing activity (two- to threefold) when <coref ref="C6" type="PRON" id="C8">it</coref> was cloned in <coref ref="C6" type="PRON" id="C9">its</coref> natural position with respect to the HIV-1 promoter after transient transfection in U937 and CEM cells.</sentence>
+<sentence id="S5">Using in vitro footprinting and gel shift assays, we have identified four distinct binding sites for nuclear proteins within <coref ref="C6" type="IDENT" id="C10">this positive regulatory element</coref>.</sentence>
+<sentence id="S6"><coref min="site" id="C11">Site B (nt 4519 to 4545)</coref> specifically bound four distinct nuclear protein complexes: a ubiquitous factor, a T-cell-specific factor, a B-cell-specific factor, and the monocyte/macrophage- and <coref id="C12">B-cell-specific transcription factor PU.1/Spi-1</coref>.</sentence>
+<sentence id="S7">In <coref id="C13">most HIV-1 isolates</coref> in <coref ref="C13" type="RELAT" id="C14">which</coref> <coref id="C15">this PU box</coref> was not conserved, <coref ref="C15" type="PRON" id="C16">it</coref> was replaced by a binding site for the related factor Ets1.</sentence>
+<sentence id="S8">Factors binding to site C (nt 4681 to 4701) had <coref id="C17">a DNA-binding specificity</coref> similar to <coref ref="C17" type="PRON" id="C18">that</coref> of factors binding to <coref ref="C11" type="IDENT" id="C19">site B</coref>, except for <coref ref="C12" type="IDENT" id="C20">PU.1/Spi-1</coref>.</sentence>
+<sentence id="S9">A GC box containing a binding site for Sp1 was identified (nt 4623 to 4631).</sentence>
+<sentence id="S10">Site D (nt 4816 to 4851) specifically bound a ubiquitously expressed factor.</sentence>
+<sentence id="S11">These results identify a transcriptional regulatory element associated with <coref ref="C1" min="site" type="IDENT" id="C21">a nuclease-hypersensitive site in the pol gene of <coref ref="C2" type="IDENT" id="C22">HIV-1</coref></coref> and suggest that <coref ref="C22" type="PRON" id="C23">its</coref> activity may be controlled by a complex interplay of cis-regulatory elements.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

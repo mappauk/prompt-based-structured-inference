@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=2217228">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>2217228</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1"><coref id="C2">Circadian rhythm</coref> of <coref id="C3">glucocorticoid receptors</coref></coref> in <coref id="C4">human peripheral leukocytes</coref> and <coref ref="C1" type="PRON" id="C5">their</coref> reactivity to glucocorticoids.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">1) There exists <coref id="C6"><coref ref="C2" type="IDENT" id="C7">a CR of <coref ref="C3" type="IDENT" id="C8">GR</coref></coref> in <coref ref="C4" min="leukocytes" type="IDENT" id="C9">human leukocytes</coref>, <coref id="C10">PMN</coref>, and monocytes</coref> with the peak values from 0400 to 0800 hr and the trough values between 2300 and 0000 hr.</sentence>
+<sentence id="S3">The difference between <coref ref="C6" type="PRON" id="C11">them</coref> was significant statistically.</sentence>
+<sentence id="S4">2) The FI of the chemotactic migration rate of <coref ref="C10" type="IDENT" id="C12">PMN</coref> by cortisol also showed <coref id="C13">diurnal changes</coref> <coref ref="C13" type="RELAT" id="C14">which</coref> were synchronous with <coref ref="C13" type="PRON" id="C15">that</coref> of <coref ref="C8" type="IDENT" id="C16">GR</coref>.</sentence>
+<sentence id="S5">This indicates that <coref ref="C7" type="IDENT" id="C17">the CR of <coref ref="C16" type="IDENT" id="C18">GR</coref></coref> may be of functional significance.</sentence>
+<sentence id="S6">3) In Cushing's syndrome, <coref ref="C17" type="IDENT" id="C19">the CR of <coref ref="C18" type="IDENT" id="C20">GR</coref></coref> was normal in spite of <coref id="C21">the fact</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> the CR of plasma cortisol was disturbed.</sentence>
+<sentence id="S7">This indicates the independency of <coref id="C23"><coref ref="C19" type="IDENT" id="C24">the CR</coref> of <coref ref="C20" type="IDENT" id="C25">GR</coref></coref> from <coref ref="C23" type="PRON" id="C26">that</coref> of cortisol.</sentence>
+<sentence id="S8">4) In apoplexy caused by brain ischemia, <coref ref="C24" type="IDENT" id="C27">the CR of <coref ref="C25" type="IDENT" id="C28">GR</coref></coref> was abolished in patients with <coref id="C29">basal lesions</coref> but preserved when <coref ref="C29" min="lesions" type="IDENT" id="C30">the lesions</coref> were located in the cerebral cortex.</sentence>
+<sentence id="S9">These results strongly suggest that the main "circadian pacemaker" of <coref ref="C28" type="IDENT" id="C31">GR</coref> is located in the basal brain, most probably in the suprachiasmatic nuclei as has been suggested for rodents.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1964088">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1964088</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Suppression of signals required for <coref id="C1">activation of <coref id="C2">transcription factor NF-kappa B</coref></coref> in cells constitutively expressing <coref id="C3">the HTLV-I Tax protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Transient short-term expression of <coref ref="C3" min="protein" type="IDENT" id="C4">the Tax protein of human T-cell leukemia virus type-I (HTLV-I)</coref> leads to <coref ref="C1" min="activation" type="IDENT" id="C5">activation of <coref ref="C2" min="transcription factor" type="IDENT" id="C6">the pleiotropic transcription factor NF-kappa B</coref></coref>.</sentence>
+<sentence id="S3">Consistent with findings obtained with transient expression assays, we observed marked accumulation of <coref ref="C6" min="transcription factor" type="IDENT" id="C7">the transcription factor NF-kappa B</coref> in <coref id="C8">the nucleus of Namalwa B lymphoid cells</coref>, <coref ref="C8" type="RELAT" id="C9">which</coref> constitutively express <coref id="C10">Tax</coref>.</sentence>
+<sentence id="S4">In contrast, NF-kappa B activity was not detected in <coref ref="C8" min="nucleus" type="IDENT" id="C11">the nucleus</coref> following long-term expression of <coref ref="C10" type="IDENT" id="C12">Tax</coref> in <coref id="C13">Jurkat T lymphocytes</coref>.</sentence>
+<sentence id="S5">The ability of both mitogens and cytokines to activate <coref ref="C7" type="IDENT" id="C14">NF-kappa B</coref> was also blocked in <coref ref="C13" type="IDENT" id="C15">Jurkat cells</coref> constitutively expressing <coref ref="C12" type="IDENT" id="C16">Tax</coref>.</sentence>
+<sentence id="S6">However, the activation of other mitogen-inducible transcription factors, such as Fos and Jun, was unaffected.</sentence>
+<sentence id="S7">Thus, depending on the cellular environment, the short- and long-term effects of Tax expression can be quite different.</sentence>
+<sentence id="S8">Consequently, one function of <coref ref="C16" type="IDENT" id="C17">Tax</coref> in cells infected with HTLV-I might involve cell-type-specific suppression, as opposed to activation, of distinct signal pathways.</sentence>
+<sentence id="S9">The cells lines described here should be useful for the delineation of signaling pathways utilized in the selective regulation of gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

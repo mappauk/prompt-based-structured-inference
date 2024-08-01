@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9192770">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9192770</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Interleukin-10</coref> inhibits <coref min="transcription" id="C2">interferon-gamma-induced intercellular adhesion molecule-1 gene transcription</coref> in human monocytes.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C3">Interleukin-10 (IL-10)</coref> is <coref ref="C3" min="cytokine" type="IDENT" id="C4"><coref min="cytokine" id="C5">a potent monocyte regulatory cytokine</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> inhibits gene expression of proinflammatory mediators</coref>.</sentence>
+<sentence id="S3">In this study, we investigated <coref id="C7">the mechanism</coref> by <coref ref="C7" type="RELAT" id="C8">which</coref> <coref ref="C4" type="IDENT" id="C9">IL-10</coref> downregulates <coref min="expression" type="IDENT" id="C10">expression of intercellular adhesion molecule-1 (ICAM-1)</coref> on the cell surface of <coref min="monocytes" id="C11">normal human monocytes activated with interferon-gamma (IFN-gamma)</coref>.</sentence>
+<sentence id="S4">IL-10 inhibition of <coref ref="C10" min="expression" type="IDENT" id="C12">IFN-gamma-induced ICAM-1 expression</coref> was apparent as early as 3 hours and was blocked by an anti-IL-10 antibody but not by an isotype-matched control antibody.</sentence>
+<sentence id="S5">Northern blot analysis showed that <coref ref="C9" type="IDENT" id="C13">IL-10</coref> reduced the accumulation of ICAM-1 mRNA in <coref ref="C11" min="monocytes" type="IDENT" id="C14">IFN-gamma-stimulated monocytes</coref>.</sentence>
+<sentence id="S6">IL-10 inhibition of ICAM-1 steady-state mRNA was detected at 3 hours and remained at 24 hours.</sentence>
+<sentence id="S7">Nuclear run-on transcription assays showed that <coref ref="C13" type="IDENT" id="C15">IL-10</coref> inhibited the rate of <coref ref="C2" min="transcription" type="IDENT" id="C16">IFN-gamma-induced transcription of <coref min="gene" type="IDENT" id="C17">the ICAM-1 gene</coref></coref>, and mRNA stability studies showed that <coref ref="C15" type="IDENT" id="C18">IL-10</coref> did not alter the half-life of IFN-gamma-induced ICAM-1 message.</sentence>
+<sentence id="S8">Thus, <coref ref="C18" type="IDENT" id="C19">IL-10</coref> inhibits <coref ref="C12" min="expression" type="IDENT" id="C20">IFN-gamma-induced ICAM-1 expression</coref> in monocytes primarily at the level of gene transcription.</sentence>
+<sentence id="S9">Activation of IFN-gamma-responsive genes requires tyrosine phosphorylation of the transcriptional factor STAT-1alpha (signal transducer and activator of transcription-1alpha).</sentence>
+<sentence id="S10">However, <coref ref="C19" type="IDENT" id="C21">IL-10</coref> did not affect IFN-gamma-induced tyrosine phosphorylation of STAT-1alpha or alter STAT-1alpha binding to the IFN-gamma response element (IRE) in <coref min="promoter" id="C22">the ICAM-1 promoter</coref>.</sentence>
+<sentence id="S11">Instead, <coref ref="C21" type="IDENT" id="C23">IL-10</coref> prevented IFN-gamma-induced binding activity at the NF-kappaB site of the tumor necrosis factor alpha (TNF-alpha)-responsive NF-kappaB/C-EBP composite element in <coref ref="C22" min="promoter" type="IDENT" id="C24">the ICAM-1 promoter</coref>.</sentence>
+<sentence id="S12">These data indicate that <coref ref="C23" type="IDENT" id="C25">IL-10</coref> inhibits <coref ref="C16" min="transcription" type="IDENT" id="C26">IFN-gamma-induced transcription of <coref ref="C17" min="gene" type="IDENT" id="C27">the ICAM-1 gene</coref></coref> by <coref min="mechanism" id="C28">a regulatory mechanism</coref> <coref ref="C28" type="RELAT" id="C29">that</coref> may involve NF-kappaB.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

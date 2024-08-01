@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9815628">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9815628</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Immunohistochemical study of <coref min="lymphocytes" id="C1">c-fos-positive lymphocytes</coref> infiltrated into <coref min="carcinomas" id="C2">human squamous cell carcinomas of the head and neck</coref> during <coref min="therapy" id="C3">radiation therapy</coref> and <coref ref="C3" type="PRON" id="C4">its</coref> clinical significance.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C5">C-fos</coref> has been reported to be one of the immediate early genes in signal transduction systems after many kinds of stresses, including ionizing radiation.</sentence>
+<sentence id="S3">Changes in <coref min="expression" id="C6">c-fos expression</coref> induced by <coref ref="C3" min="therapy" type="IDENT" id="C7">radiation therapy</coref> in <coref min="tissues" id="C8">tumor tissues</coref> have not yet been reported.</sentence>
+<sentence id="S4">In this study, we have attempted to determine whether <coref ref="C6" min="expression" type="IDENT" id="C9">c-fos expression</coref> is induced by <coref id="C10">radiotherapy</coref> in <coref ref="C2" min="carcinomas" type="IDENT" id="C11">human squamous cell carcinomas of the head and neck</coref> and to establish a possible correlation between <coref ref="C9" min="expression" type="IDENT" id="C12">c-fos expression</coref> and the therapeutic effects of <coref ref="C7" min="therapy" type="IDENT" id="C13">radiation therapy</coref>.</sentence>
+<sentence id="S5"><coref min="patients" id="C14">Twenty-seven patients with tumors of the oral cavity, oropharynx, and maxillary sinus</coref> were examined, <coref ref="C14" type="IDENT" id="C15">all</coref> of <coref ref="C15" type="RELAT" id="C16">which</coref> were confirmed as <coref min="carcinomas" id="C17">squamous cell carcinomas</coref>.</sentence>
+<sentence id="S6">After obtaining the patients' informed consent, biopsies were performed before treatment and at doses of 4, 10, and 20 Gy of <coref ref="C10" type="IDENT" id="C18">radiotherapy</coref>, and the specimens were preserved in liquid nitrogen for further examination.</sentence>
+<sentence id="S7">Serial sectioning of 6 micrometer was performed using a cryostat, and <coref id="C19">samples</coref> were immunohistochemically stained using the streptoavidin-biotin peroxidase method and a monoclonal antibody against <coref ref="C5" type="IDENT" id="C20">c-fos</coref>.</sentence>
+<sentence id="S8"><coref ref="C14" min="patients" type="IDENT" id="C21">Three of the 27 patients with <coref ref="C17" min="carcinoma" type="IDENT" id="C22">squamous cell carcinoma</coref></coref> showed slight expression of <coref ref="C20" type="IDENT" id="C23">c-fos</coref> in <coref min="cells" id="C24">their tumor cells</coref> before and/or at 4 or 10 Gy of <coref ref="C18" type="IDENT" id="C25">radiotherapy</coref>.</sentence>
+<sentence id="S9"><coref ref="C24" type="IDENT" id="C26">The tumors</coref> showed high radiosensitivity.</sentence>
+<sentence id="S10">Concerning <coref min="lymphocytes" id="C27">tumor-infiltrating lymphocytes</coref>, the rate of moderate or remarkable grades of <coref ref="C1" min="lymphocytes" type="IDENT" id="C28">c-fos-positive lymphocytes</coref> before <coref ref="C25" type="IDENT" id="C29">radiotherapy</coref> and at radiation doses of 4, 10, and 20 Gy was 8.0, 29.2, 4.8, and 0%, respectively.</sentence>
+<sentence id="S11">The relationship between the immunohistochemical findings and the antitumor effect at a radiation dose of 20 Gy was examined on the corresponding H&amp;E-stained sections.</sentence>
+<sentence id="S12">In <coref id="C30">patients</coref> <coref ref="C30" type="RELAT" id="C31">whose</coref> infiltration of <coref ref="C28" min="lymphocytes" type="IDENT" id="C32">c-fos-positive lymphocytes</coref> into <coref ref="C8" min="tissues" type="IDENT" id="C33">tumor tissues</coref> were moderate or remarkable at 4 Gy of <coref ref="C29" type="IDENT" id="C34">radiotherapy</coref>, the tumors responded significantly well to <coref ref="C13" min="therapy" type="IDENT" id="C35">radiation therapy</coref> (P &lt; 0.025, chi2 test), and <coref ref="C30" type="IDENT" id="C36">the patients</coref> took a significantly favorable clinical course (P &lt; 0.05, chi2 test).</sentence>
+<sentence id="S13">In a sample from <coref ref="C36" min="patients" type="IDENT" id="C37">one of the patients</coref>, <coref ref="C32" min="lymphocytes" type="IDENT" id="C38">c-fos-positive lymphocytes</coref> were identified as CD4 positive and CD8 negative.</sentence>
+<sentence id="S14">Therefore, the high radiosensitivity of <coref ref="C22" min="carcinomas" type="IDENT" id="C39">squamous cell carcinomas</coref> in <coref ref="C19" min="samples" type="IDENT" id="C40">our samples</coref> could be explained by an overexpression of <coref ref="C23" type="IDENT" id="C41">c-fos</coref> in <coref min="lymphocytes" id="C42"><coref ref="C27" min="lymphocytes" type="IDENT" id="C43">the tumor-infiltrating lymphocytes</coref> induced by small doses of <coref ref="C35" type="IDENT" id="C44">radiation therapy</coref></coref>, and <coref ref="C42" min="lymphocytes" type="IDENT" id="C45">these activated lymphocytes</coref> exerted a cytotoxic effect against <coref ref="C39" min="cells" type="IDENT" id="C46">the cancer cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

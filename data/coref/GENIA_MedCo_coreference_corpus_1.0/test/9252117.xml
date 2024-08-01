@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9252117">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9252117</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1"><coref id="C2">EBF</coref> and <coref id="C3">E47</coref></coref> collaborate to induce expression of <coref min="genes" id="C4">the endogenous immunoglobulin surrogate light chain genes</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C5"><coref ref="C2" type="IDENT" id="C6">Early B cell factor (EBF)</coref> and <coref ref="C3" type="IDENT" id="C7">E47</coref></coref> participate in the transcriptional control of early B lymphocyte differentiation.</sentence>
+<sentence id="S3">With the aim of identifying genetic targets for <coref ref="C5" min="transcription factors" type="IDENT" id="C8">these transcription factors</coref>, we stably transfected <coref id="C9">cDNAs encoding <coref ref="C6" type="IDENT" id="C10">EBF</coref> or a covalent homodimer of <coref ref="C7" type="IDENT" id="C11">E47</coref></coref>, individually or together, into <coref min="cells" id="C12">immature hematopoietic Ba/F3 cells</coref>, <coref ref="C12" type="RELAT" id="C13">which</coref> lack <coref ref="C9" min="factors" type="IDENT" id="C14">both factors</coref>.</sentence>
+<sentence id="S4">In combination, <coref ref="C8" type="IDENT" id="C15"><coref ref="C10" type="IDENT" id="C16">EBF</coref> and <coref ref="C11" type="IDENT" id="C17">E47</coref></coref> induce efficient expression of <coref ref="C4" min="genes" type="IDENT" id="C18">the endogenous immunoglobulin surrogate light chain genes</coref>, <coref ref="C18" type="APPOS" id="C19"><coref id="C20">lambda5</coref> and VpreB</coref>, whereas other pre-B cell-specific genes remain silent.</sentence>
+<sentence id="S5">Multiple functionally important EBF and E47 binding sites were identified in the lambda5 promoter/enhancer region, indicating that <coref ref="C20" type="IDENT" id="C21">lambda5</coref> is a direct genetic target for <coref ref="C15" min="transcription factors" type="IDENT" id="C22">these transcription factors</coref>.</sentence>
+<sentence id="S6">Taken together, these data suggest that <coref ref="C22" type="IDENT" id="C23"><coref ref="C16" type="IDENT" id="C24">EBF</coref> and <coref ref="C17" type="IDENT" id="C25">E47</coref></coref> synergize to activate expression of a subset of <coref ref="C18" type="IDENT" id="C26">genes</coref> <coref ref="C26" type="RELAT" id="C27">that</coref> define an early stage of the B cell lineage.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

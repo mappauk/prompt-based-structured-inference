@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8610116">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8610116</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="activation" id="C1">Activation of <coref id="C2">c-Jun N-terminal kinase</coref></coref> in <coref id="C3">bacterial lipopolysaccharide-</coref>stimulated macrophages.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Activation of macrophages by <coref ref="C3" type="IDENT" id="C4">bacterial lipopolysaccharide (LPS)</coref> induces transcription of <coref id="C5">genes</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> encode for proinflammatory regulators of <coref min="response" id="C7">the immune response</coref>.</sentence>
+<sentence id="S3">Previous work has suggested that activation of <coref id="C8">the transcription factor activator protein 1 (AP-1)</coref> is <coref min="event" id="C9">one LPS-induced event</coref> <coref ref="C9" type="RELAT" id="C10">that</coref> mediates <coref ref="C7" type="IDENT" id="C11">this response</coref>.</sentence>
+<sentence id="S4">Consistent with this notion, we found that <coref ref="C4" type="IDENT" id="C12">LPS</coref> stimulated <coref ref="C8" type="IDENT" id="C13">AP-1-</coref>mediated transcription of a transfected reporter gene in the murine macrophage cell line RAW 264.7.</sentence>
+<sentence id="S5">As AP-1 activity is regulated in part by <coref ref="C1" min="activation" type="IDENT" id="C14">activation of <coref ref="C2" type="IDENT" id="C15">the c-Jun N-terminal kinase (JNK)</coref></coref>, <coref ref="C15" type="RELAT" id="C16">which</coref> phosphorylates and subsequently increases the transcriptional activity of <coref id="C17">c-Jun</coref>, we examined whether LPS treatment of macrophages resulted in activation of <coref ref="C17" type="IDENT" id="C18">this kinase</coref>.</sentence>
+<sentence id="S6">LPS treatment of RAW 264.7 cells, murine bone marrow-derived macrophages, and the human monocyte cell line THP-1 resulted in rapid activation of the p46 and p54 isoforms of <coref type="IDENT" id="C19">JNK</coref>.</sentence>
+<sentence id="S7">Treatment with wild-type and rough mutant forms of <coref ref="C12" type="IDENT" id="C20">LPS</coref> and synthetic lipid A resulted in <coref ref="C14" type="IDENT" id="C21">JNK activation</coref>, while pretreatment with the tyrosine kinase inhibitor herbimycin A inhibited <coref ref="C21" type="IDENT" id="C22">this response</coref>.</sentence>
+<sentence id="S8">Binding of LPS-LPS binding protein (LBP) complexes to <coref id="C23">CD14</coref>, <coref type="IDENT" id="C24"><coref ref="C23" min="receptor" type="APPOS" id="C25">a surface receptor</coref> <coref ref="C24" type="RELAT" id="C26">that</coref> mediates many LPS responses</coref>, was found to be crucial, as pretreatment of THP-1 cells with <coref min="antibody" id="C27">the monoclonal antibody 60b</coref>, <coref type="RELAT" id="C28">which</coref> blocks this binding, inhibited <coref ref="C21" type="IDENT" id="C29">JNK activation</coref>.</sentence>
+<sentence id="S9">These results suggest that LPS activation of <coref ref="C19" type="IDENT" id="C30">JNK</coref> in monocyte/macrophage cells is <coref min="event" id="C31">a <coref ref="C23" type="IDENT" id="C32">CD14-</coref> and protein tyrosine phosphorylation-dependent event</coref> <coref ref="C31" type="RELAT" id="C33">that</coref> may mediate the early activation of <coref ref="C13" type="IDENT" id="C34">AP-1</coref> in regulating <coref ref="C12" type="IDENT" id="C35">LPS-</coref>triggered gene induction.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

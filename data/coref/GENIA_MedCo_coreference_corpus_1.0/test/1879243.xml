@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1879243">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1879243</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">[Changes in <coref min="levels" id="C1">levels of leucocytic <coref min="receptor" id="C2">estrogen receptor</coref></coref> in <coref min="patients" id="C3">patients with <coref id="C4">menopausal type II diabetes</coref></coref> and its significance]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="number" id="C5">The number of <coref ref="C2" min="receptors" type="IDENT" id="C6">estrogen receptors (ER)</coref></coref> in human peripheral leucocytes in <coref ref="C3" min="women" type="IDENT" id="C7">12 women with <coref ref="C4" type="IDENT" id="C8">menopausal type II diabetes</coref></coref> was measured with radio-ligand binding method.</sentence>
+<sentence id="S3"><coref id="C9">The results</coref> were compared with <coref ref="C9" type="PRON" id="C10">those</coref> of 12 menopausal women without diabetes and 12 normal women of childbearing age.</sentence>
+<sentence id="S4">It was found that <coref ref="C5" min="number" type="IDENT" id="C11">the number of <coref ref="C6" type="IDENT" id="C12">ER</coref></coref> in <coref ref="C7" type="IDENT" id="C13">the patients</coref> was significantly decreased.</sentence>
+<sentence id="S5">Our data indicate that decrease of <coref ref="C1" min="level" type="IDENT" id="C14"><coref ref="C12" type="IDENT" id="C15">ER</coref> level in leukocytes</coref> may be related to the pathogenesis of <coref ref="C8" type="IDENT" id="C16">type II diabetes in menopausal period</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

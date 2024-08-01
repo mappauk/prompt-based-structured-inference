@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7665567">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7665567</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Transcriptional regulation of <coref min="gene" id="C1">the gene encoding the human C-type lectin leukocyte receptor AIM/CD69</coref> and functional characterization of <coref ref="C1" type="PRON" id="C2">its</coref> tumor necrosis factor-alpha-responsive elements.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">The human activation antigen CD69</coref> is <coref min="member" id="C4">a member of the C-type animal lectin superfamily</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> functions as a signal-transmitting receptor.</sentence>
+<sentence id="S3">Although the expression of <coref ref="C3" type="IDENT" id="C6">CD69</coref> can be induced in vitro on cells of most hematopoietic lineages with a wide variety of stimuli, in vivo <coref ref="C6" type="PRON" id="C7">it</coref> is mainly expressed by T-lymphocytes located in the inflammatory infiltrates of several human diseases.</sentence>
+<sentence id="S4">To elucidate <coref id="C8">the mechanisms</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> regulate the constitutive and inducible expression of <coref ref="C6" type="IDENT" id="C10">CD69</coref> by leukocytes, we isolated the promoter region of <coref ref="C1" min="gene" type="IDENT" id="C11">the CD69 gene</coref> and carried out <coref ref="C11" type="PRON" id="C12">its</coref> functional characterization.</sentence>
+<sentence id="S5">Sequence analysis of the 5'-flanking region of <coref ref="C11" min="gene" type="IDENT" id="C13">the CD69 gene</coref> revealed the presence of <coref id="C14">a potential TATA element 30 base pairs upstream of the major transcription initiation site and several putative binding sequences for inducible transcription factors (NF-kappa B, Egr-1, AP-1)</coref>, <coref ref="C14" type="RELAT" id="C15">which</coref> might mediate the inducible expression of <coref ref="C13" min="gene" type="IDENT" id="C16">this gene</coref>.</sentence>
+<sentence id="S6">Transient expression of CD69 promoter-based reporter gene constructs in K562 cells indicated that the proximal promoter region spanning positions -78 to +16 contained the cis-acting sequences necessary for basal and phorbol 12-myristate 13-acetate-inducible transcription of <coref ref="C16" min="gene" type="IDENT" id="C17">the CD69 gene</coref>.</sentence>
+<sentence id="S7">Removal of the upstream sequences located between positions -78 and -38 resulted in decreased promoter strength and abolished the response to phorbol 12-myristate 13-acetate.</sentence>
+<sentence id="S8">We also found that <coref id="C18">tumor necrosis factor-alpha (TNF-alpha)</coref> is capable of inducing the surface expression of the CD69 molecule as well as the promoter activity of <coref id="C19">fusion plasmids</coref> <coref ref="C19" type="RELAT" id="C20">that</coref> contain 5'-flanking sequences of <coref ref="C17" min="gene" type="IDENT" id="C21">the CD69 gene</coref>, suggesting that <coref ref="C18" min="cytokine" type="IDENT" id="C22">this cytokine</coref> may regulate in vivo the expression of <coref ref="C10" type="IDENT" id="C23">CD69</coref>.</sentence>
+<sentence id="S9">(ABSTRACT TRUNCATED AT 250 WORDS)</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

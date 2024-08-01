@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8596017">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8596017</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Characterization and purification of a protein kinase C substrate in human B cells.</sentence>
+<sentence id="S2">Identification as <coref id="C1">lymphocyte-specific protein 1 (LSP1)</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">Incubation of <coref min="cells" id="C2">B-chronic lymphocytic leukemia (B-CLL) cells</coref> with phorbol esters resulted in the phosphorylation of two major PKC substrates, MARCKS (myristoylated, alanine-rich C kinase substrate) and MRP (MARCKS-related protein), and of <coref min="protein" id="C3">a third protein, with an apparent m.w. of 60,000</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> was <coref min="cells" id="C5">the most prominent protein kinase C substrate in <coref ref="C2" type="IDENT" id="C6">these cells</coref></coref>.</sentence>
+<sentence id="S4">p60 phosphorylation was time and PMA dose dependent, and was induced by cell-permeable diacylglycerol, but not by inactive phorbol esters.</sentence>
+<sentence id="S5">Two-dimensional electrophoretic analysis of the protein phosphorylation pattern from <coref id="C7">the B cell line CESS</coref> demonstrated the identity between <coref id="C8">the p60 protein</coref> expressed in <coref ref="C7" type="IDENT" id="C9">this cell line</coref> and that expressed in <coref ref="C2" type="IDENT" id="C10">B-CLL cells</coref>.</sentence>
+<sentence id="S6"><coref ref="C8" type="IDENT" id="C11">p60</coref> was purified from CESS cells and peptide microsequencing of <coref ref="C8" type="IDENT" id="C12">this protein</coref> revealed that it was <coref ref="C1" type="IDENT" id="C13">lymphocyte-specific protein 1 (LSP1)</coref>, that is here characterized as <coref ref="C5" min="cells" type="IDENT" id="C14">the most prominent protein kinase C substrate in B cells</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

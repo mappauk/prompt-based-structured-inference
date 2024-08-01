@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9130632">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9130632</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Itk</coref>, <coref ref="C1" min="kinase" type="APPOS" id="C2">a T cell-specific tyrosine kinase</coref>, is required for CD2-mediated interleukin-2 promoter activation in the human T cell line Jurkat.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We investigated the functional role of <coref ref="C1" type="IDENT" id="C3">Itk</coref>, <coref ref="C3" min="member" type="APPOS" id="C4">a member of the cytoplasmic tyrosine kinase Tec family</coref>, in T cell activation.</sentence>
+<sentence id="S3">Stimulation of either <coref id="C5">CD2</coref> or <coref id="C6">T cell receptor (TCR)/CD3</coref> on Tcells by monoclonal antibody-mediated cross-linking induced <coref min="phosphorylation" id="C7">tyrosine phosphorylation of <coref ref="C3" type="IDENT" id="C8">Itk</coref></coref>, <coref ref="C7" type="RELAT" id="C9">which</coref> was maximal as early as 1 min after stimulation.</sentence>
+<sentence id="S4">The tyrosine kinase activity in the anti-Itk immunoprecipitate was significantly activated upon these stimulations.</sentence>
+<sentence id="S5">Interleukin-2 (IL-2) promoter activity stimulated by cross-linking of <coref ref="C5" type="IDENT" id="C10">CD2</coref>, <coref ref="C6" type="IDENT" id="C11">TCR/CD3</coref>, and <coref id="C12">CD28</coref> with antibodies was significantly reduced by transient expression of <coref min="mutant" id="C13">an Itk mutant lacking the kinase activity</coref>.</sentence>
+<sentence id="S6">The reduction paralleled a decrease in tyrosine phosphorylation of endogenous wild-type Itk.</sentence>
+<sentence id="S7">Stimulation of <coref ref="C10" type="IDENT" id="C14">CD2</coref> or <coref ref="C11" type="IDENT" id="C15">TCR/CD3</coref> induced activation of <coref id="C16">the nuclear factor of activated T cells (NFAT)</coref>, the binding site of <coref ref="C16" type="RELAT" id="C17">which</coref> is included in the IL-2 gene promoter.</sentence>
+<sentence id="S8">The activation of <coref ref="C16" type="IDENT" id="C18">NFAT</coref> was also impaired by expression of <coref ref="C13" min="mutant" type="IDENT" id="C19">the Itk mutant</coref>.</sentence>
+<sentence id="S9">These results demonstrate that <coref ref="C8" type="IDENT" id="C20">Itk</coref> plays a role in IL-2 production, indicating a critical involvement of <coref ref="C20" type="IDENT" id="C21">Itk</coref> in the initial stage of T cell activation by mediating signals from the TCR/CD3 complex, <coref ref="C14" type="IDENT" id="C22">CD2</coref>, and <coref ref="C12" type="IDENT" id="C23">CD28</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

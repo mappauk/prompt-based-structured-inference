@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10428853">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10428853</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Tissue-specific regulation of the ecto-5'-nucleotidase promoter.</sentence>
+<sentence id="S2">Role of the camp response element site in mediating repression by <coref min="region" id="C5">the upstream regulatory region</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S3">We have isolated the 5' region of the ecto-5'-nucleotidase (low K(m) 5'-NT) gene and established that a 969-base pair (bp) fragment confers cell-specific expression of <coref min="gene" id="C1">a CAT reporter gene</coref> <coref ref="C1" type="RELAT" id="C2">that</coref> correlates with the expression of endogenous ecto-5'-NT mRNA and enzymatic activity.</sentence>
+<sentence id="S4"><coref ref="C5" min="region" type="OTHER" id="C6">A 768-bp upstream negative regulatory region</coref> has been identified that conferred lymphocyte-specific negative regulation in a heterologous system with a 244-bp deoxycytidine kinase core promoter.</sentence>
+<sentence id="S5">DNase I footprinting identified several protected areas including <coref id="C3">Sp1</coref>, <coref id="C8">Sp1/AP-2</coref>, and cAMP response element (CRE) binding sites within the 201-bp core promoter region and <coref ref="C3" type="IDENT" id="C4">Sp1</coref>, NRE-2a, TCF-1/LEF-1, and Sp1/NF-AT binding sites in the upstream regulatory region.</sentence>
+<sentence id="S6">Whereas the CRE site was essential in mediating the negative activity of <coref ref="C6" min="region" type="IDENT" id="C7">the upstream regulatory region</coref> in <coref id="C10">Jurkat</coref> but not in <coref id="C11">HeLa cells</coref>, mutation of <coref ref="C8" type="IDENT" id="C9">the Sp1/AP-2 site</coref> decreased promoter activity in <coref ref="C10 C11" type="WHOLE-PART" id="C12">both cell lines</coref>.</sentence>
+<sentence id="S7">Electrophoretic mobility shift assay analysis of proteins binding to <coref min="site" id="C14">the CRE site</coref> identified both ATF-1 and ATF-2 in <coref ref="C10" min="cells" type="IDENT" id="C13">Jurkat cells</coref>.</sentence>
+<sentence id="S8">Finally, phorbol 12-myristate 13-acetate increased the activity of both the core and the 969-bp promoter fragments, and this increase was abrogated by mutations at <coref ref="C14" min="site" type="IDENT" id="C15">the CRE site</coref>.</sentence>
+<sentence id="S9">In summary, we have identified <coref min="region" id="C17">a tissue-specific regulatory region 5' of the ecto-5'-NT core promoter</coref> <coref ref="C17" type="RELAT" id="C16">that</coref> requires the presence of a functional CRE site within the basal promoter for <coref ref="C17" type="PRON" id="C18">its</coref> suppressive activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

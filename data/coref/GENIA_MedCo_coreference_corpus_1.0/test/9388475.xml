@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9388475">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9388475</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Molecular cloning and functional characterization of murine cDNA encoding transcription factor NFATc.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Transcription factors of the NFAT (nuclear factor of activated T cells) family play important roles in immune and inflammatory responses by regulating the expression of genes encoding cytokines and immunoregulatory proteins.</sentence>
+<sentence id="S3">Here we describe cloning and characterization of <coref min="cdna" id="C1">full-length cDNA encoding <coref id="C2">murine (m) NFATc</coref></coref> <coref ref="C1" type="RELAT" id="C3">which</coref> predicts that the protein has all the conserved structural motifs of NFAT family members, including the rel homology domain, the NFAT homology domain and the nuclear translocation signals.</sentence>
+<sentence id="S4"><coref ref="C2" type="IDENT" id="C4">mNFATc</coref> complexed with AP-1 bound specifically to the murine IL-2 NFAT recognition sequence and activated transcription from the co-transfected IL-2 promoter in COS-7 cells.</sentence>
+<sentence id="S5">Northern blot analysis showed that the cDNA probe hybridized with <coref min="transcript" id="C5">a 4.5 kb transcript</coref> <coref ref="C5" type="RELAT" id="C6">which</coref> is highly inducible in murine T cells.</sentence>
+<sentence id="S6">By Northern and in situ hybridization, <coref min="transcript" id="C7">mNFATc transcript</coref> was detected from the early stage of development.</sentence>
+<sentence id="S7">In the mouse embryo, <coref ref="C7" min="transcript" type="IDENT" id="C8">mNFATc transcript</coref> was strongly expressed in thymus, lung and submandibular gland and weakly in skeletal muscle and heart suggesting that <coref ref="C4" type="IDENT" id="C9">mNFATc</coref> may have a role both in embryogenesis and in mature T cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

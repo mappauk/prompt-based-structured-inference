@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9057648">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9057648</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Upregulation of c-Fos in activated T lymphoid and monocytic cells by <coref min="protein" id="C1">human immunodeficiency virus-1 Tat protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="protein" type="IDENT" id="C2">The regulatory Tat protein of <coref id="C3">the human immunodeficiency virus type-1 (HIV-1)</coref></coref> is essential for viral replication and also shows pleiotropic activities on various cell functions.</sentence>
+<sentence id="S3">To get further insights into the molecular mechanisms underlying the biological activity of <coref ref="C2" type="IDENT" id="C4">Tat</coref>, we investigated the effect of endogenous and exogenous Tat protein on c-fos gene expression in T lymphoblastoid (Jurkat) and monocytic (U937) cell lines, as well as in primary peripheral blood mononuclear cells (PBMC).</sentence>
+<sentence id="S4">Transient cotransfection of <coref id="C5">tat cDNA in sense orientation (tat/S)</coref>, together with <coref min="plasmid" id="C6">a plasmid containing <coref min="promoter" id="C7">the c-fos promoter</coref> (FC3, from- 711 to +42)</coref> in front of the bacterial chloramphenicol acetyltransferase (CAT) gene significantly enhanced CAT activity in <coref id="C8">Jurkat cells activated by the addition of 15% fetal calf serum (FCS) or 5 micrograms/mL phytohemagglutinin plus 10(-7) mol/L phorbol myristate acetate (PMA) and U937 cells activated by 15% FCS or 10(-7) mol/L PMA</coref>.</sentence>
+<sentence id="S5">This effect was specifically due to <coref ref="C4" type="IDENT" id="C9">Tat</coref>, since Jurkat and U937 cells cotransfected either with tat cDNA in antisense orientation (tat/AS), tat carrying a mutation in the aminoacid cys22-gly22 (tat 22/S) or with the backbone vector alone (pRPneo-SL3) did not show any significant difference in <coref min="activity" id="C10">c-fos promoter activity</coref> as compared to cells transfected with <coref ref="C6" min="plasmid" type="IDENT" id="C11">FC3 plasmid</coref> alone.</sentence>
+<sentence id="S6">By using deletion mutants of <coref ref="C7" type="IDENT" id="C12">the c-fos promoter</coref>, we found that the minimal DNA sequence required for Tat activity was located between <coref id="C13">nucleotides -404/-220</coref> and that <coref id="C14">the serum responsive element (SRE, -317/-288)</coref>, present within <coref ref="C13" min="region" type="IDENT" id="C15">this region</coref>, was still responsive to <coref ref="C9" type="IDENT" id="C16">Tat</coref>.</sentence>
+<sentence id="S7">A single point mutation in <coref ref="C14" type="IDENT" id="C17">the SRE</coref> completely abrogated the responsiveness to <coref ref="C5" type="IDENT" id="C18">tat/S</coref>.</sentence>
+<sentence id="S8">Exogenous recombinant Tat protein was also able to upregulate <coref ref="C10" min="activity" type="IDENT" id="C19">c-fos promoter activity</coref> in <coref ref="C8" min="cells" type="IDENT" id="C20">serum-activated Jurkat and U937 cells</coref>, as well as endogenous c-fos mRNA expression and c-Fos protein synthesis in both serum-activated cell lines and primary PBMC.</sentence>
+<sentence id="S9">c-Fos protein was shown essential for an optimal transactivation of the HIV-1 long terminal repeat (LTR) by <coref ref="C9" type="IDENT" id="C21">Tat</coref>: incubation of Jurkat cells with antisense, but not sense, c-fos oligonucleotides significantly reduced either the Tat-enhanced expression of an LTR-CAT reporter construct or the levels of gag p24 in the culture supernatants of Jurkat cells and PBMC acutely infected with <coref ref="C3" type="IDENT" id="C22">HIV-1</coref>.</sentence>
+<sentence id="S10">Our data suggest that the c-fos upregulation mediated by <coref ref="C21" type="IDENT" id="C23">Tat</coref> might play a significant role in the control of viral gene transactivation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

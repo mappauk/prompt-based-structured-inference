@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8995244">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8995244</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="transcription factor" id="C1">A novel transcription factor</coref> regulates expression of <coref min="subunit" id="C2">the vacuolar H+-ATPase B2 subunit</coref> through AP-2 sites during <coref min="differentiation" id="C3">monocytic differentiation</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">During <coref min="differentiation" id="C4">monocyte-to-macrophage differentiation</coref>, the cellular content of <coref id="C5">vacuolar H+-ATPase (V-ATPase)</coref> increases more than 4-fold.</sentence>
+<sentence id="S3">We have shown previously that <coref min="expression" id="C6">amplified expression of <coref ref="C2" min="subunit" type="IDENT" id="C7">the B2 subunit of <coref ref="C5" type="IDENT" id="C8">the V-ATPase</coref></coref></coref> occurs solely by increased transcription, and that the 5'-untranslated region of the B2 gene, containing multiple consensus binding sites for the transcription factors AP-2 and Sp1, is required for <coref ref="C6" min="expression" type="IDENT" id="C9">this expression</coref>.</sentence>
+<sentence id="S4">The present study demonstrates that AP-2 binding sequences are essential for increased transcription from <coref min="promoter" id="C10">the B2 promoter</coref> during <coref ref="C4" min="differentiation" type="IDENT" id="C11">monocyte-macrophage differentiation</coref> and that <coref id="C12">AP-2</coref>, expressed exogenously in THP-1 and other cells, activates transcription from <coref ref="C10" min="promoter" type="IDENT" id="C13">the B2 promoter</coref>.</sentence>
+<sentence id="S5">In mobility shift assays, <coref min="factor" id="C14">a nuclear factor from THP-1 and U-937 cells</coref> was identified <coref ref="C14" type="RELAT" id="C15">that</coref> binds to several AP-2 response elements within <coref ref="C13" min="promoter" type="IDENT" id="C16">the B2 promoter</coref>, but does not react with AP-2 antibodies, and has <coref min="profile" id="C17">a DNA sequence binding affinity profile</coref> <coref ref="C17" type="RELAT" id="C18">that</coref> differs from <coref ref="C12" type="IDENT" id="C19">AP-2</coref>.</sentence>
+<sentence id="S6">These findings suggest that <coref ref="C1" min="translcription-factor" type="IDENT" id="C20">a novel AP-2-like transcription factor</coref> is responsible for V-ATPase B subunit amplification during <coref ref="C3" min="differentiation" type="IDENT" id="C21">monocyte differentiation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

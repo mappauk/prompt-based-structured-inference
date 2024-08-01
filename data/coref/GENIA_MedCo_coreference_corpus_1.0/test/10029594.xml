@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10029594">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10029594</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Clonality of isolated eosinophils in <coref min="syndrome" id="C1">the hypereosinophilic syndrome</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="syndrome" type="IDENT" id="C2">The idiopathic hypereosinophilic syndrome (IHES)</coref> is a rare disorder characterized by unexplained, persistent eosinophilia associated with multiple organ dysfunction due to eosinophilic tissue infiltration.</sentence>
+<sentence id="S3">In the absence of karyotypic abnormalities, there is no specific test to detect clonal eosinophilia in <coref ref="C2" type="IDENT" id="C3">IHES</coref>.</sentence>
+<sentence id="S4">Analysis of X-chromosome inactivation patterns can be used to determine whether proliferative disorders are clonal in origin.</sentence>
+<sentence id="S5">Methylation of HpaII and Hha I sites near the polymorphic trinucleotide repeat of the human androgen receptor gene (HUMARA) has been shown to correlate with <coref id="C4">X-inactivation</coref>.</sentence>
+<sentence id="S6">In this study, we have used the polymerase chain reaction (PCR) with nested primers to analyze X-inactivation patterns of the HUMARA loci in purified eosinophils from female patients with eosinophilia.</sentence>
+<sentence id="S7"><coref min="eosinophils" id="C5">Peripheral blood eosinophils</coref> were isolated by <coref ref="C5" type="PRON" id="C6">their</coref> autofluoresence using flow cytometric sorting.</sentence>
+<sentence id="S8">Eosinophils purified from <coref min="patient" id="C7">a female patient presenting with <coref ref="C3" type="IDENT" id="C8">IHES</coref></coref> were found to show a clonal pattern of <coref ref="C4" type="IDENT" id="C9">X-inactivation</coref>.</sentence>
+<sentence id="S9">Eosinophil-depleted leukocytes from <coref ref="C7" min="patient" type="IDENT" id="C10">this patient</coref> were polyclonal by <coref min="analysis" id="C11">HUMARA analysis</coref>, thus excluding skewedness of random X-inactivation.</sentence>
+<sentence id="S10">After corticosteroid suppression of <coref ref="C10" type="PRON" id="C12">her</coref> blood eosinophilia, a clonal population of eosinophils could no longer be detected in purified eosinophils.</sentence>
+<sentence id="S11">In contrast, eosinophils purified from a patient with Churg-Strauss syndrome and from six patients with <coref min="eosinophilias" id="C13">reactive eosinophilias</coref> attributed to allergy, parasitic infection, or drug reaction showed a polyclonal pattern of <coref ref="C9" type="IDENT" id="C14">X-inactivation</coref> by <coref ref="C11" min="analysis" type="IDENT" id="C15">HUMARA analysis</coref>.</sentence>
+<sentence id="S12">The finding of clonal eosinophilia in <coref ref="C10" min="patient" type="IDENT" id="C16">a patient presenting with <coref ref="C8" type="IDENT" id="C17">IHES</coref></coref> indicates that such patients may have, in reality, <coref min="disorder" id="C18">a low-grade clonal disorder</coref> <coref ref="C18" type="RELAT" id="C19">that</coref> can be distinguished from <coref ref="C13" min="eosinophilias" type="IDENT" id="C20">reactive eosinophilias</coref> by <coref ref="C15" min="analysis" type="IDENT" id="C21">HUMARA analysis</coref>.</sentence>
+<sentence id="S13">Further, the method described can be used to monitor disease progression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

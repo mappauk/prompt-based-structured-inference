@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10025668">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10025668</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="markers" id="C1">Osteoclast markers</coref> accumulate on cells developing from human peripheral blood mononuclear precursors.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Recent studies show that <coref min="osteoclasts" id="C2">human osteoclasts</coref> develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.</sentence>
+<sentence id="S3">Here, we report that <coref min="cells" id="C3">cells expressing <coref ref="C1" min="markers" type="IDENT" id="C4">osteoclast markers</coref></coref> differentiate from precursors present in nonmobilized peripheral blood mononuclear cells (PBMC), without the addition of stromal cells, growth factors, cytokines or steroids; and characterize <coref ref="C3" type="PRON" id="C5">their</coref> phenotype.</sentence>
+<sentence id="S4">Three days after establishing high-density PBMC cultures (1.5 x 10(6) cells/cm2), in serum-containing medium, <coref min="colonies" id="C6">small adherent colonies of tartrate resistant acid phosphatase positive (TRAP+) cells</coref> emerge, amidst massive monocyte cell death.</sentence>
+<sentence id="S5"><coref ref="C6" min="cells" type="IDENT" id="C7">These adherent cells</coref> have an eccentrically placed, round nucleus, and express low levels of TRAP and sodium fluoride-resistant- alpha-naphthyl-acetate-esterase (NaF-R-NSE).</sentence>
+<sentence id="S6">Over the next week, this cell population accumulates phenotypic markers of <coref ref="C2" type="IDENT" id="C8">osteoclasts</coref> (vitronectin receptor [VR], calcitonin receptor, TRAP, cathepsin K protein, and mRNA) with increased nuclearity, covering the entire surface by 15 days.</sentence>
+<sentence id="S7">When cultured on bone, VR+, TRAP+ cells of low multinuclearity appear and cover up to 50% of the surface.</sentence>
+<sentence id="S8"><coref min="lacunae" id="C9">Resorption lacunae</coref> can be observed by day 22.</sentence>
+<sentence id="S9">Although <coref ref="C9" min="pits" type="IDENT" id="C10">these pits</coref> are not nearly as numerous as the cells of preosteoclast phenotype, <coref ref="C10" type="PRON" id="C11">they</coref> do represent <coref min="activity" id="C12">the activity of a subset of osteoclast-like cells</coref> <coref ref="C12" type="RELAT" id="C13">that</coref> has achieved osteoclastic maturity under these culture conditions.</sentence>
+<sentence id="S10">Transcripts for <coref min="ligand" id="C14">osteoprotegerin ligand (OPGL)</coref>, <coref ref="C14" min="factor" type="APPOS" id="C15">an osteoclast differentiation factor (also known as RANKL and TRANCE)</coref> are expressed, likely by <coref ref="C7" min="cells" type="IDENT" id="C16">adherent cells</coref>.</sentence>
+<sentence id="S11">Thus, <coref min="population" id="C17">an adherent population of cells, with preosteoclast/osteoclast phenotypic properties</coref>, arises selectively under simple culture conditions from normal PBMC.</sentence>
+<sentence id="S12">Further characterization of <coref ref="C17" min="cells" type="IDENT" id="C18">these cells</coref> should identify factors involved in the growth, terminal differentiation and activation of <coref ref="C8" type="IDENT" id="C19">osteoclasts</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

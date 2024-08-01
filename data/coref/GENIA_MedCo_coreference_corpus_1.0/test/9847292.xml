@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9847292">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9847292</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Interleukin-10 and transforming growth factor-beta promoter polymorphisms in <coref id="C1"><coref id="C2">allergies</coref> and <coref id="C3">asthma</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C4">Interleukin-10 (IL-10) and transforming growth factor beta (TGF-beta)</coref> are inhibitory for B and T cells, IgE production, and mast cell proliferation, and <coref ref="C4" type="PRON" id="C5">they</coref> induce apoptosis in eosinophils.</sentence>
+<sentence id="S3"><coref ref="C4" min="cytokines" type="IDENT" id="C6">These cytokines</coref> are therefore <coref min="genes" id="C7">candidate genes</coref> <coref ref="C7" type="RELAT" id="C8">which</coref> could contribute to the development of <coref ref="C3" type="IDENT" id="C9">asthma</coref> or <coref ref="C2" type="IDENT" id="C10">allergies</coref>.</sentence>
+<sentence id="S4">We investigated <coref id="C11">the hypothesis</coref> <coref ref="C11" type="RELAT" id="C12">that</coref> polymorphic nucleotides within the IL-10 and TGF-beta gene promoters would link to the expression of <coref ref="C1" type="IDENT" id="C13"><coref ref="C10" type="IDENT" id="C14">allergies</coref> and <coref ref="C9" type="IDENT" id="C15">asthma</coref></coref>.</sentence>
+<sentence id="S5">DNA taken from families with an asthmatic proband was examined for base exchanges by single-stranded conformational polymorphism (SSCP).</sentence>
+<sentence id="S6">We demonstrated the presence of a polymorphism in the promoter region of the IL-10 gene and four in the TGF-beta gene promoters (3 in TGF-beta1 and 1 in TGF-beta2).</sentence>
+<sentence id="S7"><coref min="polymorphism" id="C16">The IL-10 gene polymorphism</coref> was a C-to-A exchange 571 base pairs upstream from the translation start site and was present between consensus binding sequences for Sp1 and elevated total serum.</sentence>
+<sentence id="S8"><coref ref="C16" min="polymorphism" type="IDENT" id="C17">This polymorphism</coref> was associated with elevated total serum IgE in subjects heterozygotic or homozygotic for this base exchange (p &lt; 0.009).</sentence>
+<sentence id="S9">The base exchange at -509 (from the transcription initiation site) in the TGF-beta promoter also linked to elevated total IgE (p &lt; 0.01).</sentence>
+<sentence id="S10"><coref ref="C17" min="polymorphism" type="IDENT" id="C18">This polymorphism</coref> represented <coref min="exchange" id="C19">a C-to-T base exchange</coref> <coref ref="C19" type="RELAT" id="C20">which</coref> induced a YY1 consensus sequence and is present in a region of the promoter associated with negative transcription regulation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

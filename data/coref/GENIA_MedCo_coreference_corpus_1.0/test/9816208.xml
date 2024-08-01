@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9816208">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9816208</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Lack of T-cell-mediated recognition of <coref min="region" id="C3">the fusion region of <coref min="protein" id="C1">the pml/RAR-alpha hybrid protein</coref></coref> by lymphocytes of <coref min="patients" id="C5">acute promyelocytic leukemia patients</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">In previous studies, it was shown that <coref ref="C3" min="region" type="IDENT" id="C4">the fusion region of <coref ref="C1" min="protein" type="IDENT" id="C2">the pml/RAR-alpha protein</coref></coref>, expressed by acute promyelocytic leukemia (APL) cells, can be specifically recognized in vitro by donor (D. E.) CD4 T cells in a HLA class II DR11-restricted fashion.</sentence>
+<sentence id="S3">We present here the results on the recognition of several pml/RAR-alpha peptides by <coref ref="C5" min="patients" type="OTHER" id="C6">APL patients expressing HLA DR11</coref>.</sentence>
+<sentence id="S4">The in vitro immunization of peripheral blood lymphocytes from <coref min="patients" id="C15">four patients in remission (S. R., F. R., M. M., P. G.) with <coref id="C7">BCR1/25</coref>, <coref ref="C7" type="APPOS" id="C8">a 25-mer pml/RAR-alpha</coref></coref>, did not elicit either a polyclonal or a clonal immune response specific to <coref ref="C7" type="IDENT" id="C9">the peptide</coref>.</sentence>
+<sentence id="S5">We then generated <coref min="clones" id="C10">new donor anti-pml/RAR-alpha CD4(+) T-cell clones</coref>.</sentence>
+<sentence id="S6"><coref ref="C10" type="IDENT" id="C11">These clones</coref> were tested for <coref ref="C11" type="PRON" id="C12">their</coref> recognition of <coref ref="C7" type="IDENT" id="C13">BCR1/25</coref>.</sentence>
+<sentence id="S7"><coref min="clone" id="C18">One clone (C3/5, CD3(+), CD4(+), CD8(-))</coref> was selected for further analysis.</sentence>
+<sentence id="S8"><coref ref="C18" type="OTHER" id="C19">Clone C3/5</coref> showed specific proliferation, cytotoxicity, and cytokine (tumor necrosis factor alpha, granulocyte-macrophage colony-stimulating factor) production when challenged with autologous lymphoblastic cell lines pulsed with <coref ref="C13" type="IDENT" id="C14">peptide BCR1/25</coref>.</sentence>
+<sentence id="S9">C3/5 cells developed specific proliferation and cytotoxicity when challenged with <coref ref="C14" type="IDENT" id="C28">peptide-</coref>pulsed lymphoblastic cell lines and peripheral blood lymphocytes from <coref ref="C15" min="patients" type="IDENT" id="C16">the four DR11(+) APL patients</coref>.</sentence>
+<sentence id="S10">APL blasts, available only from patients F. R. and P. G., were not lysed by <coref ref="C19" type="IDENT" id="C20">C3/5</coref> and were unable to present <coref ref="C14" type="IDENT" id="C17">peptide BCR1/25</coref>.</sentence>
+<sentence id="S11">Incubation of APL cells with IFN-gamma failed to induce <coref min="molecules" id="C22">HLA class II molecules</coref> and recognition by <coref ref="C19" type="IDENT" id="C21">the C3/5 clone</coref>.</sentence>
+<sentence id="S12">Since APL cells do not express <coref ref="C22" min="molecules" type="IDENT" id="C23">HLA class II molecules</coref>, we tested in <coref min="donors" id="C24">two donors (D. E. and C. H. R.)</coref> and in <coref min="patients" id="C26">patients S.R.and P.G</coref>.whether the use of 9-mer peptides (BCR1/9) would generate a CD8/HLA class I-restricted response.</sentence>
+<sentence id="S13">No <coref ref="C17" type="IDENT" id="C29">peptide-</coref>specific T-cell line or clone could be generated from <coref ref="C24" type="IDENT" id="C25">both donors</coref> and <coref ref="C26" type="IDENT" id="C27">patients</coref>.</sentence>
+<sentence id="S14">These findings are discussed in relation to possible therapeutic approaches to the immunotherapy of APL.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

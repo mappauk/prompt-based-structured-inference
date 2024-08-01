@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1492121">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1492121</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Activation of <coref id="C1">lymphokine genes</coref> in <coref id="C2">T cells</coref>: role of <coref min="elements" id="C3">cis-acting DNA elements</coref> <coref ref="C3" type="RELAT" id="C4">that</coref> respond to <coref ref="C2" type="IDENT" id="C5">T cell</coref> activation signals.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Activation of <coref ref="C5" type="IDENT" id="C6">T cells</coref> is initiated by the recognition of antigen on antigen presenting cells to exert the effector functions in immune and inflammatory responses.</sentence>
+<sentence id="S3"><coref min="types" id="C7">Two types of helper T cell (Th) clones (Th1 and Th2)</coref> are defined on the basis of different patterns of cytokine (lymphokine) secretion.</sentence>
+<sentence id="S4"><coref ref="C7" type="PRON" id="C8">They</coref> determine the outcome of an antigenic response toward humoral or cell-mediated immunity.</sentence>
+<sentence id="S5">Although <coref ref="C1" type="IDENT" id="C9">lymphokine genes</coref> are coordinately regulated upon antigen stimulation, <coref ref="C9" type="PRON" id="C10">they</coref> are regulated by <coref id="C11">the mechanisms</coref> common to all as well as <coref ref="C11" type="PRON" id="C12">those</coref> <coref ref="C12" type="RELAT" id="C13">which</coref> are unique to each gene.</sentence>
+<sentence id="S6">For <coref ref="C9" min="lymphokine genes" type="OTHER" id="C14">most lymphokine genes</coref>, a combination of <coref id="C15"><coref id="C16">phorbol esters (phorbol 12-myristate 13 acetate, PMA)</coref> and <coref id="C17">calcium ionophores (A23187)</coref></coref> is required for <coref ref="C14" type="PRON" id="C18">their</coref> maximal induction.</sentence>
+<sentence id="S7">Yet <coref ref="C16" type="IDENT" id="C19">phorbol ester</coref> alone or <coref ref="C17" type="IDENT" id="C20">calcium ionophore</coref> alone produce several lymphokines.</sentence>
+<sentence id="S8">The production of <coref id="C21">the granulocyte-macrophage colony stimulating factor (GM-CSF)</coref> is completely dependent on <coref ref="C15" min="signals" type="OTHER" id="C22">the two signals</coref>.</sentence>
+<sentence id="S9">We have previously found <coref min="region" id="C23">a cis-acting region spanning the <coref ref="C21" type="IDENT" id="C24">GM-CSF</coref> promoter region (positions -95 to +27)</coref> <coref ref="C23" type="RELAT" id="C25">that</coref> confers inducibility to reporter genes in transient transfection assays.</sentence>
+<sentence id="S10">Further analysis identified three elements required for efficient induction, referred to as <coref id="C26">GM2</coref>, <coref id="C27">GC-box</coref> and <coref id="C28">conserved lymphokine element (CLE0)</coref>.</sentence>
+<sentence id="S11"><coref ref="C26" type="IDENT" id="C29">GM2</coref> defines a binding site for <coref id="C30">protein(s)</coref> <coref ref="C30" type="RELAT" id="C31">whose</coref> binding is inducible by <coref ref="C16" type="OTHER" id="C32">PMA</coref>.</sentence>
+<sentence id="S12"><coref min="protein" id="C33">One protein</coref>, <coref ref="C33" type="APPOS" id="C34">NF-GM2</coref> is similar to <coref id="C35">the transcription factor NF-kB</coref>.</sentence>
+<sentence id="S13"><coref ref="C27" type="IDENT" id="C36">GC-box</coref> is a binding site for constitutively bound proteins.</sentence>
+<sentence id="S14"><coref ref="C28" type="IDENT" id="C37">CLEO</coref> defines a binding site for <coref id="C38">protein(s)</coref> <coref ref="C38" type="RELAT" id="C39">whose</coref> optimum binding is stimulated by <coref ref="C32" type="IDENT" id="C40">PMA</coref> and <coref ref="C17" type="IDENT" id="C41">A23187</coref>.</sentence>
+<sentence id="S15"><coref min="viral trans-activators" id="C42">Viral trans-activators such as <coref id="C43">Tax (human T cell leukemia virus-1, HTLV-1) and E2 (bovine papilloma virus, BPV)</coref> proteins</coref> are <coref min="agents" id="C44">other agents</coref> <coref ref="C44" type="RELAT" id="C45">which</coref> activate <coref min="expression" id="C46"><coref ref="C9" type="IDENT" id="C47">lymphokine gene</coref> expression</coref> by bypassing <coref min="signaling" id="C48">T cell receptor (TCR) mediated signaling</coref>.</sentence>
+<sentence id="S16">The trans-activation domain of <coref ref="C43" type="IDENT" id="C49">E2 and Tax</coref> is interchangeable although <coref ref="C49" type="PRON" id="C50">they</coref> have no obvious sequence homology between <coref ref="C49" type="PRON" id="C51">them</coref>.</sentence>
+<sentence id="S17"><coref ref="C42" type="IDENT" id="C52">The viral trans-activators</coref> appear to target specific DNA binding protein such as <coref ref="C35" type="IDENT" id="C53">NF-kB</coref> and Sp1 to <coref ref="C3" min="site" type="OTHER" id="C54">cis-acting DNA site</coref> and promote <coref ref="C46" min="expression" type="IDENT" id="C55"><coref ref="C47" type="IDENT" id="C56">lymphokine gene</coref> expression</coref> without <coref ref="C48" min="stimulation" type="OTHER" id="C57">TCR-mediated stimulation</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

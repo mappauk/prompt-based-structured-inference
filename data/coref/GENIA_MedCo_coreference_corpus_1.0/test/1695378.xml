@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1695378">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1695378</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Complementary DNA encoding <coref id="C1">the human T-cell FK506-binding protein</coref>, <coref ref="C1" type="APPOS" id="C2">a peptidylprolyl cis-trans isomerase distinct from <coref id="C3">cyclophilin</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The recently discovered <coref ref="C1" type="IDENT" id="C4">macrolide FK506</coref> has been demonstrated to have potent immunosuppressive activity at concentrations 100-fold lower than <coref id="C5">cyclosporin A</coref>, <coref ref="C5" type="APPOS" id="C6"><coref id="C7">a cyclic undecapeptide</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> is used to prevent rejection after transplantation of bone marrow and organs, such as kidney, heart, and liver</coref>.</sentence>
+<sentence id="S3">After <coref id="C9">the recent discovery</coref> <coref ref="C9" type="RELAT" id="C10">that</coref> <coref ref="C3" type="IDENT" id="C11">the cyclosporin A-binding protein cyclophilin</coref> is identical to <coref ref="C2" type="IDENT" id="C12">peptidylprolyl cis-trans isomerase</coref>, a cellular binding protein for FK506 was found to be distinct from <coref ref="C11" type="IDENT" id="C13">cyclophilin</coref> but to have the same enzymatic activity.</sentence>
+<sentence id="S4">In this study, we isolated <coref id="C14">a cDNA coding for <coref id="C15">FK506-binding protein (FKBP)</coref> from human peripheral blood T cells</coref> by using mixed 20-mer oligonucleotide probes synthesized on the basis of the sequence, Glu-Asp-Gly-Lys-Lys-Phe-Asp, reported for <coref id="C16">bovine FKBP</coref>.</sentence>
+<sentence id="S5"><coref ref="C14" type="IDENT" id="C17">The DNA</coref> isolated contained an open reading frame encoding 108 amino acid residues.</sentence>
+<sentence id="S6"><coref min="residues" id="C18">The first 40 residues</coref> of <coref id="C19">the deduced amino acid sequence</coref> were identical to <coref ref="C18" type="PRON" id="C20">those</coref> of the reported amino-terminal sequence of <coref ref="C16" type="IDENT" id="C21">bovine FKBP</coref>, indicating that the DNA sequence isolated represents the gene coding for <coref ref="C15" type="IDENT" id="C22">FKBP</coref>.</sentence>
+<sentence id="S7">Computer-assisted analysis of <coref ref="C19" min="sequence" type="IDENT" id="C23">the deduced amino acid sequence</coref> indicates that <coref ref="C22" type="IDENT" id="C24">FKBP</coref> exhibits no internal homology and does not have significant sequence similarity to any other amino acid sequences of known proteins, including <coref ref="C13" type="IDENT" id="C25">cyclophilin</coref>.</sentence>
+<sentence id="S8">This result suggests that <coref id="C26">two catalytically similar proteins</coref>, <coref ref="C26" type="APPOS" id="C27">cyclophilin and FKBP</coref>, evolved independently.</sentence>
+<sentence id="S9">In Northern blot analysis, mRNA species of <coref id="C28">approximately 1.8 kilobases</coref> <coref ref="C28" type="RELAT" id="C29">that</coref> hybridized with <coref ref="C14" type="IDENT" id="C30">human FKBP cDNA</coref> were detected in poly(A)+ RNAs from brain, lung, liver, and placental cells and leukocytes.</sentence>
+<sentence id="S10">Induction of Jurkat leukemic T cells with phorbol 12-myristate 13-acetate and ionomycin did not affect the level of FKBP mRNA.</sentence>
+<sentence id="S11">Southern blot analysis of human genomic DNA digested with different restriction enzymes suggests the existence of only a few copies of the DNA sequence encoding <coref ref="C24" type="IDENT" id="C31">FKBP</coref>.</sentence>
+<sentence id="S12">This is in contrast to <coref id="C32">the result</coref> <coref ref="C32" type="RELAT" id="C33">that</coref> as many as 20 copies of <coref ref="C25" type="IDENT" id="C34">the cyclophilin gene</coref> and possible pseudogenes may be present in the mammalian genome.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

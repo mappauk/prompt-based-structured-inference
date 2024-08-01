@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9190901">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9190901</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1"><coref id="C2">ETS1</coref>, <coref id="C3">NFkappaB</coref> and <coref id="C4">AP1</coref></coref> synergistically transactivate the human GM-CSF promoter.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Activation of helper T cells results in coordinate expression of a number of cytokines involved in differentiation, proliferation and activation of the haematopoietic system.</sentence>
+<sentence id="S3"><coref id="C5">Granulocyte-macrophage colony stimulating factor (GM-CSF)</coref> is one such cytokine, <coref ref="C5" min="factor" type="RELAT" id="C6">whose</coref> increased expression results mostly from increases in transcription.</sentence>
+<sentence id="S4">Cis-acting elements with <coref ref="C3" type="IDENT" id="C7">NFkappaB</coref>, <coref ref="C4" type="IDENT" id="C8">AP1</coref> and ETS-like binding motifs have been identified in the promoter region of the GM-CSF gene, and are important or essential for transcriptional activity following <coref min="activation" id="C9">T cell activation</coref>.</sentence>
+<sentence id="S5"><coref ref="C2" type="IDENT" id="C10">ETS1</coref> is <coref ref="C10" min="transcription factor" type="IDENT" id="C11">a transcription factor of the ETS family</coref> <coref ref="C11" type="RELAT" id="C12">that</coref> is expressed in <coref min="cells" id="C13">T cells</coref>.</sentence>
+<sentence id="S6">We have previously shown that <coref type="IDENT" id="C14">ETS1</coref> can transactivate <coref ref="C5" type="IDENT" id="C15">GM-CSF</coref> in <coref ref="C13" min="cells" type="IDENT" id="C16">Jurkat T cells</coref>, but only after <coref ref="C16" type="IDENT" id="C17">the cells</coref> have been stimulated by treatment with <coref id="C18">PMA and ionomycin</coref>, <coref ref="C18" type="APPOS" id="C19"><coref id="C20">agents</coref> <coref ref="C20" type="RELAT" id="C21">that</coref> mimic <coref ref="C9" min="activation" type="IDENT" id="C22">T cell activation</coref></coref>.</sentence>
+<sentence id="S7">Thus we proposed that <coref ref="C14" type="IDENT" id="C23">ETS1</coref>, <coref ref="C23" type="RELAT" id="C24">which</coref> is expressed constitutively in <coref ref="C17" min="cells" type="IDENT" id="C25">Jurkat cells</coref>, may act in concert with PMA/ionomycin inducible factors.</sentence>
+<sentence id="S8">Here we show that <coref ref="C23" type="IDENT" id="C26">ETS1</coref> can transactivate a GM-CSF reporter construct in unstimulated Jurkat cells, providing that either NFkappaB or AP1 transcription factors are supplied by co-transfection.</sentence>
+<sentence id="S9">We confirm that binding of endogenous NFkappaB and AP1 is induced following PMA/ionomycin treatment of <coref ref="C25" min="cells" type="IDENT" id="C27">T cells</coref>.</sentence>
+<sentence id="S10">Transactivation by <coref ref="C1" type="IDENT" id="C28"><coref ref="C26" type="IDENT" id="C29">ETS1</coref>, <coref ref="C7" type="IDENT" id="C30">NFkappaB</coref> and <coref ref="C8" type="IDENT" id="C31">AP1</coref></coref> is synergistic, and mutation of the individual binding sites reveals that the transcriptional activities of <coref ref="C28" min="factors" type="IDENT" id="C32">these factors</coref> are interdependent.</sentence>
+<sentence id="S11">Our results suggest that constitutive ETS1, and inducible NFkappaB and AP1, cooperate as part of a higher order transcriptional complex in activated T cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

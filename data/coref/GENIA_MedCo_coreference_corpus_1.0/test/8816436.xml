@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8816436">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8816436</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Cell-type-specific regulation of <coref id="C29">the human tumor necrosis factor alpha gene</coref> in <coref id="C6">B cells</coref> and <coref id="C11">T cells</coref> by <coref id="C13">NFATp</coref> and ATF-2/JUN.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C29" id="C1">The human tumor necrosis factor alpha (TNF-alpha) gene</coref> is one of the earliest genes transcribed after <coref min="stimulation" id="C4">the stimulation of <coref id="C3">a B cell</coref> through <coref ref="C3" type="PRON" id="C2">its</coref> antigen receptor or via the CD-40 pathway</coref>.</sentence>
+<sentence id="S3">In <coref ref="C4" type="IDENT" id="C5">both cases</coref>, induction of TNF-alpha gene transcription can be blocked by <coref id="C8">the immunosuppressants cyclosporin A and FK506</coref>, <coref ref="C8" type="RELAT" id="C9">which</coref> suggested a role for the NFAT family of proteins in the regulation of <coref ref="C1" type="IDENT" id="C10">the gene</coref> in <coref ref="C6" type="IDENT" id="C7">B cells</coref>.</sentence>
+<sentence id="S4">Furthermore, in <coref ref="C11" type="IDENT" id="C12">T cells</coref>, two molecules of <coref ref="C13" type="IDENT" id="C14">NFATp</coref> bind to the TNF-alpha promoter element kappa 3 in association with <coref min="proteins" id="C20">ATF-2 and Jun proteins bound to an immediately adjacent cyclic AMP response element (CRE) site</coref>.</sentence>
+<sentence id="S5">Here, using <coref min="a20" id="C15">the murine B-cell lymphoma cell line A20</coref>, we show that <coref ref="C1" type="IDENT" id="C16">the TNF-alpha gene</coref> is regulated in a cell-type-specific manner.</sentence>
+<sentence id="S6">In <coref ref="C15" type="IDENT" id="C17">A20 B cells</coref>, <coref ref="C16" type="IDENT" id="C18">the TNF-alpha gene</coref> is not regulated by <coref ref="C14" min="nfatp" type="IDENT" id="C19">NFATp bound to the kappa 3 element</coref>.</sentence>
+<sentence id="S7">Instead, <coref ref="C20" min="proteins" type="IDENT" id="C21">ATF-2 and Jun proteins</coref> bind to the composite kappa 3/CRE site and <coref ref="C14" type="IDENT" id="C22">NFATp</coref> binds to <coref min="site" id="C23">a newly identified second NFAT site centered at -76 nucleotides relative to the TNF-alpha transcription start site</coref>.</sentence>
+<sentence id="S8"><coref ref="C23" min="site" type="IDENT" id="C24">This new site</coref> plays a critical role in the calcium-mediated, cyclosporin A-sensitive induction of <coref ref="C16" type="IDENT" id="C25">TNF-alpha</coref> in both <coref ref="C17" type="IDENT" id="C26">A20 B cells</coref> and Ar-5 cells.</sentence>
+<sentence id="S9">Consistent with these results, quantitative DNase footprinting of the TNF-alpha promoter using increasing amounts of recombinant NFATp demonstrated that the -76 site binds to <coref ref="C22" type="IDENT" id="C27">NFATp</coref> with a higher affinity than the kappa 3 site.</sentence>
+<sentence id="S10">Two other previously unrecognized NFATp-binding sites in the proximal TNF-alpha promoter were also identified by this analysis.</sentence>
+<sentence id="S11">Thus, through the differential use of the same promoter element, the composite kappa 3/CRE site, <coref ref="C18" type="IDENT" id="C28">the TNF-alpha gene</coref> is regulated in a cell-type-specific manner in response to the same extracellular signal.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

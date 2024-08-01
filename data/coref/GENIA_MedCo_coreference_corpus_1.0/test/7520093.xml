@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7520093">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7520093</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Upregulation of <coref id="C2">bcl-2</coref></coref> by <coref id="C3">the Epstein-Barr virus latent membrane protein LMP1</coref>: <coref id="C4">a B-cell-specific response</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> is delayed relative to <coref id="C6">NF-kappa B activation</coref> and to induction of cell surface markers.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">An ability of <coref ref="C3" min="protein" type="IDENT" id="C7">the Epstein-Barr virus latent membrane protein LMP1</coref> to enhance the survival of infected B cells through <coref ref="C1" min="upregulation" type="IDENT" id="C8">upregulation of the bcl-2 oncogene</coref> was first suggested by experiments involving gene transfection and the selection of stable LMP1+ clones (S.Henderson, M. Rowe, C.Gregory, F.Wang, E.Kieff, and A.Rickinson, Cell 65:1107-1115, 1991).</sentence>
+<sentence id="S3">However, it was not possible to ascertain whether <coref ref="C8" min="upregulation" type="IDENT" id="C9">Bcl-2 upregulation</coref> was a specific consequence of <coref id="C10">LMP1 expression</coref> or <coref id="C11">an artifact of the selection procedure</coref> <coref ref="C11" type="RELAT" id="C12">whereby</coref> rare Bcl-2+ cells already present in the starting population might best be able to tolerate the potentially toxic effects of <coref ref="C7" type="IDENT" id="C13">LMP1</coref>.</sentence>
+<sentence id="S4">We therefore reexamined this issue by using <coref id="C14">two different experimental approaches</coref> <coref ref="C14" type="RELAT" id="C15">that</coref> allowed LMP1- induced effects to be monitored immediately following <coref ref="C10" min="expression" type="IDENT" id="C16">expression of <coref ref="C13" type="IDENT" id="C17">the viral protein</coref></coref> and in the absence of selective pressures; <coref min="activation" id="C18">activation of the NF-kappa B transcription factor and upregulation of the cell adhesion molecule ICAM-1</coref> were used as early indices of LMP1 function.</sentence>
+<sentence id="S5">In the first approach, <coref id="C19">stable clones of two B-cell lines</coref> carrying <coref ref="C13" type="IDENT" id="C20">an LMP1 gene</coref> under the control of an inducible metallothionein promoter were induced to express <coref ref="C20" type="IDENT" id="C21">LMP1</coref> in <coref ref="C19" type="IDENT" id="C22">all cells</coref>.</sentence>
+<sentence id="S6"><coref ref="C18" type="IDENT" id="C23">Activation of <coref id="C24">NK-kappa B</coref> and upregulation of <coref id="C25">ICAM-1</coref></coref> occurred within 24 h and were followed at 48 to 72 h by <coref ref="C9" min="upregulation" type="IDENT" id="C26">upregulation of <coref ref="C2" type="IDENT" id="C27">Bcl-2</coref></coref>.</sentence>
+<sentence id="S7">In the second approach, we tested the generality of this phenomenon by transiently expressing <coref ref="C21" type="IDENT" id="C28">LMP1</coref> from a strong constitutively active promoter in <coref id="C29">a range of different cell types</coref>.</sentence>
+<sentence id="S8"><coref ref="C29" min="B-cell lines" type="IDENT" id="C30">All six B-cell lines</coref> tested showed <coref ref="C6" min="activation" type="IDENT" id="C31">NF-kappa B activation</coref> in response to <coref ref="C10" min="expression" type="IDENT" id="C32">LMP1 expression</coref>, and this was followed in five of <coref ref="C30" min="lines" type="IDENT" id="C33">six lines</coref> by expression of <coref ref="C25" type="IDENT" id="C34">ICAM-1</coref> and <coref ref="C27" type="IDENT" id="C35">Bcl-2</coref>.</sentence>
+<sentence id="S9">In the same experiments, all three non-B-cell lines showed <coref ref="C23" type="IDENT" id="C36">NF-kappa B activation and ICAM-1 upregulation</coref> but never any effect upon <coref ref="C35" type="IDENT" id="C37">Bcl-2</coref>.</sentence>
+<sentence id="S10">We therefore conclude that <coref ref="C26" min="upregulation" type="IDENT" id="C38">Bcl-2 upregulation</coref> is part of the panoply of cellular changes induced by <coref ref="C28" type="IDENT" id="C39">LMP1</coref> but that the effect is cell type specific.</sentence>
+<sentence id="S11">Our data also suggest that whilst <coref ref="C24" type="IDENT" id="C40">NF-kappa B</coref> may be an essential component of LMP1 signal transduction, other cell-specific factors may be required to effect some functions of <coref ref="C17" min="protein" type="IDENT" id="C41">the viral protein</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

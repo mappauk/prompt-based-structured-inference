@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1740663">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1740663</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Induction of <coref min="differentiation" id="C1">monocytic differentiation</coref> and NF-kappa B-like activities by <coref min="infection" id="C2">human immunodeficiency virus 1 infection</coref> of <coref min="cells" id="C3">myelomonoblastic cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The effects of <coref ref="C2" min="infection" type="IDENT" id="C4">human immunodeficiency virus 1 (HIV-1) infection</coref> on cellular differentiation and <coref min="binding activity" id="C5">NF-kappa B DNA binding activity</coref> have been investigated in a new model of myeloid differentiation.</sentence>
+<sentence id="S3"><coref min="cells" id="C6">PLB-985 cells</coref> represent a bipotential myelomonoblastic cell population capable of either granulocytic or <coref ref="C1" min="differentiation" type="IDENT" id="C7">monocytic differentiation</coref> after induction with appropriate inducers.</sentence>
+<sentence id="S4">By virtue of the presence of CD4 on the cell surface, <coref ref="C6" min="cells" type="IDENT" id="C8">PLB-985 cells</coref> were chronically infected with HIV-1 strain IIIB.</sentence>
+<sentence id="S5"><coref min="cells" id="C9">PLB-IIIB cells</coref> clearly possessed a more <coref min="phenotype" id="C10">monocytic phenotype</coref> than the parental myeloblasts, as determined by differential staining, increased expression of the myeloid-specific surface markers, and transcription of the c-fms proto-oncogene.</sentence>
+<sentence id="S6"><coref ref="C5" min="binding activity" type="OTHER" id="C11">NF-kappa B binding activity</coref> was inducible by tumor necrosis factor and phorbol myristate acetate in <coref ref="C8" type="IDENT" id="C12">PLB-985</coref>.</sentence>
+<sentence id="S7">However, in <coref ref="C9" min="cells" type="IDENT" id="C13">PLB-IIIB cells</coref>, constitutive expression of a novel NF-kappa B complex was detected, composed of <coref min="proteins" id="C14">proteins ranging between 70 and 110 kD</coref>.</sentence>
+<sentence id="S8"><coref ref="C14" type="IDENT" id="C15">These proteins</coref> interacted specifically with the symmetric NF-kappa B site from the interferon beta (IFN-beta) promoter.</sentence>
+<sentence id="S9">Mutations affecting the 5' guanine residues of the kappa B site were unable to compete for <coref ref="C15" min="proteins" type="IDENT" id="C16">these NF-kappa B-related proteins</coref>.</sentence>
+<sentence id="S10">Inducibility of endogenous IFN-beta and IFN-alpha RNA was also increased in <coref ref="C13" min="cells" type="IDENT" id="C17">PLB-IIIB cells</coref>.</sentence>
+<sentence id="S11">These studies indicate that <coref ref="C4" min="infection" type="IDENT" id="C18">HIV-1 infection</coref> of <coref ref="C3" min="cells" type="IDENT" id="C19">myelomonoblastic cells</coref> may select for a more mature <coref ref="C10" min="phenotype" type="IDENT" id="C20">monocytic phenotype</coref> and that unique subunit associations of NF-kappa B DNA binding proteins may contribute to differential NF-kappa B-mediated gene expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10384094">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10384094</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Cutting edge: expression of <coref id="C1">the NF of activated T cells</coref> in <coref id="C2">eosinophils</coref>: regulation by <coref id="C3">IL-4 and IL-5</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We report that <coref id="C4">NF-AT1 and NF-AT4</coref> are expressed cytoplasmically in <coref min="eosinophils" id="C5">resting eosinophils</coref>, whereas NF-AT2 and NF-AT3 have not been seen.</sentence>
+<sentence id="S3">Likewise, <coref id="C6">NF-AT1 mRNA and NF-AT4 mRNA</coref> have been detected in <coref ref="C5" min="eosinophils" type="IDENT" id="C7">resting eosinophils</coref>, and <coref ref="C6" type="PRON" id="C8">their</coref> levels can be significantly up-regulated by <coref ref="C3" type="IDENT" id="C9">the Th2-associated cytokines IL-4 and IL-5</coref>.</sentence>
+<sentence id="S4">There is no detectable NF-AT protein expression in the nuclei of <coref ref="C7" min="eosinophils" type="IDENT" id="C10">resting eosinophils</coref>.</sentence>
+<sentence id="S5">However <coref ref="C1" type="IDENT" id="C11">NF-ATs</coref> appear in the nuclei of IL-4-, IL-5-, or ionomycin-stimulated eosinophils.</sentence>
+<sentence id="S6">Only <coref ref="C4" type="IDENT" id="C12">NF-AT1 and NF-AT4</coref>, but not NF-AT2 and NF-AT3, have translocated into the nuclei in IL-4- or IL-5-stimulated eosinophils.</sentence>
+<sentence id="S7"><coref min="findings" id="C13">These findings</coref> delineate <coref min="pathway" id="C14">a novel pathway in the cytokine network</coref> in <coref ref="C14" type="RELAT" id="C15">which</coref> <coref min="lymphocytes" id="C16">Th2 lymphocytes</coref> "control" <coref ref="C2" type="IDENT" id="C17">eosinophils</coref> via the release of <coref ref="C9" type="IDENT" id="C18">IL-4 and IL-5</coref>, and activation of <coref ref="C11" type="IDENT" id="C19">NF-AT</coref> in <coref ref="C17" type="IDENT" id="C20">eosinophils</coref>.</sentence>
+<sentence id="S8"><coref ref="C13" type="IDENT" id="C21">The findings</coref> also suggest that a later feedback "talking" may exist between <coref ref="C20" type="IDENT" id="C22">eosinophils</coref> and <coref ref="C16" min="lymphocytes" type="IDENT" id="C23">Th2 lymphocytes</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

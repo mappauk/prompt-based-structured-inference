@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8769650">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8769650</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Sequence-specific DNA binding of <coref id="C3">the B-cell-specific coactivator OCA-B</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">B-cell-specific transcription of immunoglobulin genes is mediated by the interaction of <coref min="domain" id="C5">a POU domain containing <coref id="C1">transcription factor Oct-1</coref> or <coref id="C2">Oct-2</coref></coref>, with <coref ref="C3" type="IDENT" id="C19">the B-cell-specific coactivator OCA-B (Bob-1, OBF-1)</coref> and <coref min="element" id="C20">a prototype octamer element</coref>.</sentence>
+<sentence id="S3">We find that <coref ref="C19" type="IDENT" id="C4">OCA-B</coref> binds DNA directly in the major groove between the two subdomains of <coref ref="C5" min="domain" type="IDENT" id="C6">the POU domain</coref>, requiring both an A at the fifth position of the octamer element and contact with <coref ref="C6" min="domain" type="IDENT" id="C7">the POU domain</coref>.</sentence>
+<sentence id="S4">An amino-terminal fragment of <coref ref="C4" type="IDENT" id="C8">OCA-B</coref> binds <coref id="C22">the octamer site</coref> in the absence of a POU domain with the same sequence specificity.</sentence>
+<sentence id="S5"><coref ref="C8" type="IDENT" id="C9">Coactivator OCA-B</coref> may undergo <coref min="change" id="C10">a POU-dependent conformational change</coref> <coref ref="C10" type="RELAT" id="C11">that</coref> exposes <coref ref="C9" type="PRON" id="C12">its</coref> amino terminus, allowing <coref ref="C9" type="PRON" id="C13">it</coref> to recognize specific DNA sequences in the major groove within the binding site for <coref ref="C1" type="IDENT" id="C14">Oct-1</coref> or <coref ref="C2" type="IDENT" id="C15">Oct-2</coref>.</sentence>
+<sentence id="S6">The recognition of both <coref ref="C7" type="IDENT" id="C17">the POU domain</coref> and the octamer sequence by <coref ref="C9" type="IDENT" id="C16">OCA-B</coref> provides a mechanism for differential regulation of octamer sites containing genes by <coref ref="C14" type="IDENT" id="C18">the ubiquitous factor Oct-1</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

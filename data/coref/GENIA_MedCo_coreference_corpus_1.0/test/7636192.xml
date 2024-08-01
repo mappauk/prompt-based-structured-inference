@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7636192">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7636192</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="signals" id="C1">Multiple signals</coref> are required for function of <coref min="promoter" id="C2">the human granulocyte-macrophage colony-stimulating factor gene promoter</coref> in <coref min="cells" id="C3">T cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="gene" id="C4">The human granulocyte-macrophage CSF (GM-CSF) gene</coref> is expressed in <coref ref="C3" min="cells" type="IDENT" id="C5">T cells</coref> in response to <coref min="activation" id="C6"><coref min="activation" id="C7">TCR activation</coref> <coref ref="C7" type="RELAT" id="C8">that</coref> can be mimicked by treatment of <coref ref="C5" type="IDENT" id="C9">the cells</coref> with PMA and Ca2+ ionophore</coref>.</sentence>
+<sentence id="S3"><coref ref="C4" type="IDENT" id="C10">The gene</coref> contains <coref ref="C2" min="region" type="IDENT" id="C11">a proximal functional promoter region (-620 to +34)</coref>, as well as <coref min="enhancer" id="C12">a powerful enhancer located 3 kb upstream</coref>, both of <coref ref="C11 C12" type="RELAT" id="C13">which</coref> are involved in the response of <coref ref="C10" type="IDENT" id="C14">the gene</coref> to <coref ref="C6" min="activation" type="IDENT" id="C15">TCR activation</coref>.</sentence>
+<sentence id="S4"><coref ref="C11" min="promoter" type="IDENT" id="C16">The proximal promoter</coref> contains <coref min="region" id="C17">a region termed CLEO (-54 to -31)</coref> <coref ref="C17" type="RELAT" id="C18">that</coref> consists of a purine-rich element abutting an activator protein-1 (AP-1)-like site, as well as <coref min="site" id="C19">an upstream nuclear factor-kappa B (NF-kappa B) site (-85 to -76)</coref> and a CK-1 element (-101 to -92).</sentence>
+<sentence id="S5">We show in this work that mutations in either the purine-rich region of the CLEO element or <coref ref="C19" min="site" type="IDENT" id="C20">the NF-kappa B site</coref> result in reduced PMA/Ca2+ activation of a 620-bp human GM-CSF promoter-luciferase reporter construct in Jurkat T cells by 65% and 50%, respectively.</sentence>
+<sentence id="S6"><coref min="complex" id="C21"><coref min="complex" id="C22">The major inducible protein complex</coref> <coref ref="C22" type="RELAT" id="C23">that</coref> binds to <coref min="element" id="C24">the human CLEO (hCLEO) element</coref></coref> is <coref min="complex" id="C25">an AP-1-like complex</coref> <coref ref="C25" type="RELAT" id="C26">that</coref> is inducible by <coref id="C27">PMA</coref> alone, but shows increased binding in response to <coref ref="C27" type="IDENT" id="C28">PMA</coref> together with <coref id="C29">Ca2+ ionophore</coref>.</sentence>
+<sentence id="S7">Although the binding of <coref ref="C21" min="complex" type="IDENT" id="C30">this complex</coref> is not cyclosporin-sensitive, promoter induction is inhibited by cyclosporin treatment.</sentence>
+<sentence id="S8">A second weak inducible complex resembling nuclear factor of activated T cells (NF-AT) was also observed binding to the hCLEO region.</sentence>
+<sentence id="S9">By using recombinant proteins, we confirmed that <coref min="complex" id="C31">AP-1, NF-ATp, and a higher order NF-ATp/AP-1 complex</coref> could all form with <coref ref="C24" min="element" type="IDENT" id="C32">the hCLEO element</coref>, and we have also defined the sequence requirements for binding of each of <coref ref="C31" min="complexes" type="IDENT" id="C33">these complexes</coref>.</sentence>
+<sentence id="S10">We found that expression of a constitutively active form of calcineurin could substitute for <coref ref="C29" type="IDENT" id="C34">Ca2+ ionophore</coref> and synergize with <coref ref="C28" type="IDENT" id="C35">PMA</coref> to activate <coref ref="C16" min="promoter" type="IDENT" id="C36">the GM-CSF promoter</coref>, and conversely that mutant-activated Ras could substitute for <coref ref="C35" type="IDENT" id="C37">PMA</coref> and cooperate with <coref ref="C34" type="IDENT" id="C38">Ca2+ ionophore</coref>.</sentence>
+<sentence id="S11">Co-expression of Ras and calcineurin, however, did not activate <coref ref="C36" min="promoter" type="IDENT" id="C39">the GM-CSF promoter</coref>, but required the additional expression of NF-kappa B p65.</sentence>
+<sentence id="S12">These results imply that <coref ref="C1" min="signals" type="IDENT" id="C40">at least three signals</coref> are required to activate <coref ref="C39" min="promoter" type="IDENT" id="C41">the GM-CSF proximal promoter</coref>, and that <coref ref="C40" type="IDENT" id="C42">the signals</coref> impinge on <coref min="transcription factors" id="C43">distinct transcription factors</coref> <coref ref="C43" type="RELAT" id="C44">that</coref> bind to the hCLEO and NF-kappa B regions of <coref ref="C41" type="IDENT" id="C45">the promoter</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

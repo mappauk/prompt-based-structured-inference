@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10037751">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10037751</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">T-cell expression of <coref min="gene" id="C1">the human GATA-3 gene</coref> is regulated by a non-lineage-specific silencer.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The GATA-3 transcription factor is required for development of the T-cell lineage and Th2 cytokine gene expression in CD4 T-cells.</sentence>
+<sentence id="S3">We have mapped <coref min="regions" id="C2">the DNase-I-hypersensitive (HS) regions of <coref ref="C1" min="gene" type="IDENT" id="C3">the human GATA-3 gene</coref> in <coref id="C4">T-cells</coref> and <coref id="C5">non-T-cells</coref></coref> and studied <coref ref="C2" type="PRON" id="C6">their</coref> transcriptional activities.</sentence>
+<sentence id="S4">HS I-III, located 5' from <coref min="site" id="C7">the transcriptional initiation site</coref>, were found in hematopoietic and non-hematopoietic cells, whereas HS IV-VII, located 3' from <coref ref="C7" min="site" type="IDENT" id="C8">the transcriptional start site</coref>, were exclusively observed in <coref ref="C4" type="IDENT" id="C9">T-cells</coref>.</sentence>
+<sentence id="S5">Among these hypersensitive sites, two transcriptional control elements were found, one in <coref min="intron" id="C10">the first intron of <coref ref="C3" min="gene" type="IDENT" id="C11">the GATA-3 gene</coref></coref> and the other between 8.3 and 5.9 kilobases 5' from <coref ref="C8" min="site" type="IDENT" id="C12">the GATA-3 transcriptional initiation site</coref>.</sentence>
+<sentence id="S6"><coref ref="C10" min="intron" type="IDENT" id="C13">The first intron</coref> acted as a strong transcriptional activator in a position-dependent manner and with no cell-type specificity.</sentence>
+<sentence id="S7">The upstream regulatory element could confer T-cell specificity to the GATA-3 promoter activity, and analysis of this region revealed <coref min="silencer" id="C14"><coref min="silencer" id="C15">a 707-base pair silencer</coref> <coref ref="C15" type="RELAT" id="C16">that</coref> drastically inhibited GATA-3 promoter activity in <coref ref="C5" type="IDENT" id="C17">non-T-cells</coref></coref>.</sentence>
+<sentence id="S8">Two CAGGTG E-boxes, located at the 5'- and 3'-ends of <coref ref="C14" type="IDENT" id="C18">the silencer</coref>, were necessary for this silencer activity.</sentence>
+<sentence id="S9">The 3'-CAGGTG E-box could bind USF proteins, <coref min="repressor" id="C19">the ubiquitous repressor ZEB</coref>, or the basic helix-loop-helix proteins E2A and HEB, and we showed that a competition between <coref ref="C19" type="IDENT" id="C20">ZEB</coref> and E2A/HEB proteins is involved in the silencer activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

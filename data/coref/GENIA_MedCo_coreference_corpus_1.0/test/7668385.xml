@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7668385">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7668385</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Nonradioactive quantification of glucocorticoid receptor expression during differentiation of <coref min="cells" id="C3">human monocytic cells (U937)</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We describe a method for relative quantification of specific mRNA using a nonradioactive assay based on DNA strand competition between identical sequences of biotin- and fluorescein-labeled amplicon (probe) and unlabeled amplicon (target) during hybridization.</sentence>
+<sentence id="S3">As <coref min="quantity" id="C1">the target quantity</coref> increased, <coref ref="C1" type="PRON" id="C2">that</coref> of the double-labeled probe decreased in accordance with the mass action law.</sentence>
+<sentence id="S4">This technique was successfully applied to evaluate differences in glucocorticoid receptor expression in <coref ref="C3" type="IDENT" id="C4">U937 cells</coref> before and after the addition of potent differentiation inducers: <coref id="C5">12-O-tetradecanoylphorbol 13-acetate (TPA)</coref> and <coref min="combination" id="C7">a combination of all-trans retinoic acid (RA) and 1,25-dihydroxyvitamin D2 (VD)</coref>.</sentence>
+<sentence id="S5">We observed that <coref ref="C5" min="treatment" type="IDENT" id="C6">TPA treatment</coref> was associated with an increase in specific binding of [3H]dexamethasone and up-regulation of GR mRNA while no enhanced GR expression was perceived with <coref ref="C7" min="treatment" type="IDENT" id="C8">RA/VD treatment</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

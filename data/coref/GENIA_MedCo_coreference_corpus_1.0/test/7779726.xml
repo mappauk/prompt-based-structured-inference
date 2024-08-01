@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7779726">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7779726</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Reduced mitogenic stimulation of <coref id="C1">peripheral blood mononuclear cells</coref> as a prognostic parameter for the course of breast cancer: a prospective longitudinal study.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Immunosuppression has been often associated with the course of malignant diseases.</sentence>
+<sentence id="S3">In the present study, <coref min="proliferation" id="C2">the proliferation of <coref ref="C1" type="IDENT" id="C3">peripheral blood mononuclear cells (PBMCs)</coref> in response to mitogenic stimulation with phytohaemagglutinin (PHA)</coref> was assessed prospectively in <coref min="patients" id="C4">90 patients with stage I-III breast cancer</coref>.</sentence>
+<sentence id="S4">Whereas <coref ref="C2" min="proliferation" type="IDENT" id="C5">PHA-induced proliferation of <coref ref="C3" type="IDENT" id="C6">PBMCs</coref></coref> derived from <coref ref="C4" min="patients" type="IDENT" id="C7">patients with <coref min="cancer" id="C8">breast cancer</coref></coref> preoperatively was significantly decreased when compared with data obtained in <coref min="individuals" id="C9">healthy control individuals</coref> (P &lt; 0.001), the degree of the defect in <coref ref="C5" min="proliferation" type="IDENT" id="C10">PHA-induced proliferation of <coref ref="C6" type="IDENT" id="C11">PBMCs</coref></coref> depended upon the tumour burden as manifested by tumour size and axillary lymph node involvement (P &lt; 0.003 in each case).</sentence>
+<sentence id="S5"><coref ref="C10" min="proliferation" type="IDENT" id="C12">PHA-induced proliferation of <coref ref="C11" type="IDENT" id="C13">PBMCs</coref></coref> dropped significantly in <coref min="patients" id="C14"><coref id="C15">patients</coref> <coref ref="C15" type="RELAT" id="C16">who</coref> received adjuvant chemotherapy consisting of cyclophosphamide, methotrexate and fluorouracil (CMF) after an observation period of 6 months (P &lt; 0.01)</coref>, but not in <coref min="patients" id="C17">patients under adjuvant treatment with tamoxifen only</coref>.</sentence>
+<sentence id="S6">After an additional 6 months (i.e. 12 months after surgery), <coref ref="C12" min="proliferation" type="IDENT" id="C18">PHA-induced proliferation of <coref ref="C13" type="IDENT" id="C19">PBMCs</coref></coref> was similar in <coref ref="C14" min="patients" type="IDENT" id="C20"><coref id="C21">patients</coref> after adjuvant chemotherapy with CMF</coref> and in <coref ref="C17" min="those" type="IDENT" id="C22"><coref ref="C21" type="PRON" id="C23">those</coref> receiving continued adjuvant tamoxifen treatment</coref> (P &gt; 0.1), but in <coref ref="C7" min="patients" type="IDENT" id="C24">all patients</coref> still significantly decreased as compared with <coref ref="C9" min="controls" type="IDENT" id="C25">healthy controls</coref> (P &lt; 0.001).</sentence>
+<sentence id="S7">When data obtained preoperatively and after 12 months were compared, it was found that out of <coref min="patients" id="C26">23 patients</coref> <coref min="pbmcs" id="C27"><coref ref="C26" type="RELAT" id="C28">whose</coref> PBMCs</coref> had experienced a drop in <coref ref="C18" min="proliferation" type="IDENT" id="C29"><coref ref="C27" type="PRON" id="C30">their</coref> PHA-induced proliferation</coref>, 14 (61%) had developed metastatic disease within the subsequent 24 months (i.e. 36 months after surgery).</sentence>
+<sentence id="S8">In contrast, out of <coref id="C31">59 patients</coref> <coref min="pbmcs" id="C32"><coref ref="C31" type="RELAT" id="C33">whose</coref> PBMCs</coref> showed an increase in <coref ref="C18" min="proliferation" type="IDENT" id="C34"><coref ref="C32" type="PRON" id="C35">their</coref> PHA-induced proliferation</coref> within the first 12 months after surgery, only one (2%) presented with disease progression.</sentence>
+<sentence id="S9">We thus conclude that <coref ref="C18" min="proliferation" type="IDENT" id="C36">PHA-induced proliferation of <coref ref="C19" type="IDENT" id="C37">PBMCs</coref></coref> derived from <coref ref="C7" min="patients" type="IDENT" id="C38">patients with <coref ref="C8" min="cancer" type="IDENT" id="C39">breast cancer</coref></coref> depends upon the tumour load and is a good clinical predictor for the further course of <coref ref="C39" type="IDENT" id="C40">the disease</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1309587">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1309587</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="oncogene" id="C1">The cellular oncogene c-myb</coref> can interact synergistically with <coref min="transactivator" id="C2"><coref min="virus" id="C3">the Epstein-Barr virus</coref> BZLF1 transactivator</coref> in lymphoid cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Regulation of replicative functions in <coref ref="C3" min="genome" type="IDENT" id="C4">the Epstein-Barr virus (EBV) genome</coref> is mediated through activation of <coref ref="C6" min="transcription factor" type="APPOS" id="C5">a virally encoded transcription factor</coref>, <coref ref="C2" type="IDENT" id="C6">Z (BZLF1)</coref>.</sentence>
+<sentence id="S3">We have shown that <coref min="product" id="C7">the <coref ref="C6" type="IDENT" id="C8">Z</coref> gene product</coref>, <coref ref="C7" type="RELAT" id="C9">which</coref> binds to AP-1 sites as a homodimer and has sequence similarity to c-Fos, can efficiently activate <coref ref="C11" min="promoter" type="APPOS" id="C10">the EBV early promoter</coref>, <coref id="C11">BMRF1</coref>, in certain cell types (i.e., HeLa cells) but not others (i.e., <coref min="cells" id="C12">Jurkat cells</coref>).</sentence>
+<sentence id="S4">Here we demonstrate that <coref min="product" id="C13">the <coref ref="C1" type="IDENT" id="C14">c-myb</coref> proto-oncogene product</coref>, <coref ref="C19" type="RELAT" id="C15">which</coref> is <coref ref="C13" type="PRON" id="C16">itself</coref> a DNA-binding protein and transcriptional transactivator, can interact synergistically with <coref ref="C8" type="IDENT" id="C17">Z</coref> in activating <coref ref="C11" min="promoter" type="IDENT" id="C18">the BMRF1 promoter</coref> in <coref ref="C12" min="cells" type="IDENT" id="C19">Jurkat cells</coref> (a T-cell line) or Raji cells (an EBV-positive B-cell), whereas <coref ref="C13" min="product" type="IDENT" id="C20">the <coref ref="C14" type="IDENT" id="C21">c-myb</coref> gene product</coref> by <coref ref="C20" type="PRON" id="C22">itself</coref> has little effect.</sentence>
+<sentence id="S5">The simian virus 40 early promoter is also synergistically activated by <coref min="combination" id="C23">the <coref ref="C17" type="IDENT" id="C24">Z</coref>/<coref ref="C21" type="IDENT" id="C25">c-myb</coref> combination</coref>.</sentence>
+<sentence id="S6">Synergistic transactivation of <coref ref="C18" min="promoter" type="IDENT" id="C26">the BMRF1 promoter</coref> by <coref ref="C23" min="combination" type="IDENT" id="C27">the <coref ref="C24" type="IDENT" id="C28">Z</coref>/<coref ref="C25" type="IDENT" id="C29">c-myb</coref> combination</coref> appears to involve direct binding by the Z protein but not the c-myb protein.</sentence>
+<sentence id="S7">A 30-bp sequence in <coref ref="C26" min="promoter" type="IDENT" id="C30">the BMRF1 promoter</coref> <coref ref="C30" type="RELAT" id="C31">which</coref> contains a Z binding site (a consensus AP-1 site) is sufficient to transfer high-level lymphoid-specific responsiveness to <coref ref="C27" min="combination" type="IDENT" id="C32">the <coref ref="C28" type="IDENT" id="C33">Z</coref>/<coref ref="C29" type="IDENT" id="C34">c-myb</coref> combination</coref> to a heterologous promoter.</sentence>
+<sentence id="S8">That <coref ref="C20" min="product" type="IDENT" id="C35">the <coref ref="C34" type="IDENT" id="C36">c-myb</coref> oncogene product</coref> can interact synergistically with an EBV-encoded member of the leucine zipper protein family suggests <coref ref="C36" type="IDENT" id="C37">c-myb</coref> is likely to engage in similar interactions with cellularly encoded transcription factors.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

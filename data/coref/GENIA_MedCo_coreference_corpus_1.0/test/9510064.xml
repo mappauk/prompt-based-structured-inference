@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9510064">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9510064</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Regulation of <coref min="gene" id="C1">the human interleukin-2 gene</coref> by <coref min="isoforms" id="C2">the alpha and beta isoforms of <coref min="receptor" id="C3">the glucocorticoid receptor</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="effects" id="C4">The immunosuppressive effects of <coref id="C5">glucocorticoids</coref></coref> are largely due to transcriptional inhibition of immunologically relevant genes, such as <coref ref="C1" min="gene" type="IDENT" id="C6">the interleukin-2 (IL-2) gene</coref>.</sentence>
+<sentence id="S3"><coref ref="C4" min="effects" type="IDENT" id="C7">These effects</coref> are mediated by <coref ref="C3" min="receptor" type="IDENT" id="C8">the intracellular glucocorticoid receptor (GR)</coref>.</sentence>
+<sentence id="S4">In humans, alternative splicing of the GR precursor mRNA gives rise to <coref ref="C2" min="isoforms" type="IDENT" id="C9">two receptor isoforms</coref>, termed <coref ref="C9" type="IDENT" id="C10"><coref id="C11">GRalpha</coref> and <coref id="C12">GRbeta</coref></coref>.</sentence>
+<sentence id="S5">We previously demonstrated that <coref ref="C12" type="IDENT" id="C13">GRbeta</coref> could antagonize <coref min="transactivation" id="C14">GRalpha-mediated transactivation of a glucocorticoid-responsive element (GRE)-driven reporter gene</coref> in COS-7 cells.</sentence>
+<sentence id="S6">The present study was designed to analyze the roles of <coref ref="C10" min="isoforms" type="IDENT" id="C15">the two GR isoforms</coref> on glucocorticoid-mediated transrepression of <coref ref="C6" min="gene" type="IDENT" id="C16">the IL-2 gene</coref>.</sentence>
+<sentence id="S7">Using a recently developed transfection technique, we demonstrate that in primary human lymphocytes, stimulation of a 548 bp IL-2 promoter-luciferase reporter construct by phorbol ester and calcium ionophore is reversed by dexamethasone to a similar extent as in <coref min="cells" id="C17">Jurkat T lymphoma cells transfected with a GRalpha expression vector</coref>.</sentence>
+<sentence id="S8">Transfection of a GRbeta expression vector alone did not result in IL-2 promoter repression in response to <coref ref="C5" type="IDENT" id="C18">glucocorticoids</coref>.</sentence>
+<sentence id="S9">Furthermore, <coref ref="C13" type="IDENT" id="C19">GRbeta</coref> did not antagonize the repressive effects of <coref ref="C11" type="IDENT" id="C20">GRalpha</coref> on IL-2 promoter activity.</sentence>
+<sentence id="S10">Surprisingly, overexpression of <coref ref="C19" type="IDENT" id="C21">GRbeta</coref> in <coref ref="C17" min="cells" type="IDENT" id="C22">Jurkat cells</coref> did not cause significant inhibition of GRalpha-induced transactivation of a GRE-dependent luciferase reporter gene either.</sentence>
+<sentence id="S11">We conclude that the transrepressive effect of <coref ref="C18" type="IDENT" id="C23">glucocorticoids</coref> on IL-2 gene transcription is exclusively mediated by <coref ref="C20" type="IDENT" id="C24">GRalpha</coref>.</sentence>
+<sentence id="S12"><coref ref="C21" type="IDENT" id="C25">GRbeta</coref> can neither antagonize <coref ref="C14" min="transactivation" type="IDENT" id="C26">GRalpha-mediated transactivation</coref> nor transrepression in <coref ref="C22" min="cells" type="IDENT" id="C27">Jurkat cells</coref>, indicating a cell type-specific pattern of GRbeta-mediated antiglucocorticoid activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

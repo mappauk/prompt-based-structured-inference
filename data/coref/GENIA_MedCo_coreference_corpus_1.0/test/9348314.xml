@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9348314">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9348314</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Association of <coref min="insensitivity" id="C1">glucocorticoid insensitivity</coref> with <coref min="expression" id="C2">increased expression of <coref id="C3">glucocorticoid receptor beta</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">In many chronic inflammatory disorders, <coref ref="C1" min="insensitivity" type="IDENT" id="C4">glucocorticoid (GC) insensitivity</coref> is a challenging clinical problem associated with life-threatening disease progression.</sentence>
+<sentence id="S3">The molecular basis of <coref ref="C4" min="insensitivity" type="IDENT" id="C5">GC insensitivity</coref>, however, is unknown.</sentence>
+<sentence id="S4">Alternative splicing of the GC receptor (R) pre-messenger RNA generates <coref ref="C3" min="gcr" type="IDENT" id="C6">a second GCR</coref>, termed <coref ref="C6" type="IDENT" id="C7">GCR-beta</coref>, <coref ref="C7" type="RELAT" id="C8">which</coref> does not bind GCs but antagonizes the transactivating activity of <coref min="gcr" id="C9">the classic GCR</coref>, termed <coref ref="C9" type="IDENT" id="C10">GCR-alpha</coref>.</sentence>
+<sentence id="S5">In the current study, we demonstrate that <coref min="asthma" id="C11">GC-insensitive asthma</coref> is associated with a significantly higher number of GCR-beta-immunoreactive cells in peripheral blood than GC-sensitive asthmatics or normal controls.</sentence>
+<sentence id="S6">Furthermore, we show that patients with <coref ref="C11" min="asthma" type="IDENT" id="C12">GC-insensitive asthma</coref> have <coref min="abnormalities" id="C13">cytokine-induced abnormalities in the DNA binding capability of <coref ref="C7" type="IDENT" id="C14">the GCR</coref></coref>.</sentence>
+<sentence id="S7"><coref ref="C13" min="abnormalities" type="IDENT" id="C15">These abnormalities</coref> can be reproduced by transfection of <coref min="cell lines" id="C16">cell lines with the GCR-beta gene</coref> resulting in significant reduction of <coref ref="C16" type="PRON" id="C17">their</coref> GCR-alpha DNA binding capacity.</sentence>
+<sentence id="S8">We conclude that <coref ref="C2" min="expression" type="IDENT" id="C18">increased expression of <coref ref="C14" type="IDENT" id="C19">GCR-beta</coref></coref> is cytokine inducible and may account for GC insensitivity in this common inflammatory condition.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

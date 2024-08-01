@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9717674">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9717674</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The transcription factors c-myb and <coref min="alpha" id="C1">C/EBP alpha</coref> regulate <coref min="gene" id="C2">the monocytic/myeloic gene MRP14</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The entry of microorganisms into the body induces inflammatory processes.</sentence>
+<sentence id="S3">During this process a sequence of cellular, humoral, non-specific and specific actions are evoked to combat the infection.</sentence>
+<sentence id="S4"><coref id="C3">Macrophages and <coref id="C4">granulocytes</coref></coref>, <coref ref="C3" type="RELAT" id="C5">which</coref> are developed from a common progenitor cell, are the cellular components of the specific and non-specific immunoreaction.</sentence>
+<sentence id="S5"><coref id="C6"><coref ref="C2" type="IDENT" id="C7">MRP14 (Macrophage migration inhibitory related protein)</coref> and MRP8</coref>, <coref ref="C6" min="proteins" type="APPOS" id="C8">two S-100 proteins contained in high concentrations in <coref ref="C3" min="cells" type="IDENT" id="C9">these cells</coref></coref> are obviously essential for adhesion and migration of monocytes and <coref ref="C4" type="IDENT" id="C10">granulocytes</coref>.</sentence>
+<sentence id="S6">To investigate the transcriptional regulation of these genes we cotransfected constructs expressing CAT under control of <coref min="promoter" id="C11">the MRP14 promoter</coref> and expression constructs of <coref id="C12"><coref ref="C1" min="alpha" type="IDENT" id="C13">C/EBP alpha</coref> and <coref id="C14">v-myb</coref></coref>, <coref ref="C12" min="transcription factors" type="APPOS" id="C15">two transcription factors involved in myeloid/monocytic differentiation</coref>.</sentence>
+<sentence id="S7">Transfection with <coref ref="C13" min="alpha" type="IDENT" id="C16">C/EBP alpha</coref> revealed a massive enhancement of <coref ref="C11" min="promoter" type="IDENT" id="C17">the MRP14 promoter</coref> in both, HL 60 cells (granulocytic differentiated) and L132 fibroblasts.</sentence>
+<sentence id="S8">In contrast, <coref ref="C14" type="IDENT" id="C18">v-myb</coref> reduces MRP14 promoter activity.</sentence>
+<sentence id="S9">Northern blot analysis of L132 cells transfected with the C/EBP alpha expression vector demonstrate that <coref ref="C16" min="alpha" type="IDENT" id="C19">C/EBP alpha</coref> is sufficient to enhance MRP14 expression in the context of the whole genome.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

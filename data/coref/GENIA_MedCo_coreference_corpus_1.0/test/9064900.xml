@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9064900">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9064900</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">[Correlation of <coref min="infiltration" id="C1">lymphocytic infiltration</coref> of tumor tissue with the hormonal and metabolic state in patients with breast cancer]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" min="infiltration" type="IDENT" id="C2">Lymphocyte infiltration</coref> of tumor was studied vis-a-vis hormone metabolic status, tumor tissue hormone sensitivity and tobacco smoking, in 113 breast cancer patients, aged 25-77.</sentence>
+<sentence id="S3">On the average, no correlation was established between degree of <coref ref="C2" min="infiltration" type="IDENT" id="C3">lymphocyte infiltration</coref> in breast tumor and age and menopause onset.</sentence>
+<sentence id="S4">In smoking menopausal patients, <coref ref="C3" min="infiltration" type="IDENT" id="C4">lymphocyte infiltration</coref> was found to be higher than in non-smokers (p &lt; 0.05).</sentence>
+<sentence id="S5">There was a direct correlation between the rate of <coref ref="C4" min="infiltration" type="IDENT" id="C5">lymphocyte infiltration</coref> and the level of progesterone receptors in tumor.</sentence>
+<sentence id="S6">Some subgroups displayed a direct correlation between <coref ref="C5" type="IDENT" id="C6">infiltration</coref> and sex-binding globulin, cholesterol, luteinizing hormone in blood, and lean body mass.</sentence>
+<sentence id="S7">It was matched by an inverse correlation between <coref ref="C6" min="infiltration" type="IDENT" id="C7">lymphocyte infiltration</coref> and blood-thyroid hormone concentration, urine catecholamines and free cortisol excretion and fat/lean body mass ratio.</sentence>
+<sentence id="S8">Considering the abovesaid as well as the lymphocyte ability to perform the dual function of immunocytes and hormonocytes, it is suggested that the results may be used in both the study of <coref ref="C7" min="infiltration" type="IDENT" id="C8">lymphocyte infiltration</coref> and research in means of <coref ref="C8" type="PRON" id="C9">its</coref> control.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

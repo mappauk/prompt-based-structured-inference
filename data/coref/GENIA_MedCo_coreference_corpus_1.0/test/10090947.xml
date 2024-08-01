@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10090947">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10090947</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Constitutive activation of <coref id="C1">NF-kappaB</coref> in primary adult T-cell leukemia cells.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C2">Human T-cell leukemia virus type I (HTLV-I)</coref> is an etiologic agent of adult T-cell leukemia (ATL).</sentence>
+<sentence id="S3"><coref min="protein" id="C3">The viral protein Tax</coref> induces the activation and nuclear translocalization of <coref ref="C1" min="transcription factor" type="IDENT" id="C4"><coref min="transcription factor" id="C5">transcription factor NF-kappaB</coref>, <coref ref="C5" type="RELAT" id="C6">which</coref> is proposed to play a crucial role in the transformation of T cells by <coref ref="C2" type="IDENT" id="C7">HTLV-I</coref></coref>.</sentence>
+<sentence id="S4">However, the HTLV-I genes including <coref ref="C3" type="IDENT" id="C8">Tax</coref> are not expressed significantly in primary leukemic cells from <coref min="patients" id="C9">ATL patients</coref>.</sentence>
+<sentence id="S5">In this study, we examined the basis for NF-kappaB activation in freshly isolated leukemic cells from <coref ref="C9" min="patients" type="IDENT" id="C10">ATL patients</coref>.</sentence>
+<sentence id="S6">We found that leukemic cells from <coref ref="C10" min="patients" type="IDENT" id="C11">ATL patients</coref>, like HTLV-I-infected T-cell lines, display constitutive NF-kappaB DNA binding activity and increased <coref min="degradation" id="C12">degradation of <coref id="C13">IkappaBalpha (an inhibitor of NF-kappaB)</coref></coref>.</sentence>
+<sentence id="S7">Whereas the NF-kappaB binding activity in Tax-expressing T-cell lines consisted mostly of p50/c-Rel, fresh ATL samples contained <coref min="heterodimers" id="C14">p50/p50 and p50/p65 heterodimers</coref>.</sentence>
+<sentence id="S8">One T-cell line derived from <coref min="cells" id="C15">ATL leukemic cells</coref>, <coref ref="C15" type="APPOS" id="C16">TL-Om1</coref>, displayed constitutive NF-kappaB activity, as well as enhanced <coref ref="C12" min="degradation" type="IDENT" id="C17">degradation of <coref ref="C13" type="IDENT" id="C18">IkappaBalpha</coref></coref>, despite the lack of detectable Tax expression.</sentence>
+<sentence id="S9">Interestingly, <coref id="C19">the NF-kappaB</coref> in <coref ref="C15" type="IDENT" id="C20">TL-Om1</coref> consists of <coref ref="C14" type="IDENT" id="C21">p50/p50 and p50/p65</coref> like <coref ref="C19" type="PRON" id="C22">that</coref> in fresh primary leukemic cells.</sentence>
+<sentence id="S10">Our results suggest that activation of <coref ref="C4" type="IDENT" id="C23">NF-kappaB</coref> occurs through a Tax-independent mechanism in leukemic cells of <coref ref="C11" min="patients" type="IDENT" id="C24">ATL patients</coref>, possibly due to differential NF-kappaB subunit activation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

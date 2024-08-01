@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8664547">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8664547</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The role of <coref id="C1">BSAP (Pax-5)</coref> in <coref min="development" id="C2">B-cell development</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The hierarchy of transcriptional control in <coref ref="C2" min="development" type="IDENT" id="C3">B-cell development</coref> has recently been analyzed by targeted gene inactivation in the mouse.</sentence>
+<sentence id="S3">In this manner, the paired box containing gene Pax-5, encoding <coref ref="C1" type="IDENT" id="C4">the B cell specific transcription factor BSAP</coref>, has been shown to play a key role in early B lymphopoiesis.</sentence>
+<sentence id="S4">Other experimental strategies have implicated <coref ref="C4" type="IDENT" id="C5">BSAP</coref> in the control of cell proliferation, isotype switching and transcription of the immunoglobulin heavy-chain gene at late stages of B-cell differentiation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

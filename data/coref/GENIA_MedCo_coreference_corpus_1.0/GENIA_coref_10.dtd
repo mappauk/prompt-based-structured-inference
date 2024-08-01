@@ -1,0 +1,50 @@
+<!-- ============================================================ -->
+<!-- DTD for Genia corpus with coref annotation                   -->
+<!-- written by Jin-Dong KIM <jdkim@tsujii.is.s.u-tokyo.ac.jp>    -->
+<!-- Date of last modification: August 1 2010                     -->
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+<!-- Labels for coref types                                       -->
+<!-- ============================================================ -->
+
+<!ENTITY % coref.type "(APPOS | IDENT | OTHERS | PRON | RELAT | PART-WHOLE | WHOLE-PART | OTHER)">
+
+<!-- ============================================================ -->
+<!-- HIERARCHICAL ELEMENTS                                        -->
+<!-- ============================================================ -->
+<!ELEMENT Annotation (PubmedArticleSet)>
+<!ATTLIST Annotation
+		annotates CDATA #IMPLIED
+		creator   CDATA #IMPLIED
+		created   CDATA #IMPLIED
+>
+
+<!ELEMENT PubmedArticleSet (PubmedArticle)>
+<!ELEMENT PubmedArticle (MedlineCitation)>
+<!ELEMENT MedlineCitation (PMID, Article)>
+<!ELEMENT Article (ArticleTitle?, Abstract)>
+<!ELEMENT Abstract (AbstractText)>
+
+<!-- ============================================================ -->
+<!-- BLOCK ELEMENTS                                               -->
+<!-- ============================================================ -->
+<!ELEMENT ArticleTitle (sentence)+>
+<!ELEMENT AbstractText (sentence)+>
+<!ELEMENT PMID (#PCDATA)>
+
+<!-- ============================================================ -->
+<!-- LINGUISTIC ELEMENTS                                          -->
+<!-- ============================================================ -->
+<!ELEMENT sentence	(#PCDATA | coref)*>
+<!ATTLIST sentence	id ID	#REQUIRED>
+
+<!ELEMENT coref (#PCDATA | coref)*>
+<!ATTLIST coref
+		id	ID		#REQUIRED
+		ref	IDREFS		#IMPLIED
+		type	%coref.type;	#IMPLIED
+		min	CDATA		#IMPLIED
+		target	CDATA		#IMPLIED
+		check	CDATA		#IMPLIED
+>

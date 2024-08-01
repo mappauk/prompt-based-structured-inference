@@ -1,5 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.rules.rule_template import RuleTemplate
+from src.rules.rule_type import RuleType
 import numpy as np
 import pandas as pd
 import copy
@@ -41,17 +42,24 @@ class LLMGZRule(RuleTemplate):
             dict = { }
             for feature in self.features:
                 dict[feature] = row[feature]
+            if self.rule_type == RuleType.BINARY:
+                output_df_row = copy.deepcopy(dict)
+                output_df_row['RuleVariable'] = self.rule_variable_format.format(**dict)
+                output_df_row['HeadVariable'] = self.head_variable_format.format(**dict)
+                output_df_list.append(output_df_row)
             for label in self.labels:
                 dict['label'] = label
                 label_sentences = self.prompt_map[label]
-                output_df_row = copy.deepcopy(dict)
-                output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
-                output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
-                output_df_list.append(output_df_row)
+                if self.rule_type == RuleType.MULTI_CLASS:
+                    output_df_row = copy.deepcopy(dict)
+                    output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
+                    output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
+                    output_df_list.append(output_df_row)
                 for sentence in label_sentences:
                     formatted_prompt = sentence.format(**dict)
                     char_batch_posiitions.append(len(formatted_prompt) + 1)
                     formatted_prompt += self.generation_format.format(**dict)
+                    #print(formatted_prompt)
                     prompt_batch.append(formatted_prompt)
                     if len(prompt_batch) == self.batch_size:
                         tokenized_prompt_batch = self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type)
@@ -68,8 +76,8 @@ class LLMGZRule(RuleTemplate):
         for i in range(len(prompts)):
             outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
             vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
-            #token_ids = prompts[i]['input_ids'].cpu().numpy()
-            token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
+            token_ids = prompts[i]['input_ids'].cpu().numpy()
+            #token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
             batch_token_count = token_ids.shape[1]
             vocab_size = vocab_probs.shape[len(vocab_probs.shape) - 1]
             batch_size = token_ids.shape[0]
@@ -86,8 +94,9 @@ class LLMGZRule(RuleTemplate):
         scores_across_variations = np.sum(scores_by_variation, axis=1)
         scores_by_label = np.reshape(scores_across_variations, (int(scores_across_variations.shape[0]/len(self.labels)), len(self.labels)))
         softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
+        if self.rule_type == RuleType.BINARY:
+            softmax_over_labels = softmax_over_labels[:, 0]
         final_scores = softmax_over_labels.flatten().tolist()
-        
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', final_scores)
         result_data.dropna(axis=0, how='any', inplace=True)

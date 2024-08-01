@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10229837">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10229837</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">USF/c-Myc</coref> enhances, while <coref id="C2">Yin-Yang 1</coref> suppresses, <coref min="activity" id="C3">the promoter activity of <coref id="C4">CXCR4</coref>, <coref ref="C4" min="coreceptor" type="APPOS" id="C5">a coreceptor for HIV-1 entry</coref></coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C6">Transcription factors USF1 and USF2</coref> up-regulate gene expression (i.e., HIV-1 long terminal repeats) via interaction with <coref min="box" id="C7">an E box on <coref ref="C6" type="PRON" id="C8">their</coref> target promoters</coref>, <coref ref="C7" type="RELAT" id="C9">which</coref> is also a binding site for <coref id="C10">c-Myc</coref>.</sentence>
+<sentence id="S3"><coref ref="C10" type="IDENT" id="C11">The c-Myc oncoprotein</coref> is important in control of cellular proliferation and differentiation, while <coref ref="C2" type="IDENT" id="C12">Yin-Yang 1 (YY1)</coref> has been shown to control the expression of a number of cellular and viral genes.</sentence>
+<sentence id="S4"><coref min="proteins" id="C13">These two proteins</coref> physically interact with each other and mutually inhibit <coref ref="C13" type="PRON" id="C14">their</coref> respective biological functions.</sentence>
+<sentence id="S5">In this study, we show that <coref ref="C1" type="IDENT" id="C15">USF/c-Myc</coref> up-regulates, while <coref ref="C12" type="IDENT" id="C16">YY1</coref> down-regulates <coref ref="C3" min="activity" type="IDENT" id="C17">the promoter activity of <coref ref="C4" type="IDENT" id="C18">CXCR4</coref>, <coref ref="C18" min="coreceptor" type="APPOS" id="C19">a coreceptor for T cell-tropic HIV-1 entry</coref></coref>.</sentence>
+<sentence id="S6">We have identified <coref min="box" id="C20">an E box around -260</coref> and <coref min="site" id="C21">a YY1 binding site around -300 relative to the transcription start site</coref>.</sentence>
+<sentence id="S7">Mutation of <coref ref="C20" min="box" type="IDENT" id="C22">the E box</coref> abolished USF/c-Myc- mediated up-regulation of <coref ref="C17" min="activity" type="IDENT" id="C23">CXCR4 promoter activity</coref>, and mutation of <coref ref="C21" min="site" type="IDENT" id="C24">the YY1 binding site</coref> was associated with unresponsiveness to YY1-mediated inhibition.</sentence>
+<sentence id="S8">These data suggest that <coref ref="C15" type="IDENT" id="C25">USF/c-Myc</coref> and <coref ref="C16" type="IDENT" id="C26">YY1</coref> may play an important role in the HIV-1-replicative cycle, by modulating both the viral fusion/entry process and viral expression.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

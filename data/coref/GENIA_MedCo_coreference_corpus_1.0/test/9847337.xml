@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9847337">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9847337</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Accessing Epstein-Barr virus-specific T-cell memory with <coref min="cells" id="C1">peptide-loaded dendritic cells</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The conventional means of studying <coref min="memory" id="C2">Epstein-Barr virus (EBV)-induced cytotoxic T-lymphocyte (CTL) memory</coref>, by in vitro stimulation with the latently infected autologous lymphoblastoid cell line (LCL), has important limitations.</sentence>
+<sentence id="S3">First, it gives no information on memory to lytic cycle antigens; second, it preferentially amplifies the dominant components of latent antigen-specific memory at the expense of key subdominant reactivities.</sentence>
+<sentence id="S4">Here we describe an alternative approach, based on <coref min="stimulation" id="C3">in vitro stimulation with <coref ref="C1" min="cells" type="IDENT" id="C4">epitope peptide-loaded dendritic cells (DCs)</coref></coref>, <coref ref="C3" type="RELAT" id="C5">which</coref> allows one to probe the CTL repertoire for any individual reactivity of choice; <coref ref="C3" min="method" type="IDENT" id="C6">this method</coref> proved significantly more efficient than stimulation with peptide alone.</sentence>
+<sentence id="S5">Using <coref ref="C6" min="approach" type="IDENT" id="C7">this approach</coref> we first show that reactivities to the immunodominant and subdominant lytic cycle epitopes identified by T cells during primary EBV infection are regularly detectable in <coref ref="C2" min="memory" type="IDENT" id="C8">the CTL memory</coref> of <coref min="carriers" id="C9">virus carriers;</coref> this implies that in <coref ref="C9" min="carriers" type="IDENT" id="C10">such carriers</coref> chronic virus replication remains under direct T-cell control.</sentence>
+<sentence id="S6">We further show that subdominant latent cycle reactivities to epitopes in the latent membrane protein LMP2, though rarely undetectable in LCL-stimulated populations, can be reactivated by DC stimulation and selectively expanded as polyclonal CTL lines; the adoptive transfer of such preparations may be of value in targeting certain EBV-positive malignancies.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9115242">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9115242</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="induction" id="C1">Transcriptional induction of <coref id="C2">collagenase-1</coref></coref> in differentiated monocyte-like (U937) cells is regulated by AP-1 and <coref min="site" id="C3">an upstream C/EBP-beta site</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">In this report, we demonstrate that the AP-1 site and a distal promoter element regulate <coref ref="C1" min="induction" type="IDENT" id="C4">transcriptional induction of <coref ref="C2" type="IDENT" id="C5">collagenase-1</coref></coref> during monocytic differentiation.</sentence>
+<sentence id="S3">Chloramphenicol acetyltransferase expression constructs containing regions of the human collagenase-1 promoter were stably or transiently transfected into U937 cells, and reporter activity was assessed at various times after the onset of phorbol 12-myristate 13-acetate (PMA)-mediated differentiation.</sentence>
+<sentence id="S4">Rapid and strong induction of promoter activity was lost in constructs with a mutant AP-1 element; however, at 16-96 h post-PMA, the mutant collagenase-1 promoter displayed AP-1 independent PMA-mediated transactivation.</sentence>
+<sentence id="S5">The AP-1 mutant constructs also showed delayed transcriptional activation in PMA-treated fibroblasts.</sentence>
+<sentence id="S6">Western and supershift analyses indicated that functional Jun and Fos proteins were present in nuclear extracts of PMA-differentiated U937 cells.</sentence>
+<sentence id="S7">Promoter deletion constructs demonstrated the potential role of distal promoter sequences in regulating <coref min="transcription" id="C6">collagenase-1 transcription</coref>.</sentence>
+<sentence id="S8">In particular, Western, supershift, and promoter deletion analyses suggested a role for <coref ref="C3" min="site" type="IDENT" id="C7">CCAAT/enhancer-binding protein-beta (C/EBP-beta) binding site between -2010 and -1954</coref> in regulating <coref ref="C6" min="transcription" type="IDENT" id="C8">transcription of <coref ref="C5" type="IDENT" id="C9">collagenase-1</coref></coref> in monocytic cells.</sentence>
+<sentence id="S9">Our findings suggest that distinct regulatory elements, acting somewhat independently of each other, control expression of <coref ref="C9" type="IDENT" id="C10">collagenase-1</coref>.</sentence>
+<sentence id="S10">In addition, our data suggests that the rapid PMA-mediated induction of <coref ref="C8" min="transcription" type="IDENT" id="C11">collagenase-1 transcription</coref> is controlled by <coref id="C12">a mechanism</coref> distinct from <coref ref="C12" type="PRON" id="C13">that</coref> regulating the sustained expression of this proteinase in activated macrophages.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

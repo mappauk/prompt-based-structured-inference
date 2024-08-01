@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9875325">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9875325</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Characterisation of regulatory sequences at <coref min="promoter" id="C1">the Epstein-Barr virus BamHI W promoter</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="virus" id="C2">Epstein-Barr virus</coref>, <coref ref="C2" min="gammaherpesvirus" type="APPOS" id="C3">a human gammaherpesvirus</coref>, possesses <coref min="genes" id="C4">a unique set of latent genes</coref> <coref ref="C4" type="RELAT" id="C5">whose</coref> constitutive expression in B cells leads to cell growth transformation.</sentence>
+<sentence id="S3">The initiation of <coref ref="C2" min="infection" type="IDENT" id="C6">this growth transforming infection</coref> depends on <coref id="C7"><coref ref="C1" min="promoter" type="IDENT" id="C8">a viral promoter in BamHI W (Wp)</coref> <coref ref="C8" type="RELAT" id="C9">whose</coref> regulation is poorly understood</coref>.</sentence>
+<sentence id="S4">Using <coref min="constructs" id="C10">Wp reporter constructs</coref> in in vitro transfection assays, we found that <coref ref="C7" type="IDENT" id="C11">Wp</coref> was 11- to 190-fold more active in B cell than in non-B cell lines and that <coref ref="C11" min="promoter" type="IDENT" id="C12">three regions of the promoter</coref> (termed UAS1, UAS2, and UAS3) contributed to transcriptional activation.</sentence>
+<sentence id="S5"><coref min="regions" id="C13">The upstream regions UAS3 (-1168 to -440) and <coref id="C14">UAS2</coref> (-352 to -264)</coref> <coref ref="C13" type="PRON" id="C15">both</coref> functioned in a cell lineage-independent manner and were together responsible for the bulk of <coref min="activity" id="C16">Wp activity</coref> in non-B cells; mutational analysis indicated the importance of a YY1 binding site in <coref ref="C14" type="IDENT" id="C17">UAS2</coref> in that context.</sentence>
+<sentence id="S6">By contrast, <coref id="C18">UAS1</coref> (-140 to -87) was B cell specific and was the key determinant of the promoter's increased activity in B cell lines.</sentence>
+<sentence id="S7">Mutational analysis of UAS1 sequences combined with in vitro bandshift assays revealed the presence of <coref min="sites" id="C19">three binding sites</coref> for cellular factors in <coref ref="C18" min="region" type="IDENT" id="C20">this region</coref>.</sentence>
+<sentence id="S8">When <coref id="C21">mutations</coref> <coref ref="C21" type="RELAT" id="C22">that</coref> abolished factor binding in bandshift assays were introduced into <coref ref="C10" min="construct" type="IDENT" id="C23">a Wp reporter construct</coref>, the loss of <coref ref="C19" min="sites" type="IDENT" id="C24">any one of the three UAS1 binding sites</coref> was sufficient to reduce promoter activity by 10- to 30-fold in B cells.</sentence>
+<sentence id="S9">From sequence analysis, <coref ref="C19" min="these" type="IDENT" id="C25">two of these</coref> appear to be novel transcription factor binding sites, whereas the third was identified as <coref min="element" id="C26">a cyclic AMP response element (CRE)</coref>.</sentence>
+<sentence id="S10">Our data indicate that <coref ref="C26" min="cre" type="IDENT" id="C27">this CRE</coref> interacts with CREB and ATF1 proteins present in B cell nuclear extracts and that this interaction is important for <coref ref="C16" min="activity" type="IDENT" id="C28">Wp activity</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

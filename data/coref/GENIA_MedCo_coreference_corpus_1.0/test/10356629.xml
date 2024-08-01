@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10356629">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10356629</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Glucocorticoid receptors in <coref id="C1">anorexia nervosa</coref> and <coref min="disease" id="C2">Cushing's disease</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">BACKGROUND: <coref min="patients" id="C3">Patients with <coref ref="C1" type="IDENT" id="C4">anorexia nervosa</coref></coref> do not display <coref min="features" id="C5">cushingoid features</coref> in spite of elevated cortisol plasma levels.</sentence>
+<sentence id="S3">Whether a cortisol resistance or a reduced availability of <coref min="substrates" id="C6">the metabolic substrates</coref> necessary to develop the effect of <coref id="C7">glucocorticoids</coref> is responsible for this has not been established.</sentence>
+<sentence id="S4">METHODS: Twenty-two patients with severe restrictive anorexia nervosa, 10 patients with active Cushing's disease, and 24 healthy volunteers without psychiatric disorders or mood alterations were investigated.</sentence>
+<sentence id="S5">Glucocorticoid receptor characteristics were examined on <coref min="leukocytes" id="C8">mononuclear leukocytes</coref> by measuring [3H]dexamethasone binding and <coref min="effect" id="C9">the effect of <coref id="C10">dexamethasone</coref> on [3H]thymidine incorporation</coref>, <coref ref="C9" type="RELAT" id="C11">which</coref> represents an index of DNA synthesis.</sentence>
+<sentence id="S6">RESULTS: The number of glucocorticoid receptors on <coref ref="C8" min="leukocytes" type="IDENT" id="C12">mononuclear leukocytes (MNL)</coref> was comparable in <coref ref="C3" min="patients" type="IDENT" id="C13">patients with <coref ref="C4" type="IDENT" id="C14">anorexia nervosa</coref></coref>, <coref min="patients" id="C15">patients with active Cushing's disease</coref>, and <coref min="subjects" id="C16">normal subjects</coref> (binding capacity 3.3 +/- 0.23 vs. 3.7 +/- 0.30 and 3.5 +/- 0.20 fmol/10(6) cells).</sentence>
+<sentence id="S7">Conversely, glucocorticoid receptor affinity was significantly decreased in anorexia nervosa as well as in Cushing's patients compared to <coref ref="C16" min="subjects" type="IDENT" id="C17">control subjects</coref> (dissociation constant 4.0 +/- 0.31 and 4.1 +/- 0.34 vs. 2.9 +/- 0.29 nmol/L, p &lt; .001) and inversely correlated with the levels of urinary free cortisol in both groups of patients.</sentence>
+<sentence id="S8">Basal [3H]thymidine incorporation in <coref ref="C12" type="IDENT" id="C18">MNL</coref> was significantly reduced in anorexia nervosa as well as in Cushing's patients compared to <coref ref="C17" min="subjects" type="IDENT" id="C19">control subjects</coref> (p &lt; .001) and was diminished by <coref ref="C10" type="IDENT" id="C20">dexamethasone</coref> to an extent similar to <coref ref="C19" min="subjects" type="IDENT" id="C21">control subjects</coref> in <coref ref="C13" min="patients" type="IDENT" id="C22"><coref id="C23">patients</coref> with <coref ref="C14" type="IDENT" id="C24">anorexia nervosa</coref></coref>, but significantly (p &lt; .001) less in <coref ref="C15" min="those" type="IDENT" id="C25"><coref ref="C23" type="PRON" id="C26">those</coref> with <coref ref="C2" min="disease" type="IDENT" id="C27">Cushing's disease</coref></coref>.</sentence>
+<sentence id="S9">In <coref ref="C22" min="patients" type="IDENT" id="C28">patients with <coref ref="C24" type="IDENT" id="C29">anorexia nervosa</coref></coref>, the incorporation of [3H]thymidine into <coref ref="C18" type="IDENT" id="C30">the MNL</coref> was inversely correlated with urinary free cortisol levels.</sentence>
+<sentence id="S10">CONCLUSIONS: These data indicate that the lack of <coref ref="C5" min="features" type="IDENT" id="C31">cushingoid features</coref> in <coref ref="C28" min="patients" type="IDENT" id="C32">patients with <coref ref="C29" type="IDENT" id="C33">anorexia nervosa</coref></coref> is not ascribable to a reduced sensitivity to <coref ref="C7" type="IDENT" id="C34">glucocorticoids</coref> but is more likely due to the paucity of <coref ref="C6" min="substrates" type="IDENT" id="C35">metabolic substrates</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=7662982">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>7662982</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">TCL1 oncogene activation in preleukemic T cells from <coref min="case" id="C1">a case of ataxia-telangiectasia</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The TCL1 oncogene on human chromosome 14q32.1 is involved in chromosome translocations [t(14;14)(q11;q32.1) and t(7;14)(q35;q32.1)] and inversions [inv14(q11;q32.1)] with TCR alpha/beta loci in <coref min="leukemias" id="C2">T-cell leukemias</coref>, such as T-prolymphocytic (T-PLL).</sentence>
+<sentence id="S3">It is also involved in T- acute and- chronic leukemias arising in cases of <coref id="C3">ataxia-telangiectasia (AT)</coref>, <coref ref="C3" min="syndrome" type="APPOS" id="C4">an immunodeficiency syndrome</coref>.</sentence>
+<sentence id="S4">Similar chromosomal rearrangements occur also in the clonally expanded T cells in AT patients before the appearance of the overt leukemia.</sentence>
+<sentence id="S5">We have analyzed the expression of TCL1 mRNA and protein in peripheral blood lymphocytes (PBLs) from four AT cases and from healthy controls.</sentence>
+<sentence id="S6">We found that the TCL1 gene was overexpressed in the PBLs of <coref ref="C1" min="patient" type="IDENT" id="C5">an AT patient with a large clonal T-cell population</coref> exhibiting <coref min="translocation" id="C6">the t(14;14) translocation</coref> but not in the lymphocytes of the other cases.</sentence>
+<sentence id="S7">Fluorescence in situ hybridization of <coref min="locus" id="C7">the TCL1 genomic locus</coref> to lymphocyte metaphases from <coref ref="C5" min="patient" type="IDENT" id="C8">the AT patient with the T-cell clonal expansion</coref> showed that the breakpoint of <coref ref="C6" min="translocation" type="IDENT" id="C9">the t(14;14) translocation</coref> lies within <coref ref="C7" min="locus" type="IDENT" id="C10">the TCL1 locus</coref> and is accompanied by an inverted duplication of the distal part of chromosome 14.</sentence>
+<sentence id="S8">These data indicate that <coref id="C11">TCL1</coref> is activated in preleukemic clonal cells as a consequence of chromosome translocation involving sequences from the TCR locus at 14q11.</sentence>
+<sentence id="S9">Deregulation of <coref ref="C11" type="IDENT" id="C12">TCL1</coref> is the first event in the initiation of malignancy in <coref ref="C2" min="types" type="IDENT" id="C13">these types of leukemias</coref> and represents a potential tool for clinical evaluation.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

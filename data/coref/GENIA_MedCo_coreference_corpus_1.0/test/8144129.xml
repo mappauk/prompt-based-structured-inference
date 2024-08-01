@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8144129">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8144129</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Detection of minimal residual disease in a patient with <coref id="C1">acute promyelocytic leukemia</coref> by <coref id="C2">RT-PCR</coref>: necessity of <coref id="C3">chemotherapy</coref> following <coref id="C4">ATRA therapy</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The PML/RAR alpha fusion gene resulting from the t (15;17) translocation is a specific marker for <coref ref="C1" type="IDENT" id="C5">acute promyelocytic leukemia (APL)</coref>.</sentence>
+<sentence id="S3">We examined bone marrow cells by <coref ref="C2" type="IDENT" id="C6">reverse transcriptase-polymerase chain reaction (RT-PCR)</coref> to detect residual PML/RAR alpha mRNA-containing cells following <coref min="treatment" id="C7">treatment with all-trans retinoic acid (ATRA)</coref> and <coref id="C8">cytotoxic chemotherapy</coref> in a patient with <coref ref="C5" type="IDENT" id="C9">APL</coref>.</sentence>
+<sentence id="S4">This RT-PCR assay can detect one leukemic cell in 10(2) normal cells in vitro.</sentence>
+<sentence id="S5">We show that PML/RAR alpha mRNA was still detectable despite clinical remission following <coref ref="C7" min="treatment" type="IDENT" id="C10">ATRA treatment</coref>, but undetectable following consolidation with <coref ref="C3" type="IDENT" id="C11">chemotherapy</coref>.</sentence>
+<sentence id="S6">These data show that this technique is useful for the identification of minimal residual disease in patients with <coref ref="C9" type="IDENT" id="C12">APL</coref> and that <coref ref="C8" type="IDENT" id="C13">cytotoxic chemotherapy</coref> following <coref ref="C4" type="IDENT" id="C14">ATRA therapy</coref> is required for the elimination of APL cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

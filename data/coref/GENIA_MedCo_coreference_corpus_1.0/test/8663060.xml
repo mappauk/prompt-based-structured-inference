@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8663060">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8663060</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Tissue-specific activity of <coref id="C4">the gammac chain gene promoter</coref> depends upon an Ets binding site and is regulated by <coref id="C10">GA-binding protein</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">The gammac chain</coref> is <coref min="subunit" id="C2">a subunit of multiple cytokine receptors (interleukin (IL)-2, IL-4, IL-7, IL-9, and IL-15)</coref>, the expression of <coref ref="C2" type="RELAT" id="C3">which</coref> is restricted to hematopoietic lineages.</sentence>
+<sentence id="S3">A defect in gammac leads to the X-linked severe combined immunodeficiency characterized by a block in T cell differentiation.</sentence>
+<sentence id="S4">In order to better characterize <coref ref="C4" type="IDENT" id="C5">the human gammac promoter</coref> and define the minimal tissue-specific promoter region, progressive 5'-deletion constructs of a segment extending 1053 base pairs upstream of the major transcription start site were generated and tested for promoter activity in various hematopoietic and nonhematopoietic cell types.</sentence>
+<sentence id="S5">The -1053/+34 construct allowed promoter activity only in cells of hematopoietic origin, and tissue specificity was conserved in all other constructs tested.</sentence>
+<sentence id="S6">The region downstream of -90 appeared critical for basal promoter activity.</sentence>
+<sentence id="S7">It contains <coref min="sites" id="C6">two potential Ets binding sites conserved in the murine gammac promoter gene</coref>, <coref ref="C6" min="one" type="PART-WHOLE" id="C8">one of <coref ref="C6" type="RELAT" id="C7">which</coref></coref> was found essential for functional promoter activity as determined by mutational analysis.</sentence>
+<sentence id="S8">The functional Ets binding site was found to bind Ets family proteins, principally <coref ref="C10" type="IDENT" id="C9">GA-binding protein</coref> and Elf-1 and could be transactivated by GABPalpha and -beta synergistically.</sentence>
+<sentence id="S9">These results indicate that, as already reported for the IL2Rbeta promoter, <coref ref="C9" type="IDENT" id="C11">GA-binding protein</coref> is an essential component of gammac basal promoter activity.</sentence>
+<sentence id="S10">Although <coref id="C12">GABP expression</coref> is not restricted to the hematopoietic lineage, <coref ref="C12" type="PRON" id="C13">its</coref> interaction with other specific factors may contribute to the tissue-specific expression of the gammac gene.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

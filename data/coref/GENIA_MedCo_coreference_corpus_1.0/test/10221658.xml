@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10221658">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10221658</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">CIITA-induced occupation of <coref min="promoters" id="C1">MHC class II promoters</coref> is independent of the cooperative stabilization of the promoter-bound multi-protein complexes.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Precise regulation of MHC class II expression plays a crucial role in the control of the immune response.</sentence>
+<sentence id="S3"><coref id="C2">The transactivator CIITA</coref> behaves as a master controller of constitutive and inducible MHC class II gene activation, but <coref ref="C2" type="PRON" id="C3">its</coref> exact mechanism of action is not known.</sentence>
+<sentence id="S4">Activation of <coref ref="C1" min="promoters" type="IDENT" id="C4">MHC class II promoters</coref> requires <coref min="binding" id="C5">binding of <coref min="complexes" id="C6">at least three distinct multi-protein complexes (RFX, X2BP and NF-Y)</coref></coref>.</sentence>
+<sentence id="S5">It is known that the stability of <coref ref="C5" min="binding" type="IDENT" id="C7">this binding</coref> results from cooperative interactions between <coref ref="C6" min="proteins" type="IDENT" id="C8">these proteins</coref>.</sentence>
+<sentence id="S6">We show here that expression of <coref ref="C2" type="IDENT" id="C9">CIITA</coref> in MHC class II- cells triggers occupation of <coref ref="C4" type="IDENT" id="C10">the promoters</coref> by <coref ref="C8" min="complexes" type="IDENT" id="C11">these complexes</coref>.</sentence>
+<sentence id="S7">This observation raised <coref id="C12">the possibility</coref> <coref ref="C12" type="RELAT" id="C13">that</coref> the effect of <coref ref="C9" type="IDENT" id="C14">CIITA</coref> on <coref min="occupation" id="C15">promoter occupation</coref> is mediated by an effect on the cooperative stabilization of the DNA-bound multi-protein complexes.</sentence>
+<sentence id="S8">We show, however, that the presence of <coref ref="C14" type="IDENT" id="C16">CIITA</coref> does not affect the stability of the higher-order protein complex formed on DNA by <coref ref="C11" type="IDENT" id="C17">RFX, X2BP and NF-Y</coref>.</sentence>
+<sentence id="S9">This suggests other mechanisms for CIITA-induced promoter occupancy, such as an effect on chromatin structure leading to increased accessibility of <coref ref="C10" min="promoters" type="IDENT" id="C18">MHC class II promoters</coref>.</sentence>
+<sentence id="S10">This ability of <coref ref="C16" type="IDENT" id="C19">CIITA</coref> to facilitate <coref ref="C15" min="occupation" type="IDENT" id="C20">promoter occupation</coref> is undissociable from <coref ref="C19" type="PRON" id="C21">its</coref> transactivation potential.</sentence>
+<sentence id="S11">Finally, we conclude that this effect of <coref ref="C19" type="IDENT" id="C22">CIITA</coref> is cell-type specific, since expression of <coref ref="C22" type="IDENT" id="C23">CIITA</coref> is not required for normal occupation of <coref ref="C18" min="promoters" type="IDENT" id="C24">MHC class II promoters</coref> in B lymphocytes.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9406848">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9406848</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">C/EBP</coref> activates <coref min="promoter" id="C2">the human corticotropin-releasing hormone gene promoter</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The purpose of these studies was to identify whether transcription factors, associated with cytokine signalling, affected promoter activity of the corticotropin releasing hormone (CRH) gene.</sentence>
+<sentence id="S3">Fragments of a 3.6 kb sequence of <coref ref="C2" min="promoter" type="IDENT" id="C3">the human CRH gene promoter</coref> were amplified by PCR and ligated upstream of a CAT reporter.</sentence>
+<sentence id="S4">These constructs were transfected into a variety of cell lines, either alone or together, with transcription factor expression vectors.</sentence>
+<sentence id="S5">Basal activity of a 3070 bp CRH promoter fragment was only seen in neuronal and lymphoblastoid cell lines.</sentence>
+<sentence id="S6">Promoter activity was increased by the transcription factors C/EBPbeta (NF-IL6) and more strongly, by C/EBPdelta (NF-IL6beta).</sentence>
+<sentence id="S7">Increased CRH promoter activity following phorbol ester treatment was inhibited by a dominant negative NF-IL6 mutant, showing that the effects of phorbol ester were principally mediated by <coref ref="C1" type="IDENT" id="C4">C/EBP</coref>.</sentence>
+<sentence id="S8">Moreover, the inverse changes in the expression of CRH in <coref id="C5">the hypothalamus and spleens of arthritic rats</coref> were paralleled by similar inverse changes in NF-IL6beta expression in <coref ref="C5" min="organs" type="IDENT" id="C6">these organs</coref>.</sentence>
+<sentence id="S9">These data show that some transcription factors associated with cytokine signalling can also activate <coref ref="C3" min="promoter" type="IDENT" id="C7">the CRH promoter</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

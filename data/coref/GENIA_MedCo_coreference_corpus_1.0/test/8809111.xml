@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8809111">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8809111</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Characterization of the human myeloid cell nuclear differentiation antigen gene promoter.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C1">MNDA (myeloid cell nuclear differentiation antigen)</coref> is an interferon alpha regulated nuclear protein expressed only in cells of the human myelomonocytic lineage.</sentence>
+<sentence id="S3">To identify mechanisms responsible for <coref min="expression" id="C3">this lineage-specific and interferon-regulated expression</coref>, <coref min="sequence" id="C6">the 5' flanking sequence of <coref ref="C1" type="IDENT" id="C5">the gene</coref></coref> has been characterized.</sentence>
+<sentence id="S4">Two interferon-stimulated response elements (ISRE) flank a multiple transcription start site region identifying <coref ref="C1" type="IDENT" id="C2">MNDA</coref> as a TATA-less interferon-regulated gene.</sentence>
+<sentence id="S5">Other DNA elements present include a cluster of Myb sites, several Ets, an Ets related PU.1 site and an Sp1 site located within 600 bp of the transcription start sites.</sentence>
+<sentence id="S6">In addition, DNA methylation was revealed as one of the possible factors in establishing <coref ref="C3" min="expression" type="IDENT" id="C4">MNDA expression</coref>.</sentence>
+<sentence id="S7"><coref ref="C6" min="sequence" type="IDENT" id="C7">The 5' flanking sequence</coref> has <coref min="activity" id="C8">promoter activity</coref> <coref ref="C8" type="RELAT" id="C9">which</coref> is elevated by <coref id="C11">interferon alpha</coref>.</sentence>
+<sentence id="S8">The findings indicate that <coref ref="C4" min="expression" type="IDENT" id="C10">MNDA expression</coref> is regulated by mechanisms similar to other myelomonocytic cell specific genes and genes up-regulated by <coref ref="C11" type="IDENT" id="C12">interferon alpha</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

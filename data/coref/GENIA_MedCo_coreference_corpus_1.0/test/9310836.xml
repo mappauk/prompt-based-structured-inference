@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9310836">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9310836</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="elements" id="C1">Four P-like elements</coref> are required for optimal transcription of the mouse IL-4 gene: involvement of a distinct set of nuclear factor of activated T cells and activator protein-1 family proteins.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">We previously identified <coref min="sequence" id="C2">the P sequence</coref> as a critical regulatory element of the human IL-4 promoter.</sentence>
+<sentence id="S3">In <coref min="promoter" id="C3">the mouse IL-4 promoter</coref>, there are <coref min="elements" id="C4">five elements homologous to <coref ref="C2" min="sequence" type="IDENT" id="C5">the human P sequence</coref></coref> designated <coref ref="C4" type="IDENT" id="C6"><coref id="C7">conserved lymphokine element 0 (CLE0)</coref>, <coref id="C8">P</coref>, <coref id="C9">P2</coref>, <coref id="C10">P3</coref> and <coref id="C11">P4</coref></coref>.</sentence>
+<sentence id="S4">To characterize the role of <coref ref="C6" min="elements" type="IDENT" id="C12">these P-like elements</coref> and <coref ref="C12" type="PRON" id="C13">their</coref> binding factors in <coref ref="C3" min="promoter" type="IDENT" id="C14">the native promoter</coref>, we did transient transfection and <coref min="assays" id="C15">electrophoretic mobility shift assays (EMSA)</coref>.</sentence>
+<sentence id="S5">Transfection of EL-4 cells with the IL-4 promoter-reporter constructs carrying mutated P-like elements showed that <coref ref="C1" min="elements" type="IDENT" id="C16">four P-like elements</coref>, <coref ref="C16" type="APPOS" id="C17"><coref ref="C7" type="IDENT" id="C18">CLE0</coref>, <coref ref="C8" type="IDENT" id="C19">P</coref>, <coref ref="C9" type="IDENT" id="C20">P2</coref> and <coref ref="C11" type="IDENT" id="C21">P4</coref></coref>, but not P3, were required for optimal activation of <coref ref="C14" min="promoter" type="IDENT" id="C22">the IL-4 promoter</coref>.</sentence>
+<sentence id="S6"><coref ref="C15" type="IDENT" id="C23">EMSA</coref> showed that both constitutive and inducible complexes bound to <coref ref="C17" type="IDENT" id="C24"><coref ref="C18" type="IDENT" id="C25">CLE0</coref>, <coref ref="C19" type="IDENT" id="C26">P</coref>, <coref ref="C20" type="IDENT" id="C27">P2</coref> and <coref ref="C21" type="IDENT" id="C28">P4</coref></coref>, whereas only a constitutive complex bound to <coref ref="C10" type="IDENT" id="C29">P3</coref>.</sentence>
+<sentence id="S7">In competition and antibody supershift assays in <coref ref="C23" type="IDENT" id="C30">EMSA</coref>, complexes formed with <coref ref="C26" type="IDENT" id="C31">P</coref> or <coref ref="C27" type="IDENT" id="C32">P2</coref> proved to contain nuclear factor of activated T cells (NFAT) family proteins as major components.</sentence>
+<sentence id="S8">Activator protein (AP)-1 family proteins interacted with <coref ref="C24" type="IDENT" id="C33"><coref ref="C25" type="IDENT" id="C34">CLE0</coref>, <coref ref="C31" type="IDENT" id="C35">P</coref>, <coref ref="C32" type="IDENT" id="C36">P2</coref> and <coref ref="C28" type="IDENT" id="C37">P4</coref></coref>.</sentence>
+<sentence id="S9">NFAT/AP-1 complex formed only with <coref ref="C35" type="IDENT" id="C38">P</coref> and <coref ref="C36" type="IDENT" id="C39">P2</coref>.</sentence>
+<sentence id="S10">Cross-competition assays among <coref ref="C12" min="elements" type="IDENT" id="C40">the P-like elements</coref> revealed element-specific and common complexes.</sentence>
+<sentence id="S11"><coref min="repeats" id="C41">Six tandem repeats</coref> of the P element linked to the SV40 promoter responded to phorbol 12-myristate 13-acetate, while <coref ref="C41" type="PRON" id="C42">that</coref> of other elements did not.</sentence>
+<sentence id="S12">It would thus appear that components of each P-like element-binding complexes are not identical and may coordinately contribute to transcriptional activity.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

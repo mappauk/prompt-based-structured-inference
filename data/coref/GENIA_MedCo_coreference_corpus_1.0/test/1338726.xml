@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=1338726">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>1338726</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Aldosterone-</coref>specific membrane receptors and rapid non-genomic actions of mineralocorticoids.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Functional studies in extrarenal, non-epithelial cells such as smooth muscle cells and more recently circulating <coref id="C2">human lymphocytes</coref> have provided increasing evidence that <coref ref="C1" type="IDENT" id="C3">aldosterone</coref> produces not only classical genomic effects, but also rapid, non-genomic effects on transmembrane electrolyte movements.</sentence>
+<sentence id="S3">These involve activation of the sodium/proton exchanger of the cell membrane at very low, physiological concentrations of <coref ref="C3" type="IDENT" id="C4">aldosterone</coref> with an acute onset within 1-2 min.</sentence>
+<sentence id="S4">A second messenger cascade involved is <coref min="pathway" id="C5">the inositol 1,4,5-trisphosphate/calcium pathway</coref> <coref ref="C5" type="RELAT" id="C6">which</coref> responds over the same rapid time course.</sentence>
+<sentence id="S5">Such changes clearly cannot be explained by <coref min="mechanisms" id="C7">genomic mechanisms</coref>, <coref ref="C7" type="RELAT" id="C8">which</coref> are responsible for later effects than the membrane related rapid responses.</sentence>
+<sentence id="S6">The mechanisms underlying these rapid effects of <coref ref="C4" type="IDENT" id="C9">aldosterone</coref> on electrolytes have been extensively studied in <coref ref="C2" type="IDENT" id="C10">human lymphocytes</coref>, <coref ref="C10" type="RELAT" id="C11">which</coref> thus may represent valuable tools in the delineation of the receptor-effector mechanisms involved.</sentence>
+<sentence id="S7">The unique characteristics of <coref ref="C5" type="IDENT" id="C12">this new pathway</coref> for steroid action include <coref ref="C12" type="PRON" id="C13">its</coref> rapid time course, 10,000-fold selectivity for <coref ref="C9" type="IDENT" id="C14">aldosterone</coref> over cortisol and the ineffectiveness of spironolactones, classical mineralocorticoid antagonists, as antagonists of the response.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

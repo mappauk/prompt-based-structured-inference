@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8151786">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8151786</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Human immunodeficiency virus type 1 Nef protein</coref> down-regulates <coref id="C2">transcription factors NF-kappa B and AP-1</coref> in <coref id="C3">human T cells</coref> in vitro after T-cell receptor stimulation.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref ref="C1" type="IDENT" id="C4">Human immunodeficiency virus type 1 (HIV-1) negative factor (Nef)</coref> has been shown to down-regulate <coref ref="C2" min="factors" type="IDENT" id="C5">the transcription factors NF-kappa B and AP-1</coref> in vitro.</sentence>
+<sentence id="S3">To define the mechanism of action of <coref ref="C4" min="protein" type="IDENT" id="C6">the Nef protein</coref>, <coref id="C7">the signal transduction pathways</coref> <coref ref="C7" type="RELAT" id="C8">which</coref> may be affected in <coref ref="C3" min="cells" type="IDENT" id="C9">T cells</coref> by constitutive expression of <coref id="C10">the nef gene</coref> were examined.</sentence>
+<sentence id="S4"><coref id="C11">Stimulation of <coref ref="C9" min="cells" type="IDENT" id="C12">T cells</coref></coref> with <coref id="C13">tumor necrosis factor</coref>, <coref ref="C13" type="APPOS" id="C14">interleukin-1</coref>, or lipopolysaccharide resulted in the recruitment of transcriptional factors to a similar level whether or not <coref ref="C12" min="cells" type="IDENT" id="C15">the cells</coref> expressed <coref ref="C10" min="gene" type="IDENT" id="C16">the nef gene</coref>.</sentence>
+<sentence id="S5">On the other hand, <coref ref="C11" min="stimulation" type="IDENT" id="C17">stimulation of <coref ref="C15" min="cells" type="IDENT" id="C18">T cells</coref></coref> by mitogens or antibodies to <coref id="C19">the T-cell receptor (TCR)-CD3 complex</coref> resulted in the down-regulation of <coref ref="C5" min="factors" type="IDENT" id="C20">transcriptional factors NF-kappa B and AP-1</coref> in cells expressing <coref ref="C16" type="IDENT" id="C21">the nef gene</coref> compared with cells not expressing <coref ref="C21" min="gene" type="IDENT" id="C22">the nef gene</coref>.</sentence>
+<sentence id="S6">Because <coref ref="C6" min="protein" type="IDENT" id="C23">the Nef protein</coref> does not affect the surface expression of <coref ref="C19" min="complex" type="IDENT" id="C24">the CD3-TCR complex</coref>, we conclude that <coref ref="C23" min="protein" type="IDENT" id="C25">the Nef protein</coref> down-regulates <coref ref="C20" min="factors" type="IDENT" id="C26">the transcriptional factors NF-kappa B and AP-1</coref> in <coref ref="C18" min="cells" type="IDENT" id="C27">T cells</coref> in vitro through an effect on the TCR-dependent signal transduction pathway.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

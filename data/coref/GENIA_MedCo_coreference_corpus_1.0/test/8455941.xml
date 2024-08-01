@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8455941"><PubmedArticleSet><PubmedArticle><MedlineCitation>
+<PMID>8455941</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">The transcriptionally active factors mediating the effect of <coref min="TRANSACTIVATOR" id="C1">the HTLV-I <coref id="C2">Tax</coref> transactivator</coref> on <coref id="C3">the IL-2R alpha kappa B</coref> enhancer include the product of the c-rel proto-oncogene.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="TRANSACTIVATOR" ref="C1" id="C4" type="IDENT">The transactivator HTLV-I <coref ref="C2" id="C5" type="IDENT">Tax</coref></coref> activates the promoter of the gene coding for <coref ref="C3" id="C6" type="IDENT">the interleukin 2 alpha-chain receptor (IL-2R alpha) via <coref id="C7">a kappa B site</coref></coref> <coref ref="C7" id="C8" type="RELAT">that</coref> can bind several protein species of <coref id="C9">the rel family</coref>.</sentence>
+<sentence id="S3"><coref id="C10">Tax1</coref> strongly activates the enhancer activity of <coref ref="C6" id="C11" type="OTHER">this motif</coref>, in <coref id="C12">both epithelial HeLa and lymphoid Jurkat cells</coref>.</sentence>
+<sentence id="S4">This activation was not observed in <coref min="F9 CELLS" id="C13">undifferentiated embryocarcinoma F9 cells</coref>.</sentence>
+<sentence id="S5">Overexpression of the p50, p65 and <coref id="C14">Rel</coref> proteins in <coref ref="C12 C13" id="C15" type="WHOLE-PART">these cells</coref> showed that significant activation of <coref ref="C6" id="C16" type="IDENT">the IL-2R alpha kappa B site</coref> was observed only with <coref ref="C14" id="C17" type="IDENT">Rel</coref> and Rel plus p65.</sentence>
+<sentence id="S6">Moreover, whereas both <coref ref="C5" id="C18" type="IDENT">Tax</coref> and <coref id="C19">phorbol 12-myristate 13-acetate (PMA)</coref> are able to efficiently induce the binding of NF-kappa B to <coref ref="C16" id="C20" type="IDENT">the IL-2R alpha kappa B site</coref>, <coref ref="C19" id="C21" type="IDENT">PMA</coref> is functionally inactive.</sentence>
+<sentence id="S7">Using the <coref id="C22">DNA</coref> affinity precipitation assay, we observed that <coref ref="C10" id="C23" type="IDENT">Tax1</coref> is able to efficiently induce the binding of <coref ref="C17" id="C24" type="IDENT">Rel</coref>, whereas <coref ref="C21" id="C25" type="IDENT">PMA</coref> is not.</sentence>
+<sentence id="S8">This established a clear difference between <coref ref="C10 C27" id="C26" type="IDENT">both stimuli</coref>, indicating that <coref ref="C24" id="C27" type="IDENT">Rel</coref> is <coref min="FACTOR" ref="C27" id="C28" type="IDENT">the functionally active factor</coref>.</sentence>
+<sentence id="S9">We conclude from these results that the functional activity of <coref min="MEMERS" id="C29">members of <coref ref="C9" id="C30" type="IDENT">the rel family</coref></coref> is regulated by <coref ref="C29" id="C31" type="IDENT">their</coref> interaction with <coref ref="C22" id="C32" type="IDENT">DNA and</coref> that <coref ref="C27" id="C33" type="IDENT">Rel</coref> can be a potent transcriptional activator on specific kappa B sites.</sentence>
+</AbstractText>
+</Abstract></Article></MedlineCitation></PubmedArticle></PubmedArticleSet></Annotation>

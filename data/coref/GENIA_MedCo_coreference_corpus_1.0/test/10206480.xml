@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=10206480">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>10206480</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">Amelioration of <coref min="pancreatitis" id="C1">rat cerulein pancreatitis</coref> by <coref min="peptide" id="C2">guamerin-derived peptide</coref>, <coref ref="C2" min="inhibitor" type="APPOS" id="C3">a novel elastase inhibitor</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">Increased activity of various proteases is observed in both human and experimental pancreatitis; however, the information on the effects of specific protease inhibitors on the disease is limited.</sentence>
+<sentence id="S3">In this study we show that <coref ref="C2" min="inhibitor" type="IDENT" id="C4">a novel elastase inhibitor</coref>, <coref ref="C4" min="peptide" type="APPOS" id="C5">guamerin-derived synthetic peptide (GDSP)</coref>, improves the parameters of cerulein-induced acute pancreatitis in the rat.</sentence>
+<sentence id="S4">The effects of <coref ref="C4" type="IDENT" id="C6">GDSP</coref> on pancreatic weight, serum amylase and lipase, morphologic changes in the pancreas, <coref min="infiltration" id="C7">neutrophil infiltration</coref>, and nuclear factor KB (NF-KB) activation were measured in rats infused with supramaximal dose of <coref id="C8">cerulein</coref> (5 (g/kg/h) for 6 h.</sentence>
+<sentence id="S5"><coref min="effects" id="C9">The effects of <coref ref="C6" type="IDENT" id="C10">GDSP</coref></coref> were also measured on superoxide formation by activated human neutrophils.</sentence>
+<sentence id="S6"><coref ref="C9" min="effects" type="IDENT" id="C11"><coref id="C12">The effects</coref> of <coref ref="C10" type="IDENT" id="C13">GDSP</coref></coref> were compared with <coref ref="C12" type="PRON" id="C14">those</coref> of <coref min="inhibitor" id="C15">another elastase inhibitor</coref>, <coref ref="C15" type="APPOS" id="C16">elastatinal</coref>.</sentence>
+<sentence id="S7"><coref ref="C13" type="IDENT" id="C17">GDSP</coref> significantly inhibited edema formation, <coref ref="C7" min="infiltration" type="IDENT" id="C18">neutrophil infiltration</coref>, acinar cell damage, and plasma lipase and amylase increases caused by <coref ref="C8" type="IDENT" id="C19">cerulein</coref>.</sentence>
+<sentence id="S8"><coref ref="C17" type="IDENT" id="C20">GDSP</coref> also completely inhibited superoxide formation in the human neutrophils stimulated by N-formyl-methionine-leucine-phenyl-alanine (fMLP) or 12-O-tetradecanoylphorbol-13-acetate (TPA).</sentence>
+<sentence id="S9"><coref ref="C15" type="IDENT" id="C21">Elastatinal</coref> had some of the same effects as <coref ref="C20" type="IDENT" id="C22">GDSP</coref> but was less potent and effective.</sentence>
+<sentence id="S10">These results demonstrate a beneficial effect of <coref ref="C22" type="IDENT" id="C23">GDSP</coref>, <coref ref="C23" min="inhibitor" type="APPOS" id="C24">a novel specific elastase inhibitor</coref>, on the development of <coref ref="C1" min="pancreatitis" type="IDENT" id="C25">rat cerulein pancreatitis</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

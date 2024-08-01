@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=9826028">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>9826028</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref id="C1">Triptolide</coref> induces apoptotic death of <coref id="C2">T lymphocyte</coref>.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref min="extract" id="C3">Extract of Tripterygium wilfordii Hook. f (TWHf)</coref> has immunosuppressive activity and has been used as anti-inflammatory agent in traditional Chinese medicine for centuries.</sentence>
+<sentence id="S3">Recent studies have demonstrated that <coref ref="C1" type="IDENT" id="C4">triptolide</coref> is the major active component in <coref id="C5">the extract</coref> <coref ref="C5" type="RELAT" id="C6">that</coref> inhibits antigen or mitogen-induced T cell proliferation.</sentence>
+<sentence id="S4">In attempting to investigate <coref ref="C4" type="PRON" id="C7">its</coref> effect on activation of <coref ref="C2" type="IDENT" id="C8">T lymphocytes</coref>, we found <coref ref="C4" type="IDENT" id="C9">triptolide</coref> induces <coref min="death" id="C10">apoptotic death</coref> of T cell hybridomas and peripheral T cells but not <coref ref="C10" type="PRON" id="C11">that</coref> of thymocytes.</sentence>
+<sentence id="S5">The triptolide-induced apoptosis is accompanied by increase of DEVD-cleavable caspases activity and degradation of caspase substrate poly (ADP-ribose) polymerase (PARP).</sentence>
+<sentence id="S6"><coref min="inhibitor" id="C12">A specific inhibitor of <coref id="C13">caspases</coref></coref>, <coref ref="C12" type="APPOS" id="C14">zVAD-FMK</coref>, prevents triptolide-induced PARP degradation and DNA fragmentation but not growth arrest.</sentence>
+<sentence id="S7">Furthermore, enforced expression of Bcl-2 inhibited triptolide-induced degradation of PARP and apoptosis.</sentence>
+<sentence id="S8">These results indicate that <coref ref="C9" type="IDENT" id="C15">triptolide</coref> induces T cell apoptosis through activating <coref ref="C13" type="IDENT" id="C16">caspases</coref>, and suggest the growth arrest and apoptotic effect of <coref ref="C15" type="IDENT" id="C17">triptolide</coref> may contribute to the immunosuppressive activity of <coref ref="C3" min="extract" type="IDENT" id="C18">TWHf extract</coref>.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

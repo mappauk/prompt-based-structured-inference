@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8389085">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8389085</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1">A concatenated form of <coref id="C1">Epstein-Barr viral DNA</coref> in lymphoblastoid cell lines induced by transfection with BZLF1.</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2">The replicative form of <coref ref="C1" type="IDENT" id="C2"><coref id="C3">Epstein-Barr virus (EBV)</coref> DNA</coref> was studied using <coref min="cell lines" id="C4">two lymphoblastoid cell lines</coref>, <coref ref="C4" type="APPOS" id="C5">X50-7 and 6F11</coref>, <coref ref="C5" type="RELAT" id="C6">which</coref> are latently infected by <coref ref="C3" type="IDENT" id="C7">Epstein-Barr virus</coref>.</sentence>
+<sentence id="S3">The lytic cycle of EBV infection was induced by transfection of the cells with the BRLF1/BZLF1 coding region of the P3HR-1 defective genome.</sentence>
+<sentence id="S4">We combined two techniques to identify the productive replicative form of <coref ref="C2" type="IDENT" id="C8">Epstein-Barr viral DNA</coref> in the lytic cycle-induced cells.</sentence>
+<sentence id="S5">Restriction enzyme analysis followed by Southern blot hybridization identified a significant increase in the fused fragment encompassing both ends of <coref ref="C3" type="IDENT" id="C9">EBV DNA</coref>.</sentence>
+<sentence id="S6">This indicates an increase in either episomal DNA or concatameric linear DNA.</sentence>
+<sentence id="S7">Southern blot analysis of in situ lysing gels revealed that the cellular content of linear EBV DNA was also increased significantly after the initiation of the viral lytic cycle, while the amount of circular DNA remained approximately constant.</sentence>
+<sentence id="S8">We propose from these results that the source of the fused fragment encompassing both ends of <coref ref="C9" type="IDENT" id="C10">EBV DNA</coref> is <coref min="molecule" id="C11">a concatenated linear EBV DNA molecule</coref>, and that <coref ref="C11" min="molecule" type="IDENT" id="C12">such a concatenated molecule</coref> most likely represents a replicative form of <coref ref="C10" type="IDENT" id="C13">EBV DNA</coref> in productively infected cells.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>

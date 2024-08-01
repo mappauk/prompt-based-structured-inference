@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Annotation PUBLIC "-//GENIA//DTD GENIA ANNOTATION COREF 1.0//EN" "GENIA_coref_10.dtd">
+<?xml-stylesheet type="text/css" href="GENIA_coref_10.css"?>
+<Annotation annotates="http://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;amp;retmode=xml&amp;amp;rettype=medline&amp;amp;id=8602529">
+<PubmedArticleSet>
+<PubmedArticle>
+<MedlineCitation>
+<PMID>8602529</PMID>
+<Article>
+<ArticleTitle>
+<sentence id="S1"><coref min="HISTONE DEACETYLASE" id="C1">A mammalian histone deacetylase</coref> related to <coref min="REGULATOR" id="C2">the yeast transcriptional regulator Rpd3p</coref> [see comments]</sentence>
+</ArticleTitle>
+<Abstract>
+<AbstractText>
+<sentence id="S2"><coref id="C3">Trapoxin</coref> is a microbially derived <coref id="C4">cyclotetrapeptide</coref> <coref ref="C4" type="RELAT" id="C5">that</coref> inhibits histone deacetylation in vivo and causes mammalian cells to arrest in the cell cycle.</sentence>
+<sentence id="S3">A <coref ref="C6" type="IDENT" id="C6">trapoxin</coref> affinity matrix was used to isolate <coref min="PROTEINS" id="C7"><coref min="PROTEINS" id="C8">two nuclear proteins</coref> <coref ref="C8" type="RELAT" id="C9">that</coref> copurified with <coref ref="C1" min="HISTONE DEACETYLASE" type="IDENT" id="C10">histone deacetylase</coref> activity</coref>.</sentence>
+<sentence id="S4"><coref ref="C7" type="IDENT" id="C11">Both proteins</coref> were identified by peptide microsequencing, and a complementary DNA encoding the histone deacetylase catalytic subunit (HD1) was cloned from a human Jurkat T cell library.</sentence>
+<sentence id="S5">As the predicted protein is very similar to <coref ref="C2" min="REGULATOR" type="IDENT" id="C12">the yeast transcriptional regulator Rpd3p</coref>, these results support a role for <coref ref="C10" min="HISTONE DEACETYLASE" type="IDENT" id="C13">histone deacetylase</coref> as a key regulator of eukaryotic transcription.</sentence>
+</AbstractText>
+</Abstract>
+</Article>
+</MedlineCitation>
+</PubmedArticle>
+</PubmedArticleSet>
+</Annotation>
