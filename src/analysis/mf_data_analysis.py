@@ -1,26 +1,104 @@
 import src.helpers.prompting.moral_prompting as moral_prompting
 import src.helpers.prompting.mf_prompt_constants as constants
-import src.helpers.dataset_loader as dataset_loader
+import src.helpers.loaders.mf_dataset_loader as dataset_loader
+import src.analysis.analysis_helper as analysis_helper
 import sys
 import sklearn.metrics as sk
 
 def main():
     dataset_dir = sys.argv[1]
     input_path = sys.argv[2]
-    labels = dataset_loader.load_frame_labels(dataset_dir)
-    predictions = dataset_loader.load_results(input_path)
-    true_labels = []
-    predicted_labels = []
-    for index, row in labels.iterrows():
-        true_labels.append(row['Label'])
-        predicted_labels.append(predictions[row['Id']]['MoralFrame'])
+    mf_labels = dataset_loader.load_frame_labels(dataset_dir)
+    role_labels = dataset_loader.load_role_labels(dataset_dir)
+    data = dataset_loader.load_moral_frame_data_parse_entity_labels(dataset_dir)
+    predictions = analysis_helper.load_results(input_path)
+    mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+    role_labels = role_labels[~role_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+    data = data[~data['Id'].isin(constants.IDS_TO_EXCLUDE)]
+    for id in constants.IDS_TO_EXCLUDE:
+        predictions.pop(id, None)
+    
+    true_mf_labels = []
+    predicted_mf_labels = []
+    true_role_labels = []
+    predicted_role_labels = []
+    for index, row in mf_labels.iterrows():
+        true_mf_labels.append(row['Label'])
+        predicted_mf_labels.append(predictions[row['Id']]['MoralFrame'])
+    
+    true_role_labels = []
+    predicted_role_labels = []
+    for index, row in role_labels.iterrows():
+        predicted_entities = predictions[row['Id']]['EntityRoles']
+        for predicted_entity in predicted_entities:
+            if predicted_entity['Entity'] == row['Entity']:
+                true_role_labels.append(row['EntityLabel'])
+                predicted_role_labels.append(predicted_entity['Label'])
+    
+    print('Moral Foundations Macro F1:')
+    print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='macro'))
+    print('Moral Foundations Micro F1:')
+    print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='micro'))
+
+    print('Moral Role Macro F1:')
+    print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='macro'))
+    print('Moral Role Micro F1:')
+    print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='micro'))
+
+    constraint_violation_calculation(data, predictions)
 
 
-    print('Macro F1:')
-    print(sk.f1_score(true_labels, predicted_labels, labels=constants.MORAL_FOUNDATIONS, average='macro'))
-
-    print('Micro F1:')
-    print(sk.f1_score(true_labels, predicted_labels, labels=constants.MORAL_FOUNDATIONS, average='micro'))
+def constraint_violation_calculation(data, predictions):
+    entity_frame_mismatch = 0
+    duplicate_role_assignment = 0
+    polarity_violation = 0
+    for id, id_result in predictions.items():
+        entity_pred_dict = {}
+        if 'EntityRoles' in id_result:
+            for entity_pred in id_result['EntityRoles']:
+                if  id_result['MoralFrame'] != constants.MORAL_FOUNDATION_ROLE_TO_MF[entity_pred['Label']]:
+                    entity_frame_mismatch += 1
+                if entity_pred['Label'] in entity_pred_dict:
+                    duplicate_role_assignment += 1
+                else:
+                    entity_pred_dict[entity_pred['Label']] = 1
+    data_groupings = data.groupby(['Ideology', 'Topic', 'Entity'])
+    for group_name, group in data_groupings:
+        if len(group) == 1:
+            continue
+        '''
+        print('possible group')
+        print(group)
+        for item, row in group.iterrows():
+            for entity_result in predictions[row['Id']]['EntityRoles']:
+                if entity_result['Entity'] == row['Entity']:
+                    print(entity_result['Label'])
+        '''
+        counter = 0
+        for item, row in group.iterrows():
+            counter = counter + 1
+            for item_two, row_two in group.iloc[counter:].iterrows():
+                if row_two['Id'] != row['Id']:
+                #if row_two['Id'] != row['Id'] and row['Id'] in predictions and row_two['Id'] in predictions:
+                    row_one_result = predictions[row['Id']]
+                    entity_row_one_result = None
+                    entity_row_two_result = None
+                    if 'EntityRoles' in row_one_result:
+                        for entity_pred in row_one_result['EntityRoles']:
+                            if entity_pred['Entity'] == row['Entity']:
+                                entity_row_one_result = entity_pred['Label']
+                    row_two_result = predictions[row_two['Id']]
+                    if 'EntityRoles' in row_two_result:
+                        for entity_pred in row_two_result['EntityRoles']:
+                            if entity_pred['Entity'] == row_two['Entity']:
+                                entity_row_two_result = entity_pred['Label']
+                    if (entity_row_one_result in constants.POLARITY_MAP and 
+                        entity_row_two_result in constants.POLARITY_MAP and 
+                        constants.POLARITY_MAP[entity_row_one_result] != constants.POLARITY_MAP[entity_row_two_result]):
+                        polarity_violation += 1
+    print('Entity Role and Moral Frame Mismatch Constraint Violations: ' + str(entity_frame_mismatch))
+    print('Duplicate Role Assignment Constraint Violations: ' + str(duplicate_role_assignment))
+    print('Entity Polarity Constraint Violations: ' + str(polarity_violation))
     
 if __name__ == "__main__":
     main()

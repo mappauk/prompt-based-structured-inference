@@ -42,6 +42,10 @@ class GurobiInferenceModel:
                         rule_dict[rule_variable_name] = temp_rule
                         # build objective function which is the sum over all rule variables and their scores
                         objective = objective + temp_rule*row['Score']
+                        if rule.rule_type == RuleType.BINARY:
+                            temp_rule_n = m.addVar(vtype=GRB.BINARY, name=rule_variable_name + '_n')
+                            objective = objective + temp_rule_n*(1 - row['Score'])
+                            rule_dict[rule_variable_name + '_n'] = temp_rule_n
                         if not head_variable_name in head_dict:
                             # add variable for head predicate of rule as well as it's negation
                             temp_head = m.addVar(vtype=GRB.BINARY, name=head_variable_name)
@@ -53,11 +57,17 @@ class GurobiInferenceModel:
                             # add constraint that rule variable can only be activated if head predicate is activated
                             m.addConstr(temp_rule <= temp_head)
                             head_to_rule[head_variable_name] = [rule_variable_name]
+                            if rule.rule_type == RuleType.BINARY:
+                                m.addConstr(temp_rule_n <= temp_head_negate)
+                                head_to_rule[head_negation_variable_name] = [rule_variable_name + '_n']
                         else:
                             # add constraint that rule variable can only be activated if head predicate is activated
                             temp_head = head_dict[head_variable_name]
                             m.addConstr(temp_rule <= temp_head)
                             head_to_rule[head_variable_name].append(rule_variable_name)
+                            if rule.rule_type == RuleType.BINARY:
+                                m.addConstr(temp_rule_n <= head_dict[head_variable_name + "_n"])
+                                head_to_rule[head_negation_variable_name].append(rule_variable_name + '_n')
                     # constraint for multiclass variables to force only one label to be activated
                     if rule.rule_type == RuleType.MULTI_CLASS and rule.head_variable_format not in head_format_added:
                         head_format_added.add(rule.head_variable_format)
