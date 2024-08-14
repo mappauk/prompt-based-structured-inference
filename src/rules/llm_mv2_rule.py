@@ -92,12 +92,18 @@ class LLMMV2Rule(RuleTemplate):
             for i in range(int(self.num_votes/self.num_return_sequences)):
                 prompt_batch.append(formatted_prompt)
                 if len(prompt_batch) == self.batch_size:
-                    prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
+                    prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt'))
                     prompt_batch = []
         if len(prompt_batch) != 0:
-            prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type))
+            prompts.append(self.tokenizer(prompt_batch, padding=True, return_tensors='pt'))
         example_predictions = []
+        print('Memory After Batching:')
+        print(torch.cuda.mem_get_info())
         for i in range(len(prompts)):
+            print('Batch ' + str(i) + ':')
+            print('Memory before generate: ')
+            print(torch.cuda.mem_get_info())
+            prompts[i] = prompts[i].to(self.device_type)
             outputs = self.model.generate(
                 **prompts[i], 
                 max_new_tokens=10, 
@@ -110,6 +116,8 @@ class LLMMV2Rule(RuleTemplate):
                 for l in range(self.num_return_sequences):
                     next_output = text_outputs[k*self.num_return_sequences + l]
                     example_predictions.append(self.extract_labels(next_output))
+            print('Memory after generate: ')
+            print(torch.cuda.mem_get_info())
         example_predictions = np.array(example_predictions)
         example_predictions = example_predictions.reshape((int(example_predictions.shape[0]/self.num_votes)), self.num_votes)
         scores = []
