@@ -18,7 +18,7 @@ def main():
     # hyperparamaters
     device_type = 'cuda'
     num_shots = 0
-    prompt_batch_size = 16
+    prompt_batch_size = 8
     num_variations = 6
     input_path = sys.argv[1]
     output_path = sys.argv[2]
@@ -42,7 +42,7 @@ def main():
         example_path
     )
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    model, tokenizer = model_loader.load_mistral_model(device_type)
     # define rules
     rule_one = LLMGZRule(
         'rule_one',

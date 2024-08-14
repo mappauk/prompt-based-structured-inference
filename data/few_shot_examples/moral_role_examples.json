@@ -459,6 +459,25 @@
                 "Topic": "affordable care act",
                 "Entity": "employers",
                 "Id": "487360833673244672"
+            }
+        ]
+    },
+    {
+        "moral_role": "Target of loyalty/betrayal",
+        "negative_examples": [
+            {
+                "Tweet": "My staff celebrated #SpiritDay by wearing purple to stand in support of #LGBT youth and  to take a stand against bullying",
+                "Ideology": "Democrat",
+                "Topic": "lgbtq",
+                "Entity": "My staff",
+                "Id": "523217926120538112"
+            },
+            {
+                "Tweet": "I commend @Delta for their statement supporting the humane reforms made by President Obama to our immigration system.",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Entity": "@Delta",
+                "Id": "536928881199312896"
             },
             {
                 "Tweet": "Proud to stand for women today as @SenateDems rejected Republicans' latest push for new and  extreme limitations on women\u2019s reproductive rights",
@@ -480,25 +499,6 @@
                 "Topic": "guns",
                 "Entity": "@SenJackReed",
                 "Id": "652539760074969089"
-            }
-        ]
-    },
-    {
-        "moral_role": "Target of loyalty/betrayal",
-        "negative_examples": [
-            {
-                "Tweet": "My staff celebrated #SpiritDay by wearing purple to stand in support of #LGBT youth and  to take a stand against bullying",
-                "Ideology": "Democrat",
-                "Topic": "lgbtq",
-                "Entity": "My staff",
-                "Id": "523217926120538112"
-            },
-            {
-                "Tweet": "I commend @Delta for their statement supporting the humane reforms made by President Obama to our immigration system.",
-                "Ideology": "Democrat",
-                "Topic": "immigration",
-                "Entity": "@Delta",
-                "Id": "536928881199312896"
             }
         ],
         "positive_examples": [

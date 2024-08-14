@@ -22,21 +22,18 @@ def main():
     device_type = 'cuda'
     num_shots = 2
     num_variations = 6
-    prompt_batch_size = 16
+    prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
 
-    data = data.head(5)
-    with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-        print(data)
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_gz_coref_prompt_format(num_variations)
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    model, tokenizer = model_loader.load_mistral_model(device_type)
     # define rules
     rule_one = LLMGZRule(
         'rule_one',
