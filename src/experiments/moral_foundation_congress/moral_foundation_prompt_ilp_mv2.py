@@ -19,10 +19,10 @@ from typing import Dict
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 0
+    num_shots = 2
     topk = 5
     temperature = 0.5
-    num_votes = 4
+    num_votes = 10
     num_return_sequences = 2
     prompt_batch_size = 2
     input_path = sys.argv[1]
@@ -58,7 +58,7 @@ def main():
     )
 
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    model, tokenizer = model_loader.load_mistral_model(device_type)
     # define rules
     rule_one = LLMMV2Rule(
         'rule_one',

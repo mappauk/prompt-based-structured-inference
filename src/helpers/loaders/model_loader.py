@@ -23,8 +23,8 @@ def load_mixtral_model(device_type: str):
     return model, tokenizer
 
 def load_llama_model_small(device_type: str):
-    model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B", device_map=device_type, return_dict_in_generate=True)
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
+    model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3.1-8B", device_map=device_type, return_dict_in_generate=True)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B")
     tokenizer.padding_side = 'left'
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer

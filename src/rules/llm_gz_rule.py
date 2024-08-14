@@ -74,7 +74,8 @@ class LLMGZRule(RuleTemplate):
             for i in range(len(prompt_batch)):
                 start_token_positions.append(tokenized_prompt_batch.char_to_token(i, char_batch_posiitions[i]))
         for i in range(len(prompts)):
-            outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
+            with torch.no_grad():            
+                outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
             vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
             token_ids = prompts[i]['input_ids'].cpu().numpy()
             #token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
