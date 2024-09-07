@@ -22,8 +22,8 @@ def main():
     num_shots = 2
     topk = 5
     temperature = 0.5
-    prompt_batch_size = 2
-    num_votes = 3
+    prompt_batch_size = 8
+    num_votes = 10
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]

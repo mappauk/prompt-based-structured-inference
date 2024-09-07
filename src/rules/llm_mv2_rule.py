@@ -46,7 +46,7 @@ class LLMMV2Rule(RuleTemplate):
         lower_output = output.upper()
         min_index = len(output)
         for label in self.labels:
-            index = lower_output.find(label, 0, min_index)
+            index = lower_output.find(label, 0, len(output))
             if index >= 0 and index < min_index:
                 return label
         return None

@@ -77,8 +77,8 @@ class LLMGZRule(RuleTemplate):
             with torch.no_grad():            
                 outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
             vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
-            token_ids = prompts[i]['input_ids'].cpu().numpy()
-            #token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
+            #token_ids = prompts[i]['input_ids'].cpu().numpy()
+            token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
             batch_token_count = token_ids.shape[1]
             vocab_size = vocab_probs.shape[len(vocab_probs.shape) - 1]
             batch_size = token_ids.shape[0]
