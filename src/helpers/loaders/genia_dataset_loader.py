@@ -232,7 +232,7 @@ def preprocess_doc(filename):
     return examples
 
 
-def preprocess_genia_coref(filepath):
+def preprocess_genia_coref(filepath, analysis=False):
     """ Preprocess files to dataframe for the Genia dataset
     Input
     ------------
@@ -247,15 +247,20 @@ def preprocess_genia_coref(filepath):
     doc = []
     # Iterating over all the files in the set
     for f in tqdm(files):
-        if str(f)[-12:] in ["10214854.xml","/8513868.xml"]: #Skipping
+        if str(f)[-12:] in ["10214854.xml","/8513868.xml", '/10025668.xml']: #Skipping
             continue
         
         examples  = preprocess_doc(f)
         doc.extend(examples)
     columns = ["doc_id","passage","sentence","answer","entity1","entity2","entity1_id","entity2_id","sent1","sent2","sent1_id","sent2_id","ent1_ix","ent2_ix","in_order","ent1_ix_glob", "ent2_ix_glob", "mention_id1", "mention_id2"]
     data_df = pd.DataFrame(doc, columns=columns)
-    data_df['sent1'] = data_df['sent1'].apply(lambda sent_list: ' '.join(sent_list))
-    data_df['sent2'] = data_df['sent2'].apply(lambda sent_list: ' '.join(sent_list))
-    data_df['entity1_id'] = data_df['sent1_id'].astype(str) + data_df['mention_id1'].astype(str)
-    data_df['entity2_id'] = data_df['sent2_id'].astype(str) + data_df['mention_id2'].astype(str)
-    return data_df[['doc_id', 'entity1', 'entity2', 'entity1_id', 'entity2_id', 'sent1', 'sent2', 'answer']]
+    if not analysis:
+        data_df['sent1'] = data_df['sent1'].apply(lambda sent_list: ' '.join(sent_list))
+        data_df['sent2'] = data_df['sent2'].apply(lambda sent_list: ' '.join(sent_list))
+        data_df['entity1_id'] = data_df['sent1_id'].astype(str) + data_df['mention_id1'].astype(str)
+        data_df['entity2_id'] = data_df['sent2_id'].astype(str) + data_df['mention_id2'].astype(str)
+        return data_df[['doc_id', 'entity1', 'entity2', 'entity1_id', 'entity2_id', 'sent1', 'sent2', 'answer']]
+    else:
+        data_df['var_id_entity1'] = data_df['sent1_id'].astype(str) + data_df['mention_id1'].astype(str)
+        data_df['var_id_entity2'] = data_df['sent2_id'].astype(str) + data_df['mention_id2'].astype(str)
+        return data_df
