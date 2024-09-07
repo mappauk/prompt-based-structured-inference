@@ -22,9 +22,9 @@ def main():
     num_shots = 2
     topk = 5
     temperature = 0.5
-    num_votes = 5
-    num_return_sequences = 1
-    prompt_batch_size = 2
+    num_votes = 10
+    num_return_sequences = 2
+    prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
