@@ -385,42 +385,46 @@ def get_all_cliques(relations, max_vertices):
         clusters.append(m_clique)
         
     return clusters, violations
-
 def main():
     dataset_dir = sys.argv[1]
     input_path = sys.argv[2]
     data = genia_dataset_loader.preprocess_genia_coref(dataset_dir, True)
-    predictions = analysis_helper.load_results(input_path)
-    predicted_labels = []
-    for index, row in data.iterrows():
-        document_predictions = predictions[row['doc_id']]
-        for pred in document_predictions:
-            if pred['Entity_1'] == row['var_id_entity1'] and pred['Entity_2'] == row['var_id_entity2']:
-                predicted_labels.append('Yes' if int(pred['Value']) == 1 else 'No')
-    meta = {
-        'gold_dump_file': 'C:\\Users\\mpauk\\Downloads\\gold.txt',
-        'pred_dump_file': 'C:\\Users\\mpauk\\Downloads\\pred.txt',
-        'constrained': False
-    }
-    eval_ontonotes(data, predicted_labels, meta)
+    predictions_list = analysis_helper.load_multiple_results(input_path)
+    for prediction_data in predictions_list:
+        predicted_labels = []
+        for index, row in data.iterrows():
+            document_predictions = prediction_data['content'][row['doc_id']]
+            for pred in document_predictions:
+                if pred['Entity_1'] == row['var_id_entity1'] and pred['Entity_2'] == row['var_id_entity2']:
+                    predicted_labels.append('Yes' if int(pred['Value']) == 1 else 'No')
+        meta = {
+            'gold_dump_file': 'C:\\Users\\mpauk\\Downloads\\gold.txt',
+            'pred_dump_file': 'C:\\Users\\mpauk\\Downloads\\pred.txt',
+            'constrained': False
+        }
+        print('Results ' + prediction_data['name'] + ' :')
+        eval_ontonotes(data, predicted_labels, meta)
+        print('\n\n')
 '''
 def main():
     dataset_dir = sys.argv[1]
     input_path = sys.argv[2]
     data = genia_dataset_loader.preprocess_genia_coref(dataset_dir)
-    predictions = analysis_helper.load_results(input_path)
-    true_labels = []
-    predicted_labels = []
-    for index, row in data.iterrows():
-        true_labels.append(1 if row['answer'] == 'Yes' else 0)
-        document_predictions = predictions[row['doc_id']]
-        for pred in document_predictions:
-            if pred['Entity_1'] == row['entity1_id'] and pred['Entity_2'] == row['entity2_id']:
-                predicted_labels.append(int(pred['Value']))
-    print('F1: ')
-    print(sk.f1_score(true_labels, predicted_labels, average='macro'))
-'''    
-
+    predictions_list = analysis_helper.load_multiple_results(input_path)
+    for prediction_data in predictions_list:
+        true_labels = []
+        predicted_labels = []
+        for index, row in data.iterrows():
+            true_labels.append(1 if row['answer'] == 'Yes' else 0)
+            document_predictions = prediction_data['content'][row['doc_id']]
+            for pred in document_predictions:
+                if pred['Entity_1'] == row['entity1_id'] and pred['Entity_2'] == row['entity2_id']:
+                    predicted_labels.append(int(pred['Value']))
+        print('Results ' + prediction_data['name'] + ' :')
+        print('F1: ')
+        print(sk.f1_score(true_labels, predicted_labels, average='macro'))
+        print('\n\n')
+'''
     
 if __name__ == "__main__":
     main()

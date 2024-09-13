@@ -1,0 +1,36 @@
+{
+    "20347395214848": {
+        "annotations": [
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q1", 
+                    "startOffset": 89
+                }
+            ], 
+            [
+                {
+                    "endOffset": 99, 
+                    "label": "q1", 
+                    "startOffset": 56
+                }
+            ], 
+            [
+                {
+                    "endOffset": 46, 
+                    "label": "q4", 
+                    "startOffset": 37
+                }, 
+                {
+                    "endOffset": 115, 
+                    "label": "q5", 
+                    "startOffset": 112
+                }
+            ]
+        ], 
+        "author-label": 0, 
+        "dop": "2012-05-18 13:34:42", 
+        "issue": "isis", 
+        "text": "heading to the floor to vote DOWN an amendment granting constitutional rights to foreign terrorists captured on U.S. soil"
+    }
+}

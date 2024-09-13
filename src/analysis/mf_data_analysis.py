@@ -11,41 +11,43 @@ def main():
     mf_labels = dataset_loader.load_frame_labels(dataset_dir)
     role_labels = dataset_loader.load_role_labels(dataset_dir)
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(dataset_dir)
-    predictions = analysis_helper.load_results(input_path)
-    mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
-    role_labels = role_labels[~role_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
-    data = data[~data['Id'].isin(constants.IDS_TO_EXCLUDE)]
-    for id in constants.IDS_TO_EXCLUDE:
-        predictions.pop(id, None)
-    
-    true_mf_labels = []
-    predicted_mf_labels = []
-    true_role_labels = []
-    predicted_role_labels = []
-    for index, row in mf_labels.iterrows():
-        true_mf_labels.append(row['Label'])
-        predicted_mf_labels.append(predictions[row['Id']]['MoralFrame'])
-    
-    true_role_labels = []
-    predicted_role_labels = []
-    for index, row in role_labels.iterrows():
-        predicted_entities = predictions[row['Id']]['EntityRoles']
-        for predicted_entity in predicted_entities:
-            if predicted_entity['Entity'] == row['Entity']:
-                true_role_labels.append(row['EntityLabel'])
-                predicted_role_labels.append(predicted_entity['Label'])
-    
-    print('Moral Foundations Macro F1:')
-    print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='macro'))
-    print('Moral Foundations Micro F1:')
-    print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='micro'))
+    predictions_list = analysis_helper.load_multiple_results(input_path)
+    for prediction_data in predictions_list:
+        mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        role_labels = role_labels[~role_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        data = data[~data['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        predictions = prediction_data['content']
+        for id in constants.IDS_TO_EXCLUDE:
+            predictions.pop(id, None)
+        
+        true_mf_labels = []
+        predicted_mf_labels = []
+        true_role_labels = []
+        predicted_role_labels = []
+        for index, row in mf_labels.iterrows():
+            true_mf_labels.append(row['Label'])
+            predicted_mf_labels.append(predictions[row['Id']]['MoralFrame'])
+        
+        true_role_labels = []
+        predicted_role_labels = []
+        for index, row in role_labels.iterrows():
+            predicted_entities = predictions[row['Id']]['EntityRoles']
+            for predicted_entity in predicted_entities:
+                if predicted_entity['Entity'] == row['Entity']:
+                    true_role_labels.append(row['EntityLabel'])
+                    predicted_role_labels.append(predicted_entity['Label'])
+        print('Prediction File ' + prediction_data['name'] + ' :')
+        print('Moral Foundations Macro F1:')
+        print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='macro'))
+        print('Moral Foundations Micro F1:')
+        print(sk.f1_score(true_mf_labels, predicted_mf_labels, labels=constants.MORAL_FOUNDATIONS, average='micro'))
 
-    print('Moral Role Macro F1:')
-    print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='macro'))
-    print('Moral Role Micro F1:')
-    print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='micro'))
-
-    constraint_violation_calculation(data, predictions)
+        print('Moral Role Macro F1:')
+        print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='macro'))
+        print('Moral Role Micro F1:')
+        print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='micro'))
+        constraint_violation_calculation(data, predictions)
+        print('\n')
 
 
 def constraint_violation_calculation(data, predictions):
@@ -66,14 +68,6 @@ def constraint_violation_calculation(data, predictions):
     for group_name, group in data_groupings:
         if len(group) == 1:
             continue
-        '''
-        print('possible group')
-        print(group)
-        for item, row in group.iterrows():
-            for entity_result in predictions[row['Id']]['EntityRoles']:
-                if entity_result['Entity'] == row['Entity']:
-                    print(entity_result['Label'])
-        '''
         counter = 0
         for item, row in group.iterrows():
             counter = counter + 1
