@@ -4,59 +4,32 @@ from gurobipy import GRB
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from src.rules.llm_gz_rule import LLMGZRule
-import src.helpers.loaders.model_loader as model_loader
-import src.helpers.prompting.coref_prompting as coref_prompting
-import src.helpers.prompting.coref_prompt_constants as constants
 import src.helpers.loaders.genia_dataset_loader as genia_dataset_loader
-import src.helpers.loaders.ontonotes_dataset_loader as ontonotes_dataset_loader
 import src.analysis.analysis_helper as analysis_helper
+import src.helpers.loaders.prompt_data_loader as prompt_data_loader
 
 from src.rules.rule_type import RuleType
+from src.rules.rule_template import RuleTemplate
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
 
 
 def main():
-    # hyperparamaters
-    device_type = 'cuda'
-    num_shots = 2
-    num_variations = 6
-    prompt_batch_size = 8
     input_path = sys.argv[1]
-    output_path = sys.argv[2]
-    example_path = sys.argv[3] 
-    # load data
-    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    rule_groundings_path = sys.argv[2]
+    output_path = sys.argv[3]
 
-    # generate moral foundation prompt format strings
-    coref_prompts = coref_prompting.generate_one_pass_gz_coref_prompt_format(num_variations)
-    # load model
-    model, tokenizer = model_loader.load_mistral_model(device_type)
-    # define rules
-    rule_one = LLMGZRule(
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    rule_one = RuleTemplate(
         'rule_one',
         ['doc_id', 'entity1_id', 'entity1', 'entity2_id', 'entity2', 'sent1', 'sent2'],
-        ['coref', 'nocoref'],
+        [],
         'CF_{doc_id}_{entity1_id}_{entity2_id}',
         'RuleOne_{doc_id}_{entity1_id}_{entity2_id}',
-        RuleType.BINARY,
-        prompt_batch_size,
-        model,
-        tokenizer,
-        device_type,
-        coref_prompts,
-        constants.GEN_Z_COREF_FORMAT,
-        num_variations
+        RuleType.BINARY
     )
-    rules = {
-        rule_one.name: rule_one, 
-    }
-    # get rule groundings:
-    rule_groundings = {}
-    for rule_name, rule in rules.items():
-        rule_groundings[rule_name] = rule.get_rule_groundings(data)
+    rules = [rule_one]
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         coref_groupings = rule_groundings['rule_one'].groupby(['doc_id'])
@@ -86,7 +59,7 @@ def main():
 
     custom_rule_constraints = [constr_one]
     # perform inference
-    inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
+    inference_model = GurobiInferenceModel(rules, rule_groundings, data, custom_rule_constraints)
     variable_assignments = inference_model.inference()
     # save results
     results = {}
