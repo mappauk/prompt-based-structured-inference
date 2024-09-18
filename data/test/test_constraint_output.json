@@ -1,0 +1,42 @@
+{
+    "483723812664786945": {
+        "MoralFrame": "PURITY/DEGRADATION",
+        "EntityRoles": [
+            {
+                "Entity": "terrorists ",
+                "Label": "Entity being loyal"
+            },
+            {
+                "Entity": "constitutional rights to foreign terrorists",
+                "Label": "Entity being loyal"
+            }
+        ]
+    },
+    "4837238145": {
+        "MoralFrame": "PURITY/DEGRADATION",
+        "EntityRoles": [
+            {
+                "Entity": "terrorists ",
+                "Label": "Entity causing harm"
+            },
+            {
+                "Entity": "constitutional rights to foreign terrorists",
+                "Label": "Entity doing betrayal"
+            }
+        ]
+    },
+    "203478720395214848": {
+        "MoralFrame": "LOYALTY/BETRYAL"
+    },
+    "20347395214848": {
+        "MoralFrame": "FAIRNESS/CHEATING"
+    },
+    "20347214848": {
+        "MoralFrame": "LOYALTY/BETRYAL"
+    },
+    "20347848": {
+        "MoralFrame": "LOYALTY/BETRYAL"
+    }
+
+
+}

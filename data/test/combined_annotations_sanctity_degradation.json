@@ -1,0 +1,114 @@
+{
+    "483723812664786945": {
+        "annotations": [
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ], 
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ], 
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ],
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ]
+        ], 
+        "author-label": 0, 
+        "dop": "2012-05-18 13:34:42", 
+        "issue": "isis", 
+        "text": "heading to the floor to vote DOWN an amendment granting constitutional rights to foreign terrorists captured on U.S. soil"
+    },
+    "4837238145": {
+        "annotations": [
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ], 
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ], 
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ],
+            [
+                {
+                    "endOffset": 100, 
+                    "label": "q2", 
+                    "startOffset": 89
+                },
+                {
+                    "endOffset": 99, 
+                    "label": "q3", 
+                    "startOffset": 56
+                }
+            ]
+        ], 
+        "author-label": 0,
+        "dop": "2012-05-18 13:34:42", 
+        "issue": "isis", 
+        "text": "heading to the floor to vote DOWN an amendment granting constitutional rights to foreign terrorists captured on U.S. soil test"
+    }
+}
