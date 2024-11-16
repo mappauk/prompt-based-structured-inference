@@ -78,13 +78,21 @@ MORAL_FOUNDATION_ROLE_TO_MF = {
 # Moral Role Polarity map
 # 1 positive, 0 negative
 POLARITY_MAP = {
-    ENTITY_CAUSING_HARM: 0,
+    TARGET_CARE_HARM: 1,
     ENTITY_PROVIDING_CARE: 1,
+    TARGET_FAIRNESS_CHEATING: 1,
     ENTITY_ENSURING_FAIRNESS: 1,
-    ENTITY_DOING_CHEATING: 0,
+    TARGET_LOYALTY_BETRAYAL: 1,
     ENTITY_BEING_LOYAL: 1,
-    ENTITY_DOING_BETRAYAL: 0,
+    JUSTIFIED_AUTHORITY: 1,
+    JUSTIFIED_AUTHORITY_OVER: 1,
+    FAILING_AUTHORITY_OVER: 1,
+    TARGET_PURITY_DEGREDATION: 1,
     ENTITY_PRESERVING_PURITY: 1,
+    ENTITY_CAUSING_HARM: 0,
+    ENTITY_DOING_CHEATING: 0,
+    ENTITY_DOING_BETRAYAL: 0,
+    FAILING_AUTHORITY: 0,
     ENTITY_CAUSING_DEGRADATION: 0
 }
 
@@ -317,7 +325,7 @@ GEN_Z_MF_LABEL_SENTENCES = [
     "The moral foundation {MORAL_FOUNDATION} is conveyed in this tweet, defined as: {MORAL_FOUNDATION_DEFINITION}",
     "This tweet demonstrates the moral foundation {MORAL_FOUNDATION}, described as: {MORAL_FOUNDATION_DEFINITION}",
     "In this tweet, the author expresses the moral foundation {MORAL_FOUNDATION}, which is defined as: {MORAL_FOUNDATION_DEFINITION}",
-    "This tweet communicates the moral foundation {MORAL_FOUNDATION}, described as: {MORAL_FOUNDATION_DEFINITION}"
+    "This tweet communicates the moral foundation {MORAL_FOUNDATION}, described as: {MORAL_FOUNDATION_DEFINITION}",
     "This tweet conveys the moral foundation {MORAL_FOUNDATION}, defined as: {MORAL_FOUNDATION_DEFINITION}"
 ]
 

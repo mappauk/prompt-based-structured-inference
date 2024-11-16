@@ -219,7 +219,32 @@ def get_entities(id, tweet, annotations, questions, question_to_moral_foundation
                 ids.append(id)
                 labels.append(question_to_moral_foundation[question])
             break
-    return entities, ids, labels              
+    return entities, ids, labels
+
+def load_entity_map(datasetdir):
+    entities_filepath = os.path.join(datasetdir, 'all_entities.txt')
+    entity_map_filepath = os.path.join(datasetdir, 'has_entity_group.txt')
+    entity_plain_text_to_id = {}
+    entity_map = {}
+    with open(entities_filepath, encoding='utf-8') as f:
+        for line in f:
+            fields = line.strip().split('\t')
+            entity_plain_text_to_id[fields[1]] = fields[0]
+    with open(entity_map_filepath, encoding='utf-8') as f:
+        for line in f:
+            fields = line.strip().split('\t')
+            if fields[0] in entity_map:
+                entity_map[fields[0]].add(fields[1])
+            if fields[0] not in entity_map:
+                entity_map[fields[0]] = set([fields[1], fields[0]])
+            if fields[1] in entity_map:
+                entity_map[fields[1]].add(fields[0])
+            if fields[1] not in entity_map:
+                entity_map[fields[1]] = set([fields[1], fields[0]])
+    return entity_plain_text_to_id, entity_map
+
+
+
 
     
 
