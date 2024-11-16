@@ -59,7 +59,7 @@ class LLMGZRule(RuleTemplate):
                     formatted_prompt = sentence.format(**dict)
                     char_batch_posiitions.append(len(formatted_prompt) + 1)
                     formatted_prompt += self.generation_format.format(**dict)
-                    #print(formatted_prompt)
+                    print(formatted_prompt)
                     prompt_batch.append(formatted_prompt)
                     if len(prompt_batch) == self.batch_size:
                         tokenized_prompt_batch = self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type)
@@ -76,8 +76,7 @@ class LLMGZRule(RuleTemplate):
         for i in range(len(prompts)):
             with torch.no_grad():            
                 outputs = self.model(input_ids = prompts[i]['input_ids'], attention_mask=prompts[i]['attention_mask'], labels=prompts[i]['input_ids'])
-            vocab_probs = torch.nn.functional.softmax(outputs.logits, dim=2).cpu().detach().numpy()
-            #token_ids = prompts[i]['input_ids'].cpu().numpy()
+            vocab_probs = outputs.logits.cpu().detach().numpy()
             token_ids = prompts[i]['input_ids'].cpu().numpy()[:, 1:]
             batch_token_count = token_ids.shape[1]
             vocab_size = vocab_probs.shape[len(vocab_probs.shape) - 1]
@@ -94,8 +93,9 @@ class LLMGZRule(RuleTemplate):
         scores_by_variation = np.reshape(scores, (int(len(scores)/self.num_variations), self.num_variations))
         scores_across_variations = np.sum(scores_by_variation, axis=1)
         scores_by_label = np.reshape(scores_across_variations, (int(scores_across_variations.shape[0]/len(self.labels)), len(self.labels)))
-        softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(scores_by_label), dim=1)
+        softmax_over_labels = scores_by_label
         if self.rule_type == RuleType.BINARY:
+            softmax_over_labels = torch.nn.functional.softmax(torch.from_numpy(softmax_over_labels), dim=1)
             softmax_over_labels = softmax_over_labels[:, 0]
         final_scores = softmax_over_labels.flatten().tolist()
         result_data = pd.DataFrame(output_df_list)
