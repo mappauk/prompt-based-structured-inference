@@ -69,7 +69,6 @@ def main():
         print(sk.f1_score(true_labels, predicted_labels, average='macro'))
         print('Constraint Violations: ')
         constraint_violation_calculation(prediction_data)
-        break
     
 if __name__ == "__main__":
     main()

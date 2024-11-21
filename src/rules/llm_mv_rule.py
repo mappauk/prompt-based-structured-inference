@@ -25,7 +25,8 @@ class LLMMVRule(RuleTemplate):
                  prompt_map: str,
                  num_votes: int,
                  renormalize: bool = False,
-                 num_return_sequences: int = 2):
+                 num_return_sequences: int = 2,
+                 isseq2seq: bool = False):
         super(LLMMVRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
@@ -37,6 +38,7 @@ class LLMMVRule(RuleTemplate):
         self.renormalize = renormalize
         self.num_votes = num_votes
         self.num_return_sequences = num_return_sequences
+        self.isseq2seq = isseq2seq
     
     def get_prompt(self, label, dict):
         prompt = self.prompt_map[label]
@@ -64,8 +66,12 @@ class LLMMVRule(RuleTemplate):
         output_df_list = []
         scores = []
         prompt_batch = []
-        tIndex = self.tokenizer.encode('True')[1]
-        fIndex = self.tokenizer.encode('False')[1]
+        if self.isseq2seq:
+            tIndex = self.tokenizer.encode('true')[0]
+            fIndex = self.tokenizer.encode('false')[0]
+        else:
+            tIndex = self.tokenizer.encode('true')[1]
+            fIndex = self.tokenizer.encode('false')[1]
         for index, row in data_subset.iterrows():
             dict = { }
             for feature in self.features:
@@ -99,8 +105,8 @@ class LLMMVRule(RuleTemplate):
         example_predictions = []
         for i in range(len(prompts)):
             outputs = self.model.generate(
-                **prompts[i], 
-                max_new_tokens=1, 
+                **prompts[i],
+                max_new_tokens=1,
                 do_sample=True,
                 num_return_sequences=self.num_return_sequences,
                 prefix_allowed_tokens_fn=lambda batch_idx, prefix_beam: [tIndex, fIndex],
@@ -108,7 +114,10 @@ class LLMMVRule(RuleTemplate):
                 output_logits=True,
                 temperature=self.temperature, 
                 pad_token_id=self.tokenizer.eos_token_id)
-            text_outputs = self.tokenizer.batch_decode(outputs.sequences[:, prompts[i].input_ids.shape[1] - 1:])
+            if self.isseq2seq:
+                text_outputs = self.tokenizer.batch_decode(outputs.sequences)
+            else:
+                text_outputs = self.tokenizer.batch_decode(outputs.sequences[:, prompts[i].input_ids.shape[1] - 1:])
             for k in range(int(len(text_outputs)/self.num_return_sequences)):
                 for l in range(self.num_return_sequences):
                     next_output = text_outputs[k*self.num_return_sequences + l]
