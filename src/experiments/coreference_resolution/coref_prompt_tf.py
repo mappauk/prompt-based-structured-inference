@@ -12,32 +12,37 @@ from typing import Dict
 
 def main():
     # hyperparamaters
-    device_type = 'cuda'
-    num_shots = 2
+    device_type = 'cpu'
     topk = 5
     temperature = 0.5
-    prompt_batch_size = 4
+    prompt_batch_size = 2
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
+    num_shots = int(sys.argv[4])
+    seq2seq = sys.argv[5] == "true"
     # load data
     data = genia_dataset_loader.preprocess_genia_coref(input_path)
-    
+
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_tf_coref_prompt_format(
         num_shots,
         example_path
     )
+
     # load model
-    model, tokenizer = model_loader.load_mistral_model(device_type)
+    if seq2seq: 
+        model, tokenizer = model_loader.load_flan_model(device_type)
+    else:
+        model, tokenizer = model_loader.load_mistral_model(device_type)
     # define rules
     rule_one = LLMTFRule(
         'rule_one',
         ['doc_id', 'entity1_id', 'entity1', 'entity2_id', 'entity2', 'sent1', 'sent2'],
-        [],
-        'CF_{doc_id}_{entity1_id}_{entity2_id}',
-        'RuleOne_{doc_id}_{entity1_id}_{entity2_id}',
-        RuleType.BINARY,
+        ['coref', 'nocoref'],
+        'CF_{doc_id}_{entity1_id}_{entity2_id}_{label}',
+        'RuleOne_{doc_id}_{entity1_id}_{entity2_id}_{label}',
+        RuleType.MULTI_CLASS,
         prompt_batch_size, 
         model, 
         tokenizer, 
@@ -45,7 +50,8 @@ def main():
         temperature, 
         device_type,
         coref_prompts,
-        True
+        True,
+        seq2seq
     )
     rules = {
         rule_one.name: rule_one, 

@@ -1,8 +1,12 @@
 COREF_PROMPT_INSTRUCTIONS_ZERO_SHOT = 'Given two entity mentions and their representative sentences, decide whether the entity mentions refer to the same entity or not.'
 COREF_PROMPT_INSTRUCTIONS_FEW_SHOT = 'Given two entity mentions and their representative sentences, decide whether the entity mentions refer to the same entity or not. For Example:'
+COREF_PROMPT_INSTRUCTIONS_ZERO_SHOT_NONCOREF = 'Given two entity mentions and their representative sentences, decide whether the entity mentions refer to different entities or not.'
+COREF_PROMPT_INSTRUCTIONS_FEW_SHOT_NONCOREF = 'Given two entity mentions and their representative sentences, decide whether the entity mentions refer to different entities or not. For Example:'
 
-COREF_PROMPT_EXAMPLE = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} refers to {entity2}" - True or False? A. {answer}'
-COREF_PROMPT_QUESTION = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} refers to {entity2}" - True or False? A. '
+COREF_PROMPT_EXAMPLE = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} refers to {entity2}" - true or false? A. {answer}'
+COREF_PROMPT_QUESTION = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} refers to {entity2}" - true or false? A. '
+COREF_PROMPT_EXAMPLE_NONCOREF = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} does not refer to {entity2}" - true or false? A. {answer}'
+COREF_PROMPT_QUESTION_NONCOREF = '### Entity 1: {entity1} Sentence 1: {sent1} Entity 2: {entity2} Sentence 2: {sent2} Q. {entity1} does not refer to {entity2}" - true or false? A. '
 
 GEN_Z_COREF_PARAPHRASE_PROMPT_POSITIVE = 'Write 10 paraphrases of this sentence as a Python list. “The entity mention {entity1} in the first sentence refers to the same entity as the entity mention of {entity2} in the second sentence."'
 GEN_Z_COREF_PARAPHRASE_PROMPT_NEGATIVE = 'Write 10 paraphrases of this sentence as a Python list. “The entity mention {entity1} in the first sentence refers to a different entity as the entity mention of {entity2} in the second sentence."'

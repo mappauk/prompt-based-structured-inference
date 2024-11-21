@@ -59,7 +59,7 @@ class LLMGZRule(RuleTemplate):
                     formatted_prompt = sentence.format(**dict)
                     char_batch_posiitions.append(len(formatted_prompt) + 1)
                     formatted_prompt += self.generation_format.format(**dict)
-                    print(formatted_prompt)
+                    #print(formatted_prompt)
                     prompt_batch.append(formatted_prompt)
                     if len(prompt_batch) == self.batch_size:
                         tokenized_prompt_batch = self.tokenizer(prompt_batch, padding=True, return_tensors='pt').to(self.device_type)

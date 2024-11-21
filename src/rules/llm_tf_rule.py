@@ -23,7 +23,8 @@ class LLMTFRule(RuleTemplate):
                  temperature: int,
                  device_type: str,
                  prompt_map,
-                 renormalize: bool = False):
+                 renormalize: bool = False,
+                 isseq2seq: bool = False):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
@@ -33,6 +34,7 @@ class LLMTFRule(RuleTemplate):
         self.temperature = temperature
         self.device_type = device_type
         self.renormalize = renormalize
+        self.isseq2seq = isseq2seq
     
     def get_prompt(self, label, dict):
         prompt = self.prompt_map[label]
@@ -44,8 +46,12 @@ class LLMTFRule(RuleTemplate):
         output_df_list = []
         scores = []
         prompt_batch = []
-        tIndex = self.tokenizer.encode('True')[1]
-        fIndex = self.tokenizer.encode('False')[1]
+        if self.isseq2seq:
+            tIndex = self.tokenizer.encode('true')[0]
+            fIndex = self.tokenizer.encode('false')[0]
+        else:
+            tIndex = self.tokenizer.encode('true')[1]
+            fIndex = self.tokenizer.encode('false')[1]
         for index, row in data_subset.iterrows():
             dict = { }
             for feature in self.features:

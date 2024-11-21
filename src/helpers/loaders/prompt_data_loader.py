@@ -35,4 +35,6 @@ def load_rule_groundings_json(path: str, dtype):
 def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str):
     for rule_name, rule in rules.items():
         rule_grounding = rule.get_rule_groundings(data)
+        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+            print(rule_grounding)
         rule_grounding.to_pickle(output_path + rule_name + '_groundings_dataframe.pkl')
