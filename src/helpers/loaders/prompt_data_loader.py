@@ -12,9 +12,9 @@ def load_rule_groundings(path: str):
     for root, dirs, files in os.walk(path):
         for file in files:
             filepath = os.path.join(root, file)
-            rule_grounding_data = pd.read_pickle(filepath)
             filePrefixEnd = file.find('_groundings_dataframe.pkl')
             if filePrefixEnd > 0:
+                rule_grounding_data = pd.read_pickle(filepath)
                 grounding_name = file[0:filePrefixEnd]
                 rule_groundings[grounding_name] = rule_grounding_data
     return rule_groundings

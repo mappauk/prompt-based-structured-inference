@@ -29,13 +29,27 @@ def main():
         'RuleOne_{doc_id}_{entity1_id}_{entity2_id}',
         RuleType.BINARY
     )
-    rules = [rule_one]
+    rules = {
+        rule_one.name: rule_one
+    }
+
+    # filter out multi class rule variables
+    rule_groundings['rule_one'] = rule_groundings['rule_one'][~rule_groundings['rule_one']['HeadVariable'].str.endswith('nocoref')]
+    rule_groundings['rule_one']['HeadVariable'] = rule_groundings['rule_one']['HeadVariable'].map(lambda h: h[:-6])
+    rule_groundings['rule_one']['RuleVariable'] = rule_groundings['rule_one']['RuleVariable'].map(lambda h: h[:-6])
+
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         coref_groupings = rule_groundings['rule_one'].groupby(['doc_id'])
         for group_name, group in coref_groupings:
+            main_row_index = 0
             for i, main_row in group.iterrows():
-                for j, sec_row in group.iloc[i:].iterrows():
+                doc_id = main_row['doc_id']
+                sec_row_index = 0
+                for j, sec_row in group.iterrows():
+                    if sec_row_index <= main_row_index:
+                        sec_row_index += 1
+                        continue
                     tr_ent_one = None
                     tr_ent_two = None
                     if main_row['entity1_id'] == sec_row['entity1_id']:
@@ -50,12 +64,14 @@ def main():
                     elif main_row['entity2_id'] == sec_row['entity2_id']:
                         tr_ent_one = main_row['entity1_id']
                         tr_ent_two = sec_row['entity1_id']     
-                    tr_var_one = 'CF_{0}_{1}'.format(tr_ent_one, tr_ent_two)
-                    tr_var_two = 'CF_{0}_{1}'.format(tr_ent_two, tr_ent_one)
+                    tr_var_one = 'CF_{0}_{1}_{2}'.format(doc_id, tr_ent_one, tr_ent_two)
+                    tr_var_two = 'CF_{0}_{1}_{2}'.format(doc_id, tr_ent_two, tr_ent_one)
                     if tr_ent_one != None and tr_var_one in head_dict:
                         m.addConstr(head_dict[main_row['HeadVariable']] * head_dict[sec_row['HeadVariable']] <= head_dict[tr_var_one])
                     elif tr_ent_one != None and tr_var_two in head_dict:
                         m.addConstr(head_dict[main_row['HeadVariable']] * head_dict[sec_row['HeadVariable']] <= head_dict[tr_var_two])
+                    sec_row_index += 1
+                main_row_index += 1
 
     custom_rule_constraints = [constr_one]
     # perform inference
@@ -65,7 +81,6 @@ def main():
     results = {}
     for varName, value in variable_assignments.items():
         parsedVarName = varName.split('_')
-        print(parsedVarName)
         parsedId = parsedVarName[1]
         id_result = []
         if parsedId in results:

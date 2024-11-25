@@ -18,15 +18,14 @@ def main():
     # hyperparamaters
     device_type = 'cuda'
     num_shots = 0
-    num_variations = 6
+    num_variations = 10
     prompt_batch_size = 1
     input_path = sys.argv[1]
     output_path = sys.argv[2]
-    example_path = sys.argv[3] 
+    example_path = sys.argv[3]
     # load data
     #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
     data = genia_dataset_loader.preprocess_genia_coref(input_path)
-    data = data.head(10)
 
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_one_pass_gz_coref_prompt_format(num_variations, example_path, num_shots)

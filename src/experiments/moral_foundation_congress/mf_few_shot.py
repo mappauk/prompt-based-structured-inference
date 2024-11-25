@@ -14,6 +14,7 @@ def main():
     output_path = sys.argv[2]
 
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    #rule_groundings = prompt_data_loader.load_rule_groundings_json(rule_groundings_path, {'Id': str})
     # save results
     results = {}
     # cluster by id
