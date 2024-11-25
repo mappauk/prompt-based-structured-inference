@@ -22,7 +22,7 @@ def main():
         id_result = []
         if parsedId in results:
             id_result = results[parsedId]
-        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'n':
+        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'nocoref':
             id_result.append({
                 'Entity_1': parsedVarName[2],
                 'Entity_2': parsedVarName[3],
