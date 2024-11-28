@@ -161,8 +161,8 @@ def load_moral_frame_data_parse_entity_labels(datasetdir):
             data = json.load(f)
             for attribute, value in data.items():
                 counter += 1
-                if counter > 2:
-                    break
+                #if counter > 2:
+                #    break
                 author_ideology.append(author_label_map[value['author-label']])
                 topic.append(topic_label_map[value['issue']])
                 ids.append(attribute)
@@ -242,6 +242,34 @@ def load_entity_map(datasetdir):
             if fields[1] not in entity_map:
                 entity_map[fields[1]] = set([fields[1], fields[0]])
     return entity_plain_text_to_id, entity_map
+
+def get_entity_group_mappings(data, datasetdir):
+    entities_filepath = os.path.join(datasetdir, 'all_entities.txt')
+    groups = []
+    with open(entities_filepath, 'r', encoding='utf8') as file:
+        temp_group = set()
+        lines = file.readlines()
+        for line in lines:
+            line = line.strip()
+            if line == '' and len(temp_group) != 0:
+                groups.append(temp_group)
+                temp_group = set()
+            elif line != '':
+                temp_group.add(line)
+    
+    entity_group_map = {}
+    entities = data['Entity'].tolist()
+    for entity in entities:
+        if entity == None or pd.isnull(entity):
+            continue
+        elif entity in entity_group_map:
+            continue
+        entity_groups = []
+        for i in range(0, len(groups)):
+            if entity.strip() in groups[i]:
+                entity_groups.append(i)
+        entity_group_map[entity] = entity_groups
+    return entity_group_map
 
 
 

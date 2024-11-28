@@ -12,7 +12,7 @@ def main():
     mf_labels = dataset_loader.load_frame_labels(dataset_dir)
     role_labels = dataset_loader.load_role_labels(dataset_dir)
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(dataset_dir)
-    entity_plaintext_to_id, entity_map = dataset_loader.load_entity_map(dataset_dir)
+    entity_group_map = dataset_loader.get_entity_group_mappings(data, dataset_dir)
     predictions_list = analysis_helper.load_multiple_results(input_path)
     for prediction_data in predictions_list:
         mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
@@ -47,11 +47,11 @@ def main():
         print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='macro'))
         print('Moral Role Micro F1:')
         print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='micro'))
-        constraint_violation_calculation(data, predictions, entity_plaintext_to_id, entity_map)
+        constraint_violation_calculation(data, predictions, entity_group_map)
         print('\n')
 
 
-def constraint_violation_calculation(data, predictions, entity_plaintext_to_id, entity_map):
+def constraint_violation_calculation(data, predictions, entity_group_map):
     entity_frame_mismatch = 0
     duplicate_role_assignment = 0
     polarity_violation = 0
@@ -72,7 +72,15 @@ def constraint_violation_calculation(data, predictions, entity_plaintext_to_id, 
         counter = 0
         for item, row in group.iterrows():
             counter = counter + 1
+            entity_one = row['Entity']
+            if entity_one == None or pd.isnull(entity_one):
+                continue
+            entity_one = entity_one.strip()
             for item_two, row_two in group.iloc[counter:].iterrows():
+                entity_two = row_two['Entity']
+                if entity_two == None or pd.isnull(entity_two):
+                    continue
+                entity_two = entity_two.strip()
                 if row_two['Id'] != row['Id']:
                     row_one_result = predictions[row['Id']]
                     entity_row_one_result = None
@@ -86,11 +94,12 @@ def constraint_violation_calculation(data, predictions, entity_plaintext_to_id, 
                         for entity_pred in row_two_result['EntityRoles']:
                             if entity_pred['Entity'] == row_two['Entity']:
                                 entity_row_two_result = entity_pred['Label']
-                    entity_one = row['Entity'] if type(row['Entity']) != str else row['Entity'].strip()
-                    entity_two = row_two['Entity'] if type(row_two['Entity']) != str else row_two['Entity'].strip()
-                    entity_one_id = None if entity_one not in entity_plaintext_to_id else entity_plaintext_to_id[entity_one]
-                    entity_two_id = None if entity_two not in entity_plaintext_to_id else entity_plaintext_to_id[entity_two]
-                    are_entities_equal = (entity_one_id in entity_map and entity_two_id in entity_map[entity_one_id])
+                    entity_one_group_list = entity_group_map[entity_one]
+                    entity_two_group_list = entity_group_map[entity_two]
+                    are_entities_equal = entity_one == entity_two and entity_one not in constants.ENTITIES_TO_EXCLUDE
+                    for group in entity_one_group_list:
+                        if group in entity_two_group_list:
+                            are_entities_equal = True
                     if (entity_row_one_result in constants.POLARITY_MAP and 
                         entity_row_two_result in constants.POLARITY_MAP and 
                         are_entities_equal and
