@@ -3,6 +3,10 @@
         "MoralFrame": "PURITY/DEGRADATION",
         "EntityRoles": [
             {
+                "Entity": " I'm",
+                "Label": "Entity causing harm"
+            },
+            {
                 "Entity": "terrorists ",
                 "Label": "Entity being loyal"
             },
@@ -16,8 +20,12 @@
         "MoralFrame": "PURITY/DEGRADATION",
         "EntityRoles": [
             {
-                "Entity": "terrorists ",
-                "Label": "Entity causing harm"
+                "Entity": " I'm",
+                "Label": "Entity being loyal"
+            },
+            {
+                "Entity": "foreign terrorists ",
+                "Label": "Entity being loyal"
             },
             {
                 "Entity": "constitutional rights to foreign terrorists",

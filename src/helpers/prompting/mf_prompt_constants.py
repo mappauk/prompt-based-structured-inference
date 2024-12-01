@@ -305,6 +305,8 @@ ROLE_CLUSTER_LABEL_MAP = {
     PURITY_DEGREDATION_ROLE_CLUSTER: [TARGET_PURITY_DEGREDATION, ENTITY_CAUSING_DEGRADATION, ENTITY_PRESERVING_PURITY]
 }
 
+ENTITIES_TO_EXCLUDE = [ 'I', "I'm", 'you', 'he', 'they', 'we', 'she', 'who', 'them', 'me', 'him', 'one', 'her', 'us', 'my', 'our']
+
 GEN_Z_MF_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
 GEN_Z_MF_PARAPHRASE_PROMPT_WITH_CONTEXT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet about [TOPIC] whose author is a [POLITICAL_PARTY] expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; TOPIC∈{affordable care act, immigration, abortion, guns, terrorism, lgbtq}, POLITICAL_PARTY∈{democrat, republican}, MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
 GEN_Z_MF_ROLE_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This entity [ENTITY] in this tweet exhibits the moral role [MORAL_ROLE] defined as [MORAL_ROLE_DEFINITION]."'

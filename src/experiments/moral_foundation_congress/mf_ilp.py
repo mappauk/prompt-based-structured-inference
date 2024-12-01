@@ -21,6 +21,8 @@ def main():
     output_path = sys.argv[3]
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
+    entity_group_map = dataset_loader.get_entity_group_mappings(data, input_path)
+
     # define rules
     rule_one = RuleTemplate(
         'rule_one',
@@ -60,6 +62,7 @@ def main():
         rule_three.name: rule_three, 
         rule_four.name: rule_four
     }
+
     # get rule groundings:
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
     # define custom constraints
@@ -85,25 +88,39 @@ def main():
                         counter += 1
                     start_index += 1
     def constr_three(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
-        role_groupings = rule_groundings['rule_four'].groupby(['Ideology', 'Topic', 'Entity'])
+        role_groupings = rule_groundings['rule_four'].groupby(['Ideology', 'Topic'])
         for group_name, group in role_groupings:
             if group.shape[0] > 1:
                 start_index = 1
-                for index, row in group.iterrows():
-                    entity_one = head_dict[row['HeadVariable']]
-                    polarity = constants.POLARITY_MAP.get(row['label'], -1)
-                    tweet_id = row['Id']
+                for index, main_row in group.iterrows():
+                    entity_one_var = head_dict[main_row['HeadVariable']]
+                    entity_one = main_row['Entity']
+                    if entity_one == None or pd.isnull(entity_one):
+                        continue
+                    entity_one = entity_one.strip()
+                    polarity = constants.POLARITY_MAP.get(main_row['label'], -1)
+                    tweet_id = main_row['Id']
                     if polarity != -1:
                         counter = 0
-                        for index, row in group.iterrows():
+                        for sec_index, sec_row in group.iterrows():
                             if counter >= start_index:
-                                polarity_two = constants.POLARITY_MAP.get(row['label'], -1)
-                                if tweet_id != row['Id'] and polarity_two != -1 and polarity_two != polarity:
-                                    entity_two = head_dict[row['HeadVariable']]
-                                    m.addConstr(entity_one + entity_two <= 1)
+                                entity_two = sec_row['Entity']
+                                if entity_two == None or pd.isnull(entity_two):
+                                    continue
+                                entity_two = entity_two.strip()
+                                polarity_two = constants.POLARITY_MAP.get(sec_row['label'], -1)
+                                entity_one_group_list = entity_group_map[entity_one]
+                                entity_two_group_list = entity_group_map[entity_two]
+                                entities_equal = entity_one == entity_two and entity_one not in constants.ENTITIES_TO_EXCLUDE
+                                for entity_one_group in entity_one_group_list:
+                                    if entity_one_group in entity_two_group_list:
+                                        entities_equal = True
+                                if tweet_id != sec_row['Id'] and polarity_two != -1 and polarity_two != polarity and entities_equal:
+                                    entity_two_var = head_dict[sec_row['HeadVariable']]
+                                    m.addConstr(entity_one_var + entity_two_var <= 1)
                             counter += 1
                     start_index += 1
-    custom_rule_constraints = [ constr_one, constr_two, constr_three]
+    custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
     variable_assignments = inference_model.inference()
