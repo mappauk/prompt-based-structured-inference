@@ -112,15 +112,15 @@ def main():
                                 entity_one_group_list = entity_group_map[entity_one]
                                 entity_two_group_list = entity_group_map[entity_two]
                                 entities_equal = entity_one == entity_two and entity_one not in constants.ENTITIES_TO_EXCLUDE
-                                for group in entity_one_group_list:
-                                    if group in entity_two_group_list:
+                                for entity_one_group in entity_one_group_list:
+                                    if entity_one_group in entity_two_group_list:
                                         entities_equal = True
                                 if tweet_id != sec_row['Id'] and polarity_two != -1 and polarity_two != polarity and entities_equal:
                                     entity_two_var = head_dict[sec_row['HeadVariable']]
                                     m.addConstr(entity_one_var + entity_two_var <= 1)
                             counter += 1
                     start_index += 1
-    custom_rule_constraints = [constr_three]
+    custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
     variable_assignments = inference_model.inference()

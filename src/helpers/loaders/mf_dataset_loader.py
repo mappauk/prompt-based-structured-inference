@@ -244,7 +244,7 @@ def load_entity_map(datasetdir):
     return entity_plain_text_to_id, entity_map
 
 def get_entity_group_mappings(data, datasetdir):
-    entities_filepath = os.path.join(datasetdir, 'all_entities.txt')
+    entities_filepath = os.path.join(datasetdir, 'entity_groups_final.txt')
     groups = []
     with open(entities_filepath, 'r', encoding='utf8') as file:
         temp_group = set()
@@ -262,11 +262,12 @@ def get_entity_group_mappings(data, datasetdir):
     for entity in entities:
         if entity == None or pd.isnull(entity):
             continue
-        elif entity in entity_group_map:
+        entity = entity.strip()
+        if entity in entity_group_map:
             continue
         entity_groups = []
         for i in range(0, len(groups)):
-            if entity.strip() in groups[i]:
+            if entity in groups[i]:
                 entity_groups.append(i)
         entity_group_map[entity] = entity_groups
     return entity_group_map
