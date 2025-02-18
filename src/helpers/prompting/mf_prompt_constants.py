@@ -370,6 +370,187 @@ GEN_Z_MF_ROLE_LABEL_SENTENCES_WITH_CONTEXT = [
     "The tweet about {{Topic}}, written by a {{Ideology}}, features {{Entity}} expressing the moral role {MORAL_ROLE}, described as: {MORAL_ROLE_DEFINITION}"
 ]
 
+# Verbalized Confidence
+
+
+MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
+Consider the task of identifying the moral foundation present in a tweet. The five moral foundations and their corresponding definitions are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+
+Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet.
+
+Question: What is the moral foundation present in the following tweet: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
+Consider the task of identifying the moral foundation present in a tweet. The five moral foundations and their corresponding definitions are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+
+Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet.
+
+Question: What is the moral foundation present in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
+Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
+Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS = '''
+Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral role: Target of care/harm. Definition: Entity that is harmed by someone/something or entity someone/something is providing/offering care to.
+Moral role: Entity providing care. Definition: Entity that is providing or offering care or expressing the need for care for someone/something.
+Moral role: Entity causing harm. Definition: Entity that is harming/hurting or doing something bad to someone/something.
+
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Role: Target of fairness/cheating. Definition: Entity that someone/something is cheating or entity someone/something is being fair to.
+Moral Role: Entity ensuring fairness. Definition: Entity that is ensuring fairness for someone/something.
+Moral Role: Entity doing cheating. Definition: Entity that is cheating someone/something.
+
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+Moral Role: Target of loyalty/betrayal. Definition: Entity that someone/something is being loyal to or entity someone/something is betraying.
+Moral Role: Entity being loyal. Definition: Entity that is being loyal to someone/something.
+Moral Role: Entity doing betrayal. Definition: Entity that is betraying someone/something.
+
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Role: Justified authority. Definition:  Entity that is the appropriate authority.
+Moral Role: Justified authority over. Definition: Entity that someone/something is the authority over.
+Moral Role: Failing authority. Definition: Entity that is not an appropriate authority.
+Moral Role: Failing authority over. Definition: Entity that someone/something which is not an appropriate authority is expressing authority over.
+
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Role: Target of purity/degredation. Definition: Entity that someone/something is associating with being pure/sacred or entity someone/something is associating with being contaminated/unsanctified.
+Moral Role: Entity preserving purity. Definition: Entity that is being pure/sacred.
+Moral Role: Entity causing degredation. Definition: Entity that is contaminated/unsanctified.
+
+
+Given the possible moral roles, their definitions, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS_WITH_CONTEXT = '''
+Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral role: Target of care/harm. Definition: Entity that is harmed by someone/something or entity someone/something is providing/offering care to.
+Moral role: Entity providing care. Definition: Entity that is providing or offering care or expressing the need for care for someone/something.
+Moral role: Entity causing harm. Definition: Entity that is harming/hurting or doing something bad to someone/something.
+
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Role: Target of fairness/cheating. Definition: Entity that someone/something is cheating or entity someone/something is being fair to.
+Moral Role: Entity ensuring fairness. Definition: Entity that is ensuring fairness for someone/something.
+Moral Role: Entity doing cheating. Definition: Entity that is cheating someone/something.
+
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+Moral Role: Target of loyalty/betrayal. Definition: Entity that someone/something is being loyal to or entity someone/something is betraying.
+Moral Role: Entity being loyal. Definition: Entity that is being loyal to someone/something.
+Moral Role: Entity doing betrayal. Definition: Entity that is betraying someone/something.
+
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Role: Justified authority. Definition:  Entity that is the appropriate authority.
+Moral Role: Justified authority over. Definition: Entity that someone/something is the authority over.
+Moral Role: Failing authority. Definition: Entity that is not an appropriate authority.
+Moral Role: Failing authority over. Definition: Entity that someone/something which is not an appropriate authority is expressing authority over.
+
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Role: Target of purity/degredation. Definition: Entity that someone/something is associating with being pure/sacred or entity someone/something is associating with being contaminated/unsanctified.
+Moral Role: Entity preserving purity. Definition: Entity that is being pure/sacred.
+Moral Role: Entity causing degredation. Definition: Entity that is contaminated/unsanctified.
+
+Given the possible moral roles, their definitions, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
+ 
+Possible Answer: {label}
+ 
+Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+ 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+CARE_HARM_DEFINITON = 'Definition of the moral foundation "CARE/HARM": Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.'
+FAIRNESS_CHEATING_DEFINITION = 'Definition of the moral foundation "FAIRNESS/CHEATING": Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.'
+AUTHORITY_SUBVERSION_DEFINITION = 'Definition of the moral foundation "AUTHORITY/SUBVERSION": Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.'
+PURITY_DEGRADATION_DEFINITION = 'Definition of the moral foundation "PURITY/DEGRADATION": Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.'
+LOYALTY_BETRAYAL_DEFINITION = 'Definition of the moral foundation "LOYALTY/BETRAYAL": Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.'
+
+
+
+VERB_CONF_TOP_K_PROMPT_FORMAT = '''
+Provide your k best guesses and the probability that each is correct (0% to 100%) for the following question. Give ONLY the task output description of your guesses and probabilities, no other words or explanation. 
+For example: G1: <ONLY the task output description of first most likely guess; not a complete sentence, just the guess!> P1: <ONLY the probability that G1 is correct, without any extra commentary whatsoever; just the probability!> 
+... 
+Gk: <ONLY the task output description of k-th most likely guess> Pk: <ONLY the probability that Gk is correct, without any extra commentary whatsoever; just the probability!>
+'''
+
+
+
 IDS_TO_EXCLUDE = [
     "639490970644574208", 
     "734383328514609152", 

@@ -32,9 +32,10 @@ def load_rule_groundings_json(path: str, dtype):
 
     return rule_groundings
 
-def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str):
-    for rule_name, rule in rules.items():
-        rule_grounding = rule.get_rule_groundings(data)
-        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-            print(rule_grounding)
-        rule_grounding.to_pickle(output_path + rule_name + '_groundings_dataframe.pkl')
+def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str, startIndex = 0):
+    num_splits = 5
+    data_split = np.array_split(data, num_splits)
+    for i in range(startIndex, num_splits):
+        for rule_name, rule in rules.items():
+            rule_grounding = rule.get_rule_groundings(data_split[i])
+            rule_grounding.to_pickle(output_path + rule_name + f'_{i}_groundings_dataframe.pkl')

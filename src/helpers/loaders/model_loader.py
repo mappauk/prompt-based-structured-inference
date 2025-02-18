@@ -8,6 +8,13 @@ def load_mistral_model(device_type: str):
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
 
+def load_mistral_instruct_model(device_type: str):
+    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", device_map=device_type, return_dict_in_generate=True)
+    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
+    tokenizer.padding_side = 'left'
+    tokenizer.pad_token = tokenizer.eos_token
+    return model, tokenizer
+
 def load_test_model(device_type: str):
     model = AutoModelForCausalLM.from_pretrained("facebook/opt-125m", device_map=device_type, return_dict_in_generate=True)
     tokenizer = AutoTokenizer.from_pretrained("facebook/opt-125m")

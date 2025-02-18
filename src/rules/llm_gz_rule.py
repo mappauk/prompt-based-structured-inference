@@ -86,9 +86,9 @@ class LLMGZRule(RuleTemplate):
             flattened_vocab_indicies = vocab_start_by_token_index + token_ids.flatten()
             flattened_token_probs = np.take(flattened_vocab_probs, flattened_vocab_indicies)
             token_probs = np.reshape(flattened_token_probs, (batch_size, batch_token_count))
-            for i in range(batch_size):
+            for j in range(batch_size):
                 index = len(scores)
-                score = np.sum(token_probs[i, start_token_positions[index]:])/(batch_token_count - start_token_positions[index])
+                score = np.sum(token_probs[j, start_token_positions[index]:])/(batch_token_count - start_token_positions[index])
                 scores.append(score)
         scores_by_variation = np.reshape(scores, (int(len(scores)/self.num_variations), self.num_variations))
         scores_across_variations = np.sum(scores_by_variation, axis=1)
