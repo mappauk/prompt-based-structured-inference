@@ -13,7 +13,6 @@ from src.rules.rule_template import RuleTemplate
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
 
-
 def main():
     input_path = sys.argv[1]
     rule_groundings_path = sys.argv[2]
@@ -76,23 +75,31 @@ def main():
     custom_rule_constraints = [constr_one]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings, data, custom_rule_constraints)
-    variable_assignments = inference_model.inference()
+    solutions = inference_model.inference()
     # save results
-    results = {}
-    for varName, value in variable_assignments.items():
-        parsedVarName = varName.split('_')
-        parsedId = parsedVarName[1]
-        id_result = []
-        if parsedId in results:
-            id_result = results[parsedId]
-        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'n':
-            id_result.append({
-                'Entity_1': parsedVarName[2],
-                'Entity_2': parsedVarName[3],
-                'Value': value
-            })
-        results[parsedId] = id_result
-    analysis_helper.write_json_file(output_path, results)
+
+    solutions_list = []
+    for i in range(len(solutions)):
+        variable_assignments = solutions[i]
+        results = {}
+        for varName, value in variable_assignments.items():
+            parsedVarName = varName.split('_')
+            parsedId = parsedVarName[1]
+            id_result = []
+            if parsedId in results:
+                id_result = results[parsedId]
+            if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'n':
+                id_result.append({
+                    'Entity_1': parsedVarName[2],
+                    'Entity_2': parsedVarName[3],
+                    'Value': value
+                })
+            results[parsedId] = id_result
+        solutions_list.append(results)
+    solutions_to_save = {
+        'solutions': solutions_list
+    }
+    analysis_helper.write_json_file(output_path, solutions_to_save)
 
 if __name__ == "__main__":
     main()

@@ -14,12 +14,20 @@ class GurobiInferenceModel:
                  Dict[str, RuleTemplate], 
                  rule_groundings: Dict[str, pd.DataFrame], 
                  data: pd.DataFrame, 
-                 constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]]):
+                 constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]],
+                 num_solutions: int = 1):
         self.rules = rules
         self.rule_groundings = rule_groundings
         self.constraints = constraints
         self.data = data
+        self.num_solutions = num_solutions
     
+    def get_solution(m):
+        results = {}
+        for var in m.getVars():
+            results[var.VarName] = var.X
+        return results
+
     def inference(self) -> Dict[str, int]:
         # get groundings
         rule_dict = {}
@@ -30,6 +38,9 @@ class GurobiInferenceModel:
             with gp.Model(env=env) as model:
                 # Create a new model
                 m = gp.Model("mip1")
+                if self.num_solutions > 1:
+                    m.setParam(GRB.Param.PoolSearchMode, 2)
+                    m.setParam(GRB.Param.PoolSolutions, 10)
                 objective = 0
                 for rule_name, rule_grounding in self.rule_groundings.items():
                     rule = self.rules[rule_name]
@@ -90,10 +101,14 @@ class GurobiInferenceModel:
                    constr_func(self.rule_groundings, head_dict, m)
                 # optimize
                 m.optimize()
-                results = {}
-                for var in m.getVars():
-                    results[var.VarName] = var.X
-                return results
+                all_results = []
+                if self.num_solutions > 1:
+                    for i in range(0, m.getAttr('SolCount')):
+                        m.setParam('SolutionNumber', i)
+                        all_results.append(self.get_solution(m))
+                else:
+                    all_results.append(self.get_solution(m))                 
+                return all_results
 
 
                 
