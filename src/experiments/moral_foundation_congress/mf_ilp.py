@@ -65,6 +65,7 @@ def main():
 
     # get rule groundings:
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    #rule_groundings = prompt_data_loader.load_rule_groundings_json(rule_groundings_path, {'Id': str})
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         rule_groundings['rule_two'].insert(0, 'MoralFrameLabel', rule_groundings['rule_two']['label'].apply(lambda x: constants.MORAL_FOUNDATION_ROLE_TO_MF[x]))
@@ -123,29 +124,37 @@ def main():
     custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
-    variable_assignments = inference_model.inference()
+    solutions = inference_model.inference()
     # save results
-    results = {}
-    for varName, value in variable_assignments.items():
-        parsedVarName = varName.split('_')
-        parsedId = parsedVarName[1]
-        id_result = {}
-        if parsedId in results:
-            id_result = results[parsedId]
-        if parsedVarName[0] == 'MF' and parsedVarName[len(parsedVarName) - 1] != 'n' and value == 1:
-            if 'MoralFrame' in id_result and value == 1:
-                raise(RuntimeError('Multiclass Constraint Violation'))
-            id_result['MoralFrame'] = parsedVarName[2]
-        if parsedVarName[0] == 'Role' and value == 1 and parsedVarName[len(parsedVarName) - 1] != 'n':
-            entity_result = {
-                'Entity': parsedVarName[2],
-                'Label': parsedVarName[3]
-            }
-            if 'EntityRoles' in id_result:
-                id_result['EntityRoles'].append(entity_result)
-            else:
-                id_result['EntityRoles'] = [entity_result]
-        results[parsedId] = id_result
-    analysis_helper.write_json_file(output_path, results)
+    solutions_list = []
+    for i in range(len(solutions)):
+        variable_assignments = solutions[i]
+        results = {}
+        for varName, value in variable_assignments.items():
+            parsedVarName = varName.split('_')
+            parsedId = parsedVarName[1]
+            id_result = {}
+            if parsedId in results:
+                id_result = results[parsedId]
+            if parsedVarName[0] == 'MF' and parsedVarName[len(parsedVarName) - 1] != 'n' and value == 1:
+                if 'MoralFrame' in id_result and value == 1:
+                    raise(RuntimeError('Multiclass Constraint Violation'))
+                id_result['MoralFrame'] = parsedVarName[2]
+            if parsedVarName[0] == 'Role' and value == 1 and parsedVarName[len(parsedVarName) - 1] != 'n':
+                entity_result = {
+                    'Entity': parsedVarName[2],
+                    'Label': parsedVarName[3]
+                }
+                if 'EntityRoles' in id_result:
+                    id_result['EntityRoles'].append(entity_result)
+                else:
+                    id_result['EntityRoles'] = [entity_result]
+            results[parsedId] = id_result
+        solutions_list.append(results)
+    solutions_to_save = {
+        'solutions': solutions_list
+    }
+    analysis_helper.write_json_file(output_path, solutions_to_save)
+
 if __name__ == "__main__":
     main()

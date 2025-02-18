@@ -13,7 +13,6 @@ def main():
     role_labels = dataset_loader.load_role_labels(dataset_dir)
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(dataset_dir)
     entity_group_map = dataset_loader.get_entity_group_mappings(data, dataset_dir)
-    #print(entity_group_map)
     predictions_list = analysis_helper.load_multiple_results(input_path)
     for prediction_data in predictions_list:
         mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
@@ -50,7 +49,32 @@ def main():
         print(sk.f1_score(true_role_labels, predicted_role_labels, labels=constants.MORAL_FOUNDATION_ROLE, average='micro'))
         constraint_violation_calculation(data, predictions, entity_group_map)
         print('\n')
+        #roc_auc_scores(true_mf_labels, predicted_mf_labels, true_role_labels, predicted_role_labels)
 
+
+
+def roc_auc_scores(true_mf_labels, predicted_mf_labels, true_role_labels, predicted_role_labels):
+    numeric_true_mf_labels = []
+    numeric_predicted_mf_labels = []
+    for j in range(len(true_mf_labels)):
+        for i in range(len(constants.MORAL_FOUNDATIONS)):
+            if true_mf_labels[j] == constants.MORAL_FOUNDATIONS[i]:
+                numeric_true_mf_labels.append(i)
+            if predicted_mf_labels[j] == constants.MORAL_FOUNDATIONS[i]:
+                numeric_predicted_mf_labels.append(i)
+
+    numeric_true_role_labels = []
+    numeric_predicted_role_labels = []
+    for j in range(len(true_mf_labels)):
+        for i in range(len(constants.MORAL_FOUNDATION_ROLE)):
+            if true_role_labels[j] == constants.MORAL_FOUNDATION_ROLE[i]:
+                numeric_true_role_labels.append(i)
+            if predicted_role_labels[j] == constants.MORAL_FOUNDATION_ROLE[i]:
+                numeric_predicted_role_labels.append(i)
+    print(sk.classification_report(true_mf_labels, predicted_mf_labels))
+    print(sk.classification_report(true_role_labels, predicted_role_labels))
+    print(sk.roc_auc_score(numeric_true_mf_labels, numeric_predicted_mf_labels, multi_class='ovr'))
+    print(sk.roc_auc_score(numeric_true_role_labels, numeric_predicted_role_labels, multi_class='ovr'))
 
 def constraint_violation_calculation(data, predictions, entity_group_map):
     entity_frame_mismatch = 0
