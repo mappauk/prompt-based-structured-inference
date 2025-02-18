@@ -28,6 +28,9 @@ def main():
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
 
+
+    data = data.head(20)
+
     # generate moral foundation prompt format strings
     foundation_prompt = constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT
     foundation_prompt_with_features = constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT

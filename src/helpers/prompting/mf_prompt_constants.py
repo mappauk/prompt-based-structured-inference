@@ -422,9 +422,9 @@ Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, sub
 Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
 Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
-Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the foundation present in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
 
-Question: What is the moral role of the entity "{entity}" expressed in the following tweet: "{Tweet}"?
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet: "{Tweet}"?
  
 Possible Answer: {label}
  
@@ -442,9 +442,9 @@ Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, sub
 Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
 Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
-Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the foundation present in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
 
-Question: What is the moral role of the entity "{entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
  
 Possible Answer: {label}
  
@@ -483,9 +483,9 @@ Moral Role: Entity preserving purity. Definition: Entity that is being pure/sacr
 Moral Role: Entity causing degredation. Definition: Entity that is contaminated/unsanctified.
 
 
-Given the possible moral roles, their definitions, and the task of identifying the foundation present in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+Given the possible moral roles, their definitions, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
 
-Question: What is the moral role of the entity "{entity}" expressed in the following tweet: "{Tweet}"?
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet: "{Tweet}"?
  
 Possible Answer: {label}
  
@@ -523,9 +523,9 @@ Moral Role: Target of purity/degredation. Definition: Entity that someone/someth
 Moral Role: Entity preserving purity. Definition: Entity that is being pure/sacred.
 Moral Role: Entity causing degredation. Definition: Entity that is contaminated/unsanctified.
 
-Given the possible moral roles, their definitions, and the task of identifying the foundation present in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
+Given the possible moral roles, their definitions, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
 
-Question: What is the moral role of the entity "{entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
+Question: What is the moral role of the entity "{Entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
  
 Possible Answer: {label}
  
