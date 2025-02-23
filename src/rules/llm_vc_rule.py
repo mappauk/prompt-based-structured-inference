@@ -2,12 +2,14 @@ from collections import OrderedDict
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.rules.rule_type import RuleType
 from src.rules.rule_template import RuleTemplate
+from src.helpers.loaders.utilities import print_gpu_memory_usage
 import pandas as pd
 import random
 import copy
 import torch
 import numpy as np
 import re
+import json
 
 class LLMVCRule(RuleTemplate):
     def __init__(self,
@@ -58,6 +60,8 @@ class LLMVCRule(RuleTemplate):
         prompts = []
         output_df_list = []
         prompt_batch = []
+        print('Memory Usage after Model Loaded')
+        print_gpu_memory_usage()
         for index, row in data_subset.iterrows():
             dict = { }
             for feature in self.features:
@@ -90,7 +94,11 @@ class LLMVCRule(RuleTemplate):
         percentages = []
         for i in range(len(prompts)):
             curr_prompt_batch = self.tokenizer(prompts[i], padding=True, return_tensors='pt').to(self.device_type)
+            print('Memory Usage after Tokenization')
+            print_gpu_memory_usage()
             for j in range(int(self.num_samples/self.num_return_sequences)):
+                # remove if not using flash attention
+                #with torch.backends.cuda.sdp_kernel(enable_flash=True, enable_math=False, enable_mem_efficient=False):
                 outputs = self.model.generate(
                     **curr_prompt_batch,
                     max_new_tokens=100,
@@ -98,11 +106,14 @@ class LLMVCRule(RuleTemplate):
                     num_return_sequences=self.num_return_sequences,
                     temperature=self.temperature, 
                     pad_token_id=self.tokenizer.eos_token_id)
+                print('Memory Usage after Generation')
+                print_gpu_memory_usage()
                 text_outputs = self.tokenizer.batch_decode(outputs.sequences[:, curr_prompt_batch.input_ids.shape[1] - 1:])
-                print(text_outputs)
                 for k in range(len(text_outputs)):
                     string_outputs.append(text_outputs[k])
                     percentages.append(self.extract_score(text_outputs[k]))
+        with open('textoutput.json', 'w') as file:
+            json.dump(string_outputs, file)
         percentages = np.array(percentages)
         percentages_by_label = np.reshape(percentages, (int(percentages.shape[0]/self.num_samples),self.num_samples))
         final_scores = np.average(percentages_by_label, axis=1)

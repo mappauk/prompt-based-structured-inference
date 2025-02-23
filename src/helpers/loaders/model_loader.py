@@ -1,6 +1,26 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForSeq2SeqLM, GPTJForCausalLM
 
+# instruct models
+def load_mistral_instruct_model(device_type: str, eight_bit: bool = False, better_transformer: bool = False, flash_attention_2: bool = False):
+    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", device_map=device_type, return_dict_in_generate=True, load_in_8bit=eight_bit, use_flash_attention_2=flash_attention_2)
+    if better_transformer:
+        model = model.to_bettertransformer()
+    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
+    tokenizer.padding_side = 'left'
+    tokenizer.pad_token = tokenizer.eos_token
+    return model, tokenizer
+
+def load_llama_instruct_model(device_type: str, eight_bit: bool = False, better_transformer: bool = False, flash_attention_2: bool = False):
+    model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct", device_map=device_type, return_dict_in_generate=True, load_in_8bit=eight_bit, use_flash_attention_2=flash_attention_2)
+    if better_transformer:
+        model = model.to_bettertransformer()
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+    tokenizer.padding_side = 'left'
+    tokenizer.pad_token = tokenizer.eos_token
+    return model, tokenizer
+
+# others
 def load_mistral_model(device_type: str):
     model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", device_map=device_type, return_dict_in_generate=True)
     tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
@@ -8,15 +28,8 @@ def load_mistral_model(device_type: str):
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
 
-def load_mistral_instruct_model(device_type: str):
-    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", device_map=device_type, return_dict_in_generate=True)
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
-    tokenizer.padding_side = 'left'
-    tokenizer.pad_token = tokenizer.eos_token
-    return model, tokenizer
-
-def load_test_model(device_type: str):
-    model = AutoModelForCausalLM.from_pretrained("facebook/opt-125m", device_map=device_type, return_dict_in_generate=True)
+def load_test_model(device_type: str, eight_bit: bool = False, better_transformer: bool = False, flash_attention_2: bool = False):
+    model = AutoModelForCausalLM.from_pretrained("facebook/opt-125m", device_map=device_type, return_dict_in_generate=True, load_in_8bit=eight_bit, use_flash_attention_2=flash_attention_2)
     tokenizer = AutoTokenizer.from_pretrained("facebook/opt-125m")
     tokenizer.padding_side = 'left'
     tokenizer.pad_token = tokenizer.eos_token

@@ -40,8 +40,8 @@ def main():
     role_prompt_with_features = constants.ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT
 
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
-    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type)
+    model, tokenizer = model_loader.load_test_model(device_type, eight_bit=False, flash_attention_2=False)
+    #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, better_transformer=True)
 
     # define rules
     rule_one = LLMVCRule(
