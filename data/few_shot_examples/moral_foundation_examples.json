@@ -1,6 +1,6 @@
 [
     {
-        "moral_foundation": "CARE/HARM",
+        "label": "CARE/HARM",
         "negative_examples": [
             {
                 "Tweet": "RT @OversightDems: .@RepCummings and  @repjohnconyers call on Chrm to suspend  one-sided  investigations of Planned Parenthood",
@@ -67,7 +67,7 @@
         ]
     },
     {
-        "moral_foundation": "FAIRNESS/CHEATING",
+        "label": "FAIRNESS/CHEATING",
         "negative_examples": [
             {
                 "Tweet": "In 2008 Hillary described herself as a  pro-gun churchgoer.  https://t.co/PirtD0BBct",
@@ -134,7 +134,7 @@
         ]
     },
     {
-        "moral_foundation": "LOYALTY/BETRAYAL",
+        "label": "LOYALTY/BETRAYAL",
         "negative_examples": [
             {
                 "Tweet": "RT @OversightDems: .@RepCummings and  @repjohnconyers call on Chrm to suspend  one-sided  investigations of Planned Parenthood",
@@ -201,7 +201,7 @@
         ]
     },
     {
-        "moral_foundation": "AUTHORITY/SUBVERSION",
+        "label": "AUTHORITY/SUBVERSION",
         "negative_examples": [
             {
                 "Tweet": "RT @OversightDems: .@RepCummings and  @repjohnconyers call on Chrm to suspend  one-sided  investigations of Planned Parenthood",
@@ -268,7 +268,7 @@
         ]
     },
     {
-        "moral_foundation": "PURITY/DEGRADATION",
+        "label": "PURITY/DEGRADATION",
         "negative_examples": [
             {
                 "Tweet": "RT @OversightDems: .@RepCummings and  @repjohnconyers call on Chrm to suspend  one-sided  investigations of Planned Parenthood",

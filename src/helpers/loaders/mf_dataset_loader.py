@@ -2,8 +2,6 @@ import os
 import json
 import pandas as pd
 import src.helpers.prompting.mf_prompt_constants as constants
-from transformers import AutoTokenizer, AutoModelForTokenClassification
-from transformers import pipeline
 
 def load_dataset_foundation_identification(datasetdir):
     filename_map = {

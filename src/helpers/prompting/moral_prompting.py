@@ -2,86 +2,99 @@ import os
 import json
 import src.helpers.prompting.mf_prompt_constants as constants
 
-def generate_one_pass_tf_moral_foundation_prompt_format(prompt_format, example_format, num_shots, example_dir):
-    filepath = os.path.join(example_dir, 'moral_foundation_examples.json')
-    foundation_prompt_map = {}
+def generate_one_pass_tf_moral_foundation_prompt_format(system_prompt, example_format, num_shots, filepath, tokenizer, use_system_prompt=True, remove_date_prompt=False):
+    prompt_map = {}
     with open(filepath) as f:
         data = json.load(f)
         for foundation_obj in data:
-            foundation = foundation_obj['moral_foundation']
+            foundation = foundation_obj['label']
             positive_examples = foundation_obj['positive_examples']
             negative_examples = foundation_obj['negative_examples']
-            formatted_examples = []
+            messages = []
+            final_system_prompt = system_prompt
+            if num_shots > 0:
+                final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
+            if use_system_prompt:
+                messages.append(
+                    {
+                        "role": "system",
+                        "content": final_system_prompt
+                    }
+                )
             for i in range(num_shots):
                 positive_examples[i]['label'] = foundation
                 negative_examples[i]['label'] = foundation
-                positive_examples[i]['answer'] = 'True'
-                negative_examples[i]['answer'] = 'False'
                 positive_example = example_format.format(**positive_examples[i])
                 negative_example = example_format.format(**negative_examples[i])
-                formatted_examples.append(positive_example)
-                formatted_examples.append(negative_example)
-            definition = constants.MORAL_FOUNDATION_DEFINITIONS_MAP[foundation]
-            formatted_prompt = ' '.join([definition, ' '.join(formatted_examples), prompt_format])
-            foundation_prompt_map[foundation] = formatted_prompt
-    return foundation_prompt_map
+                if i == 0 and not use_system_prompt:
+                    positive_example = final_system_prompt + positive_example
+                messages.append({
+                    "role": "user",
+                    "content": positive_example
+                })
+                messages.append({
+                    "role": "assistant",
+                    "content": "True"
+                })
+                messages.append({
+                    "role": "user",
+                    "content": negative_example
+                })
+                messages.append({
+                    "role": "assistant",
+                    "content": "False"
+                })
+            messages.append({
+                "role": "user",
+                "content": example_format
+            })
+            foundation_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            if remove_date_prompt:
+                foundation_prompt = foundation_prompt.replace("Cutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n", "")
+            prompt_map[foundation] = foundation_prompt
+    return prompt_map
 
-def generate_one_pass_tf_moral_role_prompt_format(prompt_format, example_format, num_shots, example_dir):
-    filepath = os.path.join(example_dir, 'moral_role_examples.json')
-    foundation_prompt_map = {}
+def generate_one_pass__moral_foundation_prompt_format(system_prompt, example_format, num_shots, filepath, tokenizer):
+    messages = []
+    messages.append(
+        {
+            "role": "system",
+            "content": system_prompt
+        }
+    )
     with open(filepath) as f:
         data = json.load(f)
         for foundation_obj in data:
-            foundation = foundation_obj['moral_role']
+            foundation = foundation_obj['label']
             positive_examples = foundation_obj['positive_examples']
             negative_examples = foundation_obj['negative_examples']
-            formatted_examples = []
             for i in range(num_shots):
                 positive_examples[i]['label'] = foundation
                 negative_examples[i]['label'] = foundation
-                positive_examples[i]['answer'] = 'True'
-                negative_examples[i]['answer'] = 'False'
                 positive_example = example_format.format(**positive_examples[i])
                 negative_example = example_format.format(**negative_examples[i])
-                formatted_examples.append(positive_example)
-                formatted_examples.append(negative_example)
-            definition = constants.MORAL_FOUNDATION_DEFINITIONS_MAP[foundation]
-            formatted_prompt = ' '.join([definition, ' '.join(formatted_examples), prompt_format])
-            foundation_prompt_map[foundation] = formatted_prompt
-    return foundation_prompt_map
+                messages.append({
+                    "role": "user",
+                    "content": positive_example
+                })
+                messages.append({
+                    "role": "assistant",
+                    "content": "True"
+                })
+                messages.append({
+                    "role": "user",
+                    "content": "False"
+                })
+                messages.append({
+                    "role": "assistant",
+                    "content": "False"
+                })
+            messages.append({
+                "user": "user",
+                "content": example_format
+            })
+    return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 
-def generate_all_vs_one_moral_foundation_prompt_format(prompt_format, example_format, num_shots, example_dir):
-    filepath = os.path.join(example_dir, 'moral_foundation_examples.json')
-    with open(filepath) as f:
-        data = json.load(f)
-        formatted_examples = []
-        for foundation_obj in data:
-            foundation = foundation_obj['moral_foundation']
-            positive_examples = foundation_obj['positive_examples']
-            for i in range(num_shots):
-                positive_examples[i]['label'] = foundation
-                positive_example = example_format.format(**positive_examples[i])
-                formatted_examples.append(positive_example)
-        definition = constants.MORAL_FOUNDATION_ALL_DEFINITION
-        formatted_prompt = ' '.join([definition, ' '.join(formatted_examples), prompt_format])
-    return formatted_prompt
-
-def generate_all_vs_one_moral_role_prompt_format(prompt_format, example_format, num_shots, example_dir):
-    filepath = os.path.join(example_dir, 'moral_role_examples.json')
-    foundation_prompt_map = {}
-    with open(filepath) as f:
-        data = json.load(f)
-        formatted_examples = []
-        for foundation_obj in data:
-            foundation = foundation_obj['moral_role']
-            positive_examples = foundation_obj['positive_examples']
-            for i in range(num_shots):
-                positive_examples[i]['label'] = foundation
-                positive_example = example_format.format(**positive_examples[i])
-                formatted_examples.append(positive_example)
-        definition = constants.MORAL_ROLE_ALL_DEFINITION
-        formatted_prompt = ' '.join([definition, ' '.join(formatted_examples), prompt_format])
-    return formatted_prompt
 
 def generate_one_pass_gz_moral_foundation_prompt_format(label_sentences, example_format, num_shots, num_variations, example_dir):
     filepath = os.path.join(example_dir, 'moral_foundation_examples.json')
@@ -106,30 +119,4 @@ def generate_one_pass_gz_moral_foundation_prompt_format(label_sentences, example
                     formatted_prompt = ' '.join([constants.GEN_Z_MF_FEW_SHOT_EXAMPLES,' '.join(formatted_examples), constants.GEN_Z_MF_PREFIX, foundation_formatted_prompt])
                 foundation_prompt_map[foundation].append(formatted_prompt)
     return foundation_prompt_map
-
-def generate_one_pass_gz_moral_role_prompt_format(label_sentences, example_format, num_shots, num_variations, example_dir):
-    filepath = os.path.join(example_dir, 'moral_role_examples.json')
-    foundation_prompt_map = {}
-    with open(filepath) as f:
-        data = json.load(f)
-        for foundation_obj in data:
-            foundation = foundation_obj['moral_role']
-            definition = constants.MORAL_FOUNDATION_DEFINITIONS_MAP[foundation]
-            foundation_prompt_map[foundation] = []
-            for i in range(num_variations):
-                foundation_formatted_prompt = label_sentences[i].format(MORAL_ROLE=foundation, MORAL_ROLE_DEFINITION=definition)
-
-                if num_shots == 0:
-                    formatted_prompt = ' '.join([constants.GEN_Z_MF_INTRO_ZERO_SHOT, constants.GEN_Z_MF_PREFIX, foundation_formatted_prompt])
-                else:
-                    positive_examples = foundation_obj['positive_examples']
-                    formatted_examples = []
-                    for j in range(num_shots):
-                        positive_example_description = foundation_formatted_prompt.format(**positive_examples[j])
-                        positive_example = example_format.format(positive_example_description, positive_examples[j]['Tweet'])
-                        formatted_examples.append(positive_example)
-                    formatted_prompt = ' '.join([constants.GEN_Z_MF_FEW_SHOT_EXAMPLES,' '.join(formatted_examples), constants.GEN_Z_MF_PREFIX, foundation_formatted_prompt])
-                foundation_prompt_map[foundation].append(formatted_prompt)
-    return foundation_prompt_map
-
 

@@ -12,48 +12,55 @@ import src.helpers.loaders.model_loader as model_loader
 from src.rules.rule_type import RuleType
 import src.helpers.loaders.prompt_data_loader as prompt_data_loader
 from typing import Dict
+import os
 
 
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 5
-    topk = 5
-    temperature = 0.5
-    prompt_batch_size = 8
+    num_shots = 2
+    prompt_batch_size = 2
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
+
+    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type)
+    model, tokenizer = model_loader.load_llama_instruct_model(device_type)
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
+    data = data.head(10)
     # generate moral foundation prompt format strings
     foundation_prompts = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
-        constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF, 
-        constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT, 
+        constants.MF_TF_SYSTEM_PROMPT, 
+        constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
         num_shots, 
-        example_path
+        os.path.join(example_path, 'moral_foundation_examples.json'),
+        tokenizer
     )
     foundation_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
-        constants.MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF, 
-        constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT, 
-        num_shots, 
-        example_path
+        constants.MF_TF_SYSTEM_PROMPT, 
+        constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+        num_shots,
+        os.path.join(example_path, 'moral_foundation_examples.json'),
+        tokenizer
     )
     # generate moral role prompt format strings
-    role_prompts = moral_prompting.generate_one_pass_tf_moral_role_prompt_format(
-        constants.MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF,
-        constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT, 
-        num_shots, 
-        example_path
+    role_prompts = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+        constants.MR_TF_SYSTEM_PROMPT, 
+        constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
+        num_shots,
+        os.path.join(example_path, 'moral_role_examples.json'),
+        tokenizer
     )
-    role_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_role_prompt_format(
-        constants.MORAL_ROLE_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF,
-        constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT, 
-        num_shots, 
-        example_path
+    role_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+        constants.MR_TF_SYSTEM_PROMPT, 
+        constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+        num_shots,
+        os.path.join(example_path, 'moral_role_examples.json'),
+        tokenizer
     )
     # load model
-    model, tokenizer = model_loader.load_mistral_model(device_type)
+    model, tokenizer = model_loader.load_test_model(device_type)
     # define rules
     rule_one = LLMTFRule(
         'rule_one',
@@ -65,11 +72,8 @@ def main():
         prompt_batch_size, 
         model, 
         tokenizer, 
-        topk, 
-        temperature, 
         device_type,
         foundation_prompts,
-        True
     )
     rule_two = LLMTFRule(
         'rule_two',
@@ -81,11 +85,8 @@ def main():
         prompt_batch_size, 
         model, 
         tokenizer, 
-        topk, 
-        temperature, 
         device_type,
         role_prompts,
-        True
     )
     rule_three = LLMTFRule(
         'rule_three',
@@ -97,11 +98,8 @@ def main():
         prompt_batch_size, 
         model, 
         tokenizer, 
-        topk, 
-        temperature, 
         device_type,
         foundation_prompts_with_features,
-        True
     )
     rule_four = LLMTFRule(
         'rule_four',
@@ -112,12 +110,9 @@ def main():
         RuleType.MULTI_CLASS,
         prompt_batch_size, 
         model, 
-        tokenizer, 
-        topk, 
-        temperature, 
+        tokenizer,
         device_type,
         role_prompts_with_features,
-        True
     )
     rules = {
         rule_one.name: rule_one, 
