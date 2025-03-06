@@ -101,8 +101,10 @@ class LLMVCRule(RuleTemplate):
                 #with torch.backends.cuda.sdp_kernel(enable_flash=True, enable_math=False, enable_mem_efficient=False):
                 outputs = self.model.generate(
                     **curr_prompt_batch,
-                    max_new_tokens=100,
+                    max_new_tokens=1000,
                     do_sample=True,
+                    return_dict_in_generate=True,
+                    output_logits=True,
                     num_return_sequences=self.num_return_sequences,
                     temperature=self.temperature, 
                     pad_token_id=self.tokenizer.eos_token_id)
