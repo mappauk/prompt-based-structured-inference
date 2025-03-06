@@ -2,7 +2,7 @@ import os
 import json
 import src.helpers.prompting.mf_prompt_constants as constants
 
-def generate_one_pass_tf_moral_foundation_prompt_format(system_prompt, example_format, num_shots, filepath, tokenizer, use_system_prompt=True, remove_date_prompt=False):
+def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, tokenizer, use_system_prompt=True, remove_date_prompt=False):
     prompt_map = {}
     with open(filepath) as f:
         data = json.load(f)
@@ -54,46 +54,32 @@ def generate_one_pass_tf_moral_foundation_prompt_format(system_prompt, example_f
             prompt_map[foundation] = foundation_prompt
     return prompt_map
 
-def generate_one_pass__moral_foundation_prompt_format(system_prompt, example_format, num_shots, filepath, tokenizer):
+def generate_vc_prompt(system_prompt, prompt_format, tokenizer, use_system_prompt=True, remove_date_prompt=False):
     messages = []
-    messages.append(
-        {
-            "role": "system",
-            "content": system_prompt
-        }
-    )
-    with open(filepath) as f:
-        data = json.load(f)
-        for foundation_obj in data:
-            foundation = foundation_obj['label']
-            positive_examples = foundation_obj['positive_examples']
-            negative_examples = foundation_obj['negative_examples']
-            for i in range(num_shots):
-                positive_examples[i]['label'] = foundation
-                negative_examples[i]['label'] = foundation
-                positive_example = example_format.format(**positive_examples[i])
-                negative_example = example_format.format(**negative_examples[i])
-                messages.append({
-                    "role": "user",
-                    "content": positive_example
-                })
-                messages.append({
-                    "role": "assistant",
-                    "content": "True"
-                })
-                messages.append({
-                    "role": "user",
-                    "content": "False"
-                })
-                messages.append({
-                    "role": "assistant",
-                    "content": "False"
-                })
-            messages.append({
-                "user": "user",
-                "content": example_format
-            })
-    return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    if use_system_prompt:
+        messages.append(
+            {
+                "role": "system" if use_system_prompt else "user",
+                "content": system_prompt
+            }
+        )
+        messages.append(
+            {
+                "role": "user",
+                "content": prompt_format
+            }
+        )
+    else:
+        messages.append(
+            {
+                "role": "user",
+                "content": system_prompt + prompt_format
+            }
+        )
+    foundation_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    if remove_date_prompt:
+        foundation_prompt = foundation_prompt.replace("Cutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n", "")
+    return foundation_prompt
 
 
 def generate_one_pass_gz_moral_foundation_prompt_format(label_sentences, example_format, num_shots, num_variations, example_dir):

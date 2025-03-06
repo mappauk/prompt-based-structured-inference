@@ -112,7 +112,7 @@ class LLMVCRule(RuleTemplate):
                 for k in range(len(text_outputs)):
                     string_outputs.append(text_outputs[k])
                     percentages.append(self.extract_score(text_outputs[k]))
-        with open('textoutput.json', 'w') as file:
+        with open('textoutput_{self.name}.json', 'w') as file:
             json.dump(string_outputs, file)
         percentages = np.array(percentages)
         percentages_by_label = np.reshape(percentages, (int(percentages.shape[0]/self.num_samples),self.num_samples))

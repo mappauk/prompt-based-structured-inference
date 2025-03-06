@@ -28,16 +28,16 @@ def main():
     model, tokenizer = model_loader.load_llama_instruct_model(device_type)
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
-    data = data.head(10)
+
     # generate moral foundation prompt format strings
-    foundation_prompts = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+    foundation_prompts = moral_prompting.generate_tf_prompts(
         constants.MF_TF_SYSTEM_PROMPT, 
         constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
         num_shots, 
         os.path.join(example_path, 'moral_foundation_examples.json'),
         tokenizer
     )
-    foundation_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+    foundation_prompts_with_features = moral_prompting.generate_tf_prompts(
         constants.MF_TF_SYSTEM_PROMPT, 
         constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
         num_shots,
@@ -45,14 +45,14 @@ def main():
         tokenizer
     )
     # generate moral role prompt format strings
-    role_prompts = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+    role_prompts = moral_prompting.generate_tf_prompts(
         constants.MR_TF_SYSTEM_PROMPT, 
         constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
         num_shots,
         os.path.join(example_path, 'moral_role_examples.json'),
         tokenizer
     )
-    role_prompts_with_features = moral_prompting.generate_one_pass_tf_moral_foundation_prompt_format(
+    role_prompts_with_features = moral_prompting.generate_tf_prompts(
         constants.MR_TF_SYSTEM_PROMPT, 
         constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
         num_shots,
@@ -60,7 +60,8 @@ def main():
         tokenizer
     )
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type)
+
     # define rules
     rule_one = LLMTFRule(
         'rule_one',

@@ -25,23 +25,23 @@ def main():
     input_path = sys.argv[1]
     output_path = sys.argv[2]
 
+    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, better_transformer=True)
+    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, better_transformer=True)
+
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
-
 
     data = data.head(20)
 
     # generate moral foundation prompt format strings
-    foundation_prompt = constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT
-    foundation_prompt_with_features = constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT
+    foundation_prompt = moral_prompting.generate_vc_prompt(constants.MF_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT, constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT, tokenizer)
+    foundation_prompt_with_features = moral_prompting.generate_vc_prompt(constants.MF_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT, constants.MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT, tokenizer)
 
     # generate moral role prompt format strings
-    role_prompt = constants.ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT
-    role_prompt_with_features = constants.ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT
-
+    role_prompt = moral_prompting.generate_vc_prompt(constants.ROLE_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT, constants.ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT, tokenizer)
+    role_prompt_with_features = moral_prompting.generate_vc_prompt(constants.ROLE_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT, constants.ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT, tokenizer)
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type, eight_bit=False, flash_attention_2=False)
-    #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, better_transformer=True)
+    #model, tokenizer = model_loader.load_test_model(device_type, eight_bit=False, flash_attention_2=False)
 
     # define rules
     rule_one = LLMVCRule(

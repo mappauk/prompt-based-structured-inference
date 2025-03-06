@@ -419,9 +419,7 @@ Given the possible moral roles, the definitions of their associated moral founda
 SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples: '
 
 # Verbalized Confidence
-
-
-MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
+MF_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT = '''
 Consider the task of identifying the moral foundation present in a tweet. The five moral foundations and their corresponding definitions are given below:
 
 Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
@@ -430,8 +428,34 @@ Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, sub
 Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
 Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
 
-Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet.
+Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet. Please answer with the following format:
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
 
+ROLE_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. 
+Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. 
+Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. 
+Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. 
+Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Please answer with the following format: 
+“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+'''
+
+
+MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
 Question: What is the moral foundation present in the following tweet: "{Tweet}"?
  
 Possible Answer: {label}
@@ -442,16 +466,6 @@ Q: How likely is the above answer to be correct? Please first show your reasonin
 '''
 
 MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
-Consider the task of identifying the moral foundation present in a tweet. The five moral foundations and their corresponding definitions are given below:
-
-Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
-Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
-Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
-Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
-Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
-
-Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet.
-
 Question: What is the moral foundation present in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
  
 Possible Answer: {label}
@@ -462,16 +476,6 @@ Q: How likely is the above answer to be correct? Please first show your reasonin
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
-Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
-
-Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
-Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
-Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
-Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
-Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
-
-Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
-
 Question: What is the moral role of the entity "{Entity}" expressed in the following tweet: "{Tweet}"?
  
 Possible Answer: {label}
@@ -482,16 +486,6 @@ Q: How likely is the above answer to be correct? Please first show your reasonin
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
-Consider the task of identifying the moral role of an entity present in a tweet. Definitions for the five moral foundations and their associated roles are given below:
-
-Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
-Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
-Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
-Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
-Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
-
-Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Estimate the probability that the given entity is expressing the specified moral role in the tweet.
-
 Question: What is the moral role of the entity "{Entity}" expressed in the following tweet about {Topic} written by a {Ideology}: "{Tweet}"?
  
 Possible Answer: {label}
