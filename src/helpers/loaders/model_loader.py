@@ -3,25 +3,19 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForSeq2Se
 
 # instruct models
 def load_mistral_instruct_model(device_type: str, eight_bit: bool = False, better_transformer: bool = False, flash_attention_2: bool = False):
-    '''
     model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", device_map=device_type, return_dict_in_generate=True, load_in_8bit=eight_bit, use_flash_attention_2=flash_attention_2)
     if better_transformer:
         model = model.to_bettertransformer()
-    '''
-    model = None
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", token='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')
+    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
     tokenizer.padding_side = 'left'
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
 
 def load_llama_instruct_model(device_type: str, eight_bit: bool = False, better_transformer: bool = False, flash_attention_2: bool = False):
-    '''
     model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct", device_map=device_type, return_dict_in_generate=True, load_in_8bit=eight_bit, use_flash_attention_2=flash_attention_2)
     if better_transformer:
         model = model.to_bettertransformer()
-    '''
-    model = None
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct", token='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')
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
     tokenizer.padding_side = 'left'
     tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
