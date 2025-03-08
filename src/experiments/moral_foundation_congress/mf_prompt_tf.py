@@ -19,15 +19,16 @@ def main():
     # hyperparamaters
     device_type = 'cuda'
     num_shots = 2
-    prompt_batch_size = 2
+    prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
 
-    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type)
-    model, tokenizer = model_loader.load_llama_instruct_model(device_type)
+    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
+    #data = data.head(1)
 
     # generate moral foundation prompt format strings
     foundation_prompts = moral_prompting.generate_tf_prompts(
@@ -122,9 +123,6 @@ def main():
         rule_four.name: rule_four
     }
     # get rule groundings:
-    rule_groundings = {}
-    for rule_name, rule in rules.items():
-        rule_groundings[rule_name] = rule.get_rule_groundings(data)
     prompt_data_loader.save_rule_groundings(rules, data, output_path)
 
 if __name__ == "__main__":

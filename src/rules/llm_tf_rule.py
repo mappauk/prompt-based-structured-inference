@@ -20,13 +20,15 @@ class LLMTFRule(RuleTemplate):
                  model: AutoModelForCausalLM, 
                  tokenizer: AutoTokenizer,
                  device_type: str,
-                 prompt_map):
+                 prompt_map,
+                 isseq2seq: bool = False):
         super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
         self.tokenizer = tokenizer
         self.device_type = device_type
+        self.isseq2seq = False
     
     def get_prompt(self, label, dict):
         prompt = self.prompt_map[label]
@@ -38,6 +40,12 @@ class LLMTFRule(RuleTemplate):
         output_df_list = []
         scores = []
         prompt_batch = []
+        if self.isseq2seq:
+            tIndex = self.tokenizer.encode('true')[0]
+            fIndex = self.tokenizer.encode('false')[0]
+        else:
+            tIndex = self.tokenizer.encode('true')[1]
+            fIndex = self.tokenizer.encode('false')[1]
         for index, row in data_subset.iterrows():
             dict = { }
             for feature in self.features:
@@ -76,8 +84,12 @@ class LLMTFRule(RuleTemplate):
                 return_dict_in_generate=True,
                 output_logits=True,
                 pad_token_id=self.tokenizer.eos_token_id)
-            output_logits = outputs.logits[0].cpu()
-            for row in output_logits:
+            output_logits = outputs.logits[0]
+            softmax_over_tokens = torch.nn.functional.softmax(outputs.logits[0], dim=1)
+            tf_logits = output_logits[:, [tIndex, fIndex]].cpu()
+            tf_probs = softmax_over_tokens[:, [tIndex, fIndex]].cpu()
+            interm_scores = np.concatenate((tf_logits, tf_probs), axis=1)
+            for row in interm_scores:
                 scores.append(row.tolist())
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)

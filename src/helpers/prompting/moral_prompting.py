@@ -34,7 +34,7 @@ def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, toke
                 })
                 messages.append({
                     "role": "assistant",
-                    "content": "True"
+                    "content": "true"
                 })
                 messages.append({
                     "role": "user",
@@ -42,7 +42,7 @@ def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, toke
                 })
                 messages.append({
                     "role": "assistant",
-                    "content": "False"
+                    "content": "false"
                 })
             messages.append({
                 "role": "user",
