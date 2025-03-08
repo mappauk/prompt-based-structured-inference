@@ -179,29 +179,29 @@ MORAL_FOUNDATION_IDENTIFICATION_ONE_VS_ALL_TF = ('Moral Foundation Definitions: 
     'prohibiting rebellion against authority. PURITY/DEGRADATION: Associations with the sacred and holy, disgust, contamination, religious'
     'notions which guide how to live, prohibiting violating the sacred. {0}'
     '### Tweet: {Tweet}'
-    'Q. "The moral foundation expressed in the tweet is {label}." - True or False?'
+    'Q. "The moral foundation expressed in the tweet is {label}." - true or false?'
     'A. ')
 
 ## One Pass
 
 MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_TF = (
     '### Tweet: {Tweet} '
-    'Q. "The moral foundation expressed in the tweet is {label}." - True or False? '
+    'Q. "The moral foundation expressed in the tweet is {label}." - true or false? '
     'A. ')
 
 MORAL_FOUNDATION_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = (
     '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} '
-    'Q. "The moral foundation expressed in the tweet is {label}." - True or False? '
+    'Q. "The moral foundation expressed in the tweet is {label}." - true or false? '
     'A. ')
 
 MORAL_ROLE_IDENTIFICATION_ONE_PASS_TF = (
     '### Tweet: {Tweet} '
-    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? '
+    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? '
     'A. ')
 
 MORAL_ROLE_IDENTIFICATION_ONE_PASS_WITH_FEATURES_TF = (
     '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} '
-    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? '
+    'Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? '
     'A. ')
 
 MORAL_FOUNDATION_IDENTIFICATION_ALLVSONE = '### Tweet: {Tweet} Q. "What is the moral foundation expressed in the tweet?" A. '
@@ -210,18 +210,18 @@ MORAL_ROLE_IDENTIFICATION_ALLVSONE_PASS = '### Tweet: {Tweet} Q. "What is the mo
 MORAL_ROLE_IDENTIFICATION_ALLVSONE_WITH_FEATURES= '### Tweet: {Tweet} Tweet Author Political Ideology: {Ideology} Topic of Tweet: {Topic} Q. "What is the moral role expressed by {Entity} in the tweet? A. '
 
 MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
-Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. '''
+Q. "The moral foundation expressed in the tweet is {label}." - true or false? A. '''
 MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
 Tweet Author Political Ideology: {Ideology} 
 Topic of Tweet: {Topic} 
-Q. "The moral foundation expressed in the tweet is {label}." - True or False? A. '''
+Q. "The moral foundation expressed in the tweet is {label}." - true or false? A. '''
 MORAL_ROLE_PROMPT_EXAMPLE_FORMAT = '''
 Tweet: {Tweet} 
-Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. '''
+Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? A. '''
 MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
 Tweet Author Political Ideology: {Ideology} 
 Topic of Tweet: {Topic} 
-Q. "The moral role of {Entity} expressed in the tweet is {label}." - True or False? A. '''
+Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? A. '''
 
 
 MORAL_FOUNDATION_ALLVONE_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "What is the moral foundation expressed in the tweet?" A. {label}'
@@ -392,7 +392,7 @@ Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, sub
 Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
 Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
 
-Given the moral foundations, their definitions, and the task of identifying the foundation present in a tweet, answer the following True/False question regarding whether a specific moral foundation is present in a tweet.
+Given the moral foundations, their definitions, and the task of identifying the foundation present in a tweet, answer the following true/false question regarding whether a specific moral foundation is present in a tweet.
 '''
 
 MR_TF_SYSTEM_PROMPT = '''
@@ -413,7 +413,7 @@ Possible Roles: Target of purity/degradation, Entity preserving purity, Entity c
 Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
 Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
-Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet, answer the following True/False question regarding whether an entity is expressing a particular moral role in a tweet.
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet, answer the following true/false question regarding whether an entity is expressing a particular moral role in a tweet.
 '''
 
 SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples: '
