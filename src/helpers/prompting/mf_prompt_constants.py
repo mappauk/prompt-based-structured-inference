@@ -217,11 +217,11 @@ Topic of Tweet: {Topic}
 Q. "The moral foundation expressed in the tweet is {label}." - true or false? A. '''
 MORAL_ROLE_PROMPT_EXAMPLE_FORMAT = '''
 Tweet: {Tweet} 
-Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? A. '''
+Q. "The moral role of "{Entity}" expressed in the tweet is {label}." - true or false? A. '''
 MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
 Tweet Author Political Ideology: {Ideology} 
 Topic of Tweet: {Topic} 
-Q. "The moral role of {Entity} expressed in the tweet is {label}." - true or false? A. '''
+Q. "The moral role of "{Entity}" expressed in the tweet is {label}." - true or false? A. '''
 
 
 MORAL_FOUNDATION_ALLVONE_PROMPT_EXAMPLE_FORMAT = '### Tweet: {Tweet} Q. "What is the moral foundation expressed in the tweet?" A. {label}'
@@ -381,6 +381,133 @@ GEN_Z_MF_ROLE_LABEL_SENTENCES_WITH_CONTEXT = [
     "The tweet about {{Topic}}, written by a {{Ideology}}, features {{Entity}} expressing the moral role {MORAL_ROLE}, described as: {MORAL_ROLE_DEFINITION}"
 ]
 
+# MC System Prompts
+MF_MC_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral foundation present in a tweet from a U.S congress member. The five moral foundations and their corresponding definitions are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+
+Given the moral foundations, their definitions, and the task of identifying the foundation present in a tweet, answer the following multiple choice questions regarding whether a specific moral foundation is present in a tweet. Answer only with the letter corresponding to the correct answer.
+'''
+
+MR_MC_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral role of an entity present in a tweet from a U.S congress member. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. 
+Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. 
+Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. 
+Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. 
+Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
+Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet, answer the following multiple choice question regarding whether an entity is expressing a particular moral role in a tweet. Answer only with the letter corresponding to the correct answer.
+'''
+
+MF_MC_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
+Q. What moral foundation is being expressed in the given tweet?
+Choices:
+(A) CARE/HARM
+(B) FAIRNESS/CHEATING
+(C) AUTHORITY/SUBVERSION
+(D) PURITY/DEGRADATION
+(E) LOYALTY/BETRAYAL
+'''
+
+MF_MC_EXAMPLE_FORMAT_WITH_FEATURES = '''Tweet: {Tweet} 
+Tweet Author Political Ideology: {Ideology} 
+Topic of Tweet: {Topic} 
+Q. What moral foundation is being expressed in the given tweet?
+Choices:
+(A) CARE/HARM
+(B) FAIRNESS/CHEATING
+(C) AUTHORITY/SUBVERSION
+(D) PURITY/DEGRADATION
+(E) LOYALTY/BETRAYAL
+'''
+
+MR_MC_EXAMPLE_FORMAT = '''
+Tweet: {Tweet} 
+Q. What is the moral role of "{Entity}" expressed in the given tweet?
+(A) Target of care/harm
+(B) Entity causing harm
+(C) Entity providing care
+(D) Target of fairness/cheating
+(E) Entity ensuring fairness
+(F) Entity doing cheating
+(G) Target of loyalty/betrayal
+(H) Entity being loyal
+(I) Entity doing betrayal
+(J) Justified authority
+(K) Justified authority over
+(L) Failing authority
+(M) Failing authority over
+(N) Target of purity/degradation
+(O) Entity preserving purity
+(P) Entity causing degradation
+'''
+MR_MC_EXAMPLE_FORMAT_WITH_FEATURES = '''Tweet: {Tweet} 
+Tweet Author Political Ideology: {Ideology} 
+Topic of Tweet: {Topic} 
+Q. What is the moral role of "{Entity}" expressed in the given tweet?
+(A) Target of care/harm
+(B) Entity causing harm
+(C) Entity providing care
+(D) Target of fairness/cheating
+(E) Entity ensuring fairness
+(F) Entity doing cheating
+(G) Target of loyalty/betrayal
+(H) Entity being loyal
+(I) Entity doing betrayal
+(J) Justified authority
+(K) Justified authority over
+(L) Failing authority
+(M) Failing authority over
+(N) Target of purity/degradation
+(O) Entity preserving purity
+(P) Entity causing degradation
+'''
+
+MF_MC_CHOICES = ["A", "B", "C", "D", "E"]
+MR_MC_CHOICES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
+
+LABEL_TO_MC_LETTER = {
+    # frames
+    CARE_HARM: "A",
+    FAIRNESS_CHEATING: "B",
+    AUTHORITY_SUBVERSION: "C",
+    PURITY_DEGREDATION: "D",
+    LOYALTY_BETRAYAL: "E",
+    # roles
+    TARGET_CARE_HARM: "A",
+    ENTITY_CAUSING_HARM: "B",
+    ENTITY_PROVIDING_CARE: "C",
+    TARGET_FAIRNESS_CHEATING: "D",
+    ENTITY_ENSURING_FAIRNESS: "E",
+    ENTITY_DOING_CHEATING: "F",
+    TARGET_LOYALTY_BETRAYAL: "G",
+    ENTITY_BEING_LOYAL: "H",
+    ENTITY_DOING_BETRAYAL: "I",
+    JUSTIFIED_AUTHORITY: "J",
+    JUSTIFIED_AUTHORITY_OVER: "K",
+    FAILING_AUTHORITY: "L",
+    FAILING_AUTHORITY_OVER: "M",
+    TARGET_PURITY_DEGREDATION: "N",
+    ENTITY_PRESERVING_PURITY: "O",
+    ENTITY_CAUSING_DEGRADATION: "P" 
+}
+
 # TF System Prompts
 
 MF_TF_SYSTEM_PROMPT = '''
@@ -416,7 +543,7 @@ Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing bet
 Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet, answer the following true/false question regarding whether an entity is expressing a particular moral role in a tweet.
 '''
 
-SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples: '
+SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples:\n'
 
 # Verbalized Confidence
 MF_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT = '''
