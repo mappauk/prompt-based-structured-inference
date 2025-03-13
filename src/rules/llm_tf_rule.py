@@ -28,7 +28,7 @@ class LLMTFRule(RuleTemplate):
         self.model = model
         self.tokenizer = tokenizer
         self.device_type = device_type
-        self.isseq2seq = False
+        self.isseq2seq = isseq2seq
     
     def get_prompt(self, label, dict):
         prompt = self.prompt_map[label]

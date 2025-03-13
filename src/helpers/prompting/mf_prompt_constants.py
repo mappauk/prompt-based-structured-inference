@@ -318,6 +318,100 @@ ENTITIES_TO_EXCLUDE = [ 'I', "I'm", 'you', 'he', 'they', 'we', 'she', 'who', 'th
 
 # Gen-Z
 
+MF_GC_SYSTEM_PROMPT = '''
+Consider the task of generating a tweet made by a U.S congress member given a description of the moral foundation that is being expressed in the tweet. The five moral foundations and their corresponding definitions are given below:
+
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+
+Given the moral foundations and their definitions, generate a tweet given a description of the tweet.
+'''
+
+MR_GC_SYSTEM_PROMPT = '''
+Consider the task of generating a tweet made by a U.S congress member given a description of the moral role being expressed by an entity in the tweet. Definitions for the five moral foundations and their associated moral roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. 
+Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. 
+Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. 
+Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. 
+Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
+Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles and the definitions of their associated moral foundations, generate a tweet about a given entity expressing a particular moral role.
+'''
+
+MF_GC_EXAMPLE_FORMAT = '''Generate a tweet based on the following description:
+Generation description: {0}
+Tweet:
+'''
+
+MF_GC_GENERATION_FORMAT = '''{Tweet}'''
+
+MF_GC_LABEL_SENTENCES = [
+    "This tweet expresses the moral foundation {label}.",
+    "This tweet reflects the moral foundation {label}.",
+    "The tweet showcases the moral foundation {label}.",
+    "In this tweet, the moral foundation {label} is expressed.",
+    "This tweet highlights the moral foundation {label}.",
+    "The moral foundation {label} is conveyed in this tweet.",
+    "This tweet demonstrates the moral foundation {label}.",
+    "In this tweet, the author expresses the moral foundation {label}.",
+    "This tweet communicates the moral foundation {label}.",
+    "This tweet conveys the moral foundation {label}."
+]
+
+MF_GC_LABEL_SENTENCES_WITH_FEATURES = [
+    "This tweet about {Topic} whose author is a {Ideology} expresses the moral foundation {label}.",
+    "This tweet on {Topic} by a {Ideology} reflects the moral foundation {label}.",
+    "A {Ideology} wrote this tweet about {Topic} expressing the moral foundation {label}.",
+    "The tweet on {Topic} authored by a {Ideology} highlights the moral foundation {label}.",
+    "In this tweet about {Topic}, the {Ideology} author conveys the moral foundation {label}.",
+    "This tweet regarding {Topic} by a {Ideology} showcases the moral foundation {label}.",
+    "The moral foundation {label} is highlighted in this tweet about {Topic} by a {Ideology}.",
+    "Written by a {Ideology}, this tweet on {Topic} expresses the moral foundation {label}.",
+    "This tweet about {Topic} by a {Ideology} illustrates the moral foundation {label}.",
+    "In this tweet about {Topic}, written by a {Ideology}, the moral foundation {label} is expressed.",
+]
+
+MR_GC_LABEL_SENTENCES = [
+    'In this tweet, the entity "{Entity}" displays the moral role {label}.',
+    'This tweet shows the entity "{Entity}" exhibiting the moral role {label}.',
+    'The entity "{Entity}" in this tweet demonstrates the moral role {label}.',
+    'In this tweet, "{Entity}" reflects the moral role {label}.',
+    '"{Entity}" in this tweet exemplifies the moral role {label}.',
+    'This tweet portrays the entity "{Entity}" as embodying the moral role {label}.',
+    'The entity "{Entity}" in this tweet illustrates the moral role {label}.',
+    '"{Entity}" shows the moral role {label} in this tweet.',
+    'In this tweet, "{Entity}" reveals the moral role {label}.',
+    'This tweet features "{Entity}" expressing the moral role {label}.'
+]
+
+MR_GC_LABEL_SENTENCES_WITH_FEATURES = [
+    'In this tweet about {Topic}, written by a {Ideology}, the entity "{Entity}" exhibits the moral role {label}.',
+    'This tweet about {Topic} by a {Ideology} shows the entity "{Entity}" demonstrating the moral role {label}.',
+    'The entity "{Entity}" in this tweet about {Topic} from a {Ideology} displays the moral role {label}.',
+    'In this tweet about {Topic} by a {Ideology}, "{Entity}" reflects the moral role {label}.',
+    '"{Entity}" in this tweet about {Topic}, authored by a {Ideology}, exemplifies the moral role {label}.',
+    'This tweet on {Topic} from a {Ideology} portrays "{Entity}" as embodying the moral role {label}.',
+    'The entity "{Entity}" in this tweet about {Topic}, written by a {Ideology}, illustrates the moral role {label}.',
+    'In this tweet on {Topic} by a {Ideology}, "{Entity}" shows the moral role {label}.',
+    'This tweet, discussing {Topic} and authored by a {Ideology}, reveals "{Entity}" displaying the moral role {label}.',
+    'The tweet about {Topic}, written by a {Ideology}, features "{Entity}" expressing the moral role {label}.'
+]
+
+# Old Gen-Z stuff
+
 GEN_Z_MF_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
 GEN_Z_MF_PARAPHRASE_PROMPT_WITH_CONTEXT = 'Write 10 paraphrases of this sentence as a Python list. “This tweet about [TOPIC] whose author is a [POLITICAL_PARTY] expresses the moral foundation [MORAL_FOUNDATION] which is defined as [MORAL_FOUNDATION_DEFINITION].”; TOPIC∈{affordable care act, immigration, abortion, guns, terrorism, lgbtq}, POLITICAL_PARTY∈{democrat, republican}, MORAL_FOUNDATION∈{CARE/HARM, FAIRNESS/CHEATING, AUTHORITY/SUBVERSION, PURITY/DEGRADATION, LOYALTY/BETRAYAL}, MORAL_FOUNDATION_DEFINITION={definition of corresponding MORAL_FOUNDATION}. This is a multi label classification task for the moral foundation.'
 GEN_Z_MF_ROLE_PARAPHRASE_PROMPT = 'Write 10 paraphrases of this sentence as a Python list. “This entity [ENTITY] in this tweet exhibits the moral role [MORAL_ROLE] defined as [MORAL_ROLE_DEFINITION]."'
@@ -328,7 +422,13 @@ GEN_Z_MF_TWEET_FORMAT = ' ### Tweet: {Tweet}'
 GEN_Z_MF_INTRO_ZERO_SHOT = 'Generate a tweet based on the following description.'
 GEN_Z_MF_FEW_SHOT_EXAMPLES = 'Generate a tweet based on the following description. For Example: '
 GEN_Z_MF_PREFIX = '### Generation description:'
-GEN_Z_MF_EXAMPLE_FORMAT = '### Generation description: {0} ### Tweet: {1}'
+
+GEN_Z_MF_EXAMPLE_FORMAT = '''Generate a tweet based on the following description:
+Generation description: {0}
+Tweet:
+'''
+
+
 GEN_Z_MF_LABEL_SENTENCES = [
     "This tweet expresses the moral foundation {MORAL_FOUNDATION} which is defined as: {MORAL_FOUNDATION_DEFINITION}",
     "This tweet reflects the moral foundation {MORAL_FOUNDATION}, which is defined as: {MORAL_FOUNDATION_DEFINITION}",
@@ -380,6 +480,9 @@ GEN_Z_MF_ROLE_LABEL_SENTENCES_WITH_CONTEXT = [
     "This tweet, discussing {{Topic}} and authored by a {{Ideology}}, reveals {{Entity}} displaying the moral role {MORAL_ROLE}, defined as: {MORAL_ROLE_DEFINITION}",
     "The tweet about {{Topic}}, written by a {{Ideology}}, features {{Entity}} expressing the moral role {MORAL_ROLE}, described as: {MORAL_ROLE_DEFINITION}"
 ]
+
+
+
 
 # MC System Prompts
 MF_MC_SYSTEM_PROMPT = '''
