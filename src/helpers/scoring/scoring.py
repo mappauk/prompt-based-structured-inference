@@ -1,5 +1,6 @@
 import torch
 from scipy.special import softmax
+import numpy as np
 
 # tf scoring methods
 
@@ -34,5 +35,22 @@ def mc_logit_softmax(data, groupby, choice_map):
 
 # gc scoring methods
 
-def gc_scoring():
-    return
+def gc_scoring(data, groupby):
+    return gc_average_logit_sequence_softmax(data, groupby)
+
+def gc_sum_logit_softmax(data, groupby):
+    data['Score'] = data['Score'].apply(lambda score: np.sum(score['logits']))
+    data['Score'] = data.groupby(groupby)['Score'].transform(softmax)
+    return data
+
+def gc_average_logit_softmax(data, groupby):
+    data['Score'] = data['Score'].apply(lambda score: np.mean(score['logits']))
+    data['Score'] = data.groupby(groupby)['Score'].transform(softmax)
+    return data
+
+def gc_average_logit_sequence_softmax(data, groupby):
+    data['Score'] = data['Score'].apply(lambda score: np.sum(score['logits'], axis=1))
+    data['Score'] = data['Score'].apply(lambda score: np.mean(score))
+    data['Score'] = data.groupby(groupby)['Score'].transform(softmax)
+    return data
+

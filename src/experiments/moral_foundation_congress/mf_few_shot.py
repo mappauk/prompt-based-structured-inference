@@ -17,8 +17,6 @@ def main():
     rule_type = sys.argv[3]
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
-    print(rule_groundings)
-    print(rule_groundings['rule_one'].columns)
     if rule_type == 'tf':
         rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['Id'])
         rule_groundings['rule_two'] = scoring.tf_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
@@ -30,12 +28,13 @@ def main():
         rule_groundings['rule_three'] = scoring.mc_scoring(rule_groundings['rule_three'], ['Id'], constants.MF_MC_LABEL_TO_CHOICE_INDEX )
         rule_groundings['rule_four'] = scoring.mc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'], constants.MR_MC_LABEL_TO_CHOICE_INDEX)
     elif rule_type == 'gc':
-        return
+        rule_groundings['rule_one'] = scoring.gc_scoring(rule_groundings['rule_one'], ['Id'])
+        rule_groundings['rule_two'] = scoring.gc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
+        rule_groundings['rule_three'] = scoring.gc_scoring(rule_groundings['rule_three'], ['Id'])
+        rule_groundings['rule_four'] = scoring.gc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
     else:
         raise Exception('Invalid Rule Type')
-    print(rule_groundings)
-    return
-    #rule_groundings = prompt_data_loader.load_rule_groundings_json(rule_groundings_path, {'Id': str})
+
     # save results
     results = {}
     # cluster by id
