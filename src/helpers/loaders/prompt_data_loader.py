@@ -4,19 +4,18 @@ from typing import List
 from src.rules.rule_template import RuleTemplate
 import numpy as np
 import torch
+import glob
 
 
-
-def load_rule_groundings(path: str):
+def load_rule_groundings(path: str, rule_names: list):
     rule_groundings = {}
-    for root, dirs, files in os.walk(path):
+    for rule_name in rule_names:
+        files = glob.glob(os.path.join(path, rule_name + '*_groundings_dataframe.pkl'))
+        rule_grounding_chunks = []
         for file in files:
-            filepath = os.path.join(root, file)
-            filePrefixEnd = file.find('_groundings_dataframe.pkl')
-            if filePrefixEnd > 0:
-                rule_grounding_data = pd.read_pickle(filepath)
-                grounding_name = file[0:filePrefixEnd]
-                rule_groundings[grounding_name] = rule_grounding_data
+            rule_grounding_data = pd.read_pickle(file)
+            rule_grounding_chunks.append(rule_grounding_data)
+        rule_groundings[rule_name] = pd.concat(rule_grounding_chunks)
     return rule_groundings
 
 def load_rule_groundings_json(path: str, dtype):

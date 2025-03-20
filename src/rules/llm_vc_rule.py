@@ -101,8 +101,10 @@ class LLMVCRule(RuleTemplate):
                 #with torch.backends.cuda.sdp_kernel(enable_flash=True, enable_math=False, enable_mem_efficient=False):
                 outputs = self.model.generate(
                     **curr_prompt_batch,
-                    max_new_tokens=100,
+                    max_new_tokens=1000,
                     do_sample=True,
+                    return_dict_in_generate=True,
+                    output_logits=True,
                     num_return_sequences=self.num_return_sequences,
                     temperature=self.temperature, 
                     pad_token_id=self.tokenizer.eos_token_id)
@@ -112,7 +114,7 @@ class LLMVCRule(RuleTemplate):
                 for k in range(len(text_outputs)):
                     string_outputs.append(text_outputs[k])
                     percentages.append(self.extract_score(text_outputs[k]))
-        with open('textoutput.json', 'w') as file:
+        with open('textoutput_{self.name}.json', 'w') as file:
             json.dump(string_outputs, file)
         percentages = np.array(percentages)
         percentages_by_label = np.reshape(percentages, (int(percentages.shape[0]/self.num_samples),self.num_samples))

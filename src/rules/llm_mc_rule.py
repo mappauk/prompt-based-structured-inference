@@ -8,7 +8,7 @@ import random
 import copy
 import torch
 
-class LLMTFRule(RuleTemplate):
+class LLMMCRule(RuleTemplate):
     def __init__(self,
                  name: str,
                  features: list, 
@@ -21,18 +21,16 @@ class LLMTFRule(RuleTemplate):
                  tokenizer: AutoTokenizer,
                  device_type: str,
                  prompt_map,
+                 choices: list,
                  isseq2seq: bool = False):
-        super(LLMTFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
+        super(LLMMCRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
         self.model = model
         self.tokenizer = tokenizer
         self.device_type = device_type
         self.isseq2seq = isseq2seq
-    
-    def get_prompt(self, label, dict):
-        prompt = self.prompt_map[label]
-        return prompt.format(**dict)
+        self.choices = choices
         
     def get_rule_groundings(self, data: pd.DataFrame):
         data_subset = data[self.features].drop_duplicates()
@@ -40,38 +38,33 @@ class LLMTFRule(RuleTemplate):
         output_df_list = []
         scores = []
         prompt_batch = []
-        if self.isseq2seq:
-            tIndex = self.tokenizer.encode('true')[0]
-            fIndex = self.tokenizer.encode('false')[0]
-        else:
-            tIndex = self.tokenizer.encode('true')[1]
-            fIndex = self.tokenizer.encode('false')[1]
+        choice_token_indicies = []
+        for choice in self.choices:
+            if self.isseq2seq:
+                choice_token_indicies.append(self.tokenizer.encode(choice)[0])
+            else:
+                choice_token_indicies.append(self.tokenizer.encode(choice)[1])
         for index, row in data_subset.iterrows():
             dict = { }
             for feature in self.features:
                 dict[feature] = row[feature]
+            formatted_prompt = self.prompt_map.format(**dict)
+            prompt_batch.append(formatted_prompt)
+            if len(prompt_batch) == self.batch_size:
+                prompts.append(prompt_batch)
+                prompt_batch = []
             if self.rule_type == RuleType.BINARY:
-                formatted_prompt = self.prompt_map.format(**dict)
                 output_df_row = copy.deepcopy(dict)
                 output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                 output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
-                output_df_list.append(output_df_row)
-                prompt_batch.append(formatted_prompt)
-                if len(prompt_batch) == self.batch_size:
-                    prompts.append(prompt_batch)
-                    prompt_batch = [] 
+                output_df_list.append(output_df_row) 
             elif self.rule_type == RuleType.MULTI_CLASS:
                 for label in self.labels:
                     dict['label'] = label
-                    formatted_prompt = self.get_prompt(label, dict)
                     output_df_row = copy.deepcopy(dict)
                     output_df_row['RuleVariable'] = self.rule_variable_format.format(**output_df_row)
                     output_df_row['HeadVariable'] = self.head_variable_format.format(**output_df_row)
                     output_df_list.append(output_df_row)
-                    prompt_batch.append(formatted_prompt)
-                    if len(prompt_batch) == self.batch_size:
-                        prompts.append(prompt_batch)
-                        prompt_batch = [] 
         if len(prompt_batch) != 0:
             prompts.append(prompt_batch)
         for i in range(len(prompts)):
@@ -86,18 +79,13 @@ class LLMTFRule(RuleTemplate):
                 pad_token_id=self.tokenizer.eos_token_id)
             output_logits = outputs.logits[0]
             softmax_over_tokens = torch.nn.functional.softmax(outputs.logits[0], dim=1)
-            tf_logits = output_logits[:, [tIndex, fIndex]].cpu()
-            tf_probs = softmax_over_tokens[:, [tIndex, fIndex]].cpu()
-            interm_scores = np.concatenate((tf_logits, tf_probs), axis=1)
+            mc_logits = output_logits[:, choice_token_indicies].cpu()
+            mc_probs = softmax_over_tokens[:, choice_token_indicies].cpu()
+            interm_scores = np.concatenate((mc_logits, mc_probs), axis=1)
             for row in interm_scores:
-                scores.append(row.tolist())
+                for i in range(len(self.choices)):
+                    scores.append(row.tolist())
         result_data = pd.DataFrame(output_df_list)
         result_data.insert(0, 'Score', scores)
         result_data.dropna(axis=0, how='any', inplace=True)
         return result_data
-
-
-
-
-
-
