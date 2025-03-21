@@ -30,11 +30,11 @@ def main():
     output_path = sys.argv[2]
     example_path = sys.argv[3]
 
-    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
-    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True, return_dict=False)
+    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True, return_dict=False)
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
-    #data = data.head(40)
+    #data = data.head(10)
 
     # generate moral foundation prompt format strings
     foundation_prompts = moral_prompting.generate_gs_prompt(
@@ -72,7 +72,7 @@ def main():
     )
 
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type, return_dict=False)
     # define rules
     rule_one = LLMGSRule(
         'rule_one',
@@ -89,7 +89,8 @@ def main():
         device_type,
         foundation_prompts,
         num_votes,
-        max_generate_tokens
+        max_generate_tokens,
+        num_return_sequences
     )
     rule_two = LLMGSRule(
         'rule_two',
@@ -106,7 +107,8 @@ def main():
         device_type,
         role_prompts,
         num_votes,
-        max_generate_tokens
+        max_generate_tokens,
+        num_return_sequences
     )
     rule_three = LLMGSRule(
         'rule_three',
@@ -123,7 +125,8 @@ def main():
         device_type,
         foundation_prompts_with_features,
         num_votes,
-        max_generate_tokens
+        max_generate_tokens,
+        num_return_sequences
     )
     rule_four = LLMGSRule(
         'rule_four',
@@ -140,7 +143,8 @@ def main():
         device_type,
         role_prompts_with_features,
         num_votes,
-        max_generate_tokens
+        max_generate_tokens,
+        num_return_sequences
     )
     rules = {
         rule_one.name: rule_one, 
