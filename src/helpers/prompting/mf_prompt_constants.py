@@ -738,7 +738,7 @@ Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred a
 Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
 
 Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet. Please answer with the following format:
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT = '''
@@ -760,7 +760,7 @@ Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity
 Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
 Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Please answer with the following format: 
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 
@@ -771,7 +771,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
@@ -781,7 +781,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
@@ -791,7 +791,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
@@ -801,7 +801,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS = '''
@@ -842,7 +842,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS_WITH_CONTEXT = '''
@@ -882,7 +882,7 @@ Possible Answer: {label}
  
 Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 CARE_HARM_DEFINITON = 'Definition of the moral foundation "CARE/HARM": Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.'
