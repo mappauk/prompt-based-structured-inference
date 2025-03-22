@@ -14,4 +14,4 @@ module load gcc/11.2.0
 
 
 conda activate llmsinf
-/scratch/alpine/mapa7010/.conda/envs/llmsinf/bin/python -m src.experiments.moral_foundation_congress.mf_prompt_gs /scratch/alpine/mapa7010/MoralDistillation/data/moral_foundation_congress /scratch/alpine/mapa7010/MoralDistillation/output/mf_llama_mc/ /scratch/alpine/mapa7010/MoralDistillation/data/few_shot_examples/
+/scratch/alpine/mapa7010/.conda/envs/llmsinf/bin/python -m src.experiments.moral_foundation_congress.mf_prompt_gs /scratch/alpine/mapa7010/MoralDistillation/data/moral_foundation_congress /scratch/alpine/mapa7010/MoralDistillation/output/mf_llama_gs/ /scratch/alpine/mapa7010/MoralDistillation/data/few_shot_examples/
