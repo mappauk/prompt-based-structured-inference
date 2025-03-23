@@ -769,7 +769,7 @@ Question: What is the moral foundation present in the following tweet: "{Tweet}"
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
@@ -779,7 +779,7 @@ Question: What is the moral foundation present in the following tweet about {Top
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
@@ -789,7 +789,7 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
@@ -799,7 +799,7 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
@@ -840,7 +840,7 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
@@ -880,7 +880,7 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
 “Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''

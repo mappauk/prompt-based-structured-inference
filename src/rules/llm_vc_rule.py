@@ -78,7 +78,7 @@ class LLMVCRule(RuleTemplate):
             curr_prompt_batch = self.tokenizer(prompts[i], padding=True, return_tensors='pt').to(self.device_type)
             outputs = self.model.generate(
                 **curr_prompt_batch,
-                max_new_tokens=500,
+                max_new_tokens=10,
                 do_sample=True,
                 num_return_sequences=self.num_return_sequences,
                 temperature=self.temperature, 
