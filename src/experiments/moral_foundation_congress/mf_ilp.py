@@ -123,7 +123,7 @@ def main():
                     start_index += 1
     custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
-    inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
+    inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints)
     solutions = inference_model.inference()
     # save results
     solutions_list = []

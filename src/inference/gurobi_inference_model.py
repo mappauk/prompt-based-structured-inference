@@ -13,16 +13,14 @@ class GurobiInferenceModel:
     def __init__(self, rules: 
                  Dict[str, RuleTemplate], 
                  rule_groundings: Dict[str, pd.DataFrame], 
-                 data: pd.DataFrame, 
                  constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]],
                  num_solutions: int = 1):
         self.rules = rules
         self.rule_groundings = rule_groundings
         self.constraints = constraints
-        self.data = data
         self.num_solutions = num_solutions
     
-    def get_solution(m):
+    def get_solution(self, m):
         results = {}
         for var in m.getVars():
             results[var.VarName] = var.X

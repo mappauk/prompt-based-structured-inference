@@ -5,9 +5,9 @@ import numpy as np
 # tf scoring methods
 
 def tf_scoring(data, groupby):
-    #return tf_one_vs_rest_normalized(data, groupby)
+    return tf_one_vs_rest_normalized(data, groupby)
     #return tf_softmax_across_labels(data, groupby)
-    return tf_one_vs_rest(data)
+    #return tf_one_vs_rest(data)
 
 def tf_softmax_across_labels(data, groupby):
     data['Score'] = data['Score'].apply(lambda score: score[0])

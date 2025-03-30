@@ -212,7 +212,7 @@ def get_entities(id, tweet, annotations, questions, question_to_moral_foundation
     for question, question_map in entity_agreement_map.items():
         sorted_map = sorted(question_map.items(), key=lambda item: item[1], reverse=True)
         for entity, count in dict(sorted_map).items():
-            if count >= 2:
+            if count > len(annotations)/2:
                 entities.append(entity)
                 ids.append(id)
                 labels.append(question_to_moral_foundation[question])
