@@ -88,6 +88,12 @@ def main():
     rule_groundings['rule_three'] = rule_groundings['rule_three'][~rule_groundings['rule_three']['Id'].isin(constants.IDS_TO_EXCLUDE)]
     rule_groundings['rule_four'] = rule_groundings['rule_four'][~rule_groundings['rule_four']['Id'].isin(constants.IDS_TO_EXCLUDE)]
 
+    # drop duplicates: (TODO investigate why there are duplicates see: 746841997575520256)
+    rule_groundings['rule_one'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
+    rule_groundings['rule_two'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
+    rule_groundings['rule_three'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
+    rule_groundings['rule_four'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
+
     # transform raw scores into score distribution
     if rule_type == 'tf':
         rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['Id'])
@@ -206,7 +212,7 @@ def main():
     custom_rule_constraints = [constr_one, constr_two]
     
     # hyperparamaters
-    learning_rate = 0.001
+    learning_rate = 0.05
     num_solutions = 10
 
     # models
@@ -230,8 +236,8 @@ def main():
     train, val = train_test_split(train, test_size=0.1, random_state=92, stratify=train['GroundTruth'])
     training_percentage = 0.1
     #train = train.sample(frac=training_percentage, random_state=92)
-    batch_size = 200
-    batch_count = math.ceil(train.shape[0]/200)
+    batch_size = 400
+    batch_count = math.ceil(train.shape[0]/batch_size)
     batched_train_groundings = []
     for i in range(batch_count):
         batched_train_groundings.append({})
@@ -245,7 +251,7 @@ def main():
         test_groundings[rule_name] = grounding[grounding['Id'].isin(test['Id'])]
         val_groundings[rule_name] = grounding[grounding['Id'].isin(val['Id'])]
 
-    epochs = 10
+    epochs = 20
     print('####################### Model Performance (Val) Pre-training #######################')
     get_model_performance(rules, custom_rule_constraints, val_groundings)
     print('\n\n\n')
@@ -281,7 +287,6 @@ def main():
             role_model_w_context_optimizer.step()
             loss_history.append(loss.item())
             get_model_performance(rules, custom_rule_constraints, batch, outputs)
-            break
             # Estimate the f1 score for the development set
         print(f'####################### Model Performance (Val) epoch: {epoch} #######################')
         print(f"loss: {sum(loss_history)/len(loss_history)}")
@@ -294,7 +299,6 @@ def main():
             }
             get_model_performance(rules, custom_rule_constraints, val_groundings, outputs)
             print('\n\n\n')
-        break
 
 
 
