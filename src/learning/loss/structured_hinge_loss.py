@@ -13,10 +13,12 @@ class StructuredHingeLoss(torch.nn.Module):
         exploded_groundings = {}
         delta = 0
         for rule, grounding in inputs.items():
+            grounding_copy = grounding.copy()
             targets = torch.tensor(grounding['GroundTruth'].tolist())
             delta += torch.nn.functional.cross_entropy(outputs[rule], targets)
-            exploded_groundings[rule] = grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
-        # unpack data into inference format
+            softmax_output = torch.nn.functional.softmax(outputs[rule], dim=1)
+            grounding_copy['Score'] = list(softmax_output.detach().numpy())
+            exploded_groundings[rule] = grounding_copy.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
         # get solutions
         inference_model = GurobiInferenceModel(self.rules, exploded_groundings, self.constraints, self.num_solutions)
         solutions = inference_model.inference()

@@ -36,6 +36,8 @@ class GurobiInferenceModel:
             with gp.Model(env=env) as model:
                 # Create a new model
                 m = gp.Model("mip1")
+                # comment following line to see output
+                m.setParam('OutputFlag', 0)
                 if self.num_solutions > 1:
                     m.setParam(GRB.Param.PoolSearchMode, 2)
                     m.setParam(GRB.Param.PoolSolutions, 10)

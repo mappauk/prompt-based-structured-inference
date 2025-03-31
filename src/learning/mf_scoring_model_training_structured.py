@@ -12,16 +12,58 @@ import gurobipy as gp
 from src.rules.rule_type import RuleType
 from src.rules.rule_template import RuleTemplate
 from sklearn.model_selection import train_test_split, StratifiedKFold
+import sklearn.metrics as sk
 import numpy as np
 import math
+from src.inference.gurobi_inference_model import GurobiInferenceModel
 
-def get_model_performance(inputs, outputs):
-    # f1 before inference
 
-    # inference
+def get_model_performance(rules, constraints, inputs, outputs=None):
+    with torch.no_grad():
+        exploded_groundings = {}
+        # f1 before inference
+        for rule_name, grounding in inputs.items():
+            curr_grounding = grounding.copy()
+            if outputs != None:
+                outputs[rule_name] = torch.nn.functional.softmax(outputs[rule_name], dim=1)
+                curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
+            ground_truth = curr_grounding['GroundTruth'].tolist()
+            exploded_groundings[rule_name] = curr_grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
+
+            preds = np.argmax(np.array(curr_grounding['Score'].tolist()), axis=1)
+            micro_f1 = sk.f1_score(ground_truth, preds, average='micro')
+            macro_f1 = sk.f1_score(ground_truth, preds, average='macro')
+            print(f'rule: {rule_name}')
+            print(f'micro f1: {micro_f1}')
+            print(f'macro f1: {macro_f1}')
+        # inference
+        inference_model = GurobiInferenceModel(rules, exploded_groundings, constraints, num_solutions=1)
+        solution = inference_model.inference()[0]
+        mf_preds = []
+        role_preds = []
+        for index, row in inputs['rule_one'].iterrows():
+            for i in range(len(row['HeadVariable'])):
+                if solution[row['HeadVariable'][i]] == 1:
+                    mf_preds.append(i)
+                    break
+        for index, row in inputs['rule_two'].iterrows():
+            for i in range(len(row['HeadVariable'])):
+                if solution[row['HeadVariable'][i]] == 1:
+                    role_preds.append(i)
+                    break
 
     # f1 after inference
-    return None
+    print(f'Moral Foundation Results')
+    mf_micro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='micro')
+    mf_macro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='macro')
+    print(f'micro f1: {mf_micro_f1}')
+    print(f'macro f1: {mf_macro_f1}')
+    print(f'Moral Role Results')
+    mr_micro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='micro')
+    mr_macro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='macro')
+    print(f'micro f1: {mr_micro_f1}')
+    print(f'macro f1: {mr_macro_f1}')
+    return
 
 def main():
     data_input_path = sys.argv[1]
@@ -202,10 +244,16 @@ def main():
             batched_train_groundings[i][rule_name] = grounding[grounding['Id'].isin(train.iloc[batch_start:batch_end]['Id'])]
         test_groundings[rule_name] = grounding[grounding['Id'].isin(test['Id'])]
         val_groundings[rule_name] = grounding[grounding['Id'].isin(val['Id'])]
+
     epochs = 10
+    print('####################### Model Performance (Val) Pre-training #######################')
+    get_model_performance(rules, custom_rule_constraints, val_groundings)
+    print('\n\n\n')
     loss_history = []
     for epoch in range(epochs):
-        for batch in batched_train_groundings:
+        for i in range(len(batched_train_groundings)):
+            print(f"############ epoch {epoch}, batch: {i} ############")
+            batch = batched_train_groundings[i]
             # zero gradients
             foundation_model_optimizer.zero_grad()
             foundation_model_w_context_optimizer.zero_grad()
@@ -232,10 +280,20 @@ def main():
             role_model_optimizer.step()
             role_model_w_context_optimizer.step()
             loss_history.append(loss.item())
+            get_model_performance(rules, custom_rule_constraints, batch, outputs)
             break
             # Estimate the f1 score for the development set
-        print(f"epoch {epoch}, loss: {sum(loss_history)/len(loss_history)}")
-        get_model_performance()
+        print(f'####################### Model Performance (Val) epoch: {epoch} #######################')
+        print(f"loss: {sum(loss_history)/len(loss_history)}")
+        with torch.no_grad():
+            outputs = {
+                'rule_one': foundation_model(torch.tensor(val_groundings['rule_one']['Score'].tolist())),
+                'rule_two': role_model(torch.tensor(val_groundings['rule_two']['Score'].tolist())),
+                'rule_three': foundation_model_w_context(torch.tensor(val_groundings['rule_three']['Score'].tolist())),
+                'rule_four': role_model_w_context(torch.tensor(val_groundings['rule_four']['Score'].tolist()))
+            }
+            get_model_performance(rules, custom_rule_constraints, val_groundings, outputs)
+            print('\n\n\n')
         break
 
 
