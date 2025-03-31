@@ -481,8 +481,60 @@ GEN_Z_MF_ROLE_LABEL_SENTENCES_WITH_CONTEXT = [
     "The tweet about {{Topic}}, written by a {{Ideology}}, features {{Entity}} expressing the moral role {MORAL_ROLE}, described as: {MORAL_ROLE_DEFINITION}"
 ]
 
+# GS System Prompts
 
+MF_GS_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral foundation present in a tweet from a U.S congress member. The five moral foundations and their corresponding definitions are given below:
 
+Moral Foundation: CARE/HARM, Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.
+Moral Foundation: FAIRNESS/CHEATING, Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating.
+Moral Foundation: AUTHORITY/SUBVERSION, Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority.
+Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred.
+Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
+
+Given the moral foundations and their definitions, identify the foundation present in the given tweet. Only answer with the correct moral foundation and do not provide any justification or explanation.
+'''
+
+MR_GS_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral role of an entity present in a tweet from a U.S congress member. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. 
+Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. 
+Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. 
+Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. 
+Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
+Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral roles and the definitions of their associated moral foundations, identify the moral role of an entity in a tweet. Only answer with the correct moral role for the entity and do not provide any justification or explanation.
+'''
+
+MF_GS_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
+Q. What moral foundation is being expressed in the given tweet?
+'''
+
+MF_GS_EXAMPLE_FORMAT_WITH_FEATURES = '''Tweet: {Tweet} 
+Tweet Author Political Ideology: {Ideology} 
+Topic of Tweet: {Topic} 
+Q. What moral foundation is being expressed in the given tweet?
+'''
+
+MR_GS_EXAMPLE_FORMAT = '''
+Tweet: {Tweet} 
+Q. What is the moral role of "{Entity}" expressed in the given tweet?
+'''
+MR_GS_EXAMPLE_FORMAT_WITH_FEATURES = '''Tweet: {Tweet} 
+Tweet Author Political Ideology: {Ideology} 
+Topic of Tweet: {Topic} 
+Q. What is the moral role of "{Entity}" expressed in the given tweet?
+'''
 
 # MC System Prompts
 MF_MC_SYSTEM_PROMPT = '''
@@ -686,7 +738,7 @@ Moral Foundation: PURITY/DEGRADATION, Definition: Associations with the sacred a
 Moral Foundation: LOYALTY/BETRAYAL, Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group.
 
 Given the moral foundations and their definitions and the task of identifying the foundation present in a tweet. Estimate the probability that the specified moral foundation is expressed in the tweet. Please answer with the following format:
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_SYSTEM_PROMPT = '''
@@ -708,7 +760,7 @@ Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity
 Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
 Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet. Please answer with the following format: 
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 
@@ -717,9 +769,9 @@ Question: What is the moral foundation present in the following tweet: "{Tweet}"
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MF_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
@@ -727,9 +779,9 @@ Question: What is the moral foundation present in the following tweet about {Top
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT = '''
@@ -737,9 +789,9 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 ROLE_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_WITH_CONTEXT = '''
@@ -747,9 +799,9 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS = '''
@@ -788,9 +840,9 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 MR_VERB_CONF_SELF_PROBING_PROMPT_FORMAT_ROLE_DEFINITIONS_WITH_CONTEXT = '''
@@ -828,9 +880,9 @@ Question: What is the moral role of the entity "{Entity}" expressed in the follo
  
 Possible Answer: {label}
  
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format: 
+Q: How likely is the above answer to be correct? Do not elaborate on your answer or provide any explantion, answer only with the confidence value in the following format: 
  
-“Confidence: [the probability of answer {label} to be correct, not the one you think correct, please only include the numerical number]”
+“Confidence: [the probability of answer {label} to be correct (0-100), not the one you think correct, please only include the numerical number in the range of 0-100]”
 '''
 
 CARE_HARM_DEFINITON = 'Definition of the moral foundation "CARE/HARM": Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others.'

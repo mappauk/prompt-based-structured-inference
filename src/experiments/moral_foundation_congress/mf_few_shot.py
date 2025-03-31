@@ -15,6 +15,7 @@ def main():
     rule_groundings_path = sys.argv[1]
     output_path = sys.argv[2]
     rule_type = sys.argv[3]
+    #rule_names = ['rule_one']
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
     if rule_type == 'tf':
@@ -32,9 +33,18 @@ def main():
         rule_groundings['rule_two'] = scoring.gc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
         rule_groundings['rule_three'] = scoring.gc_scoring(rule_groundings['rule_three'], ['Id'])
         rule_groundings['rule_four'] = scoring.gc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
+    elif rule_type == 'gs':
+        rule_groundings['rule_one'] = scoring.gs_scoring(rule_groundings['rule_one'])
+        rule_groundings['rule_two'] = scoring.gs_scoring(rule_groundings['rule_two'])
+        rule_groundings['rule_three'] = scoring.gs_scoring(rule_groundings['rule_three'])
+        rule_groundings['rule_four'] = scoring.gs_scoring(rule_groundings['rule_four'])
+    elif rule_type == 'vc':
+        rule_groundings['rule_one'] = scoring.vc_scoring(rule_groundings['rule_one'], ['Id'])
+        rule_groundings['rule_two'] = scoring.vc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
+        rule_groundings['rule_three'] = scoring.vc_scoring(rule_groundings['rule_three'], ['Id'])
+        rule_groundings['rule_four'] = scoring.vc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
     else:
         raise Exception('Invalid Rule Type')
-
     # save results
     results = {}
     # cluster by id
@@ -44,7 +54,6 @@ def main():
         results[max_row['Id']] = {
             'MoralFrame': max_row['label']
         }
-
     role_instance_groupings = rule_groundings['rule_two'].groupby(['Id', 'Entity'])
     for group_name, group in role_instance_groupings:
         max_row = group.iloc[group['Score'].argmax()]
@@ -58,7 +67,6 @@ def main():
         else:
             foundation_id_result['EntityRoles'] = [entity_result]
         results[max_row['Id']] = foundation_id_result
-
     analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":
