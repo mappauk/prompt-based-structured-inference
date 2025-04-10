@@ -22,7 +22,7 @@ class GurobiInferenceModel:
         self.data = data
         self.num_solutions = num_solutions
     
-    def get_solution(m):
+    def get_solution(self, m):
         results = {}
         for var in m.getVars():
             results[var.VarName] = var.X
@@ -88,7 +88,6 @@ class GurobiInferenceModel:
                             for index, row in group.iterrows():
                                 temp_const += head_dict[row['HeadVariable']]
                             m.addConstr(temp_const == 1)
-
                 m.setObjective(objective, GRB.MAXIMIZE)                
                 # constraint to enforce activation of at least one rule predicate given the activation of a corresponding head predicate 
                 for key, value in head_to_rule.items():

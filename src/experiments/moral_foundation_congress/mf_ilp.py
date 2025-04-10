@@ -12,6 +12,7 @@ from src.rules.rule_type import RuleType
 from src.rules.rule_template import RuleTemplate
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
+import src.helpers.scoring.scoring as scoring
 
 
 def main():
@@ -19,6 +20,7 @@ def main():
     input_path = sys.argv[1]
     rule_groundings_path = sys.argv[2]
     output_path = sys.argv[3]
+    rule_type = sys.argv[4]
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
     entity_group_map = dataset_loader.get_entity_group_mappings(data, input_path)
@@ -63,9 +65,43 @@ def main():
         rule_four.name: rule_four
     }
 
+    rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     # get rule groundings:
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
-    #rule_groundings = prompt_data_loader.load_rule_groundings_json(rule_groundings_path, {'Id': str})
+    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
+    if rule_type == 'tf':
+        rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['Id'])
+        rule_groundings['rule_two'] = scoring.tf_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
+        rule_groundings['rule_three'] = scoring.tf_scoring(rule_groundings['rule_three'], ['Id'])
+        rule_groundings['rule_four'] = scoring.tf_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
+    elif rule_type == 'mc':
+        rule_groundings['rule_one'] = scoring.mc_scoring(rule_groundings['rule_one'], ['Id'], constants.MF_MC_LABEL_TO_CHOICE_INDEX)
+        rule_groundings['rule_two'] = scoring.mc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'], constants.MR_MC_LABEL_TO_CHOICE_INDEX)
+        rule_groundings['rule_three'] = scoring.mc_scoring(rule_groundings['rule_three'], ['Id'], constants.MF_MC_LABEL_TO_CHOICE_INDEX )
+        rule_groundings['rule_four'] = scoring.mc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'], constants.MR_MC_LABEL_TO_CHOICE_INDEX)
+    elif rule_type == 'gc':
+        rule_groundings['rule_one'] = scoring.gc_scoring(rule_groundings['rule_one'], ['Id'])
+        rule_groundings['rule_two'] = scoring.gc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
+        rule_groundings['rule_three'] = scoring.gc_scoring(rule_groundings['rule_three'], ['Id'])
+        rule_groundings['rule_four'] = scoring.gc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
+    elif rule_type == 'gs':
+        rule_groundings['rule_one'] = scoring.gs_scoring(rule_groundings['rule_one'])
+        rule_groundings['rule_two'] = scoring.gs_scoring(rule_groundings['rule_two'])
+        rule_groundings['rule_three'] = scoring.gs_scoring(rule_groundings['rule_three'])
+        rule_groundings['rule_four'] = scoring.gs_scoring(rule_groundings['rule_four'])
+    elif rule_type == 'vc':
+        rule_groundings['rule_one'] = scoring.vc_scoring(rule_groundings['rule_one'], ['Id'])
+        rule_groundings['rule_two'] = scoring.vc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
+        rule_groundings['rule_three'] = scoring.vc_scoring(rule_groundings['rule_three'], ['Id'])
+        rule_groundings['rule_four'] = scoring.vc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
+    else:
+        raise Exception('Invalid Rule Type')
+
+    # drop duplicates: (TODO investigate why there are duplicates see: 746841997575520256)
+    rule_groundings['rule_one'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
+    rule_groundings['rule_two'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
+    rule_groundings['rule_three'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
+    rule_groundings['rule_four'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
+
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         rule_groundings['rule_two'].insert(0, 'MoralFrameLabel', rule_groundings['rule_two']['label'].apply(lambda x: constants.MORAL_FOUNDATION_ROLE_TO_MF[x]))
@@ -121,40 +157,34 @@ def main():
                                     m.addConstr(entity_one_var + entity_two_var <= 1)
                             counter += 1
                     start_index += 1
-    custom_rule_constraints = [constr_one, constr_two, constr_three]
+    custom_rule_constraints = [constr_one, constr_two]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
     solutions = inference_model.inference()
     # save results
-    solutions_list = []
-    for i in range(len(solutions)):
-        variable_assignments = solutions[i]
-        results = {}
-        for varName, value in variable_assignments.items():
-            parsedVarName = varName.split('_')
-            parsedId = parsedVarName[1]
-            id_result = {}
-            if parsedId in results:
-                id_result = results[parsedId]
-            if parsedVarName[0] == 'MF' and parsedVarName[len(parsedVarName) - 1] != 'n' and value == 1:
-                if 'MoralFrame' in id_result and value == 1:
-                    raise(RuntimeError('Multiclass Constraint Violation'))
-                id_result['MoralFrame'] = parsedVarName[2]
-            if parsedVarName[0] == 'Role' and value == 1 and parsedVarName[len(parsedVarName) - 1] != 'n':
-                entity_result = {
-                    'Entity': parsedVarName[2],
-                    'Label': parsedVarName[3]
-                }
-                if 'EntityRoles' in id_result:
-                    id_result['EntityRoles'].append(entity_result)
-                else:
-                    id_result['EntityRoles'] = [entity_result]
-            results[parsedId] = id_result
-        solutions_list.append(results)
-    solutions_to_save = {
-        'solutions': solutions_list
-    }
-    analysis_helper.write_json_file(output_path, solutions_to_save)
+    variable_assignments = solutions[0]
+    results = {}
+    for varName, value in variable_assignments.items():
+        parsedVarName = varName.split('_')
+        parsedId = parsedVarName[1]
+        id_result = {}
+        if parsedId in results:
+            id_result = results[parsedId]
+        if parsedVarName[0] == 'MF' and parsedVarName[len(parsedVarName) - 1] != 'n' and value == 1:
+            if 'MoralFrame' in id_result and value == 1:
+                raise(RuntimeError('Multiclass Constraint Violation'))
+            id_result['MoralFrame'] = parsedVarName[2]
+        if parsedVarName[0] == 'Role' and value == 1 and parsedVarName[len(parsedVarName) - 1] != 'n':
+            entity_result = {
+                'Entity': parsedVarName[2],
+                'Label': parsedVarName[3]
+            }
+            if 'EntityRoles' in id_result:
+                id_result['EntityRoles'].append(entity_result)
+            else:
+                id_result['EntityRoles'] = [entity_result]
+        results[parsedId] = id_result
+    analysis_helper.write_json_file(output_path, results)
 
 if __name__ == "__main__":
     main()
