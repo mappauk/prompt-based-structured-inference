@@ -3,6 +3,8 @@ import src.helpers.loaders.prompt_data_loader as prompt_data_loader
 import src.helpers.scoring.scoring as scoring
 from src.learning.models.logistic_regression import LogisticRegression
 from src.learning.loss.structured_hinge_loss import StructuredHingeLoss
+from src.learning.loss.joint_cross_entropy_loss import JointCrossEntropyLoss
+from src.learning.loss.early_stopping import EarlyStopping
 import src.helpers.loaders.mf_dataset_loader as dataset_loader
 import torch
 import src.helpers.prompting.mf_prompt_constants as constants
@@ -18,10 +20,10 @@ import math
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 
 
-def get_model_performance(rules, constraints, inputs, outputs=None):
+def model_eval(rules, constraints, inputs, outputs=None):
     with torch.no_grad():
         exploded_groundings = {}
-        # f1 before inference
+        # rule f1 before inference
         for rule_name, grounding in inputs.items():
             curr_grounding = grounding.copy()
             if outputs != None:
@@ -29,7 +31,6 @@ def get_model_performance(rules, constraints, inputs, outputs=None):
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             ground_truth = curr_grounding['GroundTruth'].tolist()
             exploded_groundings[rule_name] = curr_grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
-
             preds = np.argmax(np.array(curr_grounding['Score'].tolist()), axis=1)
             micro_f1 = sk.f1_score(ground_truth, preds, average='micro')
             macro_f1 = sk.f1_score(ground_truth, preds, average='macro')
@@ -52,23 +53,166 @@ def get_model_performance(rules, constraints, inputs, outputs=None):
                     role_preds.append(i)
                     break
 
-    # f1 after inference
-    print(f'Moral Foundation Results')
-    mf_micro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='micro')
-    mf_macro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='macro')
-    print(f'micro f1: {mf_micro_f1}')
-    print(f'macro f1: {mf_macro_f1}')
-    print(f'Moral Role Results')
-    mr_micro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='micro')
-    mr_macro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='macro')
-    print(f'micro f1: {mr_micro_f1}')
-    print(f'macro f1: {mr_macro_f1}')
-    return
+        # f1 after inference
+        print(f'Moral Foundation Results')
+        mf_micro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='micro')
+        mf_macro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), mf_preds, average='macro')
+        print(f'micro f1: {mf_micro_f1}')
+        print(f'macro f1: {mf_macro_f1}')
+        print(f'Moral Role Results')
+        mr_micro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='micro')
+        mr_macro_f1 = sk.f1_score(inputs['rule_two']['GroundTruth'].tolist(), role_preds, average='macro')
+        print(f'micro f1: {mr_micro_f1}')
+        print(f'macro f1: {mr_macro_f1}')
+        # loss computation
+    return mf_macro_f1, mf_micro_f1, mr_macro_f1, mr_micro_f1
+
+def checkpoint(models, folder):
+    for i in range(len(models)):
+        torch.save(models[i].state_dict(), folder + f'model_{i}.pth')
+
+def load_checkpoint(models, folder):
+    for i in range(len(models)):
+        models[i].load_state_dict(torch.load(folder + f'model_{i}.pth'))    
+
+def training_loop(
+        rules, 
+        custom_rule_constraints, 
+        foundation_model, 
+        foundation_model_w_context, role_model, 
+        role_model_w_context, 
+        learning_rate,
+        batched_train_groundings,
+        val_groundings,
+        output_path,
+        hot_start,
+        hot_start_epochs,
+        optimized_hot_start,
+        only_ce_loss):
+    # hyper params
+    epochs = 10000
+    num_solutions = 10
+    best_val_loss = 1000000000000000
+    
+    # optimizers
+    foundation_model_optimizer = torch.optim.Adam(foundation_model.parameters(), lr=learning_rate)
+    foundation_model_w_context_optimizer = torch.optim.Adam(foundation_model_w_context.parameters(), lr=learning_rate)
+    role_model_optimizer = torch.optim.Adam(role_model.parameters(), lr=learning_rate)
+    role_model_w_context_optimizer = torch.optim.Adam(role_model_w_context.parameters(), lr=learning_rate)
+
+    # loss functions and early stopping definitions
+    joint_ce_loss = JointCrossEntropyLoss()
+    structured_hinge_loss = StructuredHingeLoss(rules, custom_rule_constraints, num_solutions)
+    ce_only_early_stopping = EarlyStopping(3, 0.001)
+    structured_hinge_early_stopping = EarlyStopping(20, 0)
+
+
+    for epoch in range(epochs):
+        batch_losses = []
+        # set models to train
+        foundation_model.train()
+        foundation_model_w_context.train()
+        role_model.train()
+        role_model_w_context.train()
+
+        use_structured_loss = (
+            (hot_start and epoch > hot_start_epochs) or
+            (hot_start and optimized_hot_start and  not ce_only_early_stopping.training_flag)
+        )
+
+        for i in range(len(batched_train_groundings)):
+            print(f"############ epoch {epoch}, batch: {i} ############")
+            batch = batched_train_groundings[i]
+
+            # zero gradients
+            foundation_model_optimizer.zero_grad()
+            foundation_model_w_context_optimizer.zero_grad()
+            role_model_optimizer.zero_grad()
+            role_model_w_context_optimizer.zero_grad()
+
+            # get predictions
+            foundation_model_logits = foundation_model(torch.tensor(batch['rule_one']['Score'].tolist()))
+            foundation_model_w_context_logits = foundation_model_w_context(torch.tensor(batch['rule_three']['Score'].tolist()))
+            role_model_logits = role_model(torch.tensor(batch['rule_two']['Score'].tolist()))
+            role_model_w_context_logits = role_model_w_context(torch.tensor(batch['rule_four']['Score'].tolist()))
+
+            outputs = {
+                'rule_one': foundation_model_logits,
+                'rule_two': role_model_logits,
+                'rule_three': foundation_model_w_context_logits,
+                'rule_four': role_model_w_context_logits
+            }
+
+            loss = None
+            if use_structured_loss:
+                loss = structured_hinge_loss(batch, outputs)
+            else:
+                loss = joint_ce_loss(batch, outputs)
+            loss.backward()
+            # update weights
+            foundation_model_optimizer.step()
+            foundation_model_w_context_optimizer.step()
+            role_model_optimizer.step()
+            role_model_w_context_optimizer.step()
+            batch_losses.append(loss.item())
+
+        # Estimate the f1 score for the development set
+        print(f"Training Loss: {sum(batch_losses)/len(batch_losses)}")
+        print(f'####################### Model Performance (Val) epoch: {epoch} #######################')
+
+        # set models to eval
+        foundation_model.eval()
+        foundation_model_w_context.eval()
+        role_model.eval()
+        role_model_w_context.eval()
+
+        # evaluate on validation set
+        with torch.no_grad():
+            val_outputs = {
+                'rule_one': foundation_model(torch.tensor(val_groundings['rule_one']['Score'].tolist())),
+                'rule_two': role_model(torch.tensor(val_groundings['rule_two']['Score'].tolist())),
+                'rule_three': foundation_model_w_context(torch.tensor(val_groundings['rule_three']['Score'].tolist())),
+                'rule_four': role_model_w_context(torch.tensor(val_groundings['rule_four']['Score'].tolist()))
+            }
+            val_loss = None
+            if use_structured_loss:
+                val_loss = structured_hinge_loss(val_groundings, val_outputs)
+                structured_hinge_early_stopping.check_early_stopping(val_groundings, val_outputs)
+            else:
+                val_loss = joint_ce_loss(val_groundings, val_outputs)
+                ce_only_early_stopping.check_early_stopping(val_loss, epoch)
+            print(f'Validation Loss: {val_loss}')
+
+            model_eval(rules, custom_rule_constraints, val_groundings, val_outputs)
+            print('\n\n\n')
+
+            should_update_best_loss = (
+                only_ce_loss or 
+                (optimized_hot_start and not ce_only_early_stopping.training_flag) or
+                (hot_start and epochs > hot_start_epochs) 
+            )
+
+            if best_val_loss > val_loss and should_update_best_loss:
+                checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
+                best_val_loss = val_loss
+
+            if (not ce_only_early_stopping.training_flag and only_ce_loss) or not structured_hinge_early_stopping.training_flag:
+                break
+
+
 
 def main():
     data_input_path = sys.argv[1]
     rule_groundings_path = sys.argv[2]
     rule_type = sys.argv[3]
+    model_checkpoint_path = sys.argv[4]
+    mode = sys.argv[5]
+    hot_start = sys.argv[6] == 'true'
+    hot_start_epochs = int(sys.argv[7])
+    optimized_hot_start = sys.argv[8] == 'true'
+    only_ce_loss = sys.argv[9] == 'true'
+    learning_rate = float(sys.argv[10])
+
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
 
     # load data, rule groundings, and labels
@@ -79,6 +223,7 @@ def main():
     role_labels = dataset_loader.load_role_labels(data_input_path)
     mf_labels.rename(columns={'Label': 'GroundTruth'}, inplace=True)
     role_labels.rename(columns={'EntityLabel': 'GroundTruth'}, inplace=True)
+
     # exclude few shot ids from evaluation
     mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
     role_labels = role_labels[~role_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
@@ -100,14 +245,17 @@ def main():
         rule_groundings['rule_two'] = scoring.tf_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
         rule_groundings['rule_three'] = scoring.tf_scoring(rule_groundings['rule_three'], ['Id'])
         rule_groundings['rule_four'] = scoring.tf_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
+
     # collapse rule groundings
     rule_groundings['rule_one'] = rule_groundings['rule_one'].groupby(['Id', 'Tweet'], sort=False).agg(lambda x: list(x)).reset_index()
     rule_groundings['rule_two'] = rule_groundings['rule_two'].groupby(['Id', 'Tweet', 'Entity'], sort=False).agg(lambda x: list(x)).reset_index()
     rule_groundings['rule_three'] = rule_groundings['rule_three'].groupby(['Id', 'Tweet', 'Topic', 'Ideology'], sort=False).agg(lambda x: list(x)).reset_index()
     rule_groundings['rule_four'] = rule_groundings['rule_four'].groupby(['Id', 'Tweet', 'Topic', 'Ideology', 'Entity'], sort=False).agg(lambda x: list(x)).reset_index()
+
     # transform label names into indicies
     mf_labels['GroundTruth'] = mf_labels['GroundTruth'].apply(lambda x: constants.MF_MC_LABEL_TO_CHOICE_INDEX[x])
     role_labels['GroundTruth'] = role_labels['GroundTruth'].apply(lambda x: constants.MR_MC_LABEL_TO_CHOICE_INDEX[x])
+
     # join labels
     rule_groundings['rule_one'] = rule_groundings['rule_one'].merge(mf_labels, on=['Id'], how='inner')
     rule_groundings['rule_two'] = rule_groundings['rule_two'].merge(role_labels, on=['Id', 'Entity'], how='inner')
@@ -210,99 +358,77 @@ def main():
                             counter += 1
                     start_index += 1
     custom_rule_constraints = [constr_one, constr_two]
-    
-    # hyperparamaters
-    learning_rate = 0.05
-    num_solutions = 10
 
     # models
     foundation_model = LogisticRegression(5, 5)
     foundation_model_w_context = LogisticRegression(5, 5)
     role_model = LogisticRegression(16, 16)
     role_model_w_context = LogisticRegression(16, 16)
-    
-    # optimizers
-    foundation_model_optimizer = torch.optim.Adam(foundation_model.parameters(), lr=learning_rate)
-    foundation_model_w_context_optimizer = torch.optim.Adam(foundation_model_w_context.parameters(), lr=learning_rate)
-    role_model_optimizer = torch.optim.Adam(role_model.parameters(), lr=learning_rate)
-    role_model_w_context_optimizer = torch.optim.Adam(role_model_w_context.parameters(), lr=learning_rate)
-
-    loss_func = StructuredHingeLoss(rules, custom_rule_constraints, num_solutions)
 
     # split groundings into train/val/test data
     k = 5
     selection_data = rule_groundings['rule_one'][['Id', 'GroundTruth']]
-    train, test = train_test_split(selection_data, test_size=0.2, random_state=92, stratify=selection_data['GroundTruth'])
-    train, val = train_test_split(train, test_size=0.1, random_state=92, stratify=train['GroundTruth'])
-    training_percentage = 0.1
-    #train = train.sample(frac=training_percentage, random_state=92)
     batch_size = 400
-    batch_count = math.ceil(train.shape[0]/batch_size)
     batched_train_groundings = []
-    for i in range(batch_count):
-        batched_train_groundings.append({})
-    test_groundings = {}
-    val_groundings = {}
-    for rule_name, grounding in rule_groundings.items():
+
+    # cross validation method
+    skf = StratifiedKFold(k, shuffle=True, random_state=92)
+    skf_split = skf.split(selection_data['Id'], selection_data['GroundTruth'])
+    for train_indicies, test_indicies in skf_split:
+        train_selection_data = selection_data.iloc[train_indicies]
+        test_ids = selection_data.iloc[test_indicies]['Id']
+        train, dev = train_test_split(train_selection_data, test_size=0.2, random_state=92, stratify=train_selection_data['GroundTruth'])
+        batch_count = math.ceil(train.shape[0]/batch_size)
+        batched_train_groundings = []
         for i in range(batch_count):
-            batch_start = i*batch_size
-            batch_end = min((i+1)*batch_size, train.shape[0])
-            batched_train_groundings[i][rule_name] = grounding[grounding['Id'].isin(train.iloc[batch_start:batch_end]['Id'])]
-        test_groundings[rule_name] = grounding[grounding['Id'].isin(test['Id'])]
-        val_groundings[rule_name] = grounding[grounding['Id'].isin(val['Id'])]
-
-    epochs = 20
-    print('####################### Model Performance (Val) Pre-training #######################')
-    get_model_performance(rules, custom_rule_constraints, val_groundings)
-    print('\n\n\n')
-    loss_history = []
-    for epoch in range(epochs):
-        for i in range(len(batched_train_groundings)):
-            print(f"############ epoch {epoch}, batch: {i} ############")
-            batch = batched_train_groundings[i]
-            # zero gradients
-            foundation_model_optimizer.zero_grad()
-            foundation_model_w_context_optimizer.zero_grad()
-            role_model_optimizer.zero_grad()
-            role_model_w_context_optimizer.zero_grad()
-
-            # get predictions
-            foundation_model_logits = foundation_model(torch.tensor(batch['rule_one']['Score'].tolist()))
-            foundation_model_w_context_logits = foundation_model_w_context(torch.tensor(batch['rule_three']['Score'].tolist()))
-            role_model_logits = role_model(torch.tensor(batch['rule_two']['Score'].tolist()))
-            role_model_w_context_logits = role_model_w_context(torch.tensor(batch['rule_four']['Score'].tolist()))
-
-            outputs = {
-                'rule_one': foundation_model_logits,
-                'rule_two': role_model_logits,
-                'rule_three': foundation_model_w_context_logits,
-                'rule_four': role_model_w_context_logits
-            }
-            loss = loss_func(batch, outputs)
-            loss.backward()
-            # update weights
-            foundation_model_optimizer.step()
-            foundation_model_w_context_optimizer.step()
-            role_model_optimizer.step()
-            role_model_w_context_optimizer.step()
-            loss_history.append(loss.item())
-            get_model_performance(rules, custom_rule_constraints, batch, outputs)
-            # Estimate the f1 score for the development set
-        print(f'####################### Model Performance (Val) epoch: {epoch} #######################')
-        print(f"loss: {sum(loss_history)/len(loss_history)}")
-        with torch.no_grad():
-            outputs = {
-                'rule_one': foundation_model(torch.tensor(val_groundings['rule_one']['Score'].tolist())),
-                'rule_two': role_model(torch.tensor(val_groundings['rule_two']['Score'].tolist())),
-                'rule_three': foundation_model_w_context(torch.tensor(val_groundings['rule_three']['Score'].tolist())),
-                'rule_four': role_model_w_context(torch.tensor(val_groundings['rule_four']['Score'].tolist()))
-            }
-            get_model_performance(rules, custom_rule_constraints, val_groundings, outputs)
-            print('\n\n\n')
-
-
-
-    
+            batched_train_groundings.append({})
+        test_groundings = {}
+        val_groundings = {}
+        for rule_name, grounding in rule_groundings.items():
+            for i in range(batch_count):
+                batch_start = i*batch_size
+                batch_end = min((i+1)*batch_size, train.shape[0])
+                batched_train_groundings[i][rule_name] = grounding[grounding['Id'].isin(train.iloc[batch_start:batch_end]['Id'])]
+            test_groundings[rule_name] = grounding[grounding['Id'].isin(test_ids)]
+            val_groundings[rule_name] = grounding[grounding['Id'].isin(dev['Id'])]
+        if mode == 'eval':
+            # load checkpoints
+            load_checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], model_checkpoint_path)
+            # set models to eval
+            foundation_model.eval()
+            foundation_model_w_context.eval()
+            role_model.eval()
+            role_model_w_context.eval()
+            # evaluate on test set
+            with torch.no_grad():
+                test_outputs = {
+                    'rule_one': foundation_model(torch.tensor(test_groundings['rule_one']['Score'].tolist())),
+                    'rule_two': role_model(torch.tensor(test_groundings['rule_two']['Score'].tolist())),
+                    'rule_three': foundation_model_w_context(torch.tensor(test_groundings['rule_three']['Score'].tolist())),
+                    'rule_four': role_model_w_context(torch.tensor(test_groundings['rule_four']['Score'].tolist()))
+                }
+                print(f'####################### Model Performance Test (pre-training) #######################')
+                model_eval(rules, custom_rule_constraints, test_groundings)
+                print('\n\n\n')
+                print(f'####################### Model Performance Test (calibrated) #######################')
+                model_eval(rules, custom_rule_constraints, test_groundings, test_outputs)
+        else:
+            training_loop(
+                rules,
+                custom_rule_constraints,
+                foundation_model,
+                foundation_model_w_context,
+                role_model,
+                role_model_w_context,
+                learning_rate,
+                batched_train_groundings,
+                val_groundings,
+                model_checkpoint_path,
+                hot_start,
+                hot_start_epochs,
+                optimized_hot_start,
+                only_ce_loss
+            )
 
 
 if __name__ == "__main__":

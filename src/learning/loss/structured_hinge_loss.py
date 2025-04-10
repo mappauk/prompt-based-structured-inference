@@ -11,34 +11,37 @@ class StructuredHingeLoss(torch.nn.Module):
     def forward(self, inputs, outputs):
         # get cross entropy loss
         exploded_groundings = {}
-        delta = 0
+        softmax_outputs = {}
         for rule, grounding in inputs.items():
             grounding_copy = grounding.copy()
-            targets = torch.tensor(grounding['GroundTruth'].tolist())
-            delta += torch.nn.functional.cross_entropy(outputs[rule], targets)
             softmax_output = torch.nn.functional.softmax(outputs[rule], dim=1)
+            softmax_outputs[rule] = softmax_output
             grounding_copy['Score'] = list(softmax_output.detach().numpy())
             exploded_groundings[rule] = grounding_copy.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
         # get solutions
         inference_model = GurobiInferenceModel(self.rules, exploded_groundings, self.constraints, self.num_solutions)
         solutions = inference_model.inference()
-        max_score = 0
+        best_imposter_score = 0
         for solution in solutions:
-            score = 0
+            imposter_hamming_distance = 0
+            imposter_score = 0
             for rule, df in inputs.items():
                 counter = 0
                 for index, row in df.iterrows():
                     for i in range(len(row['RuleVariable'])):
                         if solution[row['RuleVariable'][i]] == 1:
-                            score += outputs[rule][counter][i]
+                            imposter_score += softmax_outputs[rule][counter][i]
+                            if i != row['GroundTruth']:
+                                imposter_hamming_distance += 1
                             break
                     counter += 1
-            if score > max_score:
-                max_score = score
+            best_imposter_score = max(best_imposter_score, imposter_hamming_distance + imposter_score)
+
         gold_structure_score = 0
         for rule, df in inputs.items():
             counter = 0
             for index, row in df.iterrows():
-                gold_structure_score += outputs[rule][counter][row['GroundTruth']]
+                gold_structure_score += softmax_outputs[rule][counter][row['GroundTruth']]
                 counter += 1
-        return delta + max_score - gold_structure_score
+
+        return best_imposter_score - gold_structure_score
