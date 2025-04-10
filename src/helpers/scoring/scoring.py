@@ -68,7 +68,7 @@ def gs_scoring_probs(data):
 
 def vc_scoring(data, groupby):
     return vc_scoring_normalize(data, groupby)
-    return vc_scoring_softmax(data, groupby)
+    #return vc_scoring_softmax(data, groupby)
 
 def vc_scoring_normalize(data, groupby):
     data['Score'] = data['Score'].apply(lambda score: extract_score(score))
@@ -100,4 +100,5 @@ def extract_score(score_output):
             scores.append(0)
         else:
             scores.append(float_number)
-    return np.array(scores).mean()
+    mean = np.array(scores).mean()
+    return max(mean, 0.1)

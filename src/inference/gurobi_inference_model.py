@@ -88,7 +88,6 @@ class GurobiInferenceModel:
                             for index, row in group.iterrows():
                                 temp_const += head_dict[row['HeadVariable']]
                             m.addConstr(temp_const == 1)
-
                 m.setObjective(objective, GRB.MAXIMIZE)                
                 # constraint to enforce activation of at least one rule predicate given the activation of a corresponding head predicate 
                 for key, value in head_to_rule.items():
