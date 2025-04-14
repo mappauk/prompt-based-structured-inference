@@ -13,13 +13,11 @@ class GurobiInferenceModel:
     def __init__(self, rules: 
                  Dict[str, RuleTemplate], 
                  rule_groundings: Dict[str, pd.DataFrame], 
-                 data: pd.DataFrame, 
                  constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]],
                  num_solutions: int = 1):
         self.rules = rules
         self.rule_groundings = rule_groundings
         self.constraints = constraints
-        self.data = data
         self.num_solutions = num_solutions
     
     def get_solution(self, m):
@@ -38,6 +36,8 @@ class GurobiInferenceModel:
             with gp.Model(env=env) as model:
                 # Create a new model
                 m = gp.Model("mip1")
+                # comment following line to see output
+                m.setParam('OutputFlag', 0)
                 if self.num_solutions > 1:
                     m.setParam(GRB.Param.PoolSearchMode, 2)
                     m.setParam(GRB.Param.PoolSolutions, 10)

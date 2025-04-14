@@ -12,7 +12,7 @@ from src.rules.rule_type import RuleType
 from src.rules.rule_template import RuleTemplate
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 from typing import Dict
-import src.helpers.scoring.scoring as scoring
+import src.helpers.scoring.mf_scoring as mf_scoring
 
 
 def main():
@@ -67,40 +67,7 @@ def main():
 
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     # get rule groundings:
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
-    if rule_type == 'tf':
-        rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['Id'])
-        rule_groundings['rule_two'] = scoring.tf_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
-        rule_groundings['rule_three'] = scoring.tf_scoring(rule_groundings['rule_three'], ['Id'])
-        rule_groundings['rule_four'] = scoring.tf_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
-    elif rule_type == 'mc':
-        rule_groundings['rule_one'] = scoring.mc_scoring(rule_groundings['rule_one'], ['Id'], constants.MF_MC_LABEL_TO_CHOICE_INDEX)
-        rule_groundings['rule_two'] = scoring.mc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'], constants.MR_MC_LABEL_TO_CHOICE_INDEX)
-        rule_groundings['rule_three'] = scoring.mc_scoring(rule_groundings['rule_three'], ['Id'], constants.MF_MC_LABEL_TO_CHOICE_INDEX )
-        rule_groundings['rule_four'] = scoring.mc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'], constants.MR_MC_LABEL_TO_CHOICE_INDEX)
-    elif rule_type == 'gc':
-        rule_groundings['rule_one'] = scoring.gc_scoring(rule_groundings['rule_one'], ['Id'])
-        rule_groundings['rule_two'] = scoring.gc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
-        rule_groundings['rule_three'] = scoring.gc_scoring(rule_groundings['rule_three'], ['Id'])
-        rule_groundings['rule_four'] = scoring.gc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
-    elif rule_type == 'gs':
-        rule_groundings['rule_one'] = scoring.gs_scoring(rule_groundings['rule_one'])
-        rule_groundings['rule_two'] = scoring.gs_scoring(rule_groundings['rule_two'])
-        rule_groundings['rule_three'] = scoring.gs_scoring(rule_groundings['rule_three'])
-        rule_groundings['rule_four'] = scoring.gs_scoring(rule_groundings['rule_four'])
-    elif rule_type == 'vc':
-        rule_groundings['rule_one'] = scoring.vc_scoring(rule_groundings['rule_one'], ['Id'])
-        rule_groundings['rule_two'] = scoring.vc_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])
-        rule_groundings['rule_three'] = scoring.vc_scoring(rule_groundings['rule_three'], ['Id'])
-        rule_groundings['rule_four'] = scoring.vc_scoring(rule_groundings['rule_four'], ['Id', 'Entity'])
-    else:
-        raise Exception('Invalid Rule Type')
-
-    # drop duplicates: (TODO investigate why there are duplicates see: 746841997575520256)
-    rule_groundings['rule_one'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
-    rule_groundings['rule_two'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
-    rule_groundings['rule_three'].drop_duplicates(['Id', 'Tweet', 'label'], inplace=True)
-    rule_groundings['rule_four'].drop_duplicates(['Id', 'Tweet', 'Entity', 'label'], inplace=True)
+    rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
 
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
@@ -159,7 +126,7 @@ def main():
                     start_index += 1
     custom_rule_constraints = [constr_one, constr_two]
     # perform inference
-    inference_model = GurobiInferenceModel(rules, rule_groundings, data,  custom_rule_constraints)
+    inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints)
     solutions = inference_model.inference()
     # save results
     variable_assignments = solutions[0]
