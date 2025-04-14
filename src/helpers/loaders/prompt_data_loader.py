@@ -38,4 +38,3 @@ def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_p
         for rule_name, rule in rules.items():
             rule_grounding = rule.get_rule_groundings(data_split[i])
             rule_grounding.to_pickle(output_path + rule_name + f'_{i}_groundings_dataframe.pkl')
-        return
