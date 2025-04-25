@@ -67,13 +67,12 @@ def get_training_data(data_input_path, rule_split_path, tokenizer):
             tokenizer,
             row['Label'])
         ids_to_prompts[row['Id']] = prompts
-    '''
+
     # rule two prompts
     rule_two_data = data[['Id', 'Tweet', 'Entity', 'EntityLabels']].drop_duplicates()
     for item, row in rule_two_data.iterrows():
         if pd.isna(row['Entity']):
             continue
-
         prompts = get_tf_training_prompt(
             constants.MR_TF_SYSTEM_PROMPT, 
             constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
@@ -110,5 +109,5 @@ def get_training_data(data_input_path, rule_split_path, tokenizer):
             tokenizer, 
             row['EntityLabels'])
         ids_to_prompts[row['Id']].extend(prompts)
-    '''
+
     return train_test_splits, ids_to_prompts
