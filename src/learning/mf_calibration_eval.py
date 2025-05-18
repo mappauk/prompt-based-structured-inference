@@ -4,6 +4,7 @@ from src.learning.models.logistic_regression import LogisticRegression
 from src.learning.loss.structured_hinge_loss import StructuredHingeLoss
 from src.learning.loss.joint_cross_entropy_loss import JointCrossEntropyLoss
 import torch
+import pandas as pd
 
 def load_checkpoint(models, folder):
     for i in range(len(models)):
@@ -16,14 +17,19 @@ def main():
     model_checkpoint_path = sys.argv[4]
 
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
-
-    rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
-    train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+    
+    # added for fine-tuned models
+    train_groundings = []
+    for i in range(5):
+        rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path + f'\\{i}\\', rule_names, rule_type)
+        temp_train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+        train_groundings.append(temp_train_groundings[i])
+    #rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
+    #train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
     rules = mf_scoring.get_rule_info()
     constraints = mf_scoring.get_mf_constraints(data_input_path)
-    #joint_ce_loss = JointCrossEntropyLoss()
+    joint_ce_loss = JointCrossEntropyLoss()
     structured_hinge_loss = StructuredHingeLoss(rules, constraints, 10)
-
     for i in range(len(train_groundings)):
         # models
         foundation_model = LogisticRegression(5, 5)
@@ -48,15 +54,15 @@ def main():
                 'rule_three': foundation_model_w_context(torch.tensor(val_groundings['rule_three']['Score'].tolist())),
                 'rule_four': role_model_w_context(torch.tensor(val_groundings['rule_four']['Score'].tolist()))
             }
-
             # validation set evaluation pre-training
             print(f'############ Validation Pretraining Results (Fold {i}) ############')
             mf_scoring.model_eval(rules, constraints, val_groundings)
 
             # validation set evaluation calibrated
             print(f'############ Validation Finetuned Results (Fold {i}) ############')
-            val_loss = structured_hinge_loss(val_groundings, val_outputs)
-            print(f'Validation Loss: {val_loss}')
+            #val_loss = joint_ce_loss(val_groundings, val_outputs)
+            #val_loss = structured_hinge_loss(val_groundings, val_outputs)
+            #print(f'Validation Loss: {val_loss}')
             mf_scoring.model_eval(rules, constraints, val_groundings, val_outputs)
             # get test predictions
             test_groundings = train_groundings[i]['test']
@@ -66,12 +72,10 @@ def main():
                 'rule_three': foundation_model_w_context(torch.tensor(test_groundings['rule_three']['Score'].tolist())),
                 'rule_four': role_model_w_context(torch.tensor(test_groundings['rule_four']['Score'].tolist()))
             }
-
             # test set evaluation pre-training
             mf_scoring.model_eval(rules, constraints, test_groundings)
             # test set evaluation calibrated
             mf_scoring.model_eval(rules, constraints, test_groundings, test_outputs)
-
 
 if __name__ == "__main__":
     main()

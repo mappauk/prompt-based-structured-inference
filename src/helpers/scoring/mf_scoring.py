@@ -15,6 +15,8 @@ from sklearn.model_selection import train_test_split, StratifiedKFold
 import math
 from src.rules.rule_template import RuleTemplate
 from src.rules.rule_type import RuleType
+import src.analysis.analysis_helper as analysis_helper
+import json
 
 
 def get_scored_groundings(rule_groundings_path, rule_names, rule_type):
@@ -166,7 +168,7 @@ def model_eval(rules, constraints, inputs, outputs=None):
         print(f'macro f1: {mr_macro_f1}')
     return mf_macro_f1, mf_micro_f1, mr_macro_f1, mr_micro_f1
 
-def get_training_groundings(rule_groundings, data_input_path):
+def get_training_groundings(rule_groundings, data_input_path, batch_size, batch_val_groundings=False, val_batch_size=0):
     # load labels
     mf_labels = dataset_loader.load_frame_labels(data_input_path)
     role_labels = dataset_loader.load_role_labels(data_input_path)
@@ -197,32 +199,40 @@ def get_training_groundings(rule_groundings, data_input_path):
     rule_groundings['rule_three'] = rule_groundings['rule_three'].merge(mf_labels, on=['Id'], how='inner')
     rule_groundings['rule_four'] = rule_groundings['rule_four'].merge(role_labels, on=['Id', 'Entity'], how='inner')
 
-        # split groundings into train/val/test data
-    k = 5
-    selection_data = rule_groundings['rule_one'][['Id', 'GroundTruth']]
-    batch_size = 400
+    # split groundings into train/val/test data
     batched_train_groundings = []
     k_fold_groundings = []
     # cross validation method
-    skf = StratifiedKFold(k, shuffle=True, random_state=92)
-    skf_split = skf.split(selection_data['Id'], selection_data['GroundTruth'])
-    for train_indicies, test_indicies in skf_split:
-        train_selection_data = selection_data.iloc[train_indicies]
-        test_ids = selection_data.iloc[test_indicies]['Id']
-        train, dev = train_test_split(train_selection_data, test_size=0.2, random_state=92, stratify=train_selection_data['GroundTruth'])
-        batch_count = math.ceil(train.shape[0]/batch_size)
+    train_test_splits = None
+    with open(data_input_path + 'training_splits.json') as f:
+        train_test_splits = json.load(f)
+    for train_test_split in train_test_splits:
+        train_count = len(train_test_split['train'])
+        batch_count = math.ceil(train_count/batch_size)
         batched_train_groundings = []
         for i in range(batch_count):
             batched_train_groundings.append({})
         test_groundings = {}
-        val_groundings = {}
+        if batch_val_groundings:
+            val_groundings = []
+            val_batch_count = math.ceil(len(train_test_split['val'])/val_batch_size)
+            for i in range(val_batch_count):
+                val_groundings.append({})
+        else:
+            val_groundings = {}
         for rule_name, grounding in rule_groundings.items():
             for i in range(batch_count):
                 batch_start = i*batch_size
-                batch_end = min((i+1)*batch_size, train.shape[0])
-                batched_train_groundings[i][rule_name] = grounding[grounding['Id'].isin(train.iloc[batch_start:batch_end]['Id'])]
-            test_groundings[rule_name] = grounding[grounding['Id'].isin(test_ids)]
-            val_groundings[rule_name] = grounding[grounding['Id'].isin(dev['Id'])]
+                batch_end = min((i+1)*batch_size, train_count)
+                batched_train_groundings[i][rule_name] = grounding[grounding['Id'].isin(train_test_split['train'][batch_start:batch_end])]
+            if batch_val_groundings:
+                for i in range(val_batch_count):
+                    val_batch_start = i*val_batch_size
+                    val_batch_end = min((i+1)*val_batch_size, len(train_test_split['val']))
+                    val_groundings[i][rule_name] = grounding[grounding['Id'].isin(train_test_split['val'][val_batch_start:val_batch_end])]
+            else:
+                val_groundings[rule_name] = grounding[grounding['Id'].isin(train_test_split['val'])]
+            test_groundings[rule_name] = grounding[grounding['Id'].isin(train_test_split['test'])]
         k_fold_groundings.append(
             {
                 'train': batched_train_groundings,
