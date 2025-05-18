@@ -2,11 +2,12 @@ import torch
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 
 class StructuredHingeLoss(torch.nn.Module):
-    def __init__(self, rules, constraints, num_solutions):
+    def __init__(self, rules, constraints, num_solutions, softmax_enabled=True):
         super(StructuredHingeLoss, self).__init__()
         self.rules = rules
         self.constraints = constraints
         self.num_solutions = num_solutions
+        self.softmax_enabled = softmax_enabled
 
     def forward(self, inputs, outputs):
         # get cross entropy loss
@@ -14,9 +15,12 @@ class StructuredHingeLoss(torch.nn.Module):
         softmax_outputs = {}
         for rule, grounding in inputs.items():
             grounding_copy = grounding.copy()
-            softmax_output = torch.nn.functional.softmax(outputs[rule], dim=1)
+            if self.softmax_enabled:
+                softmax_output = torch.nn.functional.softmax(outputs[rule], dim=1)
+            else:
+                softmax_output = outputs[rule]
             softmax_outputs[rule] = softmax_output
-            grounding_copy['Score'] = list(softmax_output.detach().numpy())
+            grounding_copy['Score'] = list(softmax_output.cpu().detach().numpy())
             exploded_groundings[rule] = grounding_copy.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
         # get solutions
         inference_model = GurobiInferenceModel(self.rules, exploded_groundings, self.constraints, self.num_solutions)

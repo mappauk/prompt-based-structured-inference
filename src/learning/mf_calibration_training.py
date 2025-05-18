@@ -148,9 +148,14 @@ def main():
     structured_alone = False
 
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
-
-    rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
-    train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+    # added for fine-tuned models
+    train_groundings = []
+    for i in range(5):
+        rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path + f'\\{i}\\', rule_names, rule_type)
+        temp_train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+        train_groundings.append(temp_train_groundings[i])
+    #rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
+    #train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
     rules = mf_scoring.get_rule_info()
     constraints = mf_scoring.get_mf_constraints(data_input_path)
     for i in range(len(train_groundings)):
