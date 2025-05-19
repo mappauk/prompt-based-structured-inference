@@ -31,10 +31,11 @@ def main():
     ### Training Argument Hyperparams ###
     learning_rate = 2e-5
     batch_size = 2
-
+    rule_type = 'mc'
+    rules = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
-    training_splits, ids_to_prompts = get_training_data(data_input_path, data_input_path + 'training_splits.json', tokenizer)
-    
+    training_splits, ids_to_prompts = get_training_data(data_input_path, data_input_path + 'training_splits.json', tokenizer, rules, rule_type)
+
     lora_config = LoraConfig(
         bias="none",
         lora_alpha=lora_alpha,
@@ -51,7 +52,6 @@ def main():
             model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
         peft_model = get_peft_model(model, lora_config)
         # training arguments
-        print(output_path + f'\\{i}\\')
         training_args = SFTConfig(
             output_dir=output_path + f'\\{i}\\',
             eval_strategy=IntervalStrategy.STEPS,

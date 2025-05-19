@@ -12,6 +12,9 @@ from peft import LoraConfig, get_peft_model
 from peft import PeftModel
 import pandas as pd
 
+tindex = 1904
+findex = 3934
+
 def checkpoint(models, folder):
     for i in range(len(models)):
         torch.save(models[i].state_dict(), folder + f'model_{i}.pth')
@@ -42,17 +45,38 @@ def get_tf_prompts(rule_groundings, system_prompt, example_prompt, features, lab
             prompts.append(tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True))
     return prompts
 
-def get_scored_rule_groundings(batch, system_prompt, example_prompt, features, labels, llm_batch_size, device_type, model, tokenizer, tindex, findex):
+def get_mc_prompts(rule_groundings, system_prompt, example_prompt, features, tokenizer):
+    prompts = []
+    for index, row in rule_groundings.iterrows():
+        dict = {}
+        for feature in features:
+            dict[feature] = row[feature]
+        formatted_example_prompt = example_prompt.format(**dict)
+        messages = [
+            {
+                "role": "system",
+                "content": system_prompt
+            },
+            {
+                "role": "user",
+                "content": formatted_example_prompt
+            }
+        ]
+        prompts.append(tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True))
+    return prompts
+
+
+def get_scored_rule_groundings_tf(batch, system_prompt, example_prompt, features, labels, llm_batch_size, device_type, model, tokenizer):
     # remove in prod model
-    #model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     prompts = get_tf_prompts(
         batch, 
         system_prompt, 
         example_prompt, 
         features, 
         labels,
-        #tokenizer_2,
-        tokenizer
+        tokenizer_2,
+        #tokenizer
     )
     scores = []
     for i in range(0, len(prompts), llm_batch_size):
@@ -68,6 +92,30 @@ def get_scored_rule_groundings(batch, system_prompt, example_prompt, features, l
     scores = scores/scores_norm.unsqueeze(-1)
     return scores
 
+def get_scored_rule_groundings_mc(batch, system_prompt, example_prompt, features, llm_batch_size, device_type, model, tokenizer, choices):
+    # remove in prod model
+    model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    prompts = get_mc_prompts(
+        batch, 
+        system_prompt, 
+        example_prompt, 
+        features, 
+        tokenizer_2,
+        #tokenizer
+    )
+    choice_token_indicies = []
+    for choice in choices:
+        choice_token_indicies.append(tokenizer.encode(choice)[1])
+    scores = []
+    for i in range(0, len(prompts), llm_batch_size):
+        curr_prompts = tokenizer(prompts[i: min(i + llm_batch_size, len(prompts))], padding=True, return_tensors='pt').to(device_type)
+        outputs = model(**curr_prompts)
+        mc_logits = torch.flatten(outputs.logits[:, -1, [choice_token_indicies]])
+        scores.append(mc_logits)
+    scores = torch.stack(scores, dim=0)
+    scores = torch.nn.functional.softmax(scores, dim=1)
+    return scores
+
 def eval(
     enable_log_reg,
     foundation_model,
@@ -79,13 +127,12 @@ def eval(
     batched_val_groundings,
     llm_batch_size,
     device_type,
-    tindex,
-    findex,
     structured_hinge_loss,
     val_step,
+    rule_type
 ):
     # evaluate on validation set
-    print(f'####################### Model Performance (Val) epoch: {val_step} #######################')
+    print(f'####################### Model Performance (Val) Val Step: {val_step} #######################')
     # set models to eval
     if enable_log_reg:
         foundation_model.eval()
@@ -108,72 +155,123 @@ def eval(
         rule_four_grounding_list = []
 
         for val_batch in batched_val_groundings:
-            # get logits from llm forward pass
-            rule_one_batch_scores = get_scored_rule_groundings(
-                val_batch['rule_one'],
-                constants.MF_TF_SYSTEM_PROMPT,
-                constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
-                ['Tweet'],
-                constants.MORAL_FOUNDATIONS,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-            rule_one_batch_scores = foundation_model(rule_one_batch_scores)
+            # rule one scoring
+            if rule_type == 'tf':
+                rule_one_batch_scores = get_scored_rule_groundings_tf(
+                    val_batch['rule_one'],
+                    constants.MF_TF_SYSTEM_PROMPT,
+                    constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
+                    ['Tweet'],
+                    constants.MORAL_FOUNDATIONS,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_one_batch_scores = get_scored_rule_groundings_mc(
+                    val_batch['rule_one'],
+                    constants.MF_MC_SYSTEM_PROMPT,
+                    constants.MF_MC_EXAMPLE_FORMAT,
+                    ['Tweet'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MF_MC_CHOICES
+                )
+            if enable_log_reg:
+                rule_one_batch_scores = foundation_model(rule_one_batch_scores)
             rule_one_batch_scores_list.append(rule_one_batch_scores.cpu())
             rule_one_grounding_list.append(val_batch['rule_one'])
 
-            rule_two_batch_scores = get_scored_rule_groundings(
-                val_batch['rule_two'],
-                constants.MR_TF_SYSTEM_PROMPT,
-                constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
-                ['Tweet', 'Entity'],
-                constants.MORAL_FOUNDATION_ROLE,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-            rule_two_batch_scores = role_model(rule_two_batch_scores)
+            # rule two scoring
+            if rule_type == 'tf':
+                rule_two_batch_scores = get_scored_rule_groundings_tf(
+                    val_batch['rule_two'],
+                    constants.MR_TF_SYSTEM_PROMPT,
+                    constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity'],
+                    constants.MORAL_FOUNDATION_ROLE,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                )
+            elif rule_type == 'mc':
+                rule_two_batch_scores = get_scored_rule_groundings_mc(
+                    val_batch['rule_two'],
+                    constants.MR_MC_SYSTEM_PROMPT,
+                    constants.MR_MC_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MR_MC_CHOICES
+                )
+            if enable_log_reg:
+                rule_two_batch_scores = role_model(rule_two_batch_scores)
             rule_two_batch_scores_list.append(rule_two_batch_scores.cpu())
             rule_two_grounding_list.append(val_batch['rule_two'])
 
-            rule_three_batch_scores = get_scored_rule_groundings(
-                val_batch['rule_three'],
-                constants.MF_TF_SYSTEM_PROMPT,
-                constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
-                ['Tweet', 'Ideology', 'Topic'],
-                constants.MORAL_FOUNDATIONS,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-            rule_three_batch_scores = foundation_model_w_context(rule_three_batch_scores)
+            # rule three scoring
+            if rule_type == "tf":
+                rule_three_batch_scores = get_scored_rule_groundings_tf(
+                    val_batch['rule_three'],
+                    constants.MF_TF_SYSTEM_PROMPT,
+                    constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+                    ['Tweet', 'Ideology', 'Topic'],
+                    constants.MORAL_FOUNDATIONS,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_three_batch_scores = get_scored_rule_groundings_mc(
+                    val_batch['rule_three'],
+                    constants.MF_MC_SYSTEM_PROMPT,
+                    constants.MF_MC_EXAMPLE_FORMAT_WITH_FEATURES,
+                    ['Tweet', 'Ideology', 'Topic'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MF_MC_CHOICES
+                )
+            if enable_log_reg:
+                rule_three_batch_scores = foundation_model_w_context(rule_three_batch_scores)
             rule_three_batch_scores_list.append(rule_three_batch_scores.cpu())
             rule_three_grounding_list.append(val_batch['rule_three'])
 
-            rule_four_batch_scores = get_scored_rule_groundings(
-                val_batch['rule_four'],
-                constants.MR_TF_SYSTEM_PROMPT,
-                constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
-                ['Tweet', 'Entity', 'Topic', 'Ideology'],
-                constants.MORAL_FOUNDATION_ROLE,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-            rule_four_batch_scores = role_model_w_context(rule_four_batch_scores)
+            # rule four scoring
+            if rule_type == 'tf':
+                rule_four_batch_scores = get_scored_rule_groundings_tf(
+                    val_batch['rule_four'],
+                    constants.MR_TF_SYSTEM_PROMPT,
+                    constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity', 'Topic', 'Ideology'],
+                    constants.MORAL_FOUNDATION_ROLE,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_four_batch_scores = get_scored_rule_groundings_mc(
+                    val_batch['rule_four'],
+                    constants.MR_MC_SYSTEM_PROMPT,
+                    constants.MR_MC_EXAMPLE_FORMAT_WITH_FEATURES,
+                    ['Tweet', 'Entity', 'Topic', 'Ideology'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MR_MC_CHOICES
+                )
+            if enable_log_reg:
+                rule_four_batch_scores = role_model_w_context(rule_four_batch_scores)
             rule_four_batch_scores_list.append(rule_four_batch_scores.cpu())
             rule_four_grounding_list.append(val_batch['rule_four'])
 
@@ -217,11 +315,10 @@ def training_loop(
         device_type,
         batched_val_groundings,
         output_path,
-        tindex,
-        findex,
         enable_log_reg,
         gradient_accumulation_steps,
-        eval_steps):
+        eval_steps,
+        rule_type):
     # hyper params
     epochs = 100000000
     num_solutions = 10
@@ -253,63 +350,106 @@ def training_loop(
         for i in range(len(batched_train_groundings)):
             print(f"############ epoch {epoch}, batch: {i} ############")
             batch = batched_train_groundings[i]
-            # get logits from llm forward pass
-            rule_one_batch_scores = get_scored_rule_groundings(
-                batch['rule_one'],
-                constants.MF_TF_SYSTEM_PROMPT,
-                constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
-                ['Tweet'],
-                constants.MORAL_FOUNDATIONS,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-
-            rule_two_batch_scores = get_scored_rule_groundings(
-                batch['rule_two'],
-                constants.MR_TF_SYSTEM_PROMPT,
-                constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
-                ['Tweet', 'Entity'],
-                constants.MORAL_FOUNDATION_ROLE,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-
-            rule_three_batch_scores = get_scored_rule_groundings(
-                batch['rule_three'],
-                constants.MF_TF_SYSTEM_PROMPT,
-                constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
-                ['Tweet', 'Ideology', 'Topic'],
-                constants.MORAL_FOUNDATIONS,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-
-            rule_four_batch_scores = get_scored_rule_groundings(
-                batch['rule_four'],
-                constants.MR_TF_SYSTEM_PROMPT,
-                constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
-                ['Tweet', 'Entity', 'Topic', 'Ideology'],
-                constants.MORAL_FOUNDATION_ROLE,
-                llm_batch_size,
-                device_type,
-                llm_model,
-                tokenizer,
-                tindex,
-                findex
-            )
-
+            # rule one scoring
+            if rule_type == 'tf':
+                rule_one_batch_scores = get_scored_rule_groundings_tf(
+                    batch['rule_one'],
+                    constants.MF_TF_SYSTEM_PROMPT,
+                    constants.MORAL_FOUNDATION_PROMPT_EXAMPLE_FORMAT,
+                    ['Tweet'],
+                    constants.MORAL_FOUNDATIONS,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_one_batch_scores = get_scored_rule_groundings_mc(
+                    batch['rule_one'],
+                    constants.MF_MC_SYSTEM_PROMPT,
+                    constants.MF_MC_EXAMPLE_FORMAT,
+                    ['Tweet'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MF_MC_CHOICES
+                )
+            # rule two scoring
+            if rule_type == 'tf':
+                rule_two_batch_scores = get_scored_rule_groundings_tf(
+                    batch['rule_two'],
+                    constants.MR_TF_SYSTEM_PROMPT,
+                    constants.MORAL_ROLE_PROMPT_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity'],
+                    constants.MORAL_FOUNDATION_ROLE,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                )
+            elif rule_type == 'mc':
+                rule_two_batch_scores = get_scored_rule_groundings_mc(
+                    batch['rule_two'],
+                    constants.MR_MC_SYSTEM_PROMPT,
+                    constants.MR_MC_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MR_MC_CHOICES
+                )
+            # rule three scoring
+            if rule_type == "tf":
+                rule_three_batch_scores = get_scored_rule_groundings_tf(
+                    batch['rule_three'],
+                    constants.MF_TF_SYSTEM_PROMPT,
+                    constants.MORAL_FOUNDATION_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+                    ['Tweet', 'Ideology', 'Topic'],
+                    constants.MORAL_FOUNDATIONS,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_three_batch_scores = get_scored_rule_groundings_mc(
+                    batch['rule_three'],
+                    constants.MF_MC_SYSTEM_PROMPT,
+                    constants.MF_MC_EXAMPLE_FORMAT_WITH_FEATURES,
+                    ['Tweet', 'Ideology', 'Topic'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MF_MC_CHOICES
+                )
+            # rule four scoring
+            if rule_type == 'tf':
+                rule_four_batch_scores = get_scored_rule_groundings_tf(
+                    batch['rule_four'],
+                    constants.MR_TF_SYSTEM_PROMPT,
+                    constants.MORAL_ROLE_PROMPT_WITH_FEATURES_EXAMPLE_FORMAT,
+                    ['Tweet', 'Entity', 'Topic', 'Ideology'],
+                    constants.MORAL_FOUNDATION_ROLE,
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer
+                )
+            elif rule_type == 'mc':
+                rule_four_batch_scores = get_scored_rule_groundings_mc(
+                    batch['rule_four'],
+                    constants.MR_MC_SYSTEM_PROMPT,
+                    constants.MR_MC_EXAMPLE_FORMAT_WITH_FEATURES,
+                    ['Tweet', 'Entity', 'Topic', 'Ideology'],
+                    llm_batch_size,
+                    device_type,
+                    llm_model,
+                    tokenizer,
+                    constants.MR_MC_CHOICES
+                )
             # get predictions
             if enable_log_reg:
                 foundation_model_logits = foundation_model(rule_one_batch_scores)
@@ -367,16 +507,16 @@ def training_loop(
                     batched_val_groundings,
                     llm_batch_size,
                     device_type,
-                    tindex,
-                    findex,
                     structured_hinge_loss,
-                    eval_step
+                    eval_step,
+                    rule_type
                 )
                 print(f'Validation Loss: {val_loss}')
                 print('\n\n\n')
 
                 if best_val_loss > val_loss:
-                    checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
+                    if enable_log_reg:
+                        checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
                     llm_model.save_pretrained(output_path)
                     best_val_loss = val_loss
                 structured_hinge_early_stopping.check_early_stopping(val_loss, eval_step)
@@ -399,13 +539,11 @@ def main():
     logreg_learning_rate = 0.001
     llm_learning_rate = 2e-5 
     llm_batch_size = 1
-    gradient_accumulation_steps = 32
+    gradient_accumulation_steps = 1
     num_folds = 5
-    use_log_reg = True
+    use_log_reg = False
     batch_size = 1
-    tindex = 1904
-    findex = 3934
-    eval_steps = 200
+    eval_steps = 1
     eval_batch_size = 4
 
     # load training data
@@ -427,9 +565,9 @@ def main():
             load_checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], checkpoint_path)
 
         # load llm model
-        model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
-        lora_model = PeftModel.from_pretrained(model, sft_path).to(device_type)
-        model = lora_model.merge_and_unload()
+        #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+        #lora_model = PeftModel.from_pretrained(model, sft_path).to(device_type)
+        #model = lora_model.merge_and_unload()
 
         # local testing only
         lora_config = LoraConfig(
@@ -440,8 +578,8 @@ def main():
             r=32,
         )
         # test only, remove for prod run
-        #model, tokenizer = model_loader.load_test_model(device_type)
-        #model = get_peft_model(model, lora_config)
+        model, tokenizer = model_loader.load_test_model(device_type)
+        model = get_peft_model(model, lora_config)
 
         batched_train_groundings = train_groundings[i]['train']
         val_groundings = train_groundings[i]['val'][0:2]
@@ -462,13 +600,12 @@ def main():
             device_type,
             val_groundings,
             output_path,
-            tindex,
-            findex,
             use_log_reg,
             gradient_accumulation_steps,
-            eval_steps
+            eval_steps,
+            rule_type
         )
-        #return
+        return
 
 
 if __name__ == "__main__":
