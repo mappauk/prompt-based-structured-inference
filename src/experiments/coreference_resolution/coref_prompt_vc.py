@@ -18,13 +18,13 @@ def main():
     topk = 5
     temperature = 0.5
     num_return_sequences = 2
-    num_votes = 4
+    num_votes = 2
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     
     # load data
-    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
     data = data.head(10)
     print(data)
 

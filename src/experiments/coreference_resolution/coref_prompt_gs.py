@@ -26,10 +26,10 @@ def main():
     num_shots = int(sys.argv[4])
     
     # load data
-    #data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    data = genia_dataset_loader.preprocess_genia_coref(input_path)
-    #data = data.head(10)
-    #print(data)
+    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    data = data.head(10)
+    print(data)
     #model, tokenizer = model_loader.load_flan_model(device_type)
     model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
 
@@ -41,13 +41,13 @@ def main():
         both_per_shot=False
     )
 
-    #model, tokenizer = model_loader.load_test_model(device_type)
+    model, tokenizer = model_loader.load_test_model(device_type)
 
     # define rules
     rule_one = LLMGSRule(
         'rule_one',
         ['doc_id', 'entity1_id', 'entity1', 'entity2_id', 'entity2', 'sent1', 'sent2'],
-        ['coref', 'nocoref'],
+        ['coreferent', 'distinct'],
         'CF_{doc_id}_{entity1_id}_{entity2_id}_{label}',
         'RuleOne_{doc_id}_{entity1_id}_{entity2_id}_{label}',
         RuleType.MULTI_CLASS,
