@@ -1,86 +1,86 @@
 {
     "positive_examples": [
         {
-            "entity1": "me",
-            "entity2": "I",
-            "sent1": "And then , the friend first sent me an SMS , Uh-huh . saying he would come pick me up to go together .",
-            "sent2": "After that , I received an SMS from 1860 .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "True"
+            "entity1": "Few of the veterans who participated in the Hundred Regiments Offensive",
+            "entity2": "they",
+            "sent1": "Few of the veterans who participated in the Hundred Regiments Offensive are still alive .",
+            "sent2": "When they speak of the Hundred Regiments Offensive , they are always so excited .",
+            "doc_id": "bc/cctv/00/cctv-0001-7",
+            "answer": "true"
         },
         {
-            "entity1": "both of you",
-            "entity2": "the two of you",
-            "sent1": "Welcome both of you to the studio to participate in our program .",
-            "sent2": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "True"
+            "entity1": "President Bush",
+            "entity2": "He",
+            "sent1": "Well it 's interesting President Bush has said categorically we do n't torture /.",
+            "sent2": "He also says we 'll do whatever is necessary /.",
+            "doc_id": "bc/cnn/00/cnn-0002-16",
+            "answer": "true"
         },
         {
-            "entity1": "the day of the accident",
-            "entity2": "yesterday",
-            "sent1": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
-            "sent2": "Ah , , about 11:00 m. yesterday , ah , I happened to find out through an SMS when I was outside .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "True"
+            "entity1": "Kim",
+            "entity2": "she",
+            "sent1": "American Morning anchor Miles O'Brien was with Kim today as she got some expert opinions on the damage to her home /.",
+            "sent2": "American Morning anchor Miles O'Brien was with Kim today as she got some expert opinions on the damage to her home /.",
+            "doc_id": "bc/cnn/00/cnn-0001-8",
+            "answer": "true"
         },
         {
-            "entity1": "you",
-            "entity2": "Yang Yang",
-            "sent1": "And you , Yang Yang ?",
-            "sent2": "And you , Yang Yang ?",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "True"
+            "entity1": "the APEC meeting",
+            "entity2": "the APEC summit",
+            "sent1": "Prior to the APEC meeting , Japanese Prime Minister Junichiro Koizumi visited Yasukuni Shrine for the fifth time and was strongly condemned by Asian nations such as China and South Korea .",
+            "sent2": "What kind of situation will Japan find itself in at the APEC summit ?",
+            "doc_id": "bc/cctv/00/cctv-0002-1",
+            "answer": "true"
         },
         {
-            "entity1": "me",
-            "entity2": "You",
-            "sent1": "A friend happened to call me .",
-            "sent2": "You were not at work that day ?",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "True"
+            "entity1": "bouncer Darryl Littlejohn",
+            "entity2": "he",
+            "sent1": "First up on the docket bouncer Darryl Littlejohn pleaded not guilty to charges he murdered twenty four year old Guillen /.",
+            "sent2": "First up on the docket bouncer Darryl Littlejohn pleaded not guilty to charges he murdered twenty four year old Guillen /.",
+            "doc_id": "bc/msnbc/00/msnbc-0002-1",
+            "answer": "true"
         }
     ],
     "negative_examples": [
         {
+            "entity1": "China",
+            "entity2": "Taihang Mountain",
+            "sent1": "WW II Landmarks on the Great Earth of China : Eternal Memories of Taihang Mountain",
+            "sent2": "Standing tall on Taihang Mountain is the Monument to the Hundred Regiments Offensive .",
+            "doc_id": "bc/cctv/00/cctv-0001-0",
+            "answer": "false"
+        },
+        {
             "entity1": "Focus Today",
-            "entity2": "Today",
-            "sent1": "Welcome to Focus Today .",
-            "sent2": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "False"
+            "entity2": "the British newspaper Daily Mirror",
+            "sent1": "Hello , dear viewers , welcome to Focus Today .",
+            "sent2": "On November 22 , the British newspaper Daily Mirror revealed that US President Bush once planned to bomb the al - Jazeera TV station headquarters , setting off a mighty uproar .",
+            "doc_id": "bc/cctv/00/cctv-0004-2",
+            "answer": "false"
         },
         {
-            "entity1": "our program",
-            "entity2": "the news",
-            "sent1": "Welcome both of you to the studio to participate in our program .",
-            "sent2": "Well , I especially want to know , ha , how the two of you found out the news on the day of the accident ?",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "False"
+            "entity1": "I",
+            "entity2": "Russia",
+            "sent1": "Oh , as I just mentioned , it was against a large background that Russia first proposed it .",
+            "sent2": "Oh , as I just mentioned , it was against a large background that Russia first proposed it .",
+            "doc_id": "bc/cctv/00/cctv-0003-12",
+            "answer": "false"
         },
         {
-            "entity1": "Today",
-            "entity2": "the road caving in",
-            "sent1": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
-            "sent2": "Before dawn on January 3 , a sewage pipe leakage accident occurred at the main and side roads of Jingguang Bridge , East Third Ring Road , Beijing Municipality , resulting in the road caving in .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "False"
+            "entity1": "the four northern islands",
+            "entity2": "today",
+            "sent1": "Just now you mentioned the origin of the four northern islands .",
+            "sent2": "Well , today we have been talking about the four northern islands issue .",
+            "doc_id": "bc/cctv/00/cctv-0003-11",
+            "answer": "false"
         },
         {
-            "entity1": "Today",
-            "entity2": "Jingguang Bridge , East Third Ring Road , Beijing Municipality",
-            "sent1": "Today , let 's turn our attention to a road cave - in accident that happened in Beijing over the holiday .",
-            "sent2": "Before dawn on January 3 , a sewage pipe leakage accident occurred at the main and side roads of Jingguang Bridge , East Third Ring Road , Beijing Municipality , resulting in the road caving in .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "False"
-        },
-        {
-            "entity1": "today",
-            "entity2": "the studio",
-            "sent1": "Well , we have invited two honorable guests to the studio today to follow this topic with us .",
-            "sent2": "Well , we have invited two honorable guests to the studio today to follow this topic with us .",
-            "doc_id": "bc/cctv/00/cctv_0005_1",
-            "answer": "False"
+            "entity1": "President Bush 's",
+            "entity2": "John Bolton",
+            "sent1": "Up next more on President Bush 's recess appointment of John Bolton as UN ambassador and the latest on the heightening CIA leak investigation /.",
+            "sent2": "Up next more on President Bush 's recess appointment of John Bolton as UN ambassador and the latest on the heightening CIA leak investigation /.",
+            "doc_id": "bc/msnbc/00/msnbc-0003-6",
+            "answer": "false"
         }
     ]
 }

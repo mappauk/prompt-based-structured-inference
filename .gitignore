@@ -165,3 +165,5 @@ output/
 .tmp.driveupload/
 data/test/
 wandb/
+data/coref/
+data/moral_foundation_congress/

@@ -1,85 +1,85 @@
 {
     "positive_examples": [
         {
-            "entity1": "human osteoclasts",
-            "entity2": "osteoclasts",
-            "sent1": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
-            "sent2": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts .",
-            "doc_id": "10025668",
+            "entity1": "The ubiquitous octamer-binding protein(s)",
+            "entity2": "Proteins that bind this octamer",
+            "sent1": "The ubiquitous octamer-binding protein(s) is sufficient for transcription of immunoglobulin genes .",
+            "sent2": "Proteins that bind this octamer have been purified, and cDNAs encoding octamer-binding proteins have been cloned.",
+            "doc_id": "2304473",
             "answer": "true"
         },
         {
-            "entity1": "Resorption lacunae",
-            "entity2": "these pits",
-            "sent1": "Resorption lacunae can be observed by day 22.",
-            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "doc_id": "10025668",
+            "entity1": "The Epstein-Barr virus DR promoter",
+            "entity2": "it",
+            "sent1": "The Epstein-Barr virus DR promoter is located upstream of the PstI repeats, and in addition to the TATA box, it contains an upstream region (positions -69 to -220) responsive to EB1 (Z) (the BZLF1-encoded transcription factor) and an enhancer with two functionally distinct domains , A and B .",
+            "sent2": "The Epstein-Barr virus DR promoter is located upstream of the PstI repeats, and in addition to the TATA box, it contains an upstream region (positions -69 to -220) responsive to EB1 (Z) (the BZLF1-encoded transcription factor) and an enhancer with two functionally distinct domains , A and B .",
+            "doc_id": "2159545",
             "answer": "true"
         },
         {
-            "entity1": "these pits",
-            "entity2": "they",
-            "sent1": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "doc_id": "10025668",
+            "entity1": "receptor\" leucocytic estrogen receptor levels",
+            "entity2": "ER levels",
+            "sent1": "[Changes in receptor\" leucocytic estrogen receptor levels in patients with climacteric syndrome and therapeutic effect of liuwei dihuang pills ]",
+            "sent2": "The data indicate that decrease of ER levels in cell may involve in the pathogenesis of climacteric syndrome .",
+            "doc_id": "1773463",
             "answer": "true"
         },
         {
-            "entity1": "the activity of a subset of osteoclast-like cells",
-            "entity2": "that",
-            "sent1": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "doc_id": "10025668",
+            "entity1": "Every enhancer",
+            "entity2": "enhancers of cell type-specific genes",
+            "sent1": "Every enhancer works with every promoter for all the combinations tested : could new regulatory pathways evolve by enhancer shuffling ?",
+            "sent2": "The promoters and enhancers of cell type-specific genes are often conserved in evolution, and hence one might expect that a given enhancer has evolved to work best with its own promoter .",
+            "doc_id": "1668145",
             "answer": "true"
         },
         {
-            "entity1": "an adherent population of cells, with preosteoclast/osteoclast phenotypic propertie",
-            "entity2": "these cells",
-            "sent1": "Thus, an adherent population of cells, with preosteoclast/osteoclast phenotypic properties , arises selectively under simple culture conditions from normal PBMC.",
-            "sent2": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts",
-            "doc_id": "10025668",
+            "entity1": "A novel Ets-related transcription factor",
+            "entity2": "Elf-1",
+            "sent1": "A novel Ets-related transcription factor , Elf-1 , binds to human immunodeficiency virus type 2 regulatory elements that are required for inducible trans activation in T cells .",
+            "sent2": "A novel Ets-related transcription factor , Elf-1 , binds to human immunodeficiency virus type 2 regulatory elements that are required for inducible trans activation in T cells .",
+            "doc_id": "1527846",
             "answer": "true"
         }
     ],
     "negative_examples": [
         {
-            "entity1": "Osteoclast markers",
-            "entity2": "human osteoclasts",
-            "sent1": "Osteoclast markers accumulate on cells developing from human peripheral blood mononuclear precursors.",
-            "sent2": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
-            "doc_id": "10025668",
+            "entity1": "the HLA DRA promoter",
+            "entity2": "Two consensus sequences",
+            "sent1": "Functional analysis of cis-linked regulatory sequences in the HLA DRA promoter by transcription in vitro.",
+            "sent2": "Two consensus sequences , called X and Y boxes , capable of binding nuclear proteins and regulating expression in B cells have been defined within the immediate upstream region of major histocompatibility complex (MHC) class II promoters.",
+            "doc_id": "2278044",
             "answer": "false"
         },
         {
-            "entity1": "human osteoclasts",
-            "entity2": "cells expressing osteoclast markers",
-            "sent1": "Recent studies show that human osteoclasts develop in vitro from hematopoietic cells; however, special cultures conditions and/or cytokine mobilized peripheral blood are apparently required.",
-            "sent2": "Here, we report that cells expressing osteoclast markers differentiate from precursors present in nonmobilized peripheral blood mononuclear cells (PBMC), without the addition of stromal cells, growth factors, cytokines or steroids; and characterize their phenotype.",
-            "doc_id": "10025668",
+            "entity1": "1,25-Dihydroxyvitamin D3 receptor RNA",
+            "entity2": "hematopoietic cells",
+            "sent1": "1,25-Dihydroxyvitamin D3 receptor RNA : expression in hematopoietic cells .",
+            "sent2": "1,25-Dihydroxyvitamin D3 receptor RNA : expression in hematopoietic cells .",
+            "doc_id": "1705836",
             "answer": "false"
         },
         {
-            "entity1": "Osteoclast markers",
-            "entity2": "osteoprotegerin ligand (OPGL)",
-            "sent1": "Osteoclast markers accumulate on cells developing from human peripheral blood mononuclear precursors.",
-            "sent2": "Transcripts for osteoprotegerin ligand (OPGL) , an osteoclast differentiation factor (also known as RANKL and TRANCE) are expressed, likely by adherent cells .",
-            "doc_id": "10025668",
+            "entity1": "interferon beta gene transcription",
+            "entity2": "The human interferon beta (IFN-beta) regulatory element",
+            "sent1": "Stimulation of interferon beta gene transcription in vitro by purified NF-kappa B and a novel TH protein.",
+            "sent2": "The human interferon beta (IFN-beta) regulatory element consists of multiple enhanson domains which are targets for transcription factors involved in inducible expression of the promoter.",
+            "doc_id": "1782151",
             "answer": "false"
         },
         {
-            "entity1": "osteoclasts",
-            "entity2": "adherent cells",
-            "sent1": "Further characterization of these cells should identify factors involved in the growth, terminal differentiation and activation of osteoclasts .",
-            "sent2": "Transcripts for osteoprotegerin ligand (OPGL) , an osteoclast differentiation factor (also known as RANKL and TRANCE) are expressed, likely by adherent cells .",
-            "doc_id": "10025668",
+            "entity1": "Natural variants of the HIV-1 long terminal repeat",
+            "entity2": "the long terminal repeat (LTR) region of HIV-1",
+            "sent1": "Natural variants of the HIV-1 long terminal repeat : analysis of promoters with duplicated DNA regulatory motifs.",
+            "sent2": "Sequence variation in the long terminal repeat (LTR) region of HIV-1 was analyzed in viral isolates of 17 infected individuals .",
+            "doc_id": "1448931",
             "answer": "false"
         },
         {
-            "entity1": "These adherent cells",
-            "entity2": "they",
-            "sent1": "These adherent cells have an eccentrically placed, round nucleus, and express low levels of TRAP and sodium fluoride-resistant- alpha-naphthyl-acetate-esterase (NaF-R-NSE).",
-            "sent2": "Although these pits are not nearly as numerous as the cells of preosteoclast phenotype, they do represent the activity of a subset of osteoclast-like cells that has achieved osteoclastic maturity under these culture conditions.",
-            "doc_id": "10025668",
+            "entity1": "A novel Ets-related transcription factor",
+            "entity2": "human immunodeficiency virus type 2 regulatory elements",
+            "sent1": "A novel Ets-related transcription factor , Elf-1 , binds to human immunodeficiency virus type 2 regulatory elements that are required for inducible trans activation in T cells .",
+            "sent2": "A novel Ets-related transcription factor , Elf-1 , binds to human immunodeficiency virus type 2 regulatory elements that are required for inducible trans activation in T cells .",
+            "doc_id": "1527846",
             "answer": "false"
         }
     ]
