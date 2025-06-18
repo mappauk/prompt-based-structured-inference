@@ -122,13 +122,15 @@ def get_mf_constraints(data_input_path):
     #custom_rule_constraints = [constr_one, constr_two, constr_three]
     return custom_rule_constraints
 
-def model_eval(rules, constraints, inputs, outputs=None):
+def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True):
     with torch.no_grad():
         exploded_groundings = {}
         # rule f1 before inference
         for rule_name, grounding in inputs.items():
             curr_grounding = grounding.copy()
-            if outputs != None:
+            if outputs != None and not softmax_enabled:
+                curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
+            elif outputs != None:
                 outputs[rule_name] = torch.nn.functional.softmax(outputs[rule_name], dim=1)
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             ground_truth = curr_grounding['GroundTruth'].tolist()

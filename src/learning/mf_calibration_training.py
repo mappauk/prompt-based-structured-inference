@@ -2,6 +2,8 @@ import sys
 import src.helpers.scoring.mf_scoring as mf_scoring
 from src.learning.models.logistic_regression import LogisticRegression
 from src.learning.loss.structured_hinge_loss import StructuredHingeLoss
+from src.learning.loss.mf_structured_hinge_loss import MFStructuredHingeLoss
+
 from src.learning.loss.joint_cross_entropy_loss import JointCrossEntropyLoss
 from src.learning.loss.early_stopping import EarlyStopping
 import torch
@@ -29,8 +31,9 @@ def training_loop(
         structured_alone):
     # hyper params
     epochs = 100000000
-    num_solutions = 10
-    best_val_loss = 1000000000000000
+    num_solutions = 1
+    best_f1 = 0
+    best_val_los = 1000000
     
     # optimizers
     foundation_model_optimizer = torch.optim.Adam(foundation_model.parameters(), lr=learning_rate)
@@ -40,9 +43,9 @@ def training_loop(
 
     # loss functions and early stopping definitions
     joint_ce_loss = JointCrossEntropyLoss()
-    structured_hinge_loss = StructuredHingeLoss(rules, custom_rule_constraints, num_solutions)
+    structured_hinge_loss = MFStructuredHingeLoss(rules, custom_rule_constraints, num_solutions)
     ce_only_early_stopping = EarlyStopping(10, 0.0001)
-    structured_hinge_early_stopping = EarlyStopping(10, 0)
+    structured_hinge_early_stopping = EarlyStopping(5, 0)
 
 
     for epoch in range(epochs):
@@ -115,24 +118,29 @@ def training_loop(
             val_loss = None
             if use_structured_loss:
                 val_loss = structured_hinge_loss(val_groundings, val_outputs)
-                structured_hinge_early_stopping.check_early_stopping(val_loss, epoch)
+                mf_macro_f1, mf_micro_f1, mr_macro_f1, mr_micro_f1 = mf_scoring.model_eval(rules, custom_rule_constraints, val_groundings, val_outputs)
+                average_macro_f1 = (mf_macro_f1 + mr_macro_f1)/2
+                structured_hinge_early_stopping.check_early_stopping(average_macro_f1, epoch)
             else:
                 val_loss = joint_ce_loss(val_groundings, val_outputs)
                 ce_only_early_stopping.check_early_stopping(val_loss, epoch)
             print(f'Validation Loss: {val_loss}')
 
-            #mf_scoring.model_eval(rules, custom_rule_constraints, val_groundings, val_outputs)
-            print('\n\n\n')
-
             should_update_best_loss = (
                 only_ce_loss or 
-                (optimized_hot_start and not ce_only_early_stopping.training_flag and structured_hinge_early_stopping.best_epoch != 0) or
+                (optimized_hot_start and not ce_only_early_stopping.training_flag and structured_hinge_early_stopping.best_step != 0) or
                 structured_alone
             )
+            if use_structured_loss:
+                if average_macro_f1 > best_f1 and should_update_best_loss:
+                    checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
+                    best_f1 = average_macro_f1
+            else:
+                if val_loss < best_val_los and should_update_best_loss:
+                    checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
+                    best_val_los = val_loss
 
-            if best_val_loss > val_loss and should_update_best_loss:
-                checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
-                best_val_loss = val_loss
+            print('\n\n\n')
 
             if (not ce_only_early_stopping.training_flag and only_ce_loss) or not structured_hinge_early_stopping.training_flag:
                 break
@@ -142,9 +150,9 @@ def main():
     rule_groundings_path = sys.argv[2]
     rule_type = sys.argv[3]
     model_checkpoint_path = sys.argv[4]
-    optimized_hot_start = True
-    only_ce_loss = False
-    learning_rate = 0.001
+    optimized_hot_start = False
+    only_ce_loss = True
+    learning_rate = 0.01
     structured_alone = False
 
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
@@ -152,10 +160,10 @@ def main():
     train_groundings = []
     for i in range(5):
         rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path + f'\\{i}\\', rule_names, rule_type)
-        temp_train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+        temp_train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path, batch_size=16)
         train_groundings.append(temp_train_groundings[i])
     #rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
-    #train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path)
+    #train_groundings = mf_scoring.get_training_groundings(rule_groundings, data_input_path, batch_size=64)
     rules = mf_scoring.get_rule_info()
     constraints = mf_scoring.get_mf_constraints(data_input_path)
     for i in range(len(train_groundings)):

@@ -2,7 +2,7 @@ import sys
 import src.helpers.scoring.mf_scoring as mf_scoring
 import src.helpers.prompting.mf_prompt_constants as constants
 from src.learning.models.logistic_regression import LogisticRegression
-from src.learning.loss.structured_hinge_loss import StructuredHingeLoss
+from src.learning.loss.mf_structured_hinge_loss import MFStructuredHingeLoss
 from src.learning.loss.joint_cross_entropy_loss import JointCrossEntropyLoss
 from src.learning.loss.early_stopping import EarlyStopping
 import torch
@@ -11,6 +11,7 @@ import src.helpers.loaders.model_loader as model_loader
 from peft import LoraConfig, get_peft_model
 from peft import PeftModel
 import pandas as pd
+import numpy as np
 
 tindex = 1904
 findex = 3934
@@ -68,15 +69,15 @@ def get_mc_prompts(rule_groundings, system_prompt, example_prompt, features, tok
 
 def get_scored_rule_groundings_tf(batch, system_prompt, example_prompt, features, labels, llm_batch_size, device_type, model, tokenizer):
     # remove in prod model
-    model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    #model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     prompts = get_tf_prompts(
         batch, 
         system_prompt, 
         example_prompt, 
         features, 
         labels,
-        tokenizer_2,
-        #tokenizer
+        #tokenizer_2,
+        tokenizer
     )
     scores = []
     for i in range(0, len(prompts), llm_batch_size):
@@ -93,15 +94,17 @@ def get_scored_rule_groundings_tf(batch, system_prompt, example_prompt, features
     return scores
 
 def get_scored_rule_groundings_mc(batch, system_prompt, example_prompt, features, llm_batch_size, device_type, model, tokenizer, choices):
+    if batch.shape[0] == 0:
+        return None
     # remove in prod model
-    model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    #model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     prompts = get_mc_prompts(
         batch, 
         system_prompt, 
         example_prompt, 
         features, 
-        tokenizer_2,
-        #tokenizer
+        #tokenizer_2,
+        tokenizer
     )
     choice_token_indicies = []
     for choice in choices:
@@ -117,6 +120,8 @@ def get_scored_rule_groundings_mc(batch, system_prompt, example_prompt, features
     return scores
 
 def eval(
+    rules,
+    constraints,
     enable_log_reg,
     foundation_model,
     foundation_model_w_context,
@@ -181,7 +186,8 @@ def eval(
                     constants.MF_MC_CHOICES
                 )
             if enable_log_reg:
-                rule_one_batch_scores = foundation_model(rule_one_batch_scores)
+                with torch.autocast(device_type='cuda'):
+                    rule_one_batch_scores = foundation_model(rule_one_batch_scores)
             rule_one_batch_scores_list.append(rule_one_batch_scores.cpu())
             rule_one_grounding_list.append(val_batch['rule_one'])
 
@@ -211,7 +217,8 @@ def eval(
                     constants.MR_MC_CHOICES
                 )
             if enable_log_reg:
-                rule_two_batch_scores = role_model(rule_two_batch_scores)
+                with torch.autocast(device_type='cuda'):
+                    rule_two_batch_scores = role_model(rule_two_batch_scores)
             rule_two_batch_scores_list.append(rule_two_batch_scores.cpu())
             rule_two_grounding_list.append(val_batch['rule_two'])
 
@@ -241,7 +248,8 @@ def eval(
                     constants.MF_MC_CHOICES
                 )
             if enable_log_reg:
-                rule_three_batch_scores = foundation_model_w_context(rule_three_batch_scores)
+                with torch.autocast(device_type='cuda'):
+                    rule_three_batch_scores = foundation_model_w_context(rule_three_batch_scores)
             rule_three_batch_scores_list.append(rule_three_batch_scores.cpu())
             rule_three_grounding_list.append(val_batch['rule_three'])
 
@@ -271,7 +279,8 @@ def eval(
                     constants.MR_MC_CHOICES
                 )
             if enable_log_reg:
-                rule_four_batch_scores = role_model_w_context(rule_four_batch_scores)
+                with torch.autocast(device_type='cuda'):
+                    rule_four_batch_scores = role_model_w_context(rule_four_batch_scores)
             rule_four_batch_scores_list.append(rule_four_batch_scores.cpu())
             rule_four_grounding_list.append(val_batch['rule_four'])
 
@@ -288,7 +297,8 @@ def eval(
             'rule_four': torch.vstack(rule_four_batch_scores_list)
         }
         val_loss = structured_hinge_loss(val_groundings, val_outputs)
-
+        mf_macro_f1, mf_micro_f1, mr_macro_f1, mr_micro_f1 = mf_scoring.model_eval(rules, constraints, val_groundings, outputs=val_outputs, softmax_enabled=enable_log_reg)
+        
         # set models to train
         if enable_log_reg:
             foundation_model.train()
@@ -296,7 +306,7 @@ def eval(
             role_model.train()
             role_model_w_context.train()
         llm_model.train()
-        return val_loss
+        return val_loss, (mf_macro_f1 + mr_macro_f1)/2
 
 
 def training_loop(
@@ -321,8 +331,8 @@ def training_loop(
         rule_type):
     # hyper params
     epochs = 100000000
-    num_solutions = 10
-    best_val_loss = 1000000000000000
+    num_solutions = 1
+    best_val_f1 = 0
     
 
     # optimizers
@@ -334,8 +344,8 @@ def training_loop(
     llm_model_optimizer = torch.optim.Adam(llm_model.parameters(), lr=llm_learning_rate)
 
     # loss functions and early stopping definitions
-    structured_hinge_loss = StructuredHingeLoss(rules, custom_rule_constraints, num_solutions, softmax_enabled=enable_log_reg)
-    structured_hinge_early_stopping = EarlyStopping(1, 3)
+    structured_hinge_loss = MFStructuredHingeLoss(rules, custom_rule_constraints, num_solutions, softmax_enabled=enable_log_reg)
+    structured_hinge_early_stopping = EarlyStopping(5, 0)
 
     # set models to train
     if enable_log_reg:
@@ -452,15 +462,20 @@ def training_loop(
                 )
             # get predictions
             if enable_log_reg:
-                foundation_model_logits = foundation_model(rule_one_batch_scores)
-                foundation_model_w_context_logits = foundation_model_w_context(rule_three_batch_scores)
-                role_model_logits = role_model(rule_two_batch_scores)
-                role_model_w_context_logits = role_model_w_context(rule_four_batch_scores)    
+                with torch.autocast(device_type='cuda'):
+                    foundation_model_logits = foundation_model(rule_one_batch_scores)
+                    foundation_model_w_context_logits = foundation_model_w_context(rule_three_batch_scores)
+                    if rule_two_batch_scores != None:    
+                        role_model_logits = role_model(rule_two_batch_scores)
+                        role_model_w_context_logits = role_model_w_context(rule_four_batch_scores)    
+                    else:
+                        role_model_logits = rule_two_batch_scores
+                        role_model_w_context_logits = rule_four_batch_scores             
             else:
                 foundation_model_logits = rule_one_batch_scores
                 foundation_model_w_context_logits = rule_three_batch_scores
                 role_model_logits = rule_two_batch_scores
-                role_model_w_context_logits = rule_four_batch_scores            
+                role_model_w_context_logits = rule_four_batch_scores           
             
             outputs = {
                 'rule_one': foundation_model_logits,
@@ -470,6 +485,7 @@ def training_loop(
             }
 
             loss = structured_hinge_loss(batch, outputs)
+            print(loss)
             batch_losses.append(loss.item())
             loss.backward()
 
@@ -490,13 +506,14 @@ def training_loop(
                     role_model_optimizer.zero_grad()
                     role_model_w_context_optimizer.zero_grad()
                 llm_model_optimizer.zero_grad()
-                # evaluate on validation set
-                print(f"Training Loss: {sum(batch_losses)/len(batch_losses)}")
-                batch_losses = []
+                print(f"Training Loss (Batch): {sum(batch_losses)/len(batch_losses)}")
+
             # eval model
             if (i + 1) % eval_steps == 0:
                 eval_step = int((i + 1)/ eval_steps)
-                val_loss = eval(
+                val_loss, val_f1 = eval(
+                    rules, 
+                    custom_rule_constraints,
                     enable_log_reg,
                     foundation_model,
                     foundation_model_w_context,
@@ -514,14 +531,15 @@ def training_loop(
                 print(f'Validation Loss: {val_loss}')
                 print('\n\n\n')
 
-                if best_val_loss > val_loss:
+                if val_f1 > best_val_f1:
                     if enable_log_reg:
                         checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], output_path)
                     llm_model.save_pretrained(output_path)
-                    best_val_loss = val_loss
-                structured_hinge_early_stopping.check_early_stopping(val_loss, eval_step)
+                    best_val_f1 = val_f1
+                structured_hinge_early_stopping.check_early_stopping(val_f1, eval_step)
                 if not structured_hinge_early_stopping.training_flag:
                     return
+        print(f"Training Loss (Epoch): {sum(batch_losses)/len(batch_losses)}")
 
 
 
@@ -536,14 +554,14 @@ def main():
     device_type = 'cuda'
 
     # hyperparams
-    logreg_learning_rate = 0.001
-    llm_learning_rate = 2e-5 
+    logreg_learning_rate = 2e-6
+    llm_learning_rate = 2e-6
     llm_batch_size = 1
-    gradient_accumulation_steps = 1
+    gradient_accumulation_steps = 16
     num_folds = 5
-    use_log_reg = False
+    use_log_reg = True
     batch_size = 1
-    eval_steps = 1
+    eval_steps = 80
     eval_batch_size = 4
 
     # load training data
@@ -562,28 +580,17 @@ def main():
             role_model = LogisticRegression(16, 16).to(device_type)
             role_model_w_context = LogisticRegression(16, 16).to(device_type)
             checkpoint_path = logreg_checkpoint_path + f'cross_validation_{i}_'
-            load_checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], checkpoint_path)
+            load_checkpoint([foundation_model, foundation_model_w_context, role_model, role_model_w_context], checkpoint_path)    
 
         # load llm model
-        #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
-        #lora_model = PeftModel.from_pretrained(model, sft_path).to(device_type)
-        #model = lora_model.merge_and_unload()
-
-        # local testing only
-        lora_config = LoraConfig(
-            bias="none",
-            lora_alpha=32,
-            task_type='CAUSAL_LM',
-            lora_dropout=0.05,
-            r=32,
-        )
-        # test only, remove for prod run
-        model, tokenizer = model_loader.load_test_model(device_type)
-        model = get_peft_model(model, lora_config)
+        model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+        model = PeftModel.from_pretrained(model, sft_path + f'{i}-final-model/', is_trainable=True).to(device_type)
+        #model = model.merge_and_unload()
 
         batched_train_groundings = train_groundings[i]['train']
-        val_groundings = train_groundings[i]['val'][0:2]
-        output_path = new_model_checkpoint_path + f'/{i}/'
+        val_groundings = train_groundings[i]['val']
+        output_path = new_model_checkpoint_path + f'{i}/'
+
         training_loop(
             rules,
             constraints,
@@ -605,7 +612,7 @@ def main():
             eval_steps,
             rule_type
         )
-        return
+        #return
 
 
 if __name__ == "__main__":

@@ -1,9 +1,7 @@
 import sys
 import src.helpers.scoring.mf_scoring as mf_scoring
 from src.learning.models.logistic_regression import LogisticRegression
-from src.learning.loss.structured_hinge_loss import StructuredHingeLoss
 from src.learning.loss.joint_cross_entropy_loss import JointCrossEntropyLoss
-from src.learning.loss.early_stopping import EarlyStopping
 import torch
 import src.helpers.loaders.model_loader as model_loader
 from peft import LoraConfig, get_peft_model
@@ -23,8 +21,8 @@ def main():
     llama_response_format = '<|start_header_id|>assistant<|end_header_id|>'
     wandb.login(key='')
     ### Lora Hyperparams ###
-    lora_alpha = 32 # alpha to try: 32, 64, 128 (match rank)
-    rank = 32  # ranks to try: 32, 64, 128
+    lora_alpha = 256 # alpha to try: 32, 64, 128 (match rank)
+    rank = 256  # ranks to try: 32, 64, 128
     lora_dropout = 0.05
     modules = 'all-linear' # modules = ['q_proj','k_proj','v_proj','dense']
 
@@ -78,17 +76,19 @@ def main():
         train_data = []
         eval_data = []
         for id in train_ids:
-            train_data.extend(ids_to_prompts[id])
+            if id in ids_to_prompts:
+                train_data.extend(ids_to_prompts[id])
         for id in eval_ids:
-            eval_data.extend(ids_to_prompts[id])
-        train_dataset = train_dataset.shuffle(seed=92)
+            if id in ids_to_prompts:
+                eval_data.extend(ids_to_prompts[id])
         train_dataset = Dataset.from_dict({
             "text": train_data
         })
-        eval_dataset = eval_dataset.shuffle(seed=92)
+        train_dataset = train_dataset.shuffle(seed=92)
         eval_dataset = Dataset.from_dict({
             "text": eval_data
         })
+        eval_dataset = eval_dataset.shuffle(seed=92)
         collator = DataCollatorForCompletionOnlyLM(response_template=tokenizer.encode(llama_response_format, add_special_tokens=False)[2:], tokenizer=tokenizer)
         trainer = SFTTrainer(
             model=peft_model,
@@ -97,7 +97,7 @@ def main():
             eval_dataset=eval_dataset,
             #processing_class=tokenizer,
             data_collator=collator,
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=5)]
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
         )
         trainer.train()
         trainer.save_model(output_path + f'\\{i}\\final_model\\')
