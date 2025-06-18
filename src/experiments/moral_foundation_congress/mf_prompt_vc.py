@@ -25,8 +25,8 @@ def main():
     input_path = sys.argv[1]
     output_path = sys.argv[2]
 
-    #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, better_transformer=True, return_dict=False)
-    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, better_transformer=True, return_dict=False)
+    model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True, return_dict=False)
+    #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True, return_dict=False)
 
     # load data
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
