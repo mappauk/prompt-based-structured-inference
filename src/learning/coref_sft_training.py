@@ -77,7 +77,8 @@ def main():
     eval_dataset = Dataset.from_dict({
         "text": validation_prompts
     })
-    eval_dataset = eval_dataset.shuffle(seed=92)
+    #72000 eval prompts
+    eval_dataset = eval_dataset.shuffle(seed=92).select(range(30000))
     collator = DataCollatorForCompletionOnlyLM(response_template=tokenizer.encode(mistral_response_format, add_special_tokens=False)[2:], tokenizer=tokenizer)
     trainer = SFTTrainer(
         model=peft_model,
