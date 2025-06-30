@@ -20,8 +20,11 @@ def main():
     example_path = sys.argv[3] 
     num_shots = int(sys.argv[4])
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    # load data
+    if "conll" in input_path:
+        data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
+    else:
+        data = genia_dataset_loader.preprocess_genia_coref(input_path)
     data = data.head(10)
     print(data)
     #model, tokenizer = model_loader.load_flan_model(device_type)

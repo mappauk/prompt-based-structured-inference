@@ -18,6 +18,16 @@ GEN_Z_COREF_INTRO_FEW_SHOT = 'Given a description of two entity mentions that ea
 
 COREF_CHOICES = ["A", "B"]
 
+COREF_LABEL_TO_CHOICE_INDEX = {
+    "coreferent": 0,
+    "distinct": 1
+}
+
+COREF_LABEL_TO_CHOICE = {
+    "coreferent": "A",
+    "distinct": "B"
+}
+
 SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples:\n'
 
 COREF_TF_SYSTEM_PROMPT = '''
