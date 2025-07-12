@@ -20,6 +20,7 @@ class CorefStructuredHingeLoss(torch.nn.Module):
                 softmax_output = outputs['rule_one']
             softmax_outputs['rule_one'] = softmax_output
             grounding_copy['Score'] = list(softmax_output.cpu().detach().numpy())
+
         # get solutions
         inference_model = GurobiInferenceModel(self.rules, {'rule_one': grounding_copy}, self.constraints, self.num_solutions)
         solutions = inference_model.inference()

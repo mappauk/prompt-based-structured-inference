@@ -130,7 +130,7 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True):
             curr_grounding = grounding.copy()
             if outputs != None and not softmax_enabled:
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
-            elif outputs != None:
+            elif outputs != None and softmax_enabled:
                 outputs[rule_name] = torch.nn.functional.softmax(outputs[rule_name], dim=1)
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             ground_truth = curr_grounding['GroundTruth'].tolist()
