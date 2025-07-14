@@ -67,15 +67,15 @@ def get_mc_prompts(rule_groundings, system_prompt, example_prompt, features, tok
 
 def get_scored_rule_groundings_tf(batch, system_prompt, example_prompt, features, labels, llm_batch_size, device_type, model, tokenizer):
     # remove in prod model
-    #model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     prompts = get_tf_prompts(
         batch, 
         system_prompt, 
         example_prompt, 
         features, 
         labels,
-        #tokenizer_2,
-        tokenizer
+        tokenizer_2,
+        #tokenizer
     )
     scores = []
     for i in range(0, len(prompts), llm_batch_size):
@@ -95,14 +95,14 @@ def get_scored_rule_groundings_mc(batch, system_prompt, example_prompt, features
     if batch.shape[0] == 0:
         return None
     # remove in prod model
-    #model_2, tokenizer_2 = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model_2, tokenizer_2 = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     prompts = get_mc_prompts(
         batch, 
         system_prompt, 
         example_prompt, 
         features, 
-        #tokenizer_2,
-        tokenizer
+        tokenizer_2,
+        #tokenizer
     )
     choice_token_indicies = []
     for choice in choices:
@@ -115,6 +115,7 @@ def get_scored_rule_groundings_mc(batch, system_prompt, example_prompt, features
         scores.append(mc_logits)
     scores = torch.stack(scores, dim=0)
     scores = torch.nn.functional.softmax(scores, dim=1)
+    scores = scores[:, 0]
     return scores
 
 def eval(
@@ -140,7 +141,7 @@ def eval(
 
         #grounding lists
         rule_one_grounding_list = []
-
+        counter = 0
         for val_batch in batched_val_groundings:
             # rule one scoring
             if rule_type == 'tf':
@@ -167,16 +168,19 @@ def eval(
                     tokenizer,
                     constants.COREF_CHOICES
                 )
-
             rule_one_batch_scores_list.append(rule_one_batch_scores.cpu())
             rule_one_grounding_list.append(val_batch['rule_one'])
+            counter += 1
+            if counter > 2:
+                break
 
         val_groundings = {}
         val_groundings['rule_one'] = pd.concat(rule_one_grounding_list, axis=0)
 
         val_outputs = {
-            'rule_one': torch.vstack(rule_one_batch_scores_list),
+            'rule_one': torch.flatten(torch.vstack(rule_one_batch_scores_list)),
         }
+
         val_loss = structured_hinge_loss(val_groundings, val_outputs)
         macro_f1  = coref_scoring.model_eval(rules, constraints, val_groundings, outputs=val_outputs, softmax_enabled=False)
         
@@ -208,7 +212,7 @@ def training_loop(
 
     # loss functions and early stopping definitions
     structured_hinge_loss = CorefStructuredHingeLoss(rules, custom_rule_constraints, num_solutions, softmax_enabled=False)
-    structured_hinge_early_stopping = EarlyStopping(5, 0)
+    structured_hinge_early_stopping = EarlyStopping(5, 0, greater_than_comparison=True)
 
     # set models to train
     llm_model.train()
@@ -252,7 +256,6 @@ def training_loop(
             print(loss)
             batch_losses.append(loss.item())
             loss.backward()
-
             # accumulate gradient
             if (i + 1) % gradient_accumulation_steps == 0:
                 # update weights
@@ -300,31 +303,29 @@ def main():
     llm_learning_rate = 2e-6
     llm_batch_size = 1
     gradient_accumulation_steps = 16
-    use_log_reg = True
-    batch_size = 1
+    batch_size = 2
     eval_steps = 80
-    eval_batch_size = 4
+    eval_batch_size = 2
 
     data_input_paths = {
         'train': 'C:\\src\\MoralDistillation\\data\\coref\\GENIA_MedCo_coreference_corpus_1.0\\train',
-        'val': 'C:\\src\\MoralDistillation\\data\\coref\\GENIA_MedCo_coreference_corpus_1.0\\dev',
+        'val': 'C:\\src\\MoralDistillation\\data\\coref\\GENIA_MedCo_coreference_corpus_1.0\\dev'
     }
 
     grounding_paths = {
-        'train': 'C:\\Users\\mpauk\\Downloads\\llama_genia_mc\\train',
-        'val': 'C:\\Users\\mpauk\\Downloads\\llama_genia_mc\\dev',
+        'train': 'C:\\Users\\mpauk\\Downloads\\mistral_genia_mc_sft_train\\',
+        'val': 'C:\\Users\\mpauk\\Downloads\\mistral_genia_mc_sft_dev\\'
     }
 
 
     # load training data
     rules = coref_scoring.get_rule_info()
     constraints = coref_scoring.get_constraints()
-    train_groundings = coref_scoring.get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size, batch_val_groundings=True, val_batch_size=eval_batch_size)
-
+    train_groundings = coref_scoring.get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size, batch_val_groundings=True, val_batch_size=eval_batch_size, include_features=True)
     # load llm model
-    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model, tokenizer = model_loader.load_test_model(device_type)
     model = PeftModel.from_pretrained(model, sft_path, is_trainable=True).to(device_type)
-    #model = model.merge_and_unload()
 
     batched_train_groundings = train_groundings['train']
     val_groundings = train_groundings['val']
@@ -341,7 +342,6 @@ def main():
         device_type,
         val_groundings,
         output_path,
-        use_log_reg,
         gradient_accumulation_steps,
         eval_steps,
         rule_type

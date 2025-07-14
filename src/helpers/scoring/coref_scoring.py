@@ -89,7 +89,7 @@ def get_constraints():
     custom_rule_constraints = [constr_one]
     return custom_rule_constraints
 
-def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size=32, batch_val_groundings=False, val_batch_size=0, document_batching=False):
+def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size=32, batch_val_groundings=False, val_batch_size=0, document_batching=False, include_features=False):
     data = None
     final_groundings = {}
     for split, path in grounding_paths.items():
@@ -104,7 +104,18 @@ def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_
         split_groundings['rule_one']['HeadVariable'] = split_groundings['rule_one']['HeadVariable'].map(lambda h: h[:-11])
         split_groundings['rule_one']['RuleVariable'] = split_groundings['rule_one']['RuleVariable'].map(lambda h: h[:-11])
         split_groundings['rule_one'] = split_groundings['rule_one'].merge(data, on=['doc_id', 'entity1_id', 'entity2_id'], how='inner')
-        split_groundings['rule_one'] = split_groundings['rule_one'][['doc_id', 'entity1_id', 'entity2_id', 'Score', 'RuleVariable', 'HeadVariable', 'label', 'answer']]
+        if include_features:
+            split_groundings['rule_one'].rename(
+                columns={
+                 "entity1_y": "entity1",
+                 "entity2_y": "entity2",
+                 "sent1_y": "sent1",
+                 "sent2_y": "sent2",
+                }, 
+                inplace=True)
+            split_groundings['rule_one'] = split_groundings['rule_one'][['doc_id', 'entity1_id', 'entity2_id', 'entity1', 'entity2', 'sent1', 'sent2', 'Score', 'RuleVariable', 'HeadVariable', 'label', 'answer']]
+        else:
+            split_groundings['rule_one'] = split_groundings['rule_one'][['doc_id', 'entity1_id', 'entity2_id', 'Score', 'RuleVariable', 'HeadVariable', 'label', 'answer']]
         
         split_groundings['rule_one'].rename(columns={'answer': 'GroundTruth'}, inplace=True)
         split_groundings['rule_one']['GroundTruth'] = split_groundings['rule_one']['GroundTruth'].apply(answer_conversion)
@@ -114,8 +125,6 @@ def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_
             if document_batching:
                 doc_groupings = split_groundings['rule_one'].groupby(['doc_id'])
                 for group_name, group in doc_groupings:
-                    #if group.shape[0] == 1:
-                    #    print(group_name)
                     batched_train_groundings.append({
                         'rule_one': group
                     })
@@ -130,7 +139,7 @@ def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_
             final_groundings['train'] = batched_train_groundings
         elif split == 'val' and batch_val_groundings:
             batched_val_groundings = []
-            num_val_batches = split_count/val_batch_size
+            num_val_batches = math.ceil(split_count/val_batch_size)
             for i in range(num_val_batches):
                 batched_val_groundings.append({})
             for i in range(num_val_batches):
