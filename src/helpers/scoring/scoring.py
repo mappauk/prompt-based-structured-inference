@@ -61,7 +61,14 @@ def gs_scoring(data):
     return gs_scoring_probs(data)
 
 def gs_scoring_probs(data):
-    data['Score'] = data.apply(lambda x: np.where(np.char.strip((x['Score']), chars='\n') == x['label'])[0].shape[0]/len(x['Score']), axis=1)
+    #print(data)
+    #print(data['Score'])
+    #print(data.columns)
+    #for item, row in data.iterrows():
+    #    for i in range(len(row['Score'])):
+    #        print(row['Score'][i])
+    #    raise Exception()
+    data['Score'] = data.apply(lambda x: np.where(np.char.find((x['Score']), x['label']) >= 0)[0].shape[0]/len(x['Score']), axis=1)
     return data
 
 # vc scoring methods
