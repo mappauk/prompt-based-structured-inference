@@ -17,6 +17,7 @@ from src.rules.rule_template import RuleTemplate
 from src.rules.rule_type import RuleType
 import src.analysis.analysis_helper as analysis_helper
 import json
+from random import Random
 
 def answer_conversion(answer):
     return 1 if answer == 'Yes' else 0
@@ -89,7 +90,7 @@ def get_constraints():
     custom_rule_constraints = [constr_one]
     return custom_rule_constraints
 
-def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size=32, batch_val_groundings=False, val_batch_size=0, document_batching=False, include_features=False):
+def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_size=32, batch_val_groundings=False, val_batch_size=0, document_batching=False, include_features=False, sft_batching=False, non_coref_count=13):
     data = None
     final_groundings = {}
     for split, path in grounding_paths.items():
@@ -128,6 +129,14 @@ def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_
                     batched_train_groundings.append({
                         'rule_one': group
                     })
+            elif sft_batching:
+                doc_groupings = split_groundings['rule_one'].groupby(['doc_id'])
+                for group_name, group in doc_groupings:
+                    doc_batches = get_coreference_chain_batches(group, non_coref_count)
+                    for i in range(len(doc_batches)):
+                        batched_train_groundings.append({
+                            'rule_one': doc_batches[i]
+                        })
             else:
                 num_batches = math.ceil(split_count/batch_size)
                 for i in range(num_batches):
@@ -185,3 +194,108 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
             post_inf_macro_f1 = sk.f1_score(inputs['rule_one']['GroundTruth'].tolist(), preds, average='macro')
             print(f'macro f1: {post_inf_macro_f1}')
             return post_inf_macro_f1
+
+def get_coreference_chain_batches(doc_df, non_coref_comparisons_count):
+    train_batches = []
+    coref_entity_map = {}
+    noncoref_entity_map = {}
+    comparison_order = set()
+    for item, row in doc_df.iterrows():
+        entity1 = row['entity1_id']
+        entity2 = row['entity2_id']
+        comparison_order.add(f'{entity1}_{entity2}')
+        if row['GroundTruth'] == 1:
+            if entity1 in coref_entity_map:
+                coref_entity_map[entity1].add(entity2)
+            else:
+                temp_entity1_list = set()
+                temp_entity1_list.add(entity2)
+                coref_entity_map[entity1] = temp_entity1_list
+            if entity2 in coref_entity_map:
+                coref_entity_map[entity2].add(entity1)
+            else:
+                temp_entity2_list = set()
+                temp_entity2_list.add(entity1)
+                coref_entity_map[entity2] = temp_entity2_list
+        else:
+            if entity1 in noncoref_entity_map:
+                noncoref_entity_map[entity1].append(entity2)
+            else:
+                temp_entity1_list = []
+                temp_entity1_list.append(entity2)
+                noncoref_entity_map[entity1] = temp_entity1_list
+            if entity2 in noncoref_entity_map:
+                noncoref_entity_map[entity2].append(entity1)
+            else:
+                temp_entity2_list = []
+                temp_entity2_list.append(entity1)
+                noncoref_entity_map[entity2] = temp_entity2_list
+    coref_chains = set()
+    for entity_id, coref_list in coref_entity_map.items():
+        for entity in coref_list:
+            for coref_entity in coref_entity_map[entity]:                
+                for trans_coref_entity in coref_entity_map[coref_entity]:
+                    if trans_coref_entity == entity:
+                        continue
+                    coref_chain = [entity, coref_entity, trans_coref_entity]
+                    coref_chain.sort()
+                    coref_chain_id = '_'.join(coref_chain)
+                    if coref_chain_id in coref_chains:
+                        continue
+                    else:
+                        coref_chains.add(coref_chain_id)
+                    
+                    entity1_list = []
+                    entity2_list = []
+
+                    if f'{entity}_{coref_entity}' in comparison_order:
+                        entity1_list.append(entity)
+                        entity2_list.append(coref_entity)
+                    else:
+                        entity2_list.append(entity)
+                        entity1_list.append(coref_entity)
+
+                    if f'{coref_entity}_{trans_coref_entity}' in comparison_order:
+                        entity1_list.append(coref_entity)
+                        entity2_list.append(trans_coref_entity)
+                    else:
+                        entity2_list.append(coref_entity)
+                        entity1_list.append(trans_coref_entity)
+                    
+                    if f'{entity}_{trans_coref_entity}' in comparison_order:
+                        entity1_list.append(entity)
+                        entity2_list.append(trans_coref_entity)
+                    else:
+                        entity2_list.append(entity)
+                        entity1_list.append(trans_coref_entity)
+                    
+                    # get non coref entities
+                    index = 0
+                    non_coref_count = 0
+                    exhausted_coref_entity = 0
+
+                    while non_coref_count < non_coref_comparisons_count and exhausted_coref_entity < len(coref_chain):
+                        for coref_chain_entity in coref_chain:
+                            if coref_chain_entity not in noncoref_entity_map or index + 1 > len(noncoref_entity_map[coref_chain_entity]):
+                                exhausted_coref_entity += 1
+                                continue
+                            non_coref_comparison_entity = noncoref_entity_map[coref_chain_entity][index]
+                            non_coref_count += 1
+
+                            if f'{coref_chain_entity}_{non_coref_comparison_entity}' in comparison_order:
+                                entity1_list.append(coref_chain_entity)
+                                entity2_list.append(non_coref_comparison_entity)
+                            else:
+                                entity2_list.append(coref_chain_entity)
+                                entity1_list.append(non_coref_comparison_entity)
+                        index += 1
+                    # add batch comparisons
+                    comparisons_df = pd.DataFrame(
+                        {
+                            'entity1_id': entity1_list,
+                            'entity2_id': entity2_list
+                        }
+                    ) 
+                    batched_df = pd.merge(comparisons_df, doc_df, how='left', on=['entity1_id', 'entity2_id'])
+                    train_batches.append(batched_df)
+    return train_batches 
