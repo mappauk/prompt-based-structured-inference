@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Union
 from itertools import combinations
 
+# taken from: https://github.com/utahnlp/prompts-for-structures
 
 def generate_examples(c_dict, doc_id):
     """ Generate positive and negative examples from a document

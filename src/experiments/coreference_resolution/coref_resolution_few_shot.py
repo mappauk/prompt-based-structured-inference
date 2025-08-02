@@ -5,15 +5,16 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import src.analysis.analysis_helper as analysis_helper
-import src.helpers.loaders.prompt_data_loader as prompt_data_loader
+import src.helpers.scoring.coref_scoring as coref_scoring
 from typing import Dict
 
 
 def main():
     rule_groundings_path = sys.argv[1]
-    output_path = sys.argv[2]
+    rule_type = sys.argv[2]
+    output_path = sys.argv[3]
 
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    rule_groundings = coref_scoring.get_scored_groundings(rule_groundings_path, ['rule_one'], rule_type)
     # save results
     results = {}
     for index, row in rule_groundings['rule_one'].iterrows():
@@ -22,7 +23,7 @@ def main():
         id_result = []
         if parsedId in results:
             id_result = results[parsedId]
-        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'nocoref':
+        if parsedVarName[0] == 'CF' and parsedVarName[len(parsedVarName) - 1] != 'distinct':
             id_result.append({
                 'Entity_1': parsedVarName[2],
                 'Entity_2': parsedVarName[3],

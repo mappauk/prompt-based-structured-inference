@@ -44,8 +44,8 @@ def training_loop(
     # loss functions and early stopping definitions
     joint_ce_loss = JointCrossEntropyLoss()
     structured_hinge_loss = MFStructuredHingeLoss(rules, custom_rule_constraints, num_solutions)
-    ce_only_early_stopping = EarlyStopping(10, 0.0001)
-    structured_hinge_early_stopping = EarlyStopping(5, 0)
+    ce_only_early_stopping = EarlyStopping(5, 0)
+    structured_hinge_early_stopping = EarlyStopping(5, 0, True)
 
 
     for epoch in range(epochs):

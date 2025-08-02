@@ -6,6 +6,8 @@ from tqdm import tqdm
 import xml.etree.ElementTree as ET
 from itertools import combinations
 
+# taken from: https://github.com/utahnlp/prompts-for-structures
+
 class XMLParser():
     def __init__(self, filename):
         with open(filename) as fd:
