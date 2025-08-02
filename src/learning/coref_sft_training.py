@@ -19,7 +19,7 @@ def main():
     device_type='cuda:0'
     mistral_response_format = '[/INST]'
     llama_response_format = '<|start_header_id|>assistant<|end_header_id|>'
-    wandb.login(key='')
+    wandb.login(key='db372de5efef058f9d9933e9e26ca7dfb397986a')
     ### Lora Hyperparams ###
     lora_alpha = 256 # alpha to try: 32, 64, 128 (match rank)
     rank = 256  # ranks to try: 32, 64, 128
@@ -27,7 +27,7 @@ def main():
     modules = 'all-linear' # modules = ['q_proj','k_proj','v_proj','dense']
 
     ### Training Argument Hyperparams ###
-    learning_rate = 2e-5
+    learning_rate = 2e-6
     batch_size = 2
 
     model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
@@ -43,25 +43,22 @@ def main():
         r=rank,
     )
 
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type)
 
     peft_model = get_peft_model(model, lora_config)
     # training arguments
     training_args = SFTConfig(
         output_dir=output_path,
         eval_strategy=IntervalStrategy.STEPS,
-        eval_steps = 5,
-        save_steps = 5,
-        #eval_steps = 40,
-        #save_steps = 40,
+        eval_steps = 40,
+        save_steps = 40,
         num_train_epochs=10,
         dataset_text_field='text',
         max_seq_length=8192,
         per_device_eval_batch_size=batch_size,
         per_device_train_batch_size=batch_size,
         save_total_limit = 5,
-        gradient_accumulation_steps=2,
-        #gradient_accumulation_steps=8,
+        gradient_accumulation_steps=16,
         learning_rate=learning_rate,
         load_best_model_at_end=True,
         metric_for_best_model='eval_loss',
@@ -78,7 +75,7 @@ def main():
         "text": validation_prompts
     })
     #72000 eval prompts
-    eval_dataset = eval_dataset.shuffle(seed=92).select(range(30000))
+    eval_dataset = eval_dataset.shuffle(seed=92).select(range(20000))
     collator = DataCollatorForCompletionOnlyLM(response_template=tokenizer.encode(mistral_response_format, add_special_tokens=False)[2:], tokenizer=tokenizer)
     trainer = SFTTrainer(
         model=peft_model,

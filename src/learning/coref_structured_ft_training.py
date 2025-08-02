@@ -173,9 +173,6 @@ def eval(
                 )
             rule_one_batch_scores_list.append(rule_one_batch_scores.cpu())
             rule_one_grounding_list.append(val_batch['rule_one'])
-            counter += 1
-            if counter > 2:
-                break
 
         val_groundings = {}
         val_groundings['rule_one'] = pd.concat(rule_one_grounding_list, axis=0)
@@ -300,13 +297,12 @@ def main():
     device_type = 'cuda'
 
     # hyperparams
-    llm_learning_rate = 2e-6
+    llm_learning_rate = 1e-6
     llm_batch_size = 1
-    gradient_accumulation_steps = 16
+    gradient_accumulation_steps = 32
     batch_size = 1
-    eval_steps = 80
+    eval_steps = 160
     eval_batch_size = 8
-    val_size = 2000
     '''
     data_input_paths = {
         'train': 'C:\\src\\MoralDistillation\\data\\coref\\GENIA_MedCo_coreference_corpus_1.0\\train',
@@ -343,7 +339,8 @@ def main():
 
     batched_train_groundings = train_groundings['train']
     Random(92).shuffle(batched_train_groundings)
-    val_groundings = train_groundings['val'][:val_size]
+    val_groundings = train_groundings['val'][:2000]
+    print(len(val_groundings))
     output_path = new_model_checkpoint_path
 
     training_loop(
