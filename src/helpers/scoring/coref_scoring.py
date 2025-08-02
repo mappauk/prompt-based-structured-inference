@@ -155,7 +155,7 @@ def get_training_groundings(data_input_paths, grounding_paths, rule_type, batch_
                 batch_start = i*val_batch_size
                 batch_end = min((i + 1)*val_batch_size, split_count)
                 batched_val_groundings[i]['rule_one'] = split_groundings['rule_one'].iloc[batch_start:batch_end]
-            final_groundings['val'] = batched_train_groundings
+            final_groundings['val'] = batched_val_groundings
         else:
             final_groundings[split] = split_groundings
     return final_groundings
