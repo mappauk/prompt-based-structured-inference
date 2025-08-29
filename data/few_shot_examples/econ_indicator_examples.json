@@ -1,0 +1,110 @@
+[
+    {
+        "task": "article_type",
+        "label_examples": [
+            {
+                "label": "macro",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "task": "article_cond",
+        "label_examples": [
+            {
+                "label": "irrelevant",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "task": "article_dir",
+        "label_examples": [
+            {
+                "label": "same",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "task": "quantity_type",
+        "label_examples": [
+            {
+                "label": "macro",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "task": "quantity_ind",
+        "label_examples": [
+            {
+                "label": "jobs",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "task": "quantity_pol",
+        "label_examples": [
+            {
+                "label": "positive",
+                "positive_examples": [
+                    {
+                        "Text": ""
+                    }
+                ],
+                "negative_examples": [
+                    {
+                        "Text": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -29,20 +29,18 @@ def main():
     # load data
     qual_data = dataset_loader.load_econ_indicators_qual(input_path + 'agreed_qual_dict.pkl', input_path + 'full_data_backup_sep5.db')
     quant_data = dataset_loader.load_econ_indicators_quant(input_path + 'agreed_quant_dict.pkl')
-    print(qual_data)
-    print(quant_data)
     qual_data = qual_data.head(10)
     quant_data = quant_data.head(10)
 
     # generate article level prompt format strings
-    article_type_prompts = econ_prompting.generate_tf_prompts()
-    article_condition_prompts = econ_prompting.generate_tf_prompts()
-    article_direction_prompts = econ_prompting.generate_tf_prompts()
+    article_type_prompts = econ_prompting.generate_tf_prompts(constants.TF_ARTICLE_TYPE_SYSTEM_PROMPT, constants.TF_ARTICLE_TYPE_EXAMPLE_PROMPT, num_shots, example_path, tokenizer, "article_type")
+    article_condition_prompts = econ_prompting.generate_tf_prompts(constants.TF_ARTICLE_CONDITIONS_SYSTEM_PROMPT, constants.TF_ARTICLE_CONDITIONS_USER_PROMPT, num_shots, example_path, tokenizer, "article_cond")
+    article_direction_prompts = econ_prompting.generate_tf_prompts(constants.TF_ARTICLE_DIRECTION_SYSTEM_PROMPT, constants.TF_ARTICLE_DIRECTION_USER_PROMPT, num_shots, example_path, tokenizer, "article_dir")
 
     # generate quantity level prompt format strings
-    quantity_type_prompts = econ_prompting.generate_tf_prompts()
-    quantity_indicator_prompts = econ_prompting.generate_tf_prompts()
-    quantity_polarity_prompts = econ_prompting.generate_tf_prompts()
+    quantity_type_prompts = econ_prompting.generate_tf_prompts(constants.TF_QUANTITY_TYPE_SYSTEM_PROMPT, constants.TF_QUANTITY_TYPE_USER_PROMPT, num_shots, example_path, tokenizer, "quantity_type")
+    quantity_indicator_prompts = econ_prompting.generate_tf_prompts(constants.TF_QUANTITY_INDICATOR_SYSTEM_PROMPT, constants.TF_QUANTITY_INDICATOR_USER_PROMPT, num_shots, example_path, tokenizer, "quantity_ind")
+    quantity_polarity_prompts = econ_prompting.generate_tf_prompts(constants.TF_QUANTITY_POLARITY_SYSTEM_PROMPT, constants.TF_QUANTITY_POLARITY_USER_PROMPT, num_shots, example_path, tokenizer, "quantity_pol")
 
 
 

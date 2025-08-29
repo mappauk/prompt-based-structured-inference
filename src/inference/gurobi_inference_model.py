@@ -14,11 +14,13 @@ class GurobiInferenceModel:
                  Dict[str, RuleTemplate], 
                  rule_groundings: Dict[str, pd.DataFrame], 
                  constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]],
-                 num_solutions: int = 1):
+                 num_solutions: int = 1,
+                 soft_constraints = None):
         self.rules = rules
         self.rule_groundings = rule_groundings
         self.constraints = constraints
         self.num_solutions = num_solutions
+        self.soft_constraints = soft_constraints
     
     def get_solution(self, m):
         results = {}
