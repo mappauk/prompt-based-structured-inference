@@ -137,8 +137,9 @@ def get_hard_constraints():
             split_head_variable = row['HeadVariable'].split('_')
             if split_head_variable[3] == 'macro':
                 macro_type_var = head_dict[row['HeadVariable']]
-                macro_indicator_var = head_dict['_'.join(['QI'] + split_head_variable[1:3])]
-                m.addConstr(macro_type_var == macro_indicator_var)
+                none_var = head_dict['_'.join(['QI'] + split_head_variable[1:2] + ['none'])]
+                m.addConstr(macro_type_var <= 1 - none_var)
+                m.addConstr(none_var <= 1 - macro_type_var)
 
     # if article type is macro then conditions and direction must be predicted
     def constr_two(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:

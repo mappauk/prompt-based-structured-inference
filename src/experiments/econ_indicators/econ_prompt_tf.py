@@ -18,19 +18,20 @@ import os
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]
 
     #model, tokenizer = model_loader.load_mistral_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
-    #model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
+    model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
     # load data
     qual_data = dataset_loader.load_econ_indicators_qual(input_path + 'agreed_qual_dict.pkl', input_path + 'full_data_backup_sep5.db')
     quant_data = dataset_loader.load_econ_indicators_quant(input_path + 'agreed_quant_dict.pkl')
-    qual_data = qual_data.head(10)
-    quant_data = quant_data.head(10)
+
+    #qual_data = qual_data.head(2)
+    #quant_data = quant_data.head(2)
 
     # generate article level prompt format strings
     article_type_prompts = econ_prompting.generate_tf_prompts(constants.TF_ARTICLE_TYPE_SYSTEM_PROMPT, constants.TF_ARTICLE_TYPE_EXAMPLE_PROMPT, num_shots, example_path, tokenizer, "article_type")
@@ -45,7 +46,7 @@ def main():
 
 
     # load model
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type)
 
     # define rules
     article_econ_type = LLMTFRule(
@@ -61,7 +62,6 @@ def main():
         device_type,
         article_type_prompts,
     )
-
     article_econ_condition = LLMTFRule(
         'rule_two',
         ['Id', 'Text'],

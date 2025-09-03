@@ -5,20 +5,20 @@ import src.helpers.prompting.econ_prompt_constants as constants
 
 def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, tokenizer, task_name):
     prompt_map = {}
-    messages = []
     final_system_prompt = system_prompt
     if num_shots > 0:
         final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
-    messages.append(
-        {
-            "role": "system",
-            "content": final_system_prompt
-        }
-    )
     with open(filepath) as f:
         data = json.load(f)
         task = data[task_name]
         for label_examples in task:
+            messages = []
+            messages.append(
+                {
+                    "role": "system",
+                    "content": final_system_prompt
+                }
+            )
             label = label_examples['label']
             positive_examples = label_examples['positive_examples']
             negative_examples = label_examples['negative_examples']
@@ -43,10 +43,10 @@ def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, toke
                     "role": "assistant",
                     "content": "false"
                 })
-        messages.append({
-            "role": "user",
-            "content": example_format
-        })
-        tf_prompt_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        prompt_map[label] = tf_prompt_template
+            messages.append({
+                "role": "user",
+                "content": example_format
+            })
+            tf_prompt_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            prompt_map[label] = tf_prompt_template
     return prompt_map

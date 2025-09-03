@@ -1,110 +1,482 @@
-[
-    {
-        "task": "article_type",
-        "label_examples": [
-            {
-                "label": "macro",
-                "positive_examples": [
+{
+    "article_type": [
+        {
+            "label": "macro",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "government",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "industry",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "business",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "other",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
+            "label": "personal",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ],
+    "article_cond": [
+        {
+            "label": "irrelevant",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "task": "article_cond",
-        "label_examples": [
-            {
-                "label": "irrelevant",
-                "positive_examples": [
+            "label": "good",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
+            "label": "poor",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "task": "article_dir",
-        "label_examples": [
-            {
-                "label": "same",
-                "positive_examples": [
+            "label": "none",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ],
+    "article_dir": [
+        {
+            "label": "same",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
+            "label": "worse",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "task": "quantity_type",
-        "label_examples": [
-            {
-                "label": "macro",
-                "positive_examples": [
+            "label": "better",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
+            "label": "none",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
                     {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "task": "quantity_ind",
-        "label_examples": [
-            {
-                "label": "jobs",
-                "positive_examples": [
-                    {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
-                    {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "task": "quantity_pol",
-        "label_examples": [
-            {
-                "label": "positive",
-                "positive_examples": [
-                    {
-                        "Text": ""
-                    }
-                ],
-                "negative_examples": [
-                    {
-                        "Text": ""
-                    }
-                ]
-            }
-        ]
-    }
-]
+            "label": "irrelevant",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ],
+    "quantity_type": [
+        {
+            "label": "macro",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "government",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "industry",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "business",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "personal",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "other",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ],
+    "quantity_ind": [
+        {
+            "label": "jobs",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "retail",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "interest",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "prices",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "energy",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "wages",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "macro",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "market",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "currency",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "housing",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "other",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "none",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ],
+    "quantity_pol": [
+        {
+            "label": "positive",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "negative",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        },
+        {
+            "label": "neutral",
+            "positive_examples": [
+                {
+                    "Text": ""
+                }
+            ],
+            "negative_examples": [
+                {
+                    "Text": ""
+                }
+            ]
+        }
+    ]
+}
