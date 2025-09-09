@@ -9,12 +9,30 @@ ARTICLE_ECONOMIC_TYPE_LABELS = [
     'personal'
 ]
 
+ARTICLE_ECONOMIC_TYPE_TO_LABEL_INDEX = {
+    'macro': 0,
+    'government': 1,
+    'industry': 2,
+    'business': 3,
+    'other': 4,
+    'personal': 5,
+    '\x00': -1
+}
+
 ARTICLE_ECONOMIC_CONDITIONS_LABELS = [
     'irrelevant',
     'good',
     'poor',
     'none'
 ]
+
+ARTICLE_ECONOMIC_CONDITIONS_TO_LABEL_INDEX = {
+    'irrelevant': 0,
+    'good': 1,
+    'poor': 2,
+    'none': 3,
+    '\x00': -1
+}
 
 ARTICLE_ECONOMIC_DIRECTION_LABELS = [
     'same',
@@ -24,6 +42,15 @@ ARTICLE_ECONOMIC_DIRECTION_LABELS = [
     'irrelevant'
 ]
 
+ARTICLE_ECONOMIC_DIRECTION_TO_LABEL_INDEX = {
+    'same': 0,
+    'worse': 1,
+    'better': 2,
+    'none': 3,
+    'irrelevant': 4,
+    '\x00': -1
+}
+
 QUANTITY_TYPE_LABELS = [
     'macro',
     'government',
@@ -32,6 +59,16 @@ QUANTITY_TYPE_LABELS = [
     'personal',
     'other'
 ]
+
+QUANTITY_TYPE_TO_LABEL_INDEX = {
+    'macro': 0,
+    'government': 1,
+    'industry': 2,
+    'business': 3,
+    'personal': 4,
+    'other': 5,
+    '\x00': -1
+}
 
 QUANTITY_INDICATOR_LABELS = [
     'jobs', # macro
@@ -48,11 +85,34 @@ QUANTITY_INDICATOR_LABELS = [
     'none'
 ]
 
+QUANTITY_INDICATOR_TO_LABEL_INDEX = {
+    'jobs': 0, 
+    'retail': 1,
+    'interest': 2,
+    'prices': 3,
+    'energy': 4,
+    'wages': 5,
+    'macro': 6,
+    'market': 7,
+    'currency': 8,
+    'housing': 9,
+    'other': 10,
+    'none': 11,
+    '\x00': -1
+}
+
 QUANTITY_POLARITY_LABELS = [
     "positive",
     "negative",
     "neutral"
 ]
+
+QUANTITY_POLARITY_TO_LABEL_INDEX = {
+    "pos": 0,
+    "neg": 1,
+    "neutral": 2,
+    '\x00': -1
+}
 
 QUANTITY_POLARITY_TO_ARTICLE_CONDITIONS = {
     'negative': 'poor',

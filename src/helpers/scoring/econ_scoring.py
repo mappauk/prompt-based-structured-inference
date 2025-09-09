@@ -75,7 +75,14 @@ def get_rule_info():
         'RuleSix_{Id}_{label}',
         RuleType.MULTI_CLASS
     )
-    return [article_econ_type, article_econ_condition, article_econ_direction, quantity_type, quantity_indicator, quantity_polarity]
+    return {
+        'rule_one': article_econ_type, 
+        'rule_two': article_econ_condition, 
+        'rule_three': article_econ_direction, 
+        'rule_four': quantity_type, 
+        'rule_five': quantity_indicator, 
+        'rule_six': quantity_polarity
+    }
 
 def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, inference_enabled=True):
     with torch.no_grad():
@@ -84,16 +91,19 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
         # rule f1 before inference
         for rule_name, grounding in inputs.items():
             curr_grounding = grounding.copy()
-            print(curr_grounding)
+            #print(curr_grounding)
             if outputs != None and not softmax_enabled:
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             elif outputs != None and softmax_enabled:
                 outputs[rule_name] = torch.nn.functional.softmax(outputs[rule_name], dim=1)
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
-            ground_truth = curr_grounding['GroundTruth'].tolist()
-            print(curr_grounding)
+            #print(curr_grounding)
             exploded_groundings[rule_name] = curr_grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
-            preds = np.argmax(np.array(curr_grounding['Score'].tolist()), axis=1)
+            filtered_groundings = curr_grounding[curr_grounding['GroundTruth'] != -1]
+            preds = np.argmax(np.array(filtered_groundings['Score'].tolist()), axis=1)
+            ground_truth = filtered_groundings['GroundTruth'].tolist()
+            #print(preds)
+            #print(ground_truth)
             macro_f1 = sk.f1_score(ground_truth, preds, average='macro')
             print(f'rule: {rule_name}')
             print(f'macro f1: {macro_f1}')
@@ -122,7 +132,7 @@ def get_scored_groundings(input_path, rule_groundings_path, rule_type):
     quant_data = dataset_loader.load_econ_indicators_quant(input_path + 'agreed_quant_dict.pkl')
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, ['rule_one', 'rule_two', 'rule_three', 'rule_four', 'rule_five', 'rule_six'])
     qual_rules = {'rule_one', 'rule_two', 'rule_three'}
-    quant_rules = {'rule_four', 'rule_two', 'rule_three'}
+    quant_rules = {'rule_four', 'rule_five', 'rule_six'}
     for rule_name, rule in rule_groundings.items():
         if rule_type == 'tf':
             rule_groundings[rule_name] = scoring.tf_scoring(rule_groundings[rule_name], ['Id'])
@@ -138,10 +148,20 @@ def get_scored_groundings(input_path, rule_groundings_path, rule_type):
             raise Exception('Invalid Rule Type')
         gold_column = constants.ECON_RULE_TO_LABEL_COLUMN_NAME[rule_name]
         if rule_name in qual_rules:
+            rule_groundings[rule_name] = rule_groundings[rule_name].groupby(['Id', 'Text']).agg(lambda x: list(x)).reset_index()
             rule_groundings[rule_name] = pd.merge(rule_groundings[rule_name], qual_data[['Id'] + [gold_column]], on='Id')
         elif rule_name in quant_rules:
+            rule_groundings[rule_name] = rule_groundings[rule_name].groupby(['Id', 'IndicatorText', 'Context']).agg(lambda x: list(x)).reset_index()
             rule_groundings[rule_name] = pd.merge(rule_groundings[rule_name], quant_data[['Id'] + [gold_column]], on='Id')
         rule_groundings[rule_name].rename(columns={gold_column: 'GroundTruth'}, inplace=True)
+
+    rule_groundings['rule_one']['GroundTruth'] = rule_groundings['rule_one']['GroundTruth'].apply(lambda x: constants.ARTICLE_ECONOMIC_TYPE_TO_LABEL_INDEX[x])
+    rule_groundings['rule_two']['GroundTruth'] = rule_groundings['rule_two']['GroundTruth'].apply(lambda x: constants.ARTICLE_ECONOMIC_CONDITIONS_TO_LABEL_INDEX[x])
+    rule_groundings['rule_three']['GroundTruth'] = rule_groundings['rule_three']['GroundTruth'].apply(lambda x: constants.ARTICLE_ECONOMIC_DIRECTION_TO_LABEL_INDEX[x])
+    rule_groundings['rule_four']['GroundTruth'] = rule_groundings['rule_four']['GroundTruth'].apply(lambda x: constants.QUANTITY_TYPE_TO_LABEL_INDEX[x])
+    rule_groundings['rule_five']['GroundTruth'] = rule_groundings['rule_five']['GroundTruth'].apply(lambda x: constants.QUANTITY_INDICATOR_TO_LABEL_INDEX[x])
+    rule_groundings['rule_six']['GroundTruth'] = rule_groundings['rule_six']['GroundTruth'].apply(lambda x: constants.QUANTITY_POLARITY_TO_LABEL_INDEX[x])
+    print(rule_groundings)
 
     return rule_groundings
 
@@ -152,7 +172,7 @@ def get_hard_constraints():
             split_head_variable = row['HeadVariable'].split('_')
             if split_head_variable[3] == 'macro':
                 macro_type_var = head_dict[row['HeadVariable']]
-                none_var = head_dict['_'.join(['QI'] + split_head_variable[1:2] + ['none'])]
+                none_var = head_dict['_'.join(['QI'] + split_head_variable[1:3] + ['none'])]
                 m.addConstr(macro_type_var <= 1 - none_var)
                 m.addConstr(none_var <= 1 - macro_type_var)
 
