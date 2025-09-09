@@ -17,6 +17,8 @@ import json
 from gurobipy import GRB
 from src.helpers.scoring import scoring
 import src.helpers.loaders.prompt_data_loader as prompt_data_loader
+import src.helpers.loaders.econ_indicators_dataset_loader as dataset_loader
+
 
 def get_rule_info():
     # define rules
@@ -82,12 +84,14 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
         # rule f1 before inference
         for rule_name, grounding in inputs.items():
             curr_grounding = grounding.copy()
+            print(curr_grounding)
             if outputs != None and not softmax_enabled:
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             elif outputs != None and softmax_enabled:
                 outputs[rule_name] = torch.nn.functional.softmax(outputs[rule_name], dim=1)
                 curr_grounding['Score'] = list(outputs[rule_name].detach().numpy())
             ground_truth = curr_grounding['GroundTruth'].tolist()
+            print(curr_grounding)
             exploded_groundings[rule_name] = curr_grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
             preds = np.argmax(np.array(curr_grounding['Score'].tolist()), axis=1)
             macro_f1 = sk.f1_score(ground_truth, preds, average='macro')
@@ -113,9 +117,13 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
                 average_f1 += macro_f1
     return average_f1/6
 
-def get_scored_groundings(rule_groundings_path, rule_type):
+def get_scored_groundings(input_path, rule_groundings_path, rule_type):
+    qual_data = dataset_loader.load_econ_indicators_qual(input_path + 'agreed_qual_dict.pkl', input_path + 'full_data_backup_sep5.db')
+    quant_data = dataset_loader.load_econ_indicators_quant(input_path + 'agreed_quant_dict.pkl')
     rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, ['rule_one', 'rule_two', 'rule_three', 'rule_four', 'rule_five', 'rule_six'])
-    for rule_name, rule in rule_groundings:
+    qual_rules = {'rule_one', 'rule_two', 'rule_three'}
+    quant_rules = {'rule_four', 'rule_two', 'rule_three'}
+    for rule_name, rule in rule_groundings.items():
         if rule_type == 'tf':
             rule_groundings[rule_name] = scoring.tf_scoring(rule_groundings[rule_name], ['Id'])
         elif rule_type == 'mc':
@@ -128,6 +136,13 @@ def get_scored_groundings(rule_groundings_path, rule_type):
             rule_groundings[rule_name] = scoring.vc_scoring(rule_groundings[rule_name], ['Id'])
         else:
             raise Exception('Invalid Rule Type')
+        gold_column = constants.ECON_RULE_TO_LABEL_COLUMN_NAME[rule_name]
+        if rule_name in qual_rules:
+            rule_groundings[rule_name] = pd.merge(rule_groundings[rule_name], qual_data[['Id'] + [gold_column]], on='Id')
+        elif rule_name in quant_rules:
+            rule_groundings[rule_name] = pd.merge(rule_groundings[rule_name], quant_data[['Id'] + [gold_column]], on='Id')
+        rule_groundings[rule_name].rename(columns={gold_column: 'GroundTruth'}, inplace=True)
+
     return rule_groundings
 
 def get_hard_constraints():

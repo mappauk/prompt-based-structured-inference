@@ -10,16 +10,15 @@ from typing import Dict
 
 
 def main():
-    rule_groundings_path = sys.argv[1]
-    rule_type = sys.argv[2]
-    output_path = sys.argv[3]
+    data_path = sys.argv[1]
+    rule_groundings_path = sys.argv[2]
+    rule_type = sys.argv[3]
 
     rules = econ_scoring.get_rule_info()
-    rule_groundings = econ_scoring.get_scored_groundings(rule_groundings_path, rule_type)
+    rule_groundings = econ_scoring.get_scored_groundings(data_path, rule_groundings_path, rule_type)
     constraints = econ_scoring.get_hard_constraints()
-
+    #print(rule_groundings['rule_one'])
     econ_scoring.model_eval(rules, constraints, rule_groundings, outputs=None, softmax_enabled=False, inference_enabled=True)
-    # save results
 
 
 if __name__ == "__main__":

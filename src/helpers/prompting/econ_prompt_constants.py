@@ -136,3 +136,12 @@ MC_TASK_TO_CHOICE_MAP = {
 }
 
 
+ECON_RULE_TO_LABEL_COLUMN_NAME = {
+    'rule_one': 'Type',
+    'rule_two': 'Conditions',
+    'rule_three': 'Direction',
+    'rule_four': 'Type',
+    'rule_five': 'IndicatorType',
+    'rule_six': 'Polarity'
+}
+
