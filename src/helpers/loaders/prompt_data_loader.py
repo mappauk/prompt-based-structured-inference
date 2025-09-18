@@ -5,7 +5,7 @@ from src.rules.rule_template import RuleTemplate
 import numpy as np
 import torch
 import glob
-
+import json
 
 def load_rule_groundings(path: str, rule_names: list):
     rule_groundings = {}
@@ -38,3 +38,11 @@ def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_p
         for rule_name, rule in rules.items():
             rule_grounding = rule.get_rule_groundings(data_split[i])
             rule_grounding.to_pickle(output_path + rule_name + f'_{i}_groundings_dataframe.pkl')
+
+def save_rule_grounding_batches(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str, startIndex = 0):
+    for rule_name, rule in rules.items():
+        rule_grounding = rule.get_rule_groundings(data)
+        with open(output_path + rule_name + '.json', 'w') as json_file:
+            json.dump(rule_grounding, json_file)
+    
+

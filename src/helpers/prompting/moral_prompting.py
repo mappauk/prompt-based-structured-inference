@@ -2,6 +2,38 @@ import os
 import json
 import src.helpers.prompting.mf_prompt_constants as constants
 
+def generate_gs_openai_prompts(system_prompt, example_format, num_shots, filepath, foundations_per_shot=1, example_count=5):
+    messages = []
+    final_system_prompt = system_prompt
+    if num_shots > 0:
+        final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
+    messages.append(
+        {
+            "role": "system",
+            "content": final_system_prompt
+        }
+    )
+    if num_shots > 0:
+        with open(filepath) as f:
+            data = json.load(f)
+            for i in range(example_count):
+                foundation_counter = 0
+                for foundation_obj in data:
+                    if i*len(data) + foundation_counter >= num_shots*foundations_per_shot:
+                        break
+                    positive_examples = foundation_obj['positive_examples']
+                    positive_example = example_format.format(**positive_examples[i])
+                    messages.append({
+                        "role": "user",
+                        "content": positive_example
+                    })
+                    messages.append({
+                        "role": "assistant",
+                        "content": foundation_obj['label']
+                    })
+                    foundation_counter += 1
+    return messages, example_format
+
 def generate_tf_prompts(system_prompt, example_format, num_shots, filepath, tokenizer, use_system_prompt=True, remove_date_prompt=False):
     prompt_map = {}
     with open(filepath) as f:
