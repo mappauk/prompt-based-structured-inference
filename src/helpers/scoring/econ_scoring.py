@@ -88,6 +88,7 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
     with torch.no_grad():
         average_f1 = 0
         exploded_groundings = {}
+        rule_preds = {}
         # rule f1 before inference
         for rule_name, grounding in inputs.items():
             curr_grounding = grounding.copy()
@@ -101,6 +102,10 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
             exploded_groundings[rule_name] = curr_grounding.explode(['HeadVariable', 'RuleVariable', 'Score', 'label'])
             filtered_groundings = curr_grounding[curr_grounding['GroundTruth'] != -1]
             preds = np.argmax(np.array(filtered_groundings['Score'].tolist()), axis=1)
+            rule_preds[rule_name] = pd.DataFrame({
+                'Id': curr_grounding['Id'],
+                'Prediction': np.argmax(np.array(curr_grounding['Score'].tolist()), axis=1),
+            })
             ground_truth = filtered_groundings['GroundTruth'].tolist()
             #print(preds)
             #print(ground_truth)
@@ -108,7 +113,9 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
             print(f'rule: {rule_name}')
             print(f'macro f1: {macro_f1}')
             average_f1 += macro_f1
+        get_constraint_violations(rule_preds)
 
+        rule_preds = {}
         # inference
         if inference_enabled:
             average_f1 = 0
@@ -121,10 +128,22 @@ def model_eval(rules, constraints, inputs, outputs=None, softmax_enabled=True, i
                         if solution[row['HeadVariable'][i]] == 1:
                             preds.append(i)
                             break
-                macro_f1 = sk.f1_score(inputs[rule_name]['GroundTruth'].tolist(), preds, average='macro')
+                rule_preds[rule_name] = pd.DataFrame({
+                    'Id': inputs[rule_name]['Id'],
+                    'Prediction': preds,
+                })
+                ground_truth = inputs[rule_name]['GroundTruth'].tolist()
+                clean_ground_truth = []
+                clean_preds = []
+                for i in range(len(ground_truth)):
+                    if ground_truth[i] != -1:
+                        clean_ground_truth.append(ground_truth[i])
+                        clean_preds.append(preds[i])
+                macro_f1 = sk.f1_score(clean_ground_truth, clean_preds, average='macro')
                 print(f'rule: {rule_name}')
                 print(f'macro f1: {macro_f1}')
                 average_f1 += macro_f1
+            get_constraint_violations(rule_preds)
     return average_f1/6
 
 def get_scored_groundings(input_path, rule_groundings_path, rule_type):
@@ -161,9 +180,50 @@ def get_scored_groundings(input_path, rule_groundings_path, rule_type):
     rule_groundings['rule_four']['GroundTruth'] = rule_groundings['rule_four']['GroundTruth'].apply(lambda x: constants.QUANTITY_TYPE_TO_LABEL_INDEX[x])
     rule_groundings['rule_five']['GroundTruth'] = rule_groundings['rule_five']['GroundTruth'].apply(lambda x: constants.QUANTITY_INDICATOR_TO_LABEL_INDEX[x])
     rule_groundings['rule_six']['GroundTruth'] = rule_groundings['rule_six']['GroundTruth'].apply(lambda x: constants.QUANTITY_POLARITY_TO_LABEL_INDEX[x])
-    print(rule_groundings)
+    rule_groundings['rule_six']['DocId'] = rule_groundings['rule_six']['Id'].apply(lambda x: str.split(x, '_')[0])
 
     return rule_groundings
+
+def get_constraint_violations(predictions):
+    constraint_one_merges = pd.merge(predictions['rule_four'], predictions['rule_five'], on='Id')
+    constraint_one_violations = 0
+    for index, row in constraint_one_merges.iterrows():
+        if (row['Prediction_x'] == 0 and row['Prediction_y'] == 11):
+            constraint_one_violations += 1
+    
+    constraint_two_merges = pd.merge(predictions['rule_one'], predictions['rule_two'], on='Id')
+    constraint_two_merges = pd.merge(constraint_two_merges, predictions['rule_three'], on='Id')
+    constraint_two_violations = 0
+    for index, row in constraint_two_merges.iterrows():
+        if (row['Prediction_x'] == 0 and row['Prediction_y'] == 0) or (row['Prediction_x'] == 0 and row['Prediction'] == 4):
+            constraint_two_violations += 1
+    
+    predictions['rule_six']['DocId'] = predictions['rule_six']['Id'].apply(lambda x: str.split(x, '_')[0])
+    article_groupings = predictions['rule_six'].groupby(['DocId'])
+    constraint_three_violations = 0
+    constraint_four_violations = 0
+    for group_name, group in article_groupings:
+        positive_polarity_count = 0
+        negative_polarity_count = 0
+        doc_id = None
+        count = group.shape[0]
+        for index, row in group.iterrows():
+            if row['Prediction'] == 0:
+                positive_polarity_count += 1
+            elif row['Prediction'] == 1:
+                negative_polarity_count += 1
+            doc_id = row['DocId']
+        article_condition = predictions['rule_two'].query(f'Id == {doc_id}')['Prediction'].iloc[0]
+        article_direction = predictions['rule_three'].query(f'Id == {doc_id}')['Prediction'].iloc[0]
+        if (article_condition == 1 and negative_polarity_count > count/2) or (article_condition == 2 and positive_polarity_count > count/2):
+            constraint_three_violations += 1
+        if (article_direction == 1 and positive_polarity_count > count/2) or (article_direction == 2 and negative_polarity_count > count/2):
+            constraint_four_violations += 1
+
+    print(f'Constraint 1 Violations: {constraint_one_violations}')
+    print(f'Constraint 2 Violations: {constraint_two_violations}')
+    print(f'Constraint 3 Violations: {constraint_three_violations}')
+    print(f'Constraint 4 Violations: {constraint_four_violations}')
 
 def get_hard_constraints():
     # consistency between quantity type and indicator (macro)
@@ -187,7 +247,51 @@ def get_hard_constraints():
                 m.addConstr(article_macro_var*article_conditions_var <= 0)
                 m.addConstr(article_macro_var*article_directions_var <= 0)
 
-    return [constr_one, constr_two]
+    def constr_three(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
+        article_groupings = rule_groundings['rule_six'].groupby(['DocId'])
+        for group_name, group in article_groupings:
+            positive_constr = 0
+            negative_constr = 0
+            count = group.shape[0]
+            for index, row in group.iterrows():
+                if row['label'] == 'negative':
+                    positive_constr += head_dict[row['HeadVariable']]
+                    negative_constr -= head_dict[row['HeadVariable']]
+                elif row['label'] == 'positive':
+                    positive_constr -= head_dict[row['HeadVariable']]
+                    negative_constr += head_dict[row['HeadVariable']]
+                else:
+                    positive_constr += head_dict[row['HeadVariable']]
+                    negative_constr += head_dict[row['HeadVariable']]
+            
+            article_negative_var = head_dict['_'.join(['AC', row['DocId'], constants.QUANTITY_POLARITY_TO_ARTICLE_CONDITIONS['negative']])]
+            article_positive_var = head_dict['_'.join(['AC', row['DocId'], constants.QUANTITY_POLARITY_TO_ARTICLE_CONDITIONS['positive']])]
+            m.addConstr(negative_constr <=  count - article_negative_var*count)
+            m.addConstr(positive_constr <=  count - article_positive_var*count)
+    
+    def constr_four(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
+        article_groupings = rule_groundings['rule_six'].groupby(['DocId'])
+        for group_name, group in article_groupings:
+            positive_constr = 0
+            negative_constr = 0
+            count = group.shape[0]
+            for index, row in group.iterrows():
+                if row['label'] == 'negative':
+                    positive_constr += head_dict[row['HeadVariable']]
+                    negative_constr -= head_dict[row['HeadVariable']]
+                elif row['label'] == 'positive':
+                    positive_constr -= head_dict[row['HeadVariable']]
+                    negative_constr += head_dict[row['HeadVariable']]
+                else:
+                    positive_constr += head_dict[row['HeadVariable']]
+                    negative_constr += head_dict[row['HeadVariable']]
+            
+            article_negative_var = head_dict['_'.join(['AD', row['DocId'], constants.QUANTITY_POLARITY_TO_ARTICLE_DIRECTION['negative']])]
+            article_positive_var = head_dict['_'.join(['AD', row['DocId'], constants.QUANTITY_POLARITY_TO_ARTICLE_DIRECTION['positive']])]
+            m.addConstr(negative_constr <=  count - article_negative_var*count)
+            m.addConstr(positive_constr <=  count - article_positive_var*count)
+
+    return [constr_one, constr_two]#, constr_three, constr_four]
 
 def get_soft_constraints(penalties):
     # negative/positive polarity of a quantity indicates negative/positive economic conditions in article
