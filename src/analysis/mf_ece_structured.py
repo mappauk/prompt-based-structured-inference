@@ -3,6 +3,7 @@ import src.helpers.prompting.mf_prompt_constants as constants
 import src.helpers.loaders.mf_dataset_loader as dataset_loader
 import src.analysis.analysis_helper as analysis_helper
 import src.helpers.loaders.prompt_data_loader as prompt_data_loader
+import src.helpers.scoring.mf_scoring as mf_scoring
 import numpy as np
 import sys
 import sklearn.metrics as sk
@@ -31,6 +32,7 @@ def main():
     rule_groundings_path = sys.argv[2]
     predictions_input_path = sys.argv[3]
     pooling_input_path = sys.argv[4]
+    rule_type = sys.argv[5]
     
     mf_labels = dataset_loader.load_frame_labels(dataset_dir)
     role_labels = dataset_loader.load_role_labels(dataset_dir)
@@ -44,9 +46,11 @@ def main():
     for index, row in role_labels.iterrows():
         labels_dict[row['Id']][row['Entity']] = row['EntityLabel']
 
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, ['rule_one', 'rule_two', 'rule_three', 'rule_four'], rule_type)
     rule_groundings['rule_one'] = rule_groundings['rule_one'][~rule_groundings['rule_one']['Id'].isin(constants.IDS_TO_EXCLUDE)]
     rule_groundings['rule_two'] = rule_groundings['rule_two'][~rule_groundings['rule_two']['Id'].isin(constants.IDS_TO_EXCLUDE)]
+    rule_groundings['rule_three'] = rule_groundings['rule_three'][~rule_groundings['rule_three']['Id'].isin(constants.IDS_TO_EXCLUDE)]
+    rule_groundings['rule_four'] = rule_groundings['rule_four'][~rule_groundings['rule_four']['Id'].isin(constants.IDS_TO_EXCLUDE)]
     scores_dict = {}
     for item, row in rule_groundings['rule_one'].iterrows():
         id = row['Id']
@@ -57,9 +61,17 @@ def main():
         entity = row['Entity']
         label = row['label']
         scores_dict[f'{id}_{entity}_{label}'] = row['Score']
+    for item, row in rule_groundings['rule_three'].iterrows():
+        id = row['Id']
+        label = row['label']
+        scores_dict[f'{id}_{label}'] = (scores_dict[f'{id}_{label}'] + row['Score'])/2
+    for item, row in rule_groundings['rule_four'].iterrows():
+        id = row['Id']
+        entity = row['Entity']
+        label = row['label']
+        scores_dict[f'{id}_{entity}_{label}'] = (scores_dict[f'{id}_{entity}_{label}'] + row['Score'])/2
 
     pooling_results = analysis_helper.load_results(pooling_input_path)['solutions']
-
     predictions_list = analysis_helper.load_multiple_results(predictions_input_path)
     structure_confidences = []
     structure_accuracies = []
@@ -80,7 +92,7 @@ def main():
                 for i in range(len(value['EntityRoles'])):
                     entity = value['EntityRoles'][i]['Entity']
                     entity_label = value['EntityRoles'][i]['Label']
-                    if entity_label != labels_dict[id][entity]:
+                    if entity in labels_dict[id] and entity_label != labels_dict[id][entity]:
                         hamming_count += 1 
                     prediction_score += scores_dict[f'{id}_{entity}_{entity_label}']
             prediction_score += scores_dict[f'{id}_{mf_label}']

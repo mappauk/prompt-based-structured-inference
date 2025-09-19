@@ -7,9 +7,10 @@ import numpy as np
 import sys
 import sklearn.metrics as sk
 import pandas as pd
+import src.helpers.scoring.mf_scoring as mf_scoring
 
 def compute_ece(num_bins, confidences, predicted_labes, true_labels):
-    bins = np.arange(0, num_bins + 1)*0.1
+    bins = np.arange(0, num_bins + 1)*(1/num_bins)
     ece = 0
     total_item_count = len(confidences)
     for i in range(1, len(bins)):
@@ -24,13 +25,13 @@ def compute_ece(num_bins, confidences, predicted_labes, true_labels):
         if no_items > 0:
             avg_confidence = np.mean(bin_confidences)
             bin_accuracy = bin_accurate/no_items
-            ece += abs(avg_confidence - bin_accuracy)*no_items/total_item_count
+            ece += abs(bin_accuracy - avg_confidence)*no_items/total_item_count
     return ece
 
 def main():
-    rule_groundings_path = sys.argv[2]
     dataset_dir = sys.argv[1]
-
+    rule_groundings_path = sys.argv[2]
+    rule_type = sys.argv[3]
     mf_labels = dataset_loader.load_frame_labels(dataset_dir)
     role_labels = dataset_loader.load_role_labels(dataset_dir)
     mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
@@ -43,7 +44,7 @@ def main():
     for index, row in role_labels.iterrows():
         labels_dict[row['Id']][row['Entity']] = row['EntityLabel']
 
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path)
+    rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, ['rule_one', 'rule_two', 'rule_three', 'rule_four'], rule_type)
     rule_groundings['rule_one'] = rule_groundings['rule_one'][~rule_groundings['rule_one']['Id'].isin(constants.IDS_TO_EXCLUDE)]
     rule_groundings['rule_two'] = rule_groundings['rule_two'][~rule_groundings['rule_two']['Id'].isin(constants.IDS_TO_EXCLUDE)]
     foundation_instance_groupings = rule_groundings['rule_one'].groupby(['Id'])
@@ -62,9 +63,10 @@ def main():
     role_true_labels = []
     for group_name, group in role_instance_groupings:
         max_row = group.iloc[group['Score'].argmax()]
-        role_confidences.append(max_row['Score'])
-        role_predicted_labels.append(max_row['label'])
-        role_true_labels.append(labels_dict[max_row['Id']][max_row['Entity']])
+        if max_row['Entity'] in labels_dict[max_row['Id']]:
+            role_confidences.append(max_row['Score'])
+            role_predicted_labels.append(max_row['label'])
+            role_true_labels.append(labels_dict[max_row['Id']][max_row['Entity']])
     
     mf_ece = compute_ece(10, moral_foundation_confidences, moral_foundation_predicted_labels, moral_foundation_true_labels)
     role_ece = compute_ece(10, role_confidences, role_predicted_labels, role_true_labels)
