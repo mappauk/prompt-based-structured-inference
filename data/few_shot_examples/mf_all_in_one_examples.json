@@ -1,0 +1,119 @@
+[
+    {
+        "label": "CARE/HARM",
+        "examples": [
+            {
+                "Tweet": "This common-sense bill will reduce unnecessary and duplicative burdens on health care providers and patients in need of home health services",
+                "Ideology": "Republican",
+                "Topic": "affordable care act",
+                "Id": "349963499578990593",
+                "Entities": [
+                    {
+                        "Entity": "health care providers and patients in need of home health services",
+                        "EntityLabel": "Target of care/harm"
+                    },
+                    {
+                        "Entity": "unecessary and duplicative burdens",
+                        "EntityLabel": "Entity causing harm"
+                    },
+                    {
+                        "Entity": "common-sense bill",
+                        "EntityLabel": "Entity providing care"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "FAIRNESS/CHEATING",
+        "examples": [
+            {
+                "Tweet": "RT @OversightDems: .@RepCummings and  @repjohnconyers call on Chrm to suspend  one-sided  investigations of Planned Parenthood",
+                "Ideology": "Democrat",
+                "Topic": "abortion",
+                "Id": "639490970644574208",
+                "Entities": [
+                    {
+                        "Entity": "Planned Parenthood",
+                        "EntityLabel": "Target of fairness/cheating"
+                    },
+                    {
+                        "Entity": ".@RepCummings and @repjohnconyers",
+                        "EntityLabel": "Entity ensuring fairnes"
+                    },
+                    {
+                        "Entity": "one-sided investigations",
+                        "EntityLabel": "Entity doing cheating"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "LOYALTY/BETRAYAL",
+        "examples": [
+            {
+                "Tweet": "I commend @Delta for their statement supporting the humane reforms made by President Obama to our immigration system.",
+                "Ideology": "Democrat",
+                "Topic": "immigration",
+                "Id": "536928881199312896",
+                "Entities": [
+                    {
+                        "Entity": "President Obama",
+                        "EntityLabel": "Target of loyalty/betrayal"
+                    },
+                    {
+                        "Entity": "Delta",
+                        "EntityLabel": "Entity being loyal"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "AUTHORITY/SUBVERSION",
+        "examples": [
+            {
+                "Tweet": "At 10AM I will speak on the House Floor about Senate\u2019s failure yesterday to pass common sense gun safety legislation.",
+                "Ideology": "Democrat",
+                "Topic": "guns",
+                "Id": "324882503284428800",
+                "Entities": [
+                    {
+                        "Entity": "Senate",
+                        "EntityLabel": "Failing authority"
+                    },
+                    {
+                        "Entity": "I",
+                        "EntityLabel": "Failing authority over"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "PURITY/DEGRADATION",
+        "examples": [
+            {
+                "Tweet": "Allegations @PPact is possibly selling the body parts of the babies it has aborted is sickening. Congress should investigate and  defund them.",
+                "Ideology": "Republican",
+                "Topic": "abortion",
+                "Id": "621061478695759872",
+                "Entities": [
+                    {
+                        "Entity": "babies",
+                        "EntityLabel": "Target of purity/degradation"
+                    },
+                    {
+                        "Entity": "Congress",
+                        "EntityLabel": "Entity preserving purity"
+                    },
+                    {
+                        "Entity": "@PPact",
+                        "EntityLabel": "Entity causing degradation"
+                    }
+                ]
+            }
+        ]
+    }
+]

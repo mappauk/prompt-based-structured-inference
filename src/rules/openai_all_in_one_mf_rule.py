@@ -7,8 +7,10 @@ import random
 import copy
 import torch
 import numpy as np
+import src.helpers.prompting.mf_prompt_constants as constants
 
-class OAGSRule(RuleTemplate):
+
+class AIOMFRule(RuleTemplate):
     def __init__(self,
                  name: str,
                  features: list, 
@@ -17,27 +19,34 @@ class OAGSRule(RuleTemplate):
                  rule_variable_format: str,
                  rule_type: str,
                  model: str,
-                 messages: str,
-                 prompt_format: str):
-        super(OAGSRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
+                 messages: str):
+        super(AIOMFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.model = model
         self.messages = messages
-        self.prompt_format = prompt_format
 
     def get_rule_groundings(self, data: pd.DataFrame):
-        data_subset = data[self.features].drop_duplicates()
+        tweet_groups = data.groupby(['Id'])
         prompts = []
-        for index, row in data_subset.iterrows():
-            dict = { }
-            for feature in self.features:
-                dict[feature] = row[feature]
-            formatted_prompt = self.prompt_format.format(**dict)
+        for group_name, group in tweet_groups:
+            entities = []
+            tweet = None
+            for index, row in group.iterrows():
+                tweet = {
+                    'Tweet': row['Tweet']
+                }
+                if not pd.isna(row['Entity']):
+                    entities.append({
+                        'Entity': row['Entity']
+                    })
+            example_str = constants.MF_ALL_IN_ONE_EXAMPLE_FORMAT_FOUNDATION.format(**tweet)
+            for entity in entities:
+                example_str += constants.MF_ALL_IN_ONE_EXAMPLE_FORMAT_ENTITY.format(**entity)     
             formatted_prompt_message = {
                 'role': 'user',
-                'content': formatted_prompt
+                'content': example_str
             }
             prompts.append({
-                "custom_id": self.rule_variable_format.format(**dict),
+                "custom_id": self.rule_variable_format.format(**{ 'Id': row['Id']}),
                 "method": "POST",
                 "url": "/v1/chat/completions",
                 "body": {
@@ -51,5 +60,5 @@ class OAGSRule(RuleTemplate):
                 "temperature": 1,
                 "verbosity": "low",
             })
-        # fields that might be useful for structured prediction - prediction, response_format
+            # fields that might be useful for structured prediction - prediction, response_format
         return prompts

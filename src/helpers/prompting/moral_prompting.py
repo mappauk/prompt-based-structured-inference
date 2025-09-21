@@ -2,6 +2,43 @@ import os
 import json
 import src.helpers.prompting.mf_prompt_constants as constants
 
+def generate_allinone_openai_prompts(system_prompt, num_shots, filepath, foundations_per_shot=1, example_count=5):
+    messages = []
+    final_system_prompt = system_prompt
+    if num_shots > 0:
+        final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
+    messages.append(
+        {
+            "role": "developer",
+            "content": final_system_prompt
+        }
+    )
+    if num_shots > 0:
+        with open(filepath) as f:
+            data = json.load(f)
+            for i in range(example_count):
+                foundation_counter = 0
+                for foundation_obj in data:
+                    if i*len(data) + foundation_counter >= num_shots*foundations_per_shot:
+                        break
+                    example = foundation_obj['examples']
+                    example_str = constants.MF_ALL_IN_ONE_EXAMPLE_FORMAT_FOUNDATION.format(**example[i])
+                    answer_str = constants.MF_ALL_IN_ONE_EXAMPLE_ANSWER_FORMAT_FOUNDATION.format(foundation_obj['label'])
+                    for j in range(len(example[i]['Entities'])):
+                        example_str += constants.MF_ALL_IN_ONE_EXAMPLE_FORMAT_ENTITY.format(**example[i]['Entities'][j])
+                        answer_str += constants.MF_ALL_IN_ONE_EXAMPLE_ANSWER_FORMAT_ENTITY.format(**example[i]['Entities'][j])
+                    
+                    messages.append({
+                        "role": "user",
+                        "content": example_str
+                    })
+                    messages.append({
+                        "role": "assistant",
+                        "content": answer_str
+                    })
+                    foundation_counter += 1
+    return messages
+
 def generate_gs_openai_prompts(system_prompt, example_format, num_shots, filepath, foundations_per_shot=1, example_count=5):
     messages = []
     final_system_prompt = system_prompt
@@ -9,7 +46,7 @@ def generate_gs_openai_prompts(system_prompt, example_format, num_shots, filepat
         final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
     messages.append(
         {
-            "role": "system",
+            "role": "developer",
             "content": final_system_prompt
         }
     )

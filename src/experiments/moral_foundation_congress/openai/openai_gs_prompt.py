@@ -4,7 +4,7 @@ from gurobipy import GRB
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from src.rules.llm_gs_rule import LLMGSRule
+from src.rules.openai_gs_rule import OAGSRule
 import src.helpers.prompting.moral_prompting as moral_prompting
 import src.helpers.prompting.mf_prompt_constants as constants
 import src.helpers.loaders.mf_dataset_loader as dataset_loader
@@ -16,10 +16,10 @@ import os
 
 def main():
     input_path = sys.argv[1]
-    num_shots = sys.argv[2]
+    num_shots = int(sys.argv[2])
     example_path = sys.argv[3]
     output_path = sys.argv[4]
-    model_name = ''
+    model_name = 'gpt-5'
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
 
     # generate moral foundation prompt format strings
@@ -49,45 +49,45 @@ def main():
         os.path.join(example_path, 'moral_role_examples.json')
     )
 
-    rule_one = LLMGSRule(
+    rule_one = OAGSRule(
         'rule_one',
         ['Id', 'Tweet'],
         constants.MORAL_FOUNDATIONS,
-        'MF_{Id}_{label}',
-        'RuleOne_{Id}_{label}',
+        'MF_{Id}',
+        'RuleOne_{Id}',
         RuleType.MULTI_CLASS,
         model_name,
         foundation_messages,
         foundation_prompt
     )
-    rule_two = LLMGSRule(
+    rule_two = OAGSRule(
         'rule_two',
         ['Id', 'Tweet', 'Entity'],
         constants.MORAL_FOUNDATION_ROLE,
-        'Role_{Id}_{Entity}_{label}',
-        'RuleTwo_{Id}_{Entity}_{label}',
-        RuleType.MULTI_CLASS,
-        model_name,
-        foundation_messages_with_features,
-        foundation_prompt_with_features
-    )
-    rule_three = LLMGSRule(
-        'rule_three',
-        ['Id', 'Tweet', 'Topic', 'Ideology'],
-        constants.MORAL_FOUNDATIONS,
-        'MF_{Id}_{label}',
-        'RuleThree_{Id}_{label}',
+        'Role_{Id}_{Entity}',
+        'RuleTwo_{Id}_{Entity}',
         RuleType.MULTI_CLASS,
         model_name,
         role_messages,
         role_prompt
     )
-    rule_four = LLMGSRule(
+    rule_three = OAGSRule(
+        'rule_three',
+        ['Id', 'Tweet', 'Topic', 'Ideology'],
+        constants.MORAL_FOUNDATIONS,
+        'MF_{Id}',
+        'RuleThree_{Id}',
+        RuleType.MULTI_CLASS,
+        model_name,
+        foundation_messages_with_features,
+        foundation_prompt_with_features
+    )
+    rule_four = OAGSRule(
         'rule_four',
         ['Id', 'Tweet', 'Entity', 'Ideology', 'Topic'],
         constants.MORAL_FOUNDATION_ROLE,
-        'Role_{Id}_{Entity}_{label}',
-        'RuleFour_{Id}_{Entity}_{label}',
+        'Role_{Id}_{Entity}',
+        'RuleFour_{Id}_{Entity}',
         RuleType.MULTI_CLASS,
         model_name,
         role_messages_with_features,
@@ -100,7 +100,7 @@ def main():
         rule_four.name: rule_four
     }
     # get rule groundings:
-    prompt_data_loader.save_rule_groundings(rules, data, output_path)
+    prompt_data_loader.save_rule_grounding_batches(rules, data, output_path)
 
 
 if __name__ == "__main__":
