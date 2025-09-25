@@ -68,7 +68,8 @@ def main():
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     # get rule groundings:
     rule_groundings = mf_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
-
+    print(rule_groundings)
+    raise Exception()
     # define custom constraints
     def constr_one(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         rule_groundings['rule_two'].insert(0, 'MoralFrameLabel', rule_groundings['rule_two']['label'].apply(lambda x: constants.MORAL_FOUNDATION_ROLE_TO_MF[x]))

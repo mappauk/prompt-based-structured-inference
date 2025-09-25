@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from typing import List
 from src.rules.rule_template import RuleTemplate
+import jsonlines
 import numpy as np
 import torch
 import glob
@@ -42,7 +43,14 @@ def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_p
 def save_rule_grounding_batches(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str, startIndex = 0):
     for rule_name, rule in rules.items():
         rule_grounding = rule.get_rule_groundings(data)
-        with open(output_path + rule_name + '.json', 'w') as json_file:
-            json.dump(rule_grounding, json_file)
+        with jsonlines.open(output_path + rule_name + '.jsonl', 'w') as writer:
+            writer.write_all(rule_grounding)
     
-
+def load_rule_grounding_batches(rules, input_path):
+    rule_outputs = {}
+    for rule_name, rule in rules.items():
+        current_rule_output = []
+        with jsonlines.open('data.jsonl') as reader:
+            for obj in reader:
+                current_rule_output.append(obj)
+        rule_outputs[rule_name] = current_rule_output

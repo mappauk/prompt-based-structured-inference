@@ -42,14 +42,14 @@ class OAGSRule(RuleTemplate):
                 "url": "/v1/chat/completions",
                 "body": {
                     "model": self.model,
-                    "messages": self.messages + [formatted_prompt_message]
-                },
-                "max_completion_tokens": 1000,
-                "n": 2, # number of chat completion choices to generate for each input message
-                "prompt_cache_key": "mppauk-" + self.name,
-                "reasoning_effort": "medium",
-                "temperature": 1,
-                "verbosity": "low",
+                    "messages": self.messages + [formatted_prompt_message],
+                    "max_completion_tokens": 1000,
+                    "n": 2, # number of chat completion choices to generate for each input message
+                    "prompt_cache_key": "mppauk-" + self.name,
+                    "reasoning_effort": "medium",
+                    "temperature": 1,
+                    "verbosity": "low"
+                }
             })
         # fields that might be useful for structured prediction - prediction, response_format
         return prompts
