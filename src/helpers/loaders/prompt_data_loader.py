@@ -56,3 +56,10 @@ def load_rule_grounding_batches(rules, input_path, num_splits=6):
                     current_rule_output.append(obj)
         rule_outputs[rule_name] = current_rule_output
     return rule_outputs
+
+def load_all_in_one_results(input_path):
+    current_rule_output = []
+    with jsonlines.open(input_path) as reader:
+        for obj in reader:
+            current_rule_output.append(obj)
+    return current_rule_output

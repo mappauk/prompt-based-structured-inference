@@ -21,7 +21,6 @@ def main():
     output_path = sys.argv[4]
     model_name = 'gpt-5'
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(input_path)
-    print(data)
     # generate moral foundation prompt format strings
     foundation_messages = moral_prompting.generate_allinone_openai_prompts(
         constants.MF_ALL_IN_ONE_SYSTEM_PROMPT, 

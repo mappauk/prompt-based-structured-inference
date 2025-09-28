@@ -588,10 +588,12 @@ Possible Roles: Target of purity/degradation, Entity preserving purity, Entity c
 Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
 Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
 
-Given the possible moral foundations/roles, a tweet, and entities present in the tweet, identify the moral foundations and roles being expressed in the following tweet.Note the following two strict constraints that must be followed when identifying the moral foundation for a tweet. Only answer with the correct moral foundation for the tweet and the correct moral roles for the corresponding entities, do not provide any justification or explanation.
+Given the possible moral foundations/roles and a tweet with the relevant entities, identify the moral foundation of the tweet and moral roles being expressed by the entities. Note the following two strict constraints that must be followed when identifying the moral foundation for a tweet.
 
 1. The moral foundation and the moral roles must be aligned. For example, if the moral foundation of the tweet is CARE/HARM, then the roles of each of the entities must be one of the roles associated with the CARE/HARM moral foundation: Target of care/harm, Entity causing harm, Entity providing care.
-2. No two entities in the same tweet can be expressing the same moral foundation.
+2. No two entities in the same tweet can be expressing the same moral role.
+
+Only answer with the correct moral foundation for the tweet and the correct moral roles for the corresponding entities, do not provide any justification or explanation.
 '''
 
 MF_ALL_IN_ONE_EXAMPLE_FORMAT = '''Tweet: {Tweet}
