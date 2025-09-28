@@ -10,7 +10,7 @@ import numpy as np
 import src.helpers.prompting.mf_prompt_constants as constants
 
 
-class AIOMFRule(RuleTemplate):
+class OAAIOMFRule(RuleTemplate):
     def __init__(self,
                  name: str,
                  features: list, 
@@ -20,7 +20,7 @@ class AIOMFRule(RuleTemplate):
                  rule_type: str,
                  model: str,
                  messages: str):
-        super(AIOMFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
+        super(OAAIOMFRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.model = model
         self.messages = messages
 

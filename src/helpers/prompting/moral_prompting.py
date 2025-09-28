@@ -2,14 +2,14 @@ import os
 import json
 import src.helpers.prompting.mf_prompt_constants as constants
 
-def generate_allinone_openai_prompts(system_prompt, num_shots, filepath, foundations_per_shot=1, example_count=5):
+def generate_allinone_prompts(system_prompt, num_shots, filepath, foundations_per_shot=1, example_count=5, is_openai_format=True):
     messages = []
     final_system_prompt = system_prompt
     if num_shots > 0:
         final_system_prompt += constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
     messages.append(
         {
-            "role": "developer",
+            "role": "developer" if is_openai_format else "system",
             "content": final_system_prompt
         }
     )
