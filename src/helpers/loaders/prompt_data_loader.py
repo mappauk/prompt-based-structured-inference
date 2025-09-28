@@ -2,10 +2,11 @@ import os
 import pandas as pd
 from typing import List
 from src.rules.rule_template import RuleTemplate
+import jsonlines
 import numpy as np
 import torch
 import glob
-
+import json
 
 def load_rule_groundings(path: str, rule_names: list):
     rule_groundings = {}
@@ -38,3 +39,27 @@ def save_rule_groundings(rules: List[RuleTemplate], data: pd.DataFrame, output_p
         for rule_name, rule in rules.items():
             rule_grounding = rule.get_rule_groundings(data_split[i])
             rule_grounding.to_pickle(output_path + rule_name + f'_{i}_groundings_dataframe.pkl')
+
+def save_rule_grounding_batches(rules: List[RuleTemplate], data: pd.DataFrame, output_path: str, startIndex = 0):
+    for rule_name, rule in rules.items():
+        rule_grounding = rule.get_rule_groundings(data)
+        with jsonlines.open(output_path + rule_name + '.jsonl', 'w') as writer:
+            writer.write_all(rule_grounding)
+    
+def load_rule_grounding_batches(rules, input_path, num_splits=6):
+    rule_outputs = {}
+    for rule_name, rule in rules.items():
+        current_rule_output = []
+        for i in range(1, num_splits + 1):
+            with jsonlines.open(input_path + rule_name + f'_openai_output_p{i}.jsonl') as reader:
+                for obj in reader:
+                    current_rule_output.append(obj)
+        rule_outputs[rule_name] = current_rule_output
+    return rule_outputs
+
+def load_all_in_one_results(input_path):
+    current_rule_output = []
+    with jsonlines.open(input_path) as reader:
+        for obj in reader:
+            current_rule_output.append(obj)
+    return current_rule_output

@@ -19,9 +19,9 @@ import src.analysis.analysis_helper as analysis_helper
 import json
 
 
-def get_scored_groundings(rule_groundings_path, rule_names, rule_type):
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
-
+def get_scored_groundings(rule_groundings, rule_names, rule_type):
+    if type(rule_groundings) == str:
+        rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings, rule_names)
     if rule_type == 'tf':
         rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['Id'])
         rule_groundings['rule_two'] = scoring.tf_scoring(rule_groundings['rule_two'], ['Id', 'Entity'])

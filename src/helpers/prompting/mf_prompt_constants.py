@@ -570,6 +570,52 @@ Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing bet
 Given the possible moral roles, the definitions of their associated moral foundations, and the task of identifying the moral role of an entity in a tweet, answer the following multiple choice question regarding whether an entity is expressing a particular moral role in a tweet. Answer only with the letter corresponding to the correct answer.
 '''
 
+MF_ALL_IN_ONE_SYSTEM_PROMPT = '''
+Consider the task of identifying the moral foundation present in a tweet from a U.S congress member as well as the moral roles of the entities in the same tweet. Definitions for the five moral foundations and their associated roles are given below:
+
+Moral Foundation: CARE/HARM. Definition: Care for others, generosity, compassion, ability to feel pain of others, sensitivity to suffering of others, prohibiting actions that harm others. 
+Possible Roles: Target of care/harm, Entity causing harm, Entity providing care.
+
+Moral Foundation: FAIRNESS/CHEATING. Definition: Demand for Fairness, rights, equality, justice, reciprocity, reciprocal altruism, autonomy, proportionality and violation of these. Also, prohibiting cheating. 
+Possible Roles: Target of fairness/cheating, Entity ensuring fairness, Entity doing cheating.
+
+Moral Foundation: AUTHORITY/SUBVERSION. Definition: Fulfilling social roles, submitting to authority, respect for social hierarchy/traditions, leadership, prohibiting rebellion against authority. 
+Possible Roles: Justified authority, Justified authority over, Failing authority, Failing authority over.
+
+Moral Foundation: PURITY/DEGRADATION. Definition: Associations with the sacred and holy, disgust, contamination, religious notions which guide how to live, prohibiting violating the sacred. 
+Possible Roles: Target of purity/degradation, Entity preserving purity, Entity causing degradation.
+
+Moral Foundation: LOYALTY/BETRAYAL. Definition: Group affiliation and solidarity, virtues of patriotism, self-sacrifice for the group, prohibiting betrayal of one’s group. 
+Possible Roles: Target of loyalty/betrayal, Entity being loyal, Entity doing betrayal.
+
+Given the possible moral foundations/roles and a tweet with the relevant entities, identify the moral foundation of the tweet and moral roles being expressed by the entities. Note the following two strict constraints that must be followed when identifying the moral foundation for a tweet.
+
+1. The moral foundation and the moral roles must be aligned. For example, if the moral foundation of the tweet is CARE/HARM, then the roles of each of the entities must be one of the roles associated with the CARE/HARM moral foundation: Target of care/harm, Entity causing harm, Entity providing care.
+2. No two entities in the same tweet can be expressing the same moral role.
+
+Only answer with the correct moral foundation for the tweet and the correct moral roles for the corresponding entities, do not provide any justification or explanation.
+'''
+
+MF_ALL_IN_ONE_EXAMPLE_FORMAT = '''Tweet: {Tweet}
+Q. What moral foundation is being expressed in the tweet and what are the moral roles of the following entities in the tweet: {entities}?
+'''
+
+MF_ALL_IN_ONE_EXAMPLE_FORMAT_FOUNDATION = '''Tweet: {Tweet}
+Q. What moral foundation is being expressed in the tweet?
+'''
+
+MF_ALL_IN_ONE_EXAMPLE_FORMAT_ENTITY = '''
+Q. What is the moral role of "{Entity}" expressed in the given tweet?
+'''
+
+MF_ALL_IN_ONE_EXAMPLE_ANSWER_FORMAT_FOUNDATION = '''
+Moral Foundation: {0}
+'''
+MF_ALL_IN_ONE_EXAMPLE_ANSWER_FORMAT_ENTITY = '''
+Moral Role of "{Entity}": {EntityLabel}
+'''
+
+
 MF_MC_EXAMPLE_FORMAT = '''Tweet: {Tweet} 
 Q. What moral foundation is being expressed in the given tweet?
 Choices:
