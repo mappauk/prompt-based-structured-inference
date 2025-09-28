@@ -16,21 +16,30 @@ import os
 import src.helpers.scoring.mf_scoring as mf_scoring
 import src.analysis.analysis_helper as analysis_helper
 from src.inference.gurobi_inference_model import GurobiInferenceModel
+from collections import Counter
 
 
 def transform_openai_response(rule_groundings, responses):
     for rule_name, response_data in responses.items():
-        print(len(response_data))
         rule_groundings[rule_name].drop(columns='Score', inplace=True)
         labels = None
         if rule_name == 'rule_one' or rule_name == 'rule_three':
             ids = []
             labels = []
+            id_count = {}
             for response in response_data:
                 id = response['custom_id'].split('_')[1]
                 response_choices = response['response']['body']['choices']
                 choices = []
                 for i in range(len(response_choices)):
+                    if response_choices[i]['message']['content'] == "":
+                        continue
+                    if id in id_count and id_count[id] >= 10:
+                        continue
+                    elif id in id_count:
+                        id_count[id] = id_count[id] + 1
+                    else:
+                        id_count[id] = 1
                     choices.append(response_choices[i]['message']['content'])
                 ids.append(id)
                 labels.append(choices)
@@ -40,33 +49,31 @@ def transform_openai_response(rule_groundings, responses):
             })
             response_dataframe = response_dataframe.groupby(['Id'], sort=False).agg(sum).reset_index()
             rule_groundings[rule_name] = rule_groundings[rule_name].merge(response_dataframe, on='Id', how='left')
-            rule_groundings[rule_name]['Score'] = rule_groundings[rule_name]['Score'].apply(lambda x: x if isinstance(x, list) else ['CARE/HARM', 'CARE/HARM'])
-            '''
-            for index, row in rule_groundings[rule_name].iterrows():
-                if not isinstance(row['Score'], list):
-                    print(row)
-            print(response_dataframe.shape)
-            print(response_dataframe)
-            print(rule_groundings[rule_name].shape)
-            raise Exception()
-            '''
         else:
-            print(len(response_data))
             ids = []
             entities = []
             labels = []
+            id_count = {}
             for response in response_data:
+                custom_response_id = response['custom_id']
                 id_split = response['custom_id'].split('_', 2)
                 id = id_split[1]
                 entity = id_split[2]
                 response_choices = response['response']['body']['choices']
                 choices = []
                 for i in range(len(response_choices)):
+                    if response_choices[i]['message']['content'] == "":
+                        continue
+                    if custom_response_id in id_count and id_count[custom_response_id] >= 10:
+                        continue
+                    elif custom_response_id in id_count:
+                        id_count[custom_response_id] = id_count[custom_response_id] + 1
+                    else:
+                        id_count[custom_response_id] = 1
                     choices.append(response_choices[i]['message']['content'])
                 ids.append(id)
                 entities.append(entity)
                 labels.append(choices)
-            print(len(ids))
             response_dataframe = pd.DataFrame({
                 'Id': ids,
                 'Entity': entities,
@@ -74,20 +81,6 @@ def transform_openai_response(rule_groundings, responses):
             })
             response_dataframe = response_dataframe.groupby(['Id', 'Entity'], sort=False).agg(sum).reset_index()
             rule_groundings[rule_name] = rule_groundings[rule_name].merge(response_dataframe, on=['Id', 'Entity'], how='left')
-            rule_groundings[rule_name]['Score'] = rule_groundings[rule_name]['Score'].apply(lambda x: x if isinstance(x, list) else ['Target of care/harm', 'Target of care/harm'])
-            '''
-            print(response_dataframe.shape)
-            print(response_dataframe)
-            print(rule_groundings[rule_name].shape)
-            counter = 0
-            for index, row in rule_groundings[rule_name].iterrows():
-                if not isinstance(row['Score'], list):
-                    counter += 1
-                    #print(row)
-            print(counter)
-            raise Exception()
-            '''
-    #raise Exception()
     return rule_groundings
 
 

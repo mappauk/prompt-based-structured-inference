@@ -46,12 +46,13 @@ def save_rule_grounding_batches(rules: List[RuleTemplate], data: pd.DataFrame, o
         with jsonlines.open(output_path + rule_name + '.jsonl', 'w') as writer:
             writer.write_all(rule_grounding)
     
-def load_rule_grounding_batches(rules, input_path):
+def load_rule_grounding_batches(rules, input_path, num_splits=6):
     rule_outputs = {}
     for rule_name, rule in rules.items():
         current_rule_output = []
-        with jsonlines.open(input_path + rule_name +'_openai_output.jsonl') as reader:
-            for obj in reader:
-                current_rule_output.append(obj)
+        for i in range(1, num_splits + 1):
+            with jsonlines.open(input_path + rule_name + f'_openai_output_p{i}.jsonl') as reader:
+                for obj in reader:
+                    current_rule_output.append(obj)
         rule_outputs[rule_name] = current_rule_output
     return rule_outputs

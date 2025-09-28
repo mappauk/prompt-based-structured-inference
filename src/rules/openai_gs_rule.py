@@ -43,7 +43,7 @@ class OAGSRule(RuleTemplate):
                 "body": {
                     "model": self.model,
                     "messages": self.messages + [formatted_prompt_message],
-                    "max_completion_tokens": 1000,
+                    "max_completion_tokens": 3000,
                     "n": 2, # number of chat completion choices to generate for each input message
                     "prompt_cache_key": "mppauk-" + self.name,
                     "reasoning_effort": "medium",
