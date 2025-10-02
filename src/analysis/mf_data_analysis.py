@@ -14,14 +14,22 @@ def main():
     data = dataset_loader.load_moral_frame_data_parse_entity_labels(dataset_dir)
     entity_group_map = dataset_loader.get_entity_group_mappings(data, dataset_dir)
     predictions_list = analysis_helper.load_multiple_results(input_path)
+    #additional_exclude = [
+    #    "746720367750701056", "567762163813867520", "600314702552539136", "714897555558105090", "715274999133814788", 
+    #   "672387146603474944", "674334593747656705", "707275552139386881", "740985642008612865", "746337034697117696", 
+    #   "747444788895580161", "747446353089933312",'''target of authority''' "747467102848618496", ]
     for prediction_data in predictions_list:
         mf_labels = mf_labels[~mf_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        #mf_labels = mf_labels[~mf_labels['Id'].isin(additional_exclude)]
         role_labels = role_labels[~role_labels['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        #role_labels = role_labels[~role_labels['Id'].isin(additional_exclude)]
         data = data[~data['Id'].isin(constants.IDS_TO_EXCLUDE)]
+        #data = data[~data['Id'].isin(additional_exclude)]
         predictions = prediction_data['content']
-        for id in constants.IDS_TO_EXCLUDE:
-            predictions.pop(id, None)
-        
+        #for id in constants.IDS_TO_EXCLUDE:
+        #    predictions.pop(id, None)
+        #for id in additional_exclude:
+        #    predictions.pop(id, None)
         true_mf_labels = []
         predicted_mf_labels = []
         true_role_labels = []
@@ -84,12 +92,15 @@ def constraint_violation_calculation(data, predictions, entity_group_map):
         entity_pred_dict = {}
         if 'EntityRoles' in id_result:
             for entity_pred in id_result['EntityRoles']:
-                if  id_result['MoralFrame'] != constants.MORAL_FOUNDATION_ROLE_TO_MF[entity_pred['Label']]:
+                isValidPreds = id_result['MoralFrame'] in constants.MORAL_FOUNDATIONS and entity_pred['Label'] in constants.MORAL_FOUNDATION_ROLE
+                if  isValidPreds and id_result['MoralFrame'] != constants.MORAL_FOUNDATION_ROLE_TO_MF[entity_pred['Label']]:
                     entity_frame_mismatch += 1
-                if entity_pred['Label'] in entity_pred_dict:
+                if isValidPreds and entity_pred['Label'] in entity_pred_dict:
                     duplicate_role_assignment += 1
                 else:
                     entity_pred_dict[entity_pred['Label']] = 1
+    print('Entity Role and Moral Frame Mismatch Constraint Violations: ' + str(entity_frame_mismatch))
+    print('Duplicate Role Assignment Constraint Violations: ' + str(duplicate_role_assignment))
     data_groupings = data.groupby(['Ideology', 'Topic'])
     for group_name, group in data_groupings:
         if len(group) == 1:
@@ -135,8 +146,7 @@ def constraint_violation_calculation(data, predictions, entity_group_map):
                         polarity_violation += 1
                 counter += 1
             start_index += 1
-    print('Entity Role and Moral Frame Mismatch Constraint Violations: ' + str(entity_frame_mismatch))
-    print('Duplicate Role Assignment Constraint Violations: ' + str(duplicate_role_assignment))
+
     print('Entity Polarity Constraint Violations: ' + str(polarity_violation))
     
 if __name__ == "__main__":
