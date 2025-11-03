@@ -1,0 +1,67 @@
+[
+    {
+        "label": "Reasoning",
+        "positive_examples": [
+            {
+                "original_text": "do we not need to turn A to see if it has an even number on the other",
+                "message_id": "203c2381-2a11-47d7-ad03-accf1bb105e9",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+            }
+        ]
+    },
+    {
+        "label": "Solution",
+        "positive_examples": [
+            {
+                "original_text": "the obvious answer would be to chhose A and 6",
+                "message_id": "6c02f8a6-91f4-4564-8bbd-f3de05227d1a",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+            }
+        ]
+    },
+    {
+        "label": "Agree",
+        "positive_examples": [
+            {
+                "original_text": "yes",
+                "message_id": "23e7306e-03a5-4b87-b014-39e15b97a160",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+            }
+        ]
+    },
+    {
+        "label": "Disagree",
+        "positive_examples": [
+            {
+                "original_text": "I don''t see where 3 applies.",
+                "message_id": "1f39a760-94e1-4fd3-9eb6-a225ccd0ba17",
+                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2"
+            }
+        ]
+    },
+    {
+        "label": "Moderation",
+        "positive_examples": [
+            {
+                "original_text": "what do you think",
+                "message_id": "7dbda1e8-0a85-4aba-bb3d-055e6e130bbc",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+            }
+        ]
+    },
+    {
+        "label": "None",
+        "positive_examples": [
+            {
+                "original_text": "what happens now ?",
+                "message_id": "8fe9d18f-f905-497e-9bb0-3b4ef4d95221",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+            },
+            {
+                "original_text": "one guess looks as good as any for now",
+                "message_id": "cc863f5b-763d-489b-b7fc-00ab858f7f1e",
+                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2"
+            }
+        ]
+    }
+]
