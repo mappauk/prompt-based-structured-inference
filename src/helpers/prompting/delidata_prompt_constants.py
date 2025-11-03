@@ -113,6 +113,6 @@ SYSTEM_PROMPT_EXAMPLE_LEAD_IN = 'Consider the following examples:\n'
 
 LEVEL_1_TO_LEVEL_2 = {
     'Probing': ['Moderation', 'Reasoning', 'Solution'],
-    'Non-probing-deliberation': ['Solution', 'Agree', 'Disagree'],
+    'Non-probing-deliberation': ['Reasoning', 'Solution', 'Agree', 'Disagree'],
     'None': ['None'],
 }

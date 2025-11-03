@@ -110,16 +110,29 @@ def main():
     level_1_labels = []
     level_2_labels = []
     ilp_level_1_preds = []
+    ilp_level_1_scores = []
     ilp_level_2_preds = []
+    ilp_level_2_scores = []
     few_shot_level_1_preds = []
+    few_shot_level_1_scores = []
     few_shot_level_2_preds = []
+    few_shot_level_2_scores = []
     for index, row in data.iterrows():
+        message_id = row['message_id']
+
         level_1_labels.append(row['annotation_type'])
         level_2_labels.append(row['annotation_target'])
-        ilp_level_1_preds.append(level_1_assignments[row['message_id']])
-        ilp_level_2_preds.append(level_2_assignments[row['message_id']])
-        few_shot_level_1_preds.append(level_1_argmax[row['message_id']])
-        few_shot_level_2_preds.append(level_2_argmax[row['message_id']])
+
+        ilp_level_1_label = level_1_assignments[message_id]
+        ilp_level_2_label = level_2_assignments[message_id]
+        ilp_level_1_preds.append(ilp_level_1_label)
+        ilp_level_2_preds.append(ilp_level_2_label)
+
+        few_shot_level_1_label = level_1_argmax[message_id]
+        few_shot_level_2_label = level_2_argmax[message_id]
+        few_shot_level_1_preds.append(few_shot_level_1_label)
+        few_shot_level_2_preds.append(few_shot_level_2_label)
+
     print('Few Shot Results')
     delidata_scoring.eval(few_shot_level_1_preds, few_shot_level_2_preds, level_1_labels, level_2_labels)
     print('ILP Results')
