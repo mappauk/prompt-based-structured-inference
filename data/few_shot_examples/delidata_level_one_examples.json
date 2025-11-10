@@ -3,18 +3,22 @@
         "label": "Non-probing-deliberation",
         "positive_examples": [
             {
-                "original_text": "the obvious answer would be to chhose A and 6",
-                "message_id": "6c02f8a6-91f4-4564-8bbd-f3de05227d1a",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+                "original_text": "do we not need to turn A to see if it has an even number on the other",
+                "message_id": "203c2381-2a11-47d7-ad03-accf1bb105e9",
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "previous_original_text": "we need to turn a over to test the vowel",
+                "previous_annotation_type": "Non-probing-deliberation"
             },
             {
                 "original_text": "yes",
                 "message_id": "23e7306e-03a5-4b87-b014-39e15b97a160",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "previous_original_text": "do we not need to turn A to see if it has an even number on the other",
+                "previous_annotation_type": "Non-probing-deliberation"
             },
             {
-                "original_text": "do we not need to turn A to see if it has an even number on the other",
-                "message_id": "203c2381-2a11-47d7-ad03-accf1bb105e9",
+                "original_text": "the obvious answer would be to chhose A and 6",
+                "message_id": "6c02f8a6-91f4-4564-8bbd-f3de05227d1a",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
             }
         ]
@@ -25,13 +29,16 @@
             {
                 "original_text": "what do you think",
                 "message_id": "7dbda1e8-0a85-4aba-bb3d-055e6e130bbc",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "previous_original_text": "the obvious answer would be to chhose A and 6",
+                "previous_annotation_type": "Non-probing-deliberation"
             },
             {
-                "original_text": "so which ones do we need to turn ?",
+                "original_text": "yeah, sorry",
                 "message_id": "a641a9cf-b799-4e0e-ab9e-cefd09b11b47",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
-
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "previous_original_text": "the obvious answer would be to chhose A and 6",
+                "previous_annotation_type": "Non-probing-deliberation"
             }
         ]
     },
@@ -41,8 +48,9 @@
             {
                 "original_text": "what happens now ?",
                 "message_id": "8fe9d18f-f905-497e-9bb0-3b4ef4d95221",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
-
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "previous_original_text": "yeah to then see if there are any excetions to the rule",
+                "previous_annotation_type": "Non-probing-deliberation"
             },
             {
                 "original_text": "one guess looks as good as any for now",

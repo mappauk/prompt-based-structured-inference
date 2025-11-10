@@ -22,7 +22,8 @@ class LLMMCRule(RuleTemplate):
                  device_type: str,
                  prompt_map,
                  choices: list,
-                 isseq2seq: bool = False):
+                 isseq2seq: bool = False,
+                 prompt_map_key: str = None):
         super(LLMMCRule, self).__init__(name, features, labels, head_predicate_format, rule_variable_format, rule_type)
         self.prompt_map = prompt_map
         self.batch_size = batch_size
@@ -31,9 +32,14 @@ class LLMMCRule(RuleTemplate):
         self.device_type = device_type
         self.isseq2seq = isseq2seq
         self.choices = choices
+        self.prompt_map_key = prompt_map_key
+        
+    def get_prompt(self, key):
+        return self.prompt_map[key]
         
     def get_rule_groundings(self, data: pd.DataFrame):
         data_subset = data[self.features].drop_duplicates()
+        data_subset = data_subset.dropna()
         prompts = []
         output_df_list = []
         scores = []
@@ -48,7 +54,10 @@ class LLMMCRule(RuleTemplate):
             dict = { }
             for feature in self.features:
                 dict[feature] = row[feature]
-            formatted_prompt = self.prompt_map.format(**dict)
+            prompt_format_str = self.prompt_map
+            if self.prompt_map_key != None:
+                prompt_format_str = self.get_prompt(dict[self.prompt_map_key])
+            formatted_prompt = prompt_format_str.format(**dict)
             prompt_batch.append(formatted_prompt)
             if len(prompt_batch) == self.batch_size:
                 prompts.append(prompt_batch)

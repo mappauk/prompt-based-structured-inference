@@ -38,11 +38,29 @@ def main():
         'RuleTwo_{message_id}_{label}',
         RuleType.MULTI_CLASS,
     )
+    rule_three = RuleTemplate(
+        'rule_three',
+        ['message_id', 'previous_message_id','original_text', 'previous_original_text', 'previous_annotation_type'],
+        constants.LEVEL_1_LABELS,
+        'LevelOnePrior_{message_id}_{previous_message_id}_{previous_annotation_type}_{label}',
+        'RuleThree_{message_id}_{previous_message_id}_{previous_annotation_type}_{label}',
+        RuleType.MULTI_CLASS,
+    )
+    rule_four = RuleTemplate(
+        'rule_four',
+        ['message_id', 'previous_message_id','original_text', 'previous_original_text', 'previous_annotation_type'],
+        constants.LEVEL_2_LABELS,
+        'LevelTwoPrior_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',
+        'RuleFour_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',
+        RuleType.MULTI_CLASS,
+    )
     rules = {
         rule_one.name: rule_one, 
         rule_two.name: rule_two,
+        rule_three.name: rule_three,
+        rule_four.name: rule_four
     }
-    rule_names = ['rule_one', 'rule_two']
+    rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     # get rule groundings:
     rule_groundings = delidata_scoring.get_scored_groundings(rule_groundings_path, rule_names, rule_type)
 
@@ -56,8 +74,32 @@ def main():
             rhs = 0
             for level_two_label in level_two_list:
                 rhs += head_dict[f'LevelTwo_{message_id}_{level_two_label}']
-            m.addConstr(level_one_head <= rhs) 
-    custom_rule_constraints = [constr_one]
+            m.addConstr(level_one_head <= rhs)
+    def constr_two(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
+        for index, row in rule_groundings['rule_three'].iterrows():
+            level_one_transition_head_split = row['HeadVariable'].split('_')
+            message_id = level_one_transition_head_split[1]
+            message_label = level_one_transition_head_split[4]
+            previous_message_id = level_one_transition_head_split[2]
+            previous_message_label = level_one_transition_head_split[3]
+            level_one_transition_head = head_dict[row['HeadVariable']]
+            level_one_previous = head_dict[f'LevelOne_{previous_message_id}_{previous_message_label}']
+            level_one_current = head_dict[f'LevelOne_{message_id}_{message_label}']
+            m.addConstr(level_one_transition_head <= level_one_previous*level_one_current)
+            m.addConstr(level_one_transition_head >= level_one_previous*level_one_current)
+    def constr_three(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
+        for index, row in rule_groundings['rule_four'].iterrows():
+            level_two_transition_head_split = row['HeadVariable'].split('_')
+            message_id = level_two_transition_head_split[1]
+            message_label = level_two_transition_head_split[4]
+            previous_message_id = level_two_transition_head_split[2]
+            previous_message_label = level_two_transition_head_split[3]
+            level_two_transition_head = head_dict[row['HeadVariable']]
+            level_two_previous = head_dict[f'LevelTwo_{previous_message_id}_{previous_message_label}']
+            level_two_current = head_dict[f'LevelTwo_{message_id}_{message_label}']
+            m.addConstr(level_two_transition_head <= level_two_previous*level_two_current)
+            m.addConstr(level_two_transition_head >= level_two_previous*level_two_current)
+    custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints)
     solutions = inference_model.inference()
@@ -110,13 +152,9 @@ def main():
     level_1_labels = []
     level_2_labels = []
     ilp_level_1_preds = []
-    ilp_level_1_scores = []
     ilp_level_2_preds = []
-    ilp_level_2_scores = []
     few_shot_level_1_preds = []
-    few_shot_level_1_scores = []
     few_shot_level_2_preds = []
-    few_shot_level_2_scores = []
     for index, row in data.iterrows():
         message_id = row['message_id']
 
