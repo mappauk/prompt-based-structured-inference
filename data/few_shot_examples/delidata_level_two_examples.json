@@ -7,7 +7,8 @@
                 "message_id": "203c2381-2a11-47d7-ad03-accf1bb105e9",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "we need to turn a over to test the vowel",
-                "previous_annotation_target": "Reasoning"
+                "previous_annotation_target": "Reasoning",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nLion: do we need to turn z?\nBeaver: z and 3 I think\nLion: we need to turn a over to test the vowel\nKiwi: do we not need to turn A to see if it has an even number on the other\n"
             }
         ]
     },
@@ -19,7 +20,8 @@
                 "message_id": "23e7306e-03a5-4b87-b014-39e15b97a160",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "do we not need to turn A to see if it has an even number on the other",
-                "previous_annotation_target": "Reasoning"
+                "previous_annotation_target": "Reasoning",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nLion: do we need to turn z?\nBeaver: z and 3 I think\nLion: we need to turn a over to test the vowel\nKiwi: do we not need to turn A to see if it has an even number on the other\nLion: yes\n"
             }
         ]
     },
@@ -31,7 +33,8 @@
                 "message_id": "1f39a760-94e1-4fd3-9eb6-a225ccd0ba17",
                 "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2",
                 "previous_original_text": "maybe both 3 and 2",
-                "previous_annotation_target": "Solution"
+                "previous_annotation_target": "Solution",
+                "transcript": "\nChipmunk: one guess looks as good as any for now\nUnicorn: Since one card has the number 2, the other side will have a vowel.\nBat: I flipped 3 and U\nCat: I chose to turn 2 and U because that should test the rule.\nBat: @ doesnt test the rule.\nChipmunk: I suck at puzzles\nBat: The rule doesnt say that consanants cant have even numbers\nUnicorn: And since U is a vowel, an even number will be on the other side.\nCat: maybe you only need to flop u\nUnicorn: I am flipping 2 and U -- I agree with Cat.\nBat: 3 and U\nChipmunk: 2 and U sound like a plan to me\nCat: All vowels have even numbers on the other side, but do all even numbers have to have vowels on the other side?\nBat: And you flip the 2 and it is a consanant. WHat have you proved?\nUnicorn: Yes, I think you have to flip 2 and U to test the rule.\nCat: 'that the rule isn''t true'\nUnicorn: It says \"test the rule.\" Where are you getting true?\nBat: The rule is all vowels have even numbers, not all even numbers have vowels\nChipmunk: good [point\nUnicorn: 'I don''t see why the vice versa is not applicable here.'\nChipmunk: me iether\nCat: So, by flipping U we see if a vowel has an even number\nBat: TRUE\nUnicorn: Yes, that is what I am gathering.\nCat: by flipping 3 we see if an odd number has a vowel or consanant\nChipmunk: me too\nBat: Or not ... nothing is proven about even numbers by flipping an odd one\nCat: we only need to flip U to see if it has an even number\nBat: Hmm\nCat: ?\nUnicorn: We need to flip both 2 and U.\nChipmunk: pondering the imponderable here\nChipmunk: 2 and U is my vote\nUnicorn: 'I think it''s quite straightforward. Let''s not make it more complicated than it needs to be.'\nBat: maybe both 3 and 2\nCat: 'I don''t see where 3 applies.'\n"
             }
         ]
     },
@@ -43,7 +46,8 @@
                 "message_id": "7dbda1e8-0a85-4aba-bb3d-055e6e130bbc",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "the obvious answer would be to chhose A and 6",
-                "previous_annotation_target": "Solution"
+                "previous_annotation_target": "Solution",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\n"
             }
         ]
     },
@@ -55,12 +59,14 @@
                 "message_id": "8fe9d18f-f905-497e-9bb0-3b4ef4d95221",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "yeah to then see if there are any excetions to the rule",
-                "previous_annotation_target": "Reasoning"
+                "previous_annotation_target": "Reasoning",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nKiwi: what happens now?\n"
             },
             {
                 "original_text": "one guess looks as good as any for now",
                 "message_id": "cc863f5b-763d-489b-b7fc-00ab858f7f1e",
-                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2"
+                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2",
+                "transcript": "\nChipmunk: one guess looks as good as any for now\n"
             }
         ]
     },
@@ -70,7 +76,8 @@
             {
                 "original_text": "the obvious answer would be to chhose A and 6",
                 "message_id": "6c02f8a6-91f4-4564-8bbd-f3de05227d1a",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\n"
             }
         ]
     }

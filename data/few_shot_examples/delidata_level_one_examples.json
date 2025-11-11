@@ -7,19 +7,22 @@
                 "message_id": "203c2381-2a11-47d7-ad03-accf1bb105e9",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "we need to turn a over to test the vowel",
-                "previous_annotation_type": "Non-probing-deliberation"
+                "previous_annotation_type": "Non-probing-deliberation",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nLion: do we need to turn z?\nBeaver: z and 3 I think\nLion: we need to turn a over to test the vowel\nKiwi: do we not need to turn A to see if it has an even number on the other\n"
             },
             {
                 "original_text": "yes",
                 "message_id": "23e7306e-03a5-4b87-b014-39e15b97a160",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "do we not need to turn A to see if it has an even number on the other",
-                "previous_annotation_type": "Non-probing-deliberation"
+                "previous_annotation_type": "Non-probing-deliberation",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nLion: do we need to turn z?\nBeaver: z and 3 I think\nLion: we need to turn a over to test the vowel\nKiwi: do we not need to turn A to see if it has an even number on the other\nLion: yes\n"
             },
             {
                 "original_text": "the obvious answer would be to chhose A and 6",
                 "message_id": "6c02f8a6-91f4-4564-8bbd-f3de05227d1a",
-                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0"
+                "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\n"
             }
         ]
     },
@@ -31,14 +34,16 @@
                 "message_id": "7dbda1e8-0a85-4aba-bb3d-055e6e130bbc",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "the obvious answer would be to chhose A and 6",
-                "previous_annotation_type": "Non-probing-deliberation"
+                "previous_annotation_type": "Non-probing-deliberation",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\n"
             },
             {
                 "original_text": "so which ones do we need to turn?",
                 "message_id": "a641a9cf-b799-4e0e-ab9e-cefd09b11b47",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "yeah, sorry",
-                "previous_annotation_type": "Non-probing-deliberation"
+                "previous_annotation_type": "Non-probing-deliberation",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nLion: do we need to turn z?\nBeaver: z and 3 I think\nLion: we need to turn a over to test the vowel\nKiwi: do we not need to turn A to see if it has an even number on the other\nLion: yes\nBeaver: yeah, sorry\nKiwi: so which ones do we need to turn?\n"
             }
         ]
     },
@@ -50,12 +55,14 @@
                 "message_id": "8fe9d18f-f905-497e-9bb0-3b4ef4d95221",
                 "group_id": "01acf3e3-714c-4d53-9b74-9170a645bcd0",
                 "previous_original_text": "yeah to then see if there are any excetions to the rule",
-                "previous_annotation_type": "Non-probing-deliberation"
+                "previous_annotation_type": "Non-probing-deliberation",
+                "transcript": "\nKiwi: the obvious answer would be to chhose A and 6\nKiwi: what do you think\nBeaver: I agree. If A = even then 6 should be a vowel\nLion: yes, it would I think its 3 and A because a is the vowel so we have to test if there would be an even number when turned over and 3 is an odd number so if it had a vowel the rule wouldnt be right\nBeaver: 'Actually wouldn''t you have to turn all of the cards?'\nBeaver: 'to test the rule, we need to check the other cards don''t follow the rule'\nKiwi: yeah to then see if there are any excetions to the rule\nKiwi: what happens now?\n"
             },
             {
                 "original_text": "one guess looks as good as any for now",
                 "message_id": "cc863f5b-763d-489b-b7fc-00ab858f7f1e",
-                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2"
+                "group_id": "0128a2aa-53a2-4874-8bfe-b71ce287e7c2",
+                "transcript": "\nChipmunk: one guess looks as good as any for now\n"
             }
         ]
     }
