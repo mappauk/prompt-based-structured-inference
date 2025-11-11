@@ -153,7 +153,7 @@ Choices:
 '''
 
 LEVEL_TWO_EXAMPLE_FORMAT = '''Utterance: {original_text}
-Q. What specific deliberative move is being expressed in the given utterance?
+Q. What specific deliberation role is being expressed in the given utterance?
 Choices:
 (A) None
 (B) Solution
@@ -168,7 +168,7 @@ Previous Utterance: {previous_original_text}
 Previous Utterance Deliberation Move: {previous_annotation_target}
 
 Utterance: {original_text}
-Q. What specific deliberative move is being expressed in the given utterance?
+Q. What specific deliberation role is being expressed in the given utterance?
 Choices:
 (A) None
 (B) Solution
@@ -183,7 +183,7 @@ Previous Utterance: {previous_original_text}
 Previous Utterance Deliberation Move: {previous_annotation_gold_target}
 
 Utterance: {original_text}
-Q. What specific deliberative move is being expressed in the given utterance?
+Q. What specific deliberation role is being expressed in the given utterance?
 Choices:
 (A) None
 (B) Solution

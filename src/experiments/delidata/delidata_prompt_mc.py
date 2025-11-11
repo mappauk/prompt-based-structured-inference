@@ -16,7 +16,7 @@ def main():
     # hyperparamaters
     device_type = 'cuda'
     cosine_similarity_examples = True
-    num_shots = 0
+    num_shots = 3
     prompt_batch_size = 2
     output_path = sys.argv[1]
     example_path = sys.argv[2]
@@ -27,7 +27,7 @@ def main():
     data = dataset_loader.load_delidata()
     #print(data.shape)
     #print(data)
-    #data = data.head(2)
+    #data = data.head(60)
 
     # load model
     if cosine_similarity_examples:
@@ -39,6 +39,8 @@ def main():
             constants.LEVEL_TWO_SYSTEM_PROMPT,
             ['message_id', 'original_text', 'annotation_type', 'annotation_target'],
             constants.LEVEL_ONE_EXAMPLE_FORMAT,
+            constants.LEVEL_TWO_EXAMPLE_FORMAT,
+            constants.LEVEL_ONE_EXAMPLE_FORMAT,
             constants.LEVEL_TWO_EXAMPLE_FORMAT)
         level_one_prior_prompts, level_two_prior_prompts = delidata_prompting.delidata_prompting_cosine_similarity(
             tokenizer, 
@@ -48,7 +50,9 @@ def main():
             constants.LEVEL_TWO_PRIOR_SYSTEM_PROMPT,
             ['message_id', 'original_text', 'annotation_type', 'annotation_target', 'previous_original_text', 'previous_annotation_gold_type', 'previous_annotation_gold_target'],
             constants.LEVEL_ONE_PRIOR_GOLD_EXAMPLE_FORMAT,
-            constants.LEVEL_TWO_PRIOR_GOLD_EXAMPLE_FORMAT)
+            constants.LEVEL_TWO_PRIOR_GOLD_EXAMPLE_FORMAT,
+            constants.LEVEL_ONE_PRIOR_EXAMPLE_FORMAT,
+            constants.LEVEL_TWO_PRIOR_EXAMPLE_FORMAT)
         prompt_map_key="message_id"
     else:
         level_one_prompts = delidata_prompting.delidata_prompting(
@@ -85,7 +89,7 @@ def main():
             constants.LEVEL_2_TO_CHOICE_MAP
         )
     
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type)
 
     # define rules
     rule_one = LLMMCRule(
@@ -136,7 +140,7 @@ def main():
     )
     rule_four = LLMMCRule(
         'rule_four',
-        ['message_id', 'original_text', 'previous_original_text', 'previous_annotation_target'],
+        ['message_id', 'previous_message_id', 'original_text', 'previous_original_text', 'previous_annotation_target'],
         constants.LEVEL_2_LABELS,
         'LevelTwoPrior_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',
         'RuleFour_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',

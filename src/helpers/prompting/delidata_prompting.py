@@ -26,12 +26,10 @@ def delidata_prompting(tokenizer, system_prompt, example_format, num_shots, exam
                         break
                     positive_examples = label_data['positive_examples']
                     positive_example = example_format.format(**positive_examples[i])
-                    #print(positive_example)
                     messages.append({
                         "role": "user",
                         "content": positive_example
                     })
-                    #print(label_to_choice_map[label_data['label']])
                     messages.append({
                         "role": "assistant",
                         "content": label_to_choice_map[label_data['label']]
@@ -43,14 +41,14 @@ def delidata_prompting(tokenizer, system_prompt, example_format, num_shots, exam
     })
     return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 
-def delidata_prompting_cosine_similarity(tokenizer, num_shots, data, level_1_system_prompt, level_2_system_prompt, features, level_1_example_format, level_2_example_format):
+def delidata_prompting_cosine_similarity(tokenizer, num_shots, data, level_1_system_prompt, level_2_system_prompt, features, level_1_example_format, level_2_example_format, level_1_prompt, level_2_prompt):
     level_1_system_prompt = level_1_system_prompt + constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
     level_2_system_prompt = level_2_system_prompt + constants.SYSTEM_PROMPT_EXAMPLE_LEAD_IN
     embeddings = []
     model = SentenceTransformer('sentence-transformers/gtr-t5-xl')
     utterances = []
 
-    data_subset = data[features].drop_duplicates()
+    data_subset = data[features].drop_duplicates().reset_index(inplace=False)
     # get embeddings for all examples
     for item, row in data_subset.iterrows():
         utterances.append(row['original_text'])
@@ -61,8 +59,8 @@ def delidata_prompting_cosine_similarity(tokenizer, num_shots, data, level_1_sys
     level_two_map = {}
     for i in range(len(utterances)):
         message_id = data_subset.loc[i, 'message_id']
-        similarities = cosine_similarity(embeddings[i], embeddings)[0]
-        most_similar_indicies = np.argsort(similarities)[-num_shots:][::-1]
+        similarities = cosine_similarity([embeddings[i]], embeddings)[0]
+        most_similar_indicies = np.argsort(similarities)[::-1]
         level_1_messages = [
             {
                 "role": "system",
@@ -75,12 +73,14 @@ def delidata_prompting_cosine_similarity(tokenizer, num_shots, data, level_1_sys
                 "content": level_2_system_prompt
             }
         ]
-        for i in most_similar_indicies:
+        for i in range(len(most_similar_indicies)):
+            if len(level_2_messages)/2 >= num_shots:
+                break
             row = data_subset.iloc[most_similar_indicies[i], :]
-            if row.isnull().any():
+            if row.isnull().any() or row['message_id'] == message_id:
                 continue
             level_1_label = row['annotation_type']
-            level_2_label = row['annotation_type']
+            level_2_label = row['annotation_target']
             level_1_example = level_1_example_format.format(**row.to_dict())
             level_2_example = level_2_example_format.format(**row.to_dict())
             level_1_messages.append({
@@ -93,15 +93,22 @@ def delidata_prompting_cosine_similarity(tokenizer, num_shots, data, level_1_sys
             })
             level_1_messages.append({
                 "role": "assistant",
-                "content": constants.LEVEL_1_CHOICES[level_1_label]
+                "content": constants.LEVEL_1_TO_CHOICE_MAP[level_1_label]
             })
             level_2_messages.append({
                 "role": "assistant",
-                "content": constants.LEVEL_2_CHOICES[level_2_label]
+                "content": constants.LEVEL_2_TO_CHOICE_MAP[level_2_label]
             })
+        level_1_messages.append({
+            "role": "user",
+            "content": level_1_prompt
+        })
+        level_2_messages.append({
+            "role": "user",
+            "content": level_2_prompt
+        })
         level_one_prompt = tokenizer.apply_chat_template(level_1_messages, tokenize=False, add_generation_prompt=True)
         level_two_prompt = tokenizer.apply_chat_template(level_2_messages, tokenize=False, add_generation_prompt=True)
         level_one_map[message_id] = level_one_prompt
         level_two_map[message_id] = level_two_prompt
-
     return level_one_map, level_two_map
