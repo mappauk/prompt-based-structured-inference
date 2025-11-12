@@ -14,11 +14,13 @@ class GurobiInferenceModel:
                  Dict[str, RuleTemplate], 
                  rule_groundings: Dict[str, pd.DataFrame], 
                  constraints: List[Callable[[Dict[str, pd.DataFrame], Dict[str, gp.Var], gp.Model], None]],
-                 num_solutions: int = 1):
+                 num_solutions: int = 1,
+                 custom_grounding_grouping_exclusions = None):
         self.rules = rules
         self.rule_groundings = rule_groundings
         self.constraints = constraints
         self.num_solutions = num_solutions
+        self.custom_grounding_grouping_exclusions = custom_grounding_grouping_exclusions
     
     def get_solution(self, m):
         results = {}
@@ -82,7 +84,10 @@ class GurobiInferenceModel:
                     # constraint for multiclass variables to force only one label to be activated
                     if rule.rule_type == RuleType.MULTI_CLASS and rule.head_variable_format not in head_format_added:
                         head_format_added.add(rule.head_variable_format)
-                        label_groupings = rule_grounding.groupby(rule_grounding.columns.difference(['label', 'RuleVariable', 'HeadVariable', 'Score']).to_list())
+                        group_by_default_difference = ['label', 'RuleVariable', 'HeadVariable', 'Score']
+                        if self.custom_grounding_grouping_exclusions != None and rule_name in self.custom_grounding_grouping_exclusions:
+                            group_by_default_difference += self.custom_grounding_grouping_exclusions[rule_name]
+                        label_groupings = rule_grounding.groupby(rule_grounding.columns.difference(group_by_default_difference).to_list())
                         for group_name, group in label_groupings:
                             temp_const = 0
                             for index, row in group.iterrows():

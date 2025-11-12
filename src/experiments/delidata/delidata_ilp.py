@@ -20,7 +20,6 @@ def main():
     rule_type = sys.argv[2]
     # load data
     data = dataset_loader.load_delidata()
-    print(data.columns)
     # define rules
     rule_one = RuleTemplate(
         'rule_one',
@@ -48,7 +47,7 @@ def main():
     )
     rule_four = RuleTemplate(
         'rule_four',
-        ['message_id', 'previous_message_id','original_text', 'previous_original_text', 'previous_annotation_type'],
+        ['message_id', 'previous_message_id','original_text', 'previous_original_text', 'previous_annotation_target'],
         constants.LEVEL_2_LABELS,
         'LevelTwoPrior_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',
         'RuleFour_{message_id}_{previous_message_id}_{previous_annotation_target}_{label}',
@@ -59,6 +58,11 @@ def main():
         rule_two.name: rule_two,
         rule_three.name: rule_three,
         rule_four.name: rule_four
+    }
+
+    custom_groupby_exclusions = {
+        'rule_three': ['previous_annotation_type'],
+        'rule_four': ['previous_annotation_target']
     }
     rule_names = ['rule_one', 'rule_two', 'rule_three', 'rule_four']
     # get rule groundings:
@@ -85,8 +89,7 @@ def main():
             level_one_transition_head = head_dict[row['HeadVariable']]
             level_one_previous = head_dict[f'LevelOne_{previous_message_id}_{previous_message_label}']
             level_one_current = head_dict[f'LevelOne_{message_id}_{message_label}']
-            m.addConstr(level_one_transition_head <= level_one_previous*level_one_current)
-            m.addConstr(level_one_transition_head >= level_one_previous*level_one_current)
+            m.addConstr(level_one_transition_head == level_one_previous*level_one_current)
     def constr_three(rule_groundings: Dict[str, pd.DataFrame], head_dict: Dict[str, gp.Var], m: gp.Model) -> None:
         for index, row in rule_groundings['rule_four'].iterrows():
             level_two_transition_head_split = row['HeadVariable'].split('_')
@@ -97,11 +100,10 @@ def main():
             level_two_transition_head = head_dict[row['HeadVariable']]
             level_two_previous = head_dict[f'LevelTwo_{previous_message_id}_{previous_message_label}']
             level_two_current = head_dict[f'LevelTwo_{message_id}_{message_label}']
-            m.addConstr(level_two_transition_head <= level_two_previous*level_two_current)
-            m.addConstr(level_two_transition_head >= level_two_previous*level_two_current)
+            m.addConstr(level_two_transition_head == level_two_previous*level_two_current)
     custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
-    inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints)
+    inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints, custom_grounding_grouping_exclusions=custom_groupby_exclusions)
     solutions = inference_model.inference()
 
     # extract few shot predictions
