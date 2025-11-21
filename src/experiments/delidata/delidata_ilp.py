@@ -102,6 +102,7 @@ def main():
             level_two_current = head_dict[f'LevelTwo_{message_id}_{message_label}']
             m.addConstr(level_two_transition_head == level_two_previous*level_two_current)
     custom_rule_constraints = [constr_one, constr_two, constr_three]
+    #custom_rule_constraints = [constr_one, constr_two, constr_three]
     # perform inference
     inference_model = GurobiInferenceModel(rules, rule_groundings,  custom_rule_constraints, custom_grounding_grouping_exclusions=custom_groupby_exclusions)
     solutions = inference_model.inference()
@@ -160,8 +161,8 @@ def main():
     for index, row in data.iterrows():
         message_id = row['message_id']
 
-        level_1_labels.append(row['annotation_type'])
-        level_2_labels.append(row['annotation_target'])
+        level_1_labels.append(constants.LEVEL_1_LABEL_TO_INDEX[row['annotation_type']])
+        level_2_labels.append(constants.LEVEL_2_LABEL_TO_INDEX[row['annotation_target']])
 
         ilp_level_1_label = level_1_assignments[message_id]
         ilp_level_2_label = level_2_assignments[message_id]
