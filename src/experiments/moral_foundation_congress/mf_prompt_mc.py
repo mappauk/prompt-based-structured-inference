@@ -16,12 +16,13 @@ import os
 import time
 from src.inference.gurobi_inference_model import GurobiInferenceModel
 import src.helpers.scoring.mf_scoring as mf_scoring
+
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     foundations_per_shot = 1
-    prompt_batch_size = 4
+    prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3]

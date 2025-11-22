@@ -20,7 +20,7 @@ import src.helpers.scoring.mf_scoring as mf_scoring
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     foundations_per_shot = 1
     topk = 5
     temperature = 0.5

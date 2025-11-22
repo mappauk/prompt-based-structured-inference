@@ -10,6 +10,9 @@ import src.helpers.loaders.prompt_data_loader as prompt_data_loader
 from src.rules.rule_type import RuleType
 from typing import Dict
 import src.helpers.prompting.coref_prompt_constants as constants
+import time
+from src.inference.gurobi_inference_model import GurobiInferenceModel
+import src.helpers.scoring.coref_scoring as coref_scoring
 
 def main():
     # hyperparamaters
@@ -18,15 +21,14 @@ def main():
     topk = 5
     temperature = 0.5
     num_return_sequences = 2
-    num_votes = 2
+    num_votes = 10
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     
+    print('vc rule')
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
-    data = data.head(10)
-    print(data)
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    data = data.iloc[0:153, :]
 
     #model, tokenizer = model_loader.load_flan_model(device_type)
     model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
@@ -34,7 +36,7 @@ def main():
     # generate moral foundation prompt format strings
     coref_prompts = coref_prompting.generate_vc_prompt(tokenizer)
 
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type, eight_bit=False, flash_attention_2=False, return_dict=False)
 
     # define rules
     rule_one = LLMVCRule(
@@ -57,7 +59,19 @@ def main():
     rules = {
         rule_one.name: rule_one, 
     }
-    prompt_data_loader.save_rule_groundings(rules, data, output_path)
+    start = time.time() # Record the start time
+    rule_groundings = {}
+    for rule_name, rule in rules.items():
+        rule_groundings[rule_name] = rule.get_rule_groundings(data)
+    scored_rule_groundings = coref_scoring.get_scored_groundings(rule_groundings, ['rule_one'], 'vc')
+    elapsed = time.time() - start # Calculate elapsed time
+    print(f"Prompt Elapsed time: {elapsed:.2f} seconds")
+    rule_constraints = coref_scoring.get_constraints()
+    inference_model = GurobiInferenceModel(rules, scored_rule_groundings,  rule_constraints)
+    start = time.time() # Record the start time
+    inference_model.inference()
+    elapsed = time.time() - start # Calculate elapsed time
+    print(f"Inference Elapsed time: {elapsed:.2f} seconds")
 
 if __name__ == "__main__":
     main()

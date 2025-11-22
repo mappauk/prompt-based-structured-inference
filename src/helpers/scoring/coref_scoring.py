@@ -22,8 +22,9 @@ from random import Random
 def answer_conversion(answer):
     return 1 if answer == 'Yes' else 0
 
-def get_scored_groundings(rule_groundings_path, rule_names, rule_type):
-    rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings_path, rule_names)
+def get_scored_groundings(rule_groundings, rule_names, rule_type):
+    if type(rule_groundings) == str:
+        rule_groundings = prompt_data_loader.load_rule_groundings(rule_groundings, rule_names)
     if rule_type == 'tf':
         rule_groundings['rule_one'] = scoring.tf_scoring(rule_groundings['rule_one'], ['doc_id', 'entity1_id', 'entity2_id'])
     elif rule_type == 'mc':

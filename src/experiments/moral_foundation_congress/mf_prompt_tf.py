@@ -20,7 +20,7 @@ import src.helpers.scoring.mf_scoring as mf_scoring
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    num_shots = 2
+    num_shots = 0
     prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]

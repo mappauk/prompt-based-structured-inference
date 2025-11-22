@@ -9,21 +9,23 @@ import src.helpers.loaders.genia_dataset_loader as genia_dataset_loader
 import src.helpers.loaders.prompt_data_loader as prompt_data_loader
 from src.rules.rule_type import RuleType
 from typing import Dict
-
+import time
+from src.inference.gurobi_inference_model import GurobiInferenceModel
+import src.helpers.scoring.coref_scoring as coref_scoring
 
 def main():
     # hyperparamaters
     device_type = 'cuda'
-    prompt_batch_size = 2
+    prompt_batch_size = 8
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     example_path = sys.argv[3] 
-    num_shots = int(sys.argv[4])
+    num_shots = 0
 
+    print('tf rule')
     # load data
-    data = ontonotes_dataset_loader.preprocess_ontonotes_coref(input_path)
-    #data = genia_dataset_loader.preprocess_genia_coref(input_path)
-    data = data.head(10)
+    data = genia_dataset_loader.preprocess_genia_coref(input_path)
+    data = data.iloc[0:153, :]
 
     #model, tokenizer = model_loader.load_flan_model(device_type)
     model, tokenizer = model_loader.load_llama_instruct_model(device_type, eight_bit=True, flash_attention_2=True)
@@ -35,7 +37,7 @@ def main():
         tokenizer
     )
 
-    model, tokenizer = model_loader.load_test_model(device_type)
+    #model, tokenizer = model_loader.load_test_model(device_type)
 
     # define rules
     rule_one = LLMTFRule(
@@ -54,7 +56,19 @@ def main():
     rules = {
         rule_one.name: rule_one, 
     }
-    prompt_data_loader.save_rule_groundings(rules, data, output_path)
+    start = time.time() # Record the start time
+    rule_groundings = {}
+    for rule_name, rule in rules.items():
+        rule_groundings[rule_name] = rule.get_rule_groundings(data)
+    scored_rule_groundings = coref_scoring.get_scored_groundings(rule_groundings, ['rule_one'], 'tf')
+    elapsed = time.time() - start # Calculate elapsed time
+    print(f"Prompt Elapsed time: {elapsed:.2f} seconds")
+    rule_constraints = coref_scoring.get_constraints()
+    inference_model = GurobiInferenceModel(rules, scored_rule_groundings,  rule_constraints)
+    start = time.time() # Record the start time
+    inference_model.inference()
+    elapsed = time.time() - start # Calculate elapsed time
+    print(f"Inference Elapsed time: {elapsed:.2f} seconds")
 
 if __name__ == "__main__":
     main()
