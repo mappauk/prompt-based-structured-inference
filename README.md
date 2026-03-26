@@ -1,1 +1,1 @@
-# MoralDistillation
+# README
