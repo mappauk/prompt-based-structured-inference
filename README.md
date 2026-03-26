@@ -1,6 +1,6 @@
 # Prompt Based Structured Inference
 
-Code for the paper: https://aclanthology.org/2026.eacl-long.160/
+Code for the paper: [Mapping the Course for Prompt-based Structured Prediction](https://aclanthology.org/2026.eacl-long.160/)
 
 # Abstract
 
